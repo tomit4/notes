@@ -320,12 +320,15 @@ xbanish
 
 Other Apps of Mention:
 alacritty (nice simple terminal emulator)
-bpytop (much better than htop, themes well with manjaro in the XFCE terminal)
+
+bpytop (much better than htop, themes well with manjaro in the XFCE terminal) (with current terminal.rc on xfce terminal, creates beautiful display, better than conky by far)
+To configure on startup, go to startup from XFCE whisker menu and create new startup command: xfce4-terminal --geometry=127x51+0+0 -x bpytop
+This is for your current widescreen monitor, takes up half screen.
+
 nvtop (nvidia graphical user interface to monitor GPU status)
 powertop (displays power usage)
 atom (naturegreen dark theme)
-codium (download via snap  and install the vsix file of the borealis theme)(to install theme via CLI, run: codium --install-extension eckertalex.borealis-1.0.2.vs)
-hub (extends functionality of git commands)
+vscode(after experimenting with other vscode versions, the official one with telemetry turned off is by far the best, git clone from aur, makepkg -si, make sure basedevel is installed)
 librewolf (download vis github)
 micro(amazing minimalist text editor)
 irssi
@@ -340,7 +343,9 @@ etcher
 iscan (funny enough, it's in the local repos, but you can also get it from the AUR)
 krita
 inkscape
+
 xbanish (hides mouse on keyboard input, make sure to add to startup applications)
+xbanish is definitely best called on start up, to do so, simply create a startup command from the whisker menu's startup GUI, and enter: xbanish
 
 Laptop Battery Saving Utilities:
 autocpufreq (one of the better battery saving measures, works more or less out of the box)
@@ -357,7 +362,7 @@ gpg --recv-key <PGP public key listed above error>
 makepkg-si
 
 Favorite DE/TWM thus far:
-Manjaro XFCE (minimal DE)
+Manjaro XFCE (minimal DE) (favorite thus far 2021)
 Manjaro Sway (community driven TWM)
 Manjaro I3 (community driven TWM)
 Manjaro Lomiri (for Pinephone, still in beta version as of mid 2021)
