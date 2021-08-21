@@ -1,0 +1,34 @@
+Install Apache on Arch Linux
+
+We must first begin by installing Apache with the following command:
+
+sudo pacman -S apache
+
+Start the Apache service with the following command:
+
+sudo systemctl start httpd
+
+To edit the main Apache configuration file for one or many websites, according to your preference, open the configuration file located in the following directory:
+
+sudo nano /etc/httpd/conf/httpd.conf
+
+In order to test the installation, create a test HTML file in the following directory with the command below:
+
+sudo nano /srv/http/index.html
+
+Insert the following HTML code in the empty file then save and exit:
+
+<html>
+<body>
+<h1>CONGRATULATIONS</h1>
+<h2>You have just installed Apache on your Arch Linux Server</h2>
+</body>
+</html>
+
+You can now verify that Apache is installed correctly by typing http:// and your IP address in your browser.
+
+http://YOUR.IP.ADD.RESS
+
+To get your server’s public IP address, type the following command:
+
+curl icanhazip.com

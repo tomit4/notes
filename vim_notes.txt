@@ -1,0 +1,75 @@
+This Document covers some of the most commonly used vim commands:
+
+# Super Basic:
+
+# Quit Vim:
+
+:q (make sure to enter the colon, this is in NORMAL mode)
+:q! (quit without saving)
+
+# Save Document:
+
+:w
+:wq (save and quit)
+
+# Insert Text (enter INSERT mode):
+
+i (that's right, just hit i)
+a (enter insert mode, and put the cursor one ahead, ie append)
+
+# Return to NORMAL mode:
+
+Esc (hit the Escape key)
+
+# Enter VISUAL mode:
+
+v (from NORMAL mode, hit v, this will allow you to enter VISUAL mode)
+
+# Navigate the Document in NORMAL mode:
+
+h (go one character left)
+j (go one character down)
+k (go one character up)
+l (go one character right)
+
+w (go to the first character of the next word)
+e (go to the last character of the next word)
+b (go to the first character of the last word)
+
+0 (go to the beginning of the current line)
+$ (go to the end of the current line)
+
+ctrl+d (navigate down one half screen)
+ctrl+u (navigate up one half screen)
+ctrl+f (navigate down one full screen)(essentially pgdown)
+ctrl+b (navigate up one full screen)(essentially pgup)
+
+# Copy/Paste:
+
+yy or Y: copy current line, including new line character
+y$: copy to the end of current line, but not the new line character
+yiw: copy the current word, excluding surrounding whitespace
+yaw: copy the current word, including surrounding whitespace
+ytx: copy from the current cursor position up to and before the character represented by x
+yfx: copy from the current cursor position up to and  including the character represented by x
+
+# Undo/Redo:
+
+u: undo
+Ctrl-R: redo
+
+# Indent/Unindent:
+
+>> : indent current line
+<< : unindent current line
+
+Travel to a specific line:
+5G (takes you to line 5)
+
+Page Up/ Page Down:
+CTRL + B (Page Up)
+CTRL + F (Page Down)
+
+Global Search and Replace:
+
+:%s/word_to_replace/new_word/g

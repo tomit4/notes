@@ -1,0 +1,97 @@
+# This document covers the basics of creating a simple git repository.
+
+################### CREATE NEW REPOSITORY ###################  
+
+# Log into github: https://www.github.com/
+
+# Click on the left by your profile and then by repositories, click "New"
+
+# Name your repository (within this document we will now refer to this as "test-repo")
+
+# Navigate to the directory from which you will be working, and once you have established some files you'd like to commit, enter the following commands:
+
+echo "# test-repo" >> README.md #creates a simple test README file
+
+git init # initializes a local(on your computer) git repository
+
+git add README.md # adds the README.md file to your local git repository
+
+git commit -m "first commit" # and commits those files to the local git repository with a short message noting it as the "first commit"
+
+git branch -M main # establishes which branch you wish your repository to be pushed to
+
+git remote add origin https://github.com/<your_github_user_name>/test-repo.git # adds your local repository to be remotely added to the specified repository
+
+git push -u origin main # pushes your local repository to the online repository
+
+################### PUSH TO EXISTING REPOSITORY ################### 
+
+git remote add origin https://github.com/<your_github_user_name>/test-repo.git
+
+git branch -M main
+
+git push -u origin main
+
+git checkout -b <new branch> ## create a new branch in your current repository
+
+git commit -m "v0.1.0" # commits it to the repository with a version number as its message
+
+git push origin main # pushes the local repository to the origin main branch
+
+git tag v0.1.0 # tags that repository with that version number
+
+git push origin v0.1.0 and pushes it to the repository
+
+################ DELETING ITEMS FROM YOUR REPOSITORY ####################
+
+git -rm <file name> 
+
+TO REMOVE FROM JUST THE REPOSITORY:
+
+git -rm --cache <filename>
+
+################### SECURITY #######################
+
+CREATE AN AUTHENTICATION TOKEN ON GITHUB AND USE IT. (or use SSH)
+
+# To create a gitignore file that ignores all node_modules subdirectories:
+touch .gitignore
+echo "node_modules/" > .gitignore
+
+# To pull from your existing repository and force a merge request into your current git repository:
+git pull origin main --allow-unrelated-histories
+
+# Remember that certain files like our files.txt files in our reading-streams Node-Cookbook tutorials were over 50mb in size,
+# which github has as their file cap, so don't commit files over 50mb. 
+
+#################### SSH PUSHING #####################
+
+Creating an SSH key and utilizing it on your github account can be found here:
+
+https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+
+In order to utilize ssh with github, within your repository, when setting up your first push (instructions above)
+You'll want to enter the following command before attempting to push:
+
+git remote add orgin_ssh <ssh_url>
+
+The ssh_url can be found on your repository's site under the Code tab, copy it and enter it with the command above
+
+Then, when you are ready to push your committed changes to your repository, simply enter a modified version of the push command:
+
+git push origin_ssh main
+
+It will then prompt you for your ssh key's passphrase, enter it and you will be good to go (better than the security token option above)
+
+
+################### UPDATE NPM REGISTRY ################### 
+
+npm login # Enter login credentials
+
+npm publish --access=public # publishes your current npm package to npm
+
+
+
+
+
+

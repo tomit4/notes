@@ -1,0 +1,363 @@
+To Display All Info about your Linux Machine:
+uname -a
+
+To change password:
+passwd
+
+To change password as root for another user:
+passwd <username>
+
+To login as a different user:
+sudo -u <username> -i
+
+To Display current kernel and other installed kernels:
+mhwd-kernel -li
+
+To quickly display files/directories:
+ls
+
+To display files/directories/hidden files in human readable format:
+ls -lah
+
+To Display disk usage of a particular directory:
+du -c /directory (displays total disk usage)
+du -h /directory (displays total disk usage by file/subdirectory in human readable format)
+du -hc /directory (displays total disk usage and usage by file/subdirectory in human readable format)
+
+To Display top five directories that use the most disk space:
+du -ahx . | sort -rh | head -5
+
+To Display location of binary file of program:
+whereis <program_name>
+
+To show all available network connections:
+nmcli
+
+To show all available network connections in human readable format:
+nmcli connection
+
+To connect to wifi network:
+nmcli device wifi connect <NETWORK NAME>
+
+To Display ip address info:
+ip addr show
+inxi -i
+curl ifconfig.me
+ip neigh
+
+To connect via Network Manager Command Line Interface (nmcli):
+nmcli device wifi connect "$SSID" password "$PASSWORD"
+nmcli --ask device wifi connect "$SSID" (connects with a prompt that hides password)
+
+To display and change wifi settings;
+nmcli
+
+To Display Proccesses:
+bpytop
+htop
+top
+powertop
+
+To Kill all processes on a specific port:
+fuser -k 3000/tcp
+
+To Display HD Storage:
+df 
+
+More info about nmcli:
+man nmcli (very extensive)
+man nmcli-examples(good manual for how to connect and configure network and wifi connections)
+
+To Display CPU and Network info:
+inxi -p (shows your partitioning)
+inxi -r (shows your repo list)
+inxi -i (shows your network details, including public ip)
+nmcli -p device (displays in human readable format the available network connections)
+nmcli device wifi list (displays with a mini gui the list of available wifi networks)
+inxi -w (shows the weather)
+lscpu OR
+hwinfo --cpu (much more detailed info) OR
+inxi -C (sort of like htop with lscpu)
+
+To Display Nvidia GPU info:
+nvidia-smi
+
+To display socket statistics:
+ss
+
+To display the history of last logged in users:
+last
+
+To display your current external/public IP address:
+curl ifconfig.me
+
+To display all directories/files:
+tree
+
+To display all directories EXCEPT for one directory:
+tree -I ignored_directory_name
+Example:
+tree -I node_modules
+
+To display files/directories and their memory usage:
+pstree
+
+To Search for all files with the name <query> -i flag means case insensitive:
+locate -i <query>
+
+Similar to locate, but within working directory:
+find /dir_name/filename.txt
+
+To remove a file:
+rm filename
+
+To remove an empty directory:
+rm -d directoryname
+
+To remove a directory with files in it:
+sudo rm -r directoryname
+
+To securely delete a file (keep in mind this is not perfect, the only way to securely delete files is to physically destroy the hardware):
+shred -u -z filename
+
+To kill all processes on port 3000:
+fuser -k -n tcp 3000
+
+Grep Command Searches for particular strings/regex patterns within a text file:
+Most Basic Use:
+grep -F -i <query> <file.txt>
+
+Example:
+grep -F -i "tHe" linux_notes.txt
+
+Curl is a powerful CLI command that can GET/POST/PATCH/DELETE/etc. from HTTP/FTP/etc:
+curl "https://www.mywebsite.com"
+
+To write curl output to a file:
+curl -o "https://www.mywebsite.com" mywebsiteoutput.txt
+
+To format the returned text from curl, use prettier:
+prettier mywebsiteoutput.txt
+
+And to save/overwrite the file:
+prettier --write mywebsiteoutput.txt
+
+To make a POST request in json format to a database:
+
+curl -X POST http://localhost:3000/maria_database -d '{"id": 1, "task": "do something"}'
+
+To Benchmark GPU:
+cd into Unigine_Valley-1.0 (see Uningine for Linux website for download)
+./valley (to run benchmark)
+
+To Display system statistics including program resource usage:
+yay -Ps OR
+ncdu
+
+To enable Uncomplicated Firewall:
+sudo ufw enable
+
+To turn off bluetooth:
+sudo bluetooth off
+
+To install protonvpn:
+Utilize both Manjaro as well as ProtonVPN instructions, make sure
+to also install all packages that require pip
+
+To initialize protonvpn:
+sudo protonvpn init
+sudo protonvpn config
+choose 1
+enter openvpn login credentials found at protonvpn dashboard
+sudo protonvpn connect -f
+
+To disconnect protonvpn:
+sudo protonvpn d
+
+
+To Display Temps:
+sensors OR
+vcgencmd measure_temp (only works on Raspberry Pi) OR
+watch -n 2 vcgencmd measure_temp (to see it adjust every 2 seconds)
+
+To Display NVidia Temps:
+nvidia-settings -q GPUCoreTemp -t OR
+watch -n1 nvidia-smi (displays updated GPU temp and other stats every sec)
+
+To Display CPU Clock Speed:
+vcgencmd measure_clock arm (only works on Raspberry Pi) OR
+watch -n 2 vcgencmd measure_clock arm (to see it adjust every 2 seconds)
+
+To Display licensing/technical data about a program:
+modinfo <program_name>
+
+To adjust CPU clock and other settings in Raspberry Pi, navigate to:
+cd /
+boot/config.txt
+and adjust via sudo nano
+force_turbo=1
+over_voltage=6-8(8max)
+arm_freq=2000-2200(2200max)
+
+To Update/Upgrade All Packages:
+sudo pacman -Syu
+OR
+yay
+
+To install a specific package:
+sudo pacman -S <name>
+OR
+yay <name>
+
+To install a package and bypass validity checks (make sure you trust the package):
+yay -S --mflags --skipinteg <name>
+
+To test whether or not a server is running on a specific port:
+
+telnet localhost 3000
+
+To uncompress a zip file:
+
+unzip file.zip
+
+To extract and uncompress a tar.gz file:
+
+tar -xvzf foo.tar.gz
+
+To change file permissions:
+
+chmod (a somewhat advanced command, see chmod_notes.txt)
+
+To remove a specific package:
+sudo pacman -R <name>
+OR
+yay -Rns <name>
+
+To remove a specific package and all its dependencies:
+sudo pacman -Rs <name>
+
+To Clean up unneeded dependencies:
+yay -Yc
+
+To clean up the pacman cache of all packages that are not currently installed:
+sudo pacman -Sc OR
+sudo paccache -r
+
+To clean out your /home directory cache:
+First to see your home cache disk usage:
+sudo du -sh ~/.cache/
+And then to remove everything there:
+sudo rm -rf ~/.cache/* (be careful with this command as rm -rf with a wildcard will delete EVERYTHING)
+
+To remove orphan (unused packages):
+First to see orphans run:
+sudo pacman -Qtdq
+And then to remove them
+sudo pacman -Rns $(pacman -Qtdq)
+
+To list any failed services:
+sudo systemctl --failed
+
+To check for any process errors run:
+sudo journalctl -p 3 -xb
+
+To install snap and enable classic:
+
+sudo pacman -S snapd
+sudo ln -s /var/lib/snapd/snap /snap
+
+Install Codium using snap:
+sudo snap install codium --classic (has issues with displaying user prompts, but other package managers have other issues...)
+
+For Art Install the following:
+gimp(should be default in most distros)
+inkscape
+krita
+blender
+
+To add Fonts:
+Download Fonts and unzip them
+move them to usr/share/fonts/<folder_name>
+
+For Epson V30 scanner enter the following (for arch and manjaro):
+pamac build iscan-plugin-gt-f720
+pamac install iscan
+
+To Install td ameritrade
+Follow specific instructions from both website and AUR (make sure java 8 is installed)
+
+Upgrade:
+sudo pacman -Syu
+
+Install specific kernel:
+sudo pacman -S kernel501 (501 being changeable in this case to the kernel version number you want)
+
+Install package:
+sudo pacman -S <packagename>
+
+See package dependencies:
+pactree <packagename>
+
+See package dependencies only 1 level deep:
+pactree -d 1 <packagename>
+
+See package dependencies only one level deep without tree format:
+pactree -d -1 -u <packagename>
+
+Remove package:
+sudo pacman -R <packagename>
+
+Remove package and all its dependencies:
+sudo pacman -Rcns <packagename>
+
+See which program owns this file:
+sudo pacman -Qo /path/to/file
+
+To have bpytop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
+xfce4-terminal --geometry=127x51+0+0 -x bpytop
+Same with xbanish:
+xbanish
+
+Other Apps of Mention:
+alacritty (nice simple terminal emulator)
+bpytop (much better than htop, themes well with manjaro in the XFCE terminal)
+nvtop (nvidia graphical user interface to monitor GPU status)
+powertop (displays power usage)
+atom (naturegreen dark theme)
+codium (download via snap  and install the vsix file of the borealis theme)(to install theme via CLI, run: codium --install-extension eckertalex.borealis-1.0.2.vs)
+hub (extends functionality of git commands)
+librewolf (download vis github)
+micro(amazing minimalist text editor)
+irssi
+tor-browser
+nmap
+mangohud (displays gpu, cpu temps and usage percentage in game, input into steam Launch Options the following:)
+MANGOHUD_CONFIG="cpu_temp,gpu_temp,background_alpha=0.2, font_size=16, round_corners=5.0, gl_vsync=0" mangohud %command% --launcher-skip"
+ecryptfs-simple (simple encrypter package that can encrypt directories/files)
+encfs (like ecryptfs, but better, sudo pacman -S encfs)
+mtr (like ping, but way better)
+etcher
+iscan (funny enough, it's in the local repos, but you can also get it from the AUR)
+krita
+inkscape
+xbanish (hides mouse on keyboard input, make sure to add to startup applications)
+
+Laptop Battery Saving Utilities:
+autocpufreq (one of the better battery saving measures, works more or less out of the box)
+powertop (monitors mainly)
+tlp (tlp start)
+investigate cpu frequencies
+
+Installing ecryptfs-simple:
+git clone https://aur.archlinux.org/ecryptfs-simple.git
+cd ecryptfs-simple
+makepkg-si
+(if your receive: "One or more PGP signatures could not be verified!, enter:)
+gpg --recv-key <PGP public key listed above error>
+makepkg-si
+
+Favorite DE/TWM thus far:
+Manjaro XFCE (minimal DE)
+Manjaro Sway (community driven TWM)
+Manjaro I3 (community driven TWM)
+Manjaro Lomiri (for Pinephone, still in beta version as of mid 2021)

@@ -1,0 +1,34 @@
+# After having had some difficulties installing mariaDB for Manjaro Linux, I though it best to document the basic installation process, as well as how I solved the issue.
+
+# MariaDB is a free and open source version of the original MySQL.  It is a robust SQL database that is easily run from the command line interface.
+
+# Installation of mariaDB on Manjaro Linux starts off very much like most installations do with Arch based distrobutions, with the pacman package manager:
+
+sudo pacman -S mariadb
+
+# After installation is complete, enter:
+
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+# This will initialize our first mariadb database, note the location of the --datadir.  This is where our problem occurred.
+
+# After initializing our database, start the server and db.  The enable command will start mariadb on system startup.
+
+sudo systemctl start mariadb
+sudo systemctl enable mariadb (this way we don't have to systemctl start mariadb every time we want to access our database)
+
+# Finally you'll want to secure your database:
+
+sudo mysql_secure_installation
+
+# You will be prompted with a series of questions about how secure you wish to make your database.
+
+# You may also wish to install and configure MySQL Workbench(not really all that good, install dbeaver instead, dbeaver requires java):
+
+sudo pacman -S mysql-workbench
+
+# The issue that I ran into during installation is that the permissions of /var/lib/mysql were not allowed for anyone, only access to the folder was allowed for mysql user.  To change this, I ran this command:
+
+sudo chown -R mysql: /var/lib/mysql
+
+# the -R flag recursively changed ownership permissions throughout the entire /var/lib/mysql directory, whereas the user mysql only had permissions the directory itself.

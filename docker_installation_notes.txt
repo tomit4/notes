@@ -1,0 +1,64 @@
+The following covers the basic installation instructions and basic command line syntax for utilizing docker.
+
+Install Docker and Docker-compose:
+
+sudo pacman -S docker
+sudo pacman -S docker-compose
+
+Start Docker by Default on Startup:
+
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+
+Check Docker version:
+
+sudo docker version
+
+And info:
+
+sudo docker info
+
+Run Docker without root:
+
+sudo usermod -aG docker <username>
+reboot (required to take effect)
+
+Search for a Docker Image:
+
+docker search [name]
+
+docker search nginx (an example)
+
+Install a docker image:
+
+docker pull hello-world (a simple package that tests if docker is working properly)
+
+And run that Docker image:
+
+docker run hello-world
+
+Monitor Docker:
+
+docker container ls
+
+To see a list of all the Docker images installed:
+
+docker images
+
+To see the CPU RAM and network usage of the running images:
+
+docker stats
+
+To see Docker's network configuration:
+
+docker network ls
+
+To remove docker containers type:
+
+docker container prune (careful, removes them all)
+docker container -r <container_id>
+
+You'll still need to remove their corresponding images though, so:
+
+docker images prune (again, removes them all)
+docker rmi <container name or id>

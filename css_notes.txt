@@ -1,0 +1,20 @@
+There is a lot to CSS, SASS, etc, so alot of these notes will be in reference to further documentation you can find online.
+Eventually very specific tools that we reuse will be noted either here or in a separate file.
+
+One of the best resources you can go to for CSS is Kevin Powell on youtube:
+
+https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw
+
+And also CSS-Tricks.com:
+
+https://css-tricks.com
+
+Specifically their CSS grid and flexbox tutorials:
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+A great resource for figuring out use specific grid snippets can be found at gridbyexample.com:
+
+https://gridbyexample.com/examples/

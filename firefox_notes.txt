@@ -1,0 +1,102 @@
+Maximize/"Harden" Firefox privacy settings
+(via Mental Outlaw YT channel and Chris Xiao's Yet Another Firefox Hardening
+article and Unix Sheikh's Choose your Browser Carefully article):
+
+Install Ublock Origin
+Install Decentraleyes
+Install ForgetMeNot
+Install DarkReader
+Install Vimium-FF
+Set Default Search Engine to Duck Duck Go Lite
+Get Firefox to remember nothing through Preferences setting
+Set Firefox to never visit non  https websites
+Disable smooth scrolling
+
+about:config settings
+(Optional): Turn off Javascript
+media.peerconnection.enabled set to false #breaks real-time audio/video
+media.navigator.enabled to false #breaks real-time audio/video
+media.gmp
+devtools.onboarding.telemetry.logged to false
+datareporting.policy.dataSubmissionEnabled set to false
+app.normandy.enabled set to false
+extensions.pocket.enabled to false
+extensions.formautofill.available set to blank
+extensions.screenshots.disabled set to true
+extensions.webcompat-reporter.enabled set to false
+privacy.resistfingerprinting set to true #noticeable performance and stability impact, proceed with caution.
+privacy.firstparty.isolate to true
+network.dns.disablePrefetch to true
+network.predictor.enabled set to false 
+network.prefetch-next to false
+network.http.sendRefererHeader to 0 #sites with forms and logins may break
+network.http.referer.XoriginPolicy to 1
+network.cookie.lifetimePolicy to 2
+pdfjs.enableScripting to false
+identity.fxaccounts.enabled to false
+geo.enabled to false
+dom.webnotifications.enabled to false
+security.ssl3.rsa_des_ede3_sha set to false
+security.ssl.require_safe_negotiation set to true
+security.tls.version set to at least 3 (4 highest setting as of 2021, but not necessary according to Mental Outlaw)
+security.tls.enable_Ortt_data set to false
+browser.shell.checkDefaultBrowser = false
+browser.formfill.enable set to false
+browser.cache.disk.enable set to false
+browser.cache.disk_cache_ssl set to false
+browser.cache.memory.enable set to false
+browser.cache.offline.enable set to false
+browser.cache.insecure.enable set to false
+browser.privatebrowsing.autostart set to true
+browser.urlbar.speculativeConnect.enabled set to false
+browser.search.suggest.enabled set to false
+plugin.scan.plid.all set to false (same, couldn't find)
+browser.ping-centre.telemetry set to false
+browser.newtabpage.activity-stream.feeds.telemetry set to false
+browser.newtabpage.activity-stream.telemetry set to false
+browser.newtabpage.activity-stream.section.highlights.includePocket to false
+browser.tabs.crashReporting.sendReport to false
+browser.uidensity to 1 (makes the browser's tabs not so huge for firefox 89+)
+devtools.onboarding.telemetry.logged to false
+toolkit.telemetry.enabled to false
+toolkit.telemetry.server Delete the URL and leave it empty
+toolkit.telemetry.archive.enabled set to false
+toolkit.telemetry.bhrPing.enabled set to false
+toolkit.telemetry.firstShutdownPing.enabled set to false
+toolkit.telemetry.newProfilePing.enabled set to false
+toolkit.telemetry.unified set to false
+toolkit.telemetry.updatePing.enabled set to false
+toolkit.telemetry.shutdownPingSender.enabled set to false
+webgl.disabled set to true
+privacy.firstparty.isolate set to true
+security.ssl.enable_false_start set to false
+
+go into ublock origin and check the 'Prevent WebRTC from leaking local IP addresses' box.
+go into usr/lib/firefox/distribution and open/create package.json and input the following:
+
+{
+  "policies": {
+    "DisableAppUpdate": true,
+    "DisableFirefoxAccounts": true,
+    "DisableTelemetry": true,
+    "DNSOverHTTPS": {
+      "Enabled": false,
+      "Locked": true
+    },
+    "DontCheckDefaultBrowser": true,
+    "NetworkPrediction": false,
+    "PromptForDownloadLocation": true,
+    "SearchEngines": {
+      "PreventInstalls": true
+    },
+    "SearchSuggestEnabled": false,
+    "NetworkPrediction": false
+  }
+}
+
+The following isn't privacy related, but turns off proton in firefox, which makes better use of screenspace:
+
+browser.proton.enabled set to false
+browser.proton.modals.enabled set to false
+browser.proton.doorhangers.enabled set to false
+browser.proton.contextmenus.enabled set to false

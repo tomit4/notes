@@ -1,0 +1,14 @@
+GPG is a simple file encryption tool that we can use to easily encrypt and decrypt our sensitive files.
+To easily encrypt a file, simply type into the terminal:
+
+gpg -c <file_you_want_to_encrypt.txt>
+
+And then enter and repeat a passphrase that will decrypt it later.
+
+You must wait ten minutes to test decrypting the file as it will wait ten minutes after encryption before it will ask for a  password.
+
+To decrypt the file, wait ten minutes, then:
+
+gpg -d <file_you_want_to_encrypt.txt>
+
+It will prompt you for the password, then it will decrypt the file.  This will ALWAYS copy the file, so remove the original file after encryption and decryption.

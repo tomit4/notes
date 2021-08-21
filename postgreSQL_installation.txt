@@ -1,0 +1,99 @@
+PostgreSQL is an Open Source Relational Database Module
+
+Installation has thus far been somewhat difficult but I have had some success with the following on Manjaro Linux
+
+# Installs postgresql and it's GUI pgadmin
+sudo pacman -S yay
+yay postgresql pgadmin4
+sudo pacman -S postgres #allows for use of the initdb on Arch/Manjaro
+
+# Setup the service
+sudo -u postgres -i #login as postgres
+initdb --locale $Lang -E -D '/var/lib/postgres/data/'
+
+#This will then display on the console:
+[postgres@manjaro ~]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgres/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... America/Los_Angeles
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgres/data/ -l logfile start
+
+# Then we run:
+sudo systemctl enable --now postgresql
+# which will log the following:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+# and then...
+sudo systemctl status postgresql #check for any errors
+
+# To setup your connection security, login as root:
+su
+
+cd /var/lib/postgres/data
+cp pg_hba.conf pg_hba.conf.backup # in case you mess up
+micro pg_hba.conf
+
+Although self explanatory, please also see:
+
+https://dev.to/tusharsadhwani/how-to-setup-postgresql-on-manjaro-linux-arch-412l
+
+For further details.  This is also the website from which this configuration was written.
+
+Ok, so we got in using pgAdmin as well! (this actually took me a good minute and using the psql cli helped)
+
+Firstly, its' good to initialize our database on port 5432, note the initdb command above.  Once done...
+
+#login as postgres:
+sudo -u postgres -i
+
+#then login to postgres via cli gui:
+
+ psql <dbname>
+
+
+#then it may prompt you for the password, after logging in, you will be presented with a basic cli GUI:
+
+postgres=# help
+You are using psql, the command-line interface to PostgreSQL
+
+#from here you can pretty much interact with the interface but if you want to run the same server on pgAdmin,
+#open it up via the terminal or from your Manjaro GUI:
+
+pgadmin4
+
+from her eyou can go to object create server, where it will ask for your login input,
+this was the hard part, but I eventually determined that via psql, you could find all the info by typing
+
+postgres=# \conninfo
+
+which displays:
+You are connected to database "postgres" as user "postgres" via socket in "/run/postgresql" at port "5432".
+the name can be put in whatever you like, since you're naming the server (i also used postgres for this...)
+but at the connection under Host name/address took me a while to realize that what it wanted was /run/postgresql
+and yes the default port is 5432.
+
+So there we are, finally the installation is complete and running on Manjaro Linux!
+
+
+

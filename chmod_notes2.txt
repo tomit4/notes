@@ -1,0 +1,85 @@
+Chmod is a UNIX based command that changes/modifies file and directory permissions from the CLI.
+
+Chmod has a somewhat extensive series of command flags that grant or remove read/write/execute privileges from users within a certain group.
+
+To display files/directories with their permissions listed, type:
+
+ls -l or ls-la (la shows current working directory with permissions)
+
+This will display something along the lines of:
+
+dxwxr-xr-x 2 dave dave 4096 Aug 23 8:02 archive
+-rw-rw-r-- 1 dave dave 780 Aug 20 11:11 command_cls.page
+
+'d' represents directory
+'x' represents execute
+'w' represents write
+'r' represents read
+'l' represents link
+
+The first series of letters and dashes precluded by teh first '-' character demarcates the current USER's permissions.
+The second represents the user's GROUP and their permissions.(usually the sudo group)
+The third represents OTHER users and their permissions. (usually non-sudo users)
+
+The chmod command can modify these permissions using specific flags(a,u,r,w,x,o,g) and operators(=,+,-).
+
+For example, the following command grants read,write permissions to the current user, while granting read permissions to the other user groupfor the file new_file.txt.
+
+chmod u=rw,og=4 new_file.txt
+
+Note the use of the '=' operator that will overwrite any existing permissions.
+
+If we now run ls-l again, we might see something that looks like this:
+
+-rw-r--r-- 1 dave dave 28127 Aug 20 11:11 new_file.txt
+
+This is all well and good for files we only need to read/write to, like a .txt file, but what if we have a bash script we want to run?
+We can very easily with chmod grant executable privileges in a similar fashion to granting read/write permissions.
+
+chmod +x new_shell.sh
+
+If we run ls -l again, our new_shell.sh file should be highlighted as well to easily differentiate itself as an executable file.
+Note this could also have been written as 'a+x' which would have done the same thing slightly more verbosely with the 'add' flag.
+We can also easily remove executable permissions by running the same as above but with the '-' flag:
+
+chmod -x new_shell.sh
+
+To easily use chmod to change the permissions on multiple files of a single file extension, one can easily do this using the wildcard flag *.
+For example if one wished to remove the read permissions for the "other" users from files that have a ".txt" extension, one would simply run:
+
+chmod o-r *.txt
+
+And again, one could do the opposite, adding read permissions to the "other" users for files that have a ".txt" extension:
+
+chmod o+r *.txt
+
+To recursively change permissions within a subdirectory, adding the -R flag will do this.  For example if one wished to remove read permissions for our OTHER users within a subdirectory called 'page', one would simply type:
+
+chmod -R o-r *.page
+
+Also note that chmod has similar uses to the other command, chown (change ownership).  For example while troubleshooting a permissions issue with mariaDB, I inputted the following to fix the issue:
+
+sudo chown -R mysql: /var/lib/mysql
+
+Note the difference in syntax here, instead of using flags to demarcate broad sweeping permission changes across user groups, instead we specified the user (in this case mysql).  The use of the -R flag was important in this case as only the directory /var/lib/mysql was granted read/write permissions, while the files inside were still locked off from the user, mysql.  In other words, running the chown command recursively where the user mysql (followed by a colon ':' to demarcate an optional paramter which takes the user's group, left blank in this case) would be granted user ownership permissions over the specified directory AND ALL OF ITS CONTENTS.
+
+There is also a Numerical Shorthand to the chmod command which is very handy, but requires a bit more experience than I have to get used to it.
+
+The essentials of it basically entails that three digits are given following the chmod command.  The first digit represents the USER permissions, the second GROUP permissions, and the third OTHER permissions.  An example would look like this:
+
+chmod 664 *.page
+
+Which would grant read/write permissions to both the USER and GROUP, while granting only read permissions to the OTHER to all files with the extension '.page'.
+
+The following is a cheat sheet for the numerical annotations of chmod.
+
+0:(000) No permission.
+1:(001) Execute permission.
+2:(010) Write permission.
+3:(011) Write and execute permissions.
+4:(100) Read permission.
+5:(101) Read and execute permissions.
+6:(110) Read and write permissions.
+7:(111) Read, write, and execute permissions.
+
+This can be extremely useful if you are a systems administrator with a large amount of employees who need various access to different files/directories within your system, but the more verbose strings of letters might be easier to remember depending on what your use is.  Nevertheless it is up to you to decide which method of using chmod you are more easily able to remember its syntax. A combination of these techniques should serve you well.

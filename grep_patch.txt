@@ -1,0 +1,8 @@
+--- grep_notes_1.txt	2021-08-21 05:42:09.720892075 -0700
++++ grep_notes_2.txt	2021-08-21 05:39:02.414217690 -0700
+@@ -19,4 +19,4 @@
+ 
+ ##########################################################
+ 
+-some text unique to grep1(compare these two files using the comm and diff(-u) commands)
++some text unique to grep2(compare these two files using the comm and diff(-u) commands)

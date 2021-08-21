@@ -1,0 +1,38 @@
+Please see the following link to read about how to set up couchdb using snap:
+
+https://github.com/apache/couchdb-pkg/blob/main/README-SNAP.md
+
+The essentials of setting up a basic couchdb are this:
+
+First install using snap:
+
+sudo snap install couchdb
+
+Then set the admin password:
+
+sudo snap set couchdb admin=yourpasswordhere
+
+And start couchdb:
+
+sudo snap start couchdb
+
+Enable snap permissions:
+
+sudo snap connect couchdb:mount-observe
+sudo snap connect couchdb:process-control
+
+Change the Erlang settings stored in the /var/snap/couchdb/current/etc/vm.args file:
+
+sudo snap set couchdb name=douchdb@127.0.0.1:5984 setcookie=cutter
+
+;make sure to read the vm.args file to further understand this.
+
+;and also restart couchdb once this is done:
+
+sudo snap restart couchdb
+
+Monitor CouchDB;
+
+snap logs couchdb -f
+OR
+journalctl -u snap.couchdb* -f

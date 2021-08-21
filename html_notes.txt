@@ -1,0 +1,23 @@
+#There are some interesting keyboard shortcuts that will help us write our html
+#pages faster.  Keep in mind that saving default index.html files, etc will also be helpful
+
+#To create a standard html page, simply type:
+html
+#to get options in vs code, choose "html5", and you will get a basic html page
+
+#putting after the meta name tag a generic  css link as follows:
+<link rel="stylesheet" href="styles.css">
+#is pretty much standard
+
+#and putting in a generic javascript file as follows:
+<script src="script.js" defer></script>
+# will create a link to a standard javascript file and the defer will make sure
+#it is read after the html/css is first processed
+
+#hitting a .class*2 will create
+	<div class="class"></div>
+	<div class="class"></div>
+
+#while doing the same with #id*2 will create
+	<div id="id"><div>
+	<div id="id"><div>

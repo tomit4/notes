@@ -1,0 +1,60 @@
+OpenSSH, or more commonly known simply as SSH, is a simple Secure Shell protocol that allows us to securely create passwords
+that are associated with "keys" that will give us a long hashed key that is saved on whatever computer or API we are trying
+to gain access to in which we can simply apply a password that is associated with that key.  The key's hashed values are saved
+on both our local computer as well as the API, but the passphrase to gain access is stored nowhere (unless we idiotically save it
+in plain text somewhere, the following is a simle way to set it up on github and use it:
+
+# Generating the SSH key
+
+# First see what keys are availabe:
+
+ls -la ~/.ssh
+
+# To Generate a new SSH key:
+
+ssh-keygen -t ed25519 -C "your_email@example.com" (note that the ed25519 is a key type and is necessary for security reasons,
+you'll always want to use this type, but keep in mind that you'll probably want to rename this when prompted below so you can make
+multiple ed25519 keys)
+
+# You will be prompted to enter a file to which to save the key into, if you don't specify it will name it the ed25519 field
+
+# You will also be prompted to enter/repeat a passphrase (remember this)
+
+# Then add the SSH key to the ssh-agent
+
+# First start the ssh-agent in the background.
+
+evail "$(ssh-agent -s)"
+
+# It will then list you the Agent pid number (note that yes, this is a process now running the background, this is how
+it always will authenticate on your end, it is NECESSARY)
+
+# Then we add the SSH private key to the ssh-agent.
+
+ssh-add ~/.ssh/ed25519
+
+# Then from the Github website on your profile page, go to settings and under SSH/GPG keys, add the SSH key including the SHA256 text,
+but not your email
+
+#After you have successfully done so (you should see a client side different SSH key that it is associated with), you'll need to test
+your SSH connection:
+
+ssh -T git@github.com
+
+# You should then be prompted with a message like so:
+
+> Hi username! You've successfully authenticated, but GitHub does not
+> provide shell access.
+
+# You're now ready to go, just make sure to specify the origin as origin-ssh instead of origin when pushing to github:
+
+git add <file(s)>
+git commit -m "commit message"
+git push origin-ssh main
+
+It will then prompt you for your ssh passphrase, enter it and you've successfully committed to github using ssh!
+
+If you would like to automate it so it doesn't ask for the passphrase (just don't forget your passphrase in case), you can set up
+automating putting in your passphrase like so:
+
+ssh-add ~/.ssh/id_ed25519 &>/dev/null

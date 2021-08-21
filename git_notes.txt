@@ -1,0 +1,96 @@
+git --version
+#Tells you which version of git you are running
+
+git config --list
+#Tells you what configuration settings you have on git
+
+git config --global user.name "Your name"
+#Configures git with your git(hub) username
+
+git config --global user.email "yourname@youremail.com"
+#Configures git with your git(hub) user email
+
+git init
+#initializes a new git repository on local machine
+
+git add "your_file(s) here"
+#adds your files to the repository
+
+git commit -m
+#commits the files
+
+git push --set-upstream https:/github.com/username/repository_name.git master
+#pushes the repository online
+#you'll be prompted for your username and password at this point
+
+rm -rf .git
+#Stops current directory from being tracked by git, essentially removing initalized
+#git respository.
+
+touch .gitignore
+#creates a .gitignore file that tracks the files within the directory you DON'T want
+#included in your git project repository
+#note that wildcard and then listing the type of files you want to ignore can ignore all
+#files of a specific type, for example
+*.py will ignore all python files
+*.js will ignore all javascript files, etc.
+
+git reset file_name
+#removes the file_name from the files to be committed (opposite of git add)
+
+git reset
+#git reset with no parameters given will remove all files from the commit stage
+
+git log
+#shows the log of recent commits
+
+git clone <url> <where to clone>
+#clones a respotiroy from <url> to <where to clone>
+#instead of <url> you can use local directories to clone from one local directory to another
+by following <url> or local directory where <where to clone> is simply ".", the period
+#indicates that you'd like to clone that respotiroy/directory to the current directory you are in
+
+git remote -v
+#lists the origins of the cloned repository
+
+git branch -a
+#lists all the branches of the cloned repository
+
+git pull origin master
+#pulls any changes that have been made to that git repository while you have
+#been addding changes of your own (essentially showing changes other developers
+#may have made/pushed to the repository  while you have been working on your own changes)
+#note that origin is the name of the repository, and master is the name of the branch
+
+git push origin master
+#pushes any changes you have made to the git repository, taking it from the commit
+staging area to the final show area on git(hub).
+
+common workflow example:
+
+git branch calc-divide
+#creates a git branch called calc-divide
+
+git checkout calc-divide
+#changes default working branch to calc-divide (default s usually master)
+
+git branch -d calc-divide
+#deletes branch locally
+
+git push origin --delete calc-divide
+#deletes branch remotely
+
+#Once changes have been made to various branches, and the project looks like it will
+#work well with all other branches/code changes (basically, the project is ready to be staged as a final version)
+#the branches are ready to be merged into the master branch and staged on git(hub)
+#the following commands allow for such with branch calc-divide:
+
+git checkout master
+
+git pull origin master
+
+git branch --merged
+
+git merge calc-divide
+
+git push origin master

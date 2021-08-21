@@ -1,0 +1,43 @@
+There are some simple things every basic web project will need when working nodejs
+One of these is that the npm init and npm install commands are pretty much universal
+When creating a basic website that has a backend
+
+once you are satisfied with the basic index.html, about.html etc. documents and intend
+to create a backend side of the website, at some point you will want to create the package.json
+file that will list all the npm depencies as well as other essential information about the project
+
+to create the package.json file, very simply type in the terminal:
+
+npm init
+
+once you have determined which packages you will need from the npm, list them in the depencies of the
+package.json file
+and then type in the terminal:
+
+npm install
+
+This will install all dependencies listed in the dependencies property of the package.json file.
+
+For extensive information about how to secure your NodeJS Applications, visit:
+
+https://medium.com/@rajapradhan08/best-practices-for-securing-node-js-web-applications-2e54cfefdc05
+
+sudo npm install -g nodemon
+
+nodemon <server.js>
+
+sudo npm install -g autocannon
+
+autocannon is an HTTP benchmarking tool, it can be invoked like this;
+
+autocannon --connections 100 http://localhost:3000/
+
+allocates a pool of 100 concurrent connections to our server, default is 10.
+The number of concurrent connections should be altered to best represent teh naticipated load on your server,
+so you can simulate production workloads.
+
+autocannon --connections 100 --duration 20 http://localhost:3000/
+
+or more syntactically shortened:
+
+autocannon -c 100 -d 20 http://localhost:3000

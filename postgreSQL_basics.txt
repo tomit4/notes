@@ -1,0 +1,94 @@
+PostgreSQL syntax basics are very much like other SQL syntax basics:
+
+# Essentials to Logging in:
+
+# If logging in from the same computer the database is being served from:
+
+psql -d mydb -U myuser (where the -d flag indicates you wish to log into the database mydb, and the -U flag indicates the user you wish to log in as, in this case myuser)
+
+# If, however you need to log in from a server named myhost, you can log in using this command:
+
+psql -h myhost -d mydb -U myuser
+
+# More commonly however you will want to utilize the following, which will ensure you are prompted with a password:
+
+psql -d mydb -U myuser -W
+
+# Once you have entered your password you will be prompted with the PostgreSQL's CLI, which looks something like this:
+
+mydb=#_
+
+# Should you at any point need any help, simply type the following, which will give you some basic commands:
+
+psql --help
+
+# Should you simply need to quit, type:
+
+\q
+
+##################################
+
+# From here on out, we will go over the basics of creating a simple TABLE and INSERTing columns and rows and data into them.
+
+# Create a Basic Database:
+
+postgres=#CREATE DATABASE dbname;
+
+# Change to a different Database:
+
+\c DBNAME
+
+# Listing Schema within your Database:
+
+\dn
+
+# List all Tables within your Schema:
+
+\dt 
+
+# Creating a Basic Table:
+
+# There are many ways to create a simple table with the standard definitions in SQL style syntax, the following is how one would create a basic Table that takes in some data about pets:
+
+mydb=# CREATE TABLE pets(
+ID INT PRIMARY KEY NOT NULL,
+NAME TEXT NOT NULL,
+AGE INT NOT NULL,
+GENDER CHAR(1));
+
+# Note the simple limitations and definitions we've put on the above.  We CREATED a table called pets, followed by an opening parantheses.  Then we started defining Columns and what kind of data we expect to be inputed there, the first is an ID, which we define as being an INTeger, with a PRIMARY KEY as a defining characteristic, and NOT NULL indicates it cannot be left blank.
+
+# We also have a NAME column created, with a TEXT type input, and again NOT NULL as it cannot be left blank.
+# The column AGE is similary created, with an INT type input, and again NOT NULL.
+# Lastly a GENDER column is created, where it's only limitation is that it's CHARacter count must be one (didn't quite think that one out did I?)
+
+# And there we have it, a basic table.
+
+# Add Data to our rows:
+
+# So if we wanted to INSERT new data into our TABLE we could do so like this:
+
+INSERT INTO pets VALUES ('1', 'Slip', '12', 'F');
+
+# Note the use of single quotes surrounding our input, this is a REQUIREMENT when inputting data.
+
+# To view our data in our table, simply type:
+
+SELECT * FROM table_name;
+
+# More modern and works better is:
+
+TABLE table_name;
+
+#Or in this case:
+SELECT * FROM pets;
+
+# To delete a row from a table, simply enter:
+
+DELETE FROM table_name
+WHERE id = id_number;
+
+##################################
+
+# There is a lot more to cover, but I'll stop here for now as SQL style syntax can be Monolithic in scale.
+# It is worth noting, however, that interacting with the psql cli can be a much more intuitive way of interacting with the Database than through the pgadmin4 GUI interface in our web broser, just in my opinion...

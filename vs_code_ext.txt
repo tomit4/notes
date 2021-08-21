@@ -1,0 +1,13 @@
+The following are some Codium Extensions that I like:
+
+Beautify
+Borealis Theme (install via .vsix file on vscodium)
+Bracket Pair Colorizer
+Cobalt2 Theme Official (blue borealis)
+EsLint
+GlassIt Linux (or GlassIt depending)
+Import Cost
+Markdown Preview Enhanced
+Prettier
+Vetur
+Vim

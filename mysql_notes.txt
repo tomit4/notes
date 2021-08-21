@@ -1,0 +1,67 @@
+//To access root:
+mariadb -u root -p
+//and enter root password
+
+//To access user brian:
+mariadb -u brian -p
+//and enter password
+
+//To access specific port:
+mariadb -u brian -p port=<portnumber, default 3306>
+
+//General guidelines for specific ip address, user, password, port number, and database:
+mariadb -h 166.78.144.191 -u brian -p port=<port#> database_name
+
+GRANT ACCESS
+look this up in order to grant access to new user
+
+SHOW DATABASES
+//Displays your current databases
+
+CREATE DATABASE name
+//Creates a new database
+
+USE DATABASE name
+//Brings you to that Database, should change prompt
+
+CREATE TABLE
+look this up in order to see how to create tables
+
+EXAMPLE OF CREATE TABLE:
+CREATE TABLE to_do (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, task VARCHAR(28) NOT NULL) Engine=InnoDB;
+
+SHOW TABLES
+Shows databases tables
+
+DESCRIBE name
+Shows the properties of the table property
+
+SELECT * FROM table_name;
+
+# To add new users to the mysq.user database log into mariadb as root and then type:
+
+USE mysql; # use the mysql database
+SELECT User, Host, plugin FROM mysql.user;
+
+# You will be presented with a display of a basic SQL table with User and plugin columns, below will display the user name under the user column and mysql_native_password under the plugin column.
+
+# From here you can create a new user using the following mySQL command:
+
+CREATE USER 'newuser' @ 'localhost' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON *.* TO user@localhost IDENTIFIED BY 'password';
+
+# To delete a row from a table:
+DELETE FROM tablename WHERE parameters; (parameters example: id = 1)
+
+# To export a database and save it as a .sql file:
+mysqldump -u username -p current_database_name > sql_file_name.sql
+
+# To import a database from a .sql file:
+# Enter mariadb:
+mariadb -u username -p
+# Enter password
+CREATE DATABASE new_database_name;
+# Exit mariadb:
+\q
+mariadb -u username -p new_database_name < sql_file_name.sql

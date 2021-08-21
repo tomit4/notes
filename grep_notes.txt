@@ -1,0 +1,22 @@
+This grep or egrep(just grep with no -E flag), will return all sentences that begin with a capital letter and are followed by any 
+number of uppercase letters, followed by lower case letters, followed by blank spaces and end with a period.
+This is an example of an extended regular expression, which allows for the use of the :alpha: :upper: :lower: etc. meta search criterion.
+
+The '' delineates the beginning of an expression so that the meta characters are not interpreted by bash as commands.
+The carat symbole ^ represents that the beginning of the expression MUST begin with, in this case an uppercase character.
+It is encapsulated by two square brackets [[]] so as to delineate as ingle character, which then MUST be followed by ANY
+number of uppercase characters, lowercase characters, and empty space characters, the ANY condition is inputted by the asterix * metacharacter
+
+The backslash breaks us out of extended regular expressions and then returns us to LITERAL or BASIC regular expressions. In this case
+we MUST follow it by a literal period .
+
+We then ask it to search the lorem.txt using the regular expression, which will give us (roughly) every sentence within the text.
+Note that this is FAR from perfect however, you can even see its major issues by using the same command on this document instead of lorem.txt
+
+##########################################################
+
+grep -E '^[[:upper:]][[:upper:][:lower:] ]*\.' lorem.txt
+
+##########################################################
+
+some text unique to grep1(compare these two files using the comm and diff(-u) commands)

@@ -1,0 +1,17 @@
+# Setting up a Docker MariaDB instance isn't too difficult, based off of Technotes yt channel, it can be done as follows:
+
+# From the terminal, enter:
+
+docker run -e MYSQL_ROOT_PASSWORD=test --name mydbcontainer -d mariadb
+
+docker exec -it mydbcontainer -u root -p (enter password test)
+
+# You will then see a classic CLI mariadb instance, go ahead and quit using \q, then:
+
+docker inspect mydbcontainer
+
+# This will show you a JSON like object that will include the IP addresss, copy it, and use it in the following command from your home machine command line:
+
+mariadb -h 172.17.0.2 root -p (and enter password test again)
+
+This will allow you to remote into the docker instance and use the mariadb without having to execute docker outright like above.

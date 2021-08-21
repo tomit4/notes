@@ -1,0 +1,85 @@
+Some commands of importance:
+
+#To spin up the docker-compose server/website:
+
+docker-compose up
+
+#To see the docker images in a list:
+
+docker image ls
+
+#You can also inspect each image by tag or id with:
+
+docker inspect <tag or id>
+
+#To spin up docker in the background (leaving you to use the console further):
+
+docker-compose up -d
+
+#And to have a list of what applications are currently running from docker:
+
+docker-compose ps
+
+#To see what environment variables are available to the 'web' service:
+
+docker-compose run web environment
+
+#And lastly to close docker after opening it with the -d flag:
+
+docker-compose stop
+
+#If you wish to remove the containers docker has created in running the app, you can remove the containers by:
+
+docker-compose down --volumes
+
+The above commands are the basics of docker-compose program.  Below is a not so brief description of what we learned from doing the basic tutorial:s
+
+Essentially from what I've gathered is that Docker allows for  faster integration of all required dependencies and greatly accellerates
+the development of applications by removing certain repetitive commands that are common to application development.
+
+Many of the projects that are found at docker.com are written in python and thusly the examples used in these notes will pertain
+mainly to its uses with python, although it is worth noting that it is highly likely docker is usable with any programming language, including, of course
+Javascript.
+
+For a more in depth understanding of Docker basics, please visit:
+
+https://docs.docker.com/compose/gettingstarted/
+
+Within our own directories, you can find  a subdirectory called docker_compose_test within web_tutorials that follows along.
+
+Within every Docker application there will be a main application from which docker will look for it's main commands, similar to an index.js file or an 
+index.html file
+
+In the case of the tutorial, this would be app.py
+
+We also start off with creating a docker-compose.yml file as well as Dockerfile.  Note that Dockerfile should have no extension specified, 
+but is essentially a text file, as well as a requirements.txt file.
+
+To reiterate as a list:
+
+app.py
+docker-compose.yml
+Dockerfile
+requirements.txt
+
+In order to truly understand the syntax, it will be important in the learning process to become familiar with the syntactical nuances of each of these files
+
+
+The Dockerfile file is actually the file that the docker-compile program talks to to render either a server or a web application, or both.  I suspect
+it is capable of alot more than this, but this is what has been presented to me thus far.
+
+The app.py is actually quite simple to read in this particular case as all it does is iterate however many times the user refreshes the site, and displays it to them
+within a string that greets them.  Even though I have limited knowledge of python, the syntax is very straightfoward.  This is displayed using the Flask application.
+
+The docker-compose.yml (.yaml can also be used) is likely referenced by the Dockerfile to determine where to build its dependencies, run the program in which environment, which port to run it on, etc.
+
+Lastly, the requirements.txt is literally a simple list of required dependencies, all it requires is a \n linebreak to differentiate the needed dependencies from each other
+(simplest formatting ever).
+
+Note that the formatting is extremely important, just like in all programming.  The indentation in the .yml and of course in the .py is of particular importance.
+In the docker site's tutorial page which covered a django app, I typed out everything as I saw it only to find I had not used proper indentation and simply copying/pasting 
+their text fixed all the errors I was initially receiving.
+
+Although I have already gone through this tutorial, it might be worth revisiting docker's tutorial on Python/Django, please see:
+
+https://docs.docker.com/samples/django/
