@@ -9,3 +9,14 @@ curl -X DELETE http://localhost:3000/maria_database -H "Content-Type: applicatio
 
 Simple JSON PUT request:
 curl -X PUT http://localhost:3000/maria_database -H "Content-Type: application/json" -d '{"updated": "WE DID THIS IN CURL AGAIN", "previous": "DONE IN CURL"}'
+
+#####################
+Based off a Stack Overflow Post, I was able to find a way to create a command called curltime that will perform the curl command but output various timestamps regarding
+how long the request/response took, this gives it a bit more functionality similar to Postman. Make sure to hang onto the curl-format.txt file in your notes and keep the
+alias curltime in your .bashrc file. Then, if doing a simple GET request it's as simple as writing:
+
+curltime http://localhost:3000/maria_database
+
+You can easily POST, DELETE and PUT as well using it very much like curl:
+
+curltime -X POST http://localhost:3000/maria_database -H "Content-Type: applicaton/json" -d '{"task": "DONE IN CURL"}'

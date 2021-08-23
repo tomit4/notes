@@ -139,6 +139,13 @@ ex ()
 }
 
 # Custom Bash Commands
+alias Code="cd ~/Documents/Code" 
 alias js="cd ~/Documents/Code/javascript"
+alias c++="cd ~/Documents/Code/c++"
 alias ls="ls -lah --color=auto"
 alias notes="cd ~/Documents/notes"
+alias firefox="firefox-developer-edition"
+alias thinkorswim="/home/brian/thinkorswim/thinkorswim"
+alias shutdown="shutdown -h now"
+alias docs="cd ~/Documents"
+alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
