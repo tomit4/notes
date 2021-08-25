@@ -9,3 +9,14 @@ curl -X DELETE http://localhost:3000/maria_database -H "Content-Type: applicatio
 
 Simple JSON PUT request:
 curl -X PUT http://localhost:3000/maria_database -H "Content-Type: application/json" -d '{"updated": "WE DID THIS IN CURL AGAIN", "previous": "DONE IN CURL"}'
+
+########Authentication of JSON web Tokens using Curl ################
+#See web dev simplified's web tutorial on basic JSON web token authorization
+
+# First login using a post request:
+
+curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"username": "Kyle"}'
+
+# then have it return a JWT, which you can paste into the Bearer section of a GET request like so:
+
+curl -H 'Accept: application/json' -H "Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI5ODkyNTU1fQ.yMsrbX_c-vAXRMMYe5OFRWfg95zk0J2BBsv0zjcy4gU" http://localhost:3000/posts
