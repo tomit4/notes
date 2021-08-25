@@ -10,13 +10,13 @@ curl -X DELETE http://localhost:3000/maria_database -H "Content-Type: applicatio
 Simple JSON PUT request:
 curl -X PUT http://localhost:3000/maria_database -H "Content-Type: application/json" -d '{"updated": "WE DID THIS IN CURL AGAIN", "previous": "DONE IN CURL"}'
 
-#####################
-Based off a Stack Overflow Post, I was able to find a way to create a command called curltime that will perform the curl command but output various timestamps regarding
-how long the request/response took, this gives it a bit more functionality similar to Postman. Make sure to hang onto the curl-format.txt file in your notes and keep the
-alias curltime in your .bashrc file. Then, if doing a simple GET request it's as simple as writing:
+########Authentication of JSON web Tokens using Curl ################
+#See web dev simplified's web tutorial on basic JSON web token authorization
 
-curltime http://localhost:3000/maria_database
+# First login using a post request:
 
-You can easily POST, DELETE and PUT as well using it very much like curl:
+curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"username": "Kyle"}'
 
-curltime -X POST http://localhost:3000/maria_database -H "Content-Type: applicaton/json" -d '{"task": "DONE IN CURL"}'
+# then have it return a JWT, which you can paste into the Bearer section of a GET request like so:
+
+curl -H 'Accept: application/json' -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI5ODkyNTU1fQ.yMsrbX_c-vAXRMMYe5OFRWfg95zk0J2BBsv0zjcy4gU" http://localhost:3000/posts
