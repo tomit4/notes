@@ -1,3 +1,15 @@
+// To have mariadb start on boot:
+sudo systemctl enable mariadb
+
+// To disable mariadb from starting on boot:
+sudo systemctl disable mariadb
+
+// To start mariadb manually:
+sudo systemctl start mariadb.service
+
+To stop mariadb manually:
+sudo systemctl stop mariadb.service
+
 //To access root:
 mariadb -u root -p
 //and enter root password
