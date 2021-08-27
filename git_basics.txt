@@ -90,7 +90,11 @@ npm login # Enter login credentials
 
 npm publish --access=public # publishes your current npm package to npm
 
+################### VIEWING REPOSITORIES #####################
 
+Once within your local repository directory you can view what repositories you have open on your remote repositories by entering:
+
+git remote -v
 
 
 
