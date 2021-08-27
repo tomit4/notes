@@ -1,0 +1,71 @@
+############ BASICS OF BASH ##################
+
+# Comments in bash can be made like this, by prepending the line with a hashtag.
+
+At the beginning of every bash file you want to first navigate to your /usr/bin directory and create a file ending in .sh
+
+Once there and having created a .sh file, you want to initialize your bash file with a shebang, which tells the bash
+terminal what kind of file it is
+
+#! /bin/bash
+
+VARIABLES="Can be defined like this"
+
+Some examples of Variables include:
+
+TITLE="System Information Report for $HOSTNAME"
+CURRENT_TIME="$(date +"%x %r %Z")"
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+functions () {
+	echo "can be created like this, just don't forget to: "
+	return
+}
+
+Some examples of functions include:
+
+report_uptime () {
+	cat <<- _EOF_
+		<h2>System Uptime</h2>
+		<pre>$(uptime)</pre>
+		_EOF_
+	return
+}
+
+report_disk_space () {
+	cat <<- _EOF_
+		<h2>Disk Space Utilization</h2>
+		<pre>$(df -h)</pre>
+		_EOF_
+	return
+}
+
+report_home_space () {
+	if [[ "$(id -u)" -eq 0 ]]; then
+		cat <<- _EOF_
+		<h2>Home Space Utilization</h2>
+		<pre>$(du -sh /home/*)</pre>
+		_EOF_
+	else
+		cat <<- _EOF_
+		<h2>Home Space Utilization ($USER)</h2>
+		<pre>$(du -sh $HOME)</pre>
+		_EOF_
+	fi
+	return
+}
+
+
+cat <<- _EOF_ command acts very much like an echo"", but doesn't require the quotation marks, which can be a useful feature
+
+If statements are also seen above, where [[]] sets a test command, which determines if it is true
+
+basic boolean expressions can be used using this syntax such as [[ 0 -get 1 ]] tests whether 0 is greater than negative one, so for example
+
+if [[ 0 -gt -1]]; then
+	echo "0 is greater than -1"
+else
+	echo "0 is not greater than -1"
+fi
+
+Notice the use of fi in bash, which is required to end the if statement, otherwise bash will expect further if, elif, or else statements
