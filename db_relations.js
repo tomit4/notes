@@ -1,5 +1,5 @@
 /* Taken from Tom Nurkkala's Youtube Video on Object-RElational Mapping, which uses KnexJS and ObjectionJS to demonstrate
- Basic SQL relationships
+ Basic SQL relationships (https://www.youtube.com/watch?v=2Mnn29KRzEI)
 
 Models in relation
     source: model containing relationMappings definition
