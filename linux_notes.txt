@@ -88,6 +88,18 @@ ss
 To display the history of last logged in users:
 last
 
+To display your previous commands:
+history
+
+To find a specific command in history:
+history | grep <command>
+
+Then from there you should be able to use that command using the id number returned:
+!365
+
+To clear your history:
+history -c
+
 To display your current external/public IP address:
 curl ifconfig.me
 
