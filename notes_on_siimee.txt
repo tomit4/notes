@@ -1,0 +1,41 @@
+CORE OF APPLICATION
+
+1. Go To Website, presented with Login
+2. Enter Username/Password or email login (passwordless)
+3. User is shown a list of potential matches
+4. User can throw them away or they can keep the matches
+5. If user matches them and the potential employer has NOT matched with them yet, then nothing happens.
+6. However, if the potential employer has ALREADY matched, then app notifies USER that there
+is a mutual match
+7. App starts a real time chat between USER and potential employer
+8. If there is a mutual match, USER and POTENTIAL EMPLOYER can CHOOSE to reveal their profiles.
+
+POTENTIAL CHALLENGES
+
+1.  To create the list of potential matches has to be done before USER logs on.
+    This could be done upon logging on, or it should be done prior to log in.
+
+SCENARIO
+
+Every day you get 3 potential matches.
+
+2.  Application will need a notion of potential match que based off of an algorithm that logs user preferences.
+    This is based off of weighted user survey questions.
+
+First thing to create is the MATCH QUE, which must also be stored in the DATABASE as well.
+
+TASK ONE:   CREATE AN ENDPOINT TO RETURN A QUE OF POTENTIAL MATCHES.
+    - WE NEED A TABLE/MODEL FOR MATCH/QUE
+        -MATCH/QUE ID
+        -USER ID
+        -GIANT FIELD FOR HUGE LIST OF INTEGERS (JUST A LIST OF USER IDS RETURNED)
+TASK TWO:   SEND PROFILE TO BACK OF THE LIST.
+    - EDIT USER LIST IF USER DENIES A SPECIFIC QUE ID
+TASK THREE: CREATE AN ENDPOINT TO JOIN A GROUPING.
+    - WHEN A MATCH IS INTIATED
+    - APP LOOKS FOR USER AND TARGET USER TO BE MATCHED WITH
+    - LOOKS FOR A GROUPING WITH BOTH USER AND TARGET IN IT
+    - IF THE GROUPING DOESN'T EXIT, THEN IT CREATES ONE FOR THEM.
+        -CREATES A MEMBERSHIP INTO THE GROUP FOR THE USER, BUT NOT THE TARGET
+    - SETS MEMBERSHIP AS ACTIVE
+

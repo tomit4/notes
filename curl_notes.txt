@@ -19,4 +19,8 @@ curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d 
 
 # then have it return a JWT, which you can paste into the Bearer section of a GET request like so:
 
+<<<<<<< HEAD
 curl -H 'Accept: application/json' -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI5ODkyNTU1fQ.yMsrbX_c-vAXRMMYe5OFRWfg95zk0J2BBsv0zjcy4gU" http://localhost:3000/posts
+=======
+curl -H 'Accept: application/json' -H "Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI5ODkyNTU1fQ.yMsrbX_c-vAXRMMYe5OFRWfg95zk0J2BBsv0zjcy4gU" http://localhost:3000/posts
+>>>>>>> 95f75b948d7df9af11c31531df2f9f69130561c3
