@@ -298,6 +298,25 @@ pamac install iscan
 To Install td ameritrade
 Follow specific instructions from both website and AUR (make sure java 8 is installed)
 
+Some packages (like Visual Studio Code) you'll want a very specific version of it that simply using pacman -S won't do.
+For this, the Arch Developers have created a command called makepkg that runs a series of make or cmake related commands to
+quickly and easily compile binary files.
+
+Most of these PKGBUILD files can be downloaded using git clone from the official aur repositories (always research the binary before doing this).
+
+git clone https:/aur.archlinux.org/etc.git
+
+Then cd into the created directory, ls to see if there is a PKGBUILD (always take a look around using ls).
+
+If you're ready to compile the program, simply type in
+ makepkg -si
+
+This will compile the program and if there are unresolved dependencies, it will download them and compile them as well.
+
+If you get a fakeroot binary error, it usually means you haven't installed the dependency base-devel, simply
+
+sudo pacman -S base-devel
+
 Upgrade:
 sudo pacman -Syu
 
