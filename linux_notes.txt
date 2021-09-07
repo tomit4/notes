@@ -344,6 +344,28 @@ sudo pacman -Rcns <packagename>
 See which program owns this file:
 sudo pacman -Qo /path/to/file
 
+OpenBSD's doas:
+sudo is a rather large program and is designed mainly for large scale systems administration purposes.
+Because of this, it is not necessary for most home use cases.  Instead, you may wish to install opendoas as an alternative:
+
+sudo pacman -S opendoas
+
+You'll need to configure opendoas by creating a doas.conf file in your /etc directory:
+
+sudo touch /etc/doas.conf
+
+And input this single line command to permit doas access to the wheel (sudoers) group:
+permit persist :wheel
+
+You'll also need to change owership of this file to root and reset the file permissions:
+sudo chown -c root:root /etc/doas.conf
+sudo chmod -c 0400 /etc/doas.conf
+
+This will allow it to act mainly as a lighter weight version of sudo
+
+A note on doas: You probably do NOT want to remove sudo as certain programs
+like makepkg rely on it (although this is a questionable practice).
+
 To have bpytop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
 xfce4-terminal --geometry=127x51+0+0 -x bpytop
 Same with xbanish:
