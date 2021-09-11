@@ -371,6 +371,16 @@ xfce4-terminal --geometry=127x51+0+0 -x bpytop
 Same with xbanish:
 xbanish
 
+Config Files:
+Configuration files for certain programs usually fall under the ~/.config directory, I have specifically created certain keybindings for example
+which can be found in the file titled:
+
+xfce4-keyboard-shortcuts.xml
+
+You can copy these into a new installation of xfce by putting this file into the following directory:
+
+~/.config/xfce4/xfconf/xfce-perchannel-xml
+
 Other Apps of Mention:
 alacritty (nice simple terminal emulator)
 
