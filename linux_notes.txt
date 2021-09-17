@@ -24,6 +24,19 @@ du -c /directory (displays total disk usage)
 du -h /directory (displays total disk usage by file/subdirectory in human readable format)
 du -hc /directory (displays total disk usage and usage by file/subdirectory in human readable format)
 
+To compress/archive and encrypt a file:
+
+tar czf <compressed_file_name> <file_tobecompressed_name>
+
+gpg -c <compressed_file_name>
+
+Enter passphrase, and repeat it.
+
+To decompress said file:
+gpg -d <compressed_file_name>
+
+tar xzf <decompressed_file_name> <file_tobedecompressed_name>
+
 To Display top five directories that use the most disk space:
 du -ahx . | sort -rh | head -5
 
