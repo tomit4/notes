@@ -106,6 +106,11 @@ complete -cf sudo
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
 
+# No need to type cd when changing directories.
+shopt -s autocd
+# No need to have capitalization correct
+shopt -s cdspell
+
 shopt -s expand_aliases
 
 # export QT_SELECT=4
@@ -139,14 +144,19 @@ ex ()
 }
 
 # Custom Bash Commands
+alias docs="cd ~/Documents"
+alias down="cd ~/Downloads"
+alias pics="cd ~/Pictures"
+alias vids="cd ~/Videos"
+alias notes="cd ~/Documents/notes"
 alias Code="cd ~/Documents/Code" 
 alias js="cd ~/Documents/Code/javascript"
-alias c++="cd ~/Documents/Code/c++"
 alias ls="ls -lah --color=auto"
-alias notes="cd ~/Documents/notes"
 alias firefox="firefox-developer-edition"
 alias thinkorswim="/home/brian/thinkorswim/thinkorswim"
 alias shutdown="shutdown -h now"
-alias docs="cd ~/Documents"
+alias logout="xfce4-session-logout --logout"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
 alias killport="fuser -k"
+alias sudo="doas"
+alias doasedit="doas rnano"
