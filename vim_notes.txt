@@ -63,13 +63,35 @@ Ctrl-R: redo
 >> : indent current line
 << : unindent current line
 
-Travel to a specific line:
+# Travel to a specific line:
 5G (takes you to line 5)
 
-Page Up/ Page Down:
+# Page Up/ Page Down:
 CTRL + B (Page Up)
 CTRL + F (Page Down)
 
-Global Search and Replace:
+# Global Search and Replace:
 
 :%s/word_to_replace/new_word/g
+
+# Dealing with multiple files:
+
+# You can open multiple files by simply typing them in sequentially after the vim command(tab auto complete works on this):
+
+vim item1.txt item2.txt
+
+# You can hope between files then with the following commands:
+
+# Next
+:n
+# Previous
+:N or :prev
+
+# To see which files are open in the vim buffer:
+:args
+
+# To open up more, simply type:
+
+:n item3.txt
+
+# Note that this would only open item3.txt, it clears the buffer when you do this and so you would have to enter your total list of files.
