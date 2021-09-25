@@ -12,11 +12,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
+Plug 'luochen1990/rainbow'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 "Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'morhetz/gruvbox'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
@@ -31,6 +30,9 @@ nmap ++ plug>NERDCommenterToggle
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
+
+"set colored brackets via rainbow"
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -81,8 +83,14 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
+if(has("termguicolors"))
+  set termguicolors
+endif
+
 syntax enable
 colorscheme gruvbox
+"colorscheme nord
+"colorscheme molokai
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
