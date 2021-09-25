@@ -144,9 +144,11 @@ ex ()
 }
 
 # Custom Bash Commands
+alias .="cd"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias pics="cd ~/Pictures"
+alias music="cd ~/Music"
 alias vids="cd ~/Videos"
 alias notes="cd ~/Documents/notes"
 alias config="cd ~/.config"
@@ -156,7 +158,6 @@ alias ls="ls -lah --color=auto"
 alias firefox="firefox-developer-edition"
 alias thinkorswim="/home/brian/thinkorswim/thinkorswim"
 alias vim="nvim"
-alias vi="nvim"
 alias shutdown="shutdown -h now"
 alias logout="xfce4-session-logout --logout"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
