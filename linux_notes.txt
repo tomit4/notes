@@ -259,14 +259,19 @@ OR
 yay -Rns <name>
 
 To remove a specific package and all its dependencies:
-sudo pacman -Rs <name>
+sudo pacman -Rsu <name>
+
+To view/remove orphan packages:
+pacman -Qdt
+sudo pacman -Rs $(pacman -Qdtq)
 
 To Clean up unneeded dependencies:
 yay -Yc
 
-To clean up the pacman cache of all packages that are not currently installed:
-sudo pacman -Sc OR
-sudo paccache -r
+To clean up the pacman cache of all packages that are not currently installed (except for the last 3 packages):
+sudo paccache -rvk3
+More dangerous, removes entire cache:
+sudo pacman -Scc
 
 To clean out your /home directory cache:
 First to see your home cache disk usage:
