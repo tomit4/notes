@@ -25,8 +25,8 @@ call plug#end()
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
+vmap ++ plug>NERDCommenterToggle
+nmap ++ plug>NERDCommenterToggle
 
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
@@ -51,6 +51,10 @@ let g:NERDTreeGitStatusWithFlags = 1
 
 
 let g:NERDTreeIgnore = ['^node_modules$']
+
+"call s:initVariable("g:NERDTreeWinPos", "left") "default
+"call s:initVariable("g:NERDTreeWinPos", right)
+
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0

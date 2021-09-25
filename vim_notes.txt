@@ -74,6 +74,10 @@ CTRL + F (Page Down)
 
 :%s/word_to_replace/new_word/g
 
+# Running Bash Commands from within Vim:
+
+:! <bash command>
+
 # Dealing with multiple files:
 
 # You can open multiple files by simply typing them in sequentially after the vim command(tab auto complete works on this):
