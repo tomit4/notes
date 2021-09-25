@@ -3,7 +3,13 @@
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
-		"json"
+    "typescriptreact",
+    "typescriptvue",
+		"json",
+    "javascriptreact",
+    "javascriptvue",
+    "typescript.tsx",
+    "graphql"
 	],
   "languageserver": {
     "bash": {
@@ -34,7 +40,7 @@
     "rust": {
     	"command": "rust-analyzer",
     	"filetypes": ["rust"],
-    	"rootPatterns" ["Cargo.toml"]
+    	"rootPatterns": ["Cargo.toml"]
     },
      "python": {
     "command": "python",
