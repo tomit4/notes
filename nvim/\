@@ -13,7 +13,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
-Plug 'yaegassy/coc-volar'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 "Plug 'christoomey/vim-tmux-navigator'
@@ -90,11 +89,9 @@ endif
 
 syntax enable
 colorscheme gruvbox
-"colorscheme menguless "wish this had syntax highlighting..."
 "colorscheme nord
 "colorscheme molokai
 
-"Enable transparency
 hi Normal guibg=NONE ctermbg=NONE
 
 " sync open file with NERDTree
