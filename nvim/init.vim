@@ -52,10 +52,6 @@ let g:NERDTreeGitStatusWithFlags = 1
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
-"call s:initVariable("g:NERDTreeWinPos", "left") "default
-"call s:initVariable("g:NERDTreeWinPos", right)
-
-
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
 "let g:prettier#quickfix_auto_focus = 0
@@ -63,8 +59,11 @@ let g:NERDTreeIgnore = ['^node_modules$']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " run prettier on save
 let g:prettier#autoformat = 0
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
