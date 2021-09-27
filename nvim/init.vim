@@ -11,7 +11,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'scrooloose/nerdcommenter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'preservim/nerdcommenter'
 Plug 'luochen1990/rainbow'
 Plug 'yaegassy/coc-volar'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -25,12 +26,12 @@ call plug#end()
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
-vmap ++ plug>NERDCommenterToggle
-nmap ++ plug>NERDCommenterToggle
 
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
@@ -53,7 +54,7 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ }                         
 
 
-let g:NERDTreeIgnore = ['^node_modules$']
+"let g:NERDTreeIgnore = ['^node_modules$']
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
@@ -89,9 +90,9 @@ if(has("termguicolors"))
 endif
 
 syntax enable
-colorscheme gruvbox
-"colorscheme menguless "wish this had syntax highlighting..."
-"colorscheme nord
+"colorscheme gruvbox
+"colorscheme menguless
+colorscheme nord
 "colorscheme molokai
 
 "Enable transparency
@@ -226,6 +227,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Shortcut mappings for FZF
+nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :FZF<cr>
 
 " Using CocList
 " Show all diagnostics

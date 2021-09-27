@@ -339,7 +339,7 @@ window:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.93 
+background_opacity: 0.90 
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -812,33 +812,61 @@ background_opacity: 0.93
   #print_events: false
 
 # Colors (Monokai Dark)
+#colors:
+  # Default colors
+#  primary:
+#    background: '#272822'
+#    foreground: '#F8F8F2'
+
+  # Normal colors
+#  normal:
+#   black:   '#272822'
+#   red:     '#F92672'
+#   green:   '#A6E22E'
+#   yellow:  '#F4BF75'
+#   blue:    '#66D9EF'
+#   magenta: '#AE81FF'
+#   cyan:    '#A1EFE4'
+#   white:   '#F8F8F2'
+
+  # Bright colors
+#  bright:
+#   black:   '#75715E'
+#   red:     '#F92672'
+#   green:   '#A6E22E'
+#   yellow:  '#F4BF75'
+#   blue:    '#66D9EF'
+#   magenta: '#AE81FF'
+#   cyan:    '#A1EFE4'
+#   white:   '#F9F8F5'
+
+
+# Colors (Nord)
 colors:
   # Default colors
   primary:
-    background: '#272822'
-    foreground: '#F8F8F2'
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
 
   # Normal colors
   normal:
-   black:   '#272822'
-   red:     '#F92672'
-   green:   '#A6E22E'
-   yellow:  '#F4BF75'
-   blue:    '#66D9EF'
-   magenta: '#AE81FF'
-   cyan:    '#A1EFE4'
-   white:   '#F8F8F2'
+    black:   '0x3B4252'
+    red:     '0xBF616A'
+    green:   '0xA3BE8C'
+    yellow:  '0xEBCB8B'
+    blue:    '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan:    '0x88C0D0'
+    white:   '0xE5E9F0'
 
   # Bright colors
   bright:
-   black:   '#75715E'
-   red:     '#F92672'
-   green:   '#A6E22E'
-   yellow:  '#F4BF75'
-   blue:    '#66D9EF'
-   magenta: '#AE81FF'
-   cyan:    '#A1EFE4'
-   white:   '#F9F8F5'
-
-
+    black:   '0x4C566A'
+    red:     '0xBF616A'
+    green:   '0xA3BE8C'
+    yellow:  '0xEBCB8B'
+    blue:    '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan:    '0x8FBCBB'
+    white:   '0xECEFF4'
 
