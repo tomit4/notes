@@ -66,10 +66,10 @@ To display and change wifi settings;
 nmcli
 
 To Display Proccesses:
-bpytop
+btop
 htop
 top
-powertop
+nvtop
 
 To Kill all processes on a specific port:
 fuser -k 3000/tcp

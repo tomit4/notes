@@ -36,10 +36,11 @@ colors() {
 # Change the window title of X terminals
 case ${TERM} in
 	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007" '
+
 		;;
 	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\" '
 		;;
 esac
 
@@ -70,7 +71,7 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+		PS2='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
 		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
@@ -143,6 +144,10 @@ ex ()
   fi
 }
 
+# Displays current git branch if there is any
+
+export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[01;37m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;32m└─▶ \033[37m'
+
 # Custom Bash Commands
 alias .="cd"
 alias docs="cd ~/Documents"
@@ -157,8 +162,8 @@ alias js="cd ~/Documents/Code/javascript"
 alias ls="ls -lah --color=auto"
 alias {top,htop,btop}="xfce4-terminal --geometry=127x51+0+0 -x btop"
 alias {firefox,ff}="firefox-developer-edition"
-alias {sq,sql,sqlite}="sqlite3"
-alias {nvi,vim,vi}="nvim"
+alias {sq,sql,sqlite}="sqlcipher"
+alias {nv,nvi,vim,vi}="nvim"
 alias {mi,mic,nano}="micro"
 alias {mysql,maria,mdb}="mariadb"
 alias thinkorswim="~/thinkorswim/thinkorswim"
