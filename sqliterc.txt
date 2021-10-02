@@ -1,0 +1,3 @@
+.headers ON
+.mode column
+.timer on
