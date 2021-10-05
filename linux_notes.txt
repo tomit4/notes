@@ -176,7 +176,6 @@ cd into Unigine_Valley-1.0 (see Uningine for Linux website for download)
 ./valley (to run benchmark)
 
 To Display system statistics including program resource usage:
-yay -Ps OR
 ncdu
 
 To enable Uncomplicated Firewall:
@@ -227,15 +226,10 @@ arm_freq=2000-2200(2200max)
 To Update/Upgrade All Packages:
 sudo pacman -Syu
 OR
-yay
 
 To install a specific package:
 sudo pacman -S <name>
 OR
-yay <name>
-
-To install a package and bypass validity checks (make sure you trust the package):
-yay -S --mflags --skipinteg <name>
 
 To test whether or not a server is running on a specific port:
 
@@ -256,17 +250,14 @@ chmod (a somewhat advanced command, see chmod_notes.txt)
 To remove a specific package:
 sudo pacman -R <name>
 OR
-yay -Rns <name>
 
 To remove a specific package and all its dependencies:
 sudo pacman -Rsu <name>
 
 To view/remove orphan packages:
-pacman -Qdt
-sudo pacman -Rs $(pacman -Qdtq)
+pacman -Qdttq
+sudo pacman -Rns $(pacman -Qdttq)
 
-To Clean up unneeded dependencies:
-yay -Yc
 
 To clean up the pacman cache of all packages that are not currently installed (except for the last 3 packages):
 sudo paccache -rvk3
