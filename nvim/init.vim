@@ -24,7 +24,6 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
-
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
 
@@ -57,7 +56,6 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Ignored"   : "#808080"   
     "\ }                         
 
-
 "let g:NERDTreeIgnore = ['^node_modules$']
 
 " vim-prettier
@@ -83,6 +81,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 "set relativenumber
 set number 
 
+set cursorline
 set ttyfast
 set mouse=a
 set autoindent
