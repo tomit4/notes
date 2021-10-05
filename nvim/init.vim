@@ -2,7 +2,6 @@
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
@@ -13,9 +12,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'preservim/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'luochen1990/rainbow'
 Plug 'yaegassy/coc-volar'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 "Plug 'christoomey/vim-tmux-navigator'
 
@@ -32,6 +33,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" set bracey/liveserver to resresh on save
+let g:bracey_refresh_on_save = 1
 
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
@@ -76,8 +80,12 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-set relativenumber
+"set relativenumber
+set number 
 
+set ttyfast
+set mouse=a
+set autoindent
 set smarttab
 set cindent
 set tabstop=2
