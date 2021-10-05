@@ -80,12 +80,27 @@ CTRL + F (Page Down)
 
 # Dealing with multiple files:
 
+#Tabs:
+To open a new tab there are a few options, one is to use the command line:
+!tabnew <filename>
+
+You can cycle through tabs using:
+gt or gT
+
+You can cycle through windows using:
+Ctrl + w or Ctrl + Shift + w
+
+*From NerdTree you can also simply push t to open a new tab of the file you have selected
+t
+
+Side Note: in NerdTree you can display hidden files by invoking capital I:
+I
+
 # You can open multiple files by simply typing them in sequentially after the vim command(tab auto complete works on this):
 
 vim item1.txt item2.txt
 
-# You can hope between files then with the following commands:
-
+# You can hope between files then with the following commands(not as effective as tabs):
 # Next
 :n
 # Previous
