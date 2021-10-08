@@ -74,6 +74,10 @@ CTRL + F (Page Down)
 
 :%s/word_to_replace/new_word/g
 
+# Delete all blank lines:
+
+g/^\s*$/d
+
 # Running Bash Commands from within Vim:
 
 :! <bash command>
