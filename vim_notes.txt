@@ -52,11 +52,20 @@ yiw: copy the current word, excluding surrounding whitespace
 yaw: copy the current word, including surrounding whitespace
 ytx: copy from the current cursor position up to and before the character represented by x
 yfx: copy from the current cursor position up to and  including the character represented by x
+p: paste what you've copied
 
-# Undo/Redo:
+# Cut
+# hit d at line you wish to current
+d
+# hit ESC
+ESC
+# navigate to line you wish to paste at, and hit p
+p
 
-u: undo
-Ctrl-R: redo
+# Undo
+u
+# Redo
+Ctrl-R 
 
 # Indent/Unindent:
 
@@ -78,6 +87,10 @@ CTRL + F (Page Down)
 
 g/^\s*$/d
 
+# Append to end of every line:
+
+:%s/$/,/
+
 # Running Bash Commands from within Vim:
 
 :! <bash command>
@@ -90,6 +103,10 @@ To open a new tab there are a few options, one is to use the command line:
 
 You can cycle through tabs using:
 gt or gT
+
+To open up a new vertical window:
+
+:vert new filename.txt
 
 You can cycle through windows using:
 Ctrl + w or Ctrl + Shift + w
