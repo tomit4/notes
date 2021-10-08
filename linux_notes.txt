@@ -380,6 +380,21 @@ xfce4-terminal --geometry=127x51+0+0 -x bpytop
 Same with xbanish:
 xbanish
 
+Extracting gpg keys so that you can copy them without mouse:
+
+In terminal, in directory with .gpg file
+gpg -d secret_file.txt.gpg > echo > file_secrets.txt
+Enter password for gpg when prompted
+
+Use Micro to Copy text:
+micro gh_token.txt
+Ctrl + a
+Ctrl + c
+Ctrl + q
+
+In main terminal:
+Ctrl + shift + v
+
 Config Files:
 Configuration files for certain programs usually fall under the ~/.config directory, I have specifically created certain keybindings for example
 which can be found in the file titled:
