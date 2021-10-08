@@ -147,7 +147,7 @@ ex ()
 # Formats history command with dates/times
 HISTTIMEFORMAT="%d/%m/%y %T "
 
-# Displays current git branch if there is any
+# Displays current git branch if there is any and also styles bash prompt
 export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\033[01;37m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;32m└─▶ \033[37m'
 
 # Custom Bash Commands
@@ -162,13 +162,16 @@ alias config="cd ~/.config"
 alias Code="cd ~/Documents/Code" 
 alias js="cd ~/Documents/Code/javascript"
 alias ls="ls -lah --color=auto"
+alias {his,hist}="history"
+alias {cmatrix,matrix}="cmatrix -b -C cyan"
 alias {top,htop,btop}="xfce4-terminal --geometry=127x51+0+0 -x btop"
-alias {firefox,ff}="firefox-developer-edition"
+alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias {nv,nvi,vim,vi}="nvim"
 alias {mi,mic,nano}="micro"
 alias {mysql,maria,mdb}="mariadb"
-alias thinkorswim="~/thinkorswim/thinkorswim"
+alias thinkorswim="~/thinkorswim/thinkorswim &"
+alias vs="code"
 alias shutdown="shutdown -h now"
 alias logout="xfce4-session-logout --logout"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
