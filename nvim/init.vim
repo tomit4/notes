@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'preservim/nerdcommenter'
+Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'luochen1990/rainbow'
@@ -26,7 +27,6 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 call plug#end()
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
-
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
@@ -38,6 +38,9 @@ let g:bracey_refresh_on_save = 1
 
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
+
+"set indentLine to nvim colorscheme
+"let g:indentLine_setColors = 0
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
