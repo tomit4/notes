@@ -91,6 +91,12 @@ g/^\s*$/d
 
 :%s/$/,/
 
+# Select and copy within parenthesis, brackets, curly braces:
+# Navigate to within parenthesis, brackets, curly braces:
+
+vaby
+#vab will select all within parens, brackets, curly braces, and then y will yank/copy it.
+
 # Running Bash Commands from within Vim:
 
 :! <bash command>
