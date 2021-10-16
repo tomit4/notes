@@ -143,6 +143,11 @@ youtube-dl <youtube url>
 Only Audio
 youtube-dl -x --audio-format mp3 <youtube url>
 
+To display quality versions to download:
+youtube-dl -F <youtube url>
+And then choose one
+youtube-dl -f <choice> <youtube url>
+
 To display all directories EXCEPT for one directory:
 tree -I ignored_directory_name
 Example:
