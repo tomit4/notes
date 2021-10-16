@@ -36,6 +36,17 @@ gpg -d <compressed_file_name>
 
 tar xzf <decompressed_file_name> <file_tobedecompressed_name>
 
+To compress/archive and encrypt a directory:
+
+tar cvzf = folder | gpg -c --passphrase yourpassword > folder.tar.gz.gpg
+
+And decompress directory:
+
+gpg -d folder.tar.gz.gpg | tar -xvzf -
+
+(make sure to clear your history afterwards)
+history -c
+
 To Display top five directories that use the most disk space:
 du -ahx . | sort -rh | head -5
 
