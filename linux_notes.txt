@@ -119,6 +119,20 @@ curl ifconfig.me
 To display all directories/files:
 tree
 
+To display stocks:
+mop
+
+To display weather:
+inxi -w
+
+To open terminal video player:
+mplayer <video_name>
+
+To download youtube videos:
+youtube-dl <youtube url>
+Only Audio
+youtube-dl -x <youtube url>
+
 To display all directories EXCEPT for one directory:
 tree -I ignored_directory_name
 Example:
