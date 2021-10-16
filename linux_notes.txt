@@ -1,8 +1,7 @@
 To Display All Info about your Linux Machine:
 uname -a
 
-To change password:
-passwd
+To change password: passwd
 
 To change password as root for another user:
 passwd <username>
@@ -131,7 +130,7 @@ mplayer <video_name>
 To download youtube videos:
 youtube-dl <youtube url>
 Only Audio
-youtube-dl -x <youtube url>
+youtube-dl -x --audio-format mp3 <youtube url>
 
 To display all directories EXCEPT for one directory:
 tree -I ignored_directory_name
@@ -389,8 +388,8 @@ This will allow it to act mainly as a lighter weight version of sudo
 A note on doas: You probably do NOT want to remove sudo as certain programs
 like makepkg rely on it (although this is a questionable practice).
 
-To have bpytop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
-xfce4-terminal --geometry=127x51+0+0 -x bpytop
+To have btop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
+xfce4-terminal --geometry=127x51+0+0 -x btop
 Same with xbanish:
 xbanish
 
