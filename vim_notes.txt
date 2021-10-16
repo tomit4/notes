@@ -115,10 +115,14 @@ To open up a new vertical window:
 :vert new filename.txt
 
 You can cycle through windows using:
-Ctrl + w or Ctrl + Shift + w
+Ctrl + ww
 
-*From NerdTree you can also simply push t to open a new tab of the file you have selected
+# From NerdTree you can also simply push t to open a new tab of the file you have selected
 t
+
+# Also from NerdTree you can simply push s to open a new window of the file you have selected
+s
+
 
 Side Note: in NerdTree you can display hidden files by invoking capital I:
 I
