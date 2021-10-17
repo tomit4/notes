@@ -15,6 +15,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
+Plug 'kassio/neoterm'
 Plug 'yaegassy/coc-volar'
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
@@ -64,6 +65,8 @@ let g:mkdp_auto_close = 0
 
 " keybind map Ctrl + m to :MarkdownPreview
 nmap <C-m> <Plug>MarkdownPreviewToggle
+
+nmap <C-s> 50:new
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
