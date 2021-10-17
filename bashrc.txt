@@ -5,6 +5,10 @@
 # enable vi keybindings in terminal and terminal applications
 set -o vi
 
+# but keep ctrl l as the clear screen command
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 [[ $- != *i* ]] && return
 
 colors() {
