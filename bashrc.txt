@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# enable vi keybindings in terminal and terminal applications
+set -o vi
+
 [[ $- != *i* ]] && return
 
 colors() {

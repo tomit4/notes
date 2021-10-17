@@ -110,6 +110,8 @@ colorscheme nord
 "Enable transparency
 hi Normal guibg=NONE ctermbg=NONE
 
+"Enable Comments with Italics (below selected colorscheme)
+highlight Comment cterm=italic gui=italic
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
 function! IsNERDTreeOpen()        
