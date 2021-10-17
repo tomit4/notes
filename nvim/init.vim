@@ -3,8 +3,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-"Plug 'tsony-tsonev/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
@@ -15,6 +14,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
 Plug 'yaegassy/coc-volar'
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
@@ -61,7 +61,13 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Ignored"   : "#808080"   
     "\ }                         
 
-"let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeIgnore = ['^node_modules$']
+
+" do not close the markdown preview tab when switching to other buffers
+let g:mkdp_auto_close = 0
+
+" keybind map Ctrl + m to :MarkdownPreview
+nmap <C-m> <Plug>MarkdownPreviewToggle
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
@@ -112,6 +118,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 "Enable Comments with Italics (below selected colorscheme)
 highlight Comment cterm=italic gui=italic
+
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
 function! IsNERDTreeOpen()        
