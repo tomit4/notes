@@ -13,7 +13,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
 Plug 'yaegassy/coc-volar'
@@ -34,9 +33,6 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" set bracey/liveserver to resresh on save
-let g:bracey_refresh_on_save = 1
 
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
