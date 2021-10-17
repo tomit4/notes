@@ -104,8 +104,9 @@ vaby
 # Dealing with multiple files:
 
 #Tabs:
-To open a new tab there are a few options, one is to use the command line:
-!tabnew <filename>
+
+Open a new tab:
+:tabe <optional filename>
 
 You can cycle through tabs using:
 gt or gT
@@ -113,6 +114,10 @@ gt or gT
 To open up a new vertical window:
 
 :vert new filename.txt
+
+Or another way to open a vertical window:
+
+Ctrl + w + v
 
 You can cycle through windows using:
 Ctrl + ww
@@ -145,3 +150,15 @@ vim item1.txt item2.txt
 :n item3.txt
 
 # Note that this would only open item3.txt, it clears the buffer when you do this and so you would have to enter your total list of files.
+
+# Open up NeoTerm:
+
+# I have set up a custom keybind for opening up a small horizontal window into which you can run neoterm
+
+Ctrl -s |T <command>
+
+# If you close the window with neoterm running, you cannot simply type :T <command> and start again, instead:
+
+:Ttoggle
+
+Will open it again, then you can start typing :T <command>
