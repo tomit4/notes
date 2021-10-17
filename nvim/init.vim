@@ -18,7 +18,7 @@ Plug 'luochen1990/rainbow'
 Plug 'kassio/neoterm'
 Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
-Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+"Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 "Plug 'christoomey/vim-tmux-navigator'
 
@@ -74,11 +74,11 @@ nmap <C-s> 50:new
 "let g:prettier#quickfix_enabled = 0
 "let g:prettier#quickfix_auto_focus = 0
 " prettier command for coc
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " run prettier on save
-let g:prettier#autoformat = 0
+"let g:prettier#autoformat = 0
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
@@ -144,7 +144,7 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
-  \ 'coc-prettier', 
+  "\ 'coc-prettier', 
   \ 'coc-json', 
   \ ]
 " from readme
