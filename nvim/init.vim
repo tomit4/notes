@@ -18,6 +18,7 @@ Plug 'luochen1990/rainbow'
 Plug 'kassio/neoterm'
 Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
+Plug '907th/vim-auto-save'
 "Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 "Plug 'christoomey/vim-tmux-navigator'
@@ -42,6 +43,12 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 "set indentLine to nvim colorscheme
 "let g:indentLine_setColors = 0
 
+"enable AutoSave on start
+let g:auto_save = 1
+
+"silence AutoSave messages
+let g:auto_save_silent = 1
+
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 
@@ -64,11 +71,19 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " do not close the markdown preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
 
+" Custom keybindings
+
 " keybind map Ctrl + m to :MarkdownPreview
 nmap <C-m> <Plug>MarkdownPreviewToggle
 
 " creates a small horizontal window for neoterm ( type |T <command> )
 nmap <C-s> 50:new
+
+" Toggle NerdTree
+nmap <C-n> :NERDTreeToggle<CR>
+
+"Escape Insert Mode with indentLine
+imap ii <Esc>
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
