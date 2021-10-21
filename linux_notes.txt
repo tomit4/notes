@@ -460,6 +460,7 @@ iscan (funny enough, it's in the local repos, but you can also get it from the A
 krita
 inkscape
 photogimp(plugin for gimp that gives it a more photoshop feeling ui download zip file from github, see brodie robertson's YT on installation)
+greenwithenvy(gwe - nvidia overclock/fanspeed adjustment gui application)
 
 xbanish (hides mouse on keyboard input, make sure to add to startup applications)
 xbanish is definitely best called on start up, to do so, simply create a startup command from the whisker menu's startup GUI, and enter: xbanish
