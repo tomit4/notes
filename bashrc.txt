@@ -195,5 +195,6 @@ alias rmcache="paccache -rvk3"
 alias rm="rm -i"
 alias sudo="doas"
 alias {doasedit,sudoedit}="doas rnano"
+alias shred="shred -uz"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
