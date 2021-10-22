@@ -13,22 +13,26 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
 Plug 'kassio/neoterm'
 Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
-"Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
-"Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
-inoremap jk <ESC>
+
+"Toggle NerdTree with Ctrl + n
 nmap <C-n> :NERDTreeToggle<CR>
+
+"Toggle Multi-Cursor with j or k
+nmap <C-j> <C-Down>
+nmap <C-k> <C-Up>
+
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -82,18 +86,8 @@ nmap <C-s> 50:new
 " Toggle NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
 
-"Escape Insert Mode with indentLine
+"Escape Insert Mode with ii 
 imap ii <Esc>
-
-" vim-prettier
-"let g:prettier#quickfix_enabled = 0
-"let g:prettier#quickfix_auto_focus = 0
-" prettier command for coc
-"command! -nargs=0 Prettier :CocCommand prettier.formatFile
-" run prettier on save
-"let g:prettier#autoformat = 0
-
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
