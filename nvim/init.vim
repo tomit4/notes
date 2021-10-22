@@ -27,7 +27,7 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 call plug#end()
 
 "Toggle NerdTree with Ctrl + n
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
 
 "Toggle Multi-Cursor with j or k
 nmap <C-j> <C-Down>
