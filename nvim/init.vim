@@ -26,13 +26,12 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 " Initialize plugin system
 call plug#end()
 
-"Toggle NerdTree with Ctrl + n
-nmap <C-t> :NERDTreeToggle<CR>
+"Toggle NerdTree with Ctrl + l
+nmap <C-l> :NERDTreeToggle<CR>
 
 "Toggle Multi-Cursor with j or k
 nmap <C-j> <C-Down>
 nmap <C-k> <C-Up>
-
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -82,9 +81,6 @@ nmap <C-m> <Plug>MarkdownPreviewToggle
 
 " creates a small horizontal window for neoterm ( type |T <command> )
 nmap <C-s> 50:new
-
-" Toggle NerdTree
-nmap <C-n> :NERDTreeToggle<CR>
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
