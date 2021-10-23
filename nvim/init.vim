@@ -3,8 +3,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-"Plug 'tsony-tsonev/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
@@ -12,32 +11,46 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'preservim/nerdcommenter'
+Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
+Plug 'kassio/neoterm'
+Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
-Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
-"Plug 'christoomey/vim-tmux-navigator'
+Plug '907th/vim-auto-save'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
-inoremap jk <ESC>
-nmap <C-n> :NERDTreeToggle<CR>
 
-" open NERDTree automatically
+"Toggle NerdTree with Ctrl + l
+nmap <C-l> :NERDTreeToggle<CR>
+
+"Toggle Multi-Cursor with j or k
+nmap <C-j> <C-Down>
+nmap <C-k> <C-Up>
+
+" Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" set bracey/liveserver to resresh on save
-let g:bracey_refresh_on_save = 1
-
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
+
+"set indentLine to nvim colorscheme
+"let g:indentLine_setColors = 0
+
+"enable AutoSave on start
+let g:auto_save = 1
+
+"silence AutoSave messages
+let g:auto_save_silent = 1
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -56,17 +69,21 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Ignored"   : "#808080"   
     "\ }                         
 
-"let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeIgnore = ['^node_modules$']
 
-" vim-prettier
-"let g:prettier#quickfix_enabled = 0
-"let g:prettier#quickfix_auto_focus = 0
-" prettier command for coc
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-" run prettier on save
-let g:prettier#autoformat = 0
+" do not close the markdown preview tab when switching to other buffers
+let g:mkdp_auto_close = 0
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" Custom keybindings
+
+" keybind map Ctrl + m to :MarkdownPreview
+nmap <C-m> <Plug>MarkdownPreviewToggle
+
+" creates a small horizontal window for neoterm ( type |T <command> )
+nmap <C-s> 50:new
+
+"Escape Insert Mode with ii 
+imap ii <Esc>
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
@@ -105,6 +122,9 @@ colorscheme nord
 "Enable transparency
 hi Normal guibg=NONE ctermbg=NONE
 
+"Enable Comments with Italics (below selected colorscheme)
+highlight Comment cterm=italic gui=italic
+
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
 function! IsNERDTreeOpen()        
@@ -129,7 +149,7 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
-  \ 'coc-prettier', 
+  "\ 'coc-prettier', 
   \ 'coc-json', 
   \ ]
 " from readme

@@ -1,8 +1,7 @@
 To Display All Info about your Linux Machine:
 uname -a
 
-To change password:
-passwd
+To change password: passwd
 
 To change password as root for another user:
 passwd <username>
@@ -36,6 +35,17 @@ To decompress said file:
 gpg -d <compressed_file_name>
 
 tar xzf <decompressed_file_name> <file_tobedecompressed_name>
+
+To compress/archive and encrypt a directory:
+
+tar cvzf = folder | gpg -c --passphrase yourpassword > folder.tar.gz.gpg
+
+And decompress directory:
+
+gpg -d folder.tar.gz.gpg | tar -xvzf -
+
+(make sure to clear your history afterwards)
+history -c
 
 To Display top five directories that use the most disk space:
 du -ahx . | sort -rh | head -5
@@ -118,6 +128,25 @@ curl ifconfig.me
 
 To display all directories/files:
 tree
+
+To display stocks:
+mop
+
+To display weather:
+inxi -w
+
+To open terminal video player:
+mplayer <video_name>
+
+To download youtube videos:
+youtube-dl <youtube url>
+Only Audio
+youtube-dl -x --audio-format mp3 <youtube url>
+
+To display quality versions to download:
+youtube-dl -F <youtube url>
+And then choose one
+youtube-dl -f <choice> <youtube url>
 
 To display all directories EXCEPT for one directory:
 tree -I ignored_directory_name
@@ -375,10 +404,25 @@ This will allow it to act mainly as a lighter weight version of sudo
 A note on doas: You probably do NOT want to remove sudo as certain programs
 like makepkg rely on it (although this is a questionable practice).
 
-To have bpytop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
-xfce4-terminal --geometry=127x51+0+0 -x bpytop
+To have btop start on startup and align to the left of the screen, go to Session and Startup and create a new operation:
+xfce4-terminal --geometry=127x51+0+0 -x btop
 Same with xbanish:
 xbanish
+
+Extracting gpg keys so that you can copy them without mouse:
+
+In terminal, in directory with .gpg file
+gpg -d secret_file.txt.gpg > echo > file_secrets.txt
+Enter password for gpg when prompted
+
+Use Micro to Copy text:
+micro gh_token.txt
+Ctrl + a
+Ctrl + c
+Ctrl + q
+
+In main terminal:
+Ctrl + shift + v
 
 Config Files:
 Configuration files for certain programs usually fall under the ~/.config directory, I have specifically created certain keybindings for example
@@ -416,6 +460,7 @@ iscan (funny enough, it's in the local repos, but you can also get it from the A
 krita
 inkscape
 photogimp(plugin for gimp that gives it a more photoshop feeling ui download zip file from github, see brodie robertson's YT on installation)
+greenwithenvy(gwe - nvidia overclock/fanspeed adjustment gui application)
 
 xbanish (hides mouse on keyboard input, make sure to add to startup applications)
 xbanish is definitely best called on start up, to do so, simply create a startup command from the whisker menu's startup GUI, and enter: xbanish
