@@ -74,6 +74,12 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " do not close the markdown preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
 
+" Create Default Mappings for NerdCommenter
+let g:NERDCreateDefaultMappings = 1
+
+" Toggle NERDCommenter with Ctrl + /
+:map <C-/> <plug>NERDCommenterToggle
+
 " Custom keybindings
 
 " keybind map Ctrl + m to :MarkdownPreview
