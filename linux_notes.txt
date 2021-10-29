@@ -437,16 +437,10 @@ You can copy these into a new installation of xfce by putting this file into the
 Other Apps of Mention:
 alacritty (nice simple terminal emulator)
 
-bpytop (much better than htop, themes well with manjaro in the XFCE terminal) (with current terminal.rc on xfce terminal, creates beautiful display, better than conky by far)
-To configure on startup, go to startup from XFCE whisker menu and create new startup command: xfce4-terminal --geometry=127x51+0+0 -x bpytop
-This is for your current widescreen monitor, takes up half screen.
-
+btop (best top, written in C++)
 nvtop (nvidia graphical user interface to monitor GPU status)
-powertop (displays power usage)
-atom (naturegreen dark theme)
 vscode(after experimenting with other vscode versions, the official one with telemetry turned off is by far the best, git clone from aur, makepkg -si, make sure basedevel is installed)
-librewolf (download vis github)
-micro(amazing minimalist text editor)
+micro(minimalist text editor)
 irssi
 tor-browser
 nmap
@@ -484,3 +478,11 @@ Manjaro XFCE (minimal DE) (favorite thus far 2021)
 Manjaro Sway (community driven TWM)
 Manjaro I3 (community driven TWM)
 Manjaro Lomiri (for Pinephone, still in beta version as of mid 2021)
+
+Where you can find certain configuration files:
+Neovim Configuration(~/.config/nvim/)
+Bash Configuration (~/.bashrc)
+Alacritty Configuration (~/.config/alacritty)
+Custom XFCE Keyboard Configuration (~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml)
+Custom XFCE AutoStart Scripts <copy entire directory>(~/.config/autostart)
+FireFox Settings (~/.mozilla/firefox/k6634gl6.dev-edition-default/prefs.js)
