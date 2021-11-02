@@ -1,5 +1,5 @@
  "If downloading this as a .txt rename as init.vim and put in ~/.config/nvim
-
+console.log()
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -92,7 +92,7 @@ nmap <C-s> 50:new
 imap ii <Esc>
 
 "Insert a console.log()
-inoremap cll console.log();<esc><left>i
+inoremap cll console.log()<esc>i
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
