@@ -1,4 +1,4 @@
-" If downloading this as a .txt rename as init.vim and put in ~/.config/nvim
+ "If downloading this as a .txt rename as init.vim and put in ~/.config/nvim
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
@@ -77,7 +77,7 @@ let g:mkdp_auto_close = 0
 " Create Default Mappings for NerdCommenter
 let g:NERDCreateDefaultMappings = 1
 
-" Toggle NERDCommenter with Ctrl + /
+" Toggle NERDCommenter with Ctrl + z
 :map <C-z> <plug>NERDCommenterToggle
 
 " Custom keybindings
@@ -90,6 +90,9 @@ nmap <C-s> 50:new
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
+
+"Insert a console.log()
+inoremap cll console.log();<esc><left>i
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
