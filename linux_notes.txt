@@ -382,6 +382,11 @@ sudo pacman -Rcns <packagename>
 See which program owns this file:
 sudo pacman -Qo /path/to/file
 
+Other commands of note:
+
+See the day you installed Linux (ie Birthday)
+stat / | awk 'Birth: /{print $2}'
+
 OpenBSD's doas:
 sudo is a rather large program and is designed mainly for large scale systems administration purposes.
 Because of this, it is not necessary for most home use cases.  Instead, you may wish to install opendoas as an alternative:
