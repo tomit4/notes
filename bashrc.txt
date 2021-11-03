@@ -199,4 +199,6 @@ alias sudo="doas"
 alias {doasedit,sudoedit}="doas rnano"
 alias shred="shred -uz"
 
+export EDITOR=nvim
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
