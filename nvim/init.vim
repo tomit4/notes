@@ -1,6 +1,5 @@
- "If downloading this as a .txt rename as init.vim and put in ~/.config/nvim
-console.log()
-" Specify a directory for plugins
+" Specify a directory for plugins default is ~/.config/nvim/init.vim
+
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
