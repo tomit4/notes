@@ -70,7 +70,7 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Untracked" : "#FCE77C",  
     "\ "Unmerged"  : "#FC51E6",  
     "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#87939A",   
+    "\ "Clean"     : "#/87939A",   
     "\ "Ignored"   : "#808080"   
     "\ }                         
 
@@ -95,6 +95,16 @@ nmap <C-s> 50:new
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
+"JavaScript Specific Shortcuts
+
+"Shorten var
+inoremap var var = <left><esc>i
+
+"Shorten const
+inoremap const const = <left><esc>i
+
+"Shorten let
+inoremap let let = <left><esc>i
 
 "Insert a console.log()
 inoremap cll console.log()<esc>i
