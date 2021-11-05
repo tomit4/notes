@@ -20,7 +20,7 @@ Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+"Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
@@ -92,6 +92,16 @@ imap ii <Esc>
 
 "Insert a console.log()
 inoremap cll console.log()<esc>i
+
+"Create function
+inoremap fc function () {}<left><left><left><left><esc>i
+
+"Create standard for loop
+inoremap oo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><left><left><esc>i
+
+"Create try catch statement
+inoremap tc try {} catch {}<left><left><left><left><left><left><left><left><left><esc>i
+
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
