@@ -94,7 +94,7 @@ imap ii <Esc>
 inoremap cll console.log()<esc>i
 
 "Create function
-inoremap fc function () {}<left><left><left><left><esc>i
+inoremap fn function () {}<left><left><left><left><esc>i
 
 "Create standard for loop
 inoremap oo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><left><left><esc>i
