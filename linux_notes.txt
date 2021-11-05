@@ -439,6 +439,10 @@ You can copy these into a new installation of xfce by putting this file into the
 
 ~/.config/xfce4/xfconf/xfce-perchannel-xml
 
+Allow infinite tries to log in (default is 3 attempts):
+ Navigate to /etc/security/faillock.conf
+ Change deny = 0
+
 Other Apps of Mention:
 alacritty (nice simple terminal emulator)
 
