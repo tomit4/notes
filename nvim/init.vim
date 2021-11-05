@@ -117,7 +117,7 @@ inoremap class class { constructor() {} }<left><left><left><left><left><left><le
 inoremap fn function () {}<left><left><left><left><esc>i
 
 "Create standard for loop
-inoremap oo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><left><left><esc>i
+inoremap loo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><left><left><esc>i
 
 "Create try catch statement
 inoremap cc try {} catch(err) {}<left><left><left><left><left><left><left><left><left><left><left><left><left><left><esc>i
