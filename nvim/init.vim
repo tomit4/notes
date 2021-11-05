@@ -100,7 +100,7 @@ inoremap fn function () {}<left><left><left><left><esc>i
 inoremap oo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><left><left><esc>i
 
 "Create try catch statement
-inoremap tc try {} catch {}<left><left><left><left><left><left><left><left><left><esc>i
+inoremap tc try {} catch(err) {}<left><left><left><left><left><left><left><left><left><left><left><left><left><left><esc>i
 
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
