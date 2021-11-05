@@ -95,7 +95,8 @@ nmap <C-s> 50:new
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
-"JavaScript Specific Shortcuts
+
+"""JavaScript Specific Shortcuts
 
 "Shorten var
 inoremap var var = <left><esc>i
@@ -108,6 +109,9 @@ inoremap let let = <left><esc>i
 
 "Insert a console.log()
 inoremap cll console.log()<esc>i
+
+"Create class
+inoremap class class { constructor() {} }<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><esc>i
 
 "Create function
 inoremap fn function () {}<left><left><left><left><esc>i
@@ -131,6 +135,8 @@ inoremap if if ()<esc>i
 inoremap elif else if ()<esc>i
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
+
+"""
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
