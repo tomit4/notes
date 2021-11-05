@@ -83,7 +83,7 @@ let g:mkdp_auto_close = 0
 let g:NERDCreateDefaultMappings = 1
 
 " Toggle NERDCommenter with Ctrl + z
-:map <C-z> <plug>NERDCommenterToggle
+:map <C-c> <plug>NERDCommenterToggle
 
 " Custom keybindings
 
