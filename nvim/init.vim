@@ -102,6 +102,8 @@ inoremap oo for (let i = 0; i <= ; i++) {}<left><left><left><left><left><left><l
 "Create try catch statement
 inoremap tc try {} catch(err) {}<left><left><left><left><left><left><left><left><left><left><left><left><left><left><esc>i
 
+"Create arrow function
+inoremap => () => {}<left><left><left><left><left><left><esc>i
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
