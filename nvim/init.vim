@@ -124,6 +124,11 @@ inoremap => () => {}<left><left><left><left><left><left><esc>i
 "Create type comment
 inoremap ** /***/<left><esc>i
 
+"If Statement
+inoremap if if ()<esc>i
+
+"Else If Statement
+inoremap elif else if ()<esc>i
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
 
