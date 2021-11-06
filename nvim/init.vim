@@ -1,8 +1,7 @@
-" If downloading this as a .txt rename as init.vim and put in ~/.config/nvim
+" Specify a directory for plugins default is ~/.config/nvim/init.vim
 
-" Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#begin('~/.vim/plugged') 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -21,7 +20,7 @@ Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+"Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
@@ -36,6 +35,15 @@ nmap <C-k> <C-Up>
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+"NerdTree opens on right
+let g:NERDTreeWinPos = "right"
+
+"Adjust NerdTree size
+let g:NERDTreeWinSize=28
+
+"Show hidden files in NERDTree
+let NERDTreeShowHidden=1
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -65,7 +73,7 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Untracked" : "#FCE77C",  
     "\ "Unmerged"  : "#FC51E6",  
     "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#87939A",   
+    "\ "Clean"     : "#/87939A",   
     "\ "Ignored"   : "#808080"   
     "\ }                         
 
@@ -74,16 +82,68 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " do not close the markdown preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
 
+" Create Default Mappings for NerdCommenter
+let g:NERDCreateDefaultMappings = 1
+
+" Toggle NERDCommenter with Ctrl + z
+:map <C-c> <Plug>NERDCommenterToggle
+
 " Custom keybindings
 
 " keybind map Ctrl + m to :MarkdownPreview
 nmap <C-m> <Plug>MarkdownPreviewToggle
 
 " creates a small horizontal window for neoterm ( type |T <command> )
-nmap <C-s> 50:new
+nmap <C-t> 50:new 
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
+
+"""JavaScript Specific Shortcuts
+
+"Shorten var
+inoremap var var =<left><esc>i
+
+"Shorten const
+inoremap const const =<left><esc>i
+
+"Shorten let
+inoremap let let =<left><esc>i
+
+"Insert a console.log()
+inoremap cll console.log()<esc>i
+
+"Shorten Template Literals
+inoremap `` `${}`<esc><left><left><left>i
+
+"Create class
+inoremap class class {<return>constructor() {<return><return>}<return>}<up><up><up><up><right><right><right><right><right><right><esc>i
+
+"Create function
+inoremap fn function () {<return><return>}<up><up><right><right><right><right><right><right><right><right><right><esc>i
+
+"Create standard for loop
+inoremap loo for (let i = 0; i <= ; i++) {<return><return>}<up><up><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><esc>i
+
+"Create try catch statement
+inoremap try try {<return><return>} <return>catch(err) {<return>console.error(err)<return>}<up><up><up><up><tab><tab><esc>i
+
+"Create arrow function
+inoremap => () => {}<left><left><left><left><left><left><esc>i
+
+"Create type comment
+inoremap ** /**<return><return>/<up><right><esc>i
+
+"If Statement
+inoremap if if ()<esc>i
+
+"Else If Statement
+inoremap elif else if ()<esc>i
+
+"Switch/Case Statement
+inoremap switch switch () { <return>case :<return><return>break <return>case :<return><return>break <return>default:<return><return>}<up><up><up><up><up><up><up><up><up><right><right><right><right><right><right><right><right><esc>i
+
+"""
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
@@ -95,6 +155,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+"remap leader key to comma
+let mapleader=","
+
 "set relativenumber
 set number 
 
@@ -104,8 +167,9 @@ set mouse=a
 set autoindent
 set smarttab
 set cindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
 " always uses spaces instead of tab characters
 set expandtab
 

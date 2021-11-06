@@ -6,3 +6,9 @@ While you can certainly harden firefox by hand, it can be time consuming, simply
 Or whatever path looks like that, you can always search for it using locate (recommended).
 
 locate prefs.js
+
+Also, you can install your extensions and bookmarks by putting the extensions and bookmarkbackups directories
+in the same above directory:
+
+cp -r extensions ~/.mozilla/firefox/k6634gl6.dev-edition-default
+cp -r bookmarkbackups ~/.mozilla/firefox/k6634gl6.dev-edition-default

@@ -1,0 +1,48 @@
+{
+	"name": "borealis",
+	"version": "1.0.2",
+	"displayName": "Borealis Theme",
+	"description": "VS Code theme inspired by the calm colors of the aurora borealis in Alaska.",
+	"publisher": "eckertalex",
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/eckertalex/borealis-vscode"
+	},
+	"galleryBanner": {
+		"color": "#194945",
+		"theme": "dark"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"VSCode",
+		"Themes"
+	],
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"scripts": {
+		"build": "vsce package",
+		"publish": "vsce publish -p"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Borealis",
+				"uiTheme": "vs-dark",
+				"path": "./themes/borealis.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"vsce": "^1.77.0"
+	},
+	"__metadata": {
+		"id": "3c40aa5f-88a3-4c23-ae48-c5b7a4352383",
+		"publisherId": "71810924-6f41-43da-a1f0-903488852517",
+		"publisherDisplayName": "eckertalex",
+		"installedTimestamp": 1627023478980
+	}
+}
