@@ -83,7 +83,7 @@ let g:mkdp_auto_close = 0
 let g:NERDCreateDefaultMappings = 1
 
 " Toggle NERDCommenter with Ctrl + z
-:map <C-c> <plug>NERDCommenterToggle
+:map <C-c> <Plug>NERDCommenterToggle
 
 " Custom keybindings
 
@@ -91,7 +91,7 @@ let g:NERDCreateDefaultMappings = 1
 nmap <C-m> <Plug>MarkdownPreviewToggle
 
 " creates a small horizontal window for neoterm ( type |T <command> )
-nmap <C-s> 50:new
+nmap <C-t> 50:new 
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
@@ -99,13 +99,13 @@ imap ii <Esc>
 """JavaScript Specific Shortcuts
 
 "Shorten var
-inoremap var var = <left><esc>i
+inoremap var var =<left><esc>i
 
 "Shorten const
-inoremap const const = <left><esc>i
+inoremap const const =<left><esc>i
 
 "Shorten let
-inoremap let let = <left><esc>i
+inoremap let let =<left><esc>i
 
 "Insert a console.log()
 inoremap cll console.log()<esc>i
