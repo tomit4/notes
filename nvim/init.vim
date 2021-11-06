@@ -1,7 +1,7 @@
 " Specify a directory for plugins default is ~/.config/nvim/init.vim
 
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#begin('~/.vim/plugged') 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -41,6 +41,9 @@ let g:NERDTreeWinPos = "right"
 
 "Adjust NerdTree size
 let g:NERDTreeWinSize=28
+
+"Show hidden files in NERDTree
+let NERDTreeShowHidden=1
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -164,8 +167,9 @@ set mouse=a
 set autoindent
 set smarttab
 set cindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
 " always uses spaces instead of tab characters
 set expandtab
 
