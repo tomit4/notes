@@ -1,6 +1,6 @@
 To Display All Info about your Linux Machine:
 uname -a
-
+s
 To change password: passwd
 
 To change password as root for another user:
