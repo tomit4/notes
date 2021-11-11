@@ -1,17 +1,19 @@
 alacritty
 timeshift
 btop (github)
+matcha-gtk-theme(github vinceliuice)
 cmatrix
 neofetch
 neovim
-gimp
+gimp(photogimp from github)
 inkscape
 krita
 iscan
 mop
 musikcube
-mpl
 firefox-developer-edition
+mysql/mariadb(will need advanced configuration with new init system)
+ungoogled chromiums
 thinkorswim(see arch wiki)
 peek (gif)
 viewnior
@@ -23,6 +25,15 @@ npm
 figmalinux
 postman
 links
-greenwithenvy(no nvidia-persistenced where you're going, you'll have to learn it with a new init)
+greenwithenvy
 gcolor2
 screenshot
+pamixer
+mplayer/smplayer
+
+npm packages
+live-server
+nodemon
+pug-cli
+
+
