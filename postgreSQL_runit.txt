@@ -1,0 +1,27 @@
+# Running PostgreSQL on Artix/Runit system has been somewhat of a hassle, so here is a way of logging in quickly
+
+sudo -iu postgres (logs in as postgres, note you can't do this with doas)
+
+you can initialize a new database by invoking initdb
+
+initdb --locale=en_US.UTF-8 -E UTF8 -D /var/lib/postgres/data
+
+As long as the final line of output reads a command, invoke it like so:
+
+pg_ctl -D /var/lib/postgres/data -l logfile start
+
+If the process is already running, then you'll need to stop it by invoking it through ruhit's sv command:
+
+doas sv stop postgresql
+
+This should stop the port from being busy and then you can run the above pg_ctl command again
+
+Now from the postgres account you can log into postgres, but if you want to create access for your main user, invoke this as postgres:
+
+createuser --interactive
+
+It will then prompt you for the name and then also if you want to grant that user root privileges
+
+You can also createa  new database
+
+createdb myDatabaseName
