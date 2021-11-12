@@ -136,8 +136,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
+      *.rar)       unrar x $1     ;; *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
       *.tgz)       tar xzf $1   ;;
@@ -173,33 +172,34 @@ alias ls="ls -lasSh --color=auto"
 alias {evr,easyavr}="python3 -m easykeymap"
 alias {his,hist}="history"
 alias {cmatrix,matrix}="cmatrix -bm -C cyan"
-alias {top,htop,btop}="xfce4-terminal --geometry=127x51+0+0 -x btop"
+alias btop="xfce4-terminal --geometry=127x51+0+0 -x btop"
 alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
+alias view="viewnior"
 alias serve="live-server"
 alias tree="tree -ad -L 3 --prune -C"
-alias {nv,nvi,vim,vi}="nvim"
-alias {mi,mic,nano}="micro"
+alias {nv,nvi}="nvim"
+alias {mi,mic}="micro"
 alias {mysql,maria,mdb}="mariadb"
-alias {market,stonks,stocks}="mop"
+alias {mop,market,stonks,stocks}="cd aur_packages/mop && go run ./cmd/mop/main.go"
 alias {ddg,duck}="links https://www.duckduckgo.com"
 alias searx="links https://www.searx.bar"
 alias {vlc,mpl}="mplayer"
-alias {musik,mcube,mkb,mcb}="musikcube"
+alias {musik,cmu}="cmus"
 alias ytdl="youtube-dl"
 alias thinkorswim="~/thinkorswim/thinkorswim &"
 alias {vs,vsc}="code"
 alias shutdown="shutdown -h now"
+alias reboot="doas reboot"
 alias {log,logout}="xfce4-session-logout --logout"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
 alias killport="fuser -k"
 alias rmorphans="sudo pacman -Rs $(pacman -Qdtq)"
 alias rmcache="paccache -rvk3"
 alias rm="rm -i"
-alias sudo="doas"
 alias {doasedit,sudoedit}="doas rnano"
 alias shred="shred -uz"
 
 export EDITOR=nvim
-
+export PATH="$PATH:$GOPATH/bin"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
