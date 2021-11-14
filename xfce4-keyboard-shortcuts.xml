@@ -52,19 +52,18 @@
       <property name="&lt;Super&gt;p" type="string" value="postman"/>
       <property name="&lt;Super&gt;s" type="string" value="iscan"/>
       <property name="&lt;Super&gt;Return" type="string" value="alacritty"/>
-      <property name="&lt;Super&gt;v" type="string" value="vlc"/>
       <property name="&lt;Super&gt;a" type="string" value="figma-linux"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -r"/>
-      <property name="&lt;Super&gt;c" type="string" value="code"/>
       <property name="&lt;Super&gt;u" type="string" value="galculator"/>
-      <property name="&lt;Super&gt;y" type="string" value="steam"/>
       <property name="&lt;Super&gt;f" type="string" value="firefox-developer-edition"/>
-      <property name="&lt;Super&gt;b" type="string" value="xfce4-terminal --geometry=127x51+0+0 -x btop"/>
       <property name="&lt;Super&gt;n" type="string" value="alacritty -e nvim"/>
       <property name="&lt;Super&gt;d" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;m" type="string" value="alacritty -e micro"/>
-      <property name="&lt;Super&gt;x" type="string" value="xfce4-terminal --geometry=127x51+0+0"/>
       <property name="&lt;Super&gt;t" type="string" value="thunar"/>
+      <property name="&lt;Super&gt;b" type="string" value="xfce4-terminal --geometry=142x57+0+0 -x btop"/>
+      <property name="&lt;Super&gt;x" type="string" value="xfce4-terminal --geometry=142x57+0+0"/>
+      <property name="&lt;Super&gt;c" type="string" value="chromium"/>
+      <property name="&lt;Super&gt;v" type="string" value="codium"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -230,7 +229,7 @@
       <property name="&lt;Super&gt;q" type="string" value="tile_up_left_key"/>
       <property name="&lt;Super&gt;w" type="string" value="tile_up_right_key"/>
       <property name="&lt;Alt&gt;f" type="string" value="fullscreen_key"/>
-      <property name="&lt;Alt&gt;q" type="string" value="close_window_key"/>
+      <property name="&lt;Shift&gt;&lt;Alt&gt;q" type="string" value="close_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">

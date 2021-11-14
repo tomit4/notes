@@ -44,6 +44,17 @@ And decompress directory:
 
 gpg -d folder.tar.gz.gpg | tar -xvzf -
 
+To mount a usb drive via terminal:
+cd /mnt
+mkdir media
+mkdir media/usb-drive
+
+mount /dev/sda1 media/usb-drive
+
+And to unmount the usb drive:
+
+umount media/usb-drive
+
 (make sure to clear your history afterwards)
 history -c
 
