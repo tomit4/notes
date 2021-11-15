@@ -10,10 +10,10 @@ inkscape
 krita
 iscan
 mop
-musikcube
+cmus
 firefox-developer-edition
 mysql/mariadb(will need advanced configuration with new init system)
-ungoogled chromiums
+ungoogled chromium
 thinkorswim(see arch wiki)
 peek (gif)
 viewnior
