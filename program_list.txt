@@ -30,6 +30,7 @@ gcolor2
 screenshot
 pamixer
 mplayer/smplayer
+protonvpn-cli-ng 2.2.11-1 (git clone)
 
 npm packages
 live-server
