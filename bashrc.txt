@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
 #
-
+neofetch
 # enable vi keybindings in terminal and terminal applications
 set -o vi
 
@@ -180,6 +180,7 @@ alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
 alias {mi,mic}="micro"
 alias {mysql,maria,mdb}="mariadb"
+alias protonvpn="doas openvpn ~/Documents/notes/protonvpn_configs/us-free-01.protonvpn.com.udp.ovpn" 
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go"
 alias {ddg,duck}="links https://www.duckduckgo.com"
 alias searx="links https://www.searx.bar"
