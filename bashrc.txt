@@ -9,7 +9,7 @@ set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-# clears the history copletely upon loading bash
+# clears the history completely upon loading bash
 cat /dev/null > ~/.bash_history && history -c
 
 [[ $- != *i* ]] && return
@@ -174,7 +174,7 @@ alias py="cd ~/Documents/Code/python"
 alias ls="ls -lasSh --color=auto"
 alias {his,hist}="history"
 alias {cmatrix,matrix}="cmatrix -bm -C cyan"
-alias btop="xfce4-terminal --geometry=127x51+0+0 -x btop"
+alias btop="xfce4-terminal --geometry=142x57+0+0 -x btop"
 alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="viewnior"
