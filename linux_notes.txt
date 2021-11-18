@@ -44,6 +44,9 @@ And decompress directory:
 
 gpg -d folder.tar.gz.gpg | tar -xvzf -
 
+To decrypt a gpg file and then take it's out put and copy it into the clipboard using xclip:
+gpg -d secret_file.gpg | cat | xclip -sel clip
+
 To mount a usb drive via terminal:
 cd /mnt
 mkdir media
