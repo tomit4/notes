@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=connman-gtk
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=ConnMan GTK
+Name=ConnMan GTK
+Comment[en_US]=
+Comment=
