@@ -58,7 +58,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 let g:auto_save = 1
 
 "silence AutoSave messages
-let g:auto_save_silent = 1
+"let g:auto_save_silent = 1
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -99,51 +99,8 @@ nmap <C-t> 50:new
 "Escape Insert Mode with ii 
 imap ii <Esc>
 
-"""JavaScript Specific Shortcuts
-
-"Shorten var
-inoremap var var =<left><esc>i
-
-"Shorten const
-inoremap const const =<left><esc>i
-
-"Shorten let
-inoremap let let =<left><esc>i
-
 "Insert a console.log()
 inoremap cll console.log()<esc>i
-
-"Shorten Template Literals
-inoremap `` `${}`<esc><left><left><left>i
-
-"Create class
-inoremap class class {<return>constructor() {<return><return>}<return>}<up><up><up><up><right><right><right><right><right><right><esc>i
-
-"Create function
-inoremap fn function () {<return><return>}<up><up><right><right><right><right><right><right><right><right><right><esc>i
-
-"Create standard for loop
-inoremap loo for (let i = 0; i <= ; i++) {<return><return>}<up><up><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><right><esc>i
-
-"Create try catch statement
-inoremap try try {<return><return>} <return>catch(err) {<return>console.error(err)<return>}<up><up><up><up><tab><tab><esc>i
-
-"Create arrow function
-inoremap => () => {}<left><left><left><left><left><left><esc>i
-
-"Create type comment
-inoremap ** /**<return><return>/<up><right><esc>i
-
-"If Statement
-inoremap if if ()<esc>i
-
-"Else If Statement
-inoremap elif else if ()<esc>i
-
-"Switch/Case Statement
-inoremap switch switch () { <return>case :<return><return>break <return>case :<return><return>break <return>default:<return><return>}<up><up><up><up><up><up><up><up><up><right><right><right><right><right><right><right><right><esc>i
-
-"""
 
 autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
