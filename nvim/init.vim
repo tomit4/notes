@@ -33,8 +33,8 @@ nmap <C-j> <C-Down>
 nmap <C-k> <C-Up>
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 "NerdTree opens on right
 let g:NERDTreeWinPos = "right"
