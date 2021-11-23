@@ -185,6 +185,10 @@ rm -d directoryname
 To remove a directory with files in it:
 sudo rm -r directoryname
 
+To remove all files within the current directory that start with a particular prefix:
+
+find . -name 'prefix*' -exec rm {} \;
+
 To securely delete a file (keep in mind this is not perfect, the only way to securely delete files is to physically destroy the hardware):
 shred -u -z filename
 
