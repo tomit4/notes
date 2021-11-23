@@ -7,7 +7,7 @@ To change password as root for another user:
 passwd <username>
 
 To login as a different user:
-sudo -u <username> -i
+sudo -iu <username>
 
 To Display current kernel and other installed kernels:
 mhwd-kernel -li
