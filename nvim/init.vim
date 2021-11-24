@@ -8,7 +8,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
@@ -19,6 +19,7 @@ Plug 'kassio/neoterm'
 Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
+Plug 'itchyny/lightline.vim'
 
 "Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
@@ -27,10 +28,6 @@ call plug#end()
 
 "Toggle NerdTree with Ctrl + l
 nmap <C-l> :NERDTreeToggle<CR>
-
-"Toggle Multi-Cursor with j or k
-nmap <C-j> <C-Down>
-nmap <C-k> <C-Up>
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -58,7 +55,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 let g:auto_save = 1
 
 "silence AutoSave messages
-"let g:auto_save_silent = 1
+let g:auto_save_silent = 1
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -87,6 +84,16 @@ let g:NERDCreateDefaultMappings = 1
 
 " Toggle NERDCommenter with Ctrl + z
 :map <C-c> <Plug>NERDCommenterToggle
+
+"Toggle Multi-Cursor with j or k
+nmap <C-j> <C-Down>
+nmap <C-k> <C-Up>
+
+" Only lightline shows on bottom status board 
+set noshowmode
+
+" Set lightline colorscheme
+let g:lightline = {'colorscheme': 'one'}
 
 " Custom keybindings
 
@@ -176,9 +183,10 @@ let g:coc_global_extensions = [
 " from readme
 " if hidden is not set, TextEdit might fail.
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup 
-" Better display for messages 
-set cmdheight=2 
-" You will have bad experience for diagnostic messages when it's default 4000.
+
+" Set the height of the status line down at the bottom
+set cmdheight=1 
+" Set the amount of characters you get back from status/error messages
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
