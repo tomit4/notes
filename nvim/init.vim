@@ -15,7 +15,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}
 Plug 'luochen1990/rainbow'
-Plug 'kassio/neoterm'
 Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
@@ -99,9 +98,6 @@ let g:lightline = {'colorscheme': 'one'}
 
 " keybind map Ctrl + m to :MarkdownPreview
 nmap <C-m> <Plug>MarkdownPreviewToggle
-
-" creates a small horizontal window for neoterm ( type |T <command> )
-nmap <C-t> 50:new 
 
 "Escape Insert Mode with ii 
 imap ii <Esc>
