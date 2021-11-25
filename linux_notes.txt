@@ -61,6 +61,10 @@ umount media/usb-drive
 (make sure to clear your history afterwards)
 history -c
 
+To display the differences between two different text files:
+
+grep -f file1.txt file2.txt
+
 To Display top five directories that use the most disk space:
 du -ahx . | sort -rh | head -5
 
