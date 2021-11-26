@@ -2,7 +2,10 @@
 # ~/.bashrc
 #
 neofetch
-# enable vi keybindings in terminal and terminal applications
+
+# create custom env variables:
+export CPROJ="/home/brian/Documents/Code/python/python_crash_course/projects/alien_invasion"
+ #enable vi keybindings in terminal and terminal applications
 set -o vi
 
 # but keep ctrl l as the clear screen command
@@ -189,6 +192,9 @@ alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
 alias {mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 5\; send-keys 'clear' C-m\; select-pane -t 0\;"
 alias cproj="cd '$CPROJ' && mmux"
+alias tls="tmux ls"
+alias ta="tmux a"
+alias tkill="tmux kill-ses -t"
 alias {mi,mic}="micro"
 alias {mysql,maria,mdb}="mariadb"
 alias {ss,wi,ssid}="doas iw wlan0 scan | grep SSID"
