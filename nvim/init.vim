@@ -26,7 +26,7 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 "Toggle NerdTree with Ctrl + l
-nmap <C-l> :NERDTreeToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -81,12 +81,18 @@ let g:mkdp_auto_close = 0
 " Create Default Mappings for NerdCommenter
 let g:NERDCreateDefaultMappings = 1
 
-" Toggle NERDCommenter with Ctrl + z
+" Toggle NERDCommenter with Ctrl + c
 :map <C-c> <Plug>NERDCommenterToggle
 
 "Toggle Multi-Cursor with j or k
 nmap <C-j> <C-Down>
 nmap <C-k> <C-Up>
+
+" Use ctrl- [hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " Only lightline shows on bottom status board 
 set noshowmode
