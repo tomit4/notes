@@ -5,6 +5,9 @@ neofetch
 
 # create custom env variables:
 export CPROJ="/home/brian/Documents/Code/python/python_crash_course/projects/alien_invasion"
+# custom BROWSER env for ddgr:
+export BROWSER=links
+
  #enable vi keybindings in terminal and terminal applications
 set -o vi
 
