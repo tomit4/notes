@@ -406,6 +406,9 @@ sudo pacman -Qo /path/to/file
 
 Other commands of note:
 
+Create your own environment variables in bash:
+export VAR=value (you can set custom paths to be navigated in bashrc, alias cvar="cd '$VAR'")
+
 See the day you installed Linux (ie Birthday)
 stat / | awk 'Birth: /{print $2}'
 
