@@ -26,7 +26,7 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 "Toggle NerdTree with Ctrl + l
-nmap <C-t> :NERDTreeToggle<CR>
+nmap <C-b> :NERDTreeToggle<CR>
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
