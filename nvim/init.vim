@@ -98,7 +98,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 set noshowmode
 
 " Set lightline colorscheme
-let g:lightline = {'colorscheme': 'one'}
+let g:lightline = {'colorscheme': 'one', 'active': { 'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'FugitiveHead'}}
 
 " Custom keybindings
 
