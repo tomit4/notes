@@ -4,7 +4,7 @@
 neofetch
 
 # create custom env variables:
-export CPROJ="/home/brian/Documents/Code/python/python_crash_course/projects/alien_invasion"
+export CPROJ="/home/brian/Documents/Code/python/python_crash_course/projects/data_visualization"
 # custom BROWSER env for ddgr:
 export BROWSER=links
 
@@ -186,7 +186,7 @@ alias {his,hist}="history"
 alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
 alias nf="neofetch"
-alias btop="xfce4-terminal --geometry=284x56+0+0 -x btop"
+alias btop="xfce4-terminal --geometry=142x57+0+0 -x btop"
 alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="viewnior"
@@ -211,6 +211,7 @@ alias xsel="xclip -sel clip"
 alias catx="cat | xclip -sel clip"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go"
+alias ddgr="ddgr -n 25"
 alias {ddg,duck}="links https://www.duckduckgo.com"
 alias searx="links https://www.searx.bar"
 alias {vlc,mpl}="mplayer"
@@ -221,7 +222,6 @@ alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 alias ytdl="youtube-dl"
 alias thinkorswim="~/thinkorswim/thinkorswim &"
-alias {vs,vsc,code}="codium"
 alias {cl,cls}="clear"
 alias shutdown="doas shutdown -h now"
 alias reboot="doas reboot"
