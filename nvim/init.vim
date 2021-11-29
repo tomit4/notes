@@ -108,6 +108,16 @@ nmap <C-m> <Plug>MarkdownPreviewToggle
 "Escape Insert Mode with ii 
 imap ii <Esc>
 
+" Vertically center document when entering Insert mode
+autocmd InsertEnter * norm zz
+
+" Alias replace all to S
+nnoremap S :%s//gI<Left><Left><Left>
+
+" Fix Splitting
+set splitbelow
+set splitright
+
 "Insert a console.log()
 inoremap cll console.log()<esc>i
 
@@ -127,6 +137,7 @@ let mapleader=","
 "set relativenumber
 set number 
 
+set cursorcolumn
 set cursorline
 set ttyfast
 set mouse=a
