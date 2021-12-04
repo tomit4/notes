@@ -4,7 +4,7 @@
 neofetch
 
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/python/python_crash_course/projects/data_visualization"
+export cproj="/home/brian/scripts"
 # custom BROWSER env for ddgr:
 #export BROWSER=firefox-developer-edition
 export BROWSER=links
