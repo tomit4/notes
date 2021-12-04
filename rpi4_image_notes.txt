@@ -1,0 +1,33 @@
+# Previously I have used Balena Etcher to flash raspberry pi images, but have found that etcher is rather bloated
+# and unecessary when compared with the command line tools that are available on nearly all Linux machines.
+
+# Step 1 is very simple, just download the img from the website, once the img is downloaded, you may need to use xz to extract it.
+
+xz --decompress my_rpi_image.xz
+
+# Once you have the image ready, plug in your sd card and use the command lsblk:
+
+lsblk
+
+# Usually the device will appear as something like /dev/sda or /dev/sdb, if there are numbers following sda/sdb, those are partitions.
+# It means there is something already written to the sd card, be sure you're ok with deleting and repartitioning the drive.
+
+# To repartition the drive, use the fdisk cli:
+
+sudo fdisk /dev/sda
+
+# Type o to clear out any partitions on the drive.
+# Type p to list the partitions, there shouldn't be any left.
+# Write the partition table and exit by typing w.
+
+# Create the ext4 filesystem:
+
+mkfs.ext4 /dev/sda
+
+# Copy rpi image to sd card using dd:
+
+sudo dd if=/path/to/rpi_image.img of=/dev/sda
+
+# Depending on the size of the image, this might take a while, there won't be any progress bar or anything , but remain patient,
+# it will write the img eventually and then you're all set.
+
