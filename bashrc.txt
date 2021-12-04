@@ -4,7 +4,7 @@
 neofetch
 
 # create custom env variables:
-export CPROJ="/home/brian/Documents/Code/python/python_crash_course/projects/data_visualization"
+export cproj="/home/brian/Documents/Code/python/python_crash_course/projects/data_visualization"
 # custom BROWSER env for ddgr:
 #export BROWSER=firefox-developer-edition
 export BROWSER=links
@@ -195,7 +195,7 @@ alias serve="live-server"
 alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
 alias {mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; send-keys 'clear' C-m\; split-window -h -p 10\; send-keys 'clear && ddgr' C-m\; select-pane -t 0\;"
-alias {cproj,mproj,myproj}="cd '$CPROJ' && mmux"
+alias {cproj,mproj,myproj}="cd '$cproj' && mmux"
 alias tls="tmux ls"
 alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
