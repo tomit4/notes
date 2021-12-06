@@ -181,7 +181,8 @@ alias Code="cd ~/Documents/Code"
 alias cplus="cd ~/Documents/Code/cpp"
 alias js="cd ~/Documents/Code/javascript"
 alias py="cd ~/Documents/Code/python"
-alias ls="ls -liasSh --color=auto"
+alias {ll,lss}="ls -liasSh --color=auto"
+alias {lsdir,lsd}="ls -t -1" # list only the directories
 alias {ex,esc}="exit"
 alias {his,hist}="history"
 alias bluepill="cmatrix -bm -C cyan"
@@ -228,12 +229,14 @@ alias shutdown="doas shutdown -h now"
 alias reboot="doas reboot"
 alias log="xfce4-session-logout --logout:wq"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
+alias weather="curl -s 'http://wttr.in'"
 alias ipaddr="curl ifconfig.me"
 alias killport="fuser -k"
 alias rmorphans="sudo pacman -Rs $(pacman -Qdtq)"
 alias rm="rm -vi"
 alias {doasedit,sudoedit}="doas rnano"
-alias shred="shred -uz"
+alias shred="shred -uz" # shreds the file and overwrites it with 1s and 0s
+alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts"
