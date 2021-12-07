@@ -1,0 +1,4 @@
+# To get dark reader on pdf in firefox, simply hit F12, and paste this into the console:
+
+javascript:(function(){viewer.style = 'filter: grayscale(1) invert(1) sepia(1) contrast(75%)';})()
+
