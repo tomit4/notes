@@ -12,8 +12,7 @@ export BROWSER=links
  #enable vi keybindings in terminal and terminal applications
 set -o vi
 
-# but keep ctrl l as the clear screen command
-bind -m vi-command 'Control-l: clear-screen'
+# but keep ctrl l as the clear screen command bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
 # clears the history completely upon loading bash
@@ -213,6 +212,7 @@ alias git-p="git push"
 alias xsel="xclip -sel clip"
 alias catx="cat | xclip -sel clip"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
+alias html_pp="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go"
 alias ddgr="ddgr -n 25"
 alias {ddg,duck}="links https://www.duckduckgo.com"
