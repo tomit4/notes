@@ -7,7 +7,7 @@ neofetch
 export cproj="/home/brian/scripts"
 # custom BROWSER env for ddgr:
 #export BROWSER=firefox-developer-edition
-export BROWSER=elinks
+export BROWSER=links
 
  #enable vi keybindings in terminal and terminal applications
 set -o vi
@@ -222,8 +222,8 @@ alias exifrm="exiftool -all="
 alias html_pp="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go"
 alias ddgr="ddgr -n 25"
-alias {ddg,duck}="elinks https://www.duckduckgo.com"
-alias searx="elinks https://www.searx.bar"
+alias {ddg,duck}="links https://www.duckduckgo.com"
+alias searx="links https://www.searx.bar"
 alias {vlc,mpl}="mplayer"
 alias {muse,musik,cmu}="cmus"
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
