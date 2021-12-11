@@ -1,0 +1,28 @@
+This is a bare bones instruction set on how to quickly mount, save, and copy files to a usb drive via the terminal.
+If you wish to partition the usb drive and delete all it's contents, I'd suggest looking at your notes on rpi4, as it is very similar (although the filetype system you may wish to be different than ext4).
+
+To simply look for what drives you have on your system simply invoke:
+
+lsblk
+
+This will give you a tree hierchical display that will show you what drives you have hooked up to your computer.  Look usually for the one marked as sda,sdb, or sdc.
+
+Once you have found the usb-drive, use it to reference it when mounting it to your mnt directory.
+
+First you'll need to create a mount point, so let's do that:
+
+doas mkdir /mnt/media
+doas mkdir /mnt/media/usb-drive
+
+Now let's mount the usb-drive to the mount point:
+
+doas mount /dev/sdb2 /mnt/media/usb-drive
+
+From here we can interact with the files on the usb drive using classic commands like cp, rm, etc.
+
+Once we are done copying and removing files, make sure to unmount the usb device before unplugging it:
+
+doas umount /mnt/media/usb-drive
+
+And you're done, you can leave the /mnt/media/usb-drive directory to make this process even easier.
+
