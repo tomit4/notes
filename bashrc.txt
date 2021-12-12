@@ -217,6 +217,7 @@ alias git-p="git push"
 alias xsel="xclip -sel clip"
 alias catx="cat | xclip -sel clip"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
+alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
 alias exifread="exiftool"
 alias exifrm="exiftool -all="
 alias html_pp="hxnormalize -e"
