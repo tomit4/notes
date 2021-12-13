@@ -6,8 +6,8 @@ neofetch
 # create custom env variables:
 export cproj="/home/brian/scripts"
 # custom BROWSER env for ddgr:
-#export BROWSER=firefox-developer-edition
-export BROWSER=links
+export BROWSER=firefox-developer-edition
+#export BROWSER=links
 
  #enable vi keybindings in terminal and terminal applications
 set -o vi
@@ -167,7 +167,7 @@ export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\033[01;37m
 
 # Custom Bash Commands
 alias .="cd"
-alias home="xclear && cd /home/brian && clear && nf && history -c"
+alias home="xclear && cd /home/brian && clear && nf && history -c && hash -r"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias pics="cd ~/Pictures"
