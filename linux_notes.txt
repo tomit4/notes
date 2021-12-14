@@ -147,6 +147,10 @@ curl ifconfig.me
 To display all directories/files:
 tree
 
+TO display screen width and height (in pixels):
+tput cols
+tput lines
+
 To display stocks:
 mop
 
