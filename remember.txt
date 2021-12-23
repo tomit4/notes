@@ -1,0 +1,2 @@
+pip install neovim
+sudo npm i -g bash-language-server
