@@ -1,8 +1,9 @@
 #
 # ~/.bashrc
 #
-neofetch
-
+if [ $TERM == "xterm-256color" ] ; then
+    neofetch
+fi
 # create custom env variables:
 export cproj="/home/brian/scripts"
 # custom BROWSER env for ddgr:
@@ -19,7 +20,6 @@ bind -m vi-insert 'Control-l: clear-screen'
 cat /dev/null > ~/.bash_history && history -c
 
 [[ $- != *i* ]] && return
-
 colors() {
 	local fgc bgc vals seq0
 
