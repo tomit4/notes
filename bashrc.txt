@@ -253,4 +253,5 @@ alias indelible="doas chattr +i" # makes a file impossible to delete (except wit
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts"
+export GREP_COLORS='ms=01;33'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
