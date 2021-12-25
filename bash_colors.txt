@@ -1,0 +1,81 @@
+
+ShellHacks
+Command-Line Tips and Tricks
+
+    Blog
+
+Bash Colors
+Posted on December 27, 2016by admin
+
+You can make your BASH script more pretty, by colorizing its output.
+
+Use ANSI escape sequences to set text properties like foreground and background colors.
+Colorizing Shell
+
+Use the following template for writing colored text:
+
+echo -e "\e[COLORmSample Text\e[0m"
+
+Option 	Description
+-e 	Enable interpretation of backslash escapes
+\e[ 	Begin the color modifications
+COLORm 	Color Code + ‘m’ at the end
+\e[0m 	End the color modifications
+
+Examples:
+
+$ echo -e "\e[31mRed Text\e[0m"
+Red Text
+$ echo -e "\e[42mGreen Background\e[0m"
+Green Background
+
+ANSI — Color Escape Codes
+
+Shell scripts commonly use ANSI escape codes for color output:
+Color 	Foreground Code 	Background Code 	Sample
+Black 	30 	40 	
+Red 	31 	41 	
+Green 	32 	42 	
+Brown 	33 	43 	
+Blue 	34 	44 	
+Purple 	35 	45 	
+Cyan 	36 	46 	
+Light Gray 	37 	47 	
+
+Escape sequence also allows to control the manner in which characters are displayed on the screen:
+ANSI Code 	Description
+0 	Normal Characters
+1 	Bold Characters
+4 	Underlined Characters
+5 	Blinking Characters
+7 	Reverse video Characters
+
+Examples:
+
+$ echo -e "\e[1mBold Text\e[0m"
+Bold Text
+$ echo -e "\e[3mUnderlined Text\e[0m"
+Underlined Text
+
+By combining all these escape sequences, we can get more fancy effect.
+
+echo -e "\e[COLOR1;COLOR2mSample Text\e[0m"
+
+There are some differences between colors when combining colors with bold text attribute:
+Color 	Foreground Code 	Background Code 	Sample
+Dark Gray 	1;30 	1;40 	
+Light Red 	1;31 	1;41 	
+Light Green 	1;32 	1;42 	
+Yellow 	1;33 	1;43 	
+Light Blue 	1;34 	1;44 	
+Light Purple 	1;35 	1;45 	
+Light Cyan 	1;36 	1;46 	
+White 	1;37 	1;47 	
+
+Examples:
+
+$ echo -e "\e[1;34mLight Blue Text\e[0m"
+Light Blue Text
+$ echo -e "\e[1;33;4;44mYellow Underlined Text on Blue Background\e[0m"
+Yellow Underlined Text on Blue Background
+
