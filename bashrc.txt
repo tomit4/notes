@@ -222,7 +222,7 @@ alias pjson="json_pp | pygmentize -l json" # pipe expected json output through p
 alias ngrep="grep -v"
 alias exifread="exiftool"
 alias exifrm="exiftool -all="
-alias html_pp="hxnormalize -e"
+alias {html,html_pp}="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
 alias {trans,translate}="gtktranslate"
 alias ddgr="ddgr -n 25"
