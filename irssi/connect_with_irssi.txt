@@ -1,0 +1,18 @@
+# First open irssi from terminal:
+irssi
+
+# From there, connect to the libera chat server:
+
+/connect irc.us.libera.chat
+
+# And reidentify as your username
+
+/nick <username>
+
+# And register with nickserv
+
+/msg NickServ REGISTER YourPassword youremail@example.com
+
+# Finally join the channel you wish to partake in:
+
+/join #channel
