@@ -1,0 +1,24 @@
+Use the live installation iso usb stick to boot into the live environment.
+
+Mount the nvme01p2 (your installed home partition) to /mnt (must be root)
+su
+mount /dev/nvme0n1p2 /mnt
+
+Chroot into it:
+artix-chroot /mnt
+
+Then we need to make some adjustments
+
+nano /etc/default/grub
+Change the GRUB_CMDLINE_LINUX_DEFAULT to "nvme_load=YES"
+And update it:
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+Then:
+nano /etc/mkinitcpio.conf
+Change the Modules from an empty string to "vmd"
+And also the line that has autodetect and block in it. Make sure that block is listed before autodetect in the line up.
+And update it:
+mkinitcpio -P
+
+And that's it, reboot, remove your installation media, and you're good.
