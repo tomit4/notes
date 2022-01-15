@@ -2,7 +2,7 @@ Documentation of longview3k's Installing Steam on Artix Video tutorial from Yout
 
 https://www.youtube.com/watch?v=AVqsdO7xENg
 
-Step One (Enabling Arch Repositories):
+Enable the Arch Repositories.
 
 sudo pacman -S artix-archlinux-support (copy and paste the repositories into the pacman.conf)
 
