@@ -1,0 +1,142 @@
+Documentation of longview3k's Installing Steam on Artix Video tutorial from Youtube:
+
+https://www.youtube.com/watch?v=AVqsdO7xENg
+
+Step One (Enabling Arch Repositories):
+
+sudo pacman -S artix-archlinux-support (copy and paste the repositories into the pacman.conf)
+
+sudo vim /etc/pacman.conf
+
+Uncomment the artix lib32 repositories.
+
+Uncomment the arch multilib repositories.
+
+Once you have edited the pacman.conf, enter the following command:
+
+sudo pacman-key --populate archlinux
+
+Then sync all your repositories:
+
+sudo pacman -Syy
+
+To be sure, go ahead and update the system again:
+
+sudo pacman -Syu
+
+You will need a web browser to use Chris Titus's guide on setting up gaming on Linux (you'll most likely just need this guide though).
+
+Reset your ulimit:
+
+To see your current ulimit:
+
+ulimit -Hn
+
+Now let's edit our limit:
+
+sudo vim /etc/limits
+
+Type in the following (username is your username):
+
+username N524288
+
+Write/Quite your text editor, and then edit the following file:
+
+sudo vim /etc/security/limits.conf
+
+Scroll to the end of the file and make a couple new lines under the <domain> section
+
+username    soft    nofile    524288
+username    hard    nofile    524288
+username    soft    nofile    524288
+username    hard    nofile    524288
+
+Write/Quit the file, and now set the changes (log off or reboot).
+
+Once you have rebooted (check your ulimit to see if it was set):
+
+ulimit -Hn
+
+This should now return 524288.
+
+You can now enable esync into steam and lutris.
+
+From here we now use Chris Titus's guide to install drivers.
+
+https://www.christitus.com/ultimate-linux-gaming-guide/
+
+Enter the following command to install the drivers:
+
+sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader -y
+
+Once that has finished, you will then edit your etc environment:
+
+sudo vim /etc/environment
+
+And append this on a new line:
+
+RADV_PERFTEST=aco
+
+Write/Quit, and now install wine by entering the following command:
+
+You will be given some split option repositories (always choose world, always choose multilib, and artix repositories if given that choice).
+
+sudo pacman -S wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader lutris -y
+
+Once finished, install steam:
+
+sudo pacman -S steam
+
+And start steam so that it can set up its configuration, either through the desktop, or simply enter the following command:
+
+steam
+
+Make sure not to install steam-native-runtime. To be sure it isn't installed, run the following command:
+
+sudo pacman -R steam-native-runtime
+
+Next install protonup using the following commands (you will need git for this):
+
+git clone https://github.com/AUNaseef/protonup
+
+cd protonup
+
+python3 setup.py install --user
+
+Next we are going to edit our .bash_profile, cd to your home directory and enter the following command to see all hidden files:
+
+ls -a
+
+Once you have located your .bash_profile, enter the following command:
+
+sudo vim .bash_profile
+
+On a new line enter the following (before the [[ -f ~/.bashrc ]] line):
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+Write/Quit out of that file.
+
+Restart terminal, or simply enter:
+
+source .bash_profile
+
+From the home directory make a new directory:
+
+mkdir .steam/root/compatibilitytools.d
+
+And then enter the following command:
+
+protonup -d ".steam/root/compatibilitytools.d/"
+
+And then enter the following command, and enter Y for yes when prompted:
+
+protonup
+
+And that finishes longview3k's tutorial, I also needed to install lib32-nvidia-utils for my NVIDIA card.
+
+sudo pacman -S lib32-nvidia-utils
+
+TIP:  You can enable Proton under Steam menu's Settings/Steam_Play section.
