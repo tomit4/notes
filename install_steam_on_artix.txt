@@ -48,8 +48,8 @@ Scroll to the end of the file and make a couple new lines under the <domain> sec
 
 username    soft    nofile    524288
 username    hard    nofile    524288
-username    soft    nofile    524288
-username    hard    nofile    524288
+@username    soft    nofile    524288
+@username    hard    nofile    524288
 
 Write/Quit the file, and now set the changes (log off or reboot).
 
