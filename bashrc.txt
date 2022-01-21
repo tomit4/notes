@@ -236,6 +236,7 @@ alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 alias ytdl="youtube-dl"
+alias ytdl-a="youtube-dl -x --audio-format mp3"
 alias thinkorswim="~/thinkorswim/thinkorswim &"
 alias {cl,cls}="clear"
 alias shutdown="shutdown.sh"
