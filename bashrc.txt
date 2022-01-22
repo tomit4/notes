@@ -186,6 +186,8 @@ alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
 alias {ex,esc}="exit"
 alias {his,hist}="history"
+alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive"
+alias umnt="doas umount /mnt/media/usb-drive"
 alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
 alias nf="neofetch"
