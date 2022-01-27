@@ -174,6 +174,10 @@ To convert opus files to mp3, use ffmpeg:
 
 ffmpeg -i filename.opus -ab 320k newfilename.mp3
 
+To convert m4a files to mp3, use ffmpeg:
+
+ffmpeg -i input.m4a -c:v copy -c:a libmp3lame -q:a 4 output.mp3
+
 To display all directories EXCEPT for one directory:
 tree -I ignored_directory_name
 Example:
