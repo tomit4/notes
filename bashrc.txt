@@ -237,6 +237,7 @@ alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
+alias library="links http://libraryfyuybp7oyidyya3ah5xvwgyx6weauoini7zyz555litmmumad.onion/"
 alias mpl="mplayer -fs"
 alias {mloop,mploop}="mplayer -fs -loop 0"
 alias {muse,musik,cmu}="cmus"
