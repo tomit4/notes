@@ -233,9 +233,10 @@ alias {html,html_pp}="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
 alias {trans,translate}="gtktranslate"
 alias ddgr="ddgr -n 25 --unsafe --proxy 127.0.0.1:8118"
-alias {ddg,duck}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
+alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
+alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
-alias hwiki="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
+alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
 alias mpl="mplayer -fs"
 alias {mloop,mploop}="mplayer -fs -loop 0"
 alias {muse,musik,cmu}="cmus"
@@ -262,7 +263,7 @@ alias shred="doas shred -uz" # shreds the file and overwrites it with 1s and 0s
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 
 export EDITOR=nvim
-export PATH="$PATH:$GOPATH/bin:/home/brian/scripts"
+export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
 export GREP_COLORS='ms=01;33'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
