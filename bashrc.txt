@@ -171,6 +171,7 @@ export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\033[01;37m
 
 # Custom Bash Commands
 alias .="cd"
+alias up="source up.sh"
 alias home="xclear && cd /home/brian && clear && nf && history -c && hash -r"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
@@ -188,10 +189,17 @@ alias py="cd ~/Documents/Code/python"
 alias li="ls -l --color=auto"
 alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
+alias mkdir='mkdir -pv'
 alias {ex,esc}="exit"
 alias {his,hist}="history"
 alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive"
 alias umnt="doas umount /mnt/media/usb-drive"
+alias rm="newrm -vi"
+alias cp="cp -i"
+alias ln="ln -i"
+alias {doasedit,sudoedit}="doas rnano"
+alias shred="doas shred -uz" # shreds the file and overwrites it with 1s and 0s
+alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
 alias nf="neofetch"
@@ -259,10 +267,6 @@ alias ipaddr="curl ifconfig.me ; echo ''"
 alias killport="fuser -k"
 alias rmorphans="doas pacman -Rs $(pacman -Qdtq)"
 alias npm_upgrade="doas npm install -g npm@latest"
-alias rm="newrm -vi"
-alias {doasedit,sudoedit}="doas rnano"
-alias shred="doas shred -uz" # shreds the file and overwrites it with 1s and 0s
-alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
