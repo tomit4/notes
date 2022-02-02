@@ -9,9 +9,13 @@ irssi
 
 /nick <username>
 
-# And register with nickserv
+# And register with nickserv if you haven't already,
 
 /msg NickServ REGISTER YourPassword youremail@example.com
+
+# Otherwise simply identify NickServ of your name/password
+
+/msg NickServ IDENTIFY z3rOR0ne YourPassword
 
 # Finally join the channel you wish to partake in:
 
