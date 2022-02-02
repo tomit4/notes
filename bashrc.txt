@@ -6,19 +6,15 @@ if [ $TERM == "xterm-256color" ] ; then
     http_proxy=http://127.0.0.1:8118/
     HTTP_PROXY=$http_proxy
     export http_proxy HTTP_PROXY
-
 fi
+
 # create custom env variables:
 export cproj="/home/brian/Documents/Code/web_tutorials/socket_io"
 # custom BROWSER env for ddgr:
 #export BROWSER=firefox-developer-edition
 export BROWSER=links
 
-#http_proxy=http://127.0.0.1:8118/
-#HTTP_PROXY=$http_proxy
-#export http_proxy HTTP_PROXY
-
-#enable vi keybindings in terminal and terminal applications
+# enable vi keybindings in terminal and terminal applications
 set -o vi
 
 # but keep ctrl l as the clear screen command bind -m vi-command 'Control-l: clear-screen'
@@ -211,6 +207,7 @@ alias chromium="chromium --incognito"
 alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="viewnior"
+alias dkpdf="mupdf -I"
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
 alias word="wordgrinder"
 alias spreadsheet="sc"
