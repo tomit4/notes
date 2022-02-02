@@ -194,7 +194,7 @@ alias {his,hist}="history"
 alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive"
 alias umnt="doas umount /mnt/media/usb-drive"
 alias rm="newrm -vi"
-alias cp="cp -i"
+alias mv="mv -v"
 alias ln="ln -i"
 alias {doasedit,sudoedit}="doas rnano"
 alias shred="doas shred -uz" # shreds the file and overwrites it with 1s and 0s
@@ -259,10 +259,9 @@ alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null 
 alias weather="curl -s 'http://wttr.in' && inxi -w"
 alias ipaddr="curl ifconfig.me ; echo ''"
 alias killport="fuser -k"
-alias rmorphans="doas pacman -Rs $(pacman -Qdtq)"
 alias npm_upgrade="doas npm install -g npm@latest"
 
-# onion bookmarks
+# bookmarks
 alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
 alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
