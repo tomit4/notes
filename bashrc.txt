@@ -207,8 +207,8 @@ alias chromium="chromium --incognito"
 alias {firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="viewnior"
-alias mupdf="mupdf -r 144"
-alias dkpdf="mupdf -I -r 144"
+alias mupdf='mupdf -r 204'
+alias dkpdf='mupdf -I -r 204'
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
 alias word="wordgrinder"
 alias spreadsheet="sc"
@@ -264,6 +264,8 @@ alias npm_upgrade="doas npm install -g npm@latest"
 # bookmarks
 alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
 alias {ddg,duck}="links https://duckduckgo.com/lite"
+alias wikipedia="links https://www.wikipedia.org"
+alias {cdread,cafedread}="links https://cafedread.com"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
 alias {darknet,darknetlive}="links http://darkzzx4avcsuofgfez5zq75cqc4mprjvfqywo45dfcaxrwqg6qrlfid.onion/"
@@ -278,6 +280,7 @@ alias aur='ddgr \!aur "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias gh='ddgr \!gh "${1}"'
+alias reddit='ddgr \!r "${1}"'
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
