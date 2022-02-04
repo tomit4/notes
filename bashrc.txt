@@ -260,7 +260,7 @@ alias weather="curl -s 'http://wttr.in' && inxi -w"
 alias ipaddr="curl ifconfig.me ; echo ''"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
-
+alias tor-browser="echo bash: tor-browser: command not found"
 # game shortcuts
 alias cyberpunk="steam steam://rungameid/1091500 &"
 
