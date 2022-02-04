@@ -262,7 +262,6 @@ alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
 
 # bookmarks
-alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
 alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias bangs="links https://duckduckgo.com/bang_lite.html"
 alias wikipedia="links https://www.wikipedia.org"
@@ -281,8 +280,9 @@ alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias aur='ddgr \!aur "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
-alias gh='ddgr \!gh "${1}"'
-alias reddit='ddgr \!r "${1}"'
+alias gh='ddgr --gb \!gh "${1}"'
+alias reddit='ddgr --gb \!r "${1}"'
+alias yt='ddgr --gb \!yt "${1}"'
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
