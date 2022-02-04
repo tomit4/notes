@@ -203,8 +203,9 @@ alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
 alias nf="neofetch"
 alias btop="xfce4-terminal --geometry=284x53+0+0 -x btop"
+alias tor-browser="tor-browser &"
 alias chromium="chromium --incognito"
-alias {firefox,ff}="firefox-developer-edition &"
+alias {firefox-developer-edition,firefox,ff}="firefox-developer-edition &"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="viewnior"
 alias mupdf='mupdf -r 204'
@@ -260,7 +261,7 @@ alias weather="curl -s 'http://wttr.in' && inxi -w"
 alias ipaddr="curl ifconfig.me ; echo ''"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
-alias tor-browser="echo bash: tor-browser: command not found"
+
 # game shortcuts
 alias cyberpunk="steam steam://rungameid/1091500 &"
 
