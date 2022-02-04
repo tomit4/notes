@@ -277,6 +277,7 @@ alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
+alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias aur='ddgr \!aur "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
