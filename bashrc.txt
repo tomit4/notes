@@ -264,6 +264,7 @@ alias npm_upgrade="doas npm install -g npm@latest"
 # bookmarks
 alias {ddgo,ddg-onion}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
 alias {ddg,duck}="links https://duckduckgo.com/lite"
+alias bangs="links https://duckduckgo.com/bang_lite.html"
 alias wikipedia="links https://www.wikipedia.org"
 alias {cdread,cafedread}="links https://cafedread.com"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
