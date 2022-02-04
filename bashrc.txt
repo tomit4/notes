@@ -261,6 +261,9 @@ alias ipaddr="curl ifconfig.me ; echo ''"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
 
+# game shortcuts
+alias cyberpunk="steam steam://rungameid/1091500 &"
+
 # bookmarks
 alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias bangs="links https://duckduckgo.com/bang_lite.html"
