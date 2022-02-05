@@ -189,6 +189,7 @@ alias py="cd ~/Documents/Code/python"
 alias li="ls -l --color=auto"
 alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
+alias lshw="doas lshw -short" # list hardware
 alias mkdir='mkdir -pv'
 alias {ex,esc}="exit"
 alias {his,hist}="history"
@@ -235,7 +236,6 @@ alias git-l="git log"
 alias xsel="xclip -sel clip"
 alias catx="cat | xclip -sel clip"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
-alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
 alias ngrep="grep -v"
 alias diff="diff -wy"
 alias exifread="exiftool"
@@ -299,3 +299,9 @@ export GREP_COLORS='ms=01;33'
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+# DEPRECATED aliases (noted here for posterity):
+
+# pjson is now easily replaced by package jq
+#alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
+
