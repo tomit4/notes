@@ -265,7 +265,7 @@ alias npm_upgrade="doas npm install -g npm@latest"
 
 # game shortcuts
 alias cyberpunk="steam steam://rungameid/1091500 &"
-alias cybermods="cd ~/.local/share/Steam/steamapps/common/Cyberpunk 2077/archive/pc/mod"
+alias cybermods="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
 alias {ddg,duck}="links https://duckduckgo.com/lite"
