@@ -264,8 +264,9 @@ alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
 
 # game shortcuts
-alias cyberpunk="steam steam://rungameid/1091500 &"
-alias cybermods="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
+alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
+alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
+alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
 alias {ddg,duck}="links https://duckduckgo.com/lite"
