@@ -140,3 +140,11 @@ And that finishes longview3k's tutorial, I also needed to install lib32-nvidia-u
 sudo pacman -S lib32-nvidia-utils
 
 TIP:  You can enable Proton under Steam menu's Settings/Steam_Play section.
+
+ADDENDUM/NOTE: I believe that this installation process at some point installed lib32-systemd, which while allowing steam to work, conflicted with the lib32-eudev and lib32-elogind packages.  Simply remove lib32-systemd and install these packages.
+
+sudo pacman -Rd --nodeps lib32-systemd
+
+The caveat is that steam will still look for libsystemd.so.0 in the /usr/lib32/ directory. Simpy install the libelongd package and create a soft link to the libsystemd.so.0 file ( if it already exists delete it).
+
+sudo ln -s /usr/lib/libelogind.so /usr/lib32/libsystemd.so.0
