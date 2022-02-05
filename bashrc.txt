@@ -177,6 +177,7 @@ alias down="cd ~/Downloads"
 alias pics="cd ~/Pictures"
 alias music="cd ~/Music"
 alias vids="cd ~/Videos"
+alias games="cd ~/.local/share/Steam/steamapps/common"
 alias notes="cd ~/Documents/notes"
 alias scripts="cd ~/scripts"
 alias config="cd ~/.config"
@@ -264,6 +265,7 @@ alias npm_upgrade="doas npm install -g npm@latest"
 
 # game shortcuts
 alias cyberpunk="steam steam://rungameid/1091500 &"
+alias cybermods="cd ~/.local/share/Steam/steamapps/common/Cyberpunk 2077/archive/pc/mod"
 
 # bookmarks
 alias {ddg,duck}="links https://duckduckgo.com/lite"
