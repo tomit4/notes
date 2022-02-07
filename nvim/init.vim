@@ -114,7 +114,7 @@ imap ii <Esc>
 autocmd InsertEnter * norm zz
 
 " Alias replace all to S
-nnoremap S :%s//gI<Left><Left><Left>
+nnoremap S :%s///gI<Left><Left><Left><Left>
 
 " Fix Splitting
 set splitbelow
