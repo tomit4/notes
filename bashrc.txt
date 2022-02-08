@@ -266,6 +266,7 @@ alias npm_upgrade="doas npm install -g npm@latest"
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
+alias veloren="veloren-voxygen"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
