@@ -9,7 +9,7 @@ if [ $TERM == "xterm-256color" ] ; then
 fi
 
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/web_tutorials/snake"
+export cproj="/home/brian/Documents/Code/web_tutorials/asciiden"
 # custom BROWSER env for ddgr:
 #export BROWSER=firefox-developer-edition
 export BROWSER=links
