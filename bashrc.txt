@@ -186,6 +186,7 @@ alias Code="cd ~/Documents/Code"
 alias cplus="cd ~/Documents/Code/cpp"
 alias js="cd ~/Documents/Code/javascript"
 alias py="cd ~/Documents/Code/python"
+alias tuts="cd ~/Documents/Code/web_tutorials"
 alias li="ls -l --color=auto"
 alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
