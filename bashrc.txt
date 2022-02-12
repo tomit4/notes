@@ -277,6 +277,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # bookmarks
 alias {ddg,duck}="links https://duckduckgo.com/lite"
+alias searx="links https://searx.bar/"
 alias bangs="links https://duckduckgo.com/bang_lite.html"
 alias wikipedia="links https://www.wikipedia.org"
 alias {cdread,cafedread}="links https://cafedread.com"
