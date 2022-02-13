@@ -248,7 +248,8 @@ alias exifread="exiftool"
 alias exifrm="exiftool -all="
 alias {html,html_pp}="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
-alias reddit="tuir"
+alias {reddit,rd}="tuir"
+alias {sub,subreddit,subrd}="tuir -s"
 alias {trans,translate}="gtktranslate"
 alias mpl="mplayer -fs"
 alias {mloop,mploop}="mplayer -fs -loop 0"
@@ -298,7 +299,6 @@ alias aur='ddgr \!aur "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias gh='ddgr --gb \!gh "${1}"'
-alias rd='ddgr --gb \!r "${1}"'
 alias yt='ddgr --gb \!yt "${1}"'
 
 export EDITOR=nvim
