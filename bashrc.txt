@@ -299,6 +299,7 @@ alias aur='ddgr \!aur "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias gh='ddgr --gb \!gh "${1}"'
+alias red='ddgr \!r "${1}"'
 alias yt='ddgr --gb \!yt "${1}"'
 
 export EDITOR=nvim
