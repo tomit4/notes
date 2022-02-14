@@ -259,11 +259,11 @@ alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-
 alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
-alias yt="ytfzf -l"
+alias yt="ytfzf -l --features=subtitles"
 alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
-alias {odysee,library,lbry}="ytfzf -c O"
-alias {ptube,peertube}="ytfzf -c P"
+alias {odysee,library,lbry}="ytfzf -c O --features=subtitles"
+alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 alias ytdl="youtube-dl"
 alias ytdl-a="youtube-dl -x --audio-format mp3"
 alias thinkorswim="~/thinkorswim/thinkorswim &"
@@ -297,6 +297,7 @@ alias library="links http://libraryfyuybp7oyidyya3ah5xvwgyx6weauoini7zyz555litmm
 alias ahmia="links http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/"
 alias darkside="links http://darksid3f3ggicny772rvdmrcgfbtixsyjpdgm6unh5qci6r24ukg4qd.onion/"
 alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf2qgyd.onion/"
+alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
