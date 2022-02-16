@@ -491,7 +491,7 @@ irssi
 tor-browser
 nmap
 mangohud (displays gpu, cpu temps and usage percentage in game, input into steam Launch Options the following:)
-MANGOHUD_CONFIG="cpu_temp,gpu_temp,background_alpha=0.2, font_size=16, round_corners=5.0, gl_vsync=0" mangohud %command% --launcher-skip"
+MANGOHUD_CONFIG="cpu_temp,gpu_temp,background_alpha=0.2, font_size=16, round_corners=5.0, gl_vsync=0" mangohud %command% --launcher-skip -skipStartScreen
 ecryptfs-simple (simple encrypter package that can encrypt directories/files)
 encfs (like ecryptfs, but better, sudo pacman -S encfs)
 mtr (like ping, but way better)
