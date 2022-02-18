@@ -490,8 +490,15 @@ micro(minimalist text editor)
 irssi
 tor-browser
 nmap
+
+Mangohud Graphic Display of CPU/GPU usage while in game (input into steam game launcher options):
 mangohud (displays gpu, cpu temps and usage percentage in game, input into steam Launch Options the following:)
 MANGOHUD_CONFIG="cpu_temp,gpu_temp,background_alpha=0.2, font_size=16, round_corners=5.0, gl_vsync=0" mangohud %command% --launcher-skip -skipStartScreen
+
+To enable ray tracing:
+
+PROTON_ENABLE_NVAPI=1 VKD3D_CONFIG=dxr11 gamemoderun %command% -dx12
+
 ecryptfs-simple (simple encrypter package that can encrypt directories/files)
 encfs (like ecryptfs, but better, sudo pacman -S encfs)
 mtr (like ping, but way better)
