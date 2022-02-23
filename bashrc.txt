@@ -182,6 +182,7 @@ alias notes="cd ~/Documents/notes"
 alias scripts="cd ~/scripts"
 alias config="cd ~/.config"
 alias cache="cd ~/.cache"
+alias svlog='cd /var/log/svlog'
 alias Code="cd ~/Documents/Code"
 alias cplus="cd ~/Documents/Code/cpp"
 alias js="cd ~/Documents/Code/javascript"
