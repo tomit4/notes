@@ -1,0 +1,7 @@
+The default.xml file is meant to be put into /usr/share/libvirt/networks
+
+Once there, simply use virsh to start it:
+
+sudo virsh net-start default
+
+sudo virsh net-autostart --network default
