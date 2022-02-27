@@ -1,0 +1,63 @@
+Installing Qemu on Artix(runit)
+
+doas pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt-runit
+
+doas ln -s /etc/runit/sv/libvirtd /run/runit/service
+
+cd /etc/runit/sv/libvirtd/log
+
+doas nvim run
+
+Edit the log to read:
+
+#!/bin/bash
+exec svlogd -tt /var/log/svlog/libvirtd
+
+Write/Quit out of file.
+
+cd /var/log/svlog
+
+doas mkdir libvirtd
+
+doas nvim /etc/libvirt/libvirtd.conf Uncomment The Following Lines:
+
+unix_sock_group = "libvirt"
+unix_sock_ro_perms = "0777"
+unix_sock_rw_perms = "0770"
+
+Write/Quit out of file.
+
+Add current user to libvirt group:
+
+doas usermod -aG libvirt <username>
+
+Reboot.
+
+cd /usr/share/libvirt/networks
+
+doas touch default.xml
+
+Copy the following into default.xml(also available in notes/virsh):
+
+<network>
+  <name>default</name>
+  <uuid>9a05da11-e96b-47f3-8253-a3a482e445f5</uuid>
+  <forward mode='nat'/>
+  <bridge name='virbr0' stp='on' delay='0'/>
+  <mac address='52:54:00:0a:cd:21'/>
+  <ip address='192.168.122.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.122.2' end='192.168.122.254'/>
+    </dhcp>
+  </ip>
+</network>
+
+doas virsh net-define --file default.xml
+
+doas virsh net-start default
+
+doas virsh net-autstart --network default
+
+doas sv restart libvirtd
+
+doas sv restart libvirtd/log
