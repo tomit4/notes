@@ -44,7 +44,6 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="xfce4-taskmanager"/>
-      <property name="Print" type="string" value="xfce4-screenshooter -fd 1"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -wd 1"/>
       <property name="&lt;Super&gt;i" type="string" value="inkscape"/>
       <property name="&lt;Super&gt;g" type="string" value="gimp"/>
@@ -57,7 +56,6 @@
       <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
       <property name="&lt;Super&gt;k" type="string" value="krita"/>
       <property name="&lt;Super&gt;m" type="string" value="kitty -e cmus"/>
-      <property name="&lt;Super&gt;o" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Super&gt;n" type="string" value="tootle"/>
       <property name="&lt;Super&gt;b" type="string" value="xfce4-terminal --geometry=192x49 -x btop"/>
       <property name="&lt;Super&gt;x" type="string" value="xfce4-terminal --geometry=192x49"/>
@@ -67,6 +65,8 @@
       <property name="&lt;Super&gt;z" type="string" value="tor-browser"/>
       <property name="&lt;Super&gt;c" type="string" value="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs"/>
       <property name="&lt;Super&gt;v" type="string" value="virt-manager"/>
+      <property name="&lt;Super&gt;o" type="string" value="orage"/>
+      <property name="&lt;Super&gt;apostrophe" type="string" value="xfce4-screenshooter -fd 1"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
