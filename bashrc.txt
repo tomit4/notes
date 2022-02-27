@@ -192,6 +192,7 @@ alias li="ls -l --color=auto"
 alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
 alias lshw="doas lshw -short" # list hardware
+alias of="onefetch -o yaml"
 alias mkdir='mkdir -pv'
 alias {ex,esc}="exit"
 alias {his,hist}="history"
@@ -209,6 +210,7 @@ alias indelible="doas chattr +i" # makes a file impossible to delete (except wit
 alias {kdiff,kitten,kd}="kitty +kitten diff"
 alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
+alias calendar="orage"
 alias nf="neofetch"
 alias btop="xfce4-terminal --geometry=284x53+0+0 -x btop"
 alias tor-browser="tor-browser &"
