@@ -277,7 +277,7 @@ alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-
 alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
-alias yt="ytfzf -l --features=subtitles"
+alias ytube="ytfzf -l --features=subtitles"
 alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
 alias {odysee,library,lbry}="ytfzf -c O --features=subtitles"
@@ -326,7 +326,7 @@ alias archwiki='ddgr \!archwiki "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias gh='ddgr --gb \!gh "${1}"'
 alias red='ddgr \!r "${1}"'
-alias ytube='ddgr --gb \!yt "${1}"'
+alias yt='ddgr --gb \!yt "${1}"'
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
