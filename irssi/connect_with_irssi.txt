@@ -19,4 +19,18 @@ irssi
 
 # Finally join the channel you wish to partake in:
 
-/join #channel
+/join channel
+
+# Some common commands:
+CTRL + n (navigate to previous window)
+CTRL + p (navigate to next window)
+
+# Show all users in current channel
+/names
+
+# Clear the console
+/clear
+
+# Quit Irssi
+/quit
+
