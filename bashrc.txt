@@ -210,6 +210,7 @@ alias ln="ln -i"
 alias {doasedit,sudoedit}="doas rnano"
 alias shred="doas shred -uz" # shreds the file and overwrites it with 1s and 0s
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
+alias kfonts="kitty +list-fonts"
 alias {kdiff,kitten,kd}="kitty +kitten diff"
 alias bluepill="cmatrix -bm -C cyan"
 alias redpill="cmatrix -bm -C red"
