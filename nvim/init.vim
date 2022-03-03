@@ -86,6 +86,9 @@ let g:NERDCreateDefaultMappings = 1
 " Toggle NERDCommenter with Ctrl + c
 :map <C-c> <Plug>NERDCommenterToggle
 
+" <Ctrl-x> redraws the screen and removes any search highlighting
+nnoremap <silent> <C-x> :nohl<CR><C-x>
+
 "Toggle Multi-Cursor with j or k
 nmap <C-j> <C-Down>
 nmap <C-k> <C-Up>
