@@ -190,6 +190,7 @@ alias js="cd ~/Documents/Code/javascript"
 alias py="cd ~/Documents/Code/python"
 alias wtuts="cd ~/Documents/Code/web_tutorials"
 alias btuts="cd ~/Documents/Code/book_tutorials"
+alias locate="locate -i"
 alias li="ls -l --color=auto"
 alias ll="ls -liasSh --color=auto"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
