@@ -294,6 +294,7 @@ alias log="xfce4-session-logout --logout:wq"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
 alias weather="curl -s 'http://wttr.in' && inxi -w"
 alias ipaddr="curl ifconfig.me ; echo ''"
+alias mtime="doas hwclock"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
 
