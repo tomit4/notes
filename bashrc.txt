@@ -1,6 +1,8 @@
 #
 # ~/.bashrc
 #
+history -c && history -w
+
 if [ $TERM == "xterm-256color" ] ; then
     neofetch
     http_proxy=http://127.0.0.1:8118/
