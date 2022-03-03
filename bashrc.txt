@@ -173,7 +173,7 @@ export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\033[01;37m
 
 # Custom Bash Commands
 alias .="cd"
-alias home="xclear && cd /home/brian && clear && nf && history -c && hash -r"
+alias home="xclear && cd /home/brian && clear && nf && history -c && history -w && hash -r"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias pics="cd ~/Pictures"
