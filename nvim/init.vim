@@ -86,7 +86,7 @@ let g:NERDCreateDefaultMappings = 1
 " Toggle NERDCommenter with Ctrl + c
 :map <C-c> <Plug>NERDCommenterToggle
 
-" Add spaces after comment delimiters by default
+" Add spaces after NerdCommenter delimiters by default
 let g:NERDSpaceDelims = 1
 
 " <Ctrl-x> redraws the screen and removes any search highlighting
