@@ -228,6 +228,7 @@ alias view="kitty +kitten icat"
 alias mupdf='mupdf -r 204'
 alias dkpdf='mupdf -I -r 204'
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
+alias amd="article_md"
 alias word="wordgrinder"
 alias spreadsheet="sc"
 alias open="xdg-open"
@@ -274,6 +275,7 @@ alias {html,html_pp}="hxnormalize -e"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
 alias {reddit,rd}="tuir"
 alias {sub,subreddit,subrd}="tuir -s"
+alias {hackernews,hn}="hackernews_tui"
 alias qwiki="wik -i"
 alias {trans,translate}="gtktranslate"
 alias mpl="mplayer -fs"
@@ -303,6 +305,7 @@ alias ipaddr="curl ifconfig.me ; echo ''"
 alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
+alias npm_list="npm list -g --depth=0"
 
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
