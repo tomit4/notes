@@ -300,7 +300,7 @@ alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null 
 alias inxi-w="inxi --weather-location 90004"
 alias forecast="curl -s 'http://wttr.in/losangeles'"
 alias ipaddr="curl ifconfig.me ; echo ''"
-alias mtime="doas hwclock"
+alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias npm_upgrade="doas npm install -g npm@latest"
 
