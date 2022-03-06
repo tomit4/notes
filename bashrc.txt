@@ -235,7 +235,9 @@ alias open="xdg-open"
 alias nc="nc -v"
 alias dump="doas tcpdump"
 alias {mydump,medump,mdump,bdump}="doas tcpdump -v -i wlan0"
-alias bmap="nmap -T4 -sV -v --open"
+# nmap through proxychains, change proxy at /etc/proxychains.conf
+# -sT full TCP scan, -PN do not perform host discovery, -n never perform DNS resolution (to prevent DNS leaks), -sV determine service version/info, add -p to list ports to scan(delineated by a comma ,)
+alias bmap="proxychains nmap -PN -T4 -sT -sV -v --open" 
 alias route="traceroute"
 alias listen="ss -a -t -p"
 alias {pdf2,pdf2txt}="pdftotext"
