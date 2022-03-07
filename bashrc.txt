@@ -227,6 +227,7 @@ alias chromium="chromium --incognito --disable-search-engine-collection --finger
 alias {firefox-developer-edition,firefox}="firefox-developer-edition"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="kitty +kitten icat"
+alias viewer="feh -F -Z -x"
 alias mupdf='mupdf -r 204'
 alias dkpdf='mupdf -I -r 204'
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
