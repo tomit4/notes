@@ -1,0 +1,1 @@
+doas cp grub /etc/default
