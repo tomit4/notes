@@ -315,6 +315,7 @@ alias veloren="veloren-voxygen"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
+alias forums="firefox-developer-edition https://forum.artixlinux.org/ &"
 alias {ddg,duck}="links https://duckduckgo.com/lite"
 alias searx="links https://searx.bar/"
 alias {frogfind,frog,ff}="links http://frogfind.com"
