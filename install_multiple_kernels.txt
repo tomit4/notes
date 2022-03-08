@@ -10,6 +10,10 @@ Simply put, install the nvidia-dkms package:
 
 sudo pacman -S nvidia-dkms
 
+You will then need to remove the old nvidia package:
+
+sudo pacman -R nvidia
+
 Then install the desired kernel and headers:
 
 sudo pacman -S linux-lts linux-lts-headers
