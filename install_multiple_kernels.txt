@@ -1,0 +1,26 @@
+HOW TO INSTALL AND BOOT MULTIPLE KERNELS ON ARTIX LINUX
+
+Due to the nature of the nvidia drivers not being included in The Linux Kernel, they must be downloaded separately as the package nvidia, normally downloaded in ARTIX Linux as (sudo pacman -S nvidia).
+
+However, when running multiple kernels in ARCH Linux, you must also install a corresponding nvidia package, so in ARCH, if you wished to install the linux-lts and linux-lts-headers package, you would also have to install the nvidia-lts package.
+
+The developers at the world/Artix repositories have developed a single package(known as nvidia-dkms) for the purpose of compiling the nvidia drivers for the corresponding kernels after installation (i.e. nvidia-dkms must be downloaded AND installed PRIOR to kernel installation, so be sure to download nvidia-dkms separately from the linux-lts and linux-lts-headers packages).
+
+Simply put, install the nvidia-dkms package:
+
+sudo pacman -S nvidia-dkms
+
+Then install the desired kernel and headers:
+
+sudo pacman -S linux-lts linux-lts-headers
+
+Although optional, configuring your grub config file with the following adjustments can make selecting the kernel easier (essentially all kernels will show when the GRUB menu loads, and GRUB will remember which kernel you used last).
+
+GRUB_SAVEDEFAULT="true"
+GRUB_DISABLE_SUBMENU="y"
+
+Lastly, you will need to update GRUB:
+
+sudo grub-mkconfig -o /boot/grub/cfg
+
+And that's it, reboot and grub should prompt you for a few seconds so you can choose which kernel you wish to use. Note that this will work on the linux-lts, linux-zen, and linux-hardened kernels and their respective headers).
