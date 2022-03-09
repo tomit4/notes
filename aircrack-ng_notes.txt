@@ -1,0 +1,57 @@
+So far we're having difficulties using aircrack-ng suite.
+
+Firstly in order to capture the handshake, we have to put our wifi card into montitor mode, this is done simply by:
+
+airmon-ng start wlan0
+
+OR
+
+doas ifconfig wlan0 down
+doas iwconfig wlan0 mode monitor
+doas ifconfig wlan0 up // does not work, network is in monitor mode
+
+Then we can use the airodump-ng suite to use wlan0 as a monitor for packets:
+
+airodump-ng wlan0
+
+However this runs forever and will give us an idea of the traffic traveling through our wifi.
+
+I have found that running iwconfig again the the mode managed brings up our wifi and network list,
+but does not actually reconnect to the internet for some reason...
+
+doas iwconfig wlan0 mode managed
+doas ifconfig wlan0 up //works, but no internet...
+
+---REGARDLESS LET'S DOCUMENT WHAT WE DO NOT---
+
+URLS for help:
+https://shehackske.medium.com/capturing-and-cracking-wpa-handshake-using-aircrack-ng-d9496f30c7c3
+https://aircrack-ng.org/doku.php?id=cracking_wpa
+
+ip a // shows all internet protocol interfaces
+
+ifconfig // does the same more or less
+
+ifconfig wlan0 down (takes down wireless network)
+
+doas airmong-ng start wlan0 // sets wireless interface in promiscuous mode, creates wlan0mon
+
+doas airmong-ng check kill // kills wpa_supplicant
+
+ip a // should now just show wlan0mon as wireless interface (this turns your wireless card into a wireless scanner essentially)
+
+airodump-ng wlan0mon (will bring up airodump-ng menu that then shows BSIDs and MAC addresses, press a to toggle MAC address menus)
+
+Open up another terminal session
+
+airodump-ng -w capture1 --output-format pcap --bssid <BSSID of target wifi> --channel 1 wlan0mon
+
+This will open up another airodump-ng menu that will show only whether or not there has been a wireless handshake in a secondary menu.
+
+You will have to try multiple times inputting STATION addresses, they should be on the same channel (single digit number)
+
+Once you have connected, under your second airodump-ng menu you should see in the secondary field the connected BSSID with its respective STATION address (after a certain amount of time, the handshake will end and you will have to try again).
+
+What is not yet known is whether or not the respective capture1-01.cap (sometimes there are multiples) was given enough time to capture the handshake packets which would then be used to finally break the password against a dictionary list (possibly generated using John The Ripper).
+
+There is also the matter of somehow reconnecting to our home wifi afterwards...
