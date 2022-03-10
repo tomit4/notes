@@ -28,6 +28,9 @@ URLS for help:
 https://shehackske.medium.com/capturing-and-cracking-wpa-handshake-using-aircrack-ng-d9496f30c7c3
 https://aircrack-ng.org/doku.php?id=cracking_wpa
 
+USE aircrack-ng WITH john:
+https://charlesreid1.com/wiki/Aircrack_and_John_the_Ripper
+
 ip a // shows all internet protocol interfaces
 
 ifconfig // does the same more or less
