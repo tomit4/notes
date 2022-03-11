@@ -18,7 +18,7 @@ Then install the desired kernel and headers:
 
 sudo pacman -S linux-lts linux-lts-headers
 
-Although optional, configuring your grub config file with the following adjustments can make selecting the kernel easier (essentially all kernels will show when the GRUB menu loads, and GRUB will remember which kernel you used last).
+Although optional, configuring your grub config file (found in the /etc/default directory) with the following adjustments can make selecting the kernel easier (essentially all kernels will show when the GRUB menu loads, and GRUB will remember which kernel you used last).
 
 GRUB_SAVEDEFAULT="true"
 GRUB_DISABLE_SUBMENU="y"
