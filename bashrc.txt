@@ -172,6 +172,7 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\033[01;37m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;32m└─▶ \033[37m'
 
 # Custom Bash Commands
+alias dmesg="doas dmesg"
 alias kernel="uname -r"
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias .="cd"
