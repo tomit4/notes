@@ -320,14 +320,15 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # bookmarks
 alias forums="firefox-developer-edition https://forum.artixlinux.org/ &"
-alias {ddg,duck}="links https://duckduckgo.com/lite"
-alias searx="links https://searx.bar/"
-alias {frogfind,frog,ff}="links http://frogfind.com"
+alias {frogfind,frog,ff}="links https://frogfind.com"
+alias {ddg,duckduckgo}="links https://duckduckgo.com/lite"
 alias bangs="links https://duckduckgo.com/bang_lite.html"
 alias {cdread,cafedread}="links https://cafedread.com"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias wikipedia="links https://wikipedia.org"
 alias hackernews="links https://news.ycombinator.com/"
+alias {ddgt,duckducktor}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
+alias searx="links http://3afisqjw2rxm6z7mmstyt5rx75qfqrgxnkzftknbp2vhipr2nrmrjdyd.onion/"
 alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
 alias {darknet,darknetlive}="links http://darkzzx4avcsuofgfez5zq75cqc4mprjvfqywo45dfcaxrwqg6qrlfid.onion/"
 alias ttaxi="links http://tortaxi7axhn2fv4j475a6blv7vwjtpieokolfnojwvkhsnj7sgctkqd.onion/"
