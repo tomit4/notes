@@ -1,0 +1,9 @@
+This is a simple pacman hook that will update the mandb (the database of man pages) whenever you update.
+
+It was taken from this Artix form post:
+
+https://forum.artixlinux.org/index.php/topic,1080.0.html
+
+very simply:
+
+doas cp mandb-update.hook /usr/share/libalpm/hooks
