@@ -260,7 +260,6 @@ alias wifi-connect="connmanctl connect wifi_34cff6c9b922_44495a5a_managed_psk"
 alias wifi-disconnect="connmanctl disconnect wifi_34cff6c9b922_44495a5a_managed_psk"
 alias wifi-up="doas ifconfig wlan0 up"
 alias wifi-down="doas ifconfig wlan0 down"
-alias {ov,ovpn}="doas openvpn --config ~/.config/protonvpn/protonvpn_configs/us-free-02.protonvpn.com.udp.ovpn --auth-user-pass ~/.config/protonvpn/protonvpn.txt" # add &>/dev/null & to run in bg
 alias snowlogs="doas docker logs -f snowflake-proxy"
 alias git-a="git add"
 alias git-c="git commit -m"
