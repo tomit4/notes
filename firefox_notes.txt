@@ -4,9 +4,17 @@ article and Unix Sheikh's Choose your Browser Carefully article):
 
 Install Ublock Origin
 Install Decentraleyes
+Install LocalCDN
 Install ForgetMeNot
-Install DarkReader
+Install NoScript
+Install OneTab
+Install Return YouTube Dislike
+Install DuckDuckGo Lite Search
+Install SponsorBlock for Youtube-Skip Sponsorships
+Install ClearURLs
+Install DarkReader (in DarkReader menu under More, set to Static)
 Install Vimium-FF
+Install Manjaro Theme (matcha-dark-azul for blue, matcha-dark-sea for green)
 Set Default Search Engine to Duck Duck Go Lite
 Get Firefox to remember nothing through Preferences setting
 Set Firefox to never visit non  https websites
