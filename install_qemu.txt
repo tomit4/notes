@@ -1,9 +1,10 @@
 Installing Qemu on Artix(runit)
 
-doas pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt-runit
+doas pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt libvirt-runit
 
 doas ln -s /etc/runit/sv/libvirtd /run/runit/service
 
+<OPTIONAL: CUSTOM LOGGING SECTION>
 cd /etc/runit/sv/libvirtd/log
 
 doas nvim run
@@ -18,6 +19,8 @@ Write/Quit out of file.
 cd /var/log/svlog
 
 doas mkdir libvirtd
+
+<END OF OPTIONAL LOGGING SECTION>
 
 doas nvim /etc/libvirt/libvirtd.conf Uncomment The Following Lines:
 
@@ -56,7 +59,7 @@ doas virsh net-define --file default.xml
 
 doas virsh net-start default
 
-doas virsh net-autstart --network default
+doas virsh net-autostart --network default
 
 doas sv restart libvirtd
 
