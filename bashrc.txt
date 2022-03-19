@@ -312,7 +312,7 @@ alias inxi-w="inxi --weather-location 90004"
 alias forecast="curl -s 'http://wttr.in/losangeles'"
 alias ipaddr="curl ifconfig.me ; echo ''"
 alias hwclock="doas hwclock"
-alias killport="fuser -k"
+alias {killnode,killmon,kmon}='kill $(pidof node)'
 alias npm_upgrade="doas npm install -g npm@latest"
 alias npm_list="npm list -g --depth=0"
 
