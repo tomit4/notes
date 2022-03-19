@@ -257,6 +257,6 @@ MapAddress palladium.libera.chat libera75jm6of4wxpxt4aynol3xjmbtxgfyjpu34ss4d7r7
 ## Plugin obfs4 to use bridges
 ClientTransportPlugin obfs4 exec /usr/local/bin/obfs4proxy managed
 
-bridge obfs4 5.181.77.27:443 469E4B05634C17AB5E694175A85424DFEDB4CB49 cert=9tp1bt3rCq4/mSyO0a6k0N4s2RdfWTP97iX7hVhrnrwfcLxTRVMPssD8LPrwR9yX1BsWWQ iat-mode=0
-bridge obfs4 107.189.5.136:8080 302B432C471EAF39509F5D41696F27BCC618C9CE cert=hOKH/woiv5JWmbitr55yyv2X7cRWZUcpFt0R+3EIkNQmpN6h2QNR0mAV/J69+pia/YSkLQ iat-mode=0
-bridge obfs4 2.155.4.233:9007 7CEB0874A54A4E68CD03B4AC4DFC445D9C7D61AC cert=OFhEE5KNUf5aMxyJ0nTDHLEDaimRJGoQb4Dns+lSZQY3CDQX3jenaoLUmEwLcwEirNv/HQ iat-mode=0
+# Put Tor Bridges Here:
+# bridge <bridge-link>
+# https://bridges.torproject.org/
