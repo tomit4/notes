@@ -293,6 +293,7 @@ alias mpv='mpv --fs'
 alias {muse,musik,cmu}="cmus"
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
 alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
+alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 alias ytube="ytfzf -l --features=subtitles"
