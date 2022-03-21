@@ -12,11 +12,15 @@ doas nvim run
 Edit the log to read:
 
 #!/bin/bash
-exec svlogd -tt /var/log/svlog/libvirtd
+exec 2>&1; set -e
+
+[ -d /var/log/libvirtd ] || install -dm /var/log/libvirtd
+
+exec svlogd -tt /var/log/libvirtd
 
 Write/Quit out of file.
 
-cd /var/log/svlog
+cd /var/log/
 
 doas mkdir libvirtd
 
