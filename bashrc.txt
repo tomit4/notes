@@ -355,7 +355,7 @@ alias yt='ddgr --gb \!yt "${1}"'
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
-export GREP_COLORS='ms=01;33'
+export GREP_COLORS='ms=01;36'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # BEGIN_KITTY_SHELL_INTEGRATION
