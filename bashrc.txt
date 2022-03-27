@@ -243,13 +243,9 @@ alias listen="ss -a -t -p"
 alias {pdf2,pdf2txt}="pdftotext"
 alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
-alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
-alias {cproj,mproj,myproj}="cd '$cproj' && mmux"
+alias {cproj,mproj,myproj}="cd '$cproj'"
 alias mon="nodemon"
 alias localhost="firefox-developer-edition localhost:3000"
-alias tls="tmux ls"
-alias ta="tmux a -t"
-alias tkill="tmux kill-ses -t"
 alias {mi,mic}="micro"
 alias {mysql,maria,mdb}="mariadb"
 alias rsm="doas rsm"
@@ -365,5 +361,9 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # DEPRECATED aliases (noted here for posterity):
 
 # pjson is now easily replaced by package jq
-#alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
+# alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
+# alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
+# alias tls="tmux ls"
+# alias ta="tmux a -t"
+# alias tkill="tmux kill-ses -t"
 
