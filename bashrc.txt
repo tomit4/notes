@@ -323,6 +323,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # bookmarks
 alias forums="firefox-developer-edition https://forum.artixlinux.org/ &"
+alias sqlsc="links https://sqlservercentral.com"
 alias {frogfind,frog,ff}="links https://frogfind.com"
 alias {ddg,duckduckgo}="links https://duckduckgo.com/lite"
 alias bangs="links https://duckduckgo.com/bang_lite.html"
