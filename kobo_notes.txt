@@ -1,0 +1,33 @@
+# BYPASSING REGISTRATION AND LOGIN ON NEW DEVICE
+
+Plug in new Kobo Device via USB to Linux Computer.
+
+Mount the device:
+
+doas mount /dev/sda /mnt/media/kobo
+
+Navigate to the device folder and then enter the .kobo subdirectory:
+
+cd .kobo
+
+As root, open up the KoboReader.sqlite database:
+
+sqlite3 KoboReader.sqlite
+
+And then enter the following SQL command:
+
+INSERT INTO user(UserId,UserKey) VALUES('1','');
+
+Then Quit:
+
+.q
+
+Exit Root:
+
+exit
+
+And then navigate to your home directory and unmount the kobo:
+
+doas umount /mnt/media/kobo
+
+Now you should be able to access the Kobo interface without having to register your Kobo.
