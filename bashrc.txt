@@ -297,6 +297,8 @@ alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-
 alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
+# laptop only currently, records video/audio, simply name filename .mp4 after command:
+alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac" 
 alias ytube="ytfzf -l --features=subtitles"
 alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
