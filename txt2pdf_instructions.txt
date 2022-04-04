@@ -1,0 +1,13 @@
+This is just some notes on how to convert a .txt file to a .pdf file from the command line.
+Eventually consider how to put this into a bash script, as it creates a series of unnecessary files in the conversion process that could easily be rmoved by a simple bash script.
+
+You'll need the enscript and ghostscript packages:
+
+doas pacman -S enscript ghostscript
+
+Simple Conversion of txt File to pdf File
+
+enscript -p output.ps input.txt
+
+ps2pdf output.ps output.pdf
+
