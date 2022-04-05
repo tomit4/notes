@@ -7,6 +7,8 @@ Install Decentraleyes
 Install LocalCDN
 Install ForgetMeNot
 Install NoScript
+Install Chameleon
+Install OverbiteWX
 Install OneTab
 Install Return YouTube Dislike
 Install DuckDuckGo Lite Search
