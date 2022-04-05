@@ -1,10 +1,1 @@
-Install snarf (similar to wget or curl), and lynx:
-
-doas pacman -S snarf lynx
-
-In firefox, install the following extensions:
-
-chameleon (spoofs user agent string)
-overbitewx (allows access to gopher sites)
-
-
+Use this file as a post-it for packages to install on laptop/desktop.
