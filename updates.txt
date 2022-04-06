@@ -2,7 +2,7 @@ Use this file as a post-it for packages to install on laptop/desktop.
 
 Install i3-gaps along with helpful packages:
 
-doas pacman -S i3-gaps xcompmgr dmenu i3status lxappearance
+doas pacman -S i3-gaps xcompmgr dmenu i3status lxappearance scrot
 
 In LightDm, enable sessions manager view so you can toggle i3 or xfce at login.
 
