@@ -13,6 +13,9 @@ set $mod Mod4
 # Enable transparency
 exec xcompmgr -c -f -n
 
+# Enable pulseaudio
+pulseaudio --start
+
 # Set background image
 exec feh --bg-fill /home/brian/Pictures/nord_sand_i3.png
 
