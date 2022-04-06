@@ -323,11 +323,7 @@ alias npm_list="npm list -g --depth=0"
 
 
 # i3 config for log alias
-if [ $XDG_CURRENT_DESKTOP == "i3" ] ; then
-    alias log="i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-elif [ $XDG_CURRENT_DESKTOP == "XFCE" ]; then
-    alias log="xfce4-session-logout --logout:wq"
-fi
+alias log="i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
