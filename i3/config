@@ -72,7 +72,7 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # custom keybindings
-bindsym $mod+F exec firefox-developer-edition
+bindsym $mod+F exec librewolf
 bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
 bindsym $mod+Z exec tor-browser
 bindsym $mod+T exec thunar
