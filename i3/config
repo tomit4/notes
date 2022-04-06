@@ -19,8 +19,8 @@ exec feh --bg-fill /home/brian/Pictures/nord_sand_i3.png
 # Get rid of mouse cursor upon use of keyboard
 exec xbanish
 
-# Automatically open kitty terminal and btop at full screen
-exec kitty -e btop; fullscreen enable 
+# Automatically open xfce4 terminal and btop at full screen
+exec xfce4-terminal -x btop; fullscreen enable 
 
 # Get rid of window title bars
 # for_window [class="^.*"] default_border pixel 1 
@@ -79,11 +79,12 @@ bindsym $mod+K exec krita
 bindsym $mod+N exec tootle
 bindsym $mod+P exec postman
 # bindsym $mod+S exec iscan
-bindsym $mod+B exec kitty -e btop
+bindsym $mod+B exec xfce4-terminal -x btop
 bindsym $mod+X exec xfce4-terminal
 bindsym $mod+M exec kitty -e cmus
 bindsym $mod+U exec galculator
 bindsym $mod+y exec steam
+bindsym $mod+o exec virt-manager
 
 # kill focused window
 bindsym $mod+Shift+q kill
