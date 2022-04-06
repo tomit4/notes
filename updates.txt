@@ -1,1 +1,13 @@
 Use this file as a post-it for packages to install on laptop/desktop.
+
+Install i3-gaps along with helpful packages:
+
+doas pacman -S i3-gaps xcompmgr dmenu i3status lxappearance
+
+In LightDm, enable sessions manager view so you can toggle i3 or xfce at login.
+
+load i3 config file into ~/.config/i3
+
+load i3status.conf into /etc (no subdirectory, just /etc)
+
+run lxappearance to change gtk theming to matcha dark azul
