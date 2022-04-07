@@ -13,9 +13,9 @@ fi
 # create custom env variables:
 export cproj="/home/brian/Documents/Code/forks/"
 # custom BROWSER env for ddgr:
-#export BROWSER=firefox-developer-edition
+#export BROWSER=librewolf
 export BROWSER=links
-export TUIR_BROWSER=firefox-developer-edition
+export TUIR_BROWSER=librewolf
 # enable vi keybindings in terminal and terminal applications
 set -o vi
 
@@ -226,7 +226,7 @@ alias nf="neofetch"
 alias btop="xfce4-terminal --geometry=284x53+0+0 -x btop"
 alias tor-browser="tor-browser &"
 alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
-alias {firefox-developer-edition,firefox}="firefox-developer-edition"
+alias {librewolf,firefox}="librewolf"
 alias {sq,sql,sqlite}="sqlcipher"
 alias view="kitty +kitten icat"
 alias viewer="feh -F -Z -x"
@@ -247,7 +247,7 @@ alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
 alias {cproj,mproj,myproj}="cd '$cproj'"
 alias mon="nodemon"
-alias localhost="firefox-developer-edition localhost:3000"
+alias localhost="librewolf localhost:3000"
 alias {mi,mic}="micro"
 alias {mysql,maria,mdb}="mariadb"
 alias rsm="doas rsm"
@@ -332,7 +332,7 @@ alias veloren="veloren-voxygen"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
-alias forums="firefox-developer-edition https://forum.artixlinux.org/ &"
+alias forums="librewolf https://forum.artixlinux.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
 alias {frogfind,frog,ff}="links https://frogfind.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
