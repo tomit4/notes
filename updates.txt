@@ -4,7 +4,7 @@ Remove XFCE
 
 doas pacman -Q | grep xfce | awk '!($2="")' | grep -v terminal | grep -v screenshooter | grep -v notifyd | grep -v libxfce4util | grep -v libxfce4ui | grep -v artwork | tr '\n' ' ' | catx
 
-doas pacman -R (ctrl + shift + v)
+doas pacman -R xfwm (ctrl + shift + v)
 
 locate xfce | grep -v terminal | grep -v screenshooter | grep -v notifyd | grep -v libxfce4util | grep -v libxfce4ui | grep -v artwork | doas xargs -d\\n rm -v
 
