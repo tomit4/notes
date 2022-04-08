@@ -13,8 +13,11 @@ set $mod Mod4
 # Enable transparency
 exec xcompmgr -c -f -n
 
-# Increase Brightness by 10%
-exec xrandr --output HDMI-0 --brightness 1.1
+# Increase Brightness
+# For at Home/Desktop:
+# exec xrandr --output Screen-0 --brightness 1.1
+# For at Work/Laptop:
+exec xbacklight -set 70
 
 # Enable pulseaudio
 exec pulseaudio --start
