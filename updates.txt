@@ -11,6 +11,4 @@ locate xfce | grep -v terminal | grep -v screenshooter | grep -v notifyd | grep 
 locate xfce | grep about | doas xargs -d\\n rm -v
 locate xfce | grep kiosk | doas xargs -d\\n rm -v
 
-doas rm -r ~/.config/xfce4 ~/.config/xfce4-dict ~/.config/xfburn
-
 NOTE:  The only thing that seemed to have broken was thunar, just check it and reinstall it if need be.
