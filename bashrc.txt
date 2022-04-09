@@ -324,9 +324,6 @@ alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 # pip list and pip freeze command list pip packages
 
-# i3 config for log alias
-alias log="i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
