@@ -15,9 +15,9 @@ exec xcompmgr -c -f -n
 
 # Increase Brightness
 # For at Home/Desktop:
-# exec xrandr --output Screen-0 --brightness 1.1
+exec xrandr --output Screen-0 --brightness 1.1
 # For at Work/Laptop:
-exec xbacklight -set 70
+# exec xbacklight -set 70
 
 # Enable pulseaudio
 exec pulseaudio --start
@@ -84,7 +84,7 @@ bindsym $mod+Z exec tor-browser
 bindsym $mod+T exec thunar
 bindsym $mod+I exec inkscape
 bindsym $mod+G exec gimp
-bindsym $mod+K exec krita
+bindsym $mod+K exec krita --nosplash
 bindsym $mod+N exec tootle
 bindsym $mod+P exec postman
 bindsym $mod+B exec xfce4-terminal -x btop
