@@ -324,9 +324,6 @@ alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 # pip list and pip freeze command list pip packages
 
-# makelist creates a list of current packages, removes the second field (version numbers), and replaces all the new lines with spaces and then writes it to a file called my_packages.txt, you can more or less copy and paste this list into pacman -S to re-download all your files, useful if you need to start from scratch. Needs a script eventually to query aur_packages directory for packages downloaded directly from AUR and not Artix repositories.
-alias makelist="doas pacman -Q | awk '!($2="")' | tr '\n' ' ' >> my_packages.txt"
-
 # i3 config for log alias
 alias log="i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
