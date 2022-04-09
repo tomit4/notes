@@ -189,7 +189,6 @@ alias scripts="cd ~/scripts"
 alias config="cd ~/.config"
 alias cache="cd ~/.cache"
 alias svs="cd /etc/runit/sv"
-alias svlog='cd /var/log/svlog'
 alias Code="cd ~/Documents/Code"
 alias cplus="cd ~/Documents/Code/cpp"
 alias js="cd ~/Documents/Code/javascript"
