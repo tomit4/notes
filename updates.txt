@@ -1,14 +1,23 @@
 Use this file as a post-it for packages to install on laptop/desktop.
 
-Remove XFCE
+add notation about awk as
+Select everything but the second field:
+awk '!($2="")'
 
-doas pacman -Q | grep xfce | awk '!($2="")' | grep -v terminal | grep -v screenshooter | grep -v notifyd | grep -v libxfce4util | grep -v libxfce4ui | grep -v artwork | tr '\n' ' ' | catx
+add noatation about tr (translate command):
+replace every newline with a single space:
+tr '\n' ' '
 
-doas pacman -R xfwm orage-git (ctrl + shift + v)
+Go into Chromium and Disable the following flags
+chrome://flags/
 
-locate xfce | grep -v terminal | grep -v screenshooter | grep -v notifyd | grep -v libxfce4util | grep -v libxfce4ui | grep -v artwork | doas xargs -d\\n rm -v
+Enable Incognito brand consistency in desktop
 
-locate xfce | grep about | doas xargs -d\\n rm -v
-locate xfce | grep kiosk | doas xargs -d\\n rm -v
+Enable offering upload of Autofilled credit cards
 
-NOTE:  The only thing that seemed to have broken was thunar, just check it and reinstall it if need be.
+Anonoymize local IPs exposed by WebRTC
+
+Clear data on exit
+
+Probably already set up:
+Auto Dark Mode for Web Contents
