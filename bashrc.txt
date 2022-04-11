@@ -174,7 +174,6 @@ export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\033[01;37m
 # Custom Bash Commands
 alias dmesg="doas dmesg -H"
 alias kernel="uname -r"
-alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias .="cd"
 alias home="xclear && cd /home/brian && clear && nf && history -c && history -w && hash -r"
 alias forget="xclear && cd /home/brian && clear && history -c && history -w && hash -r"
@@ -361,6 +360,10 @@ alias wiki='ddgr \!w "${1}"'
 alias gh='ddgr --gb \!gh "${1}"'
 alias red='ddgr \!r "${1}"'
 alias yt='ddgr --gb \!yt "${1}"'
+
+# run the following two aliases every time you update the kernels and nvidiadkms
+alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
+alias regen_initramfs="doas mkinitcpio -P"
 
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
