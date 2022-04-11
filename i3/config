@@ -83,7 +83,7 @@ bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fi
 bindsym $mod+Z exec tor-browser
 bindsym $mod+T exec thunar
 bindsym $mod+I exec inkscape
-bindsym $mod+G exec gimp
+bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+N exec tootle
 bindsym $mod+P exec postman
