@@ -218,6 +218,7 @@ alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 alias kfonts="kitty +list-fonts"
 alias {kdiff,kitten,kd}="kitty +kitten diff"
+alias rg="doas rg --colors 'match:fg:blue' --colors 'line:fg:blue'"
 alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
 alias calendar="orage"
 alias nf="neofetch"
