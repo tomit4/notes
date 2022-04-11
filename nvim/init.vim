@@ -21,7 +21,7 @@ Plug 'simeji/winresizer'
 Plug 'yaegassy/coc-volar'
 Plug '907th/vim-auto-save'
 Plug 'itchyny/lightline.vim'
-
+Plug 'jremmen/vim-ripgrep'
 "Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
