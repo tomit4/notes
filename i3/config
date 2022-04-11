@@ -80,13 +80,11 @@ bindsym $mod+Return exec kitty
 # custom keybindings
 bindsym $mod+F exec librewolf
 bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
-bindsym $mod+Z exec tor-browser
-bindsym $mod+T exec thunar
 bindsym $mod+I exec inkscape
 bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
-bindsym $mod+N exec tootle
-bindsym $mod+P exec postman
+bindsym $mod+T exec tootle
+bindsym $mod+P exec pcmanfm
 bindsym $mod+B exec xfce4-terminal -x btop
 bindsym $mod+X exec xfce4-terminal
 bindsym $mod+M exec mousepad
