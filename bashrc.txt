@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 history -c && history -w && hash -r
-
 if [ $TERM == "xterm-256color" ] ; then
     neofetch
     http_proxy=http://127.0.0.1:8118/
@@ -169,7 +168,7 @@ ex ()
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Displays current git branch if there is any and also styles bash prompt
-export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\033[01;37m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;36m└─▶ \033[37m'
+export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\033[01;37m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;36m└─▶\033[37m '
 
 # Custom Bash Commands
 alias dmesg="doas dmesg -H"
@@ -218,7 +217,8 @@ alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 alias kfonts="kitty +list-fonts"
 alias {kdiff,kitten,kd}="kitty +kitten diff"
-alias rg="doas rg --colors 'match:fg:blue' --colors 'line:fg:blue'"
+alias rg="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'"
+alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
 alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
 alias calendar="orage"
 alias nf="neofetch"
