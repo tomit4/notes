@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Create a Bootable Windows 7 or 10 USB Drive in Linux</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Create a Bootable Windows 7 or 10 USB Drive in Linux">
+    
+
+    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="ThorneLabs" />
+
+    <link rel="canonical" href="https://thornelabs.net/posts/create-a-bootable-windows-7-or-10-usb-drive-in-linux.html" />
+
+    <link rel="stylesheet" href="/css/bootstrap-4.6.1.min.css" />
+
+    <style>
+         
+         
+         
+
+        body {
+            background-color: #F0F0F0 !important;
+            font-family: system-ui, sans-serif;
+        }
+
+        blockquote {
+            border-left: 5px solid #EEE;
+            padding: 0px 11px 0px 22px;
+        }
+
+        code {
+            background-color: #f9f2f4;
+            color: #c7254e;
+            padding: 2px 4px;
+            word-wrap: break-word;
+        }
+
+        h1, .h1 { font-size: 32px !important; }
+        h2, .h2 { font-size: 26px !important; padding: 10px 0px 10px 0px; border-bottom: 1px solid #DCDCDC; }
+        h3, .h3 { font-size: 20px !important; padding: 10px 0px 10px 0px; }
+        h4, .h4 { font-size: 18px !important; padding: 10px 0px 10px 0px; }
+
+        .navbar-brand {
+            font-size: 38px !important;
+        }
+
+        img {
+            display: block;
+            padding: 2px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            color: #333;
+            padding: 9.5px;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+         
+         
+         
+
+        #header {
+            padding: 15px 0px 0px 0px;
+        }
+
+        #footer {
+            padding: 20px 0px 5px 0px;
+            font-size: .90em;
+        }
+
+        a.subscribe-links {
+            color: #FFF;
+        }
+
+        a:hover.subscribe-links {
+            color: #FFF;
+            text-decoration: none;
+            border-bottom: 1px solid #FFF;
+        }
+
+        .boxify {
+            border: 1px solid #E9E9E9;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            overflow: auto;
+            box-shadow: 0px 8px 15px rgba(80, 90, 100, 0.1);
+        }
+
+        .dropdown-item-custom {
+            word-wrap: break-word;
+            white-space: normal;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .page-navigation {
+            display: block;
+            width: auto;
+            overflow: hidden;
+            padding: 0px 20px 0px 20px;
+        }
+
+        .page-navigation a {
+            display: block;
+            width: 50%;
+            float: left;
+            margin: 1em 0;
+        }
+
+        .page-navigation .next {
+            text-align: right;
+            float: right;
+        }
+
+        ul.post-tags {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        ul.post-tags li {
+            float: left;
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+
+        ul.post-tags li a {
+            display: block;
+            font-weight: bold;
+            background-color: #ffd740;
+            color: #585858;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39571615-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-39571615-1');
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="/">
+                            Thorne<strong>Labs</strong>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/tags.html">tags</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="col-lg-9">
+
+                
+
+<article class="boxify" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 itemprop="name headline">Create a Bootable Windows 7 or 10 USB Drive in Linux</h1>
+
+    <p>
+        <span itemprop="datePublished" content="2013-06-10" class="text-muted">Published June 10, 2013</span>
+        <span itemprop="dateModified" content="2020-04-01" class="text-muted"> &#8226; Updated April 1, 2020</span>
+    </p>
+
+    <ul class="post-tags" itemprop="keywords">
+        
+        <li><a href="/tags/documentation.html">documentation</a></li>
+        
+        <li><a href="/tags/windows.html">windows</a></li>
+        
+        <li><a href="/tags/linux.html">linux</a></li>
+        
+    </ul>
+
+    <meta itemprop="author publisher" content="James Thorne">
+
+    <hr />
+
+    <div itemprop="articleBody">
+
+    <p>There are a lot of guides on the web describing how to create a bootable Windows 7 or 10 USB drive in Linux. However, many of those guides have missing steps, involve using Windows, or use programs not readily available on modern Linux distributions.</p>
+<p>The following post will walk you through the necessary steps to create a bootable Windows 7 or 10 USB drive from a modern Linux distribution.</p>
+<h2 id="download-the-windows-7-or-10-iso-file">Download the Windows 7 or 10 ISO File</h2>
+<p>If you do not already have the Windows 7 or 10 ISO file, start by downloading one of them:</p>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/software-download/windows7">Download Windows 7 Disc Images (ISO Files)</a></li>
+<li><a href="https://www.microsoft.com/en-us/software-download/windows10ISO">Download Windows 10 Disc Image (ISO Files)</a></li>
+</ul>
+<h2 id="plugin-the-usb-drive">Plugin the USB Drive</h2>
+<p>Next, you need to figure out the device ID of the USB drive.</p>
+<p>Most modern Linux distributions should automount the USB drive. If not, you can see what device ID is assigned to the USB drive by running <code>df -h</code> or <code>mount</code> or <code>lsblk</code>.</p>
+<p>Additionally, syslog can be monitored to find the device ID.</p>
+<p>On Fedora, CentOS, or RHEL, run <code>sudo tail -f /var/log/messages</code>.</p>
+<p>On Ubuntu or Debian, run <code>sudo tail -f /var/log/syslog</code>.</p>
+<p>Once you figure out the USB drive&rsquo;s device ID, be sure to unmount it before continuing:</p>
+<pre><code>sudo umount /dev/sdX
+</code></pre>
+<h2 id="partition-the-usb-drive">Partition the USB Drive</h2>
+<p><strong>Disclaimer:</strong> The following steps will <strong>erase</strong> everything on your USB drive. I am not, nor is anyone else, responsible for any potential data loss.</p>
+<p>Either <code>parted</code> or <code>fdisk</code> can be used to partition the USB drive. Use the command you are more familiar with.</p>
+<p>Changes made using <code>parted</code> <strong>cannot</strong> be reverted because they are executed in real time to the device. Changes made using <code>fdisk</code> <strong>can</strong> be reverted as long as those changes have not yet been written to the device. In either case, make sure you are making changes to the correct device.</p>
+<h3 id="partition-the-usb-drive-with-parted">Partition the USB Drive with parted</h3>
+<p>Open the USB drive in <code>parted</code>:</p>
+<pre><code>sudo parted /dev/sdX
+</code></pre>
+<p>Once you are in the <code>parted</code> interactive menu, partition the USB drive with the following steps (Make <strong>sure</strong> you are using <code>parted</code> on the right device ID. Everything done using <code>parted</code> is executed in real time.):</p>
+<pre><code>(parted) mklabel msdos
+(parted) mkpart primary ntfs 1 -1
+(parted) set 1 boot on
+(parted) quit
+</code></pre>
+<p>Next, go to the section titled <strong>Format the New Partition on the USB Drive as NTFS</strong>.</p>
+<h3 id="partition-the-usb-drive-with-fdisk">Partition the USB Drive with fdisk</h3>
+<p>Open the USB drive in <code>fdisk</code>:</p>
+<pre><code>sudo fdisk /dev/sdX
+</code></pre>
+<p>Once you are in the fdisk interactive menu, partition the USB drive with the following steps:</p>
+<ol>
+<li>Type <strong>p</strong> and <strong>Enter</strong> to print the current partition table. I do this out of habit.</li>
+<li>Delete all the current partitions by typing <strong>d</strong> then <strong>Enter</strong> for each partition.</li>
+<li>Type <strong>n</strong> and <strong>Enter</strong>. Type <strong>p</strong> and <strong>Enter</strong>. Type <strong>1</strong> and then type <strong>Enter</strong> three times to create one new primary partition that uses all available space.</li>
+<li>Type <strong>t</strong> and <strong>Enter</strong> (Partition 1 is automatically selected because it&rsquo;s the only partition). Type <strong>7</strong> and <strong>Enter</strong> to change the type to <strong>HPFS/NTFS/exFAT</strong>.</li>
+<li>Type <strong>a</strong> and <strong>Enter</strong>. Type <strong>1</strong> and <strong>Enter</strong> to  turn on the <strong>Boot</strong> flag.</li>
+<li>To verify everything worked, type <strong>p</strong> and <strong>Enter</strong> and make sure the <strong>Boot</strong> column has an asterisk (*) set and the <strong>Id</strong> column is set to <strong>7</strong>.</li>
+<li>Finally, type <strong>w</strong> and <strong>Enter</strong> to write the changes.</li>
+</ol>
+<p>Next, go to the section titled <strong>Format the New Partition on the USB Drive as NTFS</strong>.</p>
+<h2 id="format-the-new-partition-on-the-usb-drive-as-ntfs">Format the New Partition on the USB Drive as NTFS</h2>
+<p>You will need the Linux NTFS userspace driver installed.</p>
+<p>To install it on Fedora, CentOS, or RHEL, run <code>sudo yum install ntfs-3g</code>.</p>
+<p>To install it on Ubuntu or Debian, run <code>sudo apt-get install ntfs-3g</code>.</p>
+<p>Then, format the partition as NTFS:</p>
+<pre><code>sudo mkfs.ntfs -f /dev/sdX1
+</code></pre>
+<h2 id="install-ms-sys">Install ms-sys</h2>
+<p>You will need program <strong>ms-sys</strong> to write a Master Boot Record (MBR) to the USB drive.</p>
+<p>To compile the source code, install the following packages: <strong>gcc</strong>, <strong>make</strong>, and <strong>gettext</strong> (the package names should be the same on Fedora, CentOS, RHEL, Ubuntu, and Debian).</p>
+<p>To install those packages on Fedora, CentOS, or RHEL, run <code>sudo yum install gcc make gettext</code>.</p>
+<p>To install those packages on Ubuntu or Debian, run <code>sudo apt-get install gcc make gettext</code>.</p>
+<p>Download the latest <strong>ms-sys</strong> source code from <a href="http://ms-sys.sourceforge.net/#Download">http://ms-sys.sourceforge.net/#Download</a>.</p>
+<p>Un-tar the source code and change into the source code directory:</p>
+<pre><code>tar xvzf ms-sys-2.6.0.tar.gz
+
+cd ms-sys-2.6.0
+</code></pre>
+<p>Compile and install the binary:</p>
+<pre><code>make
+
+sudo make install
+</code></pre>
+<p><strong>ms-sys</strong> will install to <strong>/usr/local/bin</strong>.</p>
+<p>If you do not have <strong>/usr/local/bin</strong> in your shell&rsquo;s environment path, run the following commands to temporarily add it:</p>
+<pre><code>su -
+
+export PATH=$PATH:/usr/local/bin
+</code></pre>
+<h2 id="write-a-master-boot-record-mbr-to-the-usb-drive">Write a Master Boot Record (MBR) to the USB Drive</h2>
+<p>Now that <strong>ms-sys</strong> is installed, you will use it to write a Windows 7 Master Boot Record to the USB drive. This same command also works if you are creating a bootable Windows 10 USB drive.</p>
+<pre><code>sudo ms-sys -7 /dev/sdX
+</code></pre>
+<p>Successful output should be:</p>
+<pre><code>Windows 7 master boot record successfully written to /dev/sdX
+</code></pre>
+<h2 id="write-an-extended-boot-record-ebr-to-the-usb-drive-partition">Write an Extended Boot Record (EBR) to the USB Drive Partition</h2>
+<p>In addition to the Master Boot Record, you might also need to write an Extended Boot Record. For the lifetime of this post I have not had this step, but I recently added it because I encountered boot problems when trying to boot Windows 10 from a USB drive on a Lenovo X1 Carbon Gen 7. I found this step thanks to a similar post at <a href="https://wycd.net/posts/2015-03-10-creating-a-bootable-windows-10-usb-drive-on-linux.html">Wayne Chang&rsquo;s blog</a>.</p>
+<pre><code>sudo  ms-sys -n /dev/sdX1
+</code></pre>
+<p>Successful output should be:</p>
+<pre><code>NTFS Windows 7 boot record successfully written to /dev/sdX1
+</code></pre>
+<h2 id="mount-the-usb-drive">Mount the USB Drive</h2>
+<p>Create or use an existing directory to mount the USB drive:</p>
+<pre><code>sudo mkdir -p /mnt/usb
+
+sudo mount /dev/sdX1 /mnt/usb
+</code></pre>
+<h2 id="mount-the-windows-7-or-10-iso">Mount the Windows 7 or 10 ISO</h2>
+<p>Create or use an existing directory to mount the Windows 7 or 10 ISO:</p>
+<pre><code>sudo mkdir -p /mnt/iso
+
+sudo mount -o loop /path/to/windows/iso.iso /mnt/iso
+</code></pre>
+<h2 id="copy-the-contents-of-the-windows-7-or-10-iso-to-the-usb-drive">Copy the Contents of the Windows 7 or 10 ISO to the USB Drive</h2>
+<p>Finally, copy the contents of the mounted Windows 7 ISO to the mounted USB drive (this could take some time depending on the speed of the USB drive):</p>
+<pre><code>sudo cp -av /mnt/iso/* /mnt/usb/
+</code></pre>
+<h2 id="unmount-the-usb-drive">Unmount the USB Drive</h2>
+<p>Unmount the USB drive once the <code>cp</code> command is finished.</p>
+<pre><code>sudo umount /mnt/usb
+</code></pre>
+<p>On several occasions the <code>cp</code> command completed before all I/O was written to the USB drive. Because of this, <code>sudo umount /mnt/usb</code> stalled until all I/O had been written. As previously mentioned, depending on the speed of your USB drive, it could take sometime for all I/O to finish being written to your USB drive.</p>
+<p>Use the <code>iotop</code> command to watch the I/O throughput of the USB drive in real time. Once you no longer see the USB drive at the top of iotop&rsquo;s output, <code>sudo umount /mnt/usb</code> should successfully exit.</p>
+<h2 id="boot-from-the-usb-drive">Boot from the USB Drive</h2>
+<p>Plug the USB drive into the computer you want to install Windows 7 on and boot from it.</p>
+<p>Modern laptops and desktop motherboards typically have several USB boot options such as:</p>
+<ul>
+<li>USB-HDD</li>
+<li>USB-ZIP</li>
+<li>USB-FDD</li>
+<li>USB-CDROM</li>
+</ul>
+<p>Use trial and error to figure out the appropriate USB boot option to boot to.</p>
+<p>For example, on a <strong>Gigabyte GA-MA74GM-S2</strong> motherboard, booting to <strong>USB-HDD</strong> did <em>not</em> work. I had to boot to <strong>USB-ZIP</strong>. However, on a <strong>Lenovo ThinkPad X220</strong> I had to boot to <strong>USB-HDD</strong>.</p>
+
+    </div>
+</article>
+
+
+
+<div class="page-navigation">
+    
+    <a class="prev" href="https://thornelabs.net/posts/correct-smartphone-video-orientation-and-how-to-rotate-ios-and-android-videos-with-ffmpeg.html">&laquo; Correct Smartphone Video Orientation and How To Rotate iOS and Android Videos with ffmpeg</a>
+    
+    
+    <a class="next" href="https://thornelabs.net/posts/rhel-6-fix-xrdp-error-another-xserver-is-already-active-on-display-10.html">RHEL 6 Fix xrdp ERROR another Xserver is already active on display 10 &raquo;</a>
+    
+</div>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0017276619523269"
+     data-ad-slot="6698356841"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<script>
+
+
+
+
+
+
+
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+
+</script>
+<script>
+    anchors.options.visible = 'always';
+    anchors.add();
+</script>
+
+
+            </div>
+            
+
+            
+            <div class="col-lg-3">
+                <div class="dropdown">
+                    <input style="margin-top: 15px; border-radius: 0 !important;" id="search_input" type="text" class="form-control" placeholder="Search" autocomplete="off" />
+                    <ul id="search_results" class="dropdown-menu" style="width: 100%; border-radius: 0 !important;"></ul>
+                </div>
+
+                <div style="background: #FF7900; border: 0; padding: 10px;" class="boxify">
+                    <img style="float: left;" width="20" height="20" src="/images/rss-logo-white@2x.png" alt="rss logo" />
+                    <span style="padding-left: 10px; color: #FFF;"><a class="subscribe-links" href="/index.xml">Subscribe via RSS</a></span>
+                </div>
+
+                
+                <div class="boxify">
+                    <p class="h3">latest posts</p>
+                    
+                    
+                    
+                    <p><a href="https://thornelabs.net/posts/replacing-the-nintendo-switch-joy-con-shells-from-gray-to-atomic-purple.html">Replacing the Nintendo Switch Joy-Con Shells: From Gray to Atomic Purple</a></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="https://thornelabs.net/posts/spell-checking-many-posts-with-aspell-and-a-custom-dictionary.html">Spell Checking Many Posts with aspell and a Custom Dictionary</a></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="https://thornelabs.net/posts/battery-tests-on-a-lenovo-thinkpad-x1-carbon-gen-6-running-ubuntu-1804-lts.html">Battery Tests on a Lenovo ThinkPad X1 Carbon Gen 6 Running Ubuntu 18.04 LTS</a></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="https://thornelabs.net/posts/google-cloud-load-balancer-component-diagrams.html">Google Cloud Load Balancer Component Diagrams</a></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="https://thornelabs.net/posts/installing-ubuntu-1804-lts-on-a-lenovo-thinkpad-x1-carbon-gen-6.html">Installing Ubuntu 18.04 LTS on a Lenovo ThinkPad X1 Carbon Gen 6</a></p>
+                    
+                    
+                </div>
+                
+
+                <div class="boxify">
+                    <p class="h3">top tags</p>
+                    
+                    
+                    
+                    <p><a href="/tags/documentation.html">documentation</a> <small>(154)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/openstack.html">openstack</a> <small>(21)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/linux.html">linux</a> <small>(18)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/cheat-sheet.html">cheat-sheet</a> <small>(16)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/os-x.html">os-x</a> <small>(15)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/shell.html">shell</a> <small>(15)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/vagrant.html">vagrant</a> <small>(11)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/apple.html">apple</a> <small>(10)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/ubuntu.html">ubuntu</a> <small>(10)</small></p>
+                    <hr />
+                    
+                    
+                    
+                    <p><a href="/tags/vmware-fusion.html">vmware-fusion</a> <small>(10)</small></p>
+                    
+                    
+                </div>
+
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-0017276619523269"
+                     data-ad-slot="3784984657"
+                     data-ad-format="rectangle"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <img style="height: 100%" width="48" height="48" src="/images/dexter-96x96.png" alt="Dexter" />
+                <p style="margin-top: 13px">Thorne<strong>Labs</strong> is created using Bootstrap and Hugo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap-4.6.1.min.js"></script>
+
+    <script>
+        var searchJSONFile;
+
+        $(document).ready(function() {
+            
+            $("#search_input").one('focus', function() {
+                if (!searchJSONFile) {
+                    $.getJSON("/index.json", function(e) {
+                        
+                        searchJSONFile = e;
+                    });
+                }
+            });
+
+            
+            $("#search_input").keyup(function() {
+                
+                var e = $(this).val().toLowerCase();
+
+                
+                if ($('#search_input').val().trim().length === 0) {
+                    $('#search_results').hide();
+                }
+                else {
+                    $('#search_results').show();
+                }
+
+                doSearch(e);
+            });
+
+            
+            $(document).mouseup(function (e) {
+                var container = $("#search_results");
+
+                
+                
+                if (!container.is(e.target) && container.has(e.target).length === 0)
+                {
+                    container.hide();
+                }
+            });
+        });
+
+        
+        function doSearch(searchQuery) {
+            var results = [];
+            var resultsHTML = $("#search_results");
+            resultsHTML.html("");
+
+            $.each(searchJSONFile, function(t, n) {
+                var postTitle = n.title;
+                var postTitleLowerCase = n.title.toLowerCase();
+                var postHREF = n.href;
+
+                if (postTitleLowerCase.indexOf(searchQuery) !== -1) {
+                    results.push([postTitle, postHREF]);
+                }
+            });
+
+            if (results.length === 0) {
+                
+                $('#search_results').hide();
+            }
+            else {
+                $.each(results, function(t, n) {
+                    resultsHTML.append('<li><a class="dropdown-item dropdown-item-custom" href="' + n[1] + '">' + n[0] + '</a></li>');
+                });
+            }
+        }
+    </script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dc07c0e3c64d481a921274690d9aaf53"}'></script>
+
+</body>
+</html>
