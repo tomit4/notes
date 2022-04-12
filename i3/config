@@ -92,6 +92,16 @@ bindsym $mod+U exec galculator
 bindsym $mod+S exec steam
 bindsym $mod+v exec virt-manager
 
+# start these applications in floating mode:
+
+# For at Home/Desktop:
+for_window [instance="galculator"] floating enable move right 1100px, move down 300px
+for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
+for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
+
+# floating windows must be at least this size:
+floating_minimum_size 300 x 315
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
