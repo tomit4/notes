@@ -1,0 +1,58 @@
+Timeshift is a backup utility that can restore root (/) directory. It does not back up your home folder.
+It is to be used as a last resort to restore a system that refuses to boot into grub or even bring up a login tty.
+
+In order to restore in this situation, you will need to have an ISO of your Linux Distribution, ideally with a graphical environment like XFCE. On distributions like Manjaro XFCE, timeshift is included in the original ISO for this very reason.
+
+On Artix XFCE, this is not the case, and you will have to install timeshift to the ISO (which is temporary, it does not persist).  Additionally, timeshift is not included in the standard Artix repos, and so you will have to edit your pacman.conf after chroot-ing into your root folder from the initial tty presented on the ISO.
+
+BOOTING FROM ISO
+
+Plug in your ISO USB stick or other media. Turn on your computer.
+
+Once the computer has started, repeatedly hit F2 to enter your BIOS and change your boot order so that the BIOS attempts to boot from the USB ISO first.  Save the changes.
+
+If all has worked well, you will be booted into a live environment for installation of Artix.
+
+Turn on your internet (wifi, password). Doing this via connmanctl or the included XFCE wifi gtk-wifi interface is relatively easy.
+
+Open up a terminal emulator (xfce4-terminal).
+
+Become root:
+
+su
+
+Edit your /etc/pacman.conf to enable the Omniverse repository that can download timeshift:
+
+[omniverse]
+Server = http://omniverse.artixlinux.org/$arch
+
+Write/Quit(:wq)
+
+You should then be able to install timeshift:
+
+pacman -S timeshift
+
+Once installed, you will then need to mount your root directory to gain access to the timeshift restore files.
+
+mount / /mnt
+
+You should be able to ls or even cd into the /mnt directory and see your various files.
+From here, you'll need to chroot in:
+
+artix-chroot /mnt
+
+This essentially drops you into your installation as root. Now you should be able to invoke timeshift to restore your files:
+
+timeshift --restore
+
+It will then prompt you which backup you wish to use (usually just 0).
+
+It will also prompt you with a choice to re install grub (usually there is no need to do this).
+
+It will take some time restoring your files from your previous timeshift --create.
+
+Afterwards reboot and hit F2 once again to enter your BIOS.
+
+Change the boot order to utilize your main hard drive first and save your changes.
+
+If all went well, you should have your system restored to your previous timeshift --create session.
