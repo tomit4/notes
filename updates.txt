@@ -8,3 +8,7 @@ add notation about tr (translate command):
 replace every newline with a single space:
 tr '\n' ' '
 
+
+install the following:
+
+doas pacman -S w3m
