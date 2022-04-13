@@ -1,6 +1,6 @@
 Connmanctl is a wrapper around other network managing services (usually wpa_supplicant) generally used to connect to the internet via ethernet or wifi.
 
-Unlike GUIs which provide an easy to use interface for connecting, connmanctl works via a terminal interface and is useful when, for example, installing a tiling window manager or working within a tty.
+Unlike GUIs which provide an easy to use interface for connecting, connmanctl works via a terminal interface and is useful when, for example, using a tiling window manager or working within a tty.
 
 The following covers the basics of connecting to a local wifi (such as a coffee shop) for the first time. It is taken from the ArchWiki(https://wiki.archlinux.org/title/Connman).
 
