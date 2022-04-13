@@ -342,6 +342,7 @@ alias {cdread,cafedread}="links https://cafedread.com"
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias wikipedia="links https://wikipedia.org"
 alias hackernews="links https://news.ycombinator.com/"
+alias apnews="links https://apnews.com"
 alias {ddgt,duckducktor}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
 alias searx="links http://3afisqjw2rxm6z7mmstyt5rx75qfqrgxnkzftknbp2vhipr2nrmrjdyd.onion/"
 alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
@@ -387,3 +388,5 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # alias ta="tmux a -t"
 # alias tkill="tmux kill-ses -t"
 
+
+source /home/brian/.bash_completions/typer.sh
