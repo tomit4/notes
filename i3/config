@@ -78,6 +78,7 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # custom keybindings
+bindsym $mod+z exec pavucontrol
 bindsym $mod+F exec librewolf
 bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
 bindsym $mod+I exec inkscape
@@ -99,9 +100,15 @@ bindsym $mod+v exec virt-manager
 for_window [instance="galculator"] floating enable move right 1100px, move down 300px
 for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
 for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
+for_window [instance="pavucontrol"] floating enable
+
+# For testing of floating window python guis
+for_window [instance="app.py"] floating enable
+for_window [instance="app_oo.py"] floating enable
 
 # floating windows must be at least this size:
 floating_minimum_size 300 x 315
+floating_maximum_size 600 x 630
 
 # kill focused window
 bindsym $mod+Shift+q kill
