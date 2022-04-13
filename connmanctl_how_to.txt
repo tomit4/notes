@@ -1,0 +1,37 @@
+Connmanctl is a wrapper around other network managing services (usually wpa_supplicant) generally used to connect to the internet via ethernet or wifi.
+
+Unlike GUIs which provide an easy to use interface for connecting, connmanctl works via a terminal interface and is useful when, for example, installing a tiling window manager or working within a tty.
+
+The following covers the basics of connecting to a local wifi (such as a coffee shop) for the first time. It is taken from the ArchWiki(https://wiki.archlinux.org/title/Connman).
+
+First enter the connmanctl prompt:
+
+connmanctl
+
+This will put you into the prompt, where you can then invoke connmanctl commands:
+
+connmanctl> scan wifi
+
+To list the services:
+
+connmanctl> services
+
+Now you need to register the agent to handle user requests:
+
+connmanctl> agent on
+
+You need to connect to one of the protected services. You can easily do this by using tab completion for the wifi_service. An example of this is:
+
+connmanctl> connect wifi_dc85de828967_38303944616e69656c73_managed_psk
+
+The Agent will then ask you to provide any information the daemon needs to complete connection. The information requested will vary depending on the type of network you are connecting to. The agent will also print additional data about the information it needs as shown in the example below:
+
+Agent RequestInput wifi_dc85de828967_38303944616e69656c73_managed_psk
+  Passphrase = [ Type=psk, Requirement=mandatory ]
+  Passphrase?
+
+Provide the information requested, in this example the passphrase, and then type:
+
+connmanctl> quit
+
+If the information you provided is correct you should now be connected to the protected access point.
