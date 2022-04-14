@@ -332,6 +332,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # bookmarks
 alias forums="librewolf https://forum.artixlinux.org/ &"
+alias smarden="links http://smarden.org/runit/"
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
 alias {frogfind,frog,ff}="links https://frogfind.com"
