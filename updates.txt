@@ -12,3 +12,11 @@ tr '\n' ' '
 install the following:
 
 doas pacman -S w3m
+
+from the aur:
+
+cd aur_packages
+git clone https://aur.archlinux.org/rsv
+cd rsv
+mkpkg -Si
+makepkg --install
