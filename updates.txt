@@ -11,7 +11,7 @@ tr '\n' ' '
 
 install the following:
 
-doas pacman -S w3m
+doas pacman -S w3m yay
 
 from the aur:
 
