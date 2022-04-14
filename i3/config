@@ -105,6 +105,7 @@ for_window [instance="mousepad"] floating enable move right 1100px, move down 30
 for_window [instance="pavucontrol"] floating enable
 for_window [instance="lxappearance"] floating enable
 for_window [instance="tootle"] floating enable
+for_window [instance="keepassxc"] floating enable
 
 # For testing of floating window python guis
 for_window [instance="app.py"] floating enable
