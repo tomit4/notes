@@ -101,6 +101,7 @@ for_window [instance="galculator"] floating enable move right 1100px, move down 
 for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
 for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
 for_window [instance="pavucontrol"] floating enable
+for_window [instance="lxappearance"] floating enable
 
 # For testing of floating window python guis
 for_window [instance="app.py"] floating enable
