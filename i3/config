@@ -78,7 +78,8 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # custom keybindings
-bindsym $mod+z exec pavucontrol
+bindsym $mod+a exec pavucontrol
+bindsym $mod+z exec lxappearance
 bindsym $mod+F exec librewolf
 bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
 bindsym $mod+I exec inkscape
@@ -102,6 +103,7 @@ for_window [instance="gcolor3"] floating enable move right 900px, move down 300p
 for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
 for_window [instance="pavucontrol"] floating enable
 for_window [instance="lxappearance"] floating enable
+for_window [instance="tootle"] floating enable
 
 # For testing of floating window python guis
 for_window [instance="app.py"] floating enable
@@ -167,7 +169,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
