@@ -15,9 +15,9 @@ exec xcompmgr -c -f -n
 
 # Increase Brightness
 # For at Home/Desktop:
-exec xrandr --output Screen-0 --brightness 1.1
+# exec xrandr --output Screen-0 --brightness 1.1
 # For at Work/Laptop:
-# exec xbacklight -set 70
+exec xbacklight -set 70
 
 # Enable pulseaudio
 exec pulseaudio --start
@@ -97,15 +97,20 @@ bindsym $mod+S exec steam
 bindsym $mod+v exec virt-manager
 
 # start these applications in floating mode:
-
-# For at Home/Desktop:
-for_window [instance="galculator"] floating enable move right 1100px, move down 300px
-for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
-for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
 for_window [instance="pavucontrol"] floating enable
 for_window [instance="lxappearance"] floating enable
 for_window [instance="tootle"] floating enable
 for_window [instance="keepassxc"] floating enable
+
+# For at Home/Desktop:
+# for_window [instance="galculator"] floating enable move right 1100px, move down 300px
+# for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
+# for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
+#
+# For at Laptop:
+for_window [instance="galculator"] floating enable move right 725px, move down 310px
+for_window [instance="gcolor3"] floating enable move right 550px, move down 300px
+for_window [instance="mousepad"] floating enable move right 700px, move down 250px
 
 # For testing of floating window python guis
 for_window [instance="app.py"] floating enable
