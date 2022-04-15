@@ -8,15 +8,16 @@ add notation about tr (translate command):
 replace every newline with a single space:
 tr '\n' ' '
 
+uninstall yay (but only after using it to install paru, lol):
+
+yay install paru
+
+paru -R yay
+
+copy the paru.conf to /etc/paru.conf:
+
+doas cp paru.conf /etc/paru.conf
 
 install the following:
 
-doas pacman -S w3m yay
-
-from the aur:
-
-cd aur_packages
-git clone https://aur.archlinux.org/rsv
-cd rsv
-mkpkg -Si
-makepkg --install
+paru bat
