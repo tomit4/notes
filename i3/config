@@ -88,7 +88,7 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec xfce3-terminal -x btop
+bindsym $mod+B exec xfce4-terminal -x btop
 bindsym $mod+X exec xfce4-terminal
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
