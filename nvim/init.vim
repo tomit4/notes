@@ -1,7 +1,7 @@
 " Specify a directory for plugins default is ~/.config/nvim/init.vim
 
-call plug#begin('~/.vim/plugged') 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree' "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -49,8 +49,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 "set colored brackets via rainbow"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
 
-"set indentLine to nvim colorscheme
-"let g:indentLine_setColors = 0
+" set indentLine to nvim colorscheme
+" let g:indentLine_setColors = 0
+
+set listchars=eol:↵,trail:·
+set list
 
 "enable AutoSave on start
 let g:auto_save = 1
@@ -65,15 +68,15 @@ let g:NERDTreeGitStatusWithFlags = 1
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:NERDTreeGitStatusNodeColorization = 1
 "let g:NERDTreeColorMapCustom = {
-    "\ "Staged"    : "#0ee375",  
-    "\ "Modified"  : "#d9bf91",  
-    "\ "Renamed"   : "#51C9FC",  
-    "\ "Untracked" : "#FCE77C",  
-    "\ "Unmerged"  : "#FC51E6",  
-    "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#/87939A",   
-    "\ "Ignored"   : "#808080"   
-    "\ }                         
+    "\ "Staged"    : "#0ee375",
+    "\ "Modified"  : "#d9bf91",
+    "\ "Renamed"   : "#51C9FC",
+    "\ "Untracked" : "#FCE77C",
+    "\ "Unmerged"  : "#FC51E6",
+    "\ "Dirty"     : "#FFBD61",
+    "\ "Clean"     : "#/87939A",
+    "\ "Ignored"   : "#808080"
+    "\ }
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
@@ -97,12 +100,12 @@ nmap <C-j> <C-Down>
 nmap <C-k> <C-Up>
 
 " Use ctrl- [hjkl] to select the active split!
-"nmap <silent> <c-k> :wincmd k<CR> 
+"nmap <silent> <c-k> :wincmd k<CR>
 "nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-" Only lightline shows on bottom status board 
+" Only lightline shows on bottom status board
 set noshowmode
 
 " Set lightline colorscheme
@@ -113,7 +116,7 @@ let g:lightline = {'colorscheme': 'one', 'active': { 'left': [['mode', 'paste'],
 " keybind map Ctrl + m to :MarkdownPreview
 nmap <C-m> <Plug>MarkdownPreviewToggle
 
-"Escape Insert Mode with ii 
+"Escape Insert Mode with ii
 imap ii <Esc>
 
 " Vertically center document when entering Insert mode
@@ -143,7 +146,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 let mapleader=","
 
 "set relativenumber
-set number 
+set number
 
 set cursorcolumn
 set cursorline
@@ -177,7 +180,7 @@ highlight Comment cterm=italic gui=italic
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
+function! IsNERDTreeOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
@@ -198,16 +201,16 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  "\ 'coc-prettier', 
-  \ 'coc-json', 
+  \ 'coc-eslint',
+  "\ 'coc-prettier',
+  \ 'coc-json',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup 
+set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup
 
 " Set the height of the status line down at the bottom
-set cmdheight=1 
+set cmdheight=1
 " Set the amount of characters you get back from status/error messages
 set updatetime=300
 
@@ -258,6 +261,20 @@ function! s:show_documentation()
   else
     call CocAction('doHover')
   endif
+endfunction
+
+" function to remove trailing white spaces from document, simply type
+" :StripTrailingWhitespace when in Normal mode
+command! -nargs=? -range=% -complete=custom,s:StripCompletionOptions
+      \ StripTrailingWhitespace <line1>,<line2>call s:StripTrailingWhitespace(<f-args>)
+
+function! s:StripTrailingWhitespace(...) abort
+  let confirm = a:0
+  execute a:firstline . ',' . a:lastline . 's/\s\+$//e' . (confirm ? 'c' : '')
+endfunction
+
+function! s:StripCompletionOptions(A,L,P) abort
+  return "-confirm"
 endfunction
 
 " Highlight symbol under cursor on CursorHold
