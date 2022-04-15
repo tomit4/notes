@@ -88,7 +88,7 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec xfce4-terminal -x btop
+bindsym $mod+B exec xfce3-terminal -x btop
 bindsym $mod+X exec xfce4-terminal
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
@@ -101,6 +101,7 @@ for_window [instance="pavucontrol"] floating enable
 for_window [instance="lxappearance"] floating enable
 for_window [instance="tootle"] floating enable
 for_window [instance="keepassxc"] floating enable
+for_window [instance="gtktranslate"] floating enable
 
 # For at Home/Desktop:
 # for_window [instance="galculator"] floating enable move right 1100px, move down 300px
