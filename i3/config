@@ -28,17 +28,17 @@ exec feh --bg-fill /home/brian/Pictures/nord_sand_i3.png
 # Get rid of mouse cursor upon use of keyboard
 exec xbanish
 
-# Automatically open xfce4 terminal and btop at full screen
-exec xfce4-terminal -x btop; fullscreen enable 
+# Automatically open kitty terminal and btop at full screen
+exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
 
 # Get rid of window title bars
-# for_window [class="^.*"] default_border pixel 1 
+# for_window [class="^.*"] default_border pixel 1
 default_border pixel 1
 default_floating_border pixel 1
 
 # Enable gaps
-gaps outer 3 
-gaps inner 5 
+gaps outer 3
+gaps inner 5
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -88,8 +88,7 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec xfce4-terminal -x btop
-bindsym $mod+X exec xfce4-terminal
+bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
