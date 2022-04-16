@@ -20,6 +20,7 @@ doas cp paru.conf /etc/paru.conf
 
 install the following:
 
+doas pacman -S thefuck
 paru bat
 
 if you get a warning regarding ddgr, remove it and install ddgr-git (package maintainer just started a new repo, no crazy changes afaik)

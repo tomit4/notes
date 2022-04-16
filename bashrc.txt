@@ -375,6 +375,9 @@ alias yt='ddgr --gb \!yt "${1}"'
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias regen_initramfs="doas mkinitcpio -P"
 
+
+# Configure thefuck
+eval "$(thefuck --alias)"
 export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
 export GREP_COLORS='ms=01;36'
