@@ -52,7 +52,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 " set indentLine to nvim colorscheme
 " let g:indentLine_setColors = 0
 
-set listchars=eol:↵,trail:·
+set listchars=eol:↵,trail:·,space:·
 set list
 
 "enable AutoSave on start
@@ -265,7 +265,7 @@ endfunction
 
 " function to remove trailing white spaces from document, simply type
 " :StripTrailingWhitespace when in Normal mode
-command! -nargs=? -range=% -complete=custom,s:StripCompletionOptions
+command! -nargs=? -range=% -complete=custom,s:StripTrailingWhitespace
       \ StripTrailingWhitespace <line1>,<line2>call s:StripTrailingWhitespace(<f-args>)
 
 function! s:StripTrailingWhitespace(...) abort
