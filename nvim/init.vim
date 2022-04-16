@@ -263,19 +263,17 @@ function! s:show_documentation()
   endif
 endfunction
 
-" function to remove trailing white spaces from document, simply type
-" :StripTrailingWhitespace when in Normal mode
-command! -nargs=? -range=% -complete=custom,s:StripTrailingWhitespace
-      \ StripTrailingWhitespace <line1>,<line2>call s:StripTrailingWhitespace(<f-args>)
-
-function! s:StripTrailingWhitespace(...) abort
-  let confirm = a:0
-  execute a:firstline . ',' . a:lastline . 's/\s\+$//e' . (confirm ? 'c' : '')
+" Removes trailing spaces
+function TrimWhiteSpace()
+    %s/\s*$//
+    ''
 endfunction
 
-function! s:StripCompletionOptions(A,L,P) abort
-  return "-confirm"
-endfunction
+"Removes trailing spaces on save
+autocmd FileWritePre * call TrimWhiteSpace()
+autocmd FileAppendPre * call TrimWhiteSpace()
+autocmd FilterWritePre * call TrimWhiteSpace()
+autocmd BufWritePre * call TrimWhiteSpace()
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
