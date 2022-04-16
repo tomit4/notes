@@ -3,18 +3,16 @@
 #
 history -c && history -w && hash -r
 if [ $TERM == "xterm-256color" ] ; then
-    neofetch
     http_proxy=http://127.0.0.1:8118/
     HTTP_PROXY=$http_proxy
     export http_proxy HTTP_PROXY
 fi
-
 # create custom env variables:
 export cproj="/home/brian/Documents/Code/forks/"
 # custom BROWSER env for ddgr:
-#export BROWSER=librewolf
 export BROWSER=links
 export TUIR_BROWSER=librewolf
+export EDITOR=nvim
 # enable vi keybindings in terminal and terminal applications
 set -o vi
 
@@ -174,7 +172,7 @@ export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\033[01;37m
 alias dmesg="doas dmesg -H"
 alias kernel="uname -r"
 alias .="cd"
-alias home="xclear && cd /home/brian && clear && nf && history -c && history -w && hash -r"
+alias home="xclear && cd /home/brian && clear && history -c && history -w && hash -r"
 alias forget="xclear && cd /home/brian && clear && history -c && history -w && hash -r"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
@@ -223,7 +221,6 @@ alias rg="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'"
 alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
 alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
 alias calendar="orage"
-alias nf="neofetch"
 alias btop="xfce4-terminal --geometry=284x53+0+0 -x btop"
 alias {librewolf,firefox}="librewolf"
 alias tor-browser="tor-browser &"
@@ -303,7 +300,7 @@ alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 # laptop only currently, records video/audio, simply name filename .mp4 after command:
-alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac" 
+alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac"
 alias ytube="ytfzf -l --features=subtitles"
 alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
@@ -377,7 +374,6 @@ alias regen_initramfs="doas mkinitcpio -P"
 
 # Configure thefuck
 eval "$(thefuck --alias)"
-export EDITOR=nvim
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
 export GREP_COLORS='ms=01;36'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
