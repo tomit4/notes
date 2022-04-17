@@ -7,5 +7,3 @@ awk '!($2="")'
 add notation about tr (translate command):
 replace every newline with a single space:
 tr '\n' ' '
-
-Uninstall xfce4-terminal and neofetch (look for dependency error and uninstall artix image something or other)
