@@ -15,9 +15,9 @@ exec xcompmgr -c -f -n
 
 # Increase Brightness
 # For at Home/Desktop:
-exec xrandr --output Screen-0 --brightness 1.1
+# exec xrandr --output Screen-0 --brightness 1.1
 # For at Work/Laptop:
-# exec xbacklight -set 70
+exec xbacklight -set 70
 
 # Enable pulseaudio
 exec pulseaudio --start
@@ -29,7 +29,7 @@ exec feh --bg-fill /home/brian/Pictures/nord_sand_i3.png
 exec xbanish
 
 # Automatically open kitty terminal and btop at full screen
-exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+exec kitty -o font_size=12 -o background_opacity=0.40 -e btop; fullscreen enable
 
 # Get rid of window title bars
 # for_window [class="^.*"] default_border pixel 1
@@ -88,7 +88,7 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.40 -e btop; fullscreen enable
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
@@ -103,14 +103,14 @@ for_window [instance="keepassxc"] floating enable
 for_window [instance="gtktranslate"] floating enable
 
 # For at Home/Desktop:
-for_window [instance="galculator"] floating enable move right 1100px, move down 300px
-for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
-for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
+# for_window [instance="galculator"] floating enable move right 1100px, move down 300px
+# for_window [instance="gcolor3"] floating enable move right 900px, move down 300px
+# for_window [instance="mousepad"] floating enable move right 1100px, move down 300px
 
 # For at Laptop:
-# for_window [instance="galculator"] floating enable move right 725px, move down 310px
-# for_window [instance="gcolor3"] floating enable move right 550px, move down 300px
-# for_window [instance="mousepad"] floating enable move right 700px, move down 250px
+for_window [instance="galculator"] floating enable move right 725px, move down 310px
+for_window [instance="gcolor3"] floating enable move right 550px, move down 300px
+for_window [instance="mousepad"] floating enable move right 700px, move down 250px
 
 # For testing of floating window python guis
 for_window [instance="app.py"] floating enable
