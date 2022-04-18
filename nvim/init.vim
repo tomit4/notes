@@ -93,6 +93,8 @@ set nosplitright
 " Automatically closes Nvim tree if last window open
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 
+" Automatically opens Nvim tree when first opening nvim
+
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
@@ -145,7 +147,7 @@ let g:lightline = {'colorscheme': 'one', 'active': { 'left': [['mode', 'paste'],
 " Custom keybindings
 
 " keybind map Ctrl + m to :MarkdownPreview
-nmap <C-m> <Plug>MarkdownPreviewToggle
+nnoremap M <Plug>MarkdownPreviewToggle
 
 "Escape Insert Mode with ii
 imap ii <Esc>
