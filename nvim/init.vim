@@ -146,7 +146,7 @@ let g:lightline = {'colorscheme': 'one', 'active': { 'left': [['mode', 'paste'],
 
 " Custom keybindings
 
-" keybind map Ctrl + m to :MarkdownPreview
+" keybind map Shift + m to :MarkdownPreview
 nnoremap M <Plug>MarkdownPreviewToggle
 
 "Escape Insert Mode with ii
