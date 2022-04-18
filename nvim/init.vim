@@ -111,9 +111,6 @@ let g:auto_save = 1
 "silence AutoSave messages
 let g:auto_save_silent = 1
 
-" let g:webdevicons_enable = 1
-" let g:webdevicons_enable_nerdtree = 1
-
 " do not close the markdown preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
 
