@@ -8,6 +8,6 @@ add notation about tr (translate command):
 replace every newline with a single space:
 tr '\n' ' '
 
-Install pacman-contrib for tool paccache
+Install pacman-contrib for tool paccache and also wgetpaste (awesome tool found on gentoo wiki/irc channel)
 
-doas pacman -S pacman-contrib
+doas pacman -S pacman-contrib wgetpaste
