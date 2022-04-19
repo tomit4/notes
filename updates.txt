@@ -11,6 +11,6 @@ tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install pacman-contrib for tool paccache and also wgetpaste (awesome tool found on gentoo wiki/irc channel)
+Install gamemoderun and lib32-gamemoderun
 
-doas pacman -S pacman-contrib wgetpaste
+Place gamemode run before %command%
