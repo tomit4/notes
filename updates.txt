@@ -7,3 +7,7 @@ awk '!($2="")'
 add notation about tr (translate command):
 replace every newline with a single space:
 tr '\n' ' '
+
+Install pacman-contrib for tool paccache
+
+doas pacman -S pacman-contrib

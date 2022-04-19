@@ -212,6 +212,7 @@ alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find c
 alias mv="mv -v"
 alias ln="ln -i"
 alias {doasedit,sudoedit}="doas rnano"
+alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
 alias kfonts="kitty +list-fonts"
@@ -370,7 +371,6 @@ alias yt='ddgr --gb \!yt "${1}"'
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias regen_initramfs="doas mkinitcpio -P"
 
-
 # Configure thefuck
 eval "$(thefuck --alias)"
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin"
@@ -389,6 +389,5 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # alias tls="tmux ls"
 # alias ta="tmux a -t"
 # alias tkill="tmux kill-ses -t"
-
 
 source /home/brian/.bash_completions/typer.sh
