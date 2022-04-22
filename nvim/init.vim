@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'psliwka/vim-smoothie'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
@@ -146,7 +147,7 @@ let g:lightline = {'colorscheme': 'one', 'active': { 'left': [['mode', 'paste'],
 
 " Custom keybindings
 
-" keybind map Shift + m to :MarkdownPreview
+" keybind map Ctrl + m to :MarkdownPreview
 nnoremap M <Plug>MarkdownPreviewToggle
 
 "Escape Insert Mode with ii
@@ -200,7 +201,7 @@ if(has("termguicolors"))
 endif
 
 syntax enable
-"colorscheme gruvbox
+" colorscheme gruvbox
 "colorscheme menguless
 colorscheme nord
 "colorscheme molokai
