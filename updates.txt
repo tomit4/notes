@@ -11,6 +11,3 @@ tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install gamemoderun and lib32-gamemoderun
-
-Place gamemode run before %command%
