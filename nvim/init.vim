@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -102,12 +101,20 @@ highlight NvimTreeFolderIcon guibg=blue
 " Use experimental features of vim-smoothie (gg and G)
 let g:smoothie_experimental_mappings = 1
 
+" Tab Shortcuts
+nnoremap <C-t> :tabnew<CR>
+nnoremap <A-Left> :tabprevious<CR>
+nnoremap <A-Right> :tabnext<CR>
+
 "set colored brackets via rainbow"
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
+let g:rainbow_active = 1
+
+"set to 0 if you want to enable it later via :RainbowToggle"
 
 " set indentLine to nvim colorscheme
 " let g:indentLine_setColors = 0
 
+" Marks end of line, space, and trailing space characters
 set listchars=eol:↵,trail:·,space:·
 set list
 
@@ -159,7 +166,7 @@ imap ii <Esc>
 " Vertically center document when entering Insert mode
 autocmd InsertEnter * norm zz
 
-" Alias replace all to S
+" Alias replace all to shift + S
 nnoremap S :%s///gI<Left><Left><Left><Left>
 
 " Fix Splitting
