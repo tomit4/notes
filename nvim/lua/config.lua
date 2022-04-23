@@ -6,6 +6,9 @@ vim.cmd[[colorscheme nord]]
 -- Enable autopairs
 require('nvim-autopairs').setup{}
 
+-- Enable gitsigns
+require('gitsigns').setup()
+
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
     ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "vim", "vue", "wgsl", "yaml",},

@@ -40,6 +40,7 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
     use 'preservim/nerdcommenter'
+    use {'lewis6991/gitsigns.nvim'}
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
     use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install'} -- {'do': { -> mkdp#util#install()  }}
