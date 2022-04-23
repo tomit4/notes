@@ -1,3 +1,6 @@
+-- remap leader key
+vim.g.mapleader = ","
+
 -- remap Nvim_Tree toggle to CTRL+B
 keymap('n', '<c-b>', '<c-w>:NvimTreeToggle<CR>', {})
 
@@ -24,3 +27,16 @@ keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 -- Toggle Multi-Cursor with j or k
 vim.cmd[[nmap <C-j> <C-Down>]]
 vim.cmd[[nmap <C-k> <C-Up>]]
+
+-- Escape Insert Mode with ii
+keymap('i', 'ii', '<Esc>', {})
+
+-- Insert a console.log()
+vim.cmd[[ inoremap cll console.log()<esc>i]]
+
+-- Alias replace all to shift + S
+vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
+
+-- j/k will move virtual lines (lines that wrap)
+vim.cmd[[noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')]]
+vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]

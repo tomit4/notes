@@ -1,9 +1,9 @@
--- main init.lua configurations
-
 keymap = vim.api.nvim_set_keymap
 
--- Nvim_Tree configuration:
--- -- setup with all defaults
+-- Enable ColorScheme
+vim.cmd[[colorscheme nord]]
+
+-- Nvim_Tree configuration: -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
@@ -118,6 +118,11 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   },
 } -- END_DEFAULT_OPTS for Nvim_Tree
 
+-- Lua Line color configuration
+require('lualine').setup({
+options = { theme = 'nord' }
+})
+
  -- Automatically closes Nvim tree if last window open
 vim.cmd[[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]]
 
@@ -148,6 +153,52 @@ vim.g.NERDSpaceDelims= 1
 vim.g.termguicolors = true
 vim.g.nosplitright = true
 
--- do not close the markdown preview tab when switching to other buffers
-vim.g.mkdp_auto_close = 0
+-- set relative number
+vim.opt.number = true
 
+vim.opt.cursorcolumn = true
+-- vim.opt.cursor = true
+vim.opt.mouse = 'a'
+vim.opt.autoindent = true
+vim.opt.smarttab = true
+vim.opt.ignorecase = true
+vim.opt.cindent = true
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 0
+vim.opt.shiftwidth = 4
+-- always uses spaces instead of tab characters
+vim.opt.expandtab = true
+
+-- if hidden is not set, TextEdit might fail.
+vim.opt.hidden = true
+-- Set the height of the status line down at the bottom
+vim.opt.cmdheight = 1
+-- Set the amount of characters you get back from status/error messages
+vim.opt.updatetime = 300
+-- always show signcolumns
+vim.opt.signcolumn = 'yes'
+
+-- Fix Splitting
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- Vertically center document when entering Insert mode
+vim.cmd[[autocmd InsertEnter * norm zz]]
+
+--  Removes trailing spaces
+vim.cmd[[function TrimWhiteSpace()
+    %s/\s*$//
+    ''
+endfunction]]
+
+--Removes trailing spaces on save
+vim.cmd[[autocmd FileWritePre * call TrimWhiteSpace()]]
+vim.cmd[[autocmd FileAppendPre * call TrimWhiteSpace()]]
+vim.cmd[[autocmd FilterWritePre * call TrimWhiteSpace()]]
+vim.cmd[[autocmd BufWritePre * call TrimWhiteSpace()]]
+
+-- Enable Comments with Italics (below selected colorscheme)
+vim.cmd[[highlight Comment cterm=italic gui=italic]]
+
+-- do not close the markdown preview tab when switching to other buffers
+-- vim.g.mkdp_auto_close = 0
