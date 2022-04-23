@@ -14,7 +14,9 @@
 -- vim.bo.expandtab = true
 -- vim.bo.shiftwidth = 2
 -- vim.bo.softtabstop = 2
-
+--
+-- vim.g.something is equivalent to let g:something=
+--
 -- keybindings .vim style:
 
 -- Ctrl-s to save
@@ -33,8 +35,8 @@
 -- Now Converted to keybindings .lua style:
 --
 -- local keymap = vim.api.nvim_set_keymap
--- kemap('n', '<c-s>', ':w<CR>', {})
--- kemap('i', '<c-s>', '<Esc>:w<CR>a', {})
+-- keymap('n', '<c-s>', ':w<CR>', {})
+-- keymap('i', '<c-s>', '<Esc>:w<CR>a', {})
 -- local opts = { noremap = true }
 -- keymap('n', '<c-j>', '<c-w>j', opts)'
 -- keymap('n', '<c-h>', '<c-w>h', opts)'
@@ -144,3 +146,8 @@
 -- Note that at the require('lspconfig')[<YOUR_LSP_SERVER>] is a placeholder where YOUR_LSP_SERVER is meant to be replaced with the server of your choice, the example in the video is:
 --
 -- 'sumneko_lua'
+--
+-- Other resources:
+--
+-- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
+-- https://dev.to/arunanshub/making-a-proper-initlua-for-real-this-time-4k44
