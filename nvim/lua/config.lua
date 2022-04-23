@@ -3,6 +3,9 @@ keymap = vim.api.nvim_set_keymap
 -- Enable ColorScheme
 vim.cmd[[colorscheme nord]]
 
+-- Enable autopairs
+require('nvim-autopairs').setup{}
+
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
     ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "vim", "vue", "wgsl", "yaml",},
@@ -11,8 +14,9 @@ require'nvim-treesitter.configs'.setup{
 
 -- To enable basic vim folding methods/expressions:
 --
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+--
 local lsp_installer = require("nvim-lsp-installer")
 
 lsp_installer.on_server_ready(function(server)
@@ -27,6 +31,12 @@ end)
   local cmp = require'cmp'
 
   cmp.setup({
+     snippet = {
+     -- REQUIRED - you must specify a snippet engine
+     expand = function(args)
+        vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+     end,
+    },
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -37,6 +47,7 @@ end)
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'buffer' },
+      { name = 'ultisnips' },
     })
   })
 
@@ -72,7 +83,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 local lspconfig =require'lspconfig'
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'sumneko_lua', 'eslint', 'pyright', 'bashls', 'clangd', 'volar', 'zk' }
+local servers = { 'sumneko_lua', 'eslint', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
