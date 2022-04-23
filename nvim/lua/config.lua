@@ -3,6 +3,82 @@ keymap = vim.api.nvim_set_keymap
 -- Enable ColorScheme
 vim.cmd[[colorscheme nord]]
 
+-- nvim-treesiter configuration: -- setup with all defaults
+require'nvim-treesitter.configs'.setup{
+    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "vim", "vue", "wgsl", "yaml",},
+    highlight = { enable = 'true' }
+}
+
+-- To enable basic vim folding methods/expressions:
+--
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+
+    -- This setup() function will take the provided server configuration and decorate it with the necessary properties
+    -- before passing it onwards to lspconfig.
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    server:setup(opts)
+end)
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'buffer' },
+    })
+  })
+
+  -- Set configuration for specific filetype.
+  cmp.setup.filetype('gitcommit', {
+    sources = cmp.config.sources({
+      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+local lspconfig =require'lspconfig'
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+local servers = { 'sumneko_lua', 'eslint', 'pyright', 'bashls', 'clangd', 'volar', 'zk' }
+for _, lsp in ipairs(servers) do
+   lspconfig[lsp].setup {
+     capabilities = capabilities,
+   }
+end
+
 -- Nvim_Tree configuration: -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS

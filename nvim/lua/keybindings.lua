@@ -10,8 +10,7 @@ keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
 -- Use ctrl- [hl] to select the active split!
-keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {})
-keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
+keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
 -- Toggle NERDCommenter with Ctrl + c
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]

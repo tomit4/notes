@@ -1,20 +1,33 @@
--- Packages installed using 'packer', install using :PackerSync
+-- packer.nvim requires nvim-packer-git package
+-- paru -S nvim-packer-git
 
--- call Plug for MarkDownPreview
--- vim.cmd[[call plug#begin('~/.vim/plugged') Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install()  }}]]
+-- Packages installed using 'packer', install using :PackerSync
+-- Remove packages by deleting (or commenting out) use line below and running :PackerClean
 
 require('packer').startup(function()
     use 'wbthomason/packer.nvim'
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    -- :TSInstall <language_to_install>
+    -- :TSUpdate all
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
+    -- :LspInstallInfo (use i to install, u to upgrade, r to uninstall)
+    -- :LspUninstall [--sync] <server> ...
+    -- NVim Completion packages
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+
     use 'kyazdani42/nvim-web-devicons' -- for file icons
     use 'kyazdani42/nvim-tree.lua'
     use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
     use 'shaunsingh/nord.nvim'
     use 'psliwka/vim-smoothie'
     -- use 'mattn/emmet-vim'
-    -- use 'ap/vim-css-color'
     -- use 'airblade/vim-gitgutter'
     use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
-    -- use {'junegunn/fzf', run = ':call fzf#installo()'}--{ 'do': { -> fzf#install() } }
     use 'preservim/nerdcommenter'
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
