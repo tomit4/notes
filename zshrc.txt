@@ -1,7 +1,7 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # PROMPT='%F{yellow}%n %1d $ %f'
-PROMPT='%B%F{blue}[%n@%M ~%b]$%B%F{blue}
+PROMPT='%B%F{blue}[%n@%M %B%F{white}~%B%F{blue}]$%B%F{blue}
 └─▶%B%F{white} '
 
 #
