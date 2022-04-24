@@ -34,7 +34,19 @@ pacman -S timeshift
 
 Once installed, you will then need to mount your root directory to gain access to the timeshift restore files.
 
-mount / /mnt
+Find out where your main drive is by invoking lsblk, which should give you out put like this:
+
+lsblk
+
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 465.8G  0 disk
+└─nvme0n1p1 259:1    0 465.8G  0 part /run/timeshift/backup
+                                      /var/lib/docker
+                                      /
+
+All drives can be found under the devices folder /dev, mount /dev/nvme0n1p1 to /mnt
+
+mount /dev/nvme0n1p1 /mnt
 
 You should be able to ls or even cd into the /mnt directory and see your various files.
 From here, you'll need to chroot in:
@@ -45,11 +57,23 @@ This essentially drops you into your installation as root. Now you should be abl
 
 timeshift --restore
 
+Mind this will not always work and should be tested from time to time. I have used this exact method only to find there is no timeshift record to restore... in which case, sadly you are SOL.
+
+But other times it has worked, and therefore should be attempted (better methods using rsync should eventually be considered).
+
 It will then prompt you which backup you wish to use (usually just 0).
 
 It will also prompt you with a choice to re install grub (usually there is no need to do this).
 
 It will take some time restoring your files from your previous timeshift --create.
+
+Once it has restored. you can safely exit the chroot shell:
+
+exit
+
+And unmount the nvme drive:
+
+umount /mnt
 
 Afterwards reboot and hit F2 once again to enter your BIOS.
 
