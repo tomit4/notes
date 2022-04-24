@@ -13,7 +13,16 @@ find $dir -maxdepth 1 -type f
 
 Install zsh-completions-git
 
-paru -S zsh-completions-git
+in the aur_packages directory:
+
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
+
+source ~/aur_packages/zsh-autocomplete/zsh-autocomplete.plugin.zsh-completions-git
+
+Make sure to comment out any references to compinit (but keep it around in case this fails)
+
+Then in your .zshrc file, place:
+
 
 at 9:06
 https://www.youtube.com/watch?v=bTLYiNvRIVI
