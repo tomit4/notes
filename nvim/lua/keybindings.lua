@@ -20,8 +20,8 @@ keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 
 -- Can't quite get working yet
 -- keybind map Ctrl + m to :MarkdownPreview
--- vim.cmd[[nnoremap M <Plug>MarkdownPreviewToggle]]
--- keymap('n', '<c-m>', '<c-w>:MarkdownPreviewToggle<CR>', {noremap = true})
+-- vim.cmd[[nmap <C-m> <Plug>MarkdownPreviewToggle]]
+keymap('n', '<c-s>', '<c-w>:MarkdownPreview<CR>', {})
 --
 -- Toggle Multi-Cursor with j or k
 vim.cmd[[nmap <C-j> <C-Down>]]

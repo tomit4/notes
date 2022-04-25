@@ -43,7 +43,7 @@ require('packer').startup(function()
     use {'lewis6991/gitsigns.nvim'}
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
-    use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install'} -- {'do': { -> mkdp#util#install()  }}
+    use {'iamcco/markdown-preview.nvim'} -- :call mkdp#util#install()
     use 'luochen1990/rainbow'
     use 'windwp/nvim-autopairs'
     use 'simeji/winresizer'
