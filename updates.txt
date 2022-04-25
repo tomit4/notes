@@ -11,8 +11,4 @@ tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install autotiling for i3 (not .git or -git version)
-
-paru -S autotiling
-
-and copy the i3/config file to your ~/.config/i3/ directory
+Comment out xfce in /etc/lightdm/lightdm.conf
