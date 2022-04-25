@@ -11,14 +11,8 @@ tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install zsh-completions-git
+Install autotiling for i3 (not .git or -git version)
 
-in your home directory:
+paru -S autotiling
 
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.zsh/zsh-autocomplete
-
-Inside your .zsh file, you should already have called this plugin:
-
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh-completions-git
-
-The rest can be sourced from your files here in zsh directory, just cp it into your ~/.zsh directory
+and copy the i3/config file to your ~/.config/i3/ directory
