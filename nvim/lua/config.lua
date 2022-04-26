@@ -8,7 +8,6 @@ require('nvim-autopairs').setup{}
 
 -- Enable gitsigns
 require('gitsigns').setup()
-
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
     ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "vim", "vue", "wgsl", "yaml",},
@@ -17,8 +16,11 @@ require'nvim-treesitter.configs'.setup{
 
 -- To enable basic vim folding methods/expressions:
 --
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- Disable folds
+vim.g.nofoldenable = true
 --
 local lsp_installer = require("nvim-lsp-installer")
 
