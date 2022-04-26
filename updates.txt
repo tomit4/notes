@@ -12,5 +12,6 @@ add notation about using find to list only files in current directory and NOT su
 find $dir -maxdepth 1 -type f
 
 install abiword (lightweight word processor)
+install gnumeric (lightweight spreadsheets)
 
-doas pacman -S abiword
+doas pacman -S abiword gnumeric
