@@ -14,3 +14,7 @@ find $dir -maxdepth 1 -type f
 install vrms (because we all need a tiny richard stallman complaining about which packages on our computer actually aren't libre)
 
 paru vrms
+
+remove mplayer (stopped working, use mpv instead)
+
+doas pacman -Rs mplayer
