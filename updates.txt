@@ -16,3 +16,5 @@ Comment out xfce in /etc/lightdm/lightdm.conf
 Copy keybindings.lua and packages.lua into ~/.config/nvim/lua run :PackerSync in nvim, and then run :call mkdp#util#install()
 
 You'll then be able to invoke markdown preview with Ctrl+S
+
+iAAAAH!
