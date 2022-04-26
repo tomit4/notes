@@ -11,9 +11,6 @@ tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-install abiword (lightweight word processor)
-install gnumeric (lightweight spreadsheets)
 install vrms (because we all need a tiny richard stallman complaining about which packages on our computer actually aren't libre)
 
-doas pacman -S abiword gnumeric
 paru vrms
