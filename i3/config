@@ -9,7 +9,6 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-
 # Enable transparency
 exec xcompmgr -c -f -n
 
@@ -99,6 +98,7 @@ bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
 bindsym $mod+S exec steam
+bindsym $mod+X exec cd ~/Documents/Code/forks && exec kitty --session ~/.config/kitty/session
 bindsym $mod+v exec virt-manager
 
 # start these applications in floating mode:
