@@ -35,8 +35,12 @@ autoload -Uz colors && colors
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '%b'
+# git info/styling for prompt
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '%B%F{green} ✓'
+zstyle ':vcs_info:*' stagedstr '%B%F{yellow} +'
+zstyle ':vcs_info:git:*' formats       '%b%u%c'
+zstyle ':vcs_info:git:*' actionformats '%b|%a%u%c'
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
@@ -89,6 +93,7 @@ alias js="cd ~/Documents/Code/javascript"
 alias py="cd ~/Documents/Code/python"
 alias wtuts="cd ~/Documents/Code/web_tutorials"
 alias btuts="cd ~/Documents/Code/book_tutorials"
+alias fonts="fc-list"
 alias locate="locate -i"
 alias bat="bat --theme Nord"
 alias batman="man bat"
