@@ -53,6 +53,7 @@ alias {doasedit,sudoedit}="doas rnano"
 alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
+alias cdiff="colordiff"
 alias kfonts="kitty +list-fonts"
 alias {kdiff,kitten,kd}="kitty +kitten diff"
 alias rg="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'"
