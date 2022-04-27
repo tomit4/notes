@@ -61,7 +61,7 @@ alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=kat
 alias btop="kitty -o font_size=12 -o background_opacity=0.40 -e btop; fullscreen enable"
 alias {librewolf,firefox}="librewolf"
 alias tor-browser="tor-browser &"
-alias chromium="chromium --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
+alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
 alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias {sq,sql,sqlite}="sqlcipher"

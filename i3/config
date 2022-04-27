@@ -87,7 +87,7 @@ bindsym $mod+a exec pavucontrol
 bindsym $mod+z exec lxappearance
 bindsym $mod+q exec xfce4-screenshooter
 bindsym $mod+F exec librewolf
-bindsym $mod+C exec chromium --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
+bindsym $mod+C exec chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs
 bindsym $mod+I exec inkscape
 bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
