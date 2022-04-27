@@ -15,6 +15,10 @@ install vrms (because we all need a tiny richard stallman complaining about whic
 
 paru vrms
 
+install colordiff:
+
+doas pacman -S colordiff
+
 remove mplayer (stopped working, use mpv instead)
 
 doas pacman -Rs mplayer
