@@ -22,3 +22,6 @@ doas pacman -S colordiff
 remove mplayer (stopped working, use mpv instead)
 
 doas pacman -Rs mplayer
+
+Note: You may need to add the postgresql runit script (and fudge about with postgresql)
+as a recent update broke it on our desktop, and our laptop may need to make the same adjustment.
