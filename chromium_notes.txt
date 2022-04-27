@@ -1,0 +1,68 @@
+This document covers my personal preferences on settings with Ungoogled Chromium.
+
+Luckily, within the Artix repositories, they have a binary of Ungoogled Chromium available for easy installation:
+
+doas pacman -S ungoogled-chromium
+
+Afterwards which, there are some simple settings and extensions to use to ensure maximum privacy and preferences.
+
+I'll leave you to figure out the settings for yourself. Personally I save no cookies, enable HTTPS-only, duckduckgo set to default search engine, amongst other settings.
+
+Installing extensions from the google web store is a bit of a hassle, as you have to use an online tool called crxextractor to download the crx, then it's a simple drag and drop into chrome's extensions page.
+
+INSTRUCTIONS ON INSTALLING EXTENSIONS:
+
+Navigate to the Google Web Store:
+https://chrome.google.com/webstore/category/extensions
+
+Search for the extension you'd like to install
+
+Search for the extension you'd like to installation
+
+Afterwards which copy the https link above in your address bar using ctrl+c.
+
+Open up another tab and head on over to:
+
+https://crxextractor.com
+
+Enter the link into the prompt at the start of their page. It will then download a .crx file.
+
+Open up chromium's settings and then head to the Extensions section.
+
+From there you can simply open up a graphical file manager and drag from your Downloads folder, the .crx file into the chromium Extensions page. This will install it (adjust settings per extension per your preferencves).
+
+LIST OF CHROMIUM EXTENSIONS:
+
+Canvas FingerPrint Defender
+Dark Reader
+Decentraleyes
+ForgetMeNot
+NoScript
+Snowflake
+SponSorBlock for Youtube
+uBlock Origin
+User-Agent Switcher and manager
+Vimium
+WebRTC Leak Prevent
+
+Chrome Flags
+
+Ungoogled Chromium has already set up most privacy respecting settings by default, but I prefer to add some additional settings:
+
+navigate to the chrome flags page, in the url bar, enter:
+
+chrome://flags
+
+Here you will be presented with some options, set the following:
+
+Disable search engine collection (enabled)
+Show avatar/people/profile button (never)
+Clear data on exit (enabled)
+Hide tab close buttons (enabled)
+Smooth scrolling (enabled)
+Web Bluetooth (disabled)
+Use the new permissions backend for Web Bluetooth (disabled)
+Vulkan (enabled)
+Auto Dark Mode for Web Contents (enabled)
+
+And that should do it. Although I still prefer Librewolf (see firefox_notes.txt), this is about as close as I can get it given my current knowledge of "hardening" ungoogled-chromium.
