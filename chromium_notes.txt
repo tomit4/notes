@@ -31,15 +31,18 @@ Open up chromium's settings and then head to the Extensions section.
 
 From there you can simply open up a graphical file manager and drag from your Downloads folder, the .crx file into the chromium Extensions page. This will install it (adjust settings per extension per your preferencves).
 
+Make sure each extension is allowed in Incognito Mode.
+
 LIST OF CHROMIUM EXTENSIONS:
 
 Canvas FingerPrint Defender
-Dark Reader
+Dark Reader (not needed if dark mode flag is enabled below, and the flag is better)
 Decentraleyes
 ForgetMeNot
 NoScript
 Snowflake
 SponSorBlock for Youtube
+Return Youtube Dislike
 uBlock Origin
 User-Agent Switcher and manager
 Vimium
