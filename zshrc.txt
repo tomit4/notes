@@ -26,7 +26,7 @@ eval "$(thefuck --alias)"
 # Change with care:
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers"
 # Configure grep output colors
-export GREP_COLORS='ms=01;36'
+export GREP_COLORS='ms=01;34'
 
 # Enable fuzzy file finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
