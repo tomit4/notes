@@ -49,6 +49,11 @@ uncomment:
 and:
 mkdir ~/watch
 
+uncomment:
+#dht = auto
+and rewrite it as:
+dht = on
+
 Whenever you download a torrent (from a browser)
 move it from your ~/Downloads folder to your ~/watch
 
