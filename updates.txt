@@ -25,3 +25,36 @@ doas pacman -Rs mplayer
 
 Note: You may need to add the postgresql runit script (and fudge about with postgresql)
 as a recent update broke it on our desktop, and our laptop may need to make the same adjustment.
+
+install rtorrent
+
+doas pacman -S rtorrent
+
+cp /usr/share/doc/rtorrent/rtorrent.rc ~/.rtorrent.rc
+
+unccoment:
+#directory.default.set = ./
+
+and rewrite it as:
+directory.default.set = ./Downloads
+
+uncomment:
+#session.path.set = ./session
+
+and:
+mkdir ~/session
+
+uncomment:
+#schedule2 = watch_directory,5,5,load.start=./watch/*.torrent
+and:
+mkdir ~/watch
+
+Whenever you download a torrent (from a browser)
+move it from your ~/Downloads folder to your ~/watch
+
+Then simply start
+rtorrent
+
+And it will look to watch and session to start/resume torrents
+
+Once done, look in your ~/Downloads folder and it should be finished.
