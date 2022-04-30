@@ -32,8 +32,8 @@ alias fonts="fc-list"
 alias locate="locate -i"
 alias bat="bat --theme Nord"
 alias batman="man bat"
-alias li="ls -l --color=auto"
-alias ll="ls -liasSh --color=auto"
+alias li="exa -lh"
+alias ll="exa -liah"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
 alias lshw="doas lshw -short" # list hardware
 alias of="onefetch -o yaml"
@@ -93,6 +93,7 @@ alias {mysql,maria,mdb}="mariadb"
 alias rsm="doas rsm"
 alias updatedb="doas updatedb"
 alias iftop-w="doas iftop -i wlan0 -P"
+alias speedtest="speed-test"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
 alias vnstat-w="vnstat -i wlan0 --json | jq"
@@ -115,7 +116,7 @@ alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
 alias xsel="xclip -sel clip"
-alias catx="cat | xclip -sel clip"
+alias catx="xclip -sel clip"
 alias kitx="cat | kitty +kitten clipboard" # not as good as catx
 alias mouse="mousepad"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
@@ -176,6 +177,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # bookmarks
 alias forums="librewolf https://forum.artixlinux.org/ &"
+alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
 alias smarden="links http://smarden.org/runit/"
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
