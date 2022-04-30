@@ -15,3 +15,7 @@ doas pacman -S exa
 Install speed-test
 
 paru speed-test (choose 2 option, not .git version)
+
+Go to https://learning.lpi.org/en/learning-materials/101-500/ and download pdf
+
+Go to   https://learning.lpi.org/en/learning-materials/102-500/ and download pdf
