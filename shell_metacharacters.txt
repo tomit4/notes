@@ -1,0 +1,27 @@
+Taken from the Unix Programming Environment by Brian Kernighan and Rob Pike (pg. 76):
+
+____________________ Table 3.1: Shell Metacharacters ___________________
+
+>               prog >file direct standard output to file
+>>              prog >>file append standard output to file
+<               prog <file take a standard input from file
+|               p1|p2 connect standard output of p1 to standard intput of p2
+<<str           here document: standard input follows, up to next str on a line by itself
+*               match any string of zero or more characters in filenames
+?               match any single character in filenames
+[ccc]           match any single character from ccc in filenames; ranges like 0-9 or a-z are legal
+;               command terminator: p1;p2 does p1, then p2
+&               like ; but doesn't wait for p1 to finish
+`               run command(s) in ...; output replaces `...`
+(...)           run command(s) in ... in a sub-shell
+{...}           run command(s) in ... in current shell (rarely used)
+$1, $2, etc.    $0...$9 replaced by arguments to shell file
+$var            value of shell variable var
+${var}          value of var; avoids confusion when concatenated with text; (see also Table 5.3)
+\               \c take character c literally, \newline discarded
+'...'           take ... literally
+"..."           take ... literally after $, `...` and \ interpreted
+#               if # starts word, rest of line is a comment (not in 7th Ed.)
+var=value       assign to variable var
+p1 && p2        run p1; if successful, run p2
+p1 || p2        run p1; if unsuccessful, run p2
