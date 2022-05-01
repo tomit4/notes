@@ -13,3 +13,7 @@ find $dir -maxdepth 1 -type f
 Install yq (similar to jq, but for yaml)
 
 doas pacman -S yq
+
+Install gnome-keyring (per issue on Artix forums)
+
+doas pacman -S gnome-keyring
