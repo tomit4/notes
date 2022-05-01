@@ -6,16 +6,10 @@ awk '!($2="")'
 
 add notation about tr (translate command):
 replace every newline with a single space: tr '\n' ' '
+
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install exa (colorized version of ls)
-doas pacman -S exa
+Install yq (similar to jq, but for yaml)
 
-Install speed-test
-
-paru speed-test (choose 2 option, not .git version)
-
-Go to https://learning.lpi.org/en/learning-materials/101-500/ and download pdf
-
-Go to   https://learning.lpi.org/en/learning-materials/102-500/ and download pdf
+doas pacman -S yq
