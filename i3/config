@@ -97,6 +97,7 @@ bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.40 -e btop; fu
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
+bindsym $mod+Y exec gtktranslate
 bindsym $mod+S exec steam
 bindsym $mod+X exec cd ~/Documents/Code/forks && exec kitty --session ~/.config/kitty/session
 bindsym $mod+v exec virt-manager
