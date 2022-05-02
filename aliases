@@ -9,6 +9,7 @@ alias df='df -h'
 alias free='free -m'
 alias dmesg="doas dmesg -H"
 alias kernel="uname -r"
+alias .="cd"
 alias home="xclear && cd /home/brian && clear && erase_history && hash -r"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
