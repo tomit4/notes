@@ -175,6 +175,7 @@ alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
+alias archives="links https://archive.artixlinux.org/"
 alias forums="librewolf https://forum.artixlinux.org/ &"
 alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
 alias smarden="links http://smarden.org/runit/"
