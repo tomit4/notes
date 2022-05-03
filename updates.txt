@@ -10,10 +10,6 @@ replace every newline with a single space: tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Install yq (similar to jq, but for yaml)
+Install a dictionary (dictd):
 
-doas pacman -S yq
-
-Install gnome-keyring (per issue on Artix forums)
-
-doas pacman -S gnome-keyring
+doas pacman -S dictd
