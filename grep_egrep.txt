@@ -1,0 +1,22 @@
+    ----------------- Table 4.1 -----------------
+     --- grep and egrep Regular Expressions ---
+          (decreasing order of precedence)
+
+c       any non-special character c matches itself
+\c      turn off any special meaning of character c
+^       beginning of line
+$       end of line
+.       any single character
+[...]   any one of characters in ...; ranges like a-z are legal
+[^...]  any single character not in ...; ranges are legal
+\n      what the n'th \(...\) matched (grep only)
+r*      zero or more occurrences of r
+r+      one or more occurrences of r (egrep only)
+r?      zero or one occurrences of r (egrep only)
+r1 r2   r1 followed by r2
+r1|r2   r1 or r2 (egrep only)
+\(r\)   tagged regular expression r (grep only); can be nested
+(r)     regular expression r (egrep only); can be nested
+
+        No regular expression matches a newline.
+
