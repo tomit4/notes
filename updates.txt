@@ -10,10 +10,22 @@ replace every newline with a single space: tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
-Uninstall artix-grub-theme
+Uninstall artix-grub-theme and xfce4-notifyd
 
-doas pacman -Rs artix-grub-theme
+doas pacman -Rs artix-grub-theme xfce4-notifyd
+
+Install dunst
+
+doas pacman -S dunst
+
+And move the dunstrc to a config folder named dunst
+
+mkdir ~/.config/dunst
+
+cp ~/Documents/notes/dunst/dunstrc ~/.config/dunst/
 
 In Ungoogled Chromium make this your default search engine:
 
 https://lite.duckduckgo.com/lite/?q=%s
+
+And change up some flags for better privacy (essentially disable autofill)
