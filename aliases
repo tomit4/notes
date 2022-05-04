@@ -8,6 +8,7 @@ alias cp="cp -i"
 alias df='df -h'
 alias free='free -m'
 alias dmesg="doas dmesg -H"
+alias blkid="doas blkid"
 alias kernel="uname -r"
 alias .="cd"
 alias home="xclear && cd /home/brian && clear && erase_history && hash -r"
