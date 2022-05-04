@@ -1,0 +1,22 @@
+----------------------------- Table 4.2 -----------------------------
+            Summary of sed Commands
+
+a\              append lines to output until one not ending in \
+b label         branch to command : label
+c\              change lines to following text as in a
+d               delete line; read next input line
+i\              insert following text before next output
+l               list line, making all non-printing characters visible
+p               print line
+q               quit
+r file          read file, copy contents to output
+s/old/new/f     substitute new for old. If f=g, replace all occurrences;
+                    f=p, print; f=w file, write to file
+t label         test: branch to label if substitution made to current line
+w file          write line to file
+y/str1/str2     replace each character from str1 with corresponding
+                    character from str2 (no ranges allowed)
+=               print current input line number
+!cmd            do sed cmd only if line is not selected
+: label         set label for b and t Commands
+{               treat commands up to matching } as a group
