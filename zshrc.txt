@@ -3,6 +3,7 @@
 # to change default shell, use chsh -s $(which zsh)
 #
 # create custom env variables:
+#
 export cproj="/home/brian/Documents/Code/forks/"
 # custom BROWSER env for ddgr:
 export BROWSER=links
@@ -70,8 +71,9 @@ unsetopt BEEP
 PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
 └─▶%B%F{white} '
 
-function erase_history { local HISTSIZE=0; }
-erase_history && hash -r
+# function erase_history { local HISTSIZE=0; }
+# erase_history && hash -r
+
 
 # Set up vim mode
 bindkey -v
@@ -83,6 +85,7 @@ bindkey -v
     # kitty-integration
     # unfunction kitty-integration
 # fi
+alias home="xclear && cd /home/brian && clear && history -p && hash -r"
 source ~/.aliases
 # Plugins (that need to be at the end of the zshrc script)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
