@@ -1,0 +1,14 @@
+--------------------- Table 4.5 ---------------------
+                awk Built-in Functions
+
+cos(expr)               cosine of expr
+exp(expr)               exponential of expr: e^expr
+getline()               reads next input line; returns 0 if end of file, 1 if not
+index(s1,s2)            position of string s2 or s1; returns 0 if not present
+int(expr)               integer part of expr; truncates towards 0
+length(s)               length of string s
+log(expr)               natural logarithm of expr
+sin(expr)               sine of expr
+split(s,a,c)            split s into a[1]...a[n] on character c; return n
+sprintf(fmt,...)        format ... according to specification fmt
+substr(s,m,n)           n-character substring of s beginning at position m
