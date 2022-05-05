@@ -24,6 +24,10 @@ mkdir ~/.config/dunst
 
 cp ~/Documents/notes/dunst/dunstrc ~/.config/dunst/
 
+Install cheat (similar, but in some ways better than tldr)
+
+paru cheat (pick first option)
+
 In Ungoogled Chromium make this your default search engine:
 
 https://lite.duckduckgo.com/lite/?q=%s
