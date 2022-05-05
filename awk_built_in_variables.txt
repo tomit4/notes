@@ -1,0 +1,11 @@
+---------------- Table 4.3 ----------------
+           awk Built-in Variables
+
+FILENAME        name of current input file
+FS              field separator character (default blank & tab)
+NF              number of fields in input record
+NR              number of input record
+OFMT            output format for numbers (default %g; see printf(3))
+OFS             output field separator string (default blank)
+ORS             output record separator string (default newline)
+RS              input record seaparator character (default newline)

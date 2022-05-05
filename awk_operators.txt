@@ -1,0 +1,15 @@
+------------------ Table 4.4 ------------------
+ awk Operators (increasing order of precedence)
+
+= += -k *= /= %=        assignment; v op= expr is v = v op (expr)
+||                      OR: expr1 || expr2 true if either is;
+                            expr2 not evaluated if expr1 is true
+&&                      AND: expr1 && expr2 true if both are;
+                            expr2 not evaluated if expr1 is false
+!                       negate value of expression
+> >= < <= == != ~ !~    relational operators;
+                            ~ and !~ are match and non-match
+nothing                 string concatenation
++ -                     plus, minus
+* / %                   multiply, divide, remainder
+++ --                   increment, decrement (prefix or postfix)
