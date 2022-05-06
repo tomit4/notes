@@ -10,3 +10,43 @@ replace every newline with a single space: tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
+Set up to no longer use a display manager, instead we will rely on the startx script:
+
+cp the .xinitrc .bash_profile and .zprofile files here to /home/brian directory
+
+To test, simply create a down file in your /etc/runit/sv/lightdm directory:
+
+doas touch down
+
+doas chmod +x down
+
+Then turn off your lightdm service:
+
+doas sv down lightdm
+
+This will drop you into tty7, from there simply reboot.
+
+Now you should be able to log in just using the tty1 it drops you into.
+
+brian
+yourpassword
+
+If all went well, you should be back in your i3 graphical user interface. Check to make sure all services are still running, and then delete unnecessary packages.
+
+doas pacman -Rs lightdm lightdm-runit gnome-keyring (it will complain a couple times, just uninstall whatever else it complains about)
+
+Then update your mlocate database:
+
+updatedb
+
+After it updates, you'll want to delete any remaining packages
+
+locate lightdm | grep -v timeshift | grep -v icon | doas xargs -d\\n rm -r -v
+
+Afterwards which you'll want to redo timeshift to be extra clean:
+
+doas timeshift --delete (select 0)
+
+doas timeshift --create
+
+And updatedb again.
