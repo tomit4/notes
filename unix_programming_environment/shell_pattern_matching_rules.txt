@@ -1,0 +1,13 @@
+------------------------- Table 5.2 -------------------------
+
+*       match any string, including the null string
+?       match any single character
+[ccc]   match any of the characters in ccc.
+            [a-d0-3] is equivalent to [abcd0123]
+"..."   match ... exactly; quotes protect special characters. Also '...'
+\c      match c literally
+a|b     in case expressions only, matches either a or b
+/       in filenames, matched only by an explicit / in the epxression;
+            in case, matched like any other character
+.       as the first character of a filename, is matched only by an
+            explicit . in the expression
