@@ -5,7 +5,6 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias cp="cp -i"
-alias which="which -a"
 alias df='df -h'
 alias free='free -m'
 alias dmesg="doas dmesg -H"
