@@ -1,0 +1,14 @@
+-------------------------- Table 5.1 --------------------------
+
+$#      the number of arguments
+$*      all arguments to shell
+$@      similar to $*; see Section 5.7
+$-      options supplied to shell
+$?      return value of the last command executed
+$$      process-id of the shell
+$!      process-id of the last command started with &
+$HOME   default argument for cd command
+$IFS    list of characters that separate words in arguments
+$PATH   list of directories to search for commands
+$PS1    prompt string, default '$ '
+$PS2    prompt string for continued command line, default '> '
