@@ -10,6 +10,10 @@ replace every newline with a single space: tr '\n' ' '
 add notation about using find to list only files in current directory and NOT subdirectory:
 find $dir -maxdepth 1 -type f
 
+add notation about using pick to parse through output, and pipe that using xargs to another command:
+example:
+ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
+
 Install pick:
 
 paru pick (choose 1)
