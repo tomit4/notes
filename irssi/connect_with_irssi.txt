@@ -21,9 +21,24 @@ irssi
 
 /join channel
 
+# To find channels on specific topics:
+
+# Examples:
+    /msg alis LIST searchterm
+    /msg alis LIST * -topic multiple*ordered*search*terms
+    /msg alis LIST * -min 50
+    /msg alis LIST #foo*
+    /msg alis LIST #foo* -mode =n
+    /msg alis LIST *freetopic* -mode -t -show mt
+    /msg alis LIST ##nocolors* -mode +c -show t
+
 # Some common commands:
 CTRL + n (navigate to previous window)
 CTRL + p (navigate to next window)
+
+# Navigate Page Up or Page Down
+ALT + n (navigate page down)
+ALT + p (navigate page up)
 
 # Show all users in current channel
 /names
