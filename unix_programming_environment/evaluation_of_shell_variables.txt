@@ -1,0 +1,12 @@
+--------------------- Table 5.3 ---------------------
+
+$var            value of var; nothing if var is undefined
+${var}          same; useful if alphanumerics follows variable name
+${var-thing}    value of var if defined; otherwise thing.
+                    $var unchanged.
+${var=thing}    value of var if defined; otherwise thing.
+                    If undefined, $var set to thing
+${var?message}  if defined, $var. Otherwise print message
+                    and exit shell. if Message empty, print:
+                        var: parameter not set
+${var+thing}    thing if $var defined, otherwise nothing
