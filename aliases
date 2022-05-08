@@ -48,6 +48,7 @@ alias kmnt="doas mount /dev/sda /mnt/media/kobo"
 alias kumnt="doas umount /dev/sda /mnt/media/kobo"
 alias rm="newrm -vi"
 alias cal="newcal"
+alias overwrite="ow.sh" # overwrite notice sed 's/UNIX/UNIX(TM)/g' notice
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias mv="mv -v"
 alias ln="ln -i"
