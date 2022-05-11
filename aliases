@@ -125,6 +125,8 @@ alias diff="diff -wy"
 alias exifread="exiftool"
 alias exifrm="exiftool -all="
 alias {html,html_pp}="hxnormalize -e"
+# stock tickers
+alias ticker="ticker -w SPY,QQQ,DIA,IWM,VIX"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
 alias {reddit,rd}="torsocks tuir"
 alias {sub,subreddit,subrd}="torsocks tuir -s"
@@ -214,6 +216,8 @@ alias gh='ddgr --gb \!gh "${1}"'
 alias glab='ddgr --gb \!glab "${1}"'
 alias red='ddgr \!r "${1}"'
 alias yt='ddgr --gb \!yt "${1}"'
+
+
 
 # run the following two aliases every time you update the kernels and nvidiadkms
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
