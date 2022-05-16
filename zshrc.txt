@@ -41,6 +41,9 @@ zstyle ':autocomplete:*' min-input 1
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# icons-in-terminal Integration
+source ~/.local/share/icons-in-terminal/icons_bash.sh
+
 # Colors
 autoload -Uz colors && colors
 

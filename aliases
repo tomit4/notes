@@ -1,6 +1,7 @@
 #Custom Aliases
 alias more="less"
 alias ls='ls --color=auto'
+alias lls="logo-ls"
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
