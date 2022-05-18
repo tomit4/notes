@@ -30,13 +30,14 @@ exec pulseaudio --start
 # exec feh --bg-fill /home/brian/Pictures/nord_sand_i3.png
 
 # Set background image (desktop)
-exec feh --bg-fill /home/brian/Pictures/nord_sand_i3_2.png
+# exec feh --bg-fill /home/brian/Pictures/nord_sand_i3_2.png
+exec feh --bg-fill /home/brian/Pictures/debian_wide.png
 
 # Get rid of mouse cursor upon use of keyboard
 exec xbanish
 
 # Automatically open kitty terminal and btop at full screen
-exec kitty -o font_size=12 -o background_opacity=0.40 -e btop; fullscreen enable
+exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
 
 # Get rid of window title bars
 # for_window [class="^.*"] default_border pixel 1
@@ -95,7 +96,7 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.40 -e btop; fullscreen enable
+bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
