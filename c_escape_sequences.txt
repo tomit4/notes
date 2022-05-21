@@ -1,0 +1,16 @@
+------------- C Programming Language Book pg. 38 -------------
+The complete set of escape sequences is
+
+\a      alert (bell) character
+\b      backspace
+\f      formfeed
+\n      newline
+\r      carriage return
+\t      horizontal tab
+\v      vertical tab
+\\      backslash
+\?      question mark
+\'      single quote
+\"      double quote
+\ooo    octabl number
+\xhh    hexidecimal number
