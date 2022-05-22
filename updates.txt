@@ -27,3 +27,11 @@ cp ~/Documents/notes/i3/config ~/.config/i3/
 restart i3 to be sure
 
 If it works, uninstall xcompmgr
+
+doas pacman -R xcompmgr
+
+Also, I noticed the time was off. make sure to enable nptd service
+
+doas ln -s /etc/runit/sv/ntpd /run/runit/service/
+
+doas rsv enable ntpd
