@@ -9,8 +9,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-# Enable transparency
-exec xcompmgr -c -f -n
+
+# Enable display compositor
+exec --no-startup-id picom --config /home/brian/.config/picom/picom.conf
 
 # Enable autotiling (works better on not widescreen..)
 exec_always --no-startup-id autotiling
@@ -19,7 +20,7 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id dunst -config /home/brian/.config/dunst/dunstrc
 # Increase Brightness
 # For at Home/Desktop:
-exec xrandr --output Screen-0 --brightness 1.1
+# exec xrandr --output Screen-0 --brightness 1.1
 # For at Work/Laptop:
 # exec xbacklight -set 70
 
@@ -31,7 +32,7 @@ exec pulseaudio --start
 
 # Set background image (desktop)
 # exec feh --bg-fill /home/brian/Pictures/nord_sand_i3_2.png
-exec feh --bg-fill /home/brian/Pictures/debian_wide.png
+exec feh --bg-fill /home/brian/Pictures/debian_wide_sand2.png
 
 # Get rid of mouse cursor upon use of keyboard
 exec xbanish

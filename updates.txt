@@ -14,10 +14,16 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install systeroid:
+Install picom (better than xcompmgr, no screen tearing)
 
-doas pacman -S systeroid
+doas pacman -S picom
 
-Install logo-ls
+Copy i3 and picom configs
 
-paru logo-ls
+cp -r ~/Documents/notes/picom ~/.config/
+
+cp ~/Documents/notes/i3/config ~/.config/i3/
+
+restart i3 to be sure
+
+If it works, uninstall xcompmgr
