@@ -38,7 +38,8 @@ exec feh --bg-fill /home/brian/Pictures/debian_wide_sand2.png
 exec xbanish
 
 # Automatically open kitty terminal and btop at full screen
-exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+# exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+exec bst -e btop
 
 # Get rid of window title bars
 # for_window [class="^.*"] default_border pixel 1
@@ -84,7 +85,8 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec kitty
+bindsym $mod Return exec st
 
 # custom keybindings
 bindsym $mod+a exec pavucontrol
@@ -97,7 +99,8 @@ bindsym $mod+G exec gimp --no-splash
 bindsym $mod+K exec krita --nosplash
 bindsym $mod+T exec tootle
 bindsym $mod+P exec pcmanfm
-bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+# bindsym $mod+B exec kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable
+bindsym $mod+B exec bst -e btop
 bindsym $mod+M exec mousepad
 bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator

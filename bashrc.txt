@@ -173,7 +173,7 @@ ex ()
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Displays current git branch if there is any and also styles bash prompt
-export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─▶\033[37m '
+export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
 
 # Configure thefuck
 eval "$(thefuck --alias)"
