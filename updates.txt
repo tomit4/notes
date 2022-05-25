@@ -14,24 +14,23 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install picom (better than xcompmgr, no screen tearing)
+Install bspwm and sxhkd
 
-doas pacman -S picom
+doas pacman -S bspwm sxhkd
 
-Copy i3 and picom configs
+Place bspwmrc and sxhkdrc in respective .config directories
 
-cp -r ~/Documents/notes/picom ~/.config/
+mkdir ~/.config/bspwm
 
-cp ~/Documents/notes/i3/config ~/.config/i3/
+mkdir ~/.config/sxhkd
 
-restart i3 to be sure
+cp ~/Documents/notes/bspwm/bswpmrc ~/.config/bspwm/
+cp ~/Documents/notes/bspwm/sxhkdrc ~/.config/sxhkd/
+cp ~/Documents/notes/picom/picom.conf ~/.config/picom/
 
-If it works, uninstall xcompmgr
+Install xorg-xev and screenkey
 
-doas pacman -R xcompmgr
+doas pacman -S xorg-xev screenkey
 
-Also, I noticed the time was off. make sure to enable nptd service
-
-doas ln -s /etc/runit/sv/ntpd /run/runit/service/
-
-doas rsv enable ntpd
+cp aliases ~/.aliases
+cp xinitrc.txt ~/.xinitrc
