@@ -48,8 +48,8 @@ bspc config right_padding 3
 bspc config border_width 1
 bspc config window_gap 5
 
-bspc rule -a pavucontrol state=floating rectangle=480x270+1440+810 sticky=on layer=above
-bspc rule -a lxappearance state=floating rectangle=480x270+1440+810 sticky=on layer=above
+# bspc rule -a pavucontrol state=floating rectangle=480x270+1440+810 sticky=on layer=above
+# bspc rule -a lxappearance state=floating rectangle=480x270+1440+810 sticky=on layer=above
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a mplayer2 state=floating
