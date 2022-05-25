@@ -22,6 +22,10 @@ super + shift + Escape
 super + shift + r
     bspc wm -r
 
+# toggle floating on and off
+super + o
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
 # focus on window direction
 super + {Left,Down,Up,Right}
     bspc node -f {west,south,north,east}
@@ -30,9 +34,13 @@ super + {Left,Down,Up,Right}
 super + shift + {Left,Down,Up,Right}
     bspc node -s {west,south,north,east}
 
-# focus on desktop
+# focus on workspace
 super + {1-9,0}
     bspc desktop -f {1-9,10}
+
+# move window to different workspace
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}
 
 # expand a window by moving one of its side outward
 ctrl shift + {Left,Down,Up,Right}
@@ -45,7 +53,7 @@ alt shift + {Left,Down,Up,Right}
 # toggle fullscreen
 super + shift + f
     bspc node -t {\~fullscreen}
-
+    # /home/brian/scripts/bspfullscreen
 
 # close and kill
 # super + {_,shift + }w
@@ -165,7 +173,7 @@ super + b
     bst -e btop &
 super + m
     mousepad &
-super + o
+super + l
     gcolor3 &
 super + u
     galculator &
