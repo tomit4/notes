@@ -15,39 +15,37 @@ super + Escape
 #
 # bspwm hotkeys
 # quit bspwm
-super + shift + e
-    bspc quit
+super + shift + Escape
+    /home/brian/scripts/prompt "Are you sure you would like to quite this Xsession" "bspc quit"
+
 # restart bspwm
 super + shift + r
     bspc wm -r
 
 # focus on window direction
-super + {h,j,k,l,Left,Down,Up,Right}
-    bspc node -f {west,south,north,east,west,south,north,east}
+super + {Left,Down,Up,Right}
+    bspc node -f {west,south,north,east}
 
 # swap window with direction
-super + shift + {h,j,k,l,Left,Down,Up,Right}
-    bspc node -s {west,south,north,east,west,south,north,east}
+super + shift + {Left,Down,Up,Right}
+    bspc node -s {west,south,north,east}
 
 # focus on desktop
 super + {1-9,0}
     bspc desktop -f {1-9,10}
 
 # expand a window by moving one of its side outward
-ctrl shift + {h,j,k,l,Left,Down,Up,Right}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0,left -20 0,bottom 0 20,top 0 -20,right 20 0}
+ctrl shift + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 contract a window by moving one of its side inward
-alt shift + {h,j,k,l,Left,Down,Up,Right}
-    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0,right -20 0,top 0 20,bottom 0 -20,left 20 0}
+alt shift + {Left,Down,Up,Right}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # toggle fullscreen
 super + shift + f
     bspc node -t {\~fullscreen}
 
-# flip current window horizontally
-super + shift + j
-    bspc node -F {horizontal}
 
 # close and kill
 # super + {_,shift + }w
@@ -64,8 +62,8 @@ super + shift + q
 	# bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
+# super + g
+	# bspc node -s biggest.window
 #
 # state/flags
 # set the window state
@@ -155,25 +153,25 @@ super + c
     chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &
 super + i
     inkscape &
-super +g
+super + g
     gimp --no-splash &
-super +k
+super + k
     krita --nosplash &
-super +t
+super + t
     tootle &
-super +p
+super + p
     pcmanfm &
-super +b
+super + b
     bst -e btop &
-super +m
+super + m
     mousepad &
-super +o
+super + o
     gcolor3 &
-super +u
+super + u
     galculator &
-super +y
+super + y
     gtktranslate &
-super +s
+super + s
     steam &
-super +v
+super + v
     virt-manager &

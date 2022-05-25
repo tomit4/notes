@@ -14,9 +14,9 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install bspwm and sxhkd
+Install bspwm and sxhkd and xdo
 
-doas pacman -S bspwm sxhkd
+doas pacman -S bspwm sxhkd xdo
 
 Place bspwmrc and sxhkdrc in respective .config directories
 
