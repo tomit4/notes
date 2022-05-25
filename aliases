@@ -1,6 +1,5 @@
 #Custom Aliases
 alias more="less"
-alias ls='ls --color=auto'
 alias lls="logo-ls"
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -34,8 +33,8 @@ alias locate="locate -i"
 alias bat="bat --theme Nord"
 alias batman="man bat"
 alias ls="exa --icons"
-alias li="exa -lh --icons"
-alias ll="exa -liah --icons"
+alias li="exa -1 --icons"
+alias ll="exa -lih --icons"
 alias {lsdir,lsd}="ls -t -1" # list only the directories
 alias lshw="doas lshw -short" # list hardware
 alias of="onefetch -o yaml | yq -C"
