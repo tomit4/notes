@@ -42,6 +42,10 @@ super + {1-9,0}
 super + shift + {1-9,0}
     id=$(bspc query -N -n); bspc node -d ^{1-9,10}
 
+# change current window to toggle horizontal/vertical split
+super + shift + h
+    bspc node @parent -R 90
+
 # expand a window by moving one of its side outward
 ctrl shift + {Left,Down,Up,Right}
     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
