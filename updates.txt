@@ -14,9 +14,9 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install bspwm and sxhkd and xdo
+Install bspwm and sxhkd and xdo and viewnior
 
-doas pacman -S bspwm sxhkd xdo
+doas pacman -S bspwm sxhkd xdo viewnior
 
 Place bspwmrc and sxhkdrc in respective .config directories
 
@@ -34,3 +34,11 @@ doas pacman -S xorg-xev screenkey
 
 cp aliases ~/.aliases
 cp xinitrc.txt ~/.xinitrc
+
+Update scripts
+
+cd ~/scripts
+git pull
+
+Update ranger configuration (without kitty)
+doas cp -r ~/Documents/notes/ranger/ ~/.config/
