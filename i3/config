@@ -19,7 +19,7 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id dunst -config /home/brian/.config/dunst/dunstrc
 # Increase Brightness
 # For at Home/Desktop:
-# exec xrandr --output Screen-0 --brightness 1.1
+exec xrandr --output HDMI-0 --brightness 1.1
 # For at Work/Laptop:
 # exec xbacklight -set 70
 
@@ -105,7 +105,7 @@ bindsym $mod+O exec gcolor3
 bindsym $mod+U exec galculator
 bindsym $mod+Y exec gtktranslate
 bindsym $mod+S exec steam
-bindsym $mod+X exec cd ~/Documents/Code/forks && exec kitty --session ~/.config/kitty/session
+# bindsym $mod+X exec cd ~/Documents/Code/forks && exec kitty --session ~/.config/kitty/session
 bindsym $mod+v exec virt-manager
 
 # start these applications in floating mode:
