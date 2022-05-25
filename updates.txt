@@ -45,3 +45,6 @@ doas cp -r ~/Documents/notes/ranger/ ~/.config/
 
 Remove dunst
 doas pacman -Rs dunst
+
+Once all done, remove python autotiling and remove i3-gaps
+doas pip uninstall autotiling && doas pacman -Rs i3-gaps
