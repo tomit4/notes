@@ -42,3 +42,6 @@ git pull
 
 Update ranger configuration (without kitty)
 doas cp -r ~/Documents/notes/ranger/ ~/.config/
+
+Remove dunst
+doas pacman -Rs dunst
