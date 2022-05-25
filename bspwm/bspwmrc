@@ -1,5 +1,5 @@
 #! /bin/sh
-bspc rule -r "*"
+# bspc rule -r "*"
 
 #Autostart
 #Desktop
@@ -7,19 +7,10 @@ bspc rule -r "*"
 #Laptop
 # xbacklight -set 70
 
-killall "nm-applet"
-nmapplet &
-# killall "picom"
 picom --config /home/brian/.config/picom/picom.conf &
-killall "dunst"
-dunst -config /home/brian/.config/dunst/dunstrc &
 feh --bg-fill /home/brian/Pictures/debian_wide_sand2.png &
-killall "xbanish"
 xbanish &
-killall "bst"
 bst -e btop &
-# killall "pulseaudio"
-# pulseaudio --start
 
 #sxhkd keybindings
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -57,8 +48,8 @@ bspc config right_padding 3
 bspc config border_width 1
 bspc config window_gap 5
 
-bspc rule -a pavucontrol state=floating
-bspc rule -a lxappearance state=floating
+bspc rule -a pavucontrol state=floating rectangle=480x270+1440+810 sticky=on layer=above
+bspc rule -a lxappearance state=floating rectangle=480x270+1440+810 sticky=on layer=above
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a mplayer2 state=floating
