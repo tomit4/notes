@@ -43,8 +43,8 @@ git pull
 Update ranger configuration (without kitty)
 doas cp -r ~/Documents/notes/ranger/ ~/.config/
 
-Remove dunst
-doas pacman -Rs dunst
+Remove dunst and logo-ls
+doas pacman -Rs dunst logo-ls
 
 Remove hackernews_tui
 
