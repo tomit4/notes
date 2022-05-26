@@ -138,8 +138,7 @@ alias hn="hackernews_tui"
 alias qwiki="torsocks wik -i"
 alias tldr="torsocks tldr"
 alias {trans,translate}="gtktranslate"
-alias mpl="mplayer -fs"
-alias {mloop,mploop}="mplayer -fs -loop 0"
+alias mpva='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
@@ -235,4 +234,5 @@ alias regen_initramfs="doas mkinitcpio -P"
 # alias tls="tmux ls"
 # alias ta="tmux a -t"
 # alias tkill="tmux kill-ses -t"
-
+# alias mpl="mplayer -fs"
+# alias {mloop,mploop}="mplayer -fs -loop 0"
