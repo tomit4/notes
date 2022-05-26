@@ -98,6 +98,7 @@ alias {mysql,maria,mdb}="mariadb"
 alias rsm="doas rsm"
 alias updatedb="doas updatedb"
 alias iftop-w="doas iftop -i wlan0 -P"
+alias wmon="wavemon"
 alias {speedtest,spdtst}="speed-test --verbose --json | jq"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
