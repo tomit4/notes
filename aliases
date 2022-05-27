@@ -137,6 +137,8 @@ alias {reddit,rd}="torsocks tuir"
 alias {sub,subreddit,subrd}="torsocks tuir -s"
 alias qwiki="torsocks wik -i"
 alias tldr="torsocks tldr"
+alias cheatsheet="cheat"
+alias stallman="vrms"
 alias {trans,translate}="gtktranslate"
 alias mpva='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
