@@ -3,15 +3,16 @@
 
 #Autostart
 #Desktop
-xrandr --output HDMI-0 --brightness 1.1
+xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 #Laptop
 # xbacklight -set 70
 
-picom --config /home/brian/.config/picom/picom.conf &
+picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 feh --bg-fill /home/brian/Pictures/nord_mountains.png &
 # feh --bg-fill /home/brian/Pictures/gruvbox_braille.png &
 dunst &
 xbanish &
+pulseaudio --start &
 bst -e btop &
 
 #sxhkd keybindings
