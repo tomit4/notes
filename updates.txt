@@ -57,3 +57,30 @@ doas pip uninstall autotiling && doas pacman -Rs i3-gaps i3status
 And copy the urls from newsboat to ~/.newsboat
 
 cp ~/Documents/notes/newsboat/urls ~/.newsboat/
+
+Update thinkorswim
+
+go to
+https://www.tdameritrade.com/tools-and-platforms/thinkorswim/desktop/download.html
+
+And at the bottom you will notice new Linux instructions for installation. In your downloads folder use wget to install the program.
+
+wget "https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim.zip"
+
+unzip the file
+
+unzip thinkorswim.zip
+
+This requires Java 11 or higher, so uncomment the pacman.conf IgnorePkg section for openjdk and update it using paru.
+
+paru
+
+Then from your Downloads folder, chmod +x the launcher.jar file so it can be executed.
+
+copy the entirety of the thinkorswim folder to /home/brian/thinkorswim
+
+cp -r Downloads /home/brian/thinkorswim
+
+I have already aliased the program to thinkorswim in our aliases, but in case you need to test it, you MUST be inside the thinkorswim folder, from there you can use the java command to execute the launcher.jar as such:
+
+java -jar launcher.jar
