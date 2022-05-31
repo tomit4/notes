@@ -14,9 +14,9 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install bspwm and sxhkd and xdo and viewnior & wavemon
+Install bspwm and sxhkd and xdo and viewnior and wavemon and newsboat
 
-doas pacman -S bspwm sxhkd xdo viewnior wavemon
+doas pacman -S bspwm sxhkd xdo viewnior wavemon newsboat
 
 Place bspwmrc and sxhkdrc in respective .config directories
 
@@ -53,3 +53,7 @@ paru -R hackernews_tui
 Once all done, remove python autotiling and remove i3-gaps
 
 doas pip uninstall autotiling && doas pacman -Rs i3-gaps i3status
+
+And copy the urls from newsboat to ~/.newsboat
+
+cp ~/Documents/notes/newsboat/urls ~/.newsboat/
