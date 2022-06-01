@@ -1,0 +1,32 @@
+# Taken from Mastering Linux Shell Scripting book (pg. 61),
+# this simple table shows possible flags to use in the test command
+# we have already used this in certain runit init scripts,
+# for example testing if a directory exists in our postgresql scripts:
+
+if [ ! -d "/var/run/postgresql" ]; then
+	echo "creating directory /var/run/postgresql"
+
+	mkdir -p "/var/run/postgresql"
+	chown -R postgres:postgres "/var/run/postgresql"
+fi
+
+# An example of an abbreviated version of this,
+# however, shows that the if statement is not necessary:
+
+[ -h /usr/src/linux ] &&rm /usr/src/linux
+
+The above tests if the file /usr/src/linux is a symbolic link, and if it returns true, then removes that link
+
+Other flags include the following:
+
+    -d                   This shows that it's a directory
+    -e                   This shows that the file exists in any form
+    -x                   This shows that the file is executable
+    -f                   This shows that the file is a regular file
+    -r                   This shows that the file is readable
+    -p                   This shows that the file is a named pipe
+    -b                   This shows taht the file is a block device
+file1 -nt file2          This checks if file1 is newer than file2
+file1 -ot file2          This checks if file1 is older than file2
+-O file                  This checks if the logged-in user is the owner of the file
+    -c                   This shows that the file is a character device
