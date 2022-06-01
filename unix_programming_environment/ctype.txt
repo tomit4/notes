@@ -1,0 +1,13 @@
+----------------------------- Table 6.1 -----------------------------
+
+isalpha(c)                 alphabetic: a-z A-Z
+isupper(c)                 upper case: A-Z
+islower(c)                  lower case: a-z
+isdigit(c)                  digit: 0-9
+isxdigit(c)                 hexadecimal digit: 0-9 a-f A-F
+isalnum(c)                  alphabetic or digit
+isspace(c)                  blank, tab, newline, vertical tab, formfeed, return
+ispunct(c)                  not alphanumeric or control or space
+isprint(c)                  printable: any graphic
+iscntrl(c)                  control character: 0 <= c < 040 "" c == 0177
+isascii(c)                  ASCII character: 0 <= c <= 0177
