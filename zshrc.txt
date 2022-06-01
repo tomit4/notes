@@ -42,7 +42,7 @@ source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # icons-in-terminal Integration
-source ~/.local/share/icons-in-terminal/icons_bash.sh
+# source ~/.local/share/icons-in-terminal/icons_bash.sh
 
 # Colors
 autoload -Uz colors && colors
@@ -74,9 +74,22 @@ unsetopt BEEP
 PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
 └─>%B%F{white} '
 
+# PROMPT='%B%F{green}[%n@%M %B%F{white}'%1~'%B%F{green}]$ %B%F{white}${vcs_info_msg_0_}%B%F{green}
+# └─>%B%F{white} '
 # function erase_history { local HISTSIZE=0; }
 # erase_history && hash -r
 
+# enable delete key
+typeset -g -A key
+key[Delete]="${terminfo[kdch1]}"
+[[ -n "${key[Delete]}"    ]] && bindkey -- "${key[Delete]}"     delete-char
+if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
+	autoload -Uz add-zle-hook-widget
+	function zle_application_mode_start { echoti smkx }
+	function zle_application_mode_stop { echoti rmkx }
+	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+fi
 
 # Set up vim mode
 bindkey -v
