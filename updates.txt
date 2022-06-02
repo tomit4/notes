@@ -14,73 +14,11 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install bspwm and sxhkd and xdo and viewnior and wavemon and newsboat
+download sxiv (suckless image viewer)
 
-doas pacman -S bspwm sxhkd xdo viewnior wavemon newsboat
+doas pacman -S sxiv
 
-Place bspwmrc and sxhkdrc in respective .config directories
+(change bg of sxiv to not be blindingly white)
+cp Xresources.txt ~/.Xresources
 
-mkdir ~/.config/bspwm
-
-mkdir ~/.config/sxhkd
-
-cp ~/Documents/notes/bspwm/bswpmrc ~/.config/bspwm/
-cp ~/Documents/notes/bspwm/sxhkdrc ~/.config/sxhkd/
-cp ~/Documents/notes/picom/picom.conf ~/.config/picom/
-
-Install xorg-xev and screenkey
-
-doas pacman -S xorg-xev screenkey
-
-cp aliases ~/.aliases
-cp xinitrc.txt ~/.xinitrc
-
-Update scripts
-
-cd ~/scripts
-git pull
-
-Update ranger configuration (without kitty)
-doas cp -r ~/Documents/notes/ranger/ ~/.config/
-
-Remove logo-ls and john and aircrack-ng and sqlmap
-doas pacman -Rs logo-ls john aircrack-ng sqlmap
-
-Remove hackernews_tui
-
-paru -R hackernews_tui
-
-Once all done, remove python autotiling and remove i3-gaps
-
-doas pip uninstall autotiling && doas pacman -Rs i3-gaps i3status
-
-And copy the urls from newsboat to ~/.newsboat
-
-cp ~/Documents/notes/newsboat/urls ~/.newsboat/
-
-Update thinkorswim
-
-go to
-https://www.tdameritrade.com/tools-and-platforms/thinkorswim/desktop/download.html
-
-And at the bottom you will notice new Linux instructions for installation. In your downloads folder use wget to install the program.
-
-wget "https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim.zip"
-
-unzip the file
-
-unzip thinkorswim.zip
-
-This requires Java 11 or higher, so uncomment the pacman.conf IgnorePkg section for openjdk and update it using paru.
-
-paru
-
-Then from your Downloads folder, chmod +x the launcher.jar file so it can be executed.
-
-copy the entirety of the thinkorswim folder to /home/brian/thinkorswim
-
-cp -r Downloads /home/brian/thinkorswim
-
-I have already aliased the program to thinkorswim in our aliases, but in case you need to test it, you MUST be inside the thinkorswim folder, from there you can use the java command to execute the launcher.jar as such:
-
-java -jar launcher.jar
+xrdb -load ~/.Xresources
