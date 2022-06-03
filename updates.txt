@@ -17,3 +17,11 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 install opentoonz (blas and cblas may already be installed)
 
 doas pacman -S opentoonz blas cblas
+
+pull scripts for dmconf
+
+cd ~/scripts && git pull
+
+pull notes and cp sxhkdrc to .config
+
+git pull && cp ~/Documents/notes/sxhkd/sxhkdrc ~/.config/sxhkd/
