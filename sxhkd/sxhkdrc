@@ -170,6 +170,8 @@ super + g
     gimp --no-splash &
 super + k
     krita --nosplash &
+super + n
+    opentoonz &
 super + t
     tootle &
 super + p
