@@ -17,3 +17,9 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 install archwiki-docs
 
 doas pacman -S archwiki-docs
+
+pull scripts and copy sxhkd/sxhkdrc to configs
+
+cd scripts && git pull && cp ~/Documents/notes/sxhkd/sxhkdrc ~/.config/sxhkd/
+
+And restart bspwm (super+shift+esc) and then invoke dmwiki using super+w
