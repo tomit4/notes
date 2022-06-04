@@ -11,6 +11,10 @@ super + d
 
 super + e
     /home/brian/scripts/dmconf
+
+super + w
+    /home/brian/scripts/dmwiki
+
 # reload sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
