@@ -17,3 +17,7 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 install woeusb (cli utility for creating Windows installation media)
 
 paru woeusb
+
+install archwiki-docs
+
+doas pacman -S archwiki-docs
