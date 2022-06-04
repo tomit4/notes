@@ -29,3 +29,7 @@ git pull && cp ~/Documents/notes/sxhkd/sxhkdrc ~/.config/sxhkd/
 move st and st-gruvbox from ~/aur_packages to ~/.config
 
 mv ~/aur_packages/st ~/.config && mv ~/aur_packages/st-gruvbox ~/.config
+
+delete the lightdm user
+
+doas userdel lightdm
