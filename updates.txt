@@ -14,22 +14,6 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-install opentoonz (blas and cblas may already be installed)
+install woeusb (cli utility for creating Windows installation media)
 
-doas pacman -S opentoonz blas cblas
-
-pull scripts for dmconf
-
-cd ~/scripts && git pull
-
-pull notes and cp sxhkdrc to .config
-
-git pull && cp ~/Documents/notes/sxhkd/sxhkdrc ~/.config/sxhkd/
-
-move st and st-gruvbox from ~/aur_packages to ~/.config
-
-mv ~/aur_packages/st ~/.config && mv ~/aur_packages/st-gruvbox ~/.config
-
-delete the lightdm user
-
-doas userdel lightdm
+paru woeusb
