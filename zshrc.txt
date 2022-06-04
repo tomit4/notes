@@ -4,7 +4,7 @@
 #
 # create custom env variables:
 #
-export cproj="/home/brian/Documents/Code/forks/"
+export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
 # custom BROWSER env for ddgr:
 export BROWSER=links
 export TUIR_BROWSER=librewolf

@@ -14,12 +14,12 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-install archwiki-docs
+Install bash-completion
 
-doas pacman -S archwiki-docs
+doas pacman -S bash-completion
 
-pull scripts and copy sxhkd/sxhkdrc to configs
+copy bashrc.txt and inputrc.txt to home directory
 
-cd scripts && git pull && cp ~/Documents/notes/sxhkd/sxhkdrc ~/.config/sxhkd/
+cp bashrc.txt ~/.bashrc && cp inputrc.txt ~/.inputrc
 
-And restart bspwm (super+shift+esc) and then invoke dmwiki using super+w
+This will now allow completion in bash using the tab button (a bit faster than zsh since zsh-autocompletion tries to predict what you type)

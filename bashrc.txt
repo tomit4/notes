@@ -5,13 +5,11 @@
 #
 history -c && history -w && hash -r
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/forks/"
+export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
 # custom BROWSER env for ddgr:
 export BROWSER=links
 export TUIR_BROWSER=librewolf
-export EDITOR=nvim
-# enable vi keybindings in terminal and terminal applications
-set -o vi
+export EDITOR=nvim # enable vi keybindings in terminal and terminal applications set -o vi
 
 # but keep ctrl l as the clear screen command bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
@@ -182,7 +180,7 @@ export GREP_COLORS='ms=01;34'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # icons-in-terminal
-source ~/.local/share/icons-in-terminal/icons_bash.sh
+# source ~/.local/share/icons-in-terminal/icons_bash.sh
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
@@ -191,3 +189,6 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 alias home="xclear && cd /home/brian && clear && history -c && hash -r"
 source ~/.aliases
 source /home/brian/.bash_completions/typer.sh
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    source /usr/share/bash-completion/bash_completion
