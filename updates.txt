@@ -23,3 +23,9 @@ copy bashrc.txt and inputrc.txt to home directory
 cp bashrc.txt ~/.bashrc && cp inputrc.txt ~/.inputrc
 
 This will now allow completion in bash using the tab button (a bit faster than zsh since zsh-autocompletion tries to predict what you type)
+
+Install yank ( more feature filled version of xclip/xsel)
+
+paru yank (choose 1st option)
+
+cp aliases ~/.aliases

@@ -125,6 +125,7 @@ alias lxapp="lxappearance"
 alias hd="ncdu"
 alias xsel="xclip -sel clip"
 alias catx="xclip -sel clip"
+alias catp="xclip -out -selection clipboard; echo"
 alias kitx="cat | kitty +kitten clipboard" # not as good as catx
 alias mouse="mousepad"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
