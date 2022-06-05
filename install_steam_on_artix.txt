@@ -1,6 +1,7 @@
 Documentation of longview3k's Installing Steam on Artix Video tutorial from Youtube:
 
 https://www.youtube.com/watch?v=AVqsdO7xENg
+https://christitus.com/ultimate-linux-gaming-guide/
 
 Enable the Arch Repositories.
 
