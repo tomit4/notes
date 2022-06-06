@@ -190,6 +190,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 alias archives="links https://archive.artixlinux.org/"
 alias forums="librewolf https://forum.artixlinux.org/ &"
 alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
+alias isos="links https://ftp.crifo.org/artix"
 alias smarden="links http://smarden.org/runit/"
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
