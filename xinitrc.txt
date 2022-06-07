@@ -35,14 +35,22 @@ fi
 # Start compositor
 # picom blah blah ...
 
+#Desktop
+xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
+#Laptop
+# xbacklight -set 70
+
+picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # Start applets, daemons, etc.
 # diskie
 # nm-applet
-# ...
+dunst &
+xbanish &
+pulseaudio --start &
 
 # Start i3wm
 # exec i3
 
 # Start bspwm
-sxhkd -c /home/brian/.config/sxhkd/sxhkdrc&
+pgrep -x sxhkd > /dev/null || sxhkd -c /home/brian/.config/sxhkd/sxhkdrc &
 exec bspwm -c /home/brian/.config/bspwm/bspwmrc
