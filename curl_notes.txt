@@ -24,3 +24,13 @@ curl -H 'Accept: application/json' -H "Authorization: Bearer eyJhbGciOiJIUzI1NiI
 =======
 curl -H 'Accept: application/json' -H "Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI5ODkyNTU1fQ.yMsrbX_c-vAXRMMYe5OFRWfg95zk0J2BBsv0zjcy4gU" http://localhost:3000/posts
 >>>>>>> 95f75b948d7df9af11c31531df2f9f69130561c3
+
+
+################ OTHER BASIC USES OF CURL ################
+
+# Simply write the html output of a website to an html file for offline browsing
+curl http://mywebsite.com >> mywebsite.html
+
+# If for whatever reason you get a Binary (and a warning), it means the site was compressed. to decompress, simply write:
+
+curl --compressed http://mycompressedwebsite.com >> mydecompressedhtml.html
