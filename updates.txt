@@ -14,18 +14,8 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install bash-completion
+Install fast-forward in Librewolf via Firefox extensions page.
 
-doas pacman -S bash-completion
+Install fd:
 
-copy bashrc.txt and inputrc.txt to home directory
-
-cp bashrc.txt ~/.bashrc && cp inputrc.txt ~/.inputrc
-
-This will now allow completion in bash using the tab button (a bit faster than zsh since zsh-autocompletion tries to predict what you type)
-
-Install yank ( more feature filled version of xclip/xsel)
-
-paru yank (choose 1st option)
-
-cp aliases ~/.aliases
+doas pacman -S fd
