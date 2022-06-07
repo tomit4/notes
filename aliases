@@ -195,7 +195,6 @@ alias isos="links https://ftp.crifo.org/artix"
 alias smarden="links http://smarden.org/runit/"
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
-alias {frogfind,frog,ff}="links https://frogfind.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
 alias gopher="lynx https://gopher.floodgap.com/gopher/gw.lite"
 alias {ddg,duckduckgo}="links https://duckduckgo.com/lite"
@@ -219,7 +218,8 @@ alias darkside="links http://darksid3f3ggicny772rvdmrcgfbtixsyjpdgm6unh5qci6r24u
 alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf2qgyd.onion/"
 alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
 
-# Programming/C Resources
+# Programming Resources
+alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
 alias learnc="librewolf https://learn-c.org"
