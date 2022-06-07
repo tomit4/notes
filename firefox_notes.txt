@@ -6,6 +6,7 @@ Install Ublock Origin
 Install Decentraleyes
 Install LocalCDN
 Install ForgetMeNot
+Install FastForward
 Install NoScript
 Install Chameleon
 Install OverbiteWX
@@ -37,7 +38,7 @@ extensions.webcompat-reporter.enabled set to false
 privacy.resistfingerprinting set to true #noticeable performance and stability impact, proceed with caution.
 privacy.firstparty.isolate to true
 network.dns.disablePrefetch to true
-network.predictor.enabled set to false 
+network.predictor.enabled set to false
 network.prefetch-next to false
 network.http.sendRefererHeader to 0 #sites with forms and logins may break
 network.http.referer.XoriginPolicy to 1
