@@ -46,7 +46,12 @@ picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends 
 # nm-applet
 dunst &
 xbanish &
-pulseaudio --start &
+# pulseaudio --start &
+
+# Start pipewire
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
 
 # Start i3wm
 # exec i3

@@ -14,8 +14,10 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install fast-forward in Librewolf via Firefox extensions page.
+Install pipewire:
 
-Install fd:
+doas pacman -S pipewire pipewire-pulse pipewire-jack wireplumber lib32-pipewire lib32-pipwire-jack lib32-pipewire-v4l2
 
-doas pacman -S fd
+Copy .xinitrc which now calls pipewire
+
+cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
