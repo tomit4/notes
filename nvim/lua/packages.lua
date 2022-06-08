@@ -1,13 +1,11 @@
 -- packer.nvim requires nvim-packer-git package
 -- paru -S nvim-packer-git
-
 -- Packages installed using 'packer', install using :PackerSync
 -- Remove packages by deleting (or commenting out) use line below and running :PackerClean
 
 require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    -- :TSInstall <language_to_install>
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'} -- :TSInstall <language_to_install>
     -- :TSUpdate all
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
@@ -35,6 +33,7 @@ require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
     use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
     use 'shaunsingh/nord.nvim'
+    use { "ellisonleao/gruvbox.nvim" }
     use 'psliwka/vim-smoothie'
     use 'mattn/emmet-vim'
     use 'airblade/vim-gitgutter'
@@ -49,4 +48,5 @@ require('packer').startup(function()
     use 'simeji/winresizer'
     use '907th/vim-auto-save'
     use 'jremmen/vim-ripgrep'
+    use 'rhysd/vim-clang-format' -- formatter for c and c++
 end)

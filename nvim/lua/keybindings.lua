@@ -39,6 +39,9 @@ vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
 -- Prettify using shortcut gp (careful, only use on files that have a parser)
 -- vim.cmd[[nnoremap gp :silent %!prettier --stdin-filepath %<CR>]]
 
+-- Format C and C++ Code using cp alias
+vim.cmd[[nnoremap cp :silent :ClangFormat]]
+
 -- j/k will move virtual lines (lines that wrap)
 vim.cmd[[noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')]]
 vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]
