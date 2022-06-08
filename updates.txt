@@ -21,3 +21,16 @@ doas pacman -S pipewire pipewire-pulse pipewire-jack wireplumber lib32-pipewire 
 Copy .xinitrc which now calls pipewire
 
 cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
+
+Update neovim:
+
+cp ~/Documents/notes/nvim/lua/packages.lua ~/.config/nvim/lua/
+cp ~/Documents/notes/nvim/lua/keybindings.lua ~/.config/nvim/lua/
+
+nvim
+:PackerSync
+
+Update shell project:
+
+cproj
+git pull
