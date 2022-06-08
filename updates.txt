@@ -34,3 +34,7 @@ Update shell project:
 
 cproj
 git pull
+
+Install hwinfo and hdparm
+
+doas pacman -S hwinfo hdparm
