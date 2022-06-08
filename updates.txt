@@ -16,7 +16,7 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 
 Install pipewire:
 
-doas pacman -S pipewire pipewire-pulse pipewire-jack wireplumber lib32-pipewire lib32-pipwire-jack lib32-pipewire-v4l2
+doas pacman -S pipewire pipewire-pulse pipewire-jack wireplumber lib32-pipewire lib32-pipwire-jack lib32-pipewire-v4l2 qastools
 
 Copy .xinitrc which now calls pipewire
 
