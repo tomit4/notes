@@ -10,6 +10,7 @@ export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
 export BROWSER=links
 export TUIR_BROWSER=librewolf
 export EDITOR=nvim # enable vi keybindings in terminal and terminal applications set -o vi
+export PF_INFO="ascii os kernel pkgs shell wm editor"
 
 # but keep ctrl l as the clear screen command bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'

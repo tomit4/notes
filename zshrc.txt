@@ -9,8 +9,8 @@ export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
 export BROWSER=links
 export TUIR_BROWSER=librewolf
 export EDITOR=nvim
+export PF_INFO="ascii os kernel pkgs shell wm editor"
 
-# Colorizes man pages
 export LESS_TERMCAP_mb=$'\e[1;34m'
 export LESS_TERMCAP_md=$'\e[1;34m'
 export LESS_TERMCAP_me=$'\e[0m'
