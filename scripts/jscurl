@@ -1,0 +1,125 @@
+#!/bin/bash
+
+# Greatly shortens JSON curl statements.
+
+# NOTE: This should be rewritten to use jo and jq, as this does something very similar.
+# curl will be coming with --json flag in version 7.82.0 in March of 2022, this will likely make this far less verbose.
+
+if [ $# -eq 0 ] ; then
+    echo "No arguments provided."
+    echo "Type 'jscurl -h' for help."
+    exit 1
+fi
+
+body=${3}
+helptag="-help"
+archivedir="$HOME/.recycle-bin"
+
+# Show help page
+function helpmessage() 
+{
+
+    echo -e "\e[1mUsage: jscurl <url> (no 'https://' necessary)\e[0m"
+    echo ""
+    echo -e "\e[1mExample: jscurl icanhazdadjoke.com\e[0m"
+    echo ""
+    echo -e "\e[1mDescription: jscurl is a simple extension of curl that reads/writes json/html, shortening\n\t     the length of the curl command when dealing explicitly with json/html output.\e[0m"
+    echo ""
+    echo -e "\e[1mOptions and arguments:\e[0m"
+    echo ""
+    echo -e "\e[1mlocalhost only:\e[0m"
+    echo -e "\e[1mjscurl -g 3000/db\t\t\t\t\t\t\t\t  get request json\e[0m"
+    echo -e "\e[1mjscurl -p 3000/db '{"key": "value"}'\t\t\t\t\t\t post request json\e[0m"
+    echo -e "\e[1mjscurl -d 3000/db '{"deleted_key": "deleted_value"}'\t\t\t       delete request json\e[0m"
+    echo -e "\e[1mjscurl -u 3000/db '{"updated_key": "updated_value", "previous_key": "previous_value"}'\tpatch request json\e[0m"
+    echo ""
+    echo -e "\e[1mjson/html:\e[0m"
+    echo -e "\e[1mjscurl <url> (no 'https://' necessary)\t\t\t\t\t\t    show json page\e[0m"
+    echo -e "\e[1mjscurl -m <url> (no 'https://' necessary)\t\t\t\t\t    show html page\e[0m" echo -e "\e[1mjscurl -w <url> <filename> (no 'https://' or '.html' necessary)\t write html file to ~/.recycle-bin\e[0m"
+    echo -e "\e[1mjscurl -j <url> <filename> (no 'https://' or '.json' necessary)\t write json file to ~/.recycle-bin\e[0m"
+    echo -e "\e[1mjscurl -h/--help\t\t\t\t\t\t\t\t    show help page\e[0m"
+}
+
+while getopts "mwjgpudh${helptag}" opt; do
+    case $opt in
+        m)
+            curl -s https://{$2} | hxnormalize -e | pygmentize -l html
+            exit 0
+            ;;
+        w)
+            curl -s https://{$2} -o $3.html &&
+            prettier --loglevel silent -w $3.html
+
+            if [ ! -d $archivedir ] ; then
+                mkdir $archivedir
+            fi
+            if [ ! -d "${archivedir}/html" ] ; then
+                mkdir "${archivedir}/html"
+            fi
+
+            mv $3.html "${archivedir}/html"
+            exit 0
+            ;;
+        j)
+            curl -s -H "Accept: application/json" https://{$2} | cat > $3.json &&
+            prettier --loglevel silent -w $3.json
+
+            if [ ! -d $archivedir ] ; then
+                mkdir $archivedir
+            fi
+            if [ ! -d "${archivedir}/json" ] ; then
+                mkdir "${archivedir}/json"
+            fi
+
+            mv $3.json "${archivedir}/json"
+            exit 0
+            ;;
+        g)
+            http_req="GET"
+            port="http://localhost:${2}"
+            ;;
+        p)
+            http_req="POST"
+            port="http://localhost:${2}"
+            ;;
+        u)
+            http_req="PUT"
+            port="http://localhost:${2}"
+            ;;
+        d)
+            http_req="DELETE"
+            port="http://localhost:${2}"
+            ;;
+        h | helptag)
+            helpmessage
+            ;;
+                \?)
+            printf "Invalid flag option: $1 \nType 'jscurl -h' for help.\n" >&2
+            exit 1
+            ;;
+    esac
+done
+
+if [ $OPTIND -eq 1 ] ; then
+    port="https://${1}"
+    curl -s -H "Accept: application/json" $port | jq
+    exit 0
+fi
+
+function jscurl() {
+    if [[ $http_req = "GET" ]]; then
+        curl -s -X "$http_req" "$port" | jq
+        exit 0
+    else
+        curl -s -X "$http_req" "$port" -H "Content-Type: application/json" -d "$body" &&
+        curl -s -X "GET" "$port" | jq
+        exit 0
+    fi
+}
+
+jscurl
+
+# examples:
+# jscurl icanhazdadjoke.com
+# jscurl -g 3000/db
+# jscurl -p 3000/db '{"listArray": "some"}'

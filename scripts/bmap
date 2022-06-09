@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# bmap runs nmap on an domain name address by first looking up the ip address using dnslookup and then passing that ip address to nmap through proxychains/tor
+
+if [ $# -eq 0 ] ; then
+    echo "No arguments provided."
+    echo "Type 'bmap -h' for help"
+    exit 1
+fi
+
+while getopts "ph" opt; do
+    case $opt in
+        p)
+            ipaddress=$(dnslookup ${3} 149.112.112.112 | grep IN | grep -v \; | awk -F '\t' '{print $5}' | head -n 1)
+            port=$2
+            proxychains nmap -Pn -T4 -n -sT -sV -v --open -p $port $ipaddress
+            exit 0
+            ;;
+        h)
+            echo -e "\e[1mUsage: bmap <url> (no 'https://' necessary)\e[0m"
+            echo -e "\e[1mUsage: bmap -p <portnumber> <url> (no 'https://' necessary)\e[0m"
+            exit 0
+            ;;
+        \?)
+            printf "Invalid flag option: $1 \nType 'jscurl -h' for help.\n" >&2
+            exit 1
+            ;;
+    esac
+done
+
+if [ $OPTIND -eq 1 ] ; then
+    ipaddress=$(dnslookup ${1} 149.112.112.112 | grep IN | grep -v \; | awk -F '\t' '{print $5}' | head -n 1)
+    proxychains nmap -Pn -T4 -n -sT -sV -v --open $ipaddress
+    exit 0
+fi

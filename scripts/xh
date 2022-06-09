@@ -1,0 +1,3 @@
+#!/bin/bash
+# chromium --incognito https://xhmaster.com/search/"${1}" &
+librewolf https://xhmaster.com/search/"${1}" &

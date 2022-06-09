@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ipaddress=$(dnslookup ${1} 149.112.112.112 | grep IN | grep -v \; | awk -F '\t' '{print $5}' | head -n 1)
+
+source /home/brian/.api_key.sh
+
+curl -s -H "Accept: application/json" "http://api.ipapi.com/$ipaddress/?access_key=$api_key" | jq

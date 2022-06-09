@@ -1,0 +1,3 @@
+#!/bin/bash
+# chromium --incognito https://www.pornhub.com/video/search?search="${1}" &
+librewolf https://www.pornhub.com/video/search?search="${1}" &

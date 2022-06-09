@@ -1,0 +1,212 @@
+Bash Scripting can be rather difficult at first, so these notes are an attempt to establish some basics in understanding.  This won't go into too much details, but rather is a follow along of the most important takeaways from the https://guide.bash.academy/commands/ section thus far.
+
+# A side note: you can append to the directories your bash shell looks for shell scripts by adding a :/path/to/shell_scripts to your $PATH in your .bashrc
+
+A standard if statement that checks to see if you cannot remove hello.txt, and if not, then a message is sent to standard error(2), then the exit command is sent, and the if statement ends.
+
+if ! rm hello.txt; then echo "Couldn't delete hello.txt." >&2; exit 1; file
+
+A shorter version of the same command using the control operator (||):
+
+rm hello.txt || { echo "Couldn't delete hello.txt." >&2; exit 1; }
+
+Create a file called myfiles.ls if any standard output (1) is produced by the command ls, if not, and a standard error(2) is produced, then send the standard error output to a file in this directory(./) called myerrors.txt
+
+ls >myfiles.ls 2>./myerrors.txt
+
+Create a file called myfiles_or_myerrors.txt which takes the output of ls sermthing and creates that file with the output of either the successful standard output(1) or the standard error(2)
+
+ls sermthing >myfiles_or_myerrors.txt 2>&1
+
+Echo into a file called world in our home directory the phrase Hello(note that if world doesn't exist, it will be created)
+
+echo Hello >~/world
+
+If you wished to append to our world file above, rather than rewriting it, use the append (>>) syntax instaed of the write(>) syntax.
+
+echo World >>~/world
+cat world
+Hello World
+
+Take the results of ping 127.0.0.1 and write that to a file called results, whether it has a standard output(1) result or a standard error result(2)
+
+ping 127.0.0.1 >results 2>&1
+
+A shorter version of this would be written like so
+
+ping 127.0.0.1 &>results 
+
+Assigning temporary variables in bash is as simple as using the equal syntax
+
+name="Linus"
+echo "Hello $(name)!"
+Hello Linus!
+We can also use curly braces to refer to this. echo "Hello ${name}!"
+Hello Linus!
+
+Let's say we wanted to only refer to what followed before or after a specific character, this can be done like so:
+
+name="Britta" time=23.73
+echo "$name's current record is ${time%.*} seconds and ${time#*.} hundredths."
+Britta's current record is 23 seconds and 73 hundredths.
+
+Another example is using it with letters to make this more clear:
+
+echo "$name's name is ${name%i*} before the i and ${name#*i} after the i."
+Britta's name is Br before the i and tta after the i.
+
+Capitalize the first word of the variable greeting.
+greeting="hello world"
+echo "${greeting^}"
+Hello world
+
+Replace the first space character with the string " big "
+greeting="hello world"
+greeting="${greeting/ / big }"
+echo $greeting
+hello big world
+
+Redirect the contents of $greeting into a filename of the same name, but with underscores(_) instaed of spaces( ) ending in .txt
+greeting="hello big world"
+echo $greeting > "${greeting// /_}.txt"
+
+Show the contents of the variable greeting with the middle word fully upper-cased.
+
+greeting="hello big world"
+
+# Assigns the middle variable to everything before the last space.
+
+middle="${greeting% *}"
+echo $middle
+hello big
+
+# Reassigns the middle variable to everything in it currently, but everything after the first space is deleted.
+
+middle="${middle#* }"
+echo middle
+big
+
+# Now we can capitalize our middle word in the phrase like so:
+echo "${greeting%% *} ${middle^^} ${greeting##* }"
+hello BIG world
+
+# Note the difference if we omit the double signs:
+echo "${greeting% *} ${middle^^} ${greeting#* }"
+hello big BIG big world
+
+This is because the double percent(%%) and double hashtags(##) will double omit the spaces, meaning that it will omit the spaces as many times as there is %% or ##.
+
+# To open a new bash shell and then output echo $1, where 'Hello World!' is passed in as the argument for $1
+
+bash -c 'echo "$1"' -- 'Hello World!'
+Hello World!
+
+# To start a bash shell that takes in any number of arguments, and echos back the number of arguments passed. 
+
+bash -c 'echo "$#"' -- 1 2 'The Third'
+3
+
+# To start a bash shell that shifts a positional parameter away and then ouitputs the first, passing in arguments 1, 2, and The Third
+
+bash -c 'shift; echo "$1"' -- 1 2 'The Third'
+2
+
+# To start a bashs hell that outputs the last argument passed in and pass in the arguments 1, 2, and The Third.
+
+bash -c 'echo "${@: -1}"' -- 1 2 'The Third'
+The Third
+
+# Arrays
+
+Arrays in bash are created using parentheses () braces.  They can contain any files, variables, numbers, etc.  They are separated by spaces and thusly, like a bash command, must be delineated using quotation marks "" in order to delineate specific files, especially when spaces are included in the filename.  Here's an example:
+
+files=( myscript hello.txt "05 Between Angels and Insects.ogg")
+
+We can then access these elements in the array using the echo command like so:
+
+echo "${files[0]}"
+myscript
+
+echo "${files[1]}"
+hello.txt
+
+echo "${files[2]}"
+'05 Between Angels and Insects.ogg'
+
+echo "${files[@]}"
+myscript hello.txt '05 Between Angels and Insects.ogg'
+
+# Note that the above can also be done by substituting @ with *, but because of how dangerous and "greedy" the * argument can be, it is best avoided in favor of @
+
+# Note that if we just try to echo files, it will only return the first element of the array.
+echo "$files"
+myscript
+
+We can also append(push) onto the array, as well as use a few other interesting array methods
+
+files+=( self.png )
+echo "${files[@]}"
+myscript hello.txt '05 Between Angels and Insects.ogg' self.png
+
+Assigns an array of all txt files to an array called files.
+files=(*.txt)
+
+Remove a specific element of an array
+echo "${files[@]}"
+myscript hello.txt '05 Between Angels and Insects.ogg' self.png
+unset "files[3]"
+echo "${files[@]}"
+myscript hello.txt '05 Between Angels and Insects.ogg'
+
+# As noted above the * argument is dubious and should always be used with caution, however in the example given above when comparing it with @, it is rather innocuous, and in certain situations where it is used for trivial purposes, it can be quite useful, such asi n the following example:
+
+names=("Susan Quinn" "Anne-Marie Davis" "Mary Tate")
+echo "Invites sent to: <$[names[*]]>."
+Invites were sent to: <Susan Quinn Anne-Marie Davis Mary Tate>
+
+# The following is interesting, the $IFS shell variable is usually set to a space, but in this case we set it to a comma.  Note the opening parentheses without any equal operator, this indicates opening up what is called a "subshell" in which the global shell variable is changed within a localized SCOPE, and is only equivalent to the comma within the context of that scope (i.e. when the parentheses close)
+( IFS=','; echo "invites sent to: <${names[*]}>." )
+Invites were sent to: <Susan Quinn,Anne-Marie Davis,Mary Tate.>.
+
+#### LEFT OFF AT THE END OF VARIABLES, STARTING NEXT AT TESTS AND CONDITIONALS ####
+
+https://guide.bash.academy/conditionals/
+
+#### CONDITIONALS ####
+
+# Here let's just jump right in with a simple example of an if statement that evalutates user input:
+
+read -p "Would you like some breakfast?[y/n]: "
+Would you like some breakfast?[y/n]: (user inputs y)
+echo $REPLY
+y
+
+# Now let's evaluate this with a simple if statement
+
+if [[ $REPLY = y ]]; then
+    echo "Here you go, an egg sandwich"
+else
+    echo "Here, you should at least have some coffee."
+fi
+
+# And of course the reponse is based off of whether the user passed y/n to the original read statement
+# This can be chained so that the response is immediately evaluated upon response like so:
+
+read -p "Breakfast?[y/n]: "; if [[ $REPLY = y ]]; then echo "Here you go, an egg sandwich"; else echo "Here, you shoudl at leats have some coffee."; fi
+
+#### LOOPS ####
+
+That's it for conditionals! (short chapter!)
+Next up is Loops, which can be found at https://guide.bash.academy/loops
+This section was not yet completed at the time of this writing, so instead we went to gokicker.com and picked up their Bash for Professionals free book pdf (see ~/Documents/Code/programming_books)
+
+We picked up for loops at section 10.3:
+
+A simple for loop can be displayed as such:
+
+arr=(a b c d e f)
+for i in "${arr[@]}" ; do
+    echo "$i"
+done
+
+# Continue on at 13.1 of Bash Notes for Professionals from GoalKicker.com

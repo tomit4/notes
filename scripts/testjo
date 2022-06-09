@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jo -p menu=$(jo id=file value=File popup=$(jo menuitem=$(jo -a $(jo value=New onclick="CreateNewDoc()") $(jo value=Open onclick="OpenDoc()")))) | jq

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+wikidir="/usr/share/doc/arch-wiki/html/en/"
+
+wikidocs="$(find ${wikidir} -iname "*.html")"
+
+browser="links"
+
+term="st"
+
+main() {
+    choice=$(printf '%s\n' "${wikidocs[@]}" | \
+        dmenu -l 20 -p 'Arch Wiki Docs: ') || exit 1
+
+    if [ "$choice" ]; then
+        $term -e $browser "$choice"
+    else
+        echo "Program terminated." && exit 0
+    fi
+}
+
+main

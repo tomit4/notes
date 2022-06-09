@@ -1,0 +1,118 @@
+#!/bin/bash
+
+# Very similar to our newrm command, we establish global variables that will be used throughout the program.
+archivedir="$HOME/.recycle-bin" # variable that references our .recycle-bin directory
+realrm="$(which rm)" # variable that references the rm binary
+move="$which mv" # variable that references the mv binary
+
+dest=$(pwd) # $dest variable that references our current working directory (i.e. the directory we are currently in)
+
+if [ ! -d $archivedir ] ; then # if the .recycle-bin directory does NOT exist
+    echo "$0: No deleted files directory: nothing to unrm" >&2 # echo the message that it doesn't exist, and write the message to standard output
+    exit 1 # exit with an error status
+fi
+
+cd $archivedir # otherwise, change directory/cd into the .recycle-bin directory
+
+# If given no arguments, just show a listing of the delted files.
+if [ $# -eq 0 ] ; then # if the number of arguments passed is equal to zero...
+    echo "Contents of your delted files archive (sorted by date):" # echo this message...
+    # list all files that are appended and in columns (new lines), pipe this output to sed (stream editor command)
+    # which takes a (regular) expression (-e) expecting two digits followed by a period, up to the sixth (because of 0 indexing) position (globally)
+    # sed then takes another regular expression (-e) which then specifies any new line characters (s flag) that are not followed by an empty space.
+    # (remember that our ls flag -C puts the output in columns which is then fed to sed, hence this last regular expression allows sed to accept
+    # multiple arguments from the ls command.
+
+    ls -FC | sed -e 's/\([[:digit:]][[:digit:]]\.\)\{5\}//g' \         -e 's/^/ /'
+    exit 0 # and then exit with a success/OK status
+fi
+
+# Here we hold in the variable $matches the results of a subshell...
+# Within the subshell, we invoke the ls -d command which lists all directories that match the first argument passed (file), the output of which is then sent to /dev/null
+# The results of which are then piped to wc (word count, which then outputs the counted number of lines.
+matches="$(ls -d *"$1" 2 > /dev/null | wc -l )"
+
+# essentially, if the matched file within the .recycle-bin directory has ANY lines of content, then...
+if [ $matches -gt 1 ] ; then
+    echo "More than one file or directory match in the archive:" # echo this message
+    index=1 # create a variable $index which starts at 1
+    for name in $(ls -td *"$1" ) # iterate over the results of ls -td, which takes all directories in .recycle-bin and sorts them by time created
+    do
+        # for all files that match the ls command, echo them into the $name variable established as the iterator, 
+        # and cut the first through the 14th characters
+        datetime="$(echo $name | cut -c1-14) \
+            awk -F. '{ print "$5"/"$4" at "$3":"$2":"$1" }')" # and print out the remainder that is delineated by a '.' character
+                    filename="$(echo $name | cut -c16-)" # and in the $filename variable, echo the $name again into cut, which takes the first 16 characters
+                    if [ -d $name ] ; then # if there is a directory by the $name variable
+                        filecount="$(ls $name | wc -l | sed 's/[^[:digit:]]//g')" # in a $filecount variable, hold the results of the subshell...
+                        # which takes all files within the $name directory, counts the newline characters in them, and pipes that output of all files that are not appended with a number
+
+                        # we then echo the index number (1) followed by the $filename, and its contents, as well as when the file was deleted
+                        echo " $index) $filename (contents = ${filecount} items," \
+                            " deleted = $datetime)"
+
+                    # otherwise, if the $name is NOT a directory
+                    else
+                        # within the $size variable, hold the results of ls -sdk1, which takes the size, directory name, and k1(?) within the file $name,
+                        # the results of the ls are piped to awk, which delineates by the first argument passed (the file you wish to restore)
+                        size="$(ls -sdk1 $name | awk '{print $1}')"
+                        # we then echo the index (1), the $filename, and the size of the file as well as the time it was deleted
+                        echo " $index) $filename (size = ${size}Kb, deleted = $datetime)"
+                    fi
+
+                    # regardless of whether $name is a directory or not, we increase the index number until we run out of files/directories that match our first argument
+                    index=$(( $index + 1 ))
+    done
+    echo "" # we then echo a blank line to delineate the next section
+    /bin/echo -n "Which version of $1 should I restore ('O' to quit)? [1] : " # we use the echo binary to ask the user which file to restore
+    read desired #and we create a variable, $desired, which will store the user input
+    if [ ! -z "$(echo $desired | sed 's/[[:digit:]]//g')" ] ; then # if the user passes a null value...
+        echo "$0: Restore canceled by user: invalid input." >&2 # echo the message and send it to standard output
+        exit 1 # and exit with an error status
+    fi
+
+    if [ ${desired:=1} -ge $index ] ; then # otherwise if the $desired variable is NOT null, but has a value greater than the index (total number of returned matches)...
+        echo "$0: Restore canceled by user: index value too big." >&2 # Let the user know that the index they chose is too large (it doesn't exist) and send the message to standard output
+    fi
+
+    if [ $desired -lt 1] ; then # very similar to the first if statement passed after read desired, checks for a negative number index essentially...
+        echo "$0: Restore canceled by user." >&2 # and assumes a cancellation by the user...
+        exit 1
+    fi
+
+    restore="$(ls -td1 *"$1" | sed -n "${desired}p")" # the filename is then restored to its original format using ls and sed
+
+    if [ -e "$dest/$1" ] ; then # if the file already exists within the destination directory...
+        echo "\"$1\" already exists in this directory. Cannot overwrite." >&2 # let the user know it already exists...
+        exit 1
+    fi
+
+    /bin/echo -n "Restoring file \"$1\" ..." # otherwise use the echo binary to let the user know that the program is restoring the file with the argument name...
+    $move "$restore" "$dest/$1" # and uses the mv binary to take the reformatted $restore file to the destination directory...
+    echo "done." # and lets the user know when it is done.
+
+    /bin/echo -n "Delete the additional copies of this file? [y] " # then the user is prompted by the echo binary (-n means no newline) if they want to delete all other copies of the file...
+    if [ ${answer:=y} = "y" ] ; then # if the user answers y...
+        $realrm -rf *"$1" # then the rm binary is invoked and the remaining files that match the argument within the current directory are deleted...
+        echo "Deleted." # and the user is notified as such.
+    else
+        echo "Additional copies retained." # otherwise, the user wishes to keep the remaining files, and we let them know we left the remaining files alone.
+    fi
+
+# otherwise, if the returned search results has no content found...
+else
+    if [ -e "$dest/$1" ] ; then # if the passed directory/file exists...
+        echo "\"$1\" already exists in this directory. Cannot overwrite." >&2 # let the user know you can't overwrite an existing file..
+        exit 1 # and exit with an error message
+    fi
+     
+    restore="$(ls -d *"$1")" # and within the $restore variable, store the ls -d results of all files within a matching directory
+    
+    /bin/echo -n "Restoring file \"$1\" ..." # use the echo binary to let the user know you are restoring the requested file....
+    $move "$restore" "$dest/$1" # and the mv binary is used to move the matched file to the current destination as the passed argument (it is renamed the passed argument)
+    echo "Done." # and the user is told when the process is done.
+fi
+
+exit 0 # and we exit with a success/OK status
+
+

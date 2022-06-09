@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# calc--A command line calculator that acts as a frontend to bc
+
+# Establishing the amount of decimal places bc will expect, in this case the default 2
+scale=2
+# Establishing a show_help() function that will display a message to the user if they invoke calc, and then type help or ?
+show_help()
+{
+cat << EOF
+    In addition to standard math functions, calc also supports:
+
+    a % b       remainder of a/b
+    a ^ b       exponential: a raised to the b power
+    s(x)        sine of x, x in radians
+    c(x)        cosine of x, x in radians
+    a(x)        arctangent of x, in radians
+    l(x)        natural log of x
+    e(x)        exponential log of raising e to the x
+    j(n,x)      Bessel function of intenger order n of x
+    scale N     show N fractional digits (default = 2)
+EOF
+}
+
+# This is a very simple script, here, as long as the arguments passed to calc are greater than 0, calc simply executes the scriptbc script we wrote earlier.
+if [ $# -gt 0 ] ; then
+    exec scriptbc "$@"
+fi
+
+# Otherwise if no arguments are passed to calc, it opens up a prompt that displays this message
+echo "Calc--a simple calculator. Enter 'help' for help, 'quit' to quit."
+
+# the read command is what keeps the prompt open, here the while loop invokes the read command,
+# which awaits bash command, and then takes the newly created $args variable...
+while read command args
+do
+    case $command # if the $command variable is...
+        in
+        quit|exit)      exit 0                                       ;; # quit/exit causes an exit of the program with a success/ok status...
+        help|\?)        show_help                                    ;; # help/? brings up the help message above
+        scale)          scale=$args                                  ;; # if scale is invoked, you can change the default value of the $scale variable
+        *)              scriptbc -p $scale "$command" "$args"         ;; # otherwise any other commands will simply invoke the scriptbc script
+    esac
+
+    /bin/echo -n "calc>" # afterwards which you will be returned to the calc> prompt
+done
+
+echo "" # after invoking calc with arguments, a blank line is printed.
+
+exit 0 # and an success/ok status is passed upon exit.

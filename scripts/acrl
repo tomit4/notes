@@ -1,0 +1,3 @@
+#!/bin/bash
+
+article_md "https://$1" --format=html | hxnormalize -e | grep -v -e '^$' | pygmentize -l html

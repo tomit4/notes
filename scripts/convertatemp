@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# convertatemp--Temperature conversion script that lets the user enter
+# a temperature in Farenheit, Celsius, or Kelvin and receive the
+# equivalent temperature in the other two units as the output
+
+# Usage Examples:
+# convertatemp 212 # default behavior, farenheit conversion
+# convertatemp 100C # celsius conversion
+# convertatemp 100K # kelvin conversion
+
+# just a test of debugging mode using set (comment out later)
+#set -n
+
+if [ $# -eq 0 ] ; then # if no arguments are passed
+    # then redirect from EOF (End of FILE) the string until another EOF caps off the string.
+    # essentially, this just prints a message to the user about how to use the script.
+    cat << EOF >&2
+Usage: $0 temperature[F|C|K]
+where the suffix:
+    F   indicates input is in Fahrenheit (default)
+    C   indicates input is in Celsius
+    K   indicates input is in Kelvin
+EOF
+    exit 1 # and exit with an error status
+fi
+
+# the variable, $unit is assigned the echoed first argument, which is piped to sed, which takes a regular expression that expects any amount of digits
+# the '-' means to include anything but the following, which essentially means unit becomes just the letter passed (f,c,k)
+# this is then piped to tr (transform), which takes strings and converts them, in this case all lowercase is converted to uppercase
+unit="$(echo $1|sed -e 's/[-[:digit:]]*//g' | tr '[:lower:]' '[:upper:]' )"
+# the $temp variable is assigned the first parameter's digits only
+temp="$(echo $1|sed -e 's/[^-[:digit:]]*//g')"
+
+case ${unit:=F} # if the unit's final character is F...
+in
+F ) # Farenheit to Celsius formula:  Tc = (F - 32) / 1.8
+    farn="$temp"
+    cels="$(echo "scale=2;($farn - 32) / 1.8" | bc)"
+    kelv="$(echo "scale=2;$cels + 273.15" | bc)"
+    ;;
+
+C ) # Celsius to Fahrenheit formula: Tf = (9/5)*Tc+32
+    cels="$temp"
+    kelv="$(echo "scale=2;$cels + 273.15" | bc)"
+    farn="$(echo "scale=2;(1.8 * $cels) + 32" | bc)"
+    ;;
+
+K ) # Celsius = Kelvin - 273.15, then use Celsius -> Fahrenheit formula
+   kelv="$temp" 
+   cels="$(echo "scale=2;($kelv - 32) / 1.8" | bc)"
+    farn="$(echo "scale=2;(1.8 * $cels) + 32" | bc)"
+    ;;
+
+    *) # otherwise, if F,C, or K are not passed, then...
+    echo "Given temperature unit is not supported"
+    exit 1 # and exit with an error status.
+esac
+
+#Finally, we simply print back the results
+echo "Fahrenheit = $farn"
+echo "Celsius = $cels"
+echo "Kelvin = $kelv"
+
+# and exit with a success/ok status
+exit 0
+

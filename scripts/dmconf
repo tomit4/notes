@@ -1,0 +1,34 @@
+#!/bin/sh
+
+DMENU="dmenu -i -l 20 -p"
+DMEDITOR="st -e nvim"
+declare -a confedit_list=(
+"alias - $HOME/.aliases"
+"bash - $HOME/.bashrc"
+"zsh - $HOME/.zshrc"
+"btop - $HOME/.config/btop/btop.conf"
+"st - $HOME/.config/st/config.h"
+"bspwm - $HOME/.config/bspwm/bspwmrc"
+"sxhkd - $HOME/.config/sxhkd/sxhkdrc"
+"picom - $HOME/.config/picom/picom.conf"
+"i3 - $HOME/.config/i3/config"
+"kitty - $HOME/.config/kitty/kitty.conf"
+"nvim - $HOME/.config/nvim/lua/config.lua"
+"ranger - $HOME/.config/ranger/rifle.conf"
+"tuir - $HOME/.config/tuir/tuir.cfg"
+)
+
+if [[ "${confedit_list[@]}" ]]; then
+    choice=$(printf '%s\n' "${confedit_list[@]}" | $DMENU 'Edit config:')
+else
+    echo "Program terminated." && exit 1
+fi
+
+if [[ "$choice" == "quit" ]]; then
+    echo "Program terminated." && exit 1
+elif [ "$choice" ]; then
+    cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+    $DMEDITOR $cfg
+else
+    echo "Program terminated." && exit 1
+fi

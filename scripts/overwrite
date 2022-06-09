@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# overwrite: copy standard input to output after EOF
+# final version
+
+opath=$PATH
+PATH=/bin:/usr/bin
+
+case $# in
+    0|1) echo 'Usage: overwrite file cmd [args]' 1>&2; exit 2
+esac
+
+file=$1; shift  # recall that shift moves all arguments one position to the left
+new=/tmp/overwr1.$$; old=/tmp/overwr2.$$
+trap 'rm -f $new $old; exit 1' 1 2 15   # clean up files
+
+if PATH=$opath "$@" >$new
+then
+    cp $file $old       # save original file
+    trap '' 1 2 15      # we are committed; ignore signals
+    cp $new $file
+else
+    echo "overwrite: $1 failed, $file unchnaged" 1>$2
+    exit 1
+fi
+rm -f $new $old
+
+# USAGE: ow.sh notice sed 's/UNIX/UNIX(TM)/g' notice

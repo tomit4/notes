@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Here we establish some essential variables to the program.
+archivedir="$HOME/.recycle-bin" # we simply refer to a directory .recycle-bin that will house copies of all our deleted files.
+realrm="$(which rm)" # a variable that allows us to reference the binary rm program
+copy="$(which cp) -R" # and the same for the cp command
+
+if [ $# -eq 0 ] ; then # if there are no arguments (i.e. the length of the array of arguments is equal to zero)
+    exec $realrm # then simply execute the rm command
+fi
+
+# Parse all options looking for '-f'
+
+flags="" # a variable that will obviously hold our flags, note that it is expecting a string and not an array
+
+# the getopts command allows us to create a series of flags, note the syntax here as it will be useful in multiple programs.
+while getopts "dfiPRrvW" opt do # note the $opt variable is created here, very much like in a for in loop.
+    case $opt in # in case the $opt variable is in the string above, (the "dfiPRrvW" string which indicates the various kinds of flags)
+        f ) exec $realrm "$@" ;; # execute the rm command followed by all variables/flags that follow it
+        * ) flags="$flags -$opt" ;; # otherwise all other flags passed are contained in the flags variable
+    esac
+done
+shift $(( $OPTIND - 1 )) # this syntax is necessary as it is part of the getopts syntax, which then shifts through the option index ($OPTIND) by one,
+# essentially checking the next flag
+
+# BEGIN MAIN SCRIPT
+# =================
+
+if [ ! -d $archivedir  ] ; then # if the .recycle-bin directory doesn't exist...
+    if [ ! -w $HOME ] ; then # and if the $HOME directory is NOT writable
+        echo "$0 failed: can't create $archivedir in $HOME " >&2 # echo the message and write it to standard output
+        exit 1 # and exit with an error status
+    fi
+    mkdir $archivedir # otherwise, write the .recycle-bin directory
+    chmod 700 $archivedir # and change the permissions so only the $USER can read/write/execute the directory
+fi
+
+for arg # as simple as it gets for a for statement... for every argument passed (the filename(s))...
+do
+    newname="$archivedir/$(date "+%S.%M.%H.%m").$(basename "$arg")" # in the variable, newname, write within the .recycle-bin directory the filename with a timestamp prepended to it
+    if [ -f "$arg" -o -d "$arg" ] ; then # if the passed filename is a regular file and exists and/or the file's optname is true and/or is a directory...
+        $copy "$arg" "$newname" # use the cp command to copy the arguments passed to newrm with the newname variable (i.e. copy the passed file(s) to the recycle-bin directory as the same filename with a timestampe prepended to it)
+    fi
+done
+
+exec $realrm $flags "$@" # execute the rm command with the passed flags ("dfiPRrvW") and all arguments(file(s))

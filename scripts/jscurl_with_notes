@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# get this funciton to create a curl command that takes in 3 parameters,
+# the HTTP REQUEST TYPE, the site to be curled, and the JSON data to be passed.Simple JSON POST request:
+
+#curl -X POST http://host:3000/maria_database -H "Content-Type: application/json" -d '{"task": "DONE IN CURL"}'
+
+#Simple JSON DELETE request:
+#curl -X DELETE http://host:3000/maria_database -H "Content-Type: application/json" -d '{"deletedItem": "DONE IN CURL"}'
+
+#Simple JSON PUT request:
+#curl -X PUT http://host:3000/maria_database -H "Content-Type: application/json" -d '{"updated": "WE DID THIS IN CURL AGAIN", "previous": "DONE IN CURL"}'
+
+#echo "$1"
+#echo "$2"
+#echo "$3"
+
+http_req=${1^^}
+port="http://localhost:${2}"
+#json=" '{\"${3}\": [\"${4}"\""]}'"
+
+#echo \'{\"${3}\": [\"${4}\"]}\'
+#echo $http_req
+#echo $json
+#echo $port
+#echo "$2"
+#echo "$3"
+#echo "$4"
+
+#curl -X "{$http_req}" "{$site}" -H "Content-Type: application/json" -d "{$json}"
+
+#curl -X " {$http_req} " "{$port}" -H "Content-Type: application/json" -d "$3"
+
+#curl -X POST http://localhost:3000/maria_database -H "Content-Type: application/json" -d '{"listArray": ["do it forever"]}'
+# Only one that works currently:
+
+#curl -X "$http_req" "$port" -H "Content-Type: application/json" -d '{"listArray": ["do it again forever"]}'
+if [[ $http_req = "GET" ]]; then
+    curl "$http_req" "$2"
+else
+    curl -X "$http_req" "$port" -H "Content-Type: application/json" -d "$3"
+fi
+
+#curl -X "$1" "$2" -H "Content-Type: application/json" -d "$3"
+
+#### FEATURES I'D LIKE TO IMPLEMENT ####
+
+# format JSON to be human readable upon output (possibly using prettier)
+
+# perhaps create a second program for non localhost related curl commands that still use JSON ( will require another variable, which as is made apparent above, is difficult for you to work with at your current skill level with bash programming)

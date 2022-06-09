@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source /home/brian/.api_key.sh
+
+curl -s -H "Accept: application/json" "http://www.omdbapi.com/?apikey=$omdbapi_key&t=$1" | jq

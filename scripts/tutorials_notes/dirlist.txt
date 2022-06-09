@@ -1,0 +1,44 @@
+array_methods.sh
+associative_arrays.sh
+bash_notes.txt
+case_example.sh
+crl
+dirlist.txt
+functions.sh
+inpath
+intro
+jscurl_with_notes
+left_off.txt
+loops.sh
+node_script.sh
+normdate
+parallel
+python_script.sh
+README.md
+strings.sh
+valida1num
+variables.sh
+
+# This file was generated using redirection, (page 41 of the bash.pdf). Because the file redirection was successful(status code 1), it created the above output from the ls command.
+
+# ls > dirlist.txt 2>&1
+
+# There are two syntactically more concise formats to this:
+
+# ls &> dirlist.txt
+# ls >& dirlist.txt
+
+# You can also append using similar syntax, by simply adding another redirection operator character (>). The following would
+yield an error output (see below).
+
+# lsh &>> dirlist.txt
+# lsh >>& dirlist.txt
+
+########################
+# The following was appended to demonstrate that standard error messages(2) will also be redirected when using the 2>&1 syntax:
+
+# lsh >> dirlist.txt 2>&1
+
+bash: lsh: command not found
+
+# Just as an aside (because it's unlikely you'll need this syntax), the pipe operator (|) used in conjection with the redirection operator (>) will attempt to send the output of the command to the file even if the file exists.

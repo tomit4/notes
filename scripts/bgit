@@ -1,0 +1,125 @@
+#!/bin/bash
+
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtgreen=${txtbld}$(tput setaf 2)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
+# Intro Prompt
+echo "${txtblue}bgit: a handy shell script for automating the standard git process"
+
+# Reset output style
+tput bold & tput setaf 7
+
+# counts the number of repos
+numrepos=$(git remote | wc -l)
+
+# If there are no git repositories in this directory...
+if [ $numrepos -eq 0 ] ; then
+    echo "${txtred}no git repositories in this directory...exiting bgit${txtwhite}"
+    exit 1
+fi
+
+# creates a list of repos and puts them in an array
+repoarray=($(git remote))
+
+# Grabs all new files
+newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+
+# Grabs all modified files
+modified=$(git status --short | grep M | awk '{print $2}' | tr '\n' ' ')
+
+# Grabs all deleted files
+deleted=$(git status --short | grep D | awk '{print $2}' | tr '\n' ' ')
+
+# Reports what is staged for commit
+# If there is anything to commit...
+if [[ ! -z $newfiles || ! -z $modified || ! -z $deleted ]] ; then
+    # Let the user know what is staged for commit
+    echo "${txtwhite}The following files are staged for commit:"
+# Otherwise, if there isn't anything to commit...
+else
+    # Let the user know that everything is up to date
+    echo "${txtred}everything up-to-date...exiting bgit${txtwhite}"
+    # and exit the program
+    exit 0
+fi
+
+# Let the user know what is staged for commit
+if [[ $newfiles ]]; then
+    echo "${txtgreen}ADDED: ${txtgreen}$newfiles"
+fi
+if [[ $modified ]]; then
+    echo "${txtblue}MODIFIED: ${txtblue}$modified"
+fi
+if [[ $deleted ]]; then
+    echo "${txtred}DELETED: ${txtred}$deleted"
+fi
+
+
+while [ true ]
+do
+    # Prompts user if they'd like to commit the changes
+    read -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
+    # If the user chooses to commit the changes...
+    if [[ $change == "y" || $change == "yes" ]] ; then
+
+        # Grabs commit message
+        while [ true ]
+        do
+            # Prompts the user to input their commit message
+            read -r -p "${txtwhite}commit message: ${txtyellow}" message
+            cmessage=("$message")
+            # if the user inputted a commit message...
+            if [ -n "$message" ] ; then
+                # then break out of the while loop and continue with the commit...
+                break
+            # if the user did NOT input a commit message...
+            else
+                # tell the user to do so or to quit
+                echo "${txtred}commit message is empty, please write a commit message"
+                echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
+            fi
+        done
+
+        # Reset output style
+        tput bold & tput setaf 7
+
+        # adds the modified and new files (suppresses message anyways if no files are to be committed)
+        if [[ $newfiles || $modified ]] ; then
+            git config advice.addEmptyPathspec false
+            git add $modified $newfiles ;
+        fi
+        # commits the user's message (multi-word supported)
+        git commit -m "$cmessage" ;
+
+        # pushes the commit to each repository
+        for ((i = 0; i < $numrepos; i++)) ; do
+            git push ${repoarray[i]} ;
+        done
+
+        exit 0
+    # If the user chooses to not the commit the changes ...
+    elif [[ $change == "n" || $change == "no" ]] ; then
+
+        # Reset output style
+        tput bold & tput setaf 7
+
+        # Report the git status
+        git status --short
+
+        # And let the user know no changes were committed
+        echo "${txtred}no changes committed"
+
+        exit 0
+    # If the user chooses to quit...
+    elif [[ $change == "q" || $change == "quit" ]] ; then
+        exit 0
+    # If the user continues to just press enter...
+    else
+        echo "${txtred}please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit${txtwhite}"
+    fi
+done

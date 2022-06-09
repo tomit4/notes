@@ -1,0 +1,44 @@
+Exports in Bash require a bit of a different mindset than other programming languages, but reflecting on how this works might also inform you on
+how exporting works in other languages, so let's keep an open mind.
+
+In bash we simply defign variables through assignment, like so:
+
+myVar="my string"
+echo $myVar
+my string
+
+Now let's say we open another bash instance by actually invoking the bash shell, then what happens if we try and reference $myVar?
+
+bash # new bash instance
+echo $myVar
+# returns nothing
+
+This is because we defined a localized variable to the particular shell session.  Now, we could do a work around and in our bashrc outright define a new
+variable so that whenever we invoke bash, the rc document is read and that is set for us, but that is a sort of cheat.  The proper way to do this sort of thing (and probably useful in a variety of contexts, is to use the export keyword)
+
+export myVar="my string"
+bash
+echo $myVar
+my string
+
+There are many options to this, here is the tldr documentation regarding export (tldr export):
+
+    
+Command to mark shell variables in the current environment to be exported with any newly forked child processes.[0m
+More information: https://www.gnu.org/software/bash/manual/bash.html#index-export.[0m
+
+Set a new environment variable:
+export VARIABLE=value
+
+Remove an environment variable:
+export -n VARIABLE
+
+Mark a shell function for export:
+export -f FUNCTION_NAME
+
+Append something to the PATH variable:
+export PATH=$PATH: path/to/append
+
+So we have a lot of options to keep in mind.  This could possibly be useful in say, a tmux session.
+
+

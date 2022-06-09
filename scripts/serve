@@ -1,0 +1,3 @@
+#!/bin/bash
+
+live-server --open="$1"

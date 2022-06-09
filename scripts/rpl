@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# rpl: rpl str1 in files with str2, in place
+
+PATH=/bin:/usr/bin
+
+case $# in
+    0|1|2) echo 'Usage: replace str1 str2 files' 1>&2; exit 1
+esac
+
+left="$1"; right="$2"; shift; shift
+
+for i # same as for $*
+do
+    /home/brian/scripts/overwrite $i sed "s@$left@$right@g" $i
+done
+
+# $ cat footnote
+# UNIX is not an acronym
+# $ rpl UNIX Unix footnote
+# Unix is not an acronym
