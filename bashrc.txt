@@ -1,5 +1,6 @@
 # Changing over to ZSH for now, bashrc is kept here as emergency shell/posterity
 # to change default shell, use chsh -s $(which bash)
+# last test?
 # ~/.bashrc
 history -c && history -w && hash -r
 # create custom env variables:
