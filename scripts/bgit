@@ -63,7 +63,7 @@ fi
 while [ true ]
 do
     # Prompts user if they'd like to commit the changes
-    read -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
+    read -e -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
     # If the user chooses to commit the changes...
     if [[ $change == "y" || $change == "yes" ]] ; then
 
@@ -71,7 +71,7 @@ do
         while [ true ]
         do
             # Prompts the user to input their commit message
-            read -r -p "${txtwhite}commit message: ${txtyellow}" message
+            read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
             cmessage=("$message")
             # if the user inputted a commit message...
             if [ -n "$message" ] ; then
