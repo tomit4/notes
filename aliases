@@ -160,6 +160,7 @@ alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
 alias {odysee,lbry}="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
+alias yt-listen='mpv "${1}" --no-video'
 alias ytdl="yt-dlp -f mp4"
 alias ytdl-a="yt-dlp -x --audio-format mp3"
 alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
