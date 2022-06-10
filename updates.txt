@@ -38,3 +38,7 @@ git pull
 Install hwinfo and hdparm and pfetch
 
 doas pacman -S hwinfo hdparm pfetch
+
+Install sku (tui sudoku game written in go):
+
+paru sku
