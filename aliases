@@ -266,5 +266,5 @@ alias regen_initramfs="doas mkinitcpio -P"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
 #
 # source scripts that need to utilize shell builtins
-alias sdir="source $HOME/scripts/sdir"
-alias rdir="source $HOME/scripts/rdir"
+alias {sd,sdir}="source $HOME/scripts/sdir"
+alias {rd,rdir}="source $HOME/scripts/rdir"
