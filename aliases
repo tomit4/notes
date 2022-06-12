@@ -1,4 +1,5 @@
 #Custom Aliases
+alias .="cd"
 alias more="less"
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -9,7 +10,6 @@ alias free='free -m'
 alias dmesg="doas dmesg -H"
 alias blkid="doas blkid"
 alias kernel="uname -r"
-alias .="cd"
 alias docs="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias pics="cd ~/Pictures"
@@ -264,3 +264,7 @@ alias regen_initramfs="doas mkinitcpio -P"
 # alias tkill="tmux kill-ses -t"
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
+#
+# source scripts that need to utilize shell builtins
+alias sdir="source $HOME/scripts/sdir"
+alias rdir="source $HOME/scripts/rdir"
