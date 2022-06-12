@@ -14,7 +14,9 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install arandr (tool for multi-monitor setup, you'll need this eventually).
+Install nvm
 
-doas pacman -S arandr
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+and copy the zshrc and bashrc files which create the environment variable for nvm
 
