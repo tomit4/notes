@@ -1,0 +1,22 @@
+You'll eventually be setting up a second monitor (ideally a widescreen monitor set up vertically for working on largish code bases). In preparation for when that day comes, I have already installed arandr, a tool for generating a startup script which will assist bspwm in locating and properly rendering a secondary monitor with workspaces. While there is good documentation on setting up bspwm for this purpose (see Brodie Robertson and DT's youtube tutorials on bspwm), I have found this simple two person exchange on the Arch Linux Forums that might be useful:
+
+-------------------------------
+I've been having a lot of trouble getting bspwm to play nicely with my second monitor. I have tried using arandr to generate a config and while it does fix the problem of xorg thinking my second screen is on the right, it doesn't rectify the issue of the HUGE mouse cursor on the smaller screen. The greater problem, however, is that after hardcoding in my bspwmrc what the monitors should be, my workspaces no longer work (no longer able to swap between them). I've also checked the workspace names using bspc and it shows that they are both just named "Desktop", which is reflected by polybar showing that as the workspace name.
+
+I ended up not using arandr because from what I understand
+
+monitor $(monitor) -n center/etc
+
+is supposed to accomplish what I was wanting from arandr. Though that is not solving the problem of xorg thinking that the monitor is on the wrong side.
+
+-------------------------------
+This is my display.sh created by arandr. My layout has my external monitor above my laptop.   It's located in ~/.screenlayout/display.sh
+#!/bin/sh
+xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output VIRTUAL1 --off
+
+Make sure you make it executable with chmod +x /home/your user name/,screenlayout/display.sh
+
+Then add this path to your .xinitrc file:  $HOME/.screenlayout/display.sh
+
+Then reboot.
+
