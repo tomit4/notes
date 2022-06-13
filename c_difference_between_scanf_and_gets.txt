@@ -1,0 +1,6 @@
+https://www.geeksforgeeks.org/difference-between-scanf-and-gets-in-c/
+
+The main difference between them is:
+
+    scanf() reads input until it encounters whitespace, newline or End Of File(EOF) whereas gets() reads input until it encounters newline or End Of File(EOF), gets() does not stop reading input when it encounters whitespace instead it takes whitespace as a string.
+    scanf can read multiple values of different data types whereas gets() will only get character string data.
