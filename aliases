@@ -224,17 +224,22 @@ alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf
 alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
 
 # Programming Resources
+# General
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
+# C Programming
 alias learnc="librewolf https://learn-c.org &"
 alias cdemos="librewolf https://www.demo2s.com/c/c.html &"
 alias ctuts="librewolf https://www.tutorialspoint.com/c_standard_library/ &"
 alias csimplified="librewolf https://www.programmingsimplified.com/c/ &"
 alias cfaq="librewolf http://c-faq.com/ &"
 alias cboards="librewolf https://cboard.cprogramming.com &"
+# X11 Resources
 alias xlibman="librewolf https://tronche.com/gui/x/xlib/ &"
 alias xorg="librewolf https://www.x.org/wiki/ &"
+# Bash Scripting
+alias unixforums="librewolf https://www.unix.com"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
