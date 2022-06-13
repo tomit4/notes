@@ -239,7 +239,7 @@ alias cboards="librewolf https://cboard.cprogramming.com &"
 alias xlibman="librewolf https://tronche.com/gui/x/xlib/ &"
 alias xorg="librewolf https://www.x.org/wiki/ &"
 # Bash Scripting
-alias unixforums="librewolf https://www.unix.com"
+alias unixforums="librewolf https://www.unix.com &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
