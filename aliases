@@ -236,7 +236,8 @@ alias xorg="librewolf https://www.x.org/wiki/ &"
 alias unixforums="librewolf https://www.unix.com &"
 
 # Linux Related News/Resources (includes artix and runit resources)
-alias kernelorg="http://vger.kernel.org/lkml/"
+alias kernelintro="links https://tldp.org/LDP/tlk/tlk.html"
+alias kernelorg="links http://vger.kernel.org/lkml/"
 alias archives="links https://archive.artixlinux.org/"
 alias forums="librewolf https://forum.artixlinux.org/ &"
 # alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
