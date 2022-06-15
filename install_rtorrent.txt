@@ -1,0 +1,51 @@
+Originally taken from DistroTube's instructions on installation:
+https://www.youtube.com/watch?v=2n93ioqHf-U
+
+Installing rtorrent, a simple terminal based torrenting client on Linux is relatively easy, install the binary from whichever main repository you utilize, in the case of Arch based distributions:
+
+sudo pacman -S rtorrent
+
+Within the /usr/share/doc/rtorrent/examples directory you will find an example config/rc file:
+
+/usr/share/doc/rtorrent/examples/rtorrent.rc.gz
+
+Interestingly, DT uses vim to copy it and unzip the file using vim alone (which at the time of this writing, long after having installed rtorrent, I was unaware of):
+
+sudo nvim /usr/share/doc/rtorrent/examples/rtorrent.rc.gz
+
+And then write it to the $HOME directory using vim's NORMAL mode:
+
+:w /home/username/.rtorrent.rc (note the . in .rtorrent.rc)
+
+Now let's simply change the ownership to our user:
+
+sudo chown username:username .rtorrent.rc
+
+And now let's edit the following lines within the rc file:
+
+At the line:
+
+#default.directory.set = ./
+
+Uncomment it and reset it to Downloads:
+
+default.directory.set = ./Downloads
+
+We will also need a session directory to save our progress should we stop the client at any time. Simply uncomment the following line:
+
+#session.path.set = ./session
+
+And be sure to make that directory in your $HOME directory:
+
+mdkir ~/session
+
+And also uncomment the following line, which will have rtorrent "watch" for .torrent files to start torrenting:
+
+#schedule2 = watch_directory,5,5,load.start=./watch/*.torrent
+
+And simply create such a directory as well:
+
+mkdir ~/watch
+
+And that's it. now simply place an .torrent files into watch and then open up rotorrent and you are ready to go!
+
