@@ -40,7 +40,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 # setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # creates a .zsh_history file on startup, and clears the history
-touch $HISTFILE && cat /dev/null > $HISTFILE && history -p
+echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
 
 # Configure thefuck
 eval "$(thefuck --alias)"
@@ -150,7 +150,8 @@ bindkey -v
     # kitty-integration
     # unfunction kitty-integration
 # fi
-alias home="xclear && cd /home/brian && clear && history -p && hash -r"
+alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
+
 source ~/.aliases
 # Plugins (that need to be at the end of the zshrc script)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
