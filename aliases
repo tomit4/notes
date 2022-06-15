@@ -192,12 +192,6 @@ alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
 # bookmarks
-alias archives="links https://archive.artixlinux.org/"
-alias forums="librewolf https://forum.artixlinux.org/ &"
-# alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
-alias mirrors="links https://mirror1.artixlinux.org/"
-alias isos="links https://ftp.crifo.org/artix"
-alias smarden="links http://smarden.org/runit/"
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
@@ -240,6 +234,15 @@ alias xlibman="librewolf https://tronche.com/gui/x/xlib/ &"
 alias xorg="librewolf https://www.x.org/wiki/ &"
 # Bash Scripting
 alias unixforums="librewolf https://www.unix.com &"
+
+# Linux Related News/Resources (includes artix and runit resources)
+alias kernelorg="http://vger.kernel.org/lkml/"
+alias archives="links https://archive.artixlinux.org/"
+alias forums="librewolf https://forum.artixlinux.org/ &"
+# alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
+alias mirrors="links https://mirror1.artixlinux.org/"
+alias isos="links https://ftp.crifo.org/artix"
+alias smarden="links http://smarden.org/runit/"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
