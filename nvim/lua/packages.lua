@@ -49,4 +49,5 @@ require('packer').startup(function()
     use '907th/vim-auto-save'
     use 'jremmen/vim-ripgrep'
     use 'rhysd/vim-clang-format' -- formatter for c and c++
+    use 'arrufat/vala.vim' -- for vala programming language
 end)
