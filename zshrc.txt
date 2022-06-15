@@ -21,6 +21,12 @@ export LESS_TERMCAP_us=$'\e[1;4;33m'
 
 # Formats history command with dates/times
 export HISTTIMEFORMAT="%d/%m/%y %T "
+# Sets default for history command
+export HISTSIZE=2000
+export HISTFILESIZE=100000
+export HISTFILE="$HOME/.zsh_history"
+export SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups
 
 # Configure thefuck
 eval "$(thefuck --alias)"
