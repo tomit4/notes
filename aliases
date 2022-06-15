@@ -186,6 +186,12 @@ alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
 
+# tmux session aliases
+alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
+alias tls="tmux ls"
+alias ta="tmux a -t"
+alias tkill="tmux kill-ses -t"
+
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
@@ -267,10 +273,6 @@ alias regen_initramfs="doas mkinitcpio -P"
 
 # pjson is now easily replaced by package jq
 # alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
-# alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
-# alias tls="tmux ls"
-# alias ta="tmux a -t"
-# alias tkill="tmux kill-ses -t"
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
 #
