@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f "$HOME/.zsh_history "] ; then
+if [ -f "$HOME/.zsh_history " ] ; then
     rm "$HOME/.zsh_history"
 fi
 

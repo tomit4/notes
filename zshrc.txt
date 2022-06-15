@@ -1,9 +1,11 @@
 # ~/.zshrc
 #
 # to change default shell, use chsh -s $(which zsh)
+
+# creates a zsh_history file on startup
+touch $HOME/.zsh_history
 #
 # create custom env variables:
-#
 export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
 # custom BROWSER env for ddgr:
 export BROWSER=links
