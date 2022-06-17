@@ -1,0 +1,11 @@
+ctags is a great little tool that allows you to traverse large code bases to see outside files that define variables/funcitons that are imported into our C programs.
+
+(install the ctags program)
+
+within our project with multiple .h and .c files, invoke ctags:
+
+ctags
+
+Which will create a txt file called tags
+
+This will be referenced when we need to use it in the project. From our text editor we can then invoke CTRL+} or CTRL+] to invoke ctags, which will then take us to the file and the line where that variable was first created (extremely useful!).
