@@ -243,6 +243,8 @@ alias xlibman="librewolf https://tronche.com/gui/x/xlib/ &"
 alias xorg="librewolf https://www.x.org/wiki/ &"
 # Bash Scripting
 alias unixforums="librewolf https://www.unix.com &"
+alias bashforbeginners="librewolf https://tldp.org/LDP/Bash-Beginners-Guide/html &"
+alias advancedbash="librewolf https://tldp.org/LDP/abs/html/ &"
 
 # Linux Related News/Resources (includes artix and runit resources)
 alias kernelintro="links https://tldp.org/LDP/tlk/tlk.html"
