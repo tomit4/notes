@@ -193,7 +193,7 @@ alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
 
 # programming specific aliases
-alias cc="cc -Wall -Werror"
+alias cc="cc -Wall -Werror -Wextra"
 
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
