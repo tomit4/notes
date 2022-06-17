@@ -15,5 +15,7 @@ example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
 Install fim (allows viewing of images in tty environment)
+Also install ctags for better traversing in our C programs.
 
-doas pacman -S fim
+doas pacman -S fim ctags
+
