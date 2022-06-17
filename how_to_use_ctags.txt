@@ -9,3 +9,9 @@ ctags
 Which will create a txt file called tags
 
 This will be referenced when we need to use it in the project. From our text editor we can then invoke CTRL+} or CTRL+] to invoke ctags, which will then take us to the file and the line where that variable was first created (extremely useful!).
+
+We also can to the same in nvim by:
+
+:ta some_variable
+
+And it will do the same, searching for the file and line where some_variable was defined.
