@@ -192,6 +192,9 @@ alias tls="tmux ls"
 alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
 
+# programming specific aliases
+alias cc="cc -Wall -Werror"
+
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
@@ -262,8 +265,6 @@ alias gh='ddgr --gb \!gh "${1}"'
 alias glab='ddgr --gb \!glab "${1}"'
 alias red='ddgr \!r "${1}"'
 alias yt='ddgr --gb \!yt "${1}"'
-
-
 
 # run the following two aliases every time you update the kernels and nvidiadkms
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
