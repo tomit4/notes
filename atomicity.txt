@@ -1,0 +1,53 @@
+https://softwareengineering.stackexchange.com/questions/241017/what-is-atomicity
+
+QUESTION:
+What is Atomicity?
+
+I'm really struggling to find a concrete, easy to grasp, explanation of Atomicity.
+
+My understanding thus far is that to ensure an operation is atomic you wrap the critical code in a locker.
+But that's about as much as I actually understand. Definitions such as the one below make no sense to me at all.
+
+    An operation during which a processor can simultaneously read a location and write it in the same bus
+    operation. This prevents any other processor or I/O device from writing or reading memory until the
+    operation is complete. Atomic implies indivisibility and irreducibility, so an atomic operation must
+    be performed entirely or not performed at all.
+
+What does the last sentence mean? Is the term indivisibility relating to mathematics or something else?
+
+Sometimes the jargon with these topics confuse more than they teach.
+
+ANSWER:
+
+Atomicity is a trait that defines wether an operation can be interrupted or not. In general, it does not refer to a bunch of operations in a lock. A lock doesn't guarantee that nothing else can run during the lock, just nothing else can run that code, on that instance during the lock.
+
+Let's look at an example: int x = 4 * sin(pi)
+
+Without optimization, this statement is not atomic.
+
+-    Fetching pi will usually be atomic,
+    assuming it is a double and your processor can read a double in one clock cycle.
+
+-    Calling sin and returning its result (assuming sin is some function and not something
+     like a macro) is not atomic since something can run between the code running and returning the value.
+        -Granted, this probably doesn't matter. pi will be copied going into the function and sin
+         is unlikely to be a mutable function. So while this is threadsafe (in common usage)
+         it is not atomic.
+
+-    On most all processors multiplying two doubles and assigning the result
+     will be an atomic operation since it will be done in one operation by the processor.
+
+So, key things to note:
+
+-    Having two atomic operations does not yield another one, since the processor can
+     switch to another thread in between them.
+
+-    An operation that is atomic on one machine may not be on another.
+
+-    Optimization can make an operation that isn't atomic into one that is (and occasionally vice versa!)
+
+-    Atomicity matters because if something can't be interrupted, it's intrinsically thread safe.
+     Locks are expensive, so atomic operations in key spots can vastly improve concurrent
+     performance and correctness.
+
+
