@@ -49,7 +49,6 @@ alias kmnt="doas mount /dev/sda /mnt/media/kobo"
 alias kumnt="doas umount /dev/sda /mnt/media/kobo"
 alias rm="newrm -vi"
 alias cal="newcal"
-alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias mv="mv -v"
 alias ln="ln -i"
 alias {doasedit,sudoedit}="doas rnano"
@@ -179,6 +178,10 @@ alias pip_upgrade="python -m pip install --upgrade pip"
 alias nb="newsboat"
 alias sudoku="sku"
 # pip list and pip freeze command list pip packages
+
+#Particularly useful commands more to remember than to use as alias:
+alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
+alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 
 # get top process eating memory
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
