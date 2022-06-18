@@ -48,6 +48,12 @@ dunst &
 xbanish &
 # pulseaudio --start &
 
+# Notification for Laptop Battery
+# echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
+# chmod +x /tmp/dsba &
+# /tmp/dsba &
+# /home/brian/scripts/batnotify &
+
 # Start pipewire
 /usr/bin/pipewire &
 /usr/bin/pipewire-pulse &
