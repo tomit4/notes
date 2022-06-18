@@ -1,0 +1,57 @@
+https://stackoverflow.com/questions/27993971/understanding-buffering-in-c
+
+The word buffer is used for many different things in computer science.
+In the more general sense, it is any piece of memory where data is stored temporarily
+until it is processed or copied to the final destination (or other buffer).
+
+As you hinted in the question there are many types of buffers, but as a broad grouping:
+
+-    Hardware buffers: These are buffers where data is stored before being moved to a HW device.
+    Or buffers where data is stored while being received from the HW device until it is processed
+    by the application. This is needed because the I/O operation usually has memory and timing
+    requirements, and these are fulfilled by the buffer. Think of DMA devices that read/write directly
+    to memory, if the memory is not set up properly the system may crash. Or sound devices that must
+    have sub-microsecond precision or it will work poorly.
+
+    Cache buffers: These are buffers where data is grouped before writing into/read from a file/device
+    so that the performance is generally improved.
+
+    Helper buffers: You move data into/from such a buffer, because it is easier for your algorithm.
+
+Case #2 is that of your FILE* example. Imagine that a call to the write system call (WriteFile() in Win32)
+    takes 1ms for just the call plus 1us for each byte (bear with me, things are more complicated in real
+    world). Then, if you do:
+
+        FILE *f = fopen("file.txt", "w");
+        for (int i=0; i < 1000000; ++i)
+            fputc('x', f);
+        fclose(f);
+
+Without buffering, this code would take 1000000 * (1ms + 1us), that's about 1000 seconds. However, with
+a buffer of 10000 bytes, there will be only 100 system calls, 10000 bytes each. That would be
+100 * (1ms + 10000us). That's just 0.1 seconds!
+
+Note also that the OS will do its own buffering, so that the data is written to the actual device using
+the most efficient size. That will be a HW and cache buffer at the same time!
+
+About your problem with flushing, files are usually flushed just when closed or manually flushed.
+Some files, such as stdout are line-flushed, that is, they are flushed whenever a '\n' is written.
+Also the stdin/stdout are special: when you read from stdin then stdout is flushed.
+Other files are untouched, only stdout. That is handy if you are writing an interactive program.
+
+My case #3 is for example when you do:
+
+        FILE *f = open("x.txt", "r");
+        char buffer[1000];
+        fgets(buffer, sizeof(buffer), f);
+        int n;
+        sscanf(buffer, "%d", &n);
+
+You use the buffer to hold a line from the file, and then you parse the data from the line. Yes, you
+could call fscanf() directly, but in other APIs there may not be the equivalent function, and moreover
+you have more control this way: you can analyze the type if line, skip comments, count lines...
+
+Or imagine that you receive one byte at a time, for example from a keyboard. You will just accumulate
+characters in a buffer and parse the line when the Enter key is pressed. That is what most interactive
+console programs do.
+
