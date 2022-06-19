@@ -14,15 +14,11 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install fim (allows viewing of images in tty environment)
-Also install ctags for better traversing in our C programs.
+Install streamlinks
 
+doas pacman -S streamlinks
 
-paru fim
+copy streamlinks config directory for streamlinks into ~/.config/
 
-doas pacman -S ctags
-
-Install athena-jot
-
-paru athena-jot (generates random data)
+cp -r ~/Documents/notes/streamlinks ~/.config/
 

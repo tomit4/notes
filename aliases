@@ -177,12 +177,16 @@ alias npm_upgrade="doas npm install --location=global npm@latest"
 alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias nb="newsboat"
+alias slink="streamlink"
 alias sudoku="sku"
 # pip list and pip freeze command list pip packages
 
 #Particularly useful commands more to remember than to use as alias:
 alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
+alias athena="athena-jot"
+alias view-in-tty="fim"
+alias cprogrammingtags="ctags"
 
 # get top process eating memory
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
