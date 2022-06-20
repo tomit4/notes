@@ -178,6 +178,7 @@ alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias nb="newsboat"
 alias slink="streamlink"
+alias scrot="scrot --count --delay"
 alias sudoku="sku"
 # pip list and pip freeze command list pip packages
 

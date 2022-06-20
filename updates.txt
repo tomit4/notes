@@ -14,11 +14,6 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Install streamlinks
+Remove xfce4-screenshooter in preference of scrot
 
-doas pacman -S streamlinks
-
-copy streamlinks config directory for streamlinks into ~/.config/
-
-cp -r ~/Documents/notes/streamlinks ~/.config/
-
+doas pacman -Rs xfce4-screenshooter
