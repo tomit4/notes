@@ -14,6 +14,6 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-install snarf (great tool very much like wget, curl):
+install snarf (great tool very much like wget, curl), and shellcheck (an error handling tool for bash scripts):
 
-doas pacman -S snarf
+doas pacman -S snarf shellcheck
