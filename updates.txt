@@ -17,3 +17,5 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 install snarf (great tool very much like wget, curl), and shellcheck (an error handling tool for bash scripts):
 
 doas pacman -S snarf shellcheck
+
+put gawk.pdf from programming_books on kobo
