@@ -188,6 +188,8 @@ alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find c
 alias athena="athena-jot"
 alias view-in-tty="fim"
 alias cprogrammingtags="ctags"
+alias snarfsnarf="snarf"
+alias shchk="shellcheck"
 
 # get top process eating memory
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
