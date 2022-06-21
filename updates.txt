@@ -14,10 +14,6 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-Remove xfce4-screenshooter in preference of scrot
+install snarf (great tool very much like wget, curl):
 
-doas pacman -Rs xfce4-screenshooter
-
-Copy the unix_programming_environment notes to our book_tutorials directory:
-
-cp -r ~/Documents/notes/unix_programming_environment ~/Documents/Code/book_tutorials
+doas pacman -S snarf
