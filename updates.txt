@@ -17,3 +17,7 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 Remove xfce4-screenshooter in preference of scrot
 
 doas pacman -Rs xfce4-screenshooter
+
+Copy the unix_programming_environment notes to our book_tutorials directory:
+
+cp -r ~/Documents/notes/unix_programming_environment ~/Documents/Code/book_tutorials
