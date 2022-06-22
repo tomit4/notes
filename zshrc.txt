@@ -3,7 +3,8 @@
 # to change default shell, use chsh -s $(which zsh)
 
 # create custom env variables:
-export cproj="$HOME/Documents/Code/source_code_to_study/sandbox/msh"
+export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
+
 # custom BROWSER env for ddgr:
 export BROWSER=links
 export TUIR_BROWSER=librewolf
@@ -150,6 +151,7 @@ bindkey -v
     # kitty-integration
     # unfunction kitty-integration
 # fi
+
 alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
 
 source ~/.aliases

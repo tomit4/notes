@@ -5,7 +5,7 @@
 #
 history -c && history -w && hash -r
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/source_code_to_study/sandbox/msh"
+export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
 # custom BROWSER env for ddgr:
 export BROWSER=links
 export TUIR_BROWSER=librewolf
