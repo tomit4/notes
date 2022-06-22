@@ -162,8 +162,6 @@ super + a
     pavucontrol &
 super + z
     lxappearance &
-super + q
-    xfce4-screenshooter &
 super + f
     librewolf &
 super + c
