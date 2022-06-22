@@ -238,6 +238,9 @@ alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6
 
 # Programming Resources
 # General
+
+#college courses (UNIX nad SysAdmin) from stevens university:
+alias netmeister="librewolf https://stevens.netmeister.org &"
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
