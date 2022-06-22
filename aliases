@@ -19,7 +19,9 @@ alias games="cd ~/.local/share/Steam/steamapps/common"
 alias notes="cd ~/Documents/notes"
 alias scripts="cd ~/scripts"
 alias books="cd ~/Documents/books"
-alias config="cd ~/.config" alias cache="cd ~/.cache" alias svs="cd /etc/runit/sv"
+alias config="cd ~/.config"
+alias cache="cd ~/.cache"
+alias svs="cd /etc/runit/sv"
 alias Code="cd ~/Documents/Code"
 alias cplus="cd ~/Documents/Code/cpp"
 alias js="cd ~/Documents/Code/javascript"
@@ -190,7 +192,6 @@ alias view-in-tty="fim"
 alias cprogrammingtags="ctags"
 alias snarfsnarf="snarf"
 alias shchk="shellcheck"
-
 # get top process eating memory
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
