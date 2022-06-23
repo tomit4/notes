@@ -1,0 +1,35 @@
+This file just contains a quick reference for some of my most used gitmojis.
+
+A full list can be found at:
+https://gitmoji.dev/
+
+gitmoji is a popular way of easily adding emojis to git repos like github,
+gitlab, gittea, and codeberg.
+
+Simply typing the emoji like so:
+:tada:
+
+Will produce an emoji in your commit message.
+Unfortunately, as of right now, I have yet to update st to be able to use emojis...
+(See Luke Smith's video if you want to take the time).
+
+Nevertheless, some gitmojis and there use cases are listed here:
+
+:tada: ............................ begin a project
+:wrench: .......................... add or update configuration files
+:construction: .................... work in progress
+:fire: ............................ remove code or files
+:bug: ............................. fix a bug
+:recycle: ......................... refactor code
+:poop: ............................ write bad code that needs to be improved
+:bulb: ............................ add or update comments in source code
+:memo: ............................ add or update documentation
+:art: ............................. improve structure/format code
+:zap: ............................. improve performance
+:sparkles: ........................ introduce new features
+:rocket: .......................... deploy stuff
+:white_check_mark: ................ add, update, or pass tests
+:lock: ............................ fix security issues
+:bookmark: ........................ release/version tags
+:card_file_box .................... perform database related changes
+:beers: ........................... write code drunkenly
