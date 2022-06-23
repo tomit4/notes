@@ -10,8 +10,6 @@ Simply typing the emoji like so:
 :tada:
 
 Will produce an emoji in your commit message.
-Unfortunately, as of right now, I have yet to update st to be able to use emojis...
-(See Luke Smith's video if you want to take the time).
 
 Nevertheless, some gitmojis and there use cases are listed here:
 
