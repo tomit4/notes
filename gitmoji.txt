@@ -19,10 +19,14 @@ Nevertheless, some gitmojis and there use cases are listed here:
 :fire: ............................ remove code or files
 :bug: ............................. fix a bug
 :recycle: ......................... refactor code
+:bento: ........................... add or udpate assets
 :poop: ............................ write bad code that needs to be improved
+:boom: ............................ introduce breaking changes
 :bulb: ............................ add or update comments in source code
 :memo: ............................ add or update documentation
+:pencil2: ......................... fix typos
 :art: ............................. improve structure/format code
+:lipstick: ........................ add or update the ui and style files
 :zap: ............................. improve performance
 :sparkles: ........................ introduce new features
 :rocket: .......................... deploy stuff
