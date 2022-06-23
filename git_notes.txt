@@ -10,6 +10,13 @@ git config --global user.name "Your name"
 git config --global user.email "yourname@youremail.com"
 #Configures git with your git(hub) user email
 
+git config credential.helper 'cache --timeout=3600'
+# Allows passwordless commits for an hour after invokation
+
+edit .git/config with this so that it doesn't ask for gpgkeys:
+[commit]
+    gpgsign = false
+
 git init
 #initializes a new git repository on local machine
 
