@@ -22,3 +22,7 @@ put gawk.pdf from programming_books on kobo
 
 add to .xinitrc:
 xsetroot -cursor_name left_ptr &
+
+install brillo and see if its better the xbacklight:
+
+paru brillo
