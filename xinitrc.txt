@@ -46,6 +46,7 @@ picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends 
 # nm-applet
 dunst &
 xbanish &
+xsetroot -cursor_name left_ptr &
 # pulseaudio --start &
 
 # Notification for Laptop Battery

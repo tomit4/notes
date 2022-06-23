@@ -15,7 +15,10 @@ example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
 install snarf (great tool very much like wget, curl), and shellcheck (an error handling tool for bash scripts), and gawk (GNU awk), and nawk (BSD awk):
-
-doas pacman -S snarf shellcheck gawk nawk
+also install xorg-xsetroot (fixes cursor problem in bspwm)
+doas pacman -S xorg-xsetroot snarf shellcheck gawk nawk
 
 put gawk.pdf from programming_books on kobo
+
+add to .xinitrc:
+xsetroot -cursor_name left_ptr &
