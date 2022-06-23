@@ -275,6 +275,9 @@ alias smarden="links http://smarden.org/runit/"
 alias opengroup="librewolf https://publications.opengroup.org/ &"
 
 # Web Development Resources
+# for static site generation
+alias hugo="librewolf https://gohugo.io/ &"
+# for downloading web fonts
 alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
 
 # ddgr shebang bookmarks
