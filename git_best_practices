@@ -1,0 +1,87 @@
+INTRODUCTION:
+
+It's tempting to make multiple commits, as a beginner (myself), the temptation is to use git as a backup for your code in case anything happens to your physical computer. While this is indeed a WAY of using git, it is not git's ultimate purpose, and thusly is a MISUSE of git.
+
+Remember, git is a VERSION CONTROL SYSTEM. It is meant to log and document any and all changes to verions of your software. Thusly, it is important to know how, when, and why to commit these changes when developing software.
+
+GOOD PRACTICES:
+
+1 UNIT of WORK = 1 COMMIT (is the software still functional after your changes? then commit!)
+
+example: Add new widget layout ()
+
+Never commit for each individual file, rather commit for feature changes, unit tests, etc.
+
+ON PRIVATE BRANCHES:
+
+So this is where we can be a bit more forgiving. Even if we're just working on our own branches, we want to keep our commit messages clean and readable, BUT, that's not always possible. So, use a private branch to sketch out everything (allow yourself to commit to save state of your project here as it is PRIVATE), BUT keep in mind when to commit to the master/public branch, as you always want the code to function when you push to master, and you want your commit/push to be meaningful.
+
+HOW TO CLEAN UP YOUR COMMITS WHEN PUSHING FROM PRIVATE TO PUBLIC:
+
+There are three solutions proposed in the below youtube video on how to accomplish this:
+
+1) SQUASH EVERYTHING INTO ONE COMMIT(example):
+
+    git checkout feature/ticket-42-unicorn-widget
+    git merge --squash private/unicorn-widget
+    git commit -m "Meaningful message"
+
+2) INTERACTIVE REBASING:
+    As long as the commits on your private branch are in a progressive order,
+    you can use an interactive rebase to regroup them(example):
+
+    git rebase feature/ticket-42-unicorn-widget private/unicorn-widget
+
+    This should present you with a list of all your commits on your private branch.
+    With the keyword in front of your commit you can decide how the itneractive rebase
+    should process these commits:
+
+    pick 9e95d31a Add html skeleton
+    squash 726c967 css added
+    reword 123fa321 new colors
+
+    You can:
+    pick the ones you want to keep
+    squash the ones you want to delete
+    reword the ones you want to edit
+
+3) RESETTING YOUR BRANCH (last resort, only to be used if git commits are all over the place)(example):
+
+    git checkout feature/ticket-42-unicorn-widget
+    git merge --squash private/unicorn-widget
+    git reset
+
+    You will now have a working directory waiting for you to commit your changes and recluster them.
+
+NOTE: You can mix and match these fixes with or without a private branch depending on how you and your teammates work.
+
+ON COMMIT MESSAGES:
+Commit Messages in git are like an index card form of your documentation.
+I have recently started thinking more on how to better use git, as I have been simply using it as a backup store for my various config files and projects, rather than utilizing it properly for coding.
+
+Some general rules of thumb:
+
+- Separate the body from the subject with a blank line (for multiple line commits)
+    You can also just git commit -m "first really long message" -m "second really long message"
+
+- Limit the subject line to 50 characters ( enforced in my bgit script now :) )
+
+- Capitalize the subject line
+    git commit -m "Always capitalize the first word"
+
+- Do not end the subject line with a period (never did this, phew!...)
+
+- Use the imperative mood in the subject line
+    This can be a bit difficult at first to grasp, but a good rule of thumb is
+    that a good commit message should finish this sentence:
+    "If applied, this commit will..." "add a new layout"
+    Obviously, this doesn't work for personal dotfiles, but you get the idea...
+
+- Wrap the body at 72 characters (the body is a commentary on your code change)
+
+- Use the body to expain what and why and NOT how (similar to code comments)
+
+Addtionally, here are some videos on cool git tricks are as follows:
+
+(Where I initially got the above):
+https://www.youtube.com/watch?v=Hlp-9cdImSM
