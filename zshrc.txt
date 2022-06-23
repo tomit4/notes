@@ -144,14 +144,6 @@ fi
 # Set up vim mode
 bindkey -v
 
-# Kitty Shell Integration
-# if test -n "$KITTY_INSTALLATION_DIR"; then
-    # export KITTY_SHELL_INTEGRATION="enabled"
-    # autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
-    # kitty-integration
-    # unfunction kitty-integration
-# fi
-
 alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
 
 source ~/.aliases
