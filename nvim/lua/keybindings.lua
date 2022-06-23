@@ -6,6 +6,8 @@ keymap('n', '<c-b>', '<c-w>:NvimTreeToggle<CR>', {})
 
 -- Tab Shortcuts
 keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {})
+keymap('n', '<s-tab>', '<c-w>:tabprevious<CR>', {})
+keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
