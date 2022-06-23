@@ -125,6 +125,7 @@ alias git-ss="git status short"
 # for use with notes directory only
 alias git-pn="git push origin-ssh && git push codeberg"
 alias git-l="git log"
+alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
