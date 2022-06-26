@@ -190,7 +190,6 @@ alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the op
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias athena="athena-jot"
 alias view-in-tty="fim"
-alias cprogrammingtags="ctags"
 alias snarfsnarf="snarf"
 alias shchk="shellcheck"
 # get top process eating memory
@@ -206,6 +205,8 @@ alias tkill="tmux kill-ses -t"
 
 # programming specific aliases
 alias cc="cc -Wall -Werror -Wextra"
+alias cprogrammingtags="ctags"
+alias vgrind="valgrind --leak-check=full --track-origins=yes -s"
 
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
