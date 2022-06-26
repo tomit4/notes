@@ -246,6 +246,7 @@ alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
 # C Programming
+alias cprogram="librewolf https://www.cprogramming.com/ &"
 alias learnc="librewolf https://learn-c.org &"
 alias cdemos="librewolf https://www.demo2s.com/c/c.html &"
 alias ctuts="librewolf https://www.tutorialspoint.com/c_standard_library/ &"
