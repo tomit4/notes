@@ -35,10 +35,34 @@ fi
 # Start compositor
 # picom blah blah ...
 
+#Desktop
+# xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
+#Laptop
+brillo -S 70
+
+picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # Start applets, daemons, etc.
 # diskie
 # nm-applet
-# ...
+dunst &
+xbanish &
+xsetroot -cursor_name left_ptr &
+# pulseaudio --start &
+
+# Notification for Laptop Battery
+echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
+chmod +x /tmp/dsba &
+/tmp/dsba &
+/home/brian/scripts/batnotify &
+
+# Start pipewire
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
 
 # Start i3wm
-exec i3
+# exec i3
+
+# Start bspwm
+pgrep -x sxhkd > /dev/null || sxhkd -c /home/brian/.config/sxhkd/sxhkdrc &
+exec bspwm -c /home/brian/.config/bspwm/bspwmrc
