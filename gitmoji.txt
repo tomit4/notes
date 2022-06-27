@@ -1,7 +1,7 @@
 A full list can be found at:
 https://gitmoji.dev/
-
-
+And even more:
+https://gist.github.com/rxaviers/7360908
 
 :art: ............................. improve structure/format code
 :zap: ............................. improve performance
