@@ -14,15 +14,6 @@ add notation about using pick to parse through output, and pipe that using xargs
 example:
 ls | pick | xargs bat # will give you a choice of the files from ls, pick displays a menu to "pick" the file, which then is parsed to xargs bat (invokes bat on choice from ls | pick)
 
-install snarf (great tool very much like wget, curl), and shellcheck (an error handling tool for bash scripts), and gawk (GNU awk), and nawk (BSD awk):
-also install xorg-xsetroot (fixes cursor problem in bspwm)
-doas pacman -S xorg-xsetroot snarf shellcheck gawk nawk
+for now, occassionally study and implement trivial C programs that demonstrate these algorithms:
 
-put gawk.pdf from programming_books on kobo
-
-add to .xinitrc:
-xsetroot -cursor_name left_ptr &
-
-install brillo and see if its better the xbacklight:
-
-paru brillo
+https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b
