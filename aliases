@@ -241,13 +241,18 @@ alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6
 
 # Programming Resources
 
+# Algorithms and Data Structures
+alias leetcode="librewolf leetcode.com &"
+alias techiedelight="librewolf https://www.techiedelight.com/ &"
+alias algoexpert="librewolf https://www.algoexpert.io/ &"
+
 #college courses (UNIX nad SysAdmin) from stevens university:
 alias netmeister="librewolf https://stevens.netmeister.org &"
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
-# C Programming
 
+# C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
 alias cprogram="librewolf https://www.cprogramming.com/ &"
 alias learnc="librewolf https://learn-c.org &"
