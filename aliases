@@ -206,7 +206,7 @@ alias tkill="tmux kill-ses -t"
 # programming specific aliases
 alias cc="cc -Wall -Werror -Wextra"
 alias cprogrammingtags="ctags"
-alias vgrind="valgrind --leak-check=full --track-origins=yes -s"
+alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
 
 # game shortcuts
 alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
@@ -247,6 +247,8 @@ alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias unixsheikh="links https://unixsheikh.com"
 # C Programming
+
+alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
 alias cprogram="librewolf https://www.cprogramming.com/ &"
 alias learnc="librewolf https://learn-c.org &"
 alias cdemos="librewolf https://www.demo2s.com/c/c.html &"
