@@ -16,6 +16,8 @@ ls | pick | xargs bat # will give you a choice of the files from ls, pick displa
 
 https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b
 
+Look up the select command (online, man page is not as helpful). It makes a nice simple selectio menu for your users in bash
+
 neovim markdown-preview fix:
 
 :call mkdp#util#install()
