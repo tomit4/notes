@@ -213,6 +213,10 @@ alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod"
 
+# docker specific Aliases
+alias docker="doas docker"
+alias docker-ls="doas docker container ls -a"
+
 # bookmarks
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"

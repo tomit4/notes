@@ -1,0 +1,26 @@
+https://www.howtogeek.com/devops/what-does-docker-do-and-when-should-you-use-it/
+
+mkdir ~/dockertest && cd ~/dockertest
+
+echo -e "FROM nginx/nCOPY html /usr/share/nginx/html"
+
+mkdir html && touch html/index.html
+
+In index.html, write:
+
+<!DOCTYPE html>
+<html>
+<body>
+Hello From nginx, inside Docker! Inside, your computer?
+</body>
+</html>
+
+In dockertest directory:
+
+docker build -t dockertest .
+
+And finally:
+
+docker run --name DockerTest -p 8080:80 -d dockertest
+
+In a browser, go to localhost:8080, and you should see your index.html file rendered.

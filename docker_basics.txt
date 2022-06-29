@@ -1,0 +1,54 @@
+To search for an image to download:
+
+doas docker search imagename
+
+To install such image:
+
+doas docker pull image
+
+To view your images:
+
+doas docker images
+
+To view your containers:
+
+doas docker containers ls -a
+
+To show running containers, you can also input:
+
+doas docker ps
+Creating containers usually has specific commands, but always starts with docker run:
+
+Example (installing mariadb):
+
+docker run --name maraidbtest -e MYSQL_ROOT_PASSWORD=mypass -p 3306:3306 -d docker.io/library/mariadb
+
+Starting/Stopping/Restarting containers
+
+doas docker start imagename
+doas docker stop imagename
+doas docker restart imagename
+
+Pausing/unpausing containers
+
+docker pause containerid
+docker unpause contaienrid
+
+Checking container logs:
+
+docker logs imagename
+
+Accessing the container (dependent on type of container):
+
+doas docker attach containerid
+doas exec -it mariadbtest bash
+
+Removing images/containers (stop image first):
+
+doas docker rmi imagename
+
+doas docker container rm containerid
+
+SIDE NOTE ON MARIADB:  Mariadb container is just a debian container, and can be updated using apt, etc.
+
+https://mariadb.com/kb/en/installing-and-using-mariadb-via-docker/
