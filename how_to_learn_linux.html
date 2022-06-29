@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <title>How to Learn Linux? (from Zero to Hero)</title>
+
+    
+    
+    <meta name="description" content="
+How to Learn Linux? (from Zero to Hero), a guide for learning Linux
+
+
+Foreword I still remember the days when I started using Linux with Ubuntu 4.04 in 2004. Students apply for installation CD...">
+    <link rel="canonical" href="http://coderscat.com/how-to-learn-linux/" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Learn Linux? (from Zero to Hero)">
+    <meta property="og:description" content="
+How to Learn Linux? (from Zero to Hero), a guide for learning Linux
+
+
+Foreword I still remember the days when I started using Linux with Ubuntu 4.04 in 2004. Students apply for installation CD...">
+    <meta property="og:url" content="http://coderscat.com/how-to-learn-linux/" />
+    <meta property="og:site_name" content="Coder's Cat">
+    <meta property="article:publisher" content="https://www.facebook.com/coderscat">
+    <meta property="article:tag" content="">
+    <meta property="article:section" content="">
+    <meta property="article:published_time" content="2019-10-22 20:03:00">
+    <meta property="article:modified_time" content="2019-10-22 20:03:00">
+    <meta property="og:updated_time" content="2019-10-22 20:03:00">
+    <meta property="og:image" content="http://coderscat.com/images/2019_09_30_learn-linux.org_20191022_222735.png"/>
+    <meta property="og:image:secure_url" content="http://coderscat.com/images/2019_09_30_learn-linux.org_20191022_222735.png"/>
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:alt" content="CodersCat">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Learn Linux? (from Zero to Hero)">
+    <meta name="twitter:description" content="
+How to Learn Linux? (from Zero to Hero), a guide for learning Linux
+
+
+Foreword I still remember the days when I started using Linux with Ubuntu 4.04 in 2004. Students apply for installation CD...">
+    <meta name="twitter:site" content="@coderscat">
+    <meta name="twitter:creator" content="@coderscat">
+    <meta name="twitter:image" content="http://coderscat.com/images/2019_09_30_learn-linux.org_20191022_222735.png"/>
+
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/css/images/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/css/images/favicon-16x16.ico">
+
+    <title>
+        
+            How to Learn Linux? (from Zero to Hero) | Coder&#39;s Cat
+        
+    </title>  
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/fonts.css">
+
+    
+<link rel="stylesheet" href="/css/plugins/code.css">
+
+    
+<link rel="stylesheet" href="/css/plugins/nprogress.min.css">
+
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    
+<script src="/js/jquery.min.js"></script>
+
+  <script type="text/javascript" src="/js/geopattern.min.js"></script>
+  <script type="text/javascript" src="/js/nprogress.min.js"></script>
+
+
+  <script type="text/javascript" async src="https://platform-api.sharethis.com/js/sharethis.js#property=5fa8f493be36290012aa2a0d&product=inline-share-buttons"></script>
+
+  <div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+      <img src="/css/images/logo.png" width='400px' height='400px'/>
+  </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77282254-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-77282254-2');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Coder's Cat" type="application/atom+xml">
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Coder's Cat</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/data-structures/" class="item-link">D&S</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/algorithms/" class="item-link">Algo</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/programming-languages/" class="item-link">PL</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/system/" class="item-link">System</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tools/" class="item-link">Tools</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      <li class="list-item" style="margin: 0">
+       <a class="icon-small" href="/search">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-search fa-stack-1x fa-inverse" style="color:pink"></i>
+        </span>
+       </a>
+      </li>
+
+      <li class="list-item" style="margin: 0">
+        <a class="icon-small" href="/atom.xml">
+         <span class="fa-stack fa-lg">
+           <i class="fa fa-rss fa-inverse" style="color:orange"></i>
+         </span>
+        </a>
+       </li>
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/data-structures/" class="menu-link">D&S</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/algorithms/" class="menu-link">Algo</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/programming-languages/" class="menu-link">PL</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/system/" class="menu-link">System</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tools/" class="menu-link">Tools</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+
+
+        <li class="list-item" style="margin: 0">
+          <a class="icon-small" href="/search">
+           <span class="fa-stack">
+             <i class="fa fa-search"></i>
+           </span>
+          </a>
+         </li>
+
+         
+      <li class="list-item" style="margin: 0">
+        <a class="icon-small" href="/atom.xml">
+         <span class="fa-stack fa-lg">
+           <i id="rss-icon" class="fa fa-rss fa-inverse"></i>
+         </span>
+        </a>
+       </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>How to Learn Linux? (from Zero to Hero)</h2>
+  <p class="post-date">2019-10-22</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content">
+      <!-- block -->
+<p>How to Learn Linux? (from Zero to Hero), a guide for learning Linux</p>
+<!-- block -->
+
+<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p> I still remember the days when I started using Linux with Ubuntu 4.04 in 2004. Students apply for installation CD on Ubuntu’s website. We will receive a package which contains a CD several days later.</p>
+<p><img src="/images/2019_09_30_learn-linux.org_20191022_222735.png" alt="file:img/2019_09_30_learn-linux.org_20191022_222735.png"></p>
+<p> How nice! Since then, I spent most of the programming time on the Linux platform and learned much from Linux and the community. I must say, with learning Linux, I become a better programmer.</p>
+<p> I always suggest beginner start with Linux when learning to program. But how to learn it, what exactly do we want to learn? Here is a guide for the beginner to learn Linux from scratch.</p>
+<h2 id="Why-learn-Linux"><a href="#Why-learn-Linux" class="headerlink" title="Why learn Linux?"></a>Why learn Linux?</h2><p> Maybe you have heard that Linux is cooler tools for hackers, or that Linux is more developer-friendly. In my opinion, there are three critical reasons for learning Linux.</p>
+<ul>
+<li>The first truth is: Linux has dominated the server market, most computing servers are running Linux. As a developer, especially for Web development, you need to write code run on Linux, deploy code on Linux, and you maybe need to maintain a Linux server.</li>
+</ul>
+<ul>
+<li>Learn system programming API and low-level programming. With the trend of <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Internet_of_things">IoT</a>, there is more software involving low-level programming, coding with standard C/C++ is a requirement for this kind of task. This kind of development usually needs proficient skills with Linux.</li>
+</ul>
+<ul>
+<li>Learn system fundamentals and internals. Linux is an open-source project, maintained by thousands of developers around the world. There are many good books and resources about Linux internals, which will help you much with the learning operation system.</li>
+</ul>
+<h2 id="Linux-learn-guide"><a href="#Linux-learn-guide" class="headerlink" title="Linux learn guide"></a>Linux learn guide</h2><p> Different targets should follow different learning paths. We could roughly divide the goal into several levels:</p>
+<ul>
+<li><p>Daily usage</p>
+</li>
+<li><p>Application development on Linux, operation, and maintenance</p>
+</li>
+<li><p>System development</p>
+</li>
+<li><p>Kernel development</p>
+<p>Every previous step is a precondition to the next. If you don’t know how to use Linux as a daily OS, you can not use it as a development OS, and of course, dig into internals will be much harder.</p>
+<p><img src="/images/2019_09_30_learn-linux.org_20191022_224622.png" alt="file:img/2019_09_30_learn-linux.org_20191022_224622.png"></p>
+<p>Find Linus’s book: <a target="_blank" rel="noopener" href="https://amzn.to/2PaxI7m">Just for Fun: The Story of an Accidental Revolutionary</a>, let’s begin the funny journey.</p>
+</li>
+</ul>
+<h2 id="Daily-usage"><a href="#Daily-usage" class="headerlink" title="Daily usage"></a>Daily usage</h2><p> Daily usage includes:</p>
+<ul>
+<li><p>How to login and logout</p>
+</li>
+<li><p>How to connect to the Internet</p>
+</li>
+<li><p>How to open the command line</p>
+</li>
+<li><p>How to install and uninstall software using the command line</p>
+</li>
+<li><p>How to edit text</p>
+</li>
+<li><p>How to create, move, delete files</p>
+</li>
+<li><p>How to view the contents of a file and extract the file ……</p>
+<p>The hardest part of this stage is the transition from the graphical interface to thecommand line. My suggestion is like learning swimming, try to throw yourself into the water,</p>
+</li>
+<li><p>*you will never learn how to swim if you don’t get into the water**.</p>
+<p><img src="/images/2019_09_30_learn-linux.org_20191022_223135.png" alt="file:img/2019_09_30_learn-linux.org_20191022_223135.png"></p>
+<p>So, please just try to install a Linux distribution on your PC.</p>
+<p>You can install multiple operating systems on a PC. Don’t even try to use Linux on virtual machines, this will give you a chance to hold back from daily usage on Linux.</p>
+<p>Which Linux distribution should be should beginner to use?</p>
+<p>There are about ten commonly used Linux distributions. Anyone of the top 5 will be OK. Choose mainstream distributions, such as Ubuntu, Centos, etc. It is easier to solve problems when encountering problems.</p>
+<p>There main differences among them are graphical interface and package management.</p>
+</li>
+</ul>
+<h2 id="Application-Development-on-Linux"><a href="#Application-Development-on-Linux" class="headerlink" title="Application Development on Linux"></a>Application Development on Linux</h2><p> There are various kinds of application development, including Web application, desktop GUI application, command line, or application for multiple tasks and computing.</p>
+<p> You maybe need to learn Web development, C/C++/Python, or any other programming languages.</p>
+<p> Developing on Linux is a different experience compared with Windows. Unlike on Windows, developers usually have an IDE for development.</p>
+<p> <img src="/images/2019_09_30_learn-linux.org_20191022_223441.png" alt="file:img/2019_09_30_learn-linux.org_20191022_223441.png"></p>
+<p> Most of the time, your toolchain is a set of various little tools, and you need to run them and combine them in a shell.</p>
+<p> You need to learn:</p>
+<ul>
+<li><p>How to write a code in an editor, commonly editor should be Vim/Emacs and VScode.</p>
+</li>
+<li><p>How to compile or build your program</p>
+</li>
+<li><p>How to launch your program from the command line</p>
+</li>
+<li><p>How to locate bugs, run a program with debugger</p>
+<p>You should learn some shell scripts programming, at least to the level that you could understand most simple shell scripts. Currently, most developer prefers to use Python/Ruby to replace shell scripts, but there are still many existing scripts.</p>
+<p>Try to set up your development environment on Linux, here are <a target="_blank" rel="noopener" href="https://dev.to/jonathanbossenger/my-2019-web-development-setup-4bb7">some tools</a> may be used. Remember to keep tracking of your configurations. I use Git for configuration version control.</p>
+<p>This stage, of course, involve much other specific domain knowledge, this depends on your choose technology and framework, for the most modern programming language, such as Ruby/Python/Rust, it will be easier to set up the environment.</p>
+<p><img src="/images/2019_09_30_learn-linux.org_20191022_223748.png" alt="file:img/2019_09_30_learn-linux.org_20191022_223748.png"></p>
+<p>If you set up your environment properly, your coding productivity will x5 than before.</p>
+<p><a target="_blank" rel="noopener" href="https://amzn.to/2P77J0j">Linux Bible</a> and <a target="_blank" rel="noopener" href="https://amzn.to/2W7COCz">The Linux Command Line: A Complete Introduction</a> will give you good introduction for the command line and other preparations.</p>
+<p>This stage is a long learning process, keep patience.</p>
+</li>
+</ul>
+<h2 id="System-development"><a href="#System-development" class="headerlink" title="System development"></a>System development</h2><p> If your task is to develop some low-level software, such as storage or networking application, you need to learn Linux system development.</p>
+<p> System programming is different from most application development, system programming involving more OS or networking stuff. You need to know the details most commonly used <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_kernel_interfaces">Linux Kernel Interface</a>. For historical and performance reasons, system development usually needs to know C/C++, system API provided in C.</p>
+<p> The skill of gdb debugging is a need. You could refer to the <a target="_blank" rel="noopener" href="https://amzn.to/2P8LEyz">Debugging with GDB</a>, and <a target="_blank" rel="noopener" href="http://valgrind.org/">Valgrind</a> is another useful memory checking tool.</p>
+<p> <img src="/images/linux-system-programming.jpg" alt="file:img/linux-system-programming.jpg"></p>
+<p> <a target="_blank" rel="noopener" href="https://amzn.to/2qBjVML">Linux System Programming: Talking Directly to the Kernel and C Library</a></p>
+<p> <a target="_blank" rel="noopener" href="https://amzn.to/33TVtod">The Linux Programming Interface: A Linux and UNIX System Programming Handbook</a>  are both excellent resources for the Linux programming interface.</p>
+<p> Networking is another relevant field for system programming, <a target="_blank" rel="noopener" href="https://amzn.to/33T7xWJ">Unix Network Programming</a> will be your best choice.</p>
+<p> This is also not an easy stage. Less programmer has the ability to coding in C/C++. It’s a trend that the new generation prefers to modern and high-level programming languages, such as Rust, Python.</p>
+<p>Remember the fundamentals are the same, the core knowledge of system programming will sharpen your skills, <a target="_blank" rel="noopener" href="https://www.coderscat.com/to-be-a-programmer">expand your design ability</a>.</p>
+<h2 id="Kernel-development"><a href="#Kernel-development" class="headerlink" title="Kernel development"></a>Kernel development</h2><p> The requirements of Kernel’s development are relatively high. You will be a HERO after finish this. At this time, you should have studied the courses of the operating system.</p>
+<p> The Kernel contains submodules such as memory management, process scheduling, virtual memory, file system, device drivers, etc. Of course, more related commands are also necessary for development, such as readelf, nm, ipcs, iostat, objdump, free, chrt, pmap, uptime, top, pidstat, etc.</p>
+<p> <img src="/images/linux-kernel-map.png" alt="file:img/linux-kernel-map.png"></p>
+<p>Robot Love’s <a target="_blank" rel="noopener" href="https://amzn.to/33VGfiD">Linux Kernel Development</a> is the best introduction book for Kernel development. It will give you a good big picture of the Kernel.</p>
+<p> Another good book list for Kernel development:</p>
+<p> <a target="_blank" rel="noopener" href="https://amzn.to/2PaJmz8">Modern Operating System</a></p>
+<p> <a target="_blank" rel="noopener" href="https://amzn.to/2P7Et9S">Understanding the Linux Kernel</a></p>
+<p> <a target="_blank" rel="noopener" href="https://amzn.to/2JevNL3">Professional Linux Kernel Architecture</a></p>
+<p> Remember, because there are too many fields in Kernel development, it’s almost impossible for beginners to start all the fields. Your learning strategy should:</p>
+<ul>
+<li>Get the big picture of Linux Kernel. A good method is to read Robot Love’s book. An alternative strategy is to learn the <a target="_blank" rel="noopener" href="https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/old-versions/">old version of Linux</a> because the codebase is much smaller, you could spend about two weeks to finish it. <a target="_blank" rel="noopener" href="https://pdos.csail.mit.edu/6.828/2012/xv6.html">xv6</a> is another good choice, with good <a target="_blank" rel="noopener" href="https://pdos.csail.mit.edu/6.828/2019/reference.html">reading materials</a>.</li>
+</ul>
+<ul>
+<li>Focus one specific submodule, choose one submodule which most interested you, and try to understand the details and design of it. Try to involve the Kernel development community, read the <a target="_blank" rel="noopener" href="https://www.kernel.org/doc/html/v4.16/process/howto.html">document</a>, join <a target="_blank" rel="noopener" href="https://lkml.org/">Linux mail list</a>, review other’s patch and try to submit yours to Kernel. Linux Kernel community has its collaboration style. You need to learn the rules. It will be a milestone when your first patch is accepted. If you have enough knowledge and skills for one subdomain, it will be much easier to transfer to another one.</li>
+</ul>
+<p>It will cost many years to be a master of Kernel programming, happy hacking, and have fun.</p>
+
+    </section>
+
+     <div>
+          <p style="text-align:center; color: #12472d; margin-left: 2%; margin-right: 2%;"><b>Join my <a target="_blank" rel="noopener" href="http://codercat.substack.com">Email List</a> for more insights, It's Free!&#128523;	</b></p>
+          <iframe src="https://codercat.substack.com/embed" width="96%" height="350" style="border:2px solid #EEE; background:rgb(248, 244, 244); margin-left: 2%; margin-right: 2%;" frameborder="1" scrolling="no"></iframe>
+      </div>
+    
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#System" >
+    <span class="tag-code-index">System</span>
+  </a>
+
+
+      </div>
+    
+
+    <div class="sharethis-inline-share-buttons"></div>
+
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/leetcode-3sum-closest/">
+        <span class="nav-arrow">← </span>
+        
+          LeetCode: 3Sum Closest
+        
+      </a>
+    
+    
+        <a class="nav-right" href="/leetcode-palindrome-number/">
+            
+                LeetCode: Palindrome Number
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+
+    <!-- NAV END -->
+
+    <script src="https://utteranc.es/client.js"
+            repo="nickmose8/coderscat-comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+      <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title"></strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Foreword"><span class="toc-nav-text">Foreword</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Why-learn-Linux"><span class="toc-nav-text">Why learn Linux?</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Linux-learn-guide"><span class="toc-nav-text">Linux learn guide</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Daily-usage"><span class="toc-nav-text">Daily usage</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Application-Development-on-Linux"><span class="toc-nav-text">Application Development on Linux</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#System-development"><span class="toc-nav-text">System development</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Kernel-development"><span class="toc-nav-text">Kernel development</span></a></li></ol>
+    
+  </div>
+</aside>
+
+  
+  <!-- Catalog END -->
+
+</main>
+
+
+
+
+<script>
+  (function () {
+    var url = 'http://coderscat.com/how-to-learn-linux/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer" id="footer">
+    <p class="copyright">
+        &copy; 2022 | CodersCat
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+ var hasLine = 'false';
+ async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+     $('figure pre').each(function(i, block) {
+         var figure = $(this).parents('figure');
+         if (hasLine === 'false') {
+             figure.find('.gutter').hide();
+         }
+         var lang = figure.attr('class').split(' ')[1] || 'code';
+         var codeHtml = $(this).html();
+         var codeTag = document.createElement('code');
+         codeTag.className = lang;
+         codeTag.innerHTML = codeHtml;
+         $(this).attr('class', '').empty().html(codeTag);
+         figure.attr('data-lang', lang.toUpperCase());
+     });
+ })
+</script>
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
