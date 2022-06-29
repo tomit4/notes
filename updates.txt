@@ -22,3 +22,7 @@ neovim markdown-preview fix:
 
 :call mkdp#util#install()
 :TSUpdate all
+
+Install whois and dig
+
+doas pacman -S bind whois
