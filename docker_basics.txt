@@ -41,7 +41,7 @@ docker logs imagename
 Accessing the container (dependent on type of container):
 
 doas docker attach containerid
-doas exec -it mariadbtest bash
+doas docker exec -it mariadbtest bash
 
 Removing images/containers (stop image first):
 
