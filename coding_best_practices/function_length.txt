@@ -1,0 +1,22 @@
+Taken from:
+https://stackoverflow.com/questions/475675/when-is-a-function-too-long
+
+
+Here is a list of red-flags (in no particular order) that could indicate that a function is too long:
+
+    Deeply nested control structures: e.g. for-loops 3 levels deep or even just 2 levels deep with nested if-statements that have complex conditions.
+
+    Too many state-defining parameters: By state-defining parameter, I mean a function parameter that guarantees a particular execution path through the function. Get too many of these type of parameters and you have a combinatorial explosion of execution paths (this usually happens in tandem with #1).
+
+    Logic that is duplicated in other methods: poor code re-use is a huge contributor to monolithic procedural code. A lot of such logic duplication can be very subtle, but once re-factored, the end result can be a far more elegant design.
+
+    Excessive inter-class coupling: this lack of proper encapsulation results in functions being concerned with intimate characteristics of other classes, hence lengthening them.
+
+    Unnecessary overhead: Comments that point out the obvious, deeply nested classes, superfluous getters and setters for private nested class variables, and unusually long function/variable names can all create syntactic noise within related functions that will ultimately increase their length.
+
+    Your massive developer-grade display isn't big enough to display it: Actually, displays of today are big enough that a function that is anywhere close to its height is probably way too long. But, if it is larger, this is a smoking gun that something is wrong.
+
+    You can't immediately determine the function's purpose: Furthermore, once you actually do determine its purpose, if you can't summarize this purpose in a single sentence or happen to have a tremendous headache, this should be a clue.
+
+In conclusion, monolithic functions can have far-reaching consequences and are often a symptom of major design deficiencies. Whenever I encounter code that is an absolute joy to read, it's elegance is immediately apparent. And guess what: the functions are often very short in length.
+
