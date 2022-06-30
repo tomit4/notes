@@ -27,6 +27,7 @@ Install whois and dig
 
 doas pacman -S bind whois
 
-Toggle cmus to green theme
+Toggle cmus to green theme (toggle view by pressing 2 and set resumt to true)
 
 :colorscheme green
+:set resume=true
