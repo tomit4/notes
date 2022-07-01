@@ -21,3 +21,13 @@ Look up the select command (online, man page is not as helpful). It makes a nice
 install wireshark-cli
 
 doas pacman -S wireshark-cli
+
+doas groupadd wireshark
+
+doas usermod wireshark brian
+
+doas chmod +x /usr/bin/dumpcap
+
+test with:
+
+tshark
