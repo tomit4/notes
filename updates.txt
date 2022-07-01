@@ -18,16 +18,6 @@ https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know
 
 Look up the select command (online, man page is not as helpful). It makes a nice simple selectio menu for your users in bash
 
-neovim markdown-preview fix:
+install wireshark-cli
 
-:call mkdp#util#install()
-:TSUpdate all
-
-Install whois and dig
-
-doas pacman -S bind whois
-
-Toggle cmus to green theme (toggle view by pressing 2 and set resumt to true)
-
-:colorscheme green
-:set resume=true
+doas pacman -S wireshark-cli
