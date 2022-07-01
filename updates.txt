@@ -31,3 +31,7 @@ doas chmod +x /usr/bin/dumpcap
 test with:
 
 tshark
+
+And also install termshark once that's up and running:
+
+doas pacman -S termshark
