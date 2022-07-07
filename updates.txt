@@ -18,4 +18,3 @@ https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know
 
 Look up the select command (online, man page is not as helpful). It makes a nice simple selectio menu for your users in bash
 
-put C-Tut-4.02 ctext.pdf and ctutor.pdf on kobo
