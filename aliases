@@ -190,6 +190,7 @@ alias sudoku="sku"
 #Particularly useful commands more to remember than to use as alias:
 alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
+alias {rlast,dlast}="sed -i '$ d'" # removes last line of file
 alias athena="athena-jot"
 alias view-in-tty="fim"
 alias snarfsnarf="snarf"
