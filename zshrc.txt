@@ -141,7 +141,8 @@ fi
 # Set up vim mode
 bindkey -v
 
-alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
+# alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
+alias home="cd $HOME && $HOME/scripts/zhome.sh && unset sdir"
 
 source ~/.aliases
 # Plugins (that need to be at the end of the zshrc script)
