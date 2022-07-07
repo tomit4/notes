@@ -8,8 +8,12 @@ txtred=${txtbld}$(tput setaf 1)
 txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
+# Notes on features to add: Have an option for saving password,
+# rather than automatically just saving it...
+# Possibly add feature for gitmoji??
+
 # Intro Prompt
-echo "${txtblue}bgit: a handy shell script for automating the standard git process"
+echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
 
 # Reset output style
 tput bold & tput setaf 7
@@ -19,107 +23,246 @@ numrepos=$(git remote | wc -l)
 
 # If there are no git repositories in this directory...
 if [ $numrepos -eq 0 ] ; then
-    echo "${txtred}no git repositories in this directory...exiting bgit${txtwhite}"
-    exit 1
-fi
+    echo "${txtgreen}no git repository found, executing git init...${txtwhite}"
+    while [ true ]
+    do
+    #Prompts the user if they'd like to initialize repository
+    read -e -r -p "${txtwhite}initialize repository?(y/n): ${txtyellow}" init
+        if [[ $init == "n" || $init = "no" ]]; then
+            echo "${txtred}no git repository initialized...exiting${txtwhite}"
+            break
+        elif [[ $init == "y" || $init == "yes" ]] ; then
 
-# creates a list of repos and puts them in an array
-repoarray=($(git remote))
+            # Creates a default README.md
+            echo -e "## A Simple README\n\nSome Text" > README.md
+            # Creates a default .gitignore
+            echo -e "node_modules\n*.env\n*.out\n.gitignore" > .gitignore
+            # Initializes git repository cwd...
+            git init
+            # and adds newly created README.md
+            git add README.md
 
-# Grabs all new files
-newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+            while [ true ];
+            do
+                read -e -r -p "${txtwhite}would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
+                if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}enter your username: ${txtyellow}" uname
+                    if [[ -n $uname ]] ; then
+                        git config user.name $uname
+                        read -e -r -p "${txtwhite}enter your email: ${txtyellow}" uemail
+                        if [[ -n $uemail ]] ; then
+                            git config user.email $uemail
+                            break
+                        else
+                            echo "${txtblue}no email entered, defaulting to global value${txtwhite}"
+                            break
+                        fi
+                    else
+                        echo "${txtblue}no username entered, defaulting to global value${txtwhite}"
+                        break
+                    fi
+                else
+                    echo "${txtblue}defaulting to global username/password${txtwhite}"
+                    break
+                fi
+            done
 
-# Grabs all modified files
-modified=$(git status --short | grep M | awk '{print $2}' | tr '\n' ' ')
+            git config commit.gpgsign false
 
-# Grabs all deleted files
-deleted=$(git status --short | grep D | awk '{print $2}' | tr '\n' ' ')
+            read -e -r -p "${txtwhite}include gitmoji?(y/n): ${txtyellow}" gittymoji
+            if [[ $gittymoji == "y" || $gittymoji == "yes" ]] ; then
+                gmoji=":tada:"
+            else
+                gmoji=""
+            fi
 
-# Reports what is staged for commit
-# If there is anything to commit...
-if [[ ! -z $newfiles || ! -z $modified || ! -z $deleted ]] ; then
-    # Let the user know what is staged for commit
-    echo "${txtwhite}The following files are staged for commit:"
-# Otherwise, if there isn't anything to commit...
-else
-    # Let the user know that everything is up to date
-    echo "${txtred}everything up-to-date...exiting bgit${txtwhite}"
-    # and exit the program
-    exit 0
-fi
-
-# Let the user know what is staged for commit
-if [[ $newfiles ]]; then
-    echo "${txtgreen}ADDED: ${txtgreen}$newfiles"
-fi
-if [[ $modified ]]; then
-    echo "${txtblue}MODIFIED: ${txtblue}$modified"
-fi
-if [[ $deleted ]]; then
-    echo "${txtred}DELETED: ${txtred}$deleted"
-fi
-
-
-while [ true ]
-do
-    # Prompts user if they'd like to commit the changes
-    read -e -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
-    # If the user chooses to commit the changes...
-    if [[ $change == "y" || $change == "yes" ]] ; then
-
-        # Grabs commit message
-        while [ true ]
-        do
-            # Prompts the user to input their commit message
-            read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
-            cmessage=("$message")
-            # if the user inputted a commit message...
-            if [ -n "$message" ] ; then
+            while [ true ]
+            do
+                read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
+                cmessage=("$message")
+                # capitalizes first letter of commit message
+                cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
+                # if the user entered a commit message over 50 characters...
+                if [ "${#message}" -ge 51 ] ; then
+                    echo "${txtred}commit message is too large!"
+                    echo "${txtred}please limit to 50 or less characters${txtwhite}"
+                # if the user inputted a commit message..
+                elif [ -n "$message" ] ; then
+                    git commit -m "$gmoji $cmessage"
                 # then break out of the while loop and continue with the commit...
                 break
-            # if the user did NOT input a commit message...
+                # if the user did NOT input a commit message...
+                else
+                    # tell the user to do so or to quit
+                    echo "${txtred}commit message is empty, please write a commit message"
+                    echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
+                fi
+            done
+
+
+            while [ true ]
+            do
+            read -e -r -p "${txtwhite}change branch name?(y/n): ${txtyellow}" chbranch
+                if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}branch name?(i.e. 'main'): ${txtyellow}" branch
+                    if [ -n "$branch" ] ; then
+                        git branch -M $branch
+                        break
+                    else
+                        echo "${txtred}branch name is empty, please enter branch name!${txtwhite}"
+                    fi
+                else
+                    echo "${txtblue}branch name will be left as master${txtwhite}"
+                    break
+                fi
+            done
+            while [ true ]
+            do
+            read -e -r -p "${txtwhite}Please enter remote to add: ${txtyellow}" remote
+            if [[ -n $remote ]] ; then
+                read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
+                tput bold & tput setaf 7
+                if [[ -n $repo ]] ; then
+                    git remote add $remote "https://codeberg.org/z3rOR0ne/$repo"
+                    git push -u $remote $branch
+                    echo "${txtgreen}Git repository created!!${txtwhite}"
+                    break
+                else
+                    echo "${txtred}Please enter a name for repository!${txtwhite}"
+                fi
             else
-                # tell the user to do so or to quit
-                echo "${txtred}commit message is empty, please write a commit message"
-                echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
+                echo "${txtred}Please enter a name for remote!${txtwhite}"
             fi
-        done
-
-        # Reset output style
-        tput bold & tput setaf 7
-
-        # adds the modified and new files (suppresses message anyways if no files are to be committed)
-        if [[ $newfiles || $modified ]] ; then
-            git config advice.addEmptyPathspec false
-            git add $modified $newfiles ;
+            done
+            break
+        else
+            break
         fi
-        # commits the user's message (multi-word supported)
-        git commit -m "$cmessage" ;
+    done
 
-        # pushes the commit to each repository
-        for ((i = 0; i < $numrepos; i++)) ; do
-            git push ${repoarray[i]} ;
-        done
+# Otherwise, if there already is a .git directory...
+else
 
-        exit 0
-    # If the user chooses to not the commit the changes ...
-    elif [[ $change == "n" || $change == "no" ]] ; then
+    # creates a list of repos and puts them in an array
+    repoarray=($(git remote))
+    # Grabs all new files
+    newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+    # Grabs all modified files
+    modified=$(git status --short | grep M | awk '{print $2}' | tr '\n' ' ')
+    # Grabs all deleted files
+    deleted=$(git status --short | grep D | awk '{print $2}' | tr '\n' ' ')
 
-        # Reset output style
-        tput bold & tput setaf 7
-
-        # Report the git status
-        git status --short
-
-        # And let the user know no changes were committed
-        echo "${txtred}no changes committed"
-
-        exit 0
-    # If the user chooses to quit...
-    elif [[ $change == "q" || $change == "quit" ]] ; then
-        exit 0
-    # If the user continues to just press enter...
+    # Reports what is staged for commit
+    # If there is anything to commit...
+    if [[ ! -z $newfiles || ! -z $modified || ! -z $deleted ]] ; then
+        # Let the user know what is staged for commit
+        echo "${txtwhite}The following files are staged for commit:"
+    # Otherwise, if there isn't anything to commit...
     else
-        echo "${txtred}please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit${txtwhite}"
+        # Let the user know that everything is up to date
+        echo "${txtred}everything up-to-date...exiting bgit${txtwhite}"
+        # and exit the program
+        exit 0
     fi
-done
+
+    # Let the user know what is staged for commit
+    if [[ $newfiles ]]; then
+        echo "${txtgreen}ADDED: ${txtgreen}$newfiles"
+    fi
+    if [[ $modified ]]; then
+        echo "${txtblue}MODIFIED: ${txtblue}$modified"
+    fi
+    if [[ $deleted ]]; then
+        echo "${txtred}DELETED: ${txtred}$deleted"
+    fi
+
+    while [ true ]
+    do
+        # Prompts user if they'd like to commit the changes
+        read -e -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
+        # If the user chooses to commit the changes...
+        if [[ $change == "y" || $change == "yes" ]] ; then
+            # prompt if user wants to specify gitmoji:
+            while [ true ]
+            do
+                read -e -r -p "${txtwhite}add a gitmoji?(y/n): ${txtyellow}" gmojiprompt
+                if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}enter gitmoji: ${txtyellow}" gitmoji
+                    gitmoji=":$gitmoji:"
+                    break
+                else
+                    echo "${txtblue}no gitmoji specified...${txtwhite}"
+                    gitmoji=""
+                    break
+                fi
+            done
+            # Grabs commit message
+            while [ true ]
+            do
+                # Prompts the user to input their commit message
+                # (does not allow for multiple message commits)
+                read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
+                cmessage=("$message")
+                # capitalizes first character of commit message
+                cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
+                # if the user entered a commit message over 50 characters...
+                if [ "${#message}" -ge 51 ] ; then
+                    echo "${txtred}commit message is too large!"
+                    echo "${txtred}please limit to 50 or less characters${txtwhite}"
+                # if the user inputted a commit message..
+                elif [ -n "$message" ] ; then
+                    # then break out of the while loop and continue with the commit...
+                    break
+                # if the user did NOT input a commit message...
+                else
+                    # tell the user to do so or to quit
+                    echo "${txtred}commit message is empty, please write a commit message"
+                    echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
+                fi
+            done
+
+            # Reset output style
+            tput bold & tput setaf 7
+
+            # adds the modified and new files
+            # (suppresses message anyways if only deleted files are to be committed)
+            if [[ $newfiles || $modified ]] ; then
+                # also remembers password for 1 hour after last use
+                # (comment out if more security needed, or just use ssh...)
+                echo "${txtgreen}git will remember your password for 1 hour!${txtwhite}"
+                git config credential.helper 'cache --timeout=3600';
+                git config advice.addEmptyPathspec false;
+                git add $modified $newfiles ;
+            fi
+            # commits the user's message (multi-word supported)
+            git commit -m "$gitmoji $cmessage" ;
+
+            # pushes the commit to each repository
+            for ((i = 0; i < $numrepos; i++)) ; do
+                git push ${repoarray[i]} ;
+            done
+
+            echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
+            exit 0
+        # If the user chooses to not the commit the changes ...
+        elif [[ $change == "n" || $change == "no" ]] ; then
+
+            # Reset output style
+            tput bold & tput setaf 7
+
+            # Report the git status
+            git status --short
+
+            # And let the user know no changes were committed
+            echo "${txtred}no changes committed"
+
+            exit 0
+        # If the user chooses to quit...
+        elif [[ $change == "q" || $change == "quit" ]] ; then
+            exit 0
+        # If the user continues to just press enter...
+        else
+            echo "${txtred}please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit${txtwhite}"
+        fi
+    done
+fi

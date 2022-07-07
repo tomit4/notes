@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# A simple bookmarking alias used in conjunction with sdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
+
+# grabs the current $sdir environment variable
+source $HOME/.zshrc
+
+cd $sdir

@@ -11,6 +11,7 @@ declare -a confedit_list=(
 "bspwm - $HOME/.config/bspwm/bspwmrc"
 "sxhkd - $HOME/.config/sxhkd/sxhkdrc"
 "picom - $HOME/.config/picom/picom.conf"
+"dunst - $HOME/.config/dunst/dunstrc"
 "i3 - $HOME/.config/i3/config"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "nvim - $HOME/.config/nvim/lua/config.lua"

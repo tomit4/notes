@@ -16,7 +16,7 @@ helptag="-help"
 archivedir="$HOME/.recycle-bin"
 
 # Show help page
-function helpmessage() 
+function helpmessage()
 {
 
     echo -e "\e[1mUsage: jscurl <url> (no 'https://' necessary)\e[0m"
@@ -35,7 +35,8 @@ function helpmessage()
     echo ""
     echo -e "\e[1mjson/html:\e[0m"
     echo -e "\e[1mjscurl <url> (no 'https://' necessary)\t\t\t\t\t\t    show json page\e[0m"
-    echo -e "\e[1mjscurl -m <url> (no 'https://' necessary)\t\t\t\t\t    show html page\e[0m" echo -e "\e[1mjscurl -w <url> <filename> (no 'https://' or '.html' necessary)\t write html file to ~/.recycle-bin\e[0m"
+    echo -e "\e[1mjscurl -m <url> (no 'https://' necessary)\t\t\t\t\t    show html page\e[0m"
+    echo -e "\e[1mjscurl -w <url> <filename> (no 'https://' or '.html' necessary)\t write html file to ~/.recycle-bin\e[0m"
     echo -e "\e[1mjscurl -j <url> <filename> (no 'https://' or '.json' necessary)\t write json file to ~/.recycle-bin\e[0m"
     echo -e "\e[1mjscurl -h/--help\t\t\t\t\t\t\t\t    show help page\e[0m"
 }

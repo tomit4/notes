@@ -1,0 +1,20 @@
+#/bin/bash
+
+# A simple bookmarking alias used in conjunction with rdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
+
+# grabs the last line of our .zshrc, and grabs the first word
+last_line_first_word=$(awk '{w=$1} END{print w}' $HOME/.zshrc)
+
+# if the last line of our rc file begins with "export"...
+# remove the last line of our rc file
+if [[ $last_line_first_word == "export" ]] ; then
+    sed -i '$ d' $HOME/.zshrc
+fi
+
+# save our current working directory
+sdir=$(pwd)
+
+# and write that directory temporarily into our .zshrc
+echo 'export sdir='$sdir >> $HOME/.zshrc
+# immediately source it to use it in this shell session
+source $HOME/.zshrc
