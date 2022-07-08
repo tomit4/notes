@@ -207,6 +207,7 @@ alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
 
 # programming specific aliases
+alias rc="rustc"
 alias cc="cc -Wall -Werror -Wextra"
 alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
