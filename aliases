@@ -231,8 +231,11 @@ alias bangs="links https://duckduckgo.com/bang_lite.html"
 alias {cdread,cafedread}="links https://cafedread.com"
 alias wikipedia="links https://wikipedia.org"
 alias hackernews="links https://news.ycombinator.com/"
+alias theregister="librewolf https://www.theregister.com &"
 alias apnews="links https://apnews.com"
 alias sheldonbrown="links https://sheldonbrown.com"
+alias {viruscomix,subnormality}="librewolf https://viruscomix.com/subnormality.html &"
+alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 
 # Onion Sites
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
