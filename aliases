@@ -302,6 +302,8 @@ alias hugo="librewolf https://gohugo.io/ &"
 alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
 # for icons(use svg codes as they are faster)
 alias iconify="librewolf https://iconify.design/ &"
+# for domain names
+alias namecheap="librewolf https://namecheap.com/ &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
