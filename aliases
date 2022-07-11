@@ -119,15 +119,6 @@ alias wifi-down="doas ifconfig wlan0 down"
 alias letitsnow="doas docker start snowflake-proxy"
 alias snowfall="doas docker stop snowflake-proxy"
 alias snowlogs="doas docker logs -f snowflake-proxy"
-alias git-a="git add"
-alias git-c="git commit -m"
-alias git-p="git push"
-alias git-s="git status"
-alias git-ss="git status short"
-# for use with notes directory only
-alias git-pn="git push origin-ssh && git push codeberg"
-alias git-l="git log"
-alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
@@ -200,6 +191,23 @@ alias shchk="shellcheck"
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+
+# git aliases
+alias git-a="git add"
+alias git-c="git commit -m"
+alias git-p="git push"
+# undo local file changes and keep your last commit
+alias git-r="git reset --hard"
+# undo local file changes and remove your last commit
+alias git-rrh="git reset --hard HEAD^"
+# keep local file changes and remove your last commit
+alias git-rrs="git reset --soft HEAD^"
+alias git-s="git status"
+alias git-ss="git status short"
+# for use with notes directory only
+alias git-pn="git push origin-ssh && git push codeberg"
+alias git-l="git log"
+alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 
 # tmux session aliases
 alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
