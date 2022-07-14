@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Error handling
+set -e
+set -u
+
 # For styling/colorizing output
 txtbld=$(tput bold)
 txtblue=${txtbld}$(tput setaf 4)
