@@ -42,6 +42,8 @@ if [ $numrepos -eq 0 ] ; then
             # and adds newly created README.md
             git add README.md
 
+            git config commit.gpgsign false
+
             while [ true ];
             do
                 read -e -r -p "${txtwhite}would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
@@ -67,7 +69,18 @@ if [ $numrepos -eq 0 ] ; then
                 fi
             done
 
-            git config commit.gpgsign false
+            while [ true ] ; do
+                read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
+                if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
+                    npm init -y
+                    break
+                else
+                    break
+                fi
+            done
+
+            # Reset output style
+            tput bold & tput setaf 7
 
             read -e -r -p "${txtwhite}include gitmoji?(y/n): ${txtyellow}" gittymoji
             if [[ $gittymoji == "y" || $gittymoji == "yes" ]] ; then
