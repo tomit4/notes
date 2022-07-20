@@ -1,0 +1,5 @@
+# Create github repository from cli
+curl -u $USER:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "testrepo"}'
+
+# Delete github repository from cli
+curl -i -H 'Authorization: token $GH_TOKEN' -X 'DELETE' https://api.github.com/repos/$USER/testrepo --http1.1
