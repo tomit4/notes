@@ -34,11 +34,6 @@ shift $(( $OPTIND - 1 ))
 # BEGIN MAIN SCRIPT
 # =================
 
-if [ -d .git ] ; then
-    git rm "$@"
-    exit 0
-fi
-
 if [ ! -d $archivedir  ] ; then
     if [ ! -w $HOME ] ; then
         echo "$0 failed: can't create $archivedir in $HOME " >&2
@@ -46,6 +41,16 @@ if [ ! -d $archivedir  ] ; then
     fi
     mkdir $archivedir
     chmod 700 $archivedir # A little bit of privacy, please
+fi
+
+if [ -d .git ] ; then
+    for arg
+    do
+        newname="$archivedir/$(date "+%S.%M.%H.%m").$(basename "$arg")"
+        $copy "$arg" "$newname"
+    done
+    git rm "$@"
+    exit 0
 fi
 
 for arg
