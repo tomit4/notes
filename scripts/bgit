@@ -144,13 +144,16 @@ if [ $numrepos -eq 0 ] ; then
                 if [[ -n $repo ]] ; then
 
                     if [[ -n $host && $host="github.com" ]] ; then
-                        echo "Host Site is github.com, creating repository..."
+                        echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
                         source $HOME/.gh_pat
                         curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                        echo -e "${txtgreen}Your \$GH_TOKEN is saved to your clipboard\nSimply enter CTRL+SHIFT+V to paste your token\nWhen prompted for your password${txtwhite}"
+                        echo $GH_TOKEN | xclip -sel clip
                     fi
 
                     git remote add $remote "https://$host/$uname/$repo"
                     git push -u $remote $branch
+                    echo '' | xclip && xclip -selection clipboard /dev/null
 
                     if [[ $host="github.com" ]] ; then
                         echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
