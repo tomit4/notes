@@ -2,7 +2,6 @@
 
 # Error handling
 set -e
-set -u
 
 # For styling/colorizing output
 txtbld=$(tput bold)
@@ -107,17 +106,31 @@ if [ $numrepos -eq 0 ] ; then
             while [ true ]
             do
             uname=$(git config user.name)
-            read -e -r -p "${txtwhite}Please enter remote to add: ${txtyellow}" remote
-            read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
+            read -e -r -p "${txtwhite}Please enter remote to add(i.e. origin): ${txtyellow}" remote
+
+            if [[ -z $remote ]]; then
+                remote="origin"
+            fi
+
+            while [ -z $host ]
+            do
+                read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
+            done
+
             if [[ -n $remote && -n $host ]] ; then
                 read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
                 tput bold & tput setaf 7
                 if [[ -n $repo ]] ; then
 
                     if [[ -n $host && $host="github.com" ]] ; then
-                        echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
                         source $HOME/.gh_pat
-                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                        read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?: " crepo
+
+                        if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+                            echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
+                            curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                        fi
+
                         echo -e "${txtgreen}Your \$GH_TOKEN is saved to your clipboard\nSimply enter CTRL+SHIFT+V to paste your token\nWhen prompted for your password${txtwhite}"
                         echo $GH_TOKEN | xclip -sel clip
                     fi
