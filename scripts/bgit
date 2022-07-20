@@ -11,8 +11,9 @@ txtred=${txtbld}$(tput setaf 1)
 txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
-# Notes on features to add: Have an option for saving password,
-# rather than automatically just saving it...
+# Time to rewrite new version:
+# Features to include:
+# setopts/getopts flags for init,delete repos ( see git_create...txt file in notes)
 
 # Intro Prompt
 echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
@@ -159,7 +160,8 @@ if [ $numrepos -eq 0 ] ; then
 
                 # finally adds the specified remote, host site, username, and repository, and pushes it
                 git remote add $remote "https://$host/$uname/$repo"
-                git push -u $remote $branch
+                git push --set-upstream $remote $branch
+                # git push -u $remote $branch
 
                 if [[ $host="github.com" ]] ; then
                     echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
