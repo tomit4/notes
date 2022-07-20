@@ -266,7 +266,8 @@ else
             if [[ $newfiles || $modified ]] ; then
                 # also remembers password for 1 hour after last use
                 # (comment out if more security needed, or just use ssh...)
-                echo "${txtgreen}git will remember your password for 1 hour!${txtwhite}"
+                echo "${txtgreen}bgit will remember your password for 1 hour!"
+                echo "(doesn't apply to gpg, ssh, or pat)${txtwhite}"
                 git config credential.helper 'cache --timeout=3600';
                 git config advice.addEmptyPathspec false;
                 git add $modified $newfiles ;
