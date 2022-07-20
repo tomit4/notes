@@ -322,7 +322,7 @@ alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias aur='ddgr \!aur "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias wiki='ddgr \!w "${1}"'
-alias gh='ddgr --gb \!gh "${1}"'
+# alias gh='ddgr --gb \!gh "${1}"'
 # must have account to use gitlab bang
 alias glab='ddgr --gb \!glab "${1}"'
 alias red='ddgr \!r "${1}"'

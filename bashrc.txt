@@ -188,7 +188,10 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # END_KITTY_SHELL_INTEGRATION
 
 alias home="xclear && cd /home/brian && clear && history -c && hash -r"
+
+# Various source files (do not place at end of zshrc/bashrc)
 source ~/.aliases
+source ~/.gh_pat
 source /home/brian/.bash_completions/typer.sh
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
