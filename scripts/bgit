@@ -139,7 +139,13 @@ if [ $numrepos -eq 0 ] ; then
                 if [[ -n $host && $host="github.com" ]] ; then
                     read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?: " crepo
 
-                    # if $HOME/.gh_pat doesn't exist, then exits with bash error
+                    # if $HOME/.gh_pat doesn't exist, then exits
+                    if [[ ! -f $HOME/.gh_pat ]]; then
+                        echo "${txtred}Github personal access token doesn't exist"
+                        echo "See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token${txtwhite}"
+                        exit 1
+                    fi
+
                     source $HOME/.gh_pat
 
                     if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
