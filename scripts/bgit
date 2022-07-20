@@ -85,36 +85,7 @@ if [ $numrepos -eq 0 ] ; then
             # Reset output style
             tput bold & tput setaf 7
 
-            read -e -r -p "${txtwhite}include gitmoji?(y/n): ${txtyellow}" gittymoji
-            if [[ $gittymoji == "y" || $gittymoji == "yes" ]] ; then
-                gmoji=":tada:"
-            else
-                gmoji=""
-            fi
-
-            while [ true ]
-            do
-                read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
-                cmessage=("$message")
-                # capitalizes first letter of commit message
-                cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
-                # if the user entered a commit message over 50 characters...
-                if [ "${#message}" -ge 51 ] ; then
-                    echo "${txtred}commit message is too large!"
-                    echo "${txtred}please limit to 50 or less characters${txtwhite}"
-                # if the user inputted a commit message..
-                elif [ -n "$message" ] ; then
-                    git commit -m "$gmoji $cmessage"
-                # then break out of the while loop and continue with the commit...
-                break
-                # if the user did NOT input a commit message...
-                else
-                    # tell the user to do so or to quit
-                    echo "${txtred}commit message is empty, please write a commit message"
-                    echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
-                fi
-            done
-
+            git commit -m ":tada: Initial commit"
 
             while [ true ]
             do
