@@ -44,10 +44,12 @@ if [ $numrepos -eq 0 ] ; then
             # and adds newly created README.md
             git add README.md
 
+            # defaults to not requiring gpg key sign
             git config commit.gpgsign false
 
             while [ true ];
             do
+                # prompts user to change default username/email and changes them if they'd like (no input defaults to global values)
                 read -e -r -p "${txtwhite}would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
                 if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
                     read -e -r -p "${txtwhite}enter your username: ${txtyellow}" uname
@@ -72,6 +74,7 @@ if [ $numrepos -eq 0 ] ; then
             done
 
             while [ true ] ; do
+                # initializes standard html/css/javascript project (incomplete)
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
                     npm init -y
@@ -84,10 +87,12 @@ if [ $numrepos -eq 0 ] ; then
             # Reset output style
             tput bold & tput setaf 7
 
+            # sane default initial commit message
             git commit -m ":tada: Initial commit"
 
             while [ true ]
             do
+            # allows user to change default branch name (no input defaults to "master")
             read -e -r -p "${txtwhite}change branch name?(y/n): ${txtyellow}" chbranch
                 if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
                     read -e -r -p "${txtwhite}branch name?(i.e. 'main'): ${txtyellow}" branch
@@ -98,60 +103,67 @@ if [ $numrepos -eq 0 ] ; then
                         echo "${txtred}branch name is empty, please enter branch name!${txtwhite}"
                     fi
                 else
-                    echo "${txtblue}branch name will be left as master${txtwhite}"
+                    echo "${txtblue}branch name will be left as ${txtyellow}'master'${txtwhite}"
                     branch="master"
                     break
                 fi
             done
+
+            # main git init loop
             while [ true ]
             do
-            uname=$(git config user.name)
-            read -e -r -p "${txtwhite}Please enter remote to add(i.e. origin): ${txtyellow}" remote
+                uname=$(git config user.name)
+                read -e -r -p "${txtwhite}Please enter remote to add(i.e. origin): ${txtyellow}" remote
 
-            if [[ -z $remote ]]; then
-                remote="origin"
-            fi
-
-            while [ -z $host ]
-            do
-                read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
-            done
-
-            if [[ -n $remote && -n $host ]] ; then
-                read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
-                tput bold & tput setaf 7
-                if [[ -n $repo ]] ; then
-
-                    if [[ -n $host && $host="github.com" ]] ; then
-                        source $HOME/.gh_pat
-                        read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?: " crepo
-
-                        if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
-                            echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
-                            curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
-                        fi
-
-                        echo -e "${txtgreen}Your \$GH_TOKEN is saved to your clipboard\nSimply enter CTRL+SHIFT+V to paste your token\nWhen prompted for your password${txtwhite}"
-                        echo $GH_TOKEN | xclip -sel clip
-                    fi
-
-                    git remote add $remote "https://$host/$uname/$repo"
-                    git push -u $remote $branch
-                    echo '' | xclip && xclip -selection clipboard /dev/null
-
-                    if [[ $host="github.com" ]] ; then
-                        echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
-                    else
-                        echo "${txtgreen}Git repository initiated!!${txtwhite}"
-                    fi
-
-                    break
-                else
-                    echo "${txtred}Please enter a name for repository!${txtwhite}"
+                # if the user doesn't enter anything for the remote prompt, it defaults to origin
+                if [[ -z $remote ]]; then
+                    remote="origin"
                 fi
-            else
-                echo "${txtred}Please enter a name for remote!${txtwhite}"
-            fi
+
+                # infinitely prompts the user for a host site until something is entered
+                while [ -z $host ]
+                do
+                    read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
+                done
+
+                # similarly infinitely prompts the user for a repository name
+                while [ -z $repo ]
+                do
+                    read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
+                done
+
+                # Reset output style
+                tput bold & tput setaf 7
+
+                # bgit uses github api if github.com is defined as host site
+                if [[ -n $host && $host="github.com" ]] ; then
+                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?: " crepo
+
+                    # if $HOME/.gh_pat doesn't exist, then exits with bash error
+                    source $HOME/.gh_pat
+
+                    if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+                        echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
+                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                    fi
+
+                    echo -e "${txtblue}Your \$GH_TOKEN is saved to your clipboard...\nsimply enter CTRL+SHIFT+V to paste your token...\nwhen prompted for your password${txtwhite}"
+                    echo $GH_TOKEN | xclip -sel clip
+                fi
+
+                # finally adds the specified remote, host site, username, and repository, and pushes it
+                git remote add $remote "https://$host/$uname/$repo"
+                git push -u $remote $branch
+
+                if [[ $host="github.com" ]] ; then
+                    echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
+                    # clears $GH_TOKEN from clipboard
+                    echo '' | xclip && xclip -selection clipboard /dev/null
+                else
+                    echo "${txtgreen}Git repository initiated!!${txtwhite}"
+                fi
+
+                break
             done
             break
         else
