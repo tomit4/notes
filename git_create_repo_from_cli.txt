@@ -1,1 +1,0 @@
-curl -u $USER:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "testrepo"}'
