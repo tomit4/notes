@@ -14,7 +14,6 @@ txtwhite=${txtbld}$(tput setaf 7)
 
 # Notes on features to add: Have an option for saving password,
 # rather than automatically just saving it...
-# Possibly add feature for gitmoji??
 
 # Intro Prompt
 echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
@@ -130,19 +129,35 @@ if [ $numrepos -eq 0 ] ; then
                     fi
                 else
                     echo "${txtblue}branch name will be left as master${txtwhite}"
+                    branch="master"
                     break
                 fi
             done
             while [ true ]
             do
+            uname=$(git config user.name)
             read -e -r -p "${txtwhite}Please enter remote to add: ${txtyellow}" remote
-            if [[ -n $remote ]] ; then
+            read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
+            if [[ -n $remote && -n $host ]] ; then
                 read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
                 tput bold & tput setaf 7
                 if [[ -n $repo ]] ; then
-                    git remote add $remote "https://codeberg.org/z3rOR0ne/$repo"
+
+                    if [[ -n $host && $host="github.com" ]] ; then
+                        echo "Host Site is github.com, creating repository..."
+                        source $HOME/.gh_pat
+                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                    fi
+
+                    git remote add $remote "https://$host/$uname/$repo"
                     git push -u $remote $branch
-                    echo "${txtgreen}Git repository created!!${txtwhite}"
+
+                    if [[ $host="github.com" ]] ; then
+                        echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
+                    else
+                        echo "${txtgreen}Git repository initiated!!${txtwhite}"
+                    fi
+
                     break
                 else
                     echo "${txtred}Please enter a name for repository!${txtwhite}"
