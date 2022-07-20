@@ -42,8 +42,6 @@ if [ $numrepos -eq 0 ] ; then
             echo -e "node_modules\n*.env\n*.out\n.gitignore" > .gitignore
             # Initializes git repository cwd...
             git init
-            # and adds newly created README.md
-            git add README.md
 
             # defaults to not requiring gpg key sign
             git config commit.gpgsign false
@@ -79,6 +77,13 @@ if [ $numrepos -eq 0 ] ; then
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
                     npm init -y
+                    npm install -D nodemon
+                    touch index.html
+                    mkdir scripts
+                    mkdir styles
+                    touch scripts/index.js
+                    touch styles/styles.css
+                    sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
                     break
                 else
                     break
@@ -89,6 +94,7 @@ if [ $numrepos -eq 0 ] ; then
             tput bold & tput setaf 7
 
             # sane default initial commit message
+            git add .
             git commit -m ":tada: Initial commit"
 
             while [ true ]
@@ -138,7 +144,10 @@ if [ $numrepos -eq 0 ] ; then
 
                 # bgit uses github api if github.com is defined as host site
                 if [[ -n $host && $host="github.com" ]] ; then
-                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?(y/n): " crepo
+                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
+
+                    # Reset output style
+                    tput bold & tput setaf 7
 
                     # if $HOME/.gh_pat doesn't exist, then exits
                     if [[ ! -f $HOME/.gh_pat ]]; then
