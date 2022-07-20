@@ -137,7 +137,7 @@ if [ $numrepos -eq 0 ] ; then
 
                 # bgit uses github api if github.com is defined as host site
                 if [[ -n $host && $host="github.com" ]] ; then
-                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?: " crepo
+                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?(y/n): " crepo
 
                     # if $HOME/.gh_pat doesn't exist, then exits
                     if [[ ! -f $HOME/.gh_pat ]]; then
