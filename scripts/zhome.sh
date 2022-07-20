@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo '' | xclip && xclip -selection clipboard /dev/null && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
+echo '' | xclip && xclip -selection clipboard /dev/null && clear && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
 
 # grabs the last line of our .zshrc, and grabs the first word
 last_line_first_word=$(awk '{w=$1} END{print w}' $HOME/.zshrc)
