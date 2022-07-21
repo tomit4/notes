@@ -35,3 +35,31 @@ After updating your nvim, make sure to run :LspInstallerInfo and update your lan
 Update rustup
 
 rustup update
+
+***Set up apparmor (basic security measure)
+
+doas pacman -S apparmor apparmor-runit audit audit-runit
+
+doas ln -s /etc/runit/sv/auditd /run/runit/service/
+
+doas sv start auditd
+
+In /etc/rc/apparmor.conf, uncomment enforce mode
+
+In /etc/default/grub, rewrite the line at CMDLINE as such (be exact and careful here):
+
+GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf net.ifnames=0"
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+reboot
+
+If all went well run aa-enabled, which should yield "Yes"
+
+aa-enabled
+
+Now load simple defaults:
+
+doas apparmor_parser /usr/share/apparmor/extra-profiles/
+
+And reboot again, you should have some sane security defaults now.
