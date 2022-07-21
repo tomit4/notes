@@ -36,9 +36,9 @@ fi
 # picom blah blah ...
 
 #Desktop
-# xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
+xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 #Laptop
-brillo -S 70
+# brillo -S 70
 
 picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # Start applets, daemons, etc.
@@ -49,11 +49,14 @@ xbanish &
 xsetroot -cursor_name left_ptr &
 # pulseaudio --start &
 
+# enables AppArmor's aa-notify by default (supposed to be a runit script...)
+aa-notify --user $USER -p -s 1 -w 60 -f /var/log/audit/audit.log
+
 # Notification for Laptop Battery
-echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
-chmod +x /tmp/dsba &
-/tmp/dsba &
-/home/brian/scripts/batnotify &
+# echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
+# chmod +x /tmp/dsba &
+# /tmp/dsba &
+# /home/brian/scripts/batnotify &
 
 # Start pipewire
 /usr/bin/pipewire &
