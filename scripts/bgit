@@ -83,11 +83,11 @@ if [ $numrepos -eq 0 ] ; then
                     echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
 
                     # replace touch commands here with echo later on...
-                    touch index.html
+                    echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
                     mkdir scripts
-                    mkdir styles
-                    touch scripts/index.js
-                    touch styles/styles.css
+                    mkdir css
+                    echo 'console.log("Hello World!");' > scripts/index.js
+                    echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
                     sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
                     break
                 else
