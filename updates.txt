@@ -31,3 +31,7 @@ sudo chmod 755 /usr/local/bin/pkgtop
 Finally figured out how to get language servers working neovim, you have to npm install -g each of them from ~/.local/nvim/share/lsp-servers
 
 After updating your nvim, make sure to run :LspInstallerInfo and update your language servers
+
+Update rustup
+
+rustup update
