@@ -2,7 +2,8 @@
 
 # makelist creates a list of current packages, removes the second field (version numbers), and replaces all the new lines with spaces and then writes it to a file called my_packages.txt, you can more or less copy and paste this list into pacman -S to re-download all your files, useful if you need to start from scratch. Needs a script eventually to query aur_packages directory for packages downloaded directly from AUR and not Artix repositories.
 
-pacman -Q | awk '!($2="")' | tr '\n' ' ' >> my_packages.txt
-
+pacman -Q | awk '!($2="")' | tr '\n' ' ' > my_packages.txt
+npm list -g > my_npm_packages.txt
+pip list > my_pip_packages.txt
 # can be used in conjunction with xargs to reinstall all packages:
 # cat my_packages.txt | sudo xargs pacman -S

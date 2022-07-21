@@ -28,8 +28,6 @@ curl https://raw.githubusercontent.com/SharUpOff/pkgtop/main/dist/pkgtop.sh -so 
 
 sudo chmod 755 /usr/local/bin/pkgtop
 
-Reinstall npm, nodemon, and prettier, and jest
+Finally figured out how to get language servers working neovim, you have to npm install -g each of them from ~/.local/nvim/share/lsp-servers
 
-doas pacman -S npm (delete what is necessary to get this to go through)
-
-doas npm install -g nodemon prettier jest
+After updating your nvim, make sure to run :LspInstallerInfo and update your language servers

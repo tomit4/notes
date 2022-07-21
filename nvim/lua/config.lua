@@ -88,7 +88,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 local lspconfig =require'lspconfig'
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'sumneko_lua', 'eslint', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
+local servers = { 'dockerls', 'grammarly', 'html', 'remark_ls', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
@@ -100,7 +100,7 @@ end
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
   disable_netrw = false,
-  hide_root_folder = false,
+  -- hide_root_folder = false,
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,

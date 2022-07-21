@@ -44,11 +44,6 @@ if [ ! -d $archivedir  ] ; then
 fi
 
 if [ -d .git ] ; then
-    for arg
-    do
-        newname="$archivedir/$(date "+%S.%M.%H.%m").$(basename "$arg")"
-        $copy "$arg" "$newname"
-    done
     git rm "$@"
     exit 0
 fi
