@@ -77,8 +77,7 @@ if [ $numrepos -eq 0 ] ; then
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
                     npm init -y
-                    npm install -D nodemon
-                    npm install -D prettier
+                    npm install -D nodemon prettier
 
                     # creates default .prettierrc
                     echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
