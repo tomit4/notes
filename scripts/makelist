@@ -5,5 +5,13 @@
 pacman -Q | awk '!($2="")' | tr '\n' ' ' > my_packages.txt
 npm list -g > my_npm_packages.txt
 pip list > my_pip_packages.txt
+go list ... > my_go_packages.txt
+
+# currently empty...
+# cargo install -- list > my_cargo_packages.txt
+
+# for debian distributions:
+# apt list --installed > my_packages.txt
+
 # can be used in conjunction with xargs to reinstall all packages:
 # cat my_packages.txt | sudo xargs pacman -S
