@@ -50,7 +50,7 @@ xsetroot -cursor_name left_ptr &
 # pulseaudio --start &
 
 # enables AppArmor's aa-notify by default (supposed to be a runit script...)
-aa-notify --user $USER -p -s 1 -w 60 -f /var/log/audit/audit.log
+# aa-notify --user $USER -p -s 1 -w 60 -f /var/log/audit/audit.log
 
 # Notification for Laptop Battery
 # echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
