@@ -42,12 +42,14 @@ require('packer').startup(function()
     use {'lewis6991/gitsigns.nvim'}
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
-    use {'iamcco/markdown-preview.nvim'} -- :call mkdp#util#install()
+    use {'iamcco/markdown-preview.nvim'} -- call mkdp#util#install()
     use 'luochen1990/rainbow'
     use 'windwp/nvim-autopairs'
     use 'simeji/winresizer'
     use '907th/vim-auto-save'
+    use 'David-Kunz/jester' -- for unit tests using jest
     use 'jremmen/vim-ripgrep'
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use 'arrufat/vala.vim' -- for vala programming language
+    use 'chemzqm/neovim'
 end)

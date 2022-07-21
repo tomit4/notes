@@ -28,9 +28,8 @@ curl https://raw.githubusercontent.com/SharUpOff/pkgtop/main/dist/pkgtop.sh -so 
 
 sudo chmod 755 /usr/local/bin/pkgtop
 
-Reinstall npm, nodemon, and prettier
+Reinstall npm, nodemon, and prettier, and jest
 
 doas pacman -S npm (delete what is necessary to get this to go through)
 
-doas npm install -g nodemon
-doas npm install -g prettier
+doas npm install -g nodemon prettier jest
