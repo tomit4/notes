@@ -40,6 +40,12 @@ vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
 
 -- Alias jest unit testing for current file
 vim.cmd[[nnoremap T :lua require"jester".run_file()]]
+-- Other jest commands you may need in the future:
+-- :lua require"jester".run()
+-- :lua require"jester".run_last()
+-- :lua require"jester".debug()
+-- :lua require"jester".debug_file()
+-- :lua require"jester".debug_last()
 
 -- Prettify using shortcut gp (careful, only use on files that have a parser)
 -- vim.cmd[[nnoremap gp :silent %!prettier --stdin-filepath %<CR>]]
