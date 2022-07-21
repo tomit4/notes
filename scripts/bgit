@@ -148,7 +148,7 @@ if [ $numrepos -eq 0 ] ; then
                 tput bold & tput setaf 7
 
                 # bgit uses github api if github.com is defined as host site
-                if [[ -n $host && $host="github.com" ]] ; then
+                if [[ -n $host && $host == "github.com" ]] ; then
                     read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
 
                     # Reset output style
@@ -177,7 +177,7 @@ if [ $numrepos -eq 0 ] ; then
                 git push --set-upstream $remote $branch
                 # git push -u $remote $branch
 
-                if [[ $host="github.com" ]] ; then
+                if [[ $host == "github.com" ]] ; then
                     echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
                     # clears $GH_TOKEN from clipboard
                     echo '' | xclip && xclip -selection clipboard /dev/null
