@@ -28,13 +28,16 @@ curl https://raw.githubusercontent.com/SharUpOff/pkgtop/main/dist/pkgtop.sh -so 
 
 sudo chmod 755 /usr/local/bin/pkgtop
 
-Finally figured out how to get language servers working neovim, you have to npm install -g each of them from ~/.local/nvim/share/lsp-servers
+Finally figured out how to get language servers working neovim, you have to npm install -g each of them from ~/.local/nvim/share/lsp-servers (note that there is still work to be done here...)
 
 After updating your nvim, make sure to run :LspInstallerInfo and update your language servers
 
 Update rustup
 
 rustup update
+
+https://unixcop.com/basic-setup-of-apparmor-on-arch-linux/
+https://forum.artixlinux.org/index.php/topic,3823.msg24770.html#msg24770
 
 ***Set up apparmor (basic security measure)
 
