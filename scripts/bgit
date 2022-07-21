@@ -39,7 +39,7 @@ if [ $numrepos -eq 0 ] ; then
             # Creates a default README.md
             echo -e "## A Simple README\n\nSome Text" > README.md
             # Creates a default .gitignore
-            echo -e "node_modules\n*.env\n*.out\n.gitignore" > .gitignore
+            echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
             # Initializes git repository cwd...
             git init
 
