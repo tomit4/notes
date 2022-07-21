@@ -78,6 +78,12 @@ if [ $numrepos -eq 0 ] ; then
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
                     npm init -y
                     npm install -D nodemon
+                    npm install -D prettier
+
+                    # creates default .prettierrc
+                    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
+
+                    # replace touch commands here with echo later on...
                     touch index.html
                     mkdir scripts
                     mkdir styles
