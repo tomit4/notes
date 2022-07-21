@@ -41,7 +41,7 @@ https://forum.artixlinux.org/index.php/topic,3823.msg24770.html#msg24770
 
 ***Set up apparmor (basic security measure)
 
-doas pacman -S apparmor apparmor-runit audit audit-runit
+doas pacman -S apparmor apparmor-runit audit audit-runit python-notify2 python-psutil
 
 doas ln -s /etc/runit/sv/auditd /run/runit/service/
 
