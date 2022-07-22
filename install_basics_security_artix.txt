@@ -1,0 +1,46 @@
+#Install fail2ban
+
+doas pacman -S fail2ban fail2ban-runit
+
+doas ln -s /etc/runit/sv/fail2ban /run/runit/service/
+
+doas cp ~/Documents/notes/jail.local /etc/fail2ban/
+
+doas sv start fail2ban
+
+#Set up apparmor (basic security measure)
+
+doas pacman -S apparmor apparmor-runit audit audit-runit python-notify2 python-psutil
+
+doas ln -s /etc/runit/sv/auditd /run/runit/service/
+
+doas sv start auditd
+
+Create an audit group, add $USER to it, and add audit group to /etc/audit/auditd.conf:
+
+doas groupadd -r audit
+doas gpasswd -a $USER audit
+
+/etc/audit/auditd.conf
+
+log_group = audit
+
+In /etc/rc/apparmor.conf, uncomment enforce mode
+
+In /etc/default/grub, rewrite the line at CMDLINE as such (be exact and careful here):
+
+GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf net.ifnames=0"
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+reboot
+
+If all went well run aa-enabled, which should yield "Yes"
+
+aa-enabled
+
+Now load simple defaults:
+
+doas apparmor_parser /usr/share/apparmor/extra-profiles/
+
+And reboot again, you should have some sane security defaults now.
