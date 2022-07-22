@@ -1,0 +1,6 @@
+[DEFAULT]
+# here you can overwrite some defaults:
+
+[sshd]
+maxretry = 5
+enabled = true

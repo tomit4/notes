@@ -39,6 +39,18 @@ rustup update
 https://unixcop.com/basic-setup-of-apparmor-on-arch-linux/
 https://forum.artixlinux.org/index.php/topic,3823.msg24770.html#msg24770
 
+***Install fail2ban
+
+doas pacman -S fail2ban fail2ban-runit
+
+doas ln -s /etc/runit/sv/fail2ban /run/runit/service/
+
+doas cp ~/Documents/notes/jail.local /etc/fail2ban/
+
+doas sv start fail2ban
+
+## copy into short walkthrough:
+
 ***Set up apparmor (basic security measure)
 
 doas pacman -S apparmor apparmor-runit audit audit-runit python-notify2 python-psutil
