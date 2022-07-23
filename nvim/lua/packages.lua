@@ -36,6 +36,7 @@ require('packer').startup(function()
     use { "ellisonleao/gruvbox.nvim" }
     use 'psliwka/vim-smoothie'
     use 'mattn/emmet-vim'
+    use {'derektata/lorem.nvim', requires = 'vim-scripts/loremipsum'}
     use 'airblade/vim-gitgutter'
     use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
     use 'preservim/nerdcommenter'

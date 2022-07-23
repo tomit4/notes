@@ -3,6 +3,9 @@ keymap = vim.api.nvim_set_keymap
 -- Enable ColorScheme
 vim.cmd[[colorscheme nord]]
 
+-- Enable
+require("lorem-nvim").setup()
+
 -- Enable autopairs
 require('nvim-autopairs').setup{}
 
@@ -88,7 +91,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 local lspconfig =require'lspconfig'
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'grammarly', 'html', 'remark_ls', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
+local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
