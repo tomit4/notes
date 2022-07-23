@@ -320,6 +320,8 @@ alias iconify="librewolf https://iconify.design/ &"
 alias namecheap="librewolf https://namecheap.com/ &"
 # for colorizing code snippets
 alias prismjs="librewolf https://prismjs.com/ &"
+# cool front end ideas
+alias codinhood="librewolf https://codinhood.com/ &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
