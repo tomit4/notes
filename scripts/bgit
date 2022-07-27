@@ -32,7 +32,7 @@ numrepos=$(git remote | wc -l)
 # If there are no git repositories in this directory...
 if [ $numrepos -eq 0 ] ; then
     echo "${txtgreen}no git repository found, executing git init...${txtwhite}"
-    while [ true ]
+    while true
     do
     #Prompts the user if they'd like to initialize repository
     read -e -r -p "${txtwhite}initialize repository?(y/n): ${txtyellow}" init
@@ -77,7 +77,8 @@ if [ $numrepos -eq 0 ] ; then
                 fi
             done
 
-            while [ true ] ; do
+            while true
+            do
                 # initializes standard html/css/javascript project (incomplete)
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
@@ -109,7 +110,7 @@ if [ $numrepos -eq 0 ] ; then
             git add .
             git commit -m ":tada: Initial commit"
 
-            while [ true ]
+            while true
             do
             # allows user to change default branch name (no input defaults to "master")
             read -e -r -p "${txtwhite}change branch name?(y/n): ${txtyellow}" chbranch
@@ -129,7 +130,7 @@ if [ $numrepos -eq 0 ] ; then
             done
 
             # main git init loop
-            while [ true ]
+            while true
             do
                 uname=$(git config user.name)
                 read -e -r -p "${txtwhite}Please enter remote to add(i.e. origin): ${txtyellow}" remote
@@ -226,7 +227,7 @@ else
                     verbosecommits=$(git shortlog -5 --reverse | sed 1d);
 
                     numcommits=5
-                    for ((i = 0; i < ${numcommits}; i++)) do
+                    for ((i = 0; i < numcommits; i++)) do
                         j=$(echo ${i} + 1 | bc)
                         nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
                         echo -e "${i})${nextcommit}"
@@ -279,7 +280,7 @@ else
         echo "${txtred}DELETED: ${txtred}$deleted"
     fi
 
-    while [ true ]
+    while true
     do
         # Prompts user if they'd like to commit the changes
         read -e -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
@@ -347,7 +348,7 @@ else
             git commit -m "$gitmoji $cmessage" ;
 
             # pushes the commit to each repository
-            for ((i = 0; i < $numrepos; i++)) ; do
+            for ((i = 0; i < numrepos; i++)) ; do
                 git push ${remotearray[i]} ;
             done
 
