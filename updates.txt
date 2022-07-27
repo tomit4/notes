@@ -38,3 +38,7 @@ https://www.itechtics.com/windows-10-download-iso/
 Install rustdesk-bin from aur (rustdesk by itself was not prepared correctly...)
 
 paru rustdesk-bin
+
+Install xfce4-screenshooter (it's just too useful by comparison to scrot...)
+
+doas pacman -S xfce4-screenshooter
