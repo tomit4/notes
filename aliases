@@ -70,6 +70,7 @@ alias btop="bst -e btop"
 alias {librewolf,firefox}="librewolf"
 alias tor-browser="tor-browser &"
 alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
+alias leetcode="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://leetcode.com/accounts/login &"
 alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias toonz="opentoonz"
@@ -266,7 +267,6 @@ alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6
 # Programming Resources
 
 # Algorithms and Data Structures
-alias leetcode="librewolf leetcode.com &"
 alias techiedelight="librewolf https://www.techiedelight.com/ &"
 alias algoexpert="librewolf https://www.algoexpert.io/ &"
 
