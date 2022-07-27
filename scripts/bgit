@@ -223,25 +223,34 @@ else
                 tput bold & tput setaf 7
 
                 if [[ $revert == "y" || $revert == "yes" ]] ; then
+                    # commitarray contains all the sha256 sums of our git commits
                     commitarray=($(git log -6 | grep commit | sed 's/commit//g'));
+                    # verbosecommits is a long format output of all our commit messages
                     verbosecommits=$(git shortlog -6 --reverse | sed 1d);
 
+                    # displays the sha256 sums of our git commits, along with the git commit messages
                     numcommits=6
                     for ((i = 0; i < numcommits; i++)) do
+                        # j is simply 1 count ahead of i, this is specifically to be used in nextcommit
                         j=$(echo ${i} + 1 | bc)
+                        # nextcommit prints out each verbosecommit message one by one
                         nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
                         echo -e "${i}) ${commitarray[$i]}${nextcommit}"
                     done
 
+                    # and asks the user to choose a commit to revert back to
                     read -e -r -p "${txtwhite}Choose commit to revert back to: ${txtyellow}" version
 
+                    # notifies the user of which version they are rolling back to with the sha256 sum
                     echo "${txtblue}Reverting back to version: ${txtyellow}${commitarray[$version]}"
 
                     # Reset output style
                     tput bold & tput setaf 7
 
+                    # and finally resets the local repository to that version
                     git reset --hard ${commitarray[$version]}
 
+                    # and pushes it to remote repository
                     for ((i = 0; i < $numrepos; i++)) ; do
                         git push --force ${remotearray[i]} ;
                     done
