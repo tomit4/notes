@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # checklist:
-
 # [-] add -i flag for install script (default if not git repo is found)
-# [-] add -r flag to go back in history (should list rollback and automatically copy commit id to be pasted...)
+# [-] add function where $1 checks for existing directory and creates it if it doesn't exist, cd's into it, and initializes git repo (also cd's into it if it DOES exist, and initizliaes repo), also checks for .git directory...
 
 # Error handling
 set -e
@@ -15,6 +14,25 @@ txtgreen=${txtbld}$(tput setaf 2)
 txtred=${txtbld}$(tput setaf 1)
 txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
+
+# Dependency check
+dependencies=("git" "node" "npm" "xclip")
+numdependencies=4
+missingdependencies=0
+for ((i = 0; i < numdependencies; i++)) ;
+do
+    if ! command -v "${dependencies[$i]}" &> /dev/null
+    then
+        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+        missingdependencies=$((missingdependencies+1))
+    fi
+done
+
+if [ $missingdependencies -gt 0 ] ;
+then
+    echo "${txtred}Please install needed dependencies${txtwhite}"
+    exit 1
+fi
 
 # Time to rewrite new version:
 # Features to include:
