@@ -30,17 +30,11 @@ sudo chmod 755 /usr/local/bin/pkgtop
 
 Finally figured out how to get language servers working neovim, you have to npm install -g each of them from ~/.local/nvim/share/lsp-servers (note that there is still work to be done here...)
 
-https://unixcop.com/basic-setup-of-apparmor-on-arch-linux/
-https://forum.artixlinux.org/index.php/topic,3823.msg24770.html#msg24770
+Download and install in virtmanager Windows 10 iso (for purposes of software tests)
 
-***Install fail2ban
+Use this site (microsoft only has .exe now... 64 bit, version 21H2)
+https://www.itechtics.com/windows-10-download-iso/
 
-doas pacman -S fail2ban fail2ban-runit
+Install rustdesk-bin from aur (rustdesk by itself was not prepared correctly...)
 
-doas ln -s /etc/runit/sv/fail2ban /run/runit/service/
-
-doas cp ~/Documents/notes/jail.local /etc/fail2ban/
-
-doas sv start fail2ban
-
-***Install Measure-it on librewolf
+paru rustdesk-bin
