@@ -334,11 +334,11 @@ alias {ddgi,dggi,images}='ddgr \!dggi "${1}"'
 alias aur='ddgr \!aur "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias wiki='ddgr \!w "${1}"'
-# alias gh='ddgr --gb \!gh "${1}"'
+alias gh='ddgr \!gh "${1}"'
 # must have account to use gitlab bang
-alias glab='ddgr --gb \!glab "${1}"'
+alias glab='ddgr \!glab "${1}"'
 alias red='ddgr \!r "${1}"'
-alias yt='ddgr --gb \!yt "${1}"'
+alias yt='ddgr \!yt "${1}"'
 
 # run the following two aliases every time you update the kernels and nvidiadkms
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
