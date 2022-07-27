@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# checklist:
+# [-] add -i flag for install script (default if not git repo is found)
+# [-] add -r flag to go back in history (should list rollback and automatically copy commit id to be pasted...)
+
 # Error handling
 set -e
 
