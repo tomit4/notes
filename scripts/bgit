@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # checklist:
+
 # [-] add -i flag for install script (default if not git repo is found)
 # [-] add -r flag to go back in history (should list rollback and automatically copy commit id to be pasted...)
 
@@ -203,7 +204,7 @@ if [ $numrepos -eq 0 ] ; then
 else
 
     # creates a list of repos and puts them in an array
-    repoarray=($(git remote))
+    remotearray=($(git remote))
     # Grabs all new files
     newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
     # Grabs all modified files
@@ -215,34 +216,38 @@ else
     while getopts "r" opt; do
         case $opt in
             r)
-                commitarray=($(git log -5 | grep commit | sed 's/commit//g'));
-                verbosecommits=$(git shortlog -5 --reverse | sed 1d);
-                lastcommit=$(git shortlog -5 --reverse | sed 1d | tail -n 2)
+                echo "${txtgreen}-r flag initiated"
+                read -e -r -p "${txtwhite}Would you like to revert back to a previous commit?: ${txtyellow}" revert
+                # Reset output style
+                tput bold & tput setaf 7
 
+                if [[ $revert == "y" || $revert == "yes" ]] ; then
+                    commitarray=($(git log -5 | grep commit | sed 's/commit//g'));
+                    verbosecommits=$(git shortlog -5 --reverse | sed 1d);
 
-                echo "Choose a commit:"
+                    numcommits=5
+                    for ((i = 0; i < ${numcommits}; i++)) do
+                        j=$(echo ${i} + 1 | bc)
+                        nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
+                        echo -e "${i})${nextcommit}"
+                    done
 
-                # sloppy implementation to be cleaned up in for loop below (works though, look closelier...)
-                echo -e "0) ${commitarray[0]}\t${verbosecommits}" | head -n 1 | tail -n 1
-                secondcommit=$(echo "${verbosecommits}" | head -n 2 | tail -n 1)
-                echo -e "1) ${commitarray[1]}\t${secondcommit}"
-                echo -e "4) ${commitarray[4]}\t${lastcommit}"
+                    read -e -r -p "${txtwhite}Choose commit to revert back to: ${txtyellow}" version
 
+                    echo "version you wish to go back to: ${commitarray[$version]}"
 
-                # numcommits=5
-                # for ((i = 0; i < ${numcommits}; i++)) do
-                    # tailn=$(echo 5 - ${i} | bc) # possibly useless...
+                    # Reset output style
+                    tput bold & tput setaf 7
 
-                    # echo -e "${i}) ${commitarray[i]}\t${verbosecommits}" | head -n 1
-
-                    # if [[ ${i} -eq 1 ]] ; then
-                        # echo -e "${i}) ${commitarray[i]}\t${verbosecommits}" | head -n 2 | tail -n 3
-                    # fi
-                # done
-
-                exit 0;;
+                    git reset --hard ${commitarray[$version]}
+                    git push --force
+                    exit 0
+                else
+                    echo "${txtblue}No revisions to git branch have been made.${txtwhite}"
+                fi ;;
             *)
-                break;;
+                echo "${txtred}Flag not recognized...exiting bgit."
+                exit 1;;
         esac
     done
 
@@ -339,7 +344,7 @@ else
 
             # pushes the commit to each repository
             for ((i = 0; i < $numrepos; i++)) ; do
-                git push ${repoarray[i]} ;
+                git push ${remotearray[i]} ;
             done
 
             echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
