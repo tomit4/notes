@@ -240,7 +240,11 @@ else
                     tput bold & tput setaf 7
 
                     git reset --hard ${commitarray[$version]}
-                    git push --force
+
+                    for ((i = 0; i < $numrepos; i++)) ; do
+                        git push --force ${remotearray[i]} ;
+                    done
+
                     exit 0
                 else
                     echo "${txtblue}No revisions to git branch have been made.${txtwhite}"
