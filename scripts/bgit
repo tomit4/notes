@@ -292,8 +292,13 @@ else
                 echo "(doesn't apply to gpg or ssh)${txtwhite}"
                 git config credential.helper 'cache --timeout=3600';
                 git config advice.addEmptyPathspec false;
-                git add $modified $newfiles ;
+                git add $modified $newfiles;
             fi
+
+            if [[ $deleted ]] ; then
+                git rm $deleted;
+            fi
+
             # commits the user's message (multi-word supported)
             git commit -m "$gitmoji $cmessage" ;
 

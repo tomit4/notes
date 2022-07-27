@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$HOME/scripts/python/pyalarm $1 &> /dev/null 2>&1 &
