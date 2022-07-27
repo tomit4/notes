@@ -211,6 +211,41 @@ else
     # Grabs all deleted files
     deleted=$(git status --short | grep D | awk '{print $2}' | tr '\n' ' ')
 
+    # getopts loop for flag -r that reverts back changes in git repo
+    while getopts "r" opt; do
+        case $opt in
+            r)
+                commitarray=($(git log -5 | grep commit | sed 's/commit//g'));
+                verbosecommits=$(git shortlog -5 --reverse | sed 1d);
+                lastcommit=$(git shortlog -5 --reverse | sed 1d | tail -n 2)
+
+
+                echo "Choose a commit:"
+
+                # sloppy implementation to be cleaned up in for loop below (works though, look closelier...)
+                echo -e "0) ${commitarray[0]}\t${verbosecommits}" | head -n 1 | tail -n 1
+                secondcommit=$(echo "${verbosecommits}" | head -n 2 | tail -n 1)
+                echo -e "1) ${commitarray[1]}\t${secondcommit}"
+                echo -e "4) ${commitarray[4]}\t${lastcommit}"
+
+
+                # numcommits=5
+                # for ((i = 0; i < ${numcommits}; i++)) do
+                    # tailn=$(echo 5 - ${i} | bc) # possibly useless...
+
+                    # echo -e "${i}) ${commitarray[i]}\t${verbosecommits}" | head -n 1
+
+                    # if [[ ${i} -eq 1 ]] ; then
+                        # echo -e "${i}) ${commitarray[i]}\t${verbosecommits}" | head -n 2 | tail -n 3
+                    # fi
+                # done
+
+                exit 0;;
+            *)
+                break;;
+        esac
+    done
+
     # Reports what is staged for commit
     # If there is anything to commit...
     if [[ ! -z $newfiles || ! -z $modified || ! -z $deleted ]] ; then
