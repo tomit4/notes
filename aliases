@@ -326,6 +326,8 @@ alias codinhood="librewolf https://codinhood.com/ &"
 alias bun="librewolf https://bun.sh/ &"
 # languagetool.org is a resource site for starting up an open source version of grammerly
 alias langtool="librewolf https://languagetool.org/dev/ &"
+# cssbattle is a web dev game site which challenges your css skills
+alias cssbattle="librewolf https://cssbattle.dev/ &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
