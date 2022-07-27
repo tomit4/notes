@@ -279,7 +279,7 @@ else
                         j=$(echo ${i} + 1 | bc)
                         # nextcommit prints out each verbosecommit message one by one
                         nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
-                        echo -e "${i}) ${commitarray[$i]}${nextcommit}"
+                        echo -e "${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtwhite}"
                     done
 
                     # and asks the user to choose a commit to revert back to
