@@ -16,27 +16,12 @@ txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
 # Dependency check
-dependencies=("git" "curl")
-numdependencies=2
-missingdependencies=0
-for ((i = 0; i < numdependencies; i++)) ;
-do
-    if ! command -v "${dependencies[$i]}" &> /dev/null
-    then
-        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
-        missingdependencies=$((missingdependencies+1))
-    fi
-done
-
-if [ $missingdependencies -gt 0 ] ;
+if ! command -v git &> /dev/null
 then
-    echo "${txtred}Please install needed dependencies${txtwhite}"
+    echo "${txtred}dependency not met: git"
+    echo "Please install needed depndencies${txtwhite}"
     exit 1
 fi
-
-# Time to rewrite new version:
-# Features to include:
-# setopts/getopts flags for init,delete repos ( see git_create...txt file in notes)
 
 # Intro Prompt
 echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
@@ -212,10 +197,21 @@ if [ $numrepos -eq 0 ] ; then
                     if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
 
                         # Dependency check
-                        if ! command -v xclip &> /dev/null
+                        dependencies=("xclip" "curl")
+                        numdependencies=2
+                        missingdependencies=0
+                        for ((i = 0; i < numdependencies; i++)) ;
+                        do
+                            if ! command -v "${dependencies[$i]}" &> /dev/null
+                            then
+                                echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+                                missingdependencies=$((missingdependencies+1))
+                            fi
+                        done
+
+                        if [ $missingdependencies -gt 0 ] ;
                         then
-                            echo "${txtred}dependency not met: xclip"
-                            echo "Please install needed depndencies${txtwhite}"
+                            echo "${txtred}Please install needed dependencies${txtwhite}"
                             exit 1
                         fi
 
