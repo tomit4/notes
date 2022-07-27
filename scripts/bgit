@@ -16,10 +16,21 @@ txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
 # Dependency check
-if ! command -v git &> /dev/null
+dependencies=("git" "curl")
+numdependencies=2
+missingdependencies=0
+for ((i = 0; i < numdependencies; i++)) ;
+do
+    if ! command -v "${dependencies[$i]}" &> /dev/null
+    then
+        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+        missingdependencies=$((missingdependencies+1))
+    fi
+done
+
+if [ $missingdependencies -gt 0 ] ;
 then
-    echo "${txtred}dependency not met: git"
-    echo "Please install needed depndencies${txtwhite}"
+    echo "${txtred}Please install needed dependencies${txtwhite}"
     exit 1
 fi
 
