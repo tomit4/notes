@@ -42,7 +42,3 @@ paru rustdesk-bin
 Install xfce4-screenshooter (it's just too useful by comparison to scrot...)
 
 doas pacman -S xfce4-screenshooter
-
-For rewriting bgit, install GitPython using pip
-
-pip install GitPython
