@@ -246,6 +246,7 @@ else
                         git push --force ${remotearray[i]} ;
                     done
 
+                    echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
                     exit 0
                 else
                     echo "${txtblue}No revisions to git branch have been made.${txtwhite}"
