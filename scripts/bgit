@@ -16,21 +16,10 @@ txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
 # Dependency check
-dependencies=("git" "node" "npm" "xclip")
-numdependencies=4
-missingdependencies=0
-for ((i = 0; i < numdependencies; i++)) ;
-do
-    if ! command -v "${dependencies[$i]}" &> /dev/null
-    then
-        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
-        missingdependencies=$((missingdependencies+1))
-    fi
-done
-
-if [ $missingdependencies -gt 0 ] ;
+if ! command -v git &> /dev/null
 then
-    echo "${txtred}Please install needed dependencies${txtwhite}"
+    echo "${txtred}dependency not met: git"
+    echo "Please install needed depndencies${txtwhite}"
     exit 1
 fi
 
@@ -58,6 +47,7 @@ if [ $numrepos -eq 0 ] ; then
             echo "${txtred}no git repository initialized...exiting${txtwhite}"
             break
         elif [[ $init == "y" || $init == "yes" ]] ; then
+
 
             # Creates a default README.md
             echo -e "## A Simple README\n\nSome Text" > README.md
@@ -100,6 +90,25 @@ if [ $numrepos -eq 0 ] ; then
                 # initializes standard html/css/javascript project (incomplete)
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
+                    # Dependency check
+                    dependencies=("node" "npm")
+                    numdependencies=2
+                    missingdependencies=0
+                    for ((i = 0; i < numdependencies; i++)) ;
+                    do
+                        if ! command -v "${dependencies[$i]}" &> /dev/null
+                        then
+                            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+                            missingdependencies=$((missingdependencies+1))
+                        fi
+                    done
+
+                    if [ $missingdependencies -gt 0 ] ;
+                    then
+                        echo "${txtred}Please install needed dependencies${txtwhite}"
+                        exit 1
+                    fi
+
                     npm init -y
                     npm install -D nodemon prettier jest
 
@@ -190,6 +199,15 @@ if [ $numrepos -eq 0 ] ; then
                     source $HOME/.gh_pat
 
                     if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+
+                        # Dependency check
+                        if ! command -v xclip &> /dev/null
+                        then
+                            echo "${txtred}dependency not met: xclip"
+                            echo "Please install needed depndencies${txtwhite}"
+                            exit 1
+                        fi
+
                         echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
                         curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
                     fi
