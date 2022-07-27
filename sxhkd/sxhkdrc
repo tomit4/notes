@@ -192,3 +192,5 @@ super + s
     steam &
 super + v
     virt-manager &
+super + r
+    rustdesk &
