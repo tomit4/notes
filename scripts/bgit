@@ -3,6 +3,7 @@
 # checklist:
 # [-] add -i flag for install script (default if not git repo is found)
 # [-] add function where $1 checks for existing directory and creates it if it doesn't exist, cd's into it, and initializes git repo (also cd's into it if it DOES exist, and initizliaes repo), also checks for .git directory...
+# [-] add optional input for add gitmoji(enter l/list for list): where l/list shows list of gitmojis and infinitely returns user to prompt until gitmoji is chosen, if gitmoji doesn't exist within gitmoji array, or "none" is chosen, then default to no gitmoji
 
 # Error handling
 set -e
