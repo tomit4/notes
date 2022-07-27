@@ -330,6 +330,7 @@ alias langtool="librewolf https://languagetool.org/dev/ &"
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
+alias {ddgi,dggi,images}='ddgr \!dggi "${1}"'
 alias aur='ddgr \!aur "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias wiki='ddgr \!w "${1}"'
