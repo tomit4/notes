@@ -394,10 +394,6 @@ else
                 git add $modified $newfiles;
             fi
 
-            if [[ $deleted ]] ; then
-                git rm $deleted;
-            fi
-
             # commits the user's message (multi-word supported)
             git commit -m "$gitmoji $cmessage" ;
 
