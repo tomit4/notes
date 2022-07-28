@@ -268,7 +268,7 @@ else
 
                 if [[ $revert == "y" || $revert == "yes" ]] ; then
                     # commitarray contains all the sha256 sums of our git commits
-                    commitarray=($(git log -6 | grep commit | sed 's/commit//g'));
+                    commitarray=($(git log -6 | grep commit | sed 's/commit//g'))
                     # verbosecommits is a long format output of all our commit messages
                     verbosecommits=$(git shortlog -6 --reverse | sed 1d);
 
@@ -295,7 +295,7 @@ else
                     git reset --hard ${commitarray[$version]}
 
                     # and pushes it to remote repository
-                    for ((i = 0; i < $numrepos; i++)) ; do
+                    for ((i = 0; i < numrepos; i++)) ; do
                         git push --force ${remotearray[i]} ;
                     done
 
