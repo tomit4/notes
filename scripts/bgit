@@ -253,9 +253,9 @@ else
     # Grabs all new files
     newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
     # Grabs all modified files
-    modified=$(git status --short | grep M | awk '{print $2}' | tr '\n' ' ')
+    modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
     # Grabs all deleted files
-    deleted=$(git status --short | grep D | awk '{print $2}' | tr '\n' ' ')
+    deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
 
     # getopts loop for flag -r that reverts back changes in git repo
     while getopts "r" opt; do
