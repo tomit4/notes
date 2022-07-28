@@ -248,8 +248,9 @@ vim.g.NERDSpaceDelims= 1
 vim.g.termguicolors = true
 vim.g.nosplitright = true
 
--- specify markdown-preview browser
+-- specify markdown-preview browser / set to dark mode
 vim.g.mkdp_browser = 'librewolf'
+vim.g.mkdp_theme = 'dark'
 
 -- set relative number
 vim.opt.number = true
