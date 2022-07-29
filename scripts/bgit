@@ -85,6 +85,7 @@ if [ $numrepos -eq 0 ] ; then
             while true
             do
                 # initializes standard html/css/javascript project (incomplete)
+                # perhaps put in separate script that may/can be called from bgit...what if they just want nginx or apache or php?
                 read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
                 if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
                     # Dependency check
