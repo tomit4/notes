@@ -329,6 +329,12 @@ alias langtool="librewolf https://languagetool.org/dev/ &"
 # cssbattle is a web dev game site which challenges your css skills
 alias cssbattle="librewolf https://cssbattle.dev/ &"
 
+# Hardening your Web Applications and Other Security related stuff
+# for hardening nginx
+alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
+# harden a nodejs server
+alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-checklist/ &"
+
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
