@@ -1,5 +1,5 @@
 #Custom Aliases
-alias .="cd"
+alias .="cd && ls"
 alias more="less"
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
