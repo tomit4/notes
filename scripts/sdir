@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # A simple bookmarking alias used in conjunction with rdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
 
@@ -14,7 +14,7 @@ fi
 # save our current working directory
 sdir=$(pwd)
 
-# and write that directory temporarily into our .zshrc
+# and write that directory temporarily, appending it onto the end of our .zshrc
 echo 'export sdir='$sdir >> $HOME/.zshrc
 # immediately source it to use it in this shell session
 source $HOME/.zshrc
