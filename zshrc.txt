@@ -3,10 +3,10 @@
 # to change default shell, use chsh -s $(which zsh)
 
 # create custom env variables:
-export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
+export cproj="/home/brian/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment_midterm"
 
 # custom BROWSER env for ddgr:
-export BROWSER=links
+export BROWSER=librewolf
 export TUIR_BROWSER=librewolf
 export EDITOR=nvim
 export PF_INFO="ascii os kernel pkgs shell wm editor"
