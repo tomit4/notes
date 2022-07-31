@@ -43,11 +43,6 @@ if [ ! -d $archivedir  ] ; then
     chmod 700 $archivedir # A little bit of privacy, please
 fi
 
-if [ -d .git ] ; then
-    git rm "$@"
-    exit 0
-fi
-
 for arg
 do
     newname="$archivedir/$(date "+%S.%M.%H.%m").$(basename "$arg")"
