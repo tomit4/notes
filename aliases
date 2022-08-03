@@ -236,6 +236,7 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 # docker specific Aliases
 alias docker="doas docker"
 alias docker-ls="doas docker container ls -a"
+alias docker-rm="doas docker container rm"
 
 # bookmarks
 alias codeberg="librewolf https://codeberg.org/ &"
