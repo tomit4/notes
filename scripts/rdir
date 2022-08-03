@@ -5,4 +5,4 @@
 # grabs the current $sdir environment variable
 source $HOME/.zshrc
 
-cd $sdir
+cd $sdir && ls
