@@ -201,6 +201,8 @@ alias pscpu="ps auxf | sort -nr -k 3 | head -5"
 alias git-a="git add"
 alias git-c="git commit -m"
 alias git-p="git push"
+# taken from Luke Smith, put in bgit eventually
+alias gua="git remote | xargs -L1 git push --all"
 # undo local file changes and keep your last commit
 alias git-r="git reset --hard"
 # undo local file changes and remove your last commit
