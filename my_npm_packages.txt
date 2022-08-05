@@ -1,20 +1,8 @@
-/usr/lib
-├── @volar/vue-language-server@0.38.9
-├── bash-language-server@3.0.5
-├── corepack@0.12.0
-├── dockerfile-language-server-nodejs@0.9.0
-├── emmet-ls@0.3.0
-├── grammarly-languageserver@0.0.4
-├── jest@28.1.3
-├── node-gyp@9.1.0
-├── nodemon@2.0.19
-├── nopt@5.0.0
-├── npm@8.14.0
-├── prettier@2.7.1
-├── pyright@1.1.262
-├── remark-language-server@2.0.0
-├── rome@0.7.0-next.f6510d6
-├── semver@7.3.7
-├── speed-test@3.0.0
-└── vscode-langservers-extracted@4.4.0
+/home/brian/.nvm/versions/node/v17.0.1/lib
+├── @chemzqm/neovim@5.7.9
+├── corepack@0.10.0
+├── live-server@1.2.2
+├── npm@8.15.0
+├── nvm@0.0.4
+└── speed-test@3.0.0
 
