@@ -17,12 +17,17 @@ txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
 # Dependency check
-if ! command -v git &> /dev/null
-then
-    echo "${txtred}dependency not met: git"
-    echo "Please install needed depndencies${txtwhite}"
-    exit 1
-fi
+dependencies=("xclip" "git")
+numdependencies=2
+missingdependencies=0
+for ((i = 0; i < numdependencies; i++)) ;
+do
+    if ! command -v "${dependencies[$i]}" &> /dev/null
+    then
+        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+        missingdependencies=$((missingdependencies+1))
+    fi
+done
 
 # Intro Prompt
 echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
@@ -199,21 +204,10 @@ if [ $numrepos -eq 0 ] ; then
                     if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
 
                         # Dependency check
-                        dependencies=("xclip" "curl")
-                        numdependencies=2
-                        missingdependencies=0
-                        for ((i = 0; i < numdependencies; i++)) ;
-                        do
-                            if ! command -v "${dependencies[$i]}" &> /dev/null
-                            then
-                                echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
-                                missingdependencies=$((missingdependencies+1))
-                            fi
-                        done
-
-                        if [ $missingdependencies -gt 0 ] ;
+                        if ! command -v curl &> /dev/null
                         then
-                            echo "${txtred}Please install needed dependencies${txtwhite}"
+                            echo "${txtred}dependency not met: curl"
+                            echo "Please install needed depndencies${txtwhite}"
                             exit 1
                         fi
 
@@ -249,8 +243,6 @@ if [ $numrepos -eq 0 ] ; then
 # Otherwise, if there already is a .git directory...
 else
 
-    # creates a list of repos and puts them in an array
-    # remotearray=($(git remote))
     # Grabs all new files
     newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
     # Grabs all modified files
@@ -297,9 +289,6 @@ else
 
                     # and pushes it to remote repository
                     git remote | xargs -L1 git push --all
-                    # for ((i = 0; i < numrepos; i++)) ; do
-                        # git push --force ${remotearray[i]} ;
-                    # done
 
                     echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
                     exit 0
@@ -401,9 +390,6 @@ else
 
             # pushes the commit to each repository
             git remote | xargs -L1 git push --all
-            # for ((i = 0; i < numrepos; i++)) ; do
-                # git push ${remotearray[i]} ;
-            # done
 
             echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
             exit 0
