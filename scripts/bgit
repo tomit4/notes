@@ -250,7 +250,7 @@ if [ $numrepos -eq 0 ] ; then
 else
 
     # creates a list of repos and puts them in an array
-    remotearray=($(git remote))
+    # remotearray=($(git remote))
     # Grabs all new files
     newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
     # Grabs all modified files
@@ -296,9 +296,10 @@ else
                     git reset --hard ${commitarray[$version]}
 
                     # and pushes it to remote repository
-                    for ((i = 0; i < numrepos; i++)) ; do
-                        git push --force ${remotearray[i]} ;
-                    done
+                    git remote | xargs -L1 git push --all
+                    # for ((i = 0; i < numrepos; i++)) ; do
+                        # git push --force ${remotearray[i]} ;
+                    # done
 
                     echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
                     exit 0
@@ -399,9 +400,10 @@ else
             git commit -m "$gitmoji $cmessage" ;
 
             # pushes the commit to each repository
-            for ((i = 0; i < numrepos; i++)) ; do
-                git push ${remotearray[i]} ;
-            done
+            git remote | xargs -L1 git push --all
+            # for ((i = 0; i < numrepos; i++)) ; do
+                # git push ${remotearray[i]} ;
+            # done
 
             echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
             exit 0
