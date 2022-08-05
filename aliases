@@ -99,6 +99,7 @@ alias tree="tree -ad -L 3 --prune -C"
 alias {nv,nvi}="nvim"
 alias {cproj,mproj,myproj}="cd '$cproj' && ls"
 alias leafbytes="cd ~/Documents/Code/leafbytes && ls"
+alias drafts="cd ~/Documents/Code/leafbytes_drafts && ls"
 alias mon="nodemon"
 alias localhost="librewolf localhost:3000 &"
 alias {mi,mic}="micro"
@@ -201,7 +202,7 @@ alias pscpu="ps auxf | sort -nr -k 3 | head -5"
 alias git-a="git add"
 alias git-c="git commit -m"
 alias git-p="git push"
-# taken from Luke Smith, put in bgit eventually
+# taken from Luke Smith, pushes to all remotes
 alias gua="git remote | xargs -L1 git push --all"
 # undo local file changes and keep your last commit
 alias git-r="git reset --hard"
