@@ -334,6 +334,8 @@ alias langtool="librewolf https://languagetool.org/dev/ &"
 alias cssbattle="librewolf https://cssbattle.dev/ &"
 #egghead.io has a lot of free courses
 alias egghead="librewolf https://egghead.io/ &"
+# cool little demos website
+alias demo2s="librewolf https://www.demo2s.com &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
