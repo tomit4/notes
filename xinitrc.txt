@@ -40,6 +40,9 @@ xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 #Laptop
 # brillo -S 70
 
+# start redshift
+redshift -O 5500 &
+
 picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # Start applets, daemons, etc.
 # diskie
