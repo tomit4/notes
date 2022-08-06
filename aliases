@@ -335,6 +335,9 @@ alias cssbattle="librewolf https://cssbattle.dev/ &"
 #egghead.io has a lot of free courses
 alias egghead="librewolf https://egghead.io/ &"
 
+# cool video on fluid animation in css:
+# https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
+
 # Hardening your Web Applications and Other Security related stuff
 # for hardening nginx
 alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
