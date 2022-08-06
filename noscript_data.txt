@@ -1,0 +1,122 @@
+{
+  "policy": {
+    "DEFAULT": {
+      "capabilities": [
+        "frame",
+        "fetch",
+        "noscript",
+        "other"
+      ],
+      "temp": false
+    },
+    "TRUSTED": {
+      "capabilities": [
+        "script",
+        "object",
+        "media",
+        "frame",
+        "font",
+        "webgl",
+        "fetch",
+        "ping",
+        "noscript",
+        "unchecked_css",
+        "lan",
+        "other"
+      ],
+      "temp": false
+    },
+    "UNTRUSTED": {
+      "capabilities": [],
+      "temp": false
+    },
+    "sites": {
+      "trusted": [
+        "§:addons.mozilla.org",
+        "§:afx.ms",
+        "§:ajax.aspnetcdn.com",
+        "§:ajax.googleapis.com",
+        "§:bootstrapcdn.com",
+        "§:code.jquery.com",
+        "§:firstdata.com",
+        "§:firstdata.lv",
+        "§:gfx.ms",
+        "§:googlevideo.com",
+        "§:gstatic.com",
+        "§:live.com",
+        "§:live.net",
+        "§:maps.googleapis.com",
+        "§:mozilla.net",
+        "§:netflix.com",
+        "§:nflxext.com",
+        "§:nflximg.com",
+        "§:nflxvideo.net",
+        "§:noscript.net",
+        "§:outlook.com",
+        "§:passport.com",
+        "§:passport.net",
+        "§:passportimages.com",
+        "§:paypal.com",
+        "§:paypalobjects.com",
+        "§:securecode.com",
+        "§:securesuite.net",
+        "§:sfx.ms",
+        "§:tinymce.cachefly.net",
+        "§:wlxrs.com",
+        "§:yahoo.com",
+        "§:yahooapis.com",
+        "§:yimg.com",
+        "§:youtube.com",
+        "§:ytimg.com",
+        "https://github.com",
+        "https://codeberg.org",
+        "https://gitlab.com",
+        "https://stackoverflow.com",
+        "https://stackexchange.com",
+        "127.0.0.1",
+        "localhost",
+        "https://sw.kovidgoyal.net//kitty/",
+        "https://forum.artixlinux.org",
+        "https://odysee.com",
+        "https://www.pornhub.com",
+        "https://xhamster.com",
+        "https://protonmail.com",
+        "https://www.quora.com",
+        "https://www.linuxquestions.org",
+        "https://sheldonbrown.com//",
+        "https://google-webfonts-helper.herokuapp.com/fonts",
+        "https://leafbytes.com",
+        "https://roy.gbiv.com/untangled/",
+        "duckduckgo.com",
+        "https://cssbattle.dev",
+        "https://lite.duckduckgo.com",
+        "https://lite.duckduckgo.com/lite/",
+        "https://egghead.io"
+      ],
+      "untrusted": [
+        "google.com",
+        "hotmail.com"
+      ],
+      "custom": {}
+    },
+    "enforced": true,
+    "autoAllowTop": false
+  },
+  "local": {
+    "debug": false,
+    "showCtxMenuItem": true,
+    "showCountBadge": true,
+    "showFullAddresses": false,
+    "amnesticUpdates": false,
+    "storage": "local",
+    "uuid": "88160e9e-65ea-4711-b739-4d2819b7596c"
+  },
+  "sync": {
+    "global": false,
+    "xss": true,
+    "cascadeRestrictions": false,
+    "overrideTorBrowserPolicy": false,
+    "storage": "sync"
+  },
+  "xssUserChoices": {}
+}

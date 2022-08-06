@@ -332,6 +332,8 @@ alias bun="librewolf https://bun.sh/ &"
 alias langtool="librewolf https://languagetool.org/dev/ &"
 # cssbattle is a web dev game site which challenges your css skills
 alias cssbattle="librewolf https://cssbattle.dev/ &"
+#egghead.io has a lot of free courses
+alias egghead="librewolf https://egghead.io/ &"
 
 # Hardening your Web Applications and Other Security related stuff
 # for hardening nginx
