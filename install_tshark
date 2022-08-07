@@ -1,0 +1,17 @@
+# Taken from https://gist.github.com/PSJoshi/b7957946f866b8353423cfe764074662 (can be run as bash script if need be).
+
+sudo -s
+groupadd -g wireshark
+usermod -a -G wireshark your-user-name
+chgrp wireshark /usr/bin/dumpcap
+chmod 4750 /usr/bin/dumpcap
+
+#Ref - http://superuser.com/questions/319865/how-to-set-up-wireshark-to-run-without-root-on-debian
+
+Another option
+----------------
+# Install command line version of wireshark - tshark. It is not advisable to install wireshark GUI on the server!
+# Most distributions offer a "wireshark-cli" or "tshark" package. Then grant Linux capabilities
+
+$ sudo apt install tshark
+$ sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
