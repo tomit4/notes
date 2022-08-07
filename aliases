@@ -341,7 +341,9 @@ alias demo2s="librewolf https://www.demo2s.com &"
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
 # cool video on animating typing using css
 # https://codepen.io/aakhya/pen/EOxqOV/
-
+# specifically a series of drop down animations in css
+# https://codepen.io/codypearce/pen/PdBXpj
+#
 # Hardening your Web Applications and Other Security related stuff
 # for hardening nginx
 alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
