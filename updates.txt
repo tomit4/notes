@@ -48,3 +48,7 @@ Install redshift and cp xinitrc.txt (change for laptop settings)
 doas pacman -S redshift
 
 cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
+
+Install sockstat:
+
+paru sockstat
