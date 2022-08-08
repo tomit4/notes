@@ -4,6 +4,10 @@ article and Unix Sheikh's Choose your Browser Carefully article):
 
 Install Ublock Origin
 Install Decentraleyes
+Install Canvas Blocker
+Install Measure-it
+Install FastForward
+Install Firefox Translations
 Install LocalCDN
 Install ForgetMeNot
 Install FastForward

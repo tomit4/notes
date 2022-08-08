@@ -52,3 +52,5 @@ cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
 Install sockstat:
 
 paru sockstat
+
+Install Firefox Translations on Librewolf (note Download File is now how you install)
