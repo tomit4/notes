@@ -56,3 +56,7 @@ vim.cmd[[nnoremap cp :silent :ClangFormat]]
 -- j/k will move virtual lines (lines that wrap)
 vim.cmd[[noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')]]
 vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]
+
+-- Toggle English spellcheck with F11
+vim.cmd[[nnoremap <silent> <F11> :set spell!<cr>]]
+vim.cmd[[inoremap <silent> <F11> <C-O>:set spell!<cr>]]
