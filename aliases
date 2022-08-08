@@ -235,8 +235,10 @@ alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 20
 
 # docker specific Aliases
 alias docker="doas docker"
-alias docker-ls="doas docker container ls -a"
-alias docker-rm="doas docker container rm"
+# eventually create some simple scripts for stuff like this...
+alias dock-ls="doas docker container ls -a && docker images"
+alias dockc-rm="doas docker container rm"
+alias docki-rm="doas docker image rm"
 
 # bookmarks
 alias codeberg="librewolf https://codeberg.org/ &"
