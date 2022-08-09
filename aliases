@@ -280,7 +280,12 @@ alias algoexpert="librewolf https://www.algoexpert.io/ &"
 alias netmeister="librewolf https://stevens.netmeister.org &"
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
+
+# Blogs
+# Unix Sheikh, very good info regarding Unix and Linux
 alias unixsheikh="links https://unixsheikh.com"
+#Julia Evans, developer and general programming blog
+alias jvns="librewolf https://jvns.ca &"
 # inventor of REST blog:
 alias untangled="librewolf https://roy.gbiv.com/untangled/ &"
 
@@ -338,6 +343,7 @@ alias cssbattle="librewolf https://cssbattle.dev/ &"
 alias egghead="librewolf https://egghead.io/ &"
 # cool little demos website
 alias demo2s="librewolf https://www.demo2s.com &"
+
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
