@@ -77,3 +77,11 @@ cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
 After restarting X session, you should be able to see some of espanso's effects on typing, just type something like ":date" and you'll see the effect.
 
 This is just a demo, you can create your own custom replacement word "triggers" in the generated config file ~/.config/espanso/config/default.yml
+
+You can also simply type:
+
+espanso edit
+
+To bring up the config file and edit it with commands, see:
+
+https://espanso.org/docs/configuration/basics/
