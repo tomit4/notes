@@ -32,9 +32,6 @@ vim.cmd[[nmap <C-k> <C-Up>]]
 -- Escape Insert Mode with ii
 keymap('i', 'ii', '<Esc>', {})
 
--- Insert a console.log()
-vim.cmd[[ inoremap cll console.log()<esc>i]]
-
 -- Alias replace all to shift + S
 vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
 
