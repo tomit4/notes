@@ -55,7 +55,9 @@ paru sockstat
 
 Install Firefox Translations on Librewolf (note Download File is now how you install)
 
-Install espanso
+Install espanso (use paru instead):
+
+paru -S espanso
 
 cd aur_packages
 git clone https://github.com/federico-terzi/espanso
