@@ -87,6 +87,12 @@ matches:
   - trigger: ":cle"
     replace: "console.error()"
 
+  - trigger: ":inc"
+    replace: "#include"
+
+  - trigger: ":sh"
+    replace: "#!/bin/sh"
+
   # Pings google dns server
   - trigger: ":ping"
     replace: "ping 8.8.8.8"
