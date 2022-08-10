@@ -60,6 +60,14 @@ matches:
         params:
           cmd: "echo $SHELL"
 
+  - trigger: ":kernel"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "uname -r"
+
   - trigger: ":for"
     replace: "for (;;) {}"
 
