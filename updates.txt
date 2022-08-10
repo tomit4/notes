@@ -54,3 +54,24 @@ Install sockstat:
 paru sockstat
 
 Install Firefox Translations on Librewolf (note Download File is now how you install)
+
+Install espanso
+
+cd aur_packages
+git clone https://github.com/federico-terzi/espanso
+
+Install wxwidgets
+
+doas pacman -S wxwidgets
+
+cd espanso
+
+cargo install --force cargo-make --version 0.34.0
+cargo make --profile release build-binary
+doas mv target/release/espanso /usr/local/bin/espanso
+
+Copy xinitrc.txt which calls espanso at beginning
+
+cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
+
+After restarting X session, you should be able to see some of espanso's effects on typing, just type something like ":date" and you'll see the effect.

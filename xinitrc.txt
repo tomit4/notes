@@ -50,6 +50,7 @@ picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends 
 dunst &
 xbanish &
 xsetroot -cursor_name left_ptr &
+espanso start &
 # pulseaudio --start &
 
 # enables AppArmor's aa-notify by default (supposed to be a runit script...)
