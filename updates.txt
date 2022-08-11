@@ -93,3 +93,7 @@ Choose rust_analyzer
 Copy new confug.lua file to ~/.config/nvim/lua/:
 
 cp ~/Documents/notes/nvim/lua/config.lua ~/.config/nvim/lua
+
+Install dust from official repos:
+
+doas pacman -S dust
