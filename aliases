@@ -1,7 +1,8 @@
 #Custom Aliases
 alias .="cd && ls"
 alias more="less"
-alias grep='grep --colour=auto'
+alias grep="rg"
+alias ogrep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias cp="cp -i"
@@ -174,7 +175,7 @@ alias ipaddr="curl ifconfig.me ; echo ''"
 alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
-alias npm_upgrade="doas npm install --location=global npm@latest"
+# alias npm_upgrade="doas npm install --location=global npm@latest"
 alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
