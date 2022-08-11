@@ -21,3 +21,14 @@ html
 #while doing the same with #id*2 will create
 	<div id="id"><div>
 	<div id="id"><div>
+
+Sometimes the spacing on html pages is thrown off, or you'll change the wording in an already styled element, and it's only off by a space or two. to generate spaces, you can't simply type spaces, you'll have to use html space symbols:
+
+
+    & Nbsp; Blank box with half-width continuous rows (recommended)
+    & Ensp; halfwidth Space
+    & Amp; emsp; fullwidth Space
+
+Example: <p>&ensp;Actual Text<p>
+
+This will add a halfwidth space behind the "Actual Text" in the paragraph tag.
