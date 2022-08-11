@@ -60,7 +60,7 @@ Install espanso (use paru instead):
 paru -S espanso
 
 cd aur_packages
-git clone https://github.com/federico-terzi/espanso
+git clone https://github.com/espanso/espanso
 
 Install wxwidgets
 
@@ -68,22 +68,18 @@ doas pacman -S wxwidgets
 
 cd espanso
 
+To turn off notifications, simply cp from this directory the notifications.rs file to the ~/aur_packages/espanso/espanso/src/cli/worker/ui/ directory before compiling.
+
+cp ~/Documents/notes/espanso/notification.rs ~/aur_packages/espanso/espanso/src/cli/worker/ui/notification.rs
+
 cargo install --force cargo-make --version 0.34.0
 cargo make --profile release build-binary
-doas mv target/release/espanso /usr/local/bin/espanso
+doas mv target/release/espanso /usr/bin/espanso
 
 Copy xinitrc.txt which calls espanso at beginning
 
 cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
 
-After restarting X session, you should be able to see some of espanso's effects on typing, just type something like ":date" and you'll see the effect.
+Copy your base.yml to your espanso/match config directory
 
-This is just a demo, you can create your own custom replacement word "triggers" in the generated config file ~/.config/espanso/config/default.yml
-
-You can also simply type:
-
-espanso edit
-
-To bring up the config file and edit it with commands, see:
-
-https://espanso.org/docs/configuration/basics/
+cp ~/Documents/notes/espanso/base.yml ~/.config/espanso/match/
