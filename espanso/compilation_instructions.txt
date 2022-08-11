@@ -1,0 +1,26 @@
+Install espanso (compiled due to annoying notifications and no systemd):
+
+cd $CLONE_DIR
+git clone https://github.com/espanso/espanso
+
+Install wxwidgets
+
+doas pacman -S wxwidgets
+
+cd espanso
+
+To turn off notifications, simply cp from this directory the notifications.rs file to the ~/$CLONE_DIR/espanso/espanso/src/cli/worker/ui/ directory before compiling.
+
+cp notification.rs ~/$CLONE_DIR/espanso/espanso/src/cli/worker/ui/notification.rs
+
+cargo install --force cargo-make --version 0.34.0
+cargo make --profile release build-binary
+doas mv target/release/espanso /usr/bin/espanso
+
+Copy xinitrc.txt which calls espanso at beginning
+
+cp ../xinitrc.txt ~/.xinitrc
+
+Copy your base.yml to your espanso/match config directory
+
+cp base.yml ~/.config/espanso/match/
