@@ -83,3 +83,13 @@ cp ~/Documents/notes/xinitrc.txt ~/.xinitrc
 Copy your base.yml to your espanso/match config directory
 
 cp ~/Documents/notes/espanso/base.yml ~/.config/espanso/match/
+
+Install rust_analyzer lsp server for nvim
+
+:LspInstallInfo
+
+Choose rust_analyzer
+
+Copy new confug.lua file to ~/.config/nvim/lua/:
+
+cp ~/Documents/notes/nvim/lua/config.lua ~/.config/nvim/lua

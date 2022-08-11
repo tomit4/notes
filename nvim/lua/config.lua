@@ -13,7 +13,7 @@ require('nvim-autopairs').setup{}
 require('gitsigns').setup()
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
-    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "vim", "vue", "wgsl", "yaml",},
+    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "rust", "vim", "vue", "wgsl", "yaml",},
     highlight = { enable = 'true' }
 }
 
@@ -90,8 +90,36 @@ end)
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 local lspconfig =require'lspconfig'
+
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+
+-- Enable rust-analyzer
+lspconfig.rust_analyzer.setup({
+    on_attach=on_attach,
+    settings = {
+        ["rust_analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            }
+        }
+    }
+})
+
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'volar', 'zk', 'html' }
+local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'rust_analyzer', 'volar', 'zk', }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
@@ -257,6 +285,8 @@ vim.opt.number = true
 
 vim.opt.cursorcolumn = true
 -- vim.opt.cursor = true
+--
+--
 vim.opt.mouse = 'a'
 vim.opt.autoindent = true
 vim.opt.smarttab = true
