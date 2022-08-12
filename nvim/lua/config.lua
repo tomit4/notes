@@ -3,11 +3,12 @@ keymap = vim.api.nvim_set_keymap
 -- Enable ColorScheme
 vim.cmd[[colorscheme nord]]
 
--- Enable
-require("lorem-nvim").setup()
+-- Enable lorem ipsum
+-- require("lorem-nvim").setup()
 
 -- Enable autopairs
 require('nvim-autopairs').setup{}
+
 
 -- Enable gitsigns
 require('gitsigns').setup()
@@ -273,8 +274,11 @@ vim.g.NERDCreateDefaultMappings= 1
 vim.g.NERDSpaceDelims= 1
 
 -- this variable must be enabled for colors to be applied properly
-vim.g.termguicolors = true
+vim.opt.termguicolors = true
 vim.g.nosplitright = true
+
+-- Enable colorizer (css)
+require'colorizer'.setup()
 
 -- specify markdown-preview browser / set to dark mode
 vim.g.mkdp_browser = 'librewolf'
@@ -285,7 +289,6 @@ vim.opt.number = true
 
 vim.opt.cursorcolumn = true
 -- vim.opt.cursor = true
---
 --
 vim.opt.mouse = 'a'
 vim.opt.autoindent = true
@@ -328,6 +331,10 @@ vim.cmd[[autocmd BufWritePre * call TrimWhiteSpace()]]
 
 -- Enable Comments with Italics (below selected colorscheme)
 vim.cmd[[highlight Comment cterm=italic gui=italic]]
+
+-- Re-enable transparency while termguicolors are set
+vim.cmd[[hi! Normal ctermbg=NONE guibg=NONE]]
+vim.cmd[[hi! NonText ctermbg=NONE guibg=NONE]]
 
 -- do not close the markdown preview tab when switching to other buffers
 -- vim.g.mkdp_auto_close = 0
