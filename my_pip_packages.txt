@@ -4,7 +4,7 @@ adblock                       0.5.2
 alabaster                     0.7.12
 anyio                         3.6.1
 anytree                       2.8.0
-apparmor                      3.0.6
+apparmor                      3.0.7
 appdirs                       1.4.4
 arandr                        0.1.10
 argcomplete                   2.0.0
@@ -32,7 +32,7 @@ distro                        1.7.0
 dnspython                     2.2.1
 docopt                        0.6.2
 docutils                      0.19
-dotty-dict                    1.3.0
+dotty-dict                    1.3.1
 entrypoints                   0.4
 evdev                         1.6.0
 fail2ban                      0.11.2
@@ -71,7 +71,7 @@ keyring                       23.4.0
 kitchen                       1.2.6
 kiwisolver                    1.4.3
 lensfun                       0.3.3
-LibAppArmor                   3.0.6
+LibAppArmor                   3.0.7
 libfdt                        1.6.1
 libvirt-python                8.6.0
 lit                           14.0.6.dev0
@@ -83,7 +83,7 @@ mallard-ducktype              1.0.2
 Markdown                      3.4.1
 MarkupSafe                    2.1.1
 matplotlib                    3.5.2
-mcomix                        2.0.1
+mcomix                        2.0.2
 meson                         0.63.0
 milc                          1.6.6
 more-itertools                8.13.0
@@ -99,7 +99,7 @@ packaging                     21.3
 peewee                        3.15.1
 pep517                        0.12.0
 Pillow                        9.2.0
-pip                           22.2.1
+pip                           22.2.2
 platformdirs                  2.5.2
 ply                           3.11
 progress                      1.6
@@ -176,7 +176,7 @@ toml                          0.10.2
 tomli                         2.0.1
 torch                         1.12.0
 tqdm                          4.64.0
-trove-classifiers             2022.7.22
+trove-classifiers             2022.8.7
 tuir                          1.29.0
 typer                         0.3.2
 typer-cli                     0.0.12
