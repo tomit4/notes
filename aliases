@@ -352,6 +352,9 @@ alias demo2s="librewolf https://www.demo2s.com &"
 # https://codepen.io/aakhya/pen/EOxqOV/
 # specifically a series of drop down animations in css
 # https://codepen.io/codypearce/pen/PdBXpj
+
+# SOLID principles explained in JavaScript:
+# https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c
 #
 # Hardening your Web Applications and Other Security related stuff
 # for hardening nginx
