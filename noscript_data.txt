@@ -51,7 +51,6 @@
         "§:nflxext.com",
         "§:nflximg.com",
         "§:nflxvideo.net",
-        "§:noscript.net",
         "§:outlook.com",
         "§:passport.com",
         "§:passport.net",
@@ -91,11 +90,18 @@
         "https://cssbattle.dev",
         "https://lite.duckduckgo.com",
         "https://lite.duckduckgo.com/lite/",
-        "https://egghead.io"
+        "https://egghead.io",
+        "https://www.demo2s.com",
+        "https://www.unixsheikh.com",
+        "https://nginx.org",
+        "https://hub.docker.com",
+        "https://jvns.ca",
+        "https://beej.us/guide/bgnet/html/"
       ],
       "untrusted": [
         "google.com",
-        "hotmail.com"
+        "hotmail.com",
+        "noscript.net"
       ],
       "custom": {}
     },
@@ -114,6 +120,7 @@
   "sync": {
     "global": false,
     "xss": true,
+    "TabGuardMode": "incognito",
     "cascadeRestrictions": false,
     "overrideTorBrowserPolicy": false,
     "storage": "sync"
