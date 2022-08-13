@@ -34,3 +34,28 @@ Download and install in virtmanager Windows 10 iso (for purposes of software tes
 
 Use this site (microsoft only has .exe now... 64 bit, version 21H2)
 https://www.itechtics.com/windows-10-download-iso/
+
+Install Measure-It on Chromium using crxextractor.com
+
+Go to google web store
+
+search Measure-It
+
+Copy URL
+
+Go to crxextractor.com
+
+Use Get For Free and paste URL into input field
+
+Download crx
+
+Open PCManFM and navigate to Downloads folder
+
+Open Chromium Settings and go to Extensions
+
+Drag and drop downloaded crx from PCManFM to Chromium's Extensions page
+
+Enable it in Incognito Mode
+
+Pin it to the extensions bar
+
