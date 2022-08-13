@@ -59,3 +59,4 @@ Enable it in Incognito Mode
 
 Pin it to the extensions bar
 
+Allow duckduckgo to not clear cookies in librewolf, adjust preferences, and try DDG lite again.
