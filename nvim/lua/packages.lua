@@ -41,6 +41,7 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
     use 'preservim/nerdcommenter'
+    use 'prettier/vim-prettier'
     use {'lewis6991/gitsigns.nvim'}
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
