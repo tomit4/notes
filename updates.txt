@@ -59,4 +59,8 @@ Enable it in Incognito Mode
 
 Pin it to the extensions bar
 
-Allow duckduckgo to not clear cookies in librewolf, adjust preferences, and try DDG lite again.
+Allow duckduckgo to not clear cookies in librewolf, adjust preferences, and try DDG lite again (still a bit strange, but works for the most part).
+
+Install zellij (terminal multiplexer, more user friendly than tmux):
+
+doas pacman -S zellij
