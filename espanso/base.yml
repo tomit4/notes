@@ -89,6 +89,12 @@ matches:
   - trigger: ":func"
     replace: "function () {}"
 
+  - trigger: ":def"
+    replace: "def ():"
+
+  - trigger: ":fn"
+    replace: "pub fn () {}"
+
   - trigger: ":cll"
     replace: "console.log()"
 
