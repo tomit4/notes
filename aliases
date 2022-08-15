@@ -2,6 +2,7 @@
 alias .="cd && ls"
 alias more="less"
 alias grep="rg"
+alias lf="ranger"
 alias ogrep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
