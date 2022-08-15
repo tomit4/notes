@@ -177,6 +177,7 @@ alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 # alias npm_upgrade="doas npm install --location=global npm@latest"
+alias pacgrep="pacman -Q | grep $1"
 alias npm_list="npm list -g --depth=0"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
@@ -218,11 +219,14 @@ alias git-pn="git push origin-ssh && git push codeberg"
 alias git-l="git log"
 alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 
-# tmux session aliases
+# tmux multiplexer session aliases
 alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
 alias tls="tmux ls"
 alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
+
+# zellij multiplexer sesssion
+alias zj="zellij"
 
 # programming specific aliases
 alias rc="rustc"
