@@ -13,6 +13,7 @@ alias dmesg="doas dmesg -H"
 alias blkid="doas blkid"
 alias kernel="uname -r"
 alias docs="cd ~/Documents && ls"
+alias desk="cd ~/Desktop && ls"
 alias down="cd ~/Downloads && ls"
 alias pics="cd ~/Pictures && ls"
 alias music="cd ~/Music && ls"
@@ -262,6 +263,9 @@ alias apnews="links https://apnews.com"
 alias sheldonbrown="links https://sheldonbrown.com"
 alias {viruscomix,subnormality}="librewolf https://viruscomix.com/subnormality.html &"
 alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
+# sustainable clothing brands (shoes and underwear)
+alias nothingnew="librewolf https://nothingnew.com &"
+alias wamaundies="librewolf https://wamaunderwear.com &"
 
 # Onion Sites
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"

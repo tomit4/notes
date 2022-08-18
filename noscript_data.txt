@@ -96,7 +96,10 @@
         "https://nginx.org",
         "https://hub.docker.com",
         "https://jvns.ca",
-        "https://beej.us/guide/bgnet/html/"
+        "https://beej.us/guide/bgnet/html/",
+        "https://searx.space",
+        "https://nothingnew.com",
+        "https://wamaunderwear.com"
       ],
       "untrusted": [
         "google.com",
