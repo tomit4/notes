@@ -52,6 +52,7 @@ require('packer').startup(function()
     use '907th/vim-auto-save'
     use 'David-Kunz/jester' -- for unit tests using jest
     use 'jremmen/vim-ripgrep'
+    use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use 'arrufat/vala.vim' -- for vala programming language
     use 'chemzqm/neovim'
