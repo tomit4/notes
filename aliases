@@ -298,6 +298,8 @@ alias unixsheikh="links https://unixsheikh.com"
 alias jvns="librewolf https://jvns.ca &"
 # inventor of REST blog:
 alias untangled="librewolf https://roy.gbiv.com/untangled/ &"
+# software development blog:
+alias joelonsoftware="librewolf https://www.joelonsoftware.com/ &"
 
 # C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
