@@ -64,3 +64,5 @@ Allow duckduckgo to not clear cookies in librewolf, adjust preferences, and try 
 Install zellij (terminal multiplexer, more user friendly than tmux):
 
 doas pacman -S zellij
+
+Install certbot (for automating ssl certifications)

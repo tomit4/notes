@@ -343,6 +343,8 @@ alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts
 alias iconify="librewolf https://iconify.design/ &"
 # for domain names
 alias namecheap="librewolf https://namecheap.com/ &"
+# tutorials including how to set up ssl authentication and renewals:
+alias easynewbie="librewolf https://easynewbie.com &"
 # for colorizing code snippets
 alias prismjs="librewolf https://prismjs.com/ &"
 # cool front end ideas
