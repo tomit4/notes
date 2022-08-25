@@ -347,6 +347,8 @@ alias namecheap="librewolf https://namecheap.com/ &"
 alias easynewbie="librewolf https://easynewbie.com &"
 # even easier for ssl certificates is to use letsencrypt:
 alias letsencrypt="librewolf https://letsencrypt.org &"
+# and the official certbot documentation:
+alias certbotsite="librewolf https://certbot.eff.org &"
 # for colorizing code snippets
 alias prismjs="librewolf https://prismjs.com/ &"
 # cool front end ideas

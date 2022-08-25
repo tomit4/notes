@@ -102,7 +102,8 @@
         "https://wamaunderwear.com",
         "https://www.joelonsoftware.com",
         "https://letsencrypt.org",
-        "https://easynewbie.com"
+        "https://easynewbie.com",
+        "https://certbot.eff.org"
       ],
       "untrusted": [
         "google.com",
