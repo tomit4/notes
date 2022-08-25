@@ -66,3 +66,10 @@ Install zellij (terminal multiplexer, more user friendly than tmux):
 doas pacman -S zellij
 
 Install certbot (for automating ssl certifications)
+
+Issues may occur with upgrading with pacman -Syu, intel-oneapi is on the fritz...
+
+If needed add to /etc/pacman.conf:
+
+IgnorePkg = intel-oneapi-compiler-dpcpp-cpp-runtime
+IgnorePkg = intel-oneapi-openmp
