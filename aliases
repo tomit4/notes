@@ -350,7 +350,7 @@ alias letsencrypt="librewolf https://letsencrypt.org &"
 # and the official certbot documentation:
 alias certbotsite="librewolf https://certbot.eff.org &"
 #certbot has some issues when used with cron, acme.sh is an alternative:
-alias acmesh="librewolf https://github.com/acmesh-official/acme.sh/blob/master/acme.sh &"
+alias acmesh="librewolf https://github.com/acmesh-official/acme.sh &"
 # for colorizing code snippets
 alias prismjs="librewolf https://prismjs.com/ &"
 # cool front end ideas
