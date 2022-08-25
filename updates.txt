@@ -73,3 +73,5 @@ If needed add to /etc/pacman.conf:
 
 IgnorePkg = intel-oneapi-compiler-dpcpp-cpp-runtime
 IgnorePkg = intel-oneapi-openmp
+
+Then once updated, uncomment them, and try...it worked on desktop for some unknown reason...
