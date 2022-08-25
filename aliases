@@ -343,8 +343,10 @@ alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts
 alias iconify="librewolf https://iconify.design/ &"
 # for domain names
 alias namecheap="librewolf https://namecheap.com/ &"
-# tutorials including how to set up ssl authentication and renewals:
+# tutorials including how to set up ssl authentication and renewals with cerbot:
 alias easynewbie="librewolf https://easynewbie.com &"
+# even easier for ssl certificates is to use letsencrypt:
+alias letsencrypt="librewolf https://letsencrypt.org &"
 # for colorizing code snippets
 alias prismjs="librewolf https://prismjs.com/ &"
 # cool front end ideas
