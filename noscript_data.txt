@@ -99,7 +99,10 @@
         "https://beej.us/guide/bgnet/html/",
         "https://searx.space",
         "https://nothingnew.com",
-        "https://wamaunderwear.com"
+        "https://wamaunderwear.com",
+        "https://www.joelonsoftware.com",
+        "https://letsencrypt.org",
+        "https://easynewbie.com"
       ],
       "untrusted": [
         "google.com",
