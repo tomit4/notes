@@ -236,9 +236,9 @@ alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
 
 # game shortcuts
-alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
-alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
-alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
+# alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
+# alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
+# alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
 
 # docker specific Aliases
 alias docker="doas docker"
@@ -267,6 +267,10 @@ alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 alias nothingnew="librewolf https://nothingnew.com &"
 alias wamaundies="librewolf https://wamaunderwear.com &"
 
+# Privacy Related
+# simplelogin.io is like a VPN for email (aliases away your email address essentially)
+alias simplelogin="librewolf https://simplelogin.io/ &"
+
 # Onion Sites
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias {ddgt,duckducktor}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
@@ -281,6 +285,12 @@ alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf
 alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
 
 # Programming Resources
+
+# CS Basics
+# KnowledgeGate is a decent introduction to the basics of CS (mostly in Hindi though...)
+alias knowledgegate="librewolf https://www.youtube.com/c/KNOWLEDGEGATE_kg &"
+# CS50 is Harvard's Free Intro to CS course, their YT vids are good coverage of basics:
+alias cs50="librewolf https://www.youtube.com/c/cs50 &"
 
 # Algorithms and Data Structures
 alias techiedelight="librewolf https://www.techiedelight.com/ &"
