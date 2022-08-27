@@ -192,6 +192,7 @@ alias home="xclear && cd /home/brian && clear && history -c && hash -r"
 # Various source files (do not place at end of zshrc/bashrc)
 source ~/.aliases
 source ~/.gh_pat
+source ~/.ssid_passwd
 source /home/brian/.bash_completions/typer.sh
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
