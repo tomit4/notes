@@ -89,6 +89,9 @@ matches:
   - trigger: ":func"
     replace: "function () {}"
 
+  - trigger: ":try"
+    replace: "try {} catch(error) {}"
+
   - trigger: ":def"
     replace: "def ():"
 
