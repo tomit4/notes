@@ -142,12 +142,14 @@ fi
 bindkey -v
 
 # alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
-alias home="cd $HOME && history -p && zhome.sh && unset sdir"
+alias home="cd && history -p && zhome.sh && unset sdir"
 
 # Various source files (do not place at end of zshrc/bashrc)
 source ~/.aliases
 # github personal access token
 source ~/.gh_pat
+#SSID and passwd
+source ~/.ssid_passwd
 # Plugins (that need to be at the end of the zshrc script)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
