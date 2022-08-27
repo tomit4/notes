@@ -8,7 +8,7 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias cp="cp -i"
 alias df='df -h'
-alias free='free -m'
+alias free='free -mh'
 alias dmesg="doas dmesg -H"
 alias blkid="doas blkid"
 alias kernel="uname -r"
