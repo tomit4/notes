@@ -1,5 +1,5 @@
 # Changing over to ZSH for now, bashrc is kept here as emergency shell/posterity
-# test test
+
 # to change default shell, use chsh -s $(which bash)
 # ~/.bashrc
 #
