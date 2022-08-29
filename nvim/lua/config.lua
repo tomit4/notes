@@ -96,8 +96,15 @@ local on_attach = function(client)
     require'completion'.on_attach(client)
 end
 
--- Enable quick-list-js
+-- Enable quick-lint-js
 require('lspconfig/quick_lint_js').setup {}
+
+-- quick-lint-js detects errors in insert mode
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    update_in_insert = true,
+  }
+)
 
 -- Enable rust-analyzer
 lspconfig.rust_analyzer.setup({
