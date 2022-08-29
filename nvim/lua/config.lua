@@ -96,6 +96,9 @@ local on_attach = function(client)
     require'completion'.on_attach(client)
 end
 
+-- Enable quick-list-js
+require('lspconfig/quick_lint_js').setup {}
+
 -- Enable rust-analyzer
 lspconfig.rust_analyzer.setup({
     on_attach=on_attach,
@@ -120,7 +123,7 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'rome', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'rust_analyzer', 'volar', 'zk', }
+local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'quick_lint_js', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'rust_analyzer', 'volar', 'zk', }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
