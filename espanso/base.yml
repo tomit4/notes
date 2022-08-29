@@ -89,6 +89,9 @@ matches:
   - trigger: ":func"
     replace: "function () {}"
 
+  - trigger: ":=>"
+    replace: "() => {}"
+
   - trigger: ":try"
     replace: "try {} catch(error) {}"
 
@@ -103,6 +106,9 @@ matches:
 
   - trigger: ":cle"
     replace: "console.error()"
+
+  - trigger: ":clt"
+    replace: "console.table()"
 
   - trigger: ":inc"
     replace: "#include"
