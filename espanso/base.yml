@@ -69,16 +69,16 @@ matches:
           cmd: "uname -r"
 
   - trigger: ":for"
-    replace: "for(;;) {}"
+    replace: "for (;;) {}"
 
   - trigger: ":while"
     replace: "while () {}"
 
   - trigger: ":if"
-    replace: "if() {}"
+    replace: "if () {}"
 
   - trigger: ":elif"
-    replace: "else if() {}"
+    replace: "else if () {}"
 
   - trigger: ":else"
     replace: "else {}"
@@ -87,7 +87,7 @@ matches:
     replace: "do {} while ()"
 
   - trigger: ":func"
-    replace: "function() {}"
+    replace: "function () {}"
 
   - trigger: ":=>"
     replace: "() => {}"
@@ -99,7 +99,7 @@ matches:
     replace: "def():"
 
   - trigger: ":fn"
-    replace: "pub fn() {}"
+    replace: "pub fn () {}"
 
   - trigger: ":cll"
     replace: "console.log()"
