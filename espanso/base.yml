@@ -75,10 +75,10 @@ matches:
     replace: "while () {}"
 
   - trigger: ":if"
-    replace: "if () {}"
+    replace: "if() {}"
 
   - trigger: ":elif"
-    replace: "else if () {}"
+    replace: "else if() {}"
 
   - trigger: ":else"
     replace: "else {}"
