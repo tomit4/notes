@@ -25,12 +25,4 @@ Download and install in virtmanager Windows 10 iso (for purposes of software tes
 Use this site (microsoft only has .exe now... 64 bit, version 21H2)
 https://www.itechtics.com/windows-10-download-iso/
 
-Install debuginfod (only debugger query tool)
-
-doas pacman -S debuginfod
-
-Update Neovim for JS Linting:
-
-:LspInstallInfo (update all packages and uninstall rome, instead install quick_linst_js)
-
-paru quick-linst-js (1st option)
+Update nvim config and uninstall remark and zk for markdown lsp

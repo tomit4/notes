@@ -14,7 +14,7 @@ require('nvim-autopairs').setup{}
 require('gitsigns').setup()
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
-    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "markdown", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "rust", "vim", "vue", "wgsl", "yaml",},
+    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "rust", "vim", "vue", "wgsl", "yaml",},
     highlight = { enable = 'true' }
 }
 
@@ -130,7 +130,7 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'quick_lint_js', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'rust_analyzer', 'volar', 'zk', }
+local servers = { 'dockerls', 'grammarly', 'html', 'sqls', 'quick_lint_js', 'sumneko_lua', 'pyright', 'bashls', 'clangd', 'rust_analyzer', 'volar', }
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
      capabilities = capabilities,
