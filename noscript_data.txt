@@ -67,7 +67,6 @@
         "§:yimg.com",
         "§:youtube.com",
         "§:ytimg.com",
-        "https://github.com",
         "https://codeberg.org",
         "https://gitlab.com",
         "https://stackoverflow.com",
@@ -103,7 +102,15 @@
         "https://www.joelonsoftware.com",
         "https://letsencrypt.org",
         "https://easynewbie.com",
-        "https://certbot.eff.org"
+        "https://certbot.eff.org",
+        "https://www.feistyduck.com",
+        "https://simplelogin.io",
+        "https://about.gitlab.com",
+        "https://webassembly.org",
+        "https://courses.wesbos.com",
+        "https://github.com",
+        "https://mothereffinghsl.com",
+        "https://icomoon.io"
       ],
       "untrusted": [
         "google.com",

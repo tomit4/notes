@@ -382,7 +382,10 @@ alias cssbattle="librewolf https://cssbattle.dev/ &"
 alias egghead="librewolf https://egghead.io/ &"
 # cool little demos website
 alias demo2s="librewolf https://www.demo2s.com &"
-
+# mothereffinghsl hsl color picker site
+alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
+# icomoon is a site with free icons
+alias icomoon="librewolf https://icomoon.io &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
