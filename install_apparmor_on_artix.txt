@@ -1,0 +1,27 @@
+In your /etc/default/grub file, input the following at GRUB_CMDLINE_LINUX:
+
+GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf net.ifnames=0"
+
+Run:
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+Install apparmor and its corresponding init script:
+
+doas pacman -S apparmor apparmor-runit
+
+Create the usual softlink
+
+doas ln -s /etc/runit/sv/apparmor /run/runit/service
+
+Note that you don't need to enable or start this service manually
+
+Enable the apparmor profiles:
+
+doas apparmor_parser /usr/share/apparmor/extra-profiles
+
+And that should be it, just check on it using:
+
+doas aa-status
+
+When you reboot, you should also see a series of log messages letting you know apparmor is running.
