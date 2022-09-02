@@ -413,6 +413,7 @@ alias aur='ddgr \!aur "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
 alias wiki='ddgr \!w "${1}"'
 alias gh='ddgr \!gh "${1}"'
+alias mdn='ddgr \!mdn "${1}"'
 # must have account to use gitlab bang
 alias glab='ddgr \!glab "${1}"'
 alias red='ddgr \!r "${1}"'
