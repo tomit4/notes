@@ -58,6 +58,7 @@ alias rm="newrm -vi"
 alias cal="newcal"
 alias mv="mv -v"
 alias ln="ln -i"
+alias xtract-tgz='tar zxvf ${1}'
 alias {doasedit,sudoedit}="doas rnano"
 alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
