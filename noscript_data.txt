@@ -110,7 +110,9 @@
         "https://courses.wesbos.com",
         "https://github.com",
         "https://mothereffinghsl.com",
-        "https://icomoon.io"
+        "https://icomoon.io",
+        "https://devdocs.io",
+        "https://developer.mozilla.org"
       ],
       "untrusted": [
         "google.com",
