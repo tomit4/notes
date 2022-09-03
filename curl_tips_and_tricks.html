@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cURL tips and tricks</title>
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="In this post, I want to show you a list of cURL tips and tricks that I have accumulated of the years of using and learning cURL. Platform agnostic, cURL is easily accessible for every developer and well worth grasping its basic usage."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@vandycknick" />
+    <meta name="twitter:creator" content="@vandycknick" />
+    <meta property="og:title" content="cURL tips and tricks" />
+    <meta
+      property="og:description"
+      content="In this post, I want to show you a list of cURL tips and tricks that I have accumulated of the years of using and learning cURL. Platform agnostic, cURL is easily accessible for every developer and well worth grasping its basic usage."
+    />
+    <meta
+      property="og:url"
+      content="https://nvd.codes/post/curl-tips-and-tricks"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="article:published_time"
+      content="2020-02-28T20:00:00+01:00"
+    />
+    <meta property="article:author" content="Nick Van Dyck" />
+    <meta property="article:tag" content="sysadmin" />
+    <meta property="article:tag" content="tools" />
+    <meta property="article:tag" content="tips" />
+    <meta
+      property="og:image"
+      content="https://nvd.codes/_posts/2020/assets/2020-02-28-curl-tips-and-tricks/cover.jpg?w=1920&amp;q=75"
+    />
+    <meta property="og:site_name" content="Nick Van Dyck | nvd.codes" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Nick Van Dyck" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="sysadmin, tools, tips" />
+    <meta
+      name="twitter:image"
+      content="https://nvd.codes/_posts/2020/assets/2020-02-28-curl-tips-and-tricks/cover.jpg?w=1920&amp;q=75"
+    />
+    <meta name="next-head-count" content="24" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="author" content="Nick Van Dyck" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=UA-159901656-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-159901656-1", {
+        page_path: window.location.pathname,
+      });
+    </script>
+    <link
+      rel="preload"
+      href="/_next/static/css/afc7d29df5dce22f.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/afc7d29df5dce22f.css"
+      data-n-g=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-0d1b80a048d4787e.js"
+    ></script>
+    <script
+      src="/_next/static/chunks/webpack-4f997d0d0ce5ed26.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/framework-4b0533c90ca86a35.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/main-07264021efdfba85.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/_app-6a5b16aacaf36951.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/32855e9f-e10161c045b63985.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/5351-561e385ac4a98618.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/6577-7b1ce29073120a77.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/1209-0f9a2ed3a4bd69b1.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/post/%5Bslug%5D-efad9ffc31db2006.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/eGWAXMRFTon6kjtuE82zI/_buildManifest.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/eGWAXMRFTon6kjtuE82zI/_ssgManifest.js"
+      defer=""
+    ></script>
+  </head>
+  <body
+    class="h-screen bg-nord-100 dark:bg-nord-900 transition transition-colors duration-300"
+  >
+    <script>
+      (function () {
+        function setTheme(newTheme) {
+          window.__theme = newTheme;
+          preferredTheme = newTheme;
+          document.documentElement.className = newTheme;
+          var themeChangedEvent = new CustomEvent("themeChanged", {
+            detail: newTheme,
+          });
+          window.dispatchEvent(themeChangedEvent);
+        }
+        var preferredTheme;
+        try {
+          preferredTheme = localStorage.getItem("theme");
+        } catch (err) {}
+        window.__setPreferredTheme = function (newTheme) {
+          setTheme(newTheme);
+          try {
+            localStorage.setItem("theme", newTheme);
+          } catch (err) {}
+        };
+        var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        darkQuery.addListener(function (e) {
+          window.__setPreferredTheme(e.matches ? "dark" : "light");
+        });
+        setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"));
+      })();
+    </script>
+    <div id="__next">
+      <div class="flex flex-col h-screen dark:text-nord-100">
+        <header
+          class="flex bg-nord-50 dark:bg-nord-600 transition transition-color duration-300 z-50 drop-shadow-md"
+        >
+          <div
+            class="m-auto max-w-6xl w-full flex justify-between py-3 px-4 xl:px-0"
+          >
+            <div></div>
+            <nav
+              class="hidden lg:flex text-lg font-bold text-nord-500 items-center dark:text-nord-100"
+            >
+              <a class="px-4" href="/">Home</a
+              ><a class="px-4" href="/blog/">Blog</a
+              ><a class="px-4" href="/about/">About</a>
+            </nav>
+            <div class="flex lg:hidden items-center">
+              <button
+                class="p-2 rounded-md hover:cursor-pointer hover:bg-nord-200 hover:dark:bg-nord-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="inline-block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="flex flex-col flex-1 w-full max-w-full">
+          <div class="w-full flex flex-col flex-1">
+            <div
+              class="w-full w-full h-24 md:h-56 opacity-80 saturate-50 blur-[2px] bg-center bg-cover dark:blur-sm"
+              style="
+                background-image: url(/_posts/2020/assets/2020-02-28-curl-tips-and-tricks/cover.jpg?w=3840&amp;q=75);
+              "
+            ></div>
+            <div
+              class="max-w-6xl w-full flex flex-col flex-1 mx-auto px-4 xl:px-0 py-14"
+            >
+              <div class="flex flex-col items-center">
+                <h1
+                  class="text-5xl font-black text-nord-600 leading-tight font-sans dark:text-nord-100 italic pb-6 pb-4 text-center"
+                >
+                  cURL tips and tricks
+                </h1>
+                <div class="flex pb-6">
+                  <a
+                    href="https://twitter.com/share?url=https://nvd.codes/post/curl-tips-and-tricks&amp;text=Nick Van Dyck: cURL tips and tricks"
+                    class="bg-nord-600 p-2 rounded-full flex justify-center items-center mx-2"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      class="inline-block h-4 w-4 fill-nord-50"
+                    >
+                      <path
+                        d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"
+                      ></path></svg></a
+                  ><a
+                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nvd.codes/post/curl-tips-and-tricks"
+                    class="bg-nord-600 p-2 rounded-full flex justify-center items-center mx-2"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                      class="inline-block h-4 w-4 fill-nord-50"
+                    >
+                      <path
+                        d="M100.3 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                      ></path></svg></a
+                  ><a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://nvd.codes/post/curl-tips-and-tricks"
+                    class="bg-nord-600 p-2 rounded-full flex justify-center items-center mx-2"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                      class="inline-block h-4 w-4 fill-nord-50"
+                    >
+                      <path
+                        d="M279.1 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.4 0 225.4 0c-73.22 0-121.1 44.38-121.1 124.7v70.62H22.89V288h81.39v224h100.2V288z"
+                      ></path></svg></a
+                  ><a
+                    href="https://reddit.com/submit?url=https://nvd.codes/post/curl-tips-and-tricks&amp;title=Nick Van Dyck: cURL tips and tricks"
+                    class="bg-nord-600 p-2 rounded-full flex justify-center items-center mx-2"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      class="inline-block h-4 w-4 fill-nord-50"
+                    >
+                      <path
+                        d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2 .1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"
+                      ></path></svg></a
+                  ><a
+                    href="/cdn-cgi/l/email-protection#c7f8b4b2a5ada2a4b3fa89aea4ace791a6a9e783bea4acfde7a492958be7b3aeb7b4e7a6a9a3e7b3b5aea4acb4e1a6aab7fca5a8a3befaafb3b3b7b4fde8e8a9b1a3e9a4a8a3a2b4e8b7a8b4b3e8a4b2b5abeab3aeb7b4eaa6a9a3eab3b5aea4acb4"
+                    class="bg-nord-600 p-2 rounded-full flex justify-center items-center mx-2"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="inline-block h-4 w-4 stroke-nord-50"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path></svg
+                  ></a>
+                </div>
+                <div class="flex pb-14">
+                  <div class="flex justify-center items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="inline-block w-5 h-5 mr-1 font-medium text-nord-600 dark:text-nord-50"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path></svg
+                    ><time
+                      class="text-nord-600 dark:text-nord-100 font-medium"
+                      datetime="2020-02-28T20:00:00+01:00"
+                      >28 Feb 2020</time
+                    >
+                  </div>
+                  <div class="flex justify-center items-center px-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="inline-block w-5 h-5 mr-1 font-medium text-nord-600 dark:text-nord-50"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                      ></path></svg
+                    ><a
+                      class="font-medium text-nord-600 dark:text-nord-50"
+                      href=""
+                      >suggest edit</a
+                    >
+                  </div>
+                  <div class="flex justify-center items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="inline-block w-5 h-5 mr-1 font-medium text-nord-600 dark:text-nord-50"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    ><span class="text-nord-600 dark:text-nord-100 font-medium"
+                      >6 min read</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <article
+                class="bg-nord-50 p-6 dark:bg-nord-700 rounded-lg prose prose-gray dark:prose-invert w-full max-w-6xl drop-shadow-xl"
+              >
+                <article>
+                  <p>
+                    cURL&lt;cite&gt;<a href="https://ec.haxx.se">1</a
+                    >&lt;/cite&gt; (or curl as I will refer to it for the rest
+                    of the article) is an incredible tool and a worthy asset in
+                    your developer toolkit. Like every great craftsman, you as a
+                    developer deserve great tools. Granted curl can be daunting
+                    and seemingly tough to learn at first, I promise you its
+                    worth your investment. This is a write up of basic to more
+                    advanced tips and tricks that I accumulated of the years of
+                    reading blog posts, curl man pages, StackOverflow, ...
+                  </p>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#the-basics-📓"
+                      ><div id="the-basics-📓"></div>
+                      The basics 📓</a
+                    >
+                  </h2>
+                  <p>
+                    Let&#x27;s start with some basic commands to get data from
+                    the server and also let&#x27;s figure out how we can send
+                    data. Feel free to execute these commands step by step while
+                    you go through the article.
+                  </p>
+                  <p>First of let&#x27;s try a simple GET request.</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl https:/httpbin.org/get
+</code></pre>
+                  <p>
+                    If all goes well you should be presented with a response
+                    quite similar to this one:
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">{
+  &quot;args&quot;: {},
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;*/*&quot;,
+    &quot;Host&quot;: &quot;httpbin.org&quot;,
+    &quot;User-Agent&quot;: &quot;curl/7.54.0&quot;,
+    &quot;X-Amzn-Trace-Id&quot;: &quot;Root=1-5e59668c-c7281c104fb3310fc774ed7d&quot;
+  },
+  &quot;url&quot;: &quot;https://httpbin.org/get&quot;
+}
+</code></pre>
+                  <p>
+                    That was quite easy, wasn&#x27;t it? Learning curl with
+                    httpbin is quite nice because it echoes whatever you send to
+                    it right back at you. So now what if we just want to send a
+                    <code>HEAD</code> request:
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -I https://httpbin.org/get
+</code></pre>
+                  <p>Are there any other types of requests we can send?</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -d &#x27;firstname=Takeshi&amp;lastname=Kovacs&#x27; https://httpbin.org/post
+curl -d &#x27;fullname=Takeshi Kovacs&#x27; -X PUT https://httpbin.org/put
+</code></pre>
+                  <p>
+                    The <code>-X</code> parameter allows you to change the
+                    method. The following methods are supported:
+                  </p>
+                  <ul>
+                    <li>GET</li>
+                    <li>POST</li>
+                    <li>PATCH</li>
+                    <li>PUT</li>
+                    <li>DELETE</li>
+                  </ul>
+                  <p>
+                    Right now what happens if we send a request to a server and
+                    get redirected. Before running the next command try
+                    requesting
+                    <code
+                      >https://httpbin.org/redirect-to?url=https://www.google.com</code
+                    >
+                    with the commands you already know.
+                  </p>
+                  <p>
+                    So how do we follow the redirect with <code>curl</code>?
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -I -L https://httpbin.org/redirect-to?url=https://www.google.com
+</code></pre>
+                  <blockquote>
+                    <p>
+                      As it sounds, such a request follows the Location header
+                      to reach the endpoint.
+                    </p>
+                  </blockquote>
+                  <p>
+                    Tip: HTTP response codes<!-- -->
+                    <!-- -->The first digit of an HTTP response defines the
+                    error group:
+                  </p>
+                  <ul>
+                    <li>1xx: informational</li>
+                    <li>2xx: success</li>
+                    <li>3xx: redirections</li>
+                    <li>4xx: client-side errors</li>
+                    <li>5xx: server-side errors</li>
+                  </ul>
+                  <p>
+                    And oh yeah you can also customize the headers you send over
+                    via curl::
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -H &#x27;X-First-Name: Takeshi&#x27; https://httpbin.org/headers
+
+curl -d &#x27;{&quot;name&quot;: &quot;Takeshi&quot;}&#x27; -H &#x27;Content-Type: application/json&#x27; http://httpbin.org/post
+</code></pre>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#cookies-🍪"
+                      ><div id="cookies-🍪"></div>
+                      Cookies 🍪</a
+                    >
+                  </h2>
+                  <p>
+                    Nom nom cookies. HTTP Cookies are key/value pairs that a
+                    client stores on behalf of the server. They are sent back
+                    and forth on every request to allow clients to store state
+                    between requests. <code>curl</code> has a couple of ways to
+                    allow a cookie to be sent to the server. In it&#x27;s
+                    simplest form you can just use <code>--cookie</code>:
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl --cookie &quot;SOME_COOKIE=Yes&quot; https://httpbin.org/cookies
+
+</code></pre>
+                  <p>Get a cookie from the server and write it to a file.</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -c cookie.txt https://httpbin.org/cookies/set/cookiename/cookievalue
+</code></pre>
+                  <p>
+                    You can add <code>-i</code> to print the headers and do some
+                    debugging. With <code>-L</code> like you learned earlier you
+                    can follow the redirect. This will then print the cookies.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -i -L -c cookie.txt https://httpbin.org/cookies/set/cookiename/cookievalue
+</code></pre>
+                  <p>
+                    You can get the current cookies back with <code>-b</code>.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -b cookie.txt https://httpbin.org/cookies
+</code></pre>
+                  <p>Tip: Cookie file format?</p>
+                  <p>
+                    cURL uses a cookie format called Netscape, which each line
+                    is a single piece of information represented by following
+                    fields (read from left-to-right):
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"># Netscape HTTP Cookie File
+.netscape.com   TRUE    /   FALSE   946684799   NETSCAPE_ID 100103
+</code></pre>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#json-combo-{}"
+                      ><div id="json-combo-{}"></div>
+                      JSON Combo {}</a
+                    >
+                  </h2>
+                  <p>
+                    Most of the time I use curl to request resources that return
+                    a JSON response. These can become long and as just plaintext
+                    hard to reason with, parse or filter. For that, we will need
+                    to create a combo with an amazing tool called
+                    <code>jq</code>. It&#x27;s free to install on most operating
+                    systems:
+                  </p>
+                  <p>
+                    Let&#x27;s start with piping a JSON response from curl
+                    directly into <code>jq</code>.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl https://httpbin.org/stream/2 | jq
+</code></pre>
+                  <p>
+                    Now that&#x27;s pretty neat, we get our JSON response back
+                    and thanks to some colouring form <code>jq</code> we can
+                    more easily digest the response. We could also try and
+                    filter the response and just select the id.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl https://httpbin.org/stream/2 | jq &#x27;.id&#x27;
+</code></pre>
+                  <p>
+                    There is much more you can accomplish by combining
+                    <code>curl</code> and <code>jq</code>. <code>jq</code> has
+                    amazing documentation https://stedolan.github.io/jq/manual
+                    that can help you learn more about how to use it.
+                  </p>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#uploading-⬆️"
+                      ><div id="uploading-⬆️"></div>
+                      Uploading ⬆️</a
+                    >
+                  </h2>
+                  <p>
+                    Ok, let&#x27;s look at some more advanced commands we can
+                    construct and figure out if we can upload or download a
+                    file.
+                  </p>
+                  <ul>
+                    <li><code>-T</code> Uploads the given file</li>
+                    <li>
+                      <code>--date @filename</code> yes you can use the the
+                      <code>--data</code> or <code>-d</code> parameter with an
+                      <code>@</code> to simply upload a file
+                    </li>
+                  </ul>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -T uploadme https:/httpbin.org/post
+curl --data &#x27;@uploadme&#x27; https:/httpbin.org/post
+</code></pre>
+                  <p>
+                    Sometimes you might get some data via a pipe, even in this
+                    case curl got your back:
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">cat uploadme | curl --data &#x27;@-&#x27; https:/httpbin.org/post
+</code></pre>
+                  <p>
+                    To download a file from a server you use <code>-o</code>,
+                    the next argument will be the name of the file after it is
+                    downloaded.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -o file https:/httpbin.org/anything/hello-world
+</code></pre>
+                  <p>
+                    You can also use capital o <code>-O</code> this will create
+                    a file named exactly like it was on the server.
+                  </p>
+                  <p>
+                    But wait I got a form that gets posted and I need to fill in
+                    some data. No worries curl still got you covered.
+                  </p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"> curl -F &#x27;firstname=Takeshi&#x27; -F &#x27;lastname=Kovacs&#x27; https:/httpbin.org/post
+</code></pre>
+                  <blockquote>
+                    <p>This is an example of a multipart form post.</p>
+                  </blockquote>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#authentication"
+                      ><div id="authentication"></div>
+                      Authentication</a
+                    >
+                  </h2>
+                  <p>Basic authentication</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -u admin:secret https://httpbin.org/basic-auth/admin/secret
+</code></pre>
+                  <blockquote>
+                    <p>Capital -U is used for proxy authentication</p>
+                  </blockquote>
+                  <h2 class="not-prose">
+                    <a
+                      class="no-underline hover:opacity-100 after:bottom-0 after:right-0 after:opacity-0 after:content-[&#x27;#&#x27;] hover:after:opacity-100 after:transition-opacity after:transition-opacity after:pl-2 after:text-frost-300 after:text-xl after:inline-block"
+                      href="#little-gems-💎"
+                      ><div id="little-gems-💎"></div>
+                      Little gems 💎</a
+                    >
+                  </h2>
+                  <p>Do you support HTTP/2 or HTTP/3?</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl --http2 http://example.com
+curl --http3 https://example.com
+</code></pre>
+                  <p>
+                    HTTP/3 needs to be explicitly enabled during the build
+                    process. Please refer to this upgrade guide if you want to
+                    play with it:
+                    https://github.com/curl/curl/blob/master/docs/HTTP3.md
+                  </p>
+                  <p>Another interesting gem:</p>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl --path-as-is https://example/hello/../world/
+</code></pre>
+                  <blockquote>
+                    <p>
+                      Don’t squash sequences of /../ or /./ in the given URL
+                      path.
+                    </p>
+                  </blockquote>
+                  <pre
+                    style='color:#f8f8f2;background:#2E3440;font-family:"Fira Code", Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;border-radius:0.3em'
+                  ><code class="language-text" style="color:#f8f8f2;background:none;font-family:&quot;Fira Code&quot;, Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none">curl -w &#x27;Type:%{content_type}\nCode:%{response_code}\n&#x27; -I -L https://google.com
+</code></pre>
+                  <blockquote>
+                    <p>
+                      Writes out information after transfer has completed by
+                      using a special %{variable}.<!-- -->
+                      <!-- -->&lt;cite&gt;<a
+                        href="https://ec.haxx.se/usingcurl-writeout.html"
+                        >2</a
+                      >&lt;/cite&gt;
+                    </p>
+                  </blockquote>
+                </article>
+                <div class=""></div>
+                <div class="not-prose"><div id="disqus_thread"></div></div>
+              </article>
+            </div>
+          </div>
+          <svg
+            class="w-full fill-nord-50 dark:fill-nord-600 transition transition-colors duration-300"
+            viewBox="0 0 1440 46"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 .058c117.505 18.386 269.602 22.114 456.294 11.185C562.076 5.051 730.784.911 885.297 3.273 1157.177 7.432 1386.981 21.329 1440 38.39v8.55H0V.058z"
+            ></path>
+          </svg>
+        </main>
+        <footer
+          class="flex p-4 bg-nord-50 dark:bg-nord-600 transition-color transition duration-300"
+        >
+          <div class="max-w-6xl w-full mx-auto px-4 md:px-0">
+            <aside>
+              <h6
+                class="text-md font-bold text-nord-600 leading-tight font-sans dark:text-nord-100 leading-normal pb-2"
+              >
+                nvd.codes
+              </h6>
+              <div class="text-nord-600 dark:text-nord-100 text-sm">
+                all materials © Nick Van Dyck 2021
+              </div>
+              <div class="text-nord-600 dark:text-nord-100 text-sm">
+                Made with ❤️ in Belgium
+              </div>
+            </aside>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "post": {
+              "title": "cURL tips and tricks",
+              "description": "In this post, I want to show you a list of cURL tips and tricks that I have accumulated of the years of using and learning cURL. Platform agnostic, cURL is easily accessible for every developer and well worth grasping its basic usage.",
+              "date": "2020-02-28T20:00:00+01:00",
+              "draft": false,
+              "categories": ["sysadmin", "tools", "tips"],
+              "cover": "/_posts/2020/assets/2020-02-28-curl-tips-and-tricks/cover.jpg",
+              "slug": "curl-tips-and-tricks",
+              "filePath": "/home/nickvd/Projects/nvd.codes/_posts/2020/2020-02-28-curl-tips-and-tricks.md",
+              "sha256": "185f2532c3577b51e15cd3fbe66ec2866ba2ef4aa7ae1c11c8951130a11b599d",
+              "readingTime": "6 min read",
+              "editUrl": "",
+              "placeholder": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAIBAAAgEDBQEBAAAAAAAAAAAAAQMCAAQRBQcSITETJP/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAIDodH/2gAMAwEAAhEDEQA/AKL3q0Kx0mdpYBZVbmPA/FgD8juU4Y45J98rFP3Y0N72OlZMEmSMz+xo7Jz4FdUpR8yyI2eeRFtVn//Z",
+              "content": {
+                "$$mdtype": "Tag",
+                "name": "article",
+                "attributes": {},
+                "children": [
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "cURL\u003ccite\u003e",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "a",
+                        "attributes": { "href": "https://ec.haxx.se" },
+                        "children": ["1"]
+                      },
+                      "\u003c/cite\u003e (or curl as I will refer to it for the rest of the article) is an incredible tool and a worthy asset in your developer toolkit. Like every great craftsman, you as a developer deserve great tools. Granted curl can be daunting and seemingly tough to learn at first, I promise you its worth your investment. This is a write up of basic to more advanced tips and tricks that I accumulated of the years of reading blog posts, curl man pages, StackOverflow, ..."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "the-basics-📓" },
+                    "children": ["The basics 📓"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Let's start with some basic commands to get data from the server and also let's figure out how we can send data. Feel free to execute these commands step by step while you go through the article."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": ["First of let's try a simple GET request."]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": ["curl https:/httpbin.org/get\n"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "If all goes well you should be presented with a response quite similar to this one:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": {},
+                    "children": [
+                      "{\n  \"args\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"curl/7.54.0\",\n    \"X-Amzn-Trace-Id\": \"Root=1-5e59668c-c7281c104fb3310fc774ed7d\"\n  },\n  \"url\": \"https://httpbin.org/get\"\n}\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "That was quite easy, wasn't it? Learning curl with httpbin is quite nice because it echoes whatever you send to it right back at you. So now what if we just want to send a ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["HEAD"]
+                      },
+                      " request:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": ["curl -I https://httpbin.org/get\n"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Are there any other types of requests we can send?"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -d 'firstname=Takeshi\u0026lastname=Kovacs' https://httpbin.org/post\ncurl -d 'fullname=Takeshi Kovacs' -X PUT https://httpbin.org/put\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "The ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-X"]
+                      },
+                      " parameter allows you to change the method. The following methods are supported:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "ul",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["GET"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["POST"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["PATCH"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["PUT"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["DELETE"]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Right now what happens if we send a request to a server and get redirected. Before running the next command try requesting ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": [
+                          "https://httpbin.org/redirect-to?url=https://www.google.com"
+                        ]
+                      },
+                      " with the commands you already know."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "So how do we follow the redirect with ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["curl"]
+                      },
+                      "?"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -I -L https://httpbin.org/redirect-to?url=https://www.google.com\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "blockquote",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "p",
+                        "attributes": {},
+                        "children": [
+                          "As it sounds, such a request follows the Location header to reach the endpoint."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Tip: HTTP response codes",
+                      " ",
+                      "The first digit of an HTTP response defines the error group:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "ul",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["1xx: informational"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["2xx: success"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["3xx: redirections"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["4xx: client-side errors"]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": ["5xx: server-side errors"]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "And oh yeah you can also customize the headers you send over via curl::"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -H 'X-First-Name: Takeshi' https://httpbin.org/headers\n\ncurl -d '{\"name\": \"Takeshi\"}' -H 'Content-Type: application/json' http://httpbin.org/post\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "cookies-🍪" },
+                    "children": ["Cookies 🍪"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Nom nom cookies. HTTP Cookies are key/value pairs that a client stores on behalf of the server. They are sent back and forth on every request to allow clients to store state between requests. ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["curl"]
+                      },
+                      " has a couple of ways to allow a cookie to be sent to the server. In it's simplest form you can just use ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["--cookie"]
+                      },
+                      ":"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl --cookie \"SOME_COOKIE=Yes\" https://httpbin.org/cookies\n\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Get a cookie from the server and write it to a file."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -c cookie.txt https://httpbin.org/cookies/set/cookiename/cookievalue\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "You can add ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-i"]
+                      },
+                      " to print the headers and do some debugging. With ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-L"]
+                      },
+                      " like you learned earlier you can follow the redirect. This will then print the cookies."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -i -L -c cookie.txt https://httpbin.org/cookies/set/cookiename/cookievalue\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "You can get the current cookies back with ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-b"]
+                      },
+                      "."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -b cookie.txt https://httpbin.org/cookies\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": ["Tip: Cookie file format?"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "cURL uses a cookie format called Netscape, which each line is a single piece of information represented by following fields (read from left-to-right):"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": {},
+                    "children": [
+                      "# Netscape HTTP Cookie File\n.netscape.com   TRUE    /   FALSE   946684799   NETSCAPE_ID 100103\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "json-combo-{}" },
+                    "children": ["JSON Combo {}"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Most of the time I use curl to request resources that return a JSON response. These can become long and as just plaintext hard to reason with, parse or filter. For that, we will need to create a combo with an amazing tool called ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["jq"]
+                      },
+                      ". It's free to install on most operating systems:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Let's start with piping a JSON response from curl directly into ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["jq"]
+                      },
+                      "."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": ["curl https://httpbin.org/stream/2 | jq\n"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Now that's pretty neat, we get our JSON response back and thanks to some colouring form ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["jq"]
+                      },
+                      " we can more easily digest the response. We could also try and filter the response and just select the id."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl https://httpbin.org/stream/2 | jq '.id'\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "There is much more you can accomplish by combining ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["curl"]
+                      },
+                      " and ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["jq"]
+                      },
+                      ". ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["jq"]
+                      },
+                      " has amazing documentation https://stedolan.github.io/jq/manual that can help you learn more about how to use it."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "uploading-⬆️" },
+                    "children": ["Uploading ⬆️"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Ok, let's look at some more advanced commands we can construct and figure out if we can upload or download a file."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "ul",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "code",
+                            "attributes": {},
+                            "children": ["-T"]
+                          },
+                          " Uploads the given file"
+                        ]
+                      },
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "li",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "code",
+                            "attributes": {},
+                            "children": ["--date @filename"]
+                          },
+                          " yes you can use the the ",
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "code",
+                            "attributes": {},
+                            "children": ["--data"]
+                          },
+                          " or ",
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "code",
+                            "attributes": {},
+                            "children": ["-d"]
+                          },
+                          " parameter with an ",
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "code",
+                            "attributes": {},
+                            "children": ["@"]
+                          },
+                          " to simply upload a file"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -T uploadme https:/httpbin.org/post\ncurl --data '@uploadme' https:/httpbin.org/post\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "Sometimes you might get some data via a pipe, even in this case curl got your back:"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "cat uploadme | curl --data '@-' https:/httpbin.org/post\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "To download a file from a server you use ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-o"]
+                      },
+                      ", the next argument will be the name of the file after it is downloaded."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -o file https:/httpbin.org/anything/hello-world\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "You can also use capital o ",
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "code",
+                        "attributes": {},
+                        "children": ["-O"]
+                      },
+                      " this will create a file named exactly like it was on the server."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "But wait I got a form that gets posted and I need to fill in some data. No worries curl still got you covered."
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      " curl -F 'firstname=Takeshi' -F 'lastname=Kovacs' https:/httpbin.org/post\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "blockquote",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "p",
+                        "attributes": {},
+                        "children": [
+                          "This is an example of a multipart form post."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "authentication" },
+                    "children": ["Authentication"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": ["Basic authentication"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -u admin:secret https://httpbin.org/basic-auth/admin/secret\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "blockquote",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "p",
+                        "attributes": {},
+                        "children": [
+                          "Capital -U is used for proxy authentication"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Heading",
+                    "attributes": { "level": 2, "id": "little-gems-💎" },
+                    "children": ["Little gems 💎"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": ["Do you support HTTP/2 or HTTP/3?"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl --http2 http://example.com\ncurl --http3 https://example.com\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": [
+                      "HTTP/3 needs to be explicitly enabled during the build process. Please refer to this upgrade guide if you want to play with it: https://github.com/curl/curl/blob/master/docs/HTTP3.md"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "p",
+                    "attributes": {},
+                    "children": ["Another interesting gem:"]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl --path-as-is https://example/hello/../world/\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "blockquote",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "p",
+                        "attributes": {},
+                        "children": [
+                          "Don’t squash sequences of /../ or /./ in the given URL path."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "Fence",
+                    "attributes": { "language": "sh" },
+                    "children": [
+                      "curl -w 'Type:%{content_type}\\nCode:%{response_code}\\n' -I -L https://google.com\n"
+                    ]
+                  },
+                  {
+                    "$$mdtype": "Tag",
+                    "name": "blockquote",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "$$mdtype": "Tag",
+                        "name": "p",
+                        "attributes": {},
+                        "children": [
+                          "Writes out information after transfer has completed by using a special %{variable}.",
+                          " ",
+                          "\u003ccite\u003e",
+                          {
+                            "$$mdtype": "Tag",
+                            "name": "a",
+                            "attributes": {
+                              "href": "https://ec.haxx.se/usingcurl-writeout.html"
+                            },
+                            "children": ["2"]
+                          },
+                          "\u003c/cite\u003e"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/post/[slug]",
+        "query": { "slug": "curl-tips-and-tricks" },
+        "buildId": "eGWAXMRFTon6kjtuE82zI",
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+      integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+      data-cf-beacon='{"rayId":"744a80323bb07e82","version":"2022.8.1","r":1,"token":"744af3284f9d4b828cb0a3e83da25401","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
