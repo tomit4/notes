@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Error handling
+set -e
+
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtgreen=${txtbld}$(tput setaf 2)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
+# Intro Prompt
+echo "${txtgreen}xtract: a simple shell script for decompressing common file formats"
+
+# Dependency check
+# not to be used in actual program, encapsulate in function and use depending on which file is fed to xtract
+dependencies=("tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
+numdependencies=14
+missingdependencies=0
+for ((i = 0; i < numdependencies; i++)) ;
+do
+    if ! command -v "${dependencies[$i]}" &> /dev/null
+    then
+        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+        missingdependencies=$((missingdependencies+1))
+    fi
+done
+

@@ -25,6 +25,8 @@ Download and install in virtmanager Windows 10 iso (for purposes of software tes
 Use this site (microsoft only has .exe now... 64 bit, version 21H2)
 https://www.itechtics.com/windows-10-download-iso/
 
-Install pax file compressor/decompressor
+Install various file compressors/decompressors
 
-doas pacman -S pax
+doas pacman -S pax lzip
+
+paru rzip
