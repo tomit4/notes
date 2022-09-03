@@ -25,4 +25,6 @@ Download and install in virtmanager Windows 10 iso (for purposes of software tes
 Use this site (microsoft only has .exe now... 64 bit, version 21H2)
 https://www.itechtics.com/windows-10-download-iso/
 
-Update nvim config and uninstall remark and zk for markdown lsp
+Install pax file compressor/decompressor
+
+doas pacman -S pax
