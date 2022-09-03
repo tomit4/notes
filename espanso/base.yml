@@ -92,6 +92,9 @@ matches:
   - trigger: ":=>"
     replace: "() => {}"
 
+  - trigger: ":$"
+    replace: "`${}`"
+
   - trigger: ":try"
     replace: "try {} catch(error) {}"
 
