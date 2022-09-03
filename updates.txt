@@ -39,3 +39,8 @@ Install uglify-js and uglifycss:
 
 doas npm install -g uglify-js uglifycss
 
+Uninstall speed-test and install speedtest (i know...)
+
+doas npm uninstall -g speed-test
+
+paru speedtest-cli
