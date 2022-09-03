@@ -34,3 +34,7 @@ paru rzip
 Install certbot
 
 doas pacman -S certbot
+
+Install uglify-js and uglifycss:
+
+doas npm install -g uglify-js uglifycss

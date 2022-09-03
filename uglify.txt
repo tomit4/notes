@@ -1,0 +1,8 @@
+In order to use uglify-js and uglifycss is quite simple. This will minify your files for slightly quicker load speeds:
+
+doas npm install -g uglify-s uglifycss
+
+To utilize for now (make a script later), simply output the minified file using bash redirection operator:
+
+uglifyjs somefile.js > somefile.min.js
+uglifycss somefile.css > somefile.min.css
