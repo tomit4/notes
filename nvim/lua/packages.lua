@@ -37,7 +37,6 @@ require('packer').startup(function()
     use 'psliwka/vim-smoothie'
     use 'mattn/emmet-vim'
     use 'norcalli/nvim-colorizer.lua'
-    use {'derektata/lorem.nvim', requires = 'vim-scripts/loremipsum'}
     use 'airblade/vim-gitgutter'
     use 'ctrlpvim/ctrlp.vim' -- fuzzy find files
     use 'preservim/nerdcommenter'
