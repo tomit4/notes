@@ -39,7 +39,3 @@ Install uglify-js and uglifycss:
 
 doas npm install -g uglify-js uglifycss
 
-Set up pagespeed API key for use instead of google lighthouse
-
-https://developers.google.com/speed/docs/insights/v5/get-started
-
