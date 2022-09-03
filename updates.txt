@@ -30,3 +30,7 @@ Install various file compressors/decompressors
 doas pacman -S pax lzip
 
 paru rzip
+
+Install certbot
+
+doas pacman -S certbot
