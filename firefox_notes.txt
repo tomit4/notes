@@ -115,3 +115,4 @@ browser.proton.enabled set to false
 browser.proton.modals.enabled set to false
 browser.proton.doorhangers.enabled set to false
 browser.proton.contextmenus.enabled set to false
+browser.sessionstore.resum_from_crash false
