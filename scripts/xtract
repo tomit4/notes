@@ -47,11 +47,36 @@ tput bold & tput setaf 7
 # grabs the extension string
 extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
 
+# create an array and a for loop of various
+# ".txt" and ".js" and ".c" and ".py" files etc... for here
+# if the file is a .txt file...
+forbidden="txt"
+if  grep -q "${forbidden}" <<< "${1}" ; then
+    # if extension has "txt." in it, remove "txt." from extension
+    extension=$(echo "${extension}" | sed -r "s/^$forbidden.//g")
+fi
+
 # Simply copy and paste, changing extension string and extraction method below
+if [ "${extension}" == "tar" ] ; then
+    dependencycheck tar
+    echo "${txtblue}decompressing .tar...${txtyellow}"
+    # main extraction method
+    tar xf "${1}"
+    echo ".tar decompression finished!${txtwhite}"
+fi
+
 if [ "${extension}" == "tgz" ] ; then
     dependencycheck tar gunzip
     echo "${txtblue}decompressing .tgz...${txtyellow}"
     # main extraction method
-    tar zxvf "${1}" &> /dev/null
+    tar zxf "${1}"
     echo ".tgz decompression finished!${txtwhite}"
+fi
+
+if [ "${extension}" == "gz" ] ; then
+    dependencycheck gunzip
+    echo "${txtblue}decompressing .gz...${txtyellow}"
+    # main extraction method
+    gunzip --keep "${1}"
+    echo ".gz decompression finished!${txtwhite}"
 fi

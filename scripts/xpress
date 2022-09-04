@@ -45,16 +45,50 @@ echo "${txtgreen}xpress: a simple shell script for compressing common file forma
 tput bold & tput setaf 7
 
 # grabs the extension string
-extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
+extension=$(echo "${1}" | sed 's/^[^\..:]*[\..*]//')
 
 # grabs the filename/directoryname string
 fdname=$(echo "${1}" | sed 's/\..*$//')
 
+# create an array and a for loop of various
+# ".txt" and ".js" and ".c" and ".py" files etc... for here
+# if the file is a .txt file...
+forbidden=".txt"
+# if  grep -q ".txt" <<< "${1}" ; then
+if  grep -q "${forbidden}" <<< "${1}" ; then
+    # if extension has "txt." in it, remove "txt." from extension
+    # this is mess, but put another if statement and another array that compares .txt to txt.
+    extension=$(echo "${extension}" | sed -r 's/^txt.//g')
+    # doesn't work:
+    # extension=$(echo "${extension}" | sed -r "s/^$forbidden//g")
+    # appends .txt to the filename if .txt exists in the original argument
+    # fdname="${fdname}.txt"
+    fdname="${fdname}${forbidden}"
+fi
+
 # Simply copy and paste, changing extension string and extraction method below
-if [ "${extension}" == "tgz" ] ; then
-    dependencycheck tar gzip
-    echo "${txtblue}compressing .tgz...${txtyellow}"
-    # main extraction method
-    tar -cvzf "${1}" "${fdname}" &> /dev/null
-    echo ".tgz compression finished!${txtwhite}"
+if [[ -d $fdname ]] ; then
+    if [ "${extension}" == "tar" ] ; then
+        dependencycheck tar
+        echo "${txtblue}compressing .tar...${txtyellow}"
+        # main compression method
+        tar cf "${1}" "${fdname}"
+        echo ".tar compression finished!${txtwhite}"
+    fi
+
+    if [ "${extension}" == "tgz" ] ; then
+        dependencycheck tar gzip
+        echo "${txtblue}compressing .tgz...${txtyellow}"
+        # main compression method
+        tar -czf "${1}" "${fdname}"
+        echo ".tgz compression finished!${txtwhite}"
+    fi
+elif [[ -f $fdname ]] ; then
+    if [ "${extension}" == "gz" ] ; then
+        dependencycheck gzip
+        echo "${txtblue}compressing .gz...${txtyellow}"
+        # main compression method
+        gzip --keep "${fdname}"
+        echo ".gz compression finished!${txtwhite}"
+    fi
 fi
