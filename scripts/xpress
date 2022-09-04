@@ -3,32 +3,40 @@
 # Error handling
 set -e
 
+# To be implemented:
+# dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
+#Use for loop to check if recognized file formats have been passed to first argument
+
 # For styling/colorizing output
 txtbld=$(tput bold)
 txtblue=${txtbld}$(tput setaf 4)
-txtgreen=${txtbld}$(tput setaf 2)
 txtred=${txtbld}$(tput setaf 1)
+txtgreen=${txtbld}$(tput setaf 2)
 txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
+# Dependency check
+function dependencycheck()
+{
+    numdependencies="$#"
+    dependencies=("$@")
+    missingdependencies=0
 
-# To be implemented:
-# dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
+    for ((i = 0; i < numdependencies; i++)) ; do
+        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
 
-#Use for loop to check if recognized file formats have been passed to first argument
+    if [ $missingdependencies -gt 0 ] ; then
+        echo "${txtred}Please install needed dependencies${txtwhite}"
+        exit 1
+    fi
+}
 
 # Main Dependency check
-dependencies=("echo" "sed" "tput")
-numdependencies=3
-missingdependencies=0
-for ((i = 0; i < numdependencies; i++)) ;
-do
-    if ! command -v "${dependencies[$i]}" &> /dev/null
-    then
-        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
-        missingdependencies=$((missingdependencies+1))
-    fi
-done
+dependencycheck echo sed
 
 # Intro Prompt
 echo "${txtgreen}xpress: a simple shell script for compressing common file formats"
@@ -44,24 +52,7 @@ fdname=$(echo "${1}" | sed 's/\..*$//')
 
 # Simply copy and paste, changing extension string and extraction method below
 if [ "${extension}" == "tgz" ] ; then
-    # Dependency check
-    dependencies=("echo" "tar" "gzip")
-    numdependencies=3
-    missingdependencies=0
-    for ((i = 0; i < numdependencies; i++)) ;
-    do
-        if ! command -v "${dependencies[$i]}" &> /dev/null
-        then
-            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
-            missingdependencies=$((missingdependencies+1))
-        fi
-    done
-
-    if [ $missingdependencies -gt 0 ] ; then
-        echo "${txtred}Please install needed dependencies${txtwhite}"
-        exit 1
-    fi
-
+    dependencycheck tar gzip
     echo "${txtblue}compressing .tgz...${txtyellow}"
     # main extraction method
     tar -cvzf "${1}" "${fdname}" &> /dev/null
