@@ -15,6 +15,8 @@ txtwhite=${txtbld}$(tput setaf 7)
 # To be implemented:
 # dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
 
+#Use for loop to check if recognized file formats have been passed to first argument
+
 # Main Dependency check
 dependencies=("echo" "sed" "tput")
 numdependencies=3
