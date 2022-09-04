@@ -29,7 +29,7 @@ do
 done
 
 # Intro Prompt
-echo "${txtgreen}xtract: a simple shell script for decompressing common file formats"
+echo "${txtgreen}xpress: a simple shell script for compressing common file formats"
 
 # Reset output style
 tput bold & tput setaf 7
@@ -37,10 +37,13 @@ tput bold & tput setaf 7
 # grabs the extension string
 extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
 
+# grabs the filename/directoryname string
+fdname=$(echo "${1}" | sed 's/\..*$//')
+
 # Simply copy and paste, changing extension string and extraction method below
 if [ "${extension}" == "tgz" ] ; then
     # Dependency check
-    dependencies=("echo" "tar" "gunzip")
+    dependencies=("echo" "tar" "gzip")
     numdependencies=3
     missingdependencies=0
     for ((i = 0; i < numdependencies; i++)) ;
@@ -57,8 +60,8 @@ if [ "${extension}" == "tgz" ] ; then
         exit 1
     fi
 
-    echo "${txtblue}decompressing .tgz...${txtyellow}"
+    echo "${txtblue}compressing .tgz...${txtyellow}"
     # main extraction method
-    tar zxvf "${1}" &> /dev/null
-    echo ".tgz decompression finished!${txtwhite}"
+    tar -cvzf "${1}" "${fdname}" &> /dev/null
+    echo ".tgz compression finished!${txtwhite}"
 fi
