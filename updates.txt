@@ -44,3 +44,7 @@ Uninstall speed-test and install speedtest (i know...)
 doas npm uninstall -g speed-test
 
 paru speedtest-cli
+
+Install python seoanalyzer:
+
+pip3 install pyseoanalyzer

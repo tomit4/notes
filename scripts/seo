@@ -1,0 +1,3 @@
+#!/bin/sh
+
+seoanalyze https://"${1}" --output-format html > seo.html && links seo.html
