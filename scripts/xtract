@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Error handling
 set -e
@@ -11,13 +11,13 @@ txtred=${txtbld}$(tput setaf 1)
 txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
-# Intro Prompt
-echo "${txtgreen}xtract: a simple shell script for decompressing common file formats"
 
-# Dependency check
-# not to be used in actual program, encapsulate in function and use depending on which file is fed to xtract
-dependencies=("tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
-numdependencies=14
+# To be implemented:
+# dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
+
+# Main Dependency check
+dependencies=("echo" "sed" "tput")
+numdependencies=3
 missingdependencies=0
 for ((i = 0; i < numdependencies; i++)) ;
 do
@@ -28,3 +28,31 @@ do
     fi
 done
 
+# Intro Prompt
+echo "${txtgreen}xtract: a simple shell script for decompressing common file formats"
+
+# Reset output style
+tput bold & tput setaf 7
+
+# grabs the extension string
+extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
+
+if [ "${extension}" == "tgz" ] ; then
+
+    # Dependency check
+    dependencies=("echo" "tar" "gunzip")
+    numdependencies=3
+    missingdependencies=0
+    for ((i = 0; i < numdependencies; i++)) ;
+    do
+        if ! command -v "${dependencies[$i]}" &> /dev/null
+        then
+            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
+
+    echo "${txtblue}decompressing .tgz...${txtgreen}"
+    tar zxvf "${1}" &> /dev/null
+    echo ".tgz decompression finished!${txtwhite}"
+fi
