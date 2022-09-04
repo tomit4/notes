@@ -74,8 +74,8 @@ alias tshift='doas timeshift --delete && notify-send "Previous Backup Deleted!" 
 alias btop="bst -e btop"
 alias {librewolf,firefox}="librewolf"
 alias tor-browser="tor-browser &"
-alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs --enable-speech-dispatcher &"
-alias leetcode="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs --enable-speech-dispatcher https://leetcode.com/accounts/login &"
+alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
+alias leetcode="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://leetcode.com/accounts/login &"
 alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias toonz="opentoonz"
@@ -362,9 +362,7 @@ alias opengroup="librewolf https://publications.opengroup.org/ &"
 alias hugo="librewolf https://gohugo.io/ &"
 # for downloading web fonts
 alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
-# for icons(use svg codes as they are faster)
-alias iconify="librewolf https://iconify.design/ &"
-# for domain names
+# for icons(use svg codes as they are faster) alias iconify="librewolf https://iconify.design/ &" for domain names
 alias namecheap="librewolf https://namecheap.com/ &"
 # a great introduction to tls/ssl practices and rules of thumb:
 alias feistyduck="librewolf https://www.feistyduck.com/library/bulletproof-tls-guide/online/ &"
@@ -396,6 +394,8 @@ alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
 alias icomoon="librewolf https://icomoon.io &"
 #unsplash.com is an api site for developers to import and use photos
 alias unsplash="librewolf https://unsplash.com/developers &"
+# wesbos tutorials/articles/etc
+alias wesbos="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://courses.wesbos.com &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
