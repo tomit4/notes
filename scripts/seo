@@ -1,3 +1,6 @@
 #!/bin/sh
 
-seoanalyze https://"${1}" --output-format html > seo.html && links seo.html
+# grabs the url before the .com or .org, etc
+url=$(echo "${1}" | sed 's/\..*$//')
+
+seoanalyze https://"${1}" --output-format html > "${url}".html && links "${url}".html
