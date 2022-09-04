@@ -86,6 +86,9 @@ matches:
   - trigger: ":else"
     replace: "else {}"
 
+  - trigger: ":$"
+    replace: "`${}`"
+
   - trigger: ":do"
     replace: "do {} while ()"
 
