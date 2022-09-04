@@ -80,7 +80,6 @@
         "https://xhamster.com",
         "https://protonmail.com",
         "https://www.quora.com",
-        "https://www.linuxquestions.org",
         "https://sheldonbrown.com//",
         "https://google-webfonts-helper.herokuapp.com/fonts",
         "https://leafbytes.com",
@@ -112,7 +111,12 @@
         "https://mothereffinghsl.com",
         "https://icomoon.io",
         "https://devdocs.io",
-        "https://developer.mozilla.org"
+        "https://developer.mozilla.org",
+        "https://www.linuxquestions.org",
+        "https://www.wikipedia.org",
+        "https://pagespeed.web.dev",
+        "https://hackernoon.com",
+        "https://news.ycombinator.com"
       ],
       "untrusted": [
         "google.com",

@@ -266,6 +266,7 @@ alias bangs="links ~/Documents/notes/ddg_bangs.html"
 alias {cdread,cafedread}="links https://cafedread.com"
 alias wikipedia="links https://wikipedia.org"
 alias hackernews="links https://news.ycombinator.com/"
+alias hackernoon="librewolf https://hackernoon.com/ &"
 alias theregister="librewolf https://www.theregister.com &"
 alias apnews="links https://apnews.com"
 alias sheldonbrown="links https://sheldonbrown.com"
@@ -303,11 +304,15 @@ alias cs50="librewolf https://www.youtube.com/c/cs50 &"
 # Algorithms and Data Structures
 alias techiedelight="librewolf https://www.techiedelight.com/ &"
 alias algoexpert="librewolf https://www.algoexpert.io/ &"
+# Video Series on solving leetcode questions in python
+alias deepti="librewolf https://www.youtube.com/playlist?list=PL2b9acjRfGcm4qYq5MH9LufsJ67-BgkAI &"
 
 #college courses (UNIX and SysAdmin) from stevens university:
 alias netmeister="librewolf https://stevens.netmeister.org &"
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
+#Videos on College Level Mathematics
+alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
 
 # Blogs
 # Unix Sheikh, very good info regarding Unix and Linux
