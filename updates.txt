@@ -48,3 +48,7 @@ paru speedtest-cli
 Install python seoanalyzer:
 
 pip3 install pyseoanalyzer
+
+Install lighthouse into Ungoogled Chromium(chrome webstore and crxextractor.com) and via npm:
+
+doas npm install -g lighthouse
