@@ -1,6 +1,77 @@
-#!/bin/sh
+#!/bin/bash
 
+# Error handling
+set -e
+
+# Dependency check
+function dependencycheck()
+{
+    numdependencies="$#"
+    dependencies=("$@")
+    missingdependencies=0
+
+    for ((i = 0; i < numdependencies; i++)) ; do
+        if ! command -v "${dependencies[$i]}" &> /dev/null
+        then
+            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
+
+    if [ $missingdependencies -gt 0 ] ; then
+        echo "${txtred}Please install needed dependencies${txtwhite}"
+        exit 1
+    fi
+}
+
+dependencycheck tput
+
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
+# immediately check to see if pyseoanalyzer is installed
+# and exit if it is not
+if ! command -v seoanalyze &> /dev/null
+    then
+    echo "${txtred}dependency not met: seoanalyze"
+    echo "Use pip to install:"
+    echo "pip3 install pyseoanalyzer${txtwhite}"
+    exit 1
+fi
+
+# check number of arguments, if not 1, exit 1
+if [ "$#" -ne 1 ]; then
+    echo "${txtred}Improper Usage!"
+    echo "${txtblue}Example: seo google.com${txtwhite}"
+    exit 1
+fi
+
+# invoke function comment out if sourced
+dependencycheck echo sed
+
+echo "${txtblue}seoanalyzer analyzing ${1}..."
 # grabs the url before the .com or .org, etc
 url=$(echo "${1}" | sed 's/\..*$//')
 
-seoanalyze https://"${1}" --output-format html > "${url}".html && links "${url}".html
+finalreport="${url}".seo.report.html
+# all the actual work being done...
+seoanalyze https://"${1}" --output-format html > "${finalreport}"
+echo "${txtyellow}seoanalyzer complete!${txtblue}"
+echo "report file: ${finalreport}"
+
+#if the user has a default browser,
+# then prompt if they would like to view the report in the browser
+if [ -n "${BROWSER}" ] ; then
+    read -e -r -p "would you like to view it in $BROWSER?(y/n): ${txtyellow}" viewinbrowser
+    if [[ $viewinbrowser == "y" || $viewinbrowser == "yes" ]]; then
+        $BROWSER "${finalreport}"
+    else
+        exit 0
+    fi
+else
+    exit 0
+fi
