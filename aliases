@@ -394,6 +394,8 @@ alias demo2s="librewolf https://www.demo2s.com &"
 alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
 # icomoon is a site with free icons
 alias icomoon="librewolf https://icomoon.io &"
+#unsplash.com is an api site for developers to import and use photos
+alias unsplash="librewolf https://unsplash.com/developers &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
