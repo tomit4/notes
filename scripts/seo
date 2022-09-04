@@ -3,6 +3,13 @@
 # Error handling
 set -e
 
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
 # Dependency check
 function dependencycheck()
 {
@@ -24,24 +31,7 @@ function dependencycheck()
     fi
 }
 
-dependencycheck tput
-
-# For styling/colorizing output
-txtbld=$(tput bold)
-txtblue=${txtbld}$(tput setaf 4)
-txtred=${txtbld}$(tput setaf 1)
-txtyellow=${txtbld}$(tput setaf 3)
-txtwhite=${txtbld}$(tput setaf 7)
-
-# immediately check to see if pyseoanalyzer is installed
-# and exit if it is not
-if ! command -v seoanalyze &> /dev/null
-    then
-    echo "${txtred}dependency not met: seoanalyze"
-    echo "Use pip to install:"
-    echo "pip3 install pyseoanalyzer${txtwhite}"
-    exit 1
-fi
+dependencycheck python3 pip3 seoanalyze echo sed
 
 # check number of arguments, if not 1, exit 1
 if [ "$#" -ne 1 ]; then
@@ -50,11 +40,9 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-# invoke function comment out if sourced
-dependencycheck echo sed
-
-echo "${txtblue}seoanalyzer analyzing ${1}..."
+echo "${txtblue}seoanalyzer analyzing https://${1}..."
 # grabs the url before the .com or .org, etc
+# does not work with multiple periods in url
 url=$(echo "${1}" | sed 's/\..*$//')
 
 finalreport="${url}".seo.report.html
