@@ -37,8 +37,8 @@ tput bold & tput setaf 7
 # grabs the extension string
 extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
 
+# Simply copy and paste, changing extension string and extraction method below
 if [ "${extension}" == "tgz" ] ; then
-
     # Dependency check
     dependencies=("echo" "tar" "gunzip")
     numdependencies=3
@@ -52,7 +52,8 @@ if [ "${extension}" == "tgz" ] ; then
         fi
     done
 
-    echo "${txtblue}decompressing .tgz...${txtgreen}"
+    echo "${txtblue}decompressing .tgz...${txtyellow}"
+    # main extraction method
     tar zxvf "${1}" &> /dev/null
     echo ".tgz decompression finished!${txtwhite}"
 fi
