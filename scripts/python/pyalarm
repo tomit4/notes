@@ -1,13 +1,14 @@
 #!/bin/python
 
 # https://realpython.com/python-subprocess/
-
 import subprocess
 from argparse import ArgumentParser
 from time import sleep
 
 parser = ArgumentParser()
-parser.add_argument("time", type=int)
+#  parser.add_argument("time", type=int)
+parser.add_argument("-t", type=int)
 args = parser.parse_args()
-sleep(args.time)
-subprocess.call(["notify-send", "Time's Up!!",])
+sleep(args.t)
+#  sleep(args.time)
+subprocess.call(["notify-send", "Time's Up!!"])

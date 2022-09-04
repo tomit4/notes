@@ -245,12 +245,15 @@ if [ $numrepos -eq 0 ] ; then
 # Otherwise, if there already is a .git directory...
 else
 
+    # creates a list of repos and puts them in an array
+    remotearray=($(git remote))
     # Grabs all new files
     newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
     # Grabs all modified files
     modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
     # Grabs all deleted files
     deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
+
 
     # getopts loop for flag -r that reverts back changes in git repo
     while getopts "r" opt; do
@@ -290,7 +293,11 @@ else
                     git reset --hard ${commitarray[$version]}
 
                     # and pushes it to remote repository
-                    git remote | xargs -L1 git push --all
+                    for ((i = 0; i < numrepos; i++)) ; do
+                        git push --force ${remotearray[i]} ;
+                    done
+
+                    # git remote | xargs -L1 git push --all
 
                     echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
                     exit 0
@@ -391,7 +398,10 @@ else
             git commit -m "$gitmoji $cmessage" ;
 
             # pushes the commit to each repository
-            git remote | xargs -L1 git push --all
+            for ((i = 0; i < numrepos; i++)) ; do
+                git push --force ${remotearray[i]} ;
+            done
+            # git remote | xargs -L1 git push --all
 
             echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
             exit 0
