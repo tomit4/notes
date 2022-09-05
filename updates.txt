@@ -25,30 +25,51 @@ Download and install in virtmanager Windows 10 iso (for purposes of software tes
 Use this site (microsoft only has .exe now... 64 bit, version 21H2)
 https://www.itechtics.com/windows-10-download-iso/
 
-Install various file compressors/decompressors
+To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/google-font-installer
 
-doas pacman -S pax lzip
+Install legit (generic license generator):
 
-paru rzip
+doas npm install -g @captainsafia/legit
 
-Install certbot
+Install mycli (syntax highlighter/autocompleter for mariadb)
 
-doas pacman -S certbot
+paru mycli
 
-Install uglify-js and uglifycss:
+Install pgcli (same for mycli, but for postgres)
 
-doas npm install -g uglify-js uglifycss
+paru pgcli (you may need to also install psycopg)
 
-Uninstall speed-test and install speedtest (i know...)
+pip install psycopg
 
-doas npm uninstall -g speed-test
+To test, you should create a test table(you don't use psql that often, so create a table to test this out):
 
-paru speedtest-cli
+Install litecli(same as mycli, but for sqlite)
 
-Install python seoanalyzer:
+paru litecli
 
-pip3 install pyseoanalyzer
+Install updates for npm (checks if dependencies in local directory are up to date)
+doas npm i -g updates
 
-Install lighthouse into Ungoogled Chromium(chrome webstore and crxextractor.com) and via npm:
+Install calcurse (ncurses calendar app)
 
-doas npm install -g lighthouse
+paru calcurse
+cp ~/Documents/notes/calcurse/conf ~/.config/calcurse/
+
+Install wallpaper-cli (alternative to feh for wallpaper fill)
+
+doas npm i -g wallpaper-cli
+
+Install google-font-installer:
+
+doas npm install -g google-font-installer
+
+Install grip (markdown previewer specifically for github)
+
+paru grip (check, should be 4)
+
+Install mdlt (command line calculator)
+doas npm i -g mdlt
+
+create a .zip_code file with ZIPCODE=
+in .aliases, above inxi-w alias:
+source .zip_code

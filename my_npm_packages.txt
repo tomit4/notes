@@ -1,8 +1,30 @@
-/home/brian/.nvm/versions/node/v17.0.1/lib
-├── @chemzqm/neovim@5.7.9
-├── corepack@0.10.0
-├── live-server@1.2.2
-├── npm@8.15.0
-├── nvm@0.0.4
-└── speed-test@3.0.0
-
+/usr/lib/node_modules
+remark-language-server
+semver
+wallpaper-cli
+nopt
+updates
+@volar
+rome
+node-gyp
+remark
+uglifycss
+lighthouse
+corepack
+vscode-langservers-extracted
+.bin
+pyright
+@captainsafia
+prettier
+mdlt
+google-font-installer
+npm
+dockerfile-language-server-nodejs
+uglifyjs
+grammarly-languageserver
+emmet-ls
+.package-lock.json
+nodemon
+jest
+uglify-js
+bash-language-server
