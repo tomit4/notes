@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Uses textbelt.com api to send sms text messages, only one allowed per day
+# Consider using with cronjobs to send emergency text messages when servers go down, etc
+# in which case you'll probably want to purchase an api key from them:
+# https://textbelt.com/purchase/?generateKey=1
+
+source $HOME/.phone_number
+
+msg=$1
+
+curl -X POST https://textbelt.com/text \
+       --data-urlencode phone=$PHONE \
+       --data-urlencode message="${msg}" \
+       -d key=textbelt_test
+       # insert api key where textbelt is printed if you choose to purchase them
+       # -d key=textbelt
