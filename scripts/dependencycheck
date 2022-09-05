@@ -20,14 +20,16 @@ function dependencycheck()
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
             echo "${txtred}  dependency not met: ${dependencies[$i]}${txtwhite}"
             missingdependencies=$((missingdependencies+1))
+        else
+            echo "${txtgreen}  dependency met: ${dependencies[$i]}${txtwhite}"
         fi
     done
 
     if [ $missingdependencies -gt 0 ] ; then
         exit 1
-    # comment out if using in other scripts
+    # comment out if used in other scripts
     else
-        echo "${txtgreen}  All dependencies met!"
+        exit 0
     fi
 }
 
