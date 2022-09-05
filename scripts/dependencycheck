@@ -18,7 +18,7 @@ function dependencycheck()
 
     for ((i = 0; i < numdependencies; i++)) ; do
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            echo "${txtred} dependency not met: ${dependencies[$i]}${txtwhite}"
+            echo "${txtred}  dependency not met: ${dependencies[$i]}${txtwhite}"
             missingdependencies=$((missingdependencies+1))
         fi
     done
@@ -28,7 +28,7 @@ function dependencycheck()
         exit 1
     # comment out if using in other scripts
     else
-        echo "${txtgreen} All dependencies met!"
+        echo "${txtgreen}  All dependencies met!"
     fi
 }
 

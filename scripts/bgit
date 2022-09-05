@@ -331,7 +331,7 @@ else
         echo "${txtblue}פֿ MODIFIED: ${txtblue}$modified"
     fi
     if [[ $deleted ]]; then
-        echo "${txtred} DELETED: ${txtred}$deleted"
+        echo "${txtred} DELETED: ${txtred}$deleted"
     fi
 
     while true
