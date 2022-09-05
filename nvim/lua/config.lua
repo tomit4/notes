@@ -346,5 +346,8 @@ vim.cmd[[highlight Comment cterm=italic gui=italic]]
 vim.cmd[[hi! Normal ctermbg=NONE guibg=NONE]]
 vim.cmd[[hi! NonText ctermbg=NONE guibg=NONE]]
 
+-- never create swap files
+vim.cmd[[set noswapfile]]
+
 -- do not close the markdown preview tab when switching to other buffers
 -- vim.g.mkdp_auto_close = 0
