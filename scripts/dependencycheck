@@ -24,7 +24,6 @@ function dependencycheck()
     done
 
     if [ $missingdependencies -gt 0 ] ; then
-        echo "${txtred}Please install needed dependencies${txtwhite}"
         exit 1
     # comment out if using in other scripts
     else
