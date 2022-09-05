@@ -73,3 +73,12 @@ doas npm i -g mdlt
 create a .zip_code file with ZIPCODE=
 in .aliases, above inxi-w alias:
 source .zip_code
+
+Fix Inkscape
+
+poppler and poppler-glib need to be reverted back to 22.08.0-2
+inkscape needs to be reverted to 1.2.1-2
+
+doas pacman -U /var/cache/pacman/pkg/poppler-glib-22.08.0-2-x86_64.pkg.tar.zst /var/cache/pacman/pkg/poppler-22.08.0-2-x86_64.pkg.tar.zst
+
+doas pacman -U /var/cache/pacman/pkg/inkscape-1.2.1-2-x86_64.pkg.tar.zst
