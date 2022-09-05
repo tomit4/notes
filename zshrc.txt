@@ -2,6 +2,11 @@
 
 # to change default shell, use chsh -s $(which zsh)
 
+# prevent overwriting of existing files
+set -o noclobber
+# reverse with:
+# set +o noclobber
+
 # create custom env variables:
 export cproj="/home/brian/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment_midterm"
 

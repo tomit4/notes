@@ -114,6 +114,8 @@ if [ $numrepos -eq 0 ] ; then
                         exit 1
                     fi
 
+                    # consider using legit prompt here for automated LICENSING
+
                     npm init -y
                     npm install -D nodemon prettier jest
 
