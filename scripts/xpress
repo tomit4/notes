@@ -3,10 +3,6 @@
 # Error handling
 set -e
 
-# To be implemented:
-# dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
-#Use for loop to check if recognized file formats have been passed to first argument
-
 # For styling/colorizing output
 txtbld=$(tput bold)
 txtblue=${txtbld}$(tput setaf 4)
@@ -24,13 +20,12 @@ function dependencycheck()
 
     for ((i = 0; i < numdependencies; i++)) ; do
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            echo "${txtred}  dependency not met: ${dependencies[$i]}${txtwhite}"
             missingdependencies=$((missingdependencies+1))
         fi
     done
 
     if [ $missingdependencies -gt 0 ] ; then
-        echo "${txtred}Please install needed dependencies${txtwhite}"
         exit 1
     fi
 }
@@ -44,51 +39,103 @@ echo "${txtgreen}xpress: a simple shell script for compressing common file forma
 # Reset output style
 tput bold & tput setaf 7
 
-# grabs the extension string
-extension=$(echo "${1}" | sed 's/^[^\..:]*[\..*]//')
-
-# grabs the filename/directoryname string
-fdname=$(echo "${1}" | sed 's/\..*$//')
-
-# create an array and a for loop of various
-# ".txt" and ".js" and ".c" and ".py" files etc... for here
-# if the file is a .txt file...
-forbidden=".txt"
-# if  grep -q ".txt" <<< "${1}" ; then
-if  grep -q "${forbidden}" <<< "${1}" ; then
-    # if extension has "txt." in it, remove "txt." from extension
-    # this is mess, but put another if statement and another array that compares .txt to txt.
-    extension=$(echo "${extension}" | sed -r 's/^txt.//g')
-    # doesn't work:
-    # extension=$(echo "${extension}" | sed -r "s/^$forbidden//g")
-    # appends .txt to the filename if .txt exists in the original argument
-    # fdname="${fdname}.txt"
-    fdname="${fdname}${forbidden}"
-fi
-
-# Simply copy and paste, changing extension string and extraction method below
-if [[ -d $fdname ]] ; then
-    if [ "${extension}" == "tar" ] ; then
+if [ "${1}" == "-tar" ] ; then
         dependencycheck tar
         echo "${txtblue}compressing .tar...${txtyellow}"
         # main compression method
-        tar cf "${1}" "${fdname}"
+        tar cf "${2}.tar" "${2}"
         echo ".tar compression finished!${txtwhite}"
-    fi
-
-    if [ "${extension}" == "tgz" ] ; then
-        dependencycheck tar gzip
-        echo "${txtblue}compressing .tgz...${txtyellow}"
-        # main compression method
-        tar -czf "${1}" "${fdname}"
-        echo ".tgz compression finished!${txtwhite}"
-    fi
-elif [[ -f $fdname ]] ; then
-    if [ "${extension}" == "gz" ] ; then
-        dependencycheck gzip
-        echo "${txtblue}compressing .gz...${txtyellow}"
-        # main compression method
-        gzip --keep "${fdname}"
-        echo ".gz compression finished!${txtwhite}"
-    fi
+        exit 0
 fi
+
+if [ "${1}" == "-tgz" ] ; then
+    dependencycheck tar gzip
+    echo "${txtblue}compressing .tgz...${txtyellow}"
+    # main compression method
+    tar -czf "${2}.tgz" "${2}"
+    echo ".tgz compression finished!${txtwhite}"
+    exit 0
+fi
+
+
+if [ "${1}" == "-gz" ] ; then
+    dependencycheck gzip
+    echo "${txtblue}compressing .gz...${txtyellow}"
+    # main compression method
+    gzip --keep "${2}"
+    echo ".gz compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [ "${1}" == "-zip" ] ; then
+    dependencycheck zip
+    echo "${txtblue}compressing .zip...${txtyellow}"
+    # main compression method
+    zip "${2}.zip" "${2}"
+    echo ".zip compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-bzip" || "${1}" == "-bzip2" || "${1}" == "-bz2" || "${1}" == "-bz" ]] ; then
+    dependencycheck bzip2
+    echo "${txtblue}compressing .bz2...${txtyellow}"
+    # main compression method
+    bzip2 -k "${2}"
+    echo ".bz2 compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-lzip" || "${1}" == "-lz" ]] ; then
+    dependencycheck lzip
+    echo "${txtblue}compressing .lz...${txtyellow}"
+    # main compression method
+    lzip -c "${2}" > "${2}.lz"
+    echo ".lz compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-rzip" || "${1}" == "-rz" ]] ; then
+    dependencycheck rzip
+    echo "${txtblue}compressing .rz...${txtyellow}"
+    # main compression method
+    rzip -k "${2}"
+    echo ".rz compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [ "${1}" == "-xz" ] ; then
+    dependencycheck xz
+    echo "${txtblue}compressing .xz...${txtyellow}"
+    # main compression method
+    xz -k "${2}"
+    echo ".xz compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-zstd" || "${1}" == "-zst" ]] ; then
+    dependencycheck zstd
+    echo "${txtblue}compressing .zst...${txtyellow}"
+    # main compression method
+    zstd -k "${2}"
+    echo ".zst compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-ar" || "${1}" == "-a" ]] ; then
+    dependencycheck ar
+    echo "${txtblue}compressing .a...${txtyellow}"
+    # main compression method
+    ar -rs "${2}.a" "${2}"
+    echo ".a compression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-brotli" || "${1}" == "-br" ]] ; then
+    dependencycheck brotli
+    echo "${txtblue}compressing .br...${txtyellow}"
+    # main compression method
+    brotli "${2}"
+    echo ".br compression finished!${txtwhite}"
+    exit 0
+fi
+

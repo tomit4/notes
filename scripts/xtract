@@ -3,10 +3,6 @@
 # Error handling
 set -e
 
-# To be implemented:
-# dependencies=("echo" "sed" "tar" "zip" "bzip2" "gzip" "gunzip" "pax" "7z" "ar" "cpio" "brotli" "lzip" "rzip" "xz" "zstd")
-#Use for loop to check if recognized file formats have been passed to first argument
-
 # For styling/colorizing output
 txtbld=$(tput bold)
 txtblue=${txtbld}$(tput setaf 4)
@@ -24,13 +20,12 @@ function dependencycheck()
 
     for ((i = 0; i < numdependencies; i++)) ; do
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            echo "${txtred}  dependency not met: ${dependencies[$i]}${txtwhite}"
             missingdependencies=$((missingdependencies+1))
         fi
     done
 
     if [ $missingdependencies -gt 0 ] ; then
-        echo "${txtred}Please install needed dependencies${txtwhite}"
         exit 1
     fi
 }
@@ -44,39 +39,102 @@ echo "${txtgreen}xtract: a simple shell script for decompressing common file for
 # Reset output style
 tput bold & tput setaf 7
 
-# grabs the extension string
-extension=$(echo "${1}" | sed 's/^[^\..:]*[\..]//')
-
-# create an array and a for loop of various
-# ".txt" and ".js" and ".c" and ".py" files etc... for here
-# if the file is a .txt file...
-forbidden="txt"
-if  grep -q "${forbidden}" <<< "${1}" ; then
-    # if extension has "txt." in it, remove "txt." from extension
-    extension=$(echo "${extension}" | sed -r "s/^$forbidden.//g")
-fi
-
 # Simply copy and paste, changing extension string and extraction method below
-if [ "${extension}" == "tar" ] ; then
+if [ "${1}" == "-tar" ] ; then
     dependencycheck tar
     echo "${txtblue}decompressing .tar...${txtyellow}"
     # main extraction method
-    tar xf "${1}"
+    tar xf "${2}"
     echo ".tar decompression finished!${txtwhite}"
+    exit 0
 fi
 
-if [ "${extension}" == "tgz" ] ; then
+if [ "${1}" == "-tgz" ] ; then
     dependencycheck tar gunzip
     echo "${txtblue}decompressing .tgz...${txtyellow}"
     # main extraction method
-    tar zxf "${1}"
+    tar zxf "${2}"
     echo ".tgz decompression finished!${txtwhite}"
+    exit 0
 fi
 
-if [ "${extension}" == "gz" ] ; then
+if [ "${1}" == "-gz" ] ; then
     dependencycheck gunzip
     echo "${txtblue}decompressing .gz...${txtyellow}"
     # main extraction method
-    gunzip --keep "${1}"
+    gunzip --keep "${2}"
     echo ".gz decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [ "${1}" == "-zip" ] ; then
+    dependencycheck unzip
+    echo "${txtblue}decompressing .zip...${txtyellow}"
+    # main extraction method
+    unzip "${2}"
+    echo ".zip decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-bzip" || "${1}" == "-bzip2" || "${1}" == "-bz2" || "${1}" == "-bz" ]] ; then
+    dependencycheck bzip2
+    echo "${txtblue}decompressing .bz2...${txtyellow}"
+    # main extraction method
+    bzip2 -kd "${2}"
+    echo ".bz2 decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-lzip" || "${1}" == "-lz" ]] ; then
+    dependencycheck lzip
+    echo "${txtblue}decompressing .lz...${txtyellow}"
+    # main extraction method
+    lzip -d "${2}"
+    echo ".lz decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-rzip" || "${1}" == "-rz" ]] ; then
+    dependencycheck rzip
+    echo "${txtblue}decompressing .rz...${txtyellow}"
+    # main extraction method
+    rzip -kd "${2}"
+    echo ".rz decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [ "${1}" == "-xz" ] ; then
+    dependencycheck xz
+    echo "${txtblue}decompressing .xz...${txtyellow}"
+    # main extraction method
+    xz -kd "${2}"
+    echo ".xz decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-zstd" || "${1}" == "-zst" ]] ; then
+    dependencycheck zstd
+    echo "${txtblue}decompressing .zst...${txtyellow}"
+    # main extraction method
+    zstd -kd "${2}"
+    echo ".zst decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-ar" || "${1}" == "-a" ]] ; then
+    dependencycheck ar
+    echo "${txtblue}decompressing .a...${txtyellow}"
+    # main extraction method
+    ar -x "${2}"
+    echo ".a decompression finished!${txtwhite}"
+    exit 0
+fi
+
+if [[ "${1}" == "-brotli" || "${1}" == "-br" ]] ; then
+    dependencycheck brotli
+    echo "${txtblue}decompressing .br...${txtyellow}"
+    # main extraction method
+    brotli -d "${2}"
+    echo ".br decompression finished!${txtwhite}"
+    exit 0
 fi
