@@ -325,13 +325,13 @@ else
 
     # Let the user know what is staged for commit
     if [[ $newfiles ]]; then
-        echo "${txtgreen}ADDED: ${txtgreen}$newfiles"
+        echo "${txtgreen} ADDED: ${txtgreen}$newfiles"
     fi
     if [[ $modified ]]; then
-        echo "${txtblue}MODIFIED: ${txtblue}$modified"
+        echo "${txtblue}פֿ MODIFIED: ${txtblue}$modified"
     fi
     if [[ $deleted ]]; then
-        echo "${txtred}DELETED: ${txtred}$deleted"
+        echo "${txtred} DELETED: ${txtred}$deleted"
     fi
 
     while true

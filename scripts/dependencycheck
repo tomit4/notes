@@ -5,6 +5,7 @@ set -e
 
 # For styling/colorizing output
 txtbld=$(tput bold)
+txtgreen=${txtbld}$(tput setaf 2)
 txtred=${txtbld}$(tput setaf 1)
 txtwhite=${txtbld}$(tput setaf 7)
 
@@ -17,7 +18,7 @@ function dependencycheck()
 
     for ((i = 0; i < numdependencies; i++)) ; do
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+            echo "${txtred} dependency not met: ${dependencies[$i]}${txtwhite}"
             missingdependencies=$((missingdependencies+1))
         fi
     done
@@ -25,6 +26,9 @@ function dependencycheck()
     if [ $missingdependencies -gt 0 ] ; then
         echo "${txtred}Please install needed dependencies${txtwhite}"
         exit 1
+    # comment out if using in other scripts
+    else
+        echo "${txtgreen} All dependencies met!"
     fi
 }
 

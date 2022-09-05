@@ -265,6 +265,8 @@ alias docker-rm-i="doas docker image rm"
 alias docker-exec="doas docker exec -it" # use with container ID and bash
 
 # bookmarks
+# nerdfonts cheat sheet for terminal icons
+alias nfcheatsheet='librewolf https://www.nerdfonts.com/cheat-sheet &'
 alias codeberg="librewolf https://codeberg.org/ &"
 alias sqlsc="links https://sqlservercentral.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
