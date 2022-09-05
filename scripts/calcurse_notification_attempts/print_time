@@ -3,6 +3,11 @@
 # simple script that prints out current time in hours:mins format
 # to be utilized in a bash version of calcurse_reminder.py
 
+# calcurse keeps the plain text version of your appointments/notes/todos in
+# .local/share/calcurse
+
+# utilizing ths, you can probably parse out the text and create a watch daemon using DBUS or cron to notify you when these align (albeit this might take a small amount of RAM to run in the bg)
+
 hours=$(date +"%T" | awk -F ":" '{print $1}')
 mins=$(date +"%T" | awk -F ":" '{print $2}')
 
