@@ -1,3 +1,3 @@
 #!/bin/bash
 
-torsocks curl -s https://{$1} | hxnormalize -e | grep -v -e '^$' | pygmentize -l html
+curl -s https://{$1} | hxnormalize -e | grep -v -e '^$' | pygmentize -l html

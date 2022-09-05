@@ -14,6 +14,9 @@ fi
 # save our current working directory
 sdir=$(pwd)
 
+# make sure we don't overwrite our .zshrc
+set -o noclobber
+
 # and write that directory temporarily, appending it onto the end of our .zshrc
 echo 'export sdir='$sdir >> $HOME/.zshrc
 # immediately source it to use it in this shell session
