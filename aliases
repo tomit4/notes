@@ -61,7 +61,6 @@ alias cal="newcal"
 alias math="mdlt simplify"
 alias mv="mv -v"
 alias ln="ln -i"
-alias xtract-tgz='tar zxvf ${1}'
 alias {doasedit,sudoedit}="doas rnano"
 alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
@@ -188,13 +187,14 @@ source ~/.zip_code
 alias inxi-w="inxi --weather-location "${ZIPCODE}""
 alias forecast="curl -s 'http://wttr.in/losangeles'"
 alias pf="pfetch"
+alias has="dependencycheck"
 alias ipaddr="curl ifconfig.me/all.json | jq"
 alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 # alias npm_upgrade="doas npm install --location=global npm@latest"
 alias pacgrep="pacman -Q | grep $1"
-alias npm_list="npm list -g --depth=0"
+alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
 alias nb="newsboat"
@@ -204,7 +204,7 @@ alias grip="grip 6969"
 alias sudoku="sku"
 # pip list and pip freeze command list pip packages
 
-#Particularly useful commands more to remember than to use as alias:
+#Particularly useful commands more to remember than to use as aliases:
 alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias {rlast,dlast}="sed -i '$ d'" # removes last line of file
