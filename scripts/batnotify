@@ -3,7 +3,7 @@
 while true ; do
 	PWRLVL=$(cat /sys/class/power_supply/BAT1/capacity)
         if [ "$PWRLVL" -le 15 ] ; then
-            notify-send "  Battery is at 15%!!";
+            notify-send "  Battery is at 15%!!";
             sleep 300s;
         else
             sleep 60s;
