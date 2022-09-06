@@ -3,9 +3,12 @@
 # makelist creates a list of current packages, removes the second field (version numbers), and replaces all the new lines with spaces and then writes it to a file called my_packages.txt, you can more or less copy and paste this list into pacman -S to re-download all your files, useful if you need to start from scratch. Needs a script eventually to query aur_packages directory for packages downloaded directly from AUR and not Artix repositories.
 
 pacman -Q | awk '!($2="")' | tr '\n' ' ' >> my_pacman_packages_laptop.txt
-npm list -g > my_npm_packages_laptop.txt
-pip list > my_pip_packages_laptop.txt
-go list ... > my_go_packages_laptop.txt
+
+find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g' | tr '\n' ' ' > my_npm_packages_laptop.txt
+
+pip list | awk '{ print $1 }' | tr '\n' ' ' > my_pip_packages_laptop.txt
+
+go list std | tr '\n' ' ' > my_go_packages_laptop.txt
 
 find /usr/bin | sed -r 's/^\/usr\/bin\///g' | tr '\n' ' ' > my_binaries_laptop.txt
 
