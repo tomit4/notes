@@ -1,7 +1,7 @@
 #Custom Aliases
 alias .="cd && ls"
 alias more="less"
-alias grep="rg"
+alias grep="rg -N"
 alias lf="ranger"
 alias ogrep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -216,6 +216,9 @@ alias shchk="shellcheck"
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+
+# useful bash commands
+# grep, sed, awk, tr, sort, seq, paste, uniq
 
 # git aliases
 alias git-a="git add"
