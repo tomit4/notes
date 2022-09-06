@@ -216,6 +216,7 @@ alias shchk="shellcheck"
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+alias espeak="espeak -v female5"
 
 # useful bash commands
 # grep, sed, awk, tr, sort, seq, paste, uniq

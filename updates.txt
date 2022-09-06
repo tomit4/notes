@@ -42,3 +42,7 @@ And go ahead and open it up to test
 Fixed inkscape (uncomment ignored packages (inkscape and popplers) from /etc/pacman.conf)
 
 doas ln /usr/lib/inkscape/libinkscape_base.so /usr/lib/libinkscape_base.so
+
+Install espeak
+
+paru espeak
