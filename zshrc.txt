@@ -96,9 +96,10 @@ zle_highlight=('paste:none') # pasting text using ctrl+shift+v doesn't highlight
 unsetopt BEEP
 
 # PROMPT='[%n@%m %1~]%F{green}(${vcs_info_msg_0_})%F{white}$ '
-PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+# PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+PROMPT='%B%F{blue}[ﴂ %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
 └─>%B%F{white} '
-
+#
 # function erase_history { local HISTSIZE=0; }
 # erase_history && hash -r
 
