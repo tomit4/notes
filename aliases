@@ -273,6 +273,7 @@ alias docker-exec="doas docker exec -it" # use with container ID and bash
 # nerdfonts cheat sheet for terminal icons
 alias nfcheatsheet='librewolf https://www.nerdfonts.com/cheat-sheet &'
 alias codeberg="librewolf https://codeberg.org/ &"
+alias mankier="links https://www.mankier.com"
 alias sqlsc="links https://sqlservercentral.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
 alias gopher="lynx https://gopher.floodgap.com/gopher/gw.lite"
@@ -311,7 +312,6 @@ alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf
 alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
 
 # Programming Resources
-
 # CS Basics
 # KnowledgeGate is a decent introduction to the basics of CS (mostly in Hindi though...)
 alias knowledgegate="librewolf https://www.youtube.com/c/KNOWLEDGEGATE_kg &"
