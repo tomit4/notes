@@ -38,7 +38,6 @@ require('packer').startup(function()
     use 'mattn/emmet-vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'airblade/vim-gitgutter'
-    -- use 'ctrlpvim/ctrlp.vim' -- decent fuzzy find files
     use 'junegunn/fzf.vim' -- better fuzzy find files
     use 'preservim/nerdcommenter'
     use 'prettier/vim-prettier'
@@ -51,7 +50,7 @@ require('packer').startup(function()
     use 'simeji/winresizer'
     use '907th/vim-auto-save'
     use 'David-Kunz/jester' -- for unit tests using jest
-    use 'jremmen/vim-ripgrep'
+    use 'rinx/nvim-ripgrep'
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use 'arrufat/vala.vim' -- for vala programming language
