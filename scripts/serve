@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# live-server --browser=$BROWSER --open="$1"
-live-server --browser=chromium --open="$1"
+live-server --browser=$BROWSER_2 --open="$1"
