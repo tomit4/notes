@@ -71,7 +71,8 @@ a - enter INSERT mode at the following cursor position (appending)
 shift + i - enter INSERT mode at the beginning of the line
 shift + a - enter INSERT mode at the end of the line
 v - enter VISUAL mode
-shift -v enter VISUAL mode and select the current line
+shift + v enter VISUAL mode and select the current line
+shift + r enter REPLACE mode (think of this as INSERT in windows/mac, simply replaces all text beneath cursor while in this mode)
 ctrl + v - enter VISUAL BLOCK MODE
 
 NO MATTER WHAT MODE YOU'RE IN, you can always:
@@ -95,7 +96,7 @@ I only really use this for muliple commenting out of lines
 NORMAL MODE
 
 nf Simply typing this in NORMAL MODE will invoke Neoformat, simply hit enter afterwards
-fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
+CTRL + p or fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
 rg Simply typing this in NORMAL MODE will invoke RipGrep, simply hit enter afterwards
 
 CTRL + x removes highlighting from previous search results

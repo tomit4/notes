@@ -16,6 +16,7 @@ keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincm
 
 -- open fzf
 vim.cmd[[nnoremap fzf :silent :Files]]
+keymap('n', '<c-p>', '<c-w>:Files<CR>', {})
 
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]
