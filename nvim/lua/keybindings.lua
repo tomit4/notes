@@ -14,6 +14,9 @@ keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 -- Use ctrl- [hl] to select the active split!
 keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
+-- open fzf
+keymap('n', '<c-p>', '<c-w>:Files<CR>', {})
+
 -- Toggle NERDCommenter with Ctrl + c
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
 
@@ -52,3 +55,4 @@ vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]
 -- Toggle English spellcheck with F11
 vim.cmd[[nnoremap <silent> <F11> :set spell!<cr>]]
 vim.cmd[[inoremap <silent> <F11> <C-O>:set spell!<cr>]]
+

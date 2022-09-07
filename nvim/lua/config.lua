@@ -99,6 +99,19 @@ end
 -- Enable quick-lint-js
 require('lspconfig/quick_lint_js').setup {}
 
+-- Enable use of ripgrep
+require('nvim-ripgrep').setup{
+    runner = require('nvim-ripgrep.run').ripgrep, -- grep command
+    prompt = "❯ ", -- prompt
+    window = {
+        width = 0.8,
+        border = "rounded",
+    };
+    open_qf_fn = function()
+        return vim.api.nvim_command('copen')
+    end,
+}
+
 -- quick-lint-js detects errors in insert mode
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

@@ -55,9 +55,6 @@ export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/
 # Configure grep output colors
 export GREP_COLORS='ms=01;34'
 
-# Enable fuzzy file finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Don't show completion until at least 1 character has been typed
 zstyle ':autocomplete:*' min-input 1
 

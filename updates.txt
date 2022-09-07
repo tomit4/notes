@@ -27,22 +27,8 @@ https://www.itechtics.com/windows-10-download-iso/
 
 To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/google-font-installer
 
-set a $PHONE env by putting your number into $HOME/.phone_number for textme script to work
+create a .n_hidden file for xh and ph scripts (see scripts, you'll know what to do)
 
-ThinkorSwim (once again) broke due to a java update, their installer script doesn't really work anymore, so never uninstall I guess? anywho, here's what you have to do now if it doesn't open:
+Make sure you installed fzf from your official package manager as this will allow you to use it with nvim:
 
-paru zulu-11-bin
-
-archlinux-java status
-
-doas archlinux-java set zulu-11
-
-And go ahead and open it up to test
-
-Fixed inkscape (uncomment ignored packages (inkscape and popplers) from /etc/pacman.conf)
-
-doas ln /usr/lib/inkscape/libinkscape_base.so /usr/lib/libinkscape_base.so
-
-Install espeak
-
-paru espeak
+doas pacman -S fzf
