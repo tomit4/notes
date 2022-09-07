@@ -1,3 +1,15 @@
 #!/bin/bash
-# chromium --incognito https://xhmaster.com/search/"${1}" &
-librewolf https://xhmaster.com/search/"${1}" &
+
+source "${HOME}"/.n_hidden
+lastarg="${@: -1}"
+# echo "lastarg is "${lastarg}""
+search=""
+for ARG in "${@}" ; do
+    if [ $ARG == $lastarg ] ; then
+        search+="${ARG}"
+    else
+        search+="${ARG}+"
+    fi
+done
+
+$BROWSER "${N2}"/search/"${search}" &
