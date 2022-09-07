@@ -1,7 +1,7 @@
 #Custom Aliases
 alias .="cd && ls"
 alias more="less"
-alias grep="rg -N"
+alias {rg,grep}="rg -N"
 alias lf="ranger"
 alias ogrep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
