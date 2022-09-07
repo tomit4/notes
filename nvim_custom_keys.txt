@@ -101,6 +101,10 @@ nf Simply typing this in NORMAL MODE will invoke Neoformat, simply hit enter aft
 CTRL + p or fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
 rg Simply typing this in NORMAL MODE will invoke RipGrep, simply hit enter afterwards
 
+SHIFT + d Opens up diff view
+
+SHIFT + p Automatically Updates new Packages with :PackerSync
+
 CTRL + x removes highlighting from previous search results
 
 CTRL + c Comment out line (use in conjunction with CTRL + V for multiple lines)
