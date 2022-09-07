@@ -78,3 +78,6 @@ https://www.nerdfonts.com/cheat-sheet (terminal based)
 :thread: .......................... add or update code related to multithreading or concurrency...... 
 
 artix/atlassin(for use in bash/prompt) ﴂ
+cancel/deleted/x ✗ 
+check-mark ✓
+right-arrow ➜
