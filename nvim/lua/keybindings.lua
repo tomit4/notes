@@ -20,9 +20,7 @@ vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
 -- <Ctrl-x> redraws the screen and removes any search highlighting
 keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 
--- Can't quite get working yet
--- keybind map Ctrl + m to :MarkdownPreview
--- vim.cmd[[nmap <C-m> <Plug>MarkdownPreviewToggle]]
+-- <Shift -m> brings up a preview of Markdown files
 keymap('n', '<s-m>', '<c-w>:MarkdownPreview<CR>', {})
 --
 -- Toggle Multi-Cursor with j or k
@@ -44,10 +42,7 @@ vim.cmd[[nnoremap T :lua require"jester".run_file()]]
 -- :lua require"jester".debug_file()
 -- :lua require"jester".debug_last()
 
--- Prettify using shortcut gp (careful, only use on files that have a parser)
--- vim.cmd[[nnoremap gp :silent %!prettier --stdin-filepath %<CR>]]
-
--- Format C and C++ Code using cp alias
+-- Format C and C++ Code using cp alias ( thus far preferable to Neoformat)
 vim.cmd[[nnoremap cp :silent :ClangFormat]]
 
 -- j/k will move virtual lines (lines that wrap)
