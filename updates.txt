@@ -32,3 +32,8 @@ Check out artix-news on github and look at its source code to understand a basic
 Install artix-news
 
 pip install artix-news
+
+Even though it might not be necessary, create a paru directory in your ~/.config directory and copy the /etc/paru.conf file into it (for use of doas with paru...)
+
+mkdir ~/.config/paru
+doas cp /etc/paru.conf ~/.config/paru
