@@ -27,5 +27,8 @@ https://www.itechtics.com/windows-10-download-iso/
 
 To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/google-font-installer
 
-in .n_hidden, add an $scomm and $secdir
+Check out artix-news on github and look at its source code to understand a basic web-scraper written in python: https://github.com/ryukinix/artix-news
 
+Install artix-news
+
+pip install artix-news

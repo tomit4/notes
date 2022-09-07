@@ -367,6 +367,7 @@ alias kernelintro="links https://tldp.org/LDP/tlk/tlk.html"
 alias kernelorg="links http://vger.kernel.org/lkml/"
 alias archives="links https://archive.artixlinux.org/"
 alias forums="librewolf https://forum.artixlinux.org/ &"
+alias artixnews="artix-news | grep '\[News\]' | bat"
 
 # alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
 alias mirrors="links https://mirror1.artixlinux.org/"
