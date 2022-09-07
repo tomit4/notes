@@ -27,8 +27,5 @@ https://www.itechtics.com/windows-10-download-iso/
 
 To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/google-font-installer
 
-create a .n_hidden file for xh and ph scripts (see scripts, you'll know what to do)
+in .n_hidden, add an $scomm and $secdir
 
-Make sure you installed fzf from your official package manager as this will allow you to use it with nvim:
-
-doas pacman -S fzf

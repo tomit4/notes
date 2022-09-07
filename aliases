@@ -462,3 +462,6 @@ alias regen_initramfs="doas mkinitcpio -P"
 # source scripts that need to utilize shell builtins
 alias {sd,sdir}="source $HOME/scripts/sdir"
 alias {rd,rdir}="source $HOME/scripts/rdir"
+
+source .n_hidden
+alias "${scomm}"='cd "${secdir}" && mmpv * && home'
