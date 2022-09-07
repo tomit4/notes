@@ -11,6 +11,7 @@ keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
+
 -- Use ctrl- [hl] to select the active split!
 keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
@@ -26,6 +27,12 @@ vim.cmd[[nnoremap lsp :silent :LspInstallInfo]]
 
 -- invoke Neoformat
 vim.cmd[[nnoremap nf :silent :Neoformat]]
+
+-- invoke PackerSync
+keymap('n', '<s-p>', '<c-w>:PackerSync<CR>', {})
+
+--invoke Diffview
+keymap('n', '<s-d>', '<c-w>:DiffviewOpen<CR>', {})
 
 -- Toggle NERDCommenter with Ctrl + c
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
