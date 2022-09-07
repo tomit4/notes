@@ -21,6 +21,9 @@ keymap('n', '<c-p>', '<c-w>:Files<CR>', {})
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]
 
+-- open lsp-installer
+vim.cmd[[nnoremap lsp :silent :LspInstallInfo]]
+
 -- invoke Neoformat
 vim.cmd[[nnoremap nf :silent :Neoformat]]
 
