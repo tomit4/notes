@@ -1,11 +1,11 @@
 #!/bin/bash
 
 source "${HOME}"/.n_hidden
-lastarg="${@: -1}"
-# echo "lastarg is "${lastarg}""
+lastarg=("${@: -1}")
+
 search=""
 for ARG in "${@}" ; do
-    if [ $ARG == $lastarg ] ; then
+    if [[ $ARG == "${lastarg[1]}" ]] ; then
         search+="${ARG}"
     else
         search+="${ARG}+"
