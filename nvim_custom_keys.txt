@@ -94,6 +94,10 @@ I only really use this for muliple commenting out of lines
 
 NORMAL MODE
 
+nf Simply typing this in NORMAL MODE will invoke Neoformat, simply hit enter afterwards
+fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
+rg Simply typing this in NORMAL MODE will invoke RipGrep, simply hit enter afterwards
+
 CTRL + x removes highlighting from previous search results
 
 CTRL + c Comment out line (use in conjunction with CTRL + V for multiple lines)

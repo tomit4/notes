@@ -15,7 +15,13 @@ keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
 -- open fzf
-keymap('n', '<c-p>', '<c-w>:Files<CR>', {})
+vim.cmd[[nnoremap fzf :silent :Files]]
+
+-- open ripgrep
+vim.cmd[[nnoremap rg :silent :Rg]]
+
+-- invoke Neoformat
+vim.cmd[[nnoremap nf :silent :Neoformat]]
 
 -- Toggle NERDCommenter with Ctrl + c
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
