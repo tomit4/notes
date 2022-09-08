@@ -6,7 +6,14 @@ I have created this small txt file to document my basic neoneovim work flow
 It is combined with notes about my espanso keybindings, which are meant to aid in the workflow
 Keep in mind these are specific to my neovim setup and will definitely not work in all neovim setups
 
-A FINAL NOTE: I recommend trying to coordinate your vim workflow throughout all of your applications. When setting up keybindings in say a tiling window manager like i3 or bspwm(my preferred twm), it may be a good idea to set up vim keybindings in that. Lastly, install vimium into your browser, as this will allow you to navigate your browser using vim keybindings (hjkldu for navigation, yy to grab the current url, / to search the page, etc.). Vimium is available in either chromium or firefox based browsers and is an essential part of my workflow along with Neovim.
+A FINAL NOTE: I recommend trying to coordinate your vim workflow throughout all of your applications. The easiest way to do this is to set up vim keybindings in your terminal:
+
+In .bashrc:
+set -o vi
+In .zshrc:
+bindkey -v
+
+When setting up keybindings in say a tiling window manager like i3 or bspwm(my preferred twm), it may be a good idea to set up vim keybindings in that. Lastly, install vimium into your browser, as this will allow you to navigate your browser using vim keybindings (hjkldu for navigation, yy to grab the current url, / to search the page, etc.). Vimium is available in either chromium or firefox based browsers and is an essential part of my workflow along with Neovim.
 
 -- Standard keybindings (all neovim)
 
