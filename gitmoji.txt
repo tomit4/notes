@@ -64,7 +64,7 @@ https://www.nerdfonts.com/cheat-sheet (terminal based)
 :triangular_flag_on_post: ......... add, update, or remove feature flags ............................ 
 :goal_net: ........................ catch errors .................................................... 
 :dizzy: ........................... add or update animations and transitions ........................ 💫 .
-:wastebacket: ..................... deprecate code that needs to be cleaned update .................. 
+:wastebasket: ..................... deprecate code that needs to be cleaned update .................. 
 :passport_control: ................ work on code related to authorization, roles, and permissions ... 
 :adhesive_bandages: ............... simple fix for a non-critical issue ............................. 🩹
 :monocole_face: ................... data exploration/inspection ..................................... 
