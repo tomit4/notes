@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # so far requires gitmojis (txt file) and also
-# bgit_gitmoji for function echomoji that displays gitmojis in terminal
+# bgit_gitmoji for function echomoji() that displays gitmojis in terminal and also
+# bgit_init for function b_init()
 
 # Error handling
 set -e
@@ -37,9 +38,19 @@ dependencycheck git
 tput bold & tput setaf 7
 
 function bgit() {
+    # Intro Prompt
+    echo "${txtblue} bgit: a handy shell script for automating simple git inits/commits"
+
     numrepos=$(git remote | wc -l)
     numargs="$#"
     # args=("$@")
+
+    if [[ $numargs -ge 2 ]] ; then
+        echo "${txtred}✗ Improper usage!!"
+        echo "${txtred}✗ Simply type bgit if this is a git repository"
+        echo "${txtred}✗ Or type -h or --help for help"
+        exit 1
+    fi
 
     if [[ $numrepos -ge 1 && $numargs -eq 0 ]]; then
         dependencycheck grep awk tr
@@ -50,7 +61,7 @@ function bgit() {
         deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
 
         if [[ -n $newfiles || -n $modified || -n $deleted ]] ; then
-            echo "${txtwhite} The following files are staged for commit:"
+            echo "${txtwhite}The following files are staged for commit:"
         else
             echo "${txtgreen}✓ everything up-to-date...exiting bgit${txtwhite}"
             exit 0
@@ -69,14 +80,14 @@ function bgit() {
         while true
         do
             dependencycheck read
-            read -e -r -p "${txtwhite} commit changes?(y/n): ${txtyellow}" change
+            read -e -r -p "${txtblue} commit changes?(y/n): ${txtyellow}" change
             if [[ $change == "y" || $change == "yes" ]] ; then
 
                 while true
                 do
-                    read -e -r -p "${txtwhite} add a gitmoji?(y/n/help): ${txtyellow}" gmojiprompt
+                    read -e -r -p "${txtblue} add a gitmoji?(y/n/help): ${txtyellow}" gmojiprompt
                     if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
-                        read -e -r -p "${txtwhite} enter gitmoji: ${txtyellow}" gitmoji
+                        read -e -r -p "${txtblue} enter gitmoji: ${txtyellow}" gitmoji
                         gitmoji=":$gitmoji:"
                         break
                     elif [[ $gmojiprompt == "help" || $gmojiprompt == "h" ]] ; then
@@ -95,7 +106,7 @@ function bgit() {
 
                 while true
                 do
-                    read -e -r -p "${txtwhite} commit message: ${txtyellow}" message
+                    read -e -r -p "${txtblue} commit message: ${txtyellow}" message
                     cmessage=("$message")
                     cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
                     if [ "${#message}" -ge 51 ] ; then
@@ -118,7 +129,7 @@ function bgit() {
 
                 git commit -m "$gitmoji $cmessage" > /dev/null 2>&1;
                 if [[ "$gitmoji" != "" ]] ; then
-                    source ~/scripts/bgit_echomoji
+                    source $HOME/scripts/bgit_echomoji
                     echomoji $gitmoji
                 else
                     echo "${txtblue}$cmessage${txtwhite}"
@@ -126,6 +137,7 @@ function bgit() {
                 for ((i = 0; i < numrepos; i++)) ; do
                     git push --force ${remotearray[i]} > /dev/null 2>&1;
                 done
+                echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
                 exit 0
 
             elif [[ $change == "n" || $change == "no" ]] ; then
@@ -143,16 +155,20 @@ function bgit() {
             fi
         done
 
-    elif [[ $numrepos -eq 0 || $numargs -ge 1 && $1 == "-i" ]] ; then
+    elif [[ $numrepos -eq 0 || $numargs -eq 1 && $1 == "-i" ]] ; then
         if [[ $numrepos -eq 0 ]] ; then
             echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
-            source ~/scripts/bgit_init
+            source $HOME/scripts/bgit_init
             b_init "$@"
         else
             echo "${txtred} git repository already here..."
-            source ~/scripts/bgit_init
+            source $HOME/scripts/bgit_init
             b_init "$@"
         fi
+
+    elif [[ $numrepos -ge 1 && $numargs -eq 1 && $1 == "-r" ]] ; then
+            source $HOME/scripts/bgit_revert
+            b_revert "$@"
     fi
 }
 
