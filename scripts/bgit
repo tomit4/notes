@@ -39,7 +39,7 @@ tput bold & tput setaf 7
 
 function bgit() {
     # Intro Prompt
-    echo "${txtblue} bgit: a handy shell script for automating simple git inits/commits${txtred}"
+    echo "${txtblue} bgit: a handy shell script for simple git inits/commits${txtred}"
 
     numrepos=$(git remote | wc -l)
     numargs="$#"
