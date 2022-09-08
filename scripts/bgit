@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# so far requires gitmojis (txt file) and also
+# bgit_gitmoji for function echomoji() that displays gitmojis in terminal and also
+# bgit_init for function b_init()
+
 # Error handling
 set -e
 # For styling/colorizing output
@@ -35,10 +39,9 @@ tput bold & tput setaf 7
 
 function bgit() {
     # Intro Prompt
-    echo "${txtblue} bgit: a handy shell script for simple git inits/commits${txtred}"
+    echo "${txtblue} bgit: a handy shell script for automating simple git inits/commits${txtred}"
 
     numrepos=$(git remote | wc -l)
-
     numargs="$#"
     # args=("$@")
 
@@ -92,7 +95,7 @@ function bgit() {
                             bat $HOME/.config/bgit/gitmojis
                         else
                             dependencycheck less
-                            less $HOME/.config/bgit/gitmojis
+                            less ~/scripts/gitmojis
                         fi
                     else
                         echo "${txtblue} no gitmoji specified...${txtwhite}"
@@ -126,7 +129,7 @@ function bgit() {
 
                 git commit -m "$gitmoji $cmessage" > /dev/null 2>&1;
                 if [[ "$gitmoji" != "" ]] ; then
-                    source $HOME/.config/bgit/bgit_echomoji
+                    source $HOME/scripts/bgit_echomoji
                     echomoji $gitmoji
                 else
                     echo "${txtblue}$cmessage${txtwhite}"

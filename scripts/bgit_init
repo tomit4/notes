@@ -1,160 +1,167 @@
 #!/bin/bash
-
 function b_init() {
     while true
     do
-    dependencycheck read
-    read -e -r -p "${txtwhite} initialize repository?(y/n): ${txtyellow}" init
+    #Prompts the user if they'd like to initialize repository
+    read -e -r -p "${txtblue} initialize repository?(y/n): ${txtyellow}" init
         if [[ $init == "n" || $init = "no" ]]; then
-            echo "${txtred}✗ no git repository initialized...exiting${txtwhite}"
+            echo "${txtred} no git repository initialized...exiting${txtwhite}"
             break
         elif [[ $init == "y" || $init == "yes" ]] ; then
 
+
+            # Creates a default README.md
             if [ ! -f "README.md" ] ; then
                 echo -e "## A Simple README\n\nSome Text\n\n__Some Checklist__\n\n- [x] Completed task\n- [ ] Incomplete task" > README.md
             fi
-
+            # Creates a default .gitignore
             echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
-            git init
+            # Initializes git repository cwd...
+            git init > /dev/null 2>&1
+
+            # defaults to not requiring gpg key sign
             git config commit.gpgsign false
+
+            while [ true ];
+            do
+                # prompts user to change default username/email and changes them if they'd like (no input defaults to global values)
+                read -e -r -p "${txtblue} would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
+                if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
+                    read -e -r -p "${txtblue} enter your username: ${txtyellow}" uname
+                    if [[ -n $uname ]] ; then
+                        git config user.name $uname
+                        read -e -r -p "${txtblue}﫯 enter your email: ${txtyellow}" uemail
+                        if [[ -n $uemail ]] ; then
+                            git config user.email $uemail
+                            break
+                        else
+                            echo "${txtblue}﫯 no email entered, defaulting to global value${txtwhite}"
+                            break
+                        fi
+                    else
+                        echo "${txtblue} no username entered, defaulting to global value${txtwhite}"
+                        break
+                    fi
+                else
+                    echo "${txtblue} defaulting to global username/password${txtwhite}"
+                    break
+                fi
+            done
 
             while true
             do
-            read -e -r -p "${txtwhite} would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
-            if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
-                read -e -r -p "${txtwhite} enter your username: ${txtyellow}" uname
-                if [[ -n $uname ]] ; then
-                    git config user.name $uname
-                    read -e -r -p "${txtwhite}﫯 enter your email: ${txtyellow}" uemail
-                    if [[ -n $uemail ]] ; then
-                        git config user.email $uemail
+                read -e -r -p "${txtblue} would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
+                if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
+                    dependencycheck node npm
+
+                    npm init -y > /dev/null 2>&1
+                    npm install -D nodemon prettier jest > /dev/null 2>&1
+
+                    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
+
+                    echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
+                    mkdir scripts
+                    mkdir css
+                    mkdir tests
+                    touch tests/index.test.js
+                    echo 'console.log("Hello World!");' > scripts/index.js
+                    echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
+                    sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
+                    break
+                else
+                    break
+                fi
+            done
+
+            tput bold & tput setaf 7
+
+            git add . > /dev/null 2>&1
+            git commit -m ":tada: Initial commit!" > /dev/null 2>&1
+            echo "${txtblue} Initial commit!${txtwhite}"
+
+            while true
+            do
+            read -e -r -p "${txtblue} change branch name?(y/n): ${txtyellow}" chbranch
+                if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
+                    read -e -r -p "${txtblue} branch name?(i.e. 'main'): ${txtyellow}" branch
+                    if [ -n "$branch" ] ; then
+                        git branch -M $branch
                         break
                     else
-                        echo "${txtblue}﫯 no email entered, defaulting to global value${txtwhite}"
-                        break
+                        echo "${txtred} branch name is empty, please enter branch name!${txtwhite}"
+                    fi
+                else
+                    echo "${txtblue} branch name will be left as ${txtyellow}'master'${txtwhite}"
+                    branch="master"
+                    break
                 fi
-            else
-                echo "${txtblue} no username entered, defaulting to global value${txtwhite}"
+            done
+
+            # main git init loop
+            while true
+            do
+                uname=$(git config user.name)
+                read -e -r -p "${txtblue} Please enter remote to add(i.e. origin): ${txtyellow}" remote
+
+                # if the user doesn't enter anything for the remote prompt, it defaults to origin
+                if [[ -z $remote ]]; then
+                    remote="origin"
+                fi
+
+                while [ -z $host ]
+                do
+                    read -e -r -p "${txtblue} Please enter host site (i.e. github.com): ${txtyellow}" host
+                done
+
+                while [ -z $repo ]
+                do
+                    read -e -r -p "${txtblue} Please enter name of repository: ${txtyellow}" repo
+                done
+
+                tput bold & tput setaf 7
+
+                if [[ -n $host && $host == "github.com" ]] ; then
+                    read -e -r -p "${txtblue} Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
+
+                    tput bold & tput setaf 7
+
+                    if [[ ! -f $HOME/.gh_pat ]]; then
+                        echo "${txtred} Github personal access token doesn't exist"
+                        echo " See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
+                        echo " create a $HOME/.gh_pat file and put your personal access token in it like so:"
+                        echo ' echo > "GH_TOKEN=your_gh_token_goes_here'
+                        tput bold & tput setaf 7
+                        exit 1
+                    fi
+
+                    source $HOME/.gh_pat
+
+                    if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+
+                        dependencycheck curl
+
+                        echo "${txtgreen} Host Site is github.com, creating repository...${txtwhite}"
+                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}' > /dev/null 2>&1
+
+                    fi
+
+                    echo -e "${txtblue} Your \$GH_TOKEN is saved to your clipboard...\nsimply enter CTRL+SHIFT+V to paste your token...\nwhen prompted for your password${txtwhite}"
+                    echo $GH_TOKEN | xclip -sel clip
+                fi
+
+                git remote add $remote "https://$host/$uname/$repo"
+                git push --set-upstream $remote $branch > /dev/null 2>&1
+
+                if [[ $host == "github.com" ]] ; then
+                    echo "${txtgreen} GitHub repository created and initiated!!${txtwhite}"
+                    echo '' | xclip && xclip -selection clipboard /dev/null
+                else
+                    echo "${txtgreen} Git repository initiated!!${txtwhite}"
+                fi
+
                 break
-            fi
-        else
-            echo "${txtblue} defaulting to global username/password${txtwhite}" break
-        fi
-        done
-
-        while true
-        do
-        read -e -r -p "${txtwhite} would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
-        if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
-            tput bold & tput setaf 7
-            dependencycheck sed node npm prettier
-
-            npm init -y > /dev/null 2>&1
-            npm install -D nodemon prettier jest > /dev/null 2>&1
-
-            echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
-
-            echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
-
-            mkdir scripts
-            mkdir css
-            mkdir tests
-            touch tests/index.test.js
-
-            echo 'console.log("Hello World!");' > scripts/index.js
-            echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
-
-            dependencycheck sed
-            sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
+            done
             break
-        else
-            break
-        fi
-        done
-
-        tput bold & tput setaf 7
-
-        git add . >/dev/null 2>&1
-        git commit -m ":tada: Initial commit!" >/dev/null 2>&1
-        echo "${txtblue} Initial commit!${txtwhite}"
-
-        while true
-        do
-        read -e -r -p "${txtwhite} change branch name?(y/n): ${txtyellow}" chbranch
-        if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
-            read -e -r -p "${txtwhite} branch name?(i.e. 'main'): ${txtyellow}" branch
-            if [ -n "$branch" ] ; then
-                git branch -M $branch
-                break
-            else
-                echo "${txtred}✗ branch name is empty, please enter branch name!${txtwhite}"
-            fi
-        else
-            echo "${txtblue} branch name will be left as ${txtyellow}'master'${txtwhite}"
-            branch="master"
-            break
-        fi
-        done
-
-        while true
-        do
-        uname=$(git config user.name)
-        read -e -r -p "${txtwhite} Please enter remote to add(i.e. origin): ${txtyellow}" remote
-
-        if [[ -z $remote ]]; then
-            remote="origin"
-        fi
-
-        while [ -z $host ]
-        do
-        read -e -r -p "${txtwhite} Please enter host site (i.e. github.com): ${txtyellow}" host
-        done
-
-        while [ -z $repo ]
-        do
-        read -e -r -p "${txtwhite} Please enter name of repository: ${txtyellow}" repo
-        done
-
-        tput bold & tput setaf 7
-
-        if [[ -n $host && $host == "github.com" ]] ; then
-            read -e -r -p "${txtwhite} Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
-
-            tput bold & tput setaf 7
-
-            if [[ ! -f $HOME/.gh_pat ]]; then
-                echo "${txtred} Github personal access token doesn't exist"
-                echo " See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token${txtwhite}"
-                exit 1
-            else
-                source $HOME/.gh_pat
-            fi
-
-            if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
-                dependencycheck curl
-                echo "${txtgreen} Host Site is github.com, creating repository...${txtwhite}"
-                curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
-            fi
-
-            echo -e "${txtblue} Your \$GH_TOKEN is saved to your clipboard...\nsimply enter CTRL+SHIFT+V to paste your token...\nwhen prompted for your password${txtwhite}"
-            dependencycheck xclip
-            echo $GH_TOKEN | xclip -sel clip
-        fi
-
-        git remote add $remote "https://$host/$uname/$repo"
-        git push --set-upstream $remote $branch
-
-        if [[ $host == "github.com" ]] ; then
-            echo "${txtgreen} Github repository created and initiated!!${txtwhite}"
-            echo '' | xclip && xclip -selection clipboard /dev/null
-            exit 0
-        else
-             echo "${txtgreen} Git repository initiated!!${txtwhite}"
-             exit 0
-        fi
-
-        break
-        done
         else
             break
         fi
