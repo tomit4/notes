@@ -6,6 +6,8 @@
 
 # Error handling
 set -e
+set -o noclobber
+
 # For styling/colorizing output
 txtbld=$(tput bold)
 txtblue=${txtbld}$(tput setaf 4)
