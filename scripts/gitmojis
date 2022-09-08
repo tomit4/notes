@@ -1,18 +1,18 @@
 A full list can be found at:
 https://gitmoji.dev/
 
-:art: ............................. improve structure/format code ...................................  
+:art: ............................. improve structure/format code ................................... 
 :zap: ............................. improve performance ............................................. ⚡️
-:fire: ............................ remove code or files ............................................ 🔥  
+:fire: ............................ remove code or files ............................................ 
 :bug: ............................. fix a bug ....................................................... ﴫ
-:ambulance: ....................... critical hotfix ................................................. 🚑️ .
+:ambulance: ....................... critical hotfix ................................................. 🚑️
 :sparkles: ........................ introduce new features .......................................... 
 :memo: ............................ add or update documentation ..................................... 
 :rocket: .......................... deploy stuff .................................................... 異
 :lipstick: ........................ add or update the ui and style files ............................ 
 :tada: ............................ begin a project ................................................. 
 :white_check_mark: ................ add, update, or pass tests ...................................... 
-:lock: ............................ fix security issues ............................................. 🔒️ .
+:lock: ............................ fix security issues ............................................. 🔒️
 :closed_lock_with_key: ............ add or update secrets ........................................... 
 :bookmark: ........................ release/version tags ............................................ 
 :rotating_light: .................. fix compiler/linter warnings .................................... ﲍ
@@ -31,8 +31,8 @@ https://gitmoji.dev/
 :globe_with_meridians: ............ internationalization and localization ........................... 🌐
 :pencil2: ......................... fix typos ....................................................... 
 :poop: ............................ write bad code that needs to be improved ........................ 
-:rewind: .......................... revert changes .................................................. ⏪️ .
-:twisted_rightwards_arrows ........ merge branches ..................................................  נּ
+:rewind: .......................... revert changes .................................................. ⏪️
+:twisted_rightwards_arrows ........ merge branches .................................................. 
 :package: ......................... add or update compiled files or packages ........................ 
 :alien: ........................... update code due to external api changes ......................... 
 :truck: ........................... move or rename resources (e.g. files, paths, routes) ............ 
@@ -60,7 +60,7 @@ https://gitmoji.dev/
 :seedling: ........................ add or update seed files ........................................ 
 :triangular_flag_on_post: ......... add, update, or remove feature flags ............................ 
 :goal_net: ........................ catch errors .................................................... 
-:dizzy: ........................... add or update animations and transitions ........................ 💫 .
+:dizzy: ........................... add or update animations and transitions ........................ 💫
 :wastebasket: ..................... deprecate code that needs to be cleaned update .................. 
 :passport_control: ................ work on code related to authorization, roles, and permissions ... 
 :adhesive_bandages: ............... simple fix for a non-critical issue ............................. 🩹
