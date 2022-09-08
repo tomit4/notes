@@ -5,9 +5,7 @@ vim.g.mapleader = ","
 keymap('n', '<c-b>', '<c-w>:NvimTreeToggle<CR>', {})
 
 -- Tab Shortcuts
-keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {})
-keymap('n', '<s-tab>', '<c-w>:tabprevious<CR>', {})
-keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
+keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {}) keymap('n', '<s-tab>', '<c-w>:tabprevious<CR>', {}) keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
@@ -16,8 +14,8 @@ keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
 -- open fzf
-vim.cmd[[nnoremap fzf :silent :Files]]
-keymap('n', '<c-p>', '<c-w>:Files<CR>', {})
+vim.cmd[[nnoremap fzf :silent :FZFExplore]]
+keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
 
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]
@@ -72,4 +70,3 @@ vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]
 -- Toggle English spellcheck with F11
 vim.cmd[[nnoremap <silent> <F11> :set spell!<cr>]]
 vim.cmd[[inoremap <silent> <F11> <C-O>:set spell!<cr>]]
-

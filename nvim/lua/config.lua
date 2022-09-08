@@ -25,7 +25,7 @@ require'nvim-treesitter.configs'.setup{
 
 -- Disable folds
 vim.g.nofoldenable = true
---
+
 local lsp_installer = require("nvim-lsp-installer")
 
 lsp_installer.on_server_ready(function(server)
@@ -345,6 +345,22 @@ vim.cmd[[function TrimWhiteSpace()
     %s/\s*$//
     ''
 endfunction]]
+
+-- Search pattern across repository files
+vim.cmd[[
+function! FzfExplore(...)
+    let inpath = substitute(a:1, "'", '', 'g')
+    if inpath == "" || matchend(inpath, '/') == strlen(inpath)
+        execute "cd" getcwd() . '/' . inpath
+        let cwpath = getcwd() . '/'
+        call fzf#run(fzf#wrap(fzf#vim#with_preview({'source': 'ls -1ap', 'dir': cwpath, 'sink': 'FZFExplore', 'options': ['--prompt', cwpath]})))
+    else
+        let file = getcwd() . '/' . inpath
+        execute "e" file
+    endif
+endfunction]]
+
+vim.cmd[[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]]
 
 --Removes trailing spaces on save
 vim.cmd[[autocmd FileWritePre * call TrimWhiteSpace()]]
