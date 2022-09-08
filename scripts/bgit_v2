@@ -1,0 +1,159 @@
+#!/bin/bash
+
+# so far requires gitmojis (txt file) and also
+# bgit_gitmoji for function echomoji that displays gitmojis in terminal
+
+# Error handling
+set -e
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtgreen=${txtbld}$(tput setaf 2)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
+# Dependency check
+function dependencycheck() {
+    numdependencies="$#"
+    dependencies=("$@")
+    missingdependencies=0
+
+    for ((i = 0; i < numdependencies; i++)) ; do
+        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+            echo "${txtred}✗ dependency not met: ${dependencies[$i]}${txtwhite}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
+
+    if [ $missingdependencies -gt 0 ] ; then
+        echo "${txtred}✗ Please install needed dependencies${txtwhite}"
+        exit 1
+    fi
+}
+
+dependencycheck git
+
+tput bold & tput setaf 7
+
+function bgit() {
+    numrepos=$(git remote | wc -l)
+    numargs="$#"
+    # args=("$@")
+
+    if [[ $numrepos -ge 1 && $numargs -eq 0 ]]; then
+        dependencycheck grep awk tr
+
+        remotearray=($(git remote))
+        newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+        modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
+        deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
+
+        if [[ -n $newfiles || -n $modified || -n $deleted ]] ; then
+            echo "${txtwhite} The following files are staged for commit:"
+        else
+            echo "${txtgreen}✓ everything up-to-date...exiting bgit${txtwhite}"
+            exit 0
+        fi
+
+        if [[ $newfiles ]]; then
+            echo "${txtgreen} ADDED: ${txtgreen}$newfiles"
+        fi
+        if [[ $modified ]]; then
+            echo "${txtblue}פֿ MODIFIED: ${txtblue}$modified"
+        fi
+        if [[ $deleted ]]; then
+            echo "${txtred}✗ DELETED: ${txtred}$deleted"
+        fi
+
+        while true
+        do
+            dependencycheck read
+            read -e -r -p "${txtwhite} commit changes?(y/n): ${txtyellow}" change
+            if [[ $change == "y" || $change == "yes" ]] ; then
+
+                while true
+                do
+                    read -e -r -p "${txtwhite} add a gitmoji?(y/n/help): ${txtyellow}" gmojiprompt
+                    if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
+                        read -e -r -p "${txtwhite} enter gitmoji: ${txtyellow}" gitmoji
+                        gitmoji=":$gitmoji:"
+                        break
+                    elif [[ $gmojiprompt == "help" || $gmojiprompt == "h" ]] ; then
+                        if command -v "bat" &> /dev/null ; then
+                            bat ~/scripts/gitmojis
+                        else
+                            dependencycheck less
+                            less ~/scripts/gitmojis
+                        fi
+                    else
+                        echo "${txtblue} no gitmoji specified...${txtwhite}"
+                        gitmoji=""
+                        break
+                    fi
+                done
+
+                while true
+                do
+                    read -e -r -p "${txtwhite} commit message: ${txtyellow}" message
+                    cmessage=("$message")
+                    cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
+                    if [ "${#message}" -ge 51 ] ; then
+                        echo "${txtred}✗  commit message is too large!"
+                        echo "${txtred}✗ please limit to 50 or less characters${txtwhite}"
+                    elif [ -n "$message" ] ; then
+                        break
+                    else
+                        echo "${txtred}✗ commit message is empty, please write a commit message"
+                        echo "${txtred}✗ or type 'CTRL+C' to quit${txtwhite}"
+                    fi done
+
+                tput bold & tput setaf 7
+
+                if [[ $newfiles || $modified ]] ; then
+                    git config credential.helper 'cache --timeout=3600';
+                    git config advice.addEmptyPathspec false;
+                    git add $modified $newfiles > /dev/null 2>&1
+                fi
+
+                git commit -m "$gitmoji $cmessage" > /dev/null 2>&1;
+                if [[ "$gitmoji" != "" ]] ; then
+                    source ~/scripts/bgit_echomoji
+                    echomoji $gitmoji
+                else
+                    echo "${txtblue}$cmessage${txtwhite}"
+                fi
+                for ((i = 0; i < numrepos; i++)) ; do
+                    git push --force ${remotearray[i]} > /dev/null 2>&1;
+                done
+                exit 0
+
+            elif [[ $change == "n" || $change == "no" ]] ; then
+                tput bold & tput setaf 7
+
+                git status --short
+                echo "${txtred}✗ no changes committed"
+                exit 0
+
+            elif [[ $change == "q" || $change == "quit" ]] ; then
+                exit 0
+
+            else
+                echo "${txtred}✗ please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit${txtwhite}"
+            fi
+        done
+
+    elif [[ $numrepos -eq 0 || $numargs -ge 1 && $1 == "-i" ]] ; then
+        if [[ $numrepos -eq 0 ]] ; then
+            echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
+            source ~/scripts/bgit_init
+            b_init "$@"
+        else
+            echo "${txtred} git repository already here..."
+            source ~/scripts/bgit_init
+            b_init "$@"
+        fi
+    fi
+}
+
+bgit "$@"

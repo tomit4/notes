@@ -39,7 +39,7 @@ tput bold & tput setaf 7
 numrepos=$(git remote | wc -l)
 
 # If there are no git repositories in this directory...
-if [ $numrepos -eq 0 ] ; then
+if [[ $numrepos -eq 0 ]] ; then
     echo "${txtgreen}no git repository found, executing git init...${txtwhite}"
     while true
     do
@@ -327,13 +327,13 @@ else
 
     # Let the user know what is staged for commit
     if [[ $newfiles ]]; then
-        echo "${txtgreen} ADDED: ${txtgreen}$newfiles"
+        echo "${txtgreen}  ADDED: ${txtgreen}$newfiles"
     fi
     if [[ $modified ]]; then
-        echo "${txtblue}פֿ MODIFIED: ${txtblue}$modified"
+        echo "${txtblue} פֿ MODIFIED: ${txtblue}$modified"
     fi
     if [[ $deleted ]]; then
-        echo "${txtred} DELETED: ${txtred}$deleted"
+        echo "${txtred} ✗ DELETED: ${txtred}$deleted"
     fi
 
     while true

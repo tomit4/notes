@@ -1,8 +1,5 @@
 A full list can be found at:
 https://gitmoji.dev/
-And even more:
-https://gist.github.com/rxaviers/7360908
-https://www.nerdfonts.com/cheat-sheet (terminal based)
 
 :art: ............................. improve structure/format code ...................................  
 :zap: ............................. improve performance ............................................. ⚡️
@@ -76,14 +73,3 @@ https://www.nerdfonts.com/cheat-sheet (terminal based)
 :technologist: .................... improve developer experience .................................... 
 :money_with_wings: ................ add sponsorships or money related infrastructure ................ 
 :thread: .......................... add or update code related to multithreading or concurrency...... 
-
-artix/atlassin(for use in bash/prompt) ﴂ
-cancel/deleted/x ✗ 
-check-mark ✓
-right-arrow ➜
-npm 
-github 
-gitlab 
-git 
-email 﫯
-person 
