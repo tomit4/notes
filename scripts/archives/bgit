@@ -1,0 +1,431 @@
+#!/bin/bash
+
+# checklist:
+# [-] add -i flag for install script (default if not git repo is found)
+# [-] add function where $1 checks for existing directory and creates it if it doesn't exist, cd's into it, and initializes git repo (also cd's into it if it DOES exist, and initizliaes repo), also checks for .git directory...
+# [-] add optional input for add gitmoji(enter l/list for list): where l/list shows list of gitmojis and infinitely returns user to prompt until gitmoji is chosen, if gitmoji doesn't exist within gitmoji array, or "none" is chosen, then default to no gitmoji
+
+# Error handling
+set -e
+
+# For styling/colorizing output
+txtbld=$(tput bold)
+txtblue=${txtbld}$(tput setaf 4)
+txtgreen=${txtbld}$(tput setaf 2)
+txtred=${txtbld}$(tput setaf 1)
+txtyellow=${txtbld}$(tput setaf 3)
+txtwhite=${txtbld}$(tput setaf 7)
+
+# Dependency check
+dependencies=("xclip" "git")
+numdependencies=2
+missingdependencies=0
+for ((i = 0; i < numdependencies; i++)) ;
+do
+    if ! command -v "${dependencies[$i]}" &> /dev/null
+    then
+        echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+        missingdependencies=$((missingdependencies+1))
+    fi
+done
+
+# Intro Prompt
+echo "${txtblue}bgit: a handy shell script for automating simple git inits/commits"
+
+# Reset output style
+tput bold & tput setaf 7
+
+# counts the number of repos
+numrepos=$(git remote | wc -l)
+
+# If there are no git repositories in this directory...
+if [[ $numrepos -eq 0 ]] ; then
+    echo "${txtgreen}no git repository found, executing git init...${txtwhite}"
+    while true
+    do
+    #Prompts the user if they'd like to initialize repository
+    read -e -r -p "${txtwhite}initialize repository?(y/n): ${txtyellow}" init
+        if [[ $init == "n" || $init = "no" ]]; then
+            echo "${txtred}no git repository initialized...exiting${txtwhite}"
+            break
+        elif [[ $init == "y" || $init == "yes" ]] ; then
+
+
+            # Creates a default README.md
+            if [ ! -f "README.md" ] ; then
+                echo -e "## A Simple README\n\nSome Text\n\n__Some Checklist__\n\n- [x] Completed task\n- [ ] Incomplete task" > README.md
+            fi
+            # Creates a default .gitignore
+            echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
+            # Initializes git repository cwd...
+            git init
+
+            # defaults to not requiring gpg key sign
+            git config commit.gpgsign false
+
+            while [ true ];
+            do
+                # prompts user to change default username/email and changes them if they'd like (no input defaults to global values)
+                read -e -r -p "${txtwhite}would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
+                if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}enter your username: ${txtyellow}" uname
+                    if [[ -n $uname ]] ; then
+                        git config user.name $uname
+                        read -e -r -p "${txtwhite}enter your email: ${txtyellow}" uemail
+                        if [[ -n $uemail ]] ; then
+                            git config user.email $uemail
+                            break
+                        else
+                            echo "${txtblue}no email entered, defaulting to global value${txtwhite}"
+                            break
+                        fi
+                    else
+                        echo "${txtblue}no username entered, defaulting to global value${txtwhite}"
+                        break
+                    fi
+                else
+                    echo "${txtblue}defaulting to global username/password${txtwhite}"
+                    break
+                fi
+            done
+
+            while true
+            do
+                # initializes standard html/css/javascript project (incomplete)
+                # perhaps put in separate script that may/can be called from bgit...what if they just want nginx or apache or php?
+                read -e -r -p "${txtwhite}would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
+                if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
+                    # Dependency check
+                    dependencies=("node" "npm")
+                    numdependencies=2
+                    missingdependencies=0
+                    for ((i = 0; i < numdependencies; i++)) ;
+                    do
+                        if ! command -v "${dependencies[$i]}" &> /dev/null
+                        then
+                            echo "${txtred}dependency not met: ${dependencies[$i]}${txtwhite}"
+                            missingdependencies=$((missingdependencies+1))
+                        fi
+                    done
+
+                    if [ $missingdependencies -gt 0 ] ;
+                    then
+                        echo "${txtred}Please install needed dependencies${txtwhite}"
+                        exit 1
+                    fi
+
+                    # consider using legit prompt here for automated LICENSING
+
+                    npm init -y
+                    npm install -D nodemon prettier jest
+
+                    # creates default .prettierrc
+                    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
+
+                    # replace touch commands here with echo later on...
+                    echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
+                    mkdir scripts
+                    mkdir css
+                    mkdir tests
+                    touch tests/index.test.js
+                    echo 'console.log("Hello World!");' > scripts/index.js
+                    echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
+                    sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
+                    break
+                else
+                    break
+                fi
+            done
+
+            # Reset output style
+            tput bold & tput setaf 7
+
+            # sane default initial commit message
+            git add .
+            git commit -m ":tada: Initial commit"
+
+            while true
+            do
+            # allows user to change default branch name (no input defaults to "master")
+            read -e -r -p "${txtwhite}change branch name?(y/n): ${txtyellow}" chbranch
+                if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}branch name?(i.e. 'main'): ${txtyellow}" branch
+                    if [ -n "$branch" ] ; then
+                        git branch -M $branch
+                        break
+                    else
+                        echo "${txtred}branch name is empty, please enter branch name!${txtwhite}"
+                    fi
+                else
+                    echo "${txtblue}branch name will be left as ${txtyellow}'master'${txtwhite}"
+                    branch="master"
+                    break
+                fi
+            done
+
+            # main git init loop
+            while true
+            do
+                uname=$(git config user.name)
+                read -e -r -p "${txtwhite}Please enter remote to add(i.e. origin): ${txtyellow}" remote
+
+                # if the user doesn't enter anything for the remote prompt, it defaults to origin
+                if [[ -z $remote ]]; then
+                    remote="origin"
+                fi
+
+                # infinitely prompts the user for a host site until something is entered
+                while [ -z $host ]
+                do
+                    read -e -r -p "${txtwhite}Please enter host site (i.e. github.com): ${txtyellow}" host
+                done
+
+                # similarly infinitely prompts the user for a repository name
+                while [ -z $repo ]
+                do
+                    read -e -r -p "${txtwhite}Please enter name of repository: ${txtyellow}" repo
+                done
+
+                # Reset output style
+                tput bold & tput setaf 7
+
+                # bgit uses github api if github.com is defined as host site
+                if [[ -n $host && $host == "github.com" ]] ; then
+                    read -e -r -p "${txtwhite}Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
+
+                    # Reset output style
+                    tput bold & tput setaf 7
+
+                    # if $HOME/.gh_pat doesn't exist, then exits
+                    if [[ ! -f $HOME/.gh_pat ]]; then
+                        echo "${txtred}Github personal access token doesn't exist"
+                        echo "See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token${txtwhite}"
+                        exit 1
+                    fi
+
+                    source $HOME/.gh_pat
+
+                    if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+
+                        # Dependency check
+                        if ! command -v curl &> /dev/null
+                        then
+                            echo "${txtred}dependency not met: curl"
+                            echo "Please install needed depndencies${txtwhite}"
+                            exit 1
+                        fi
+
+                        echo "${txtgreen}Host Site is github.com, creating repository...${txtwhite}"
+                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}'
+                    fi
+
+                    echo -e "${txtblue}Your \$GH_TOKEN is saved to your clipboard...\nsimply enter CTRL+SHIFT+V to paste your token...\nwhen prompted for your password${txtwhite}"
+                    echo $GH_TOKEN | xclip -sel clip
+                fi
+
+                # finally adds the specified remote, host site, username, and repository, and pushes it
+                git remote add $remote "https://$host/$uname/$repo"
+                git push --set-upstream $remote $branch
+                # git push -u $remote $branch
+
+                if [[ $host == "github.com" ]] ; then
+                    echo "${txtgreen}Git repository created and initiated!!${txtwhite}"
+                    # clears $GH_TOKEN from clipboard
+                    echo '' | xclip && xclip -selection clipboard /dev/null
+                else
+                    echo "${txtgreen}Git repository initiated!!${txtwhite}"
+                fi
+
+                break
+            done
+            break
+        else
+            break
+        fi
+    done
+
+# Otherwise, if there already is a .git directory...
+else
+
+    # creates a list of repos and puts them in an array
+    remotearray=($(git remote))
+    # Grabs all new files
+    newfiles=$(git status --short | grep '??' | awk '{print $2}' | tr '\n' ' ')
+    # Grabs all modified files
+    modified=$(git status | grep modified | awk '{print $2}' | tr '\n' ' ')
+    # Grabs all deleted files
+    deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
+
+
+    # getopts loop for flag -r that reverts back changes in git repo
+    while getopts "r" opt; do
+        case $opt in
+            r)
+                echo "${txtgreen}-r flag initiated"
+                read -e -r -p "${txtwhite}Would you like to revert back to a previous commit?: ${txtyellow}" revert
+                # Reset output style
+                tput bold & tput setaf 7
+
+                if [[ $revert == "y" || $revert == "yes" ]] ; then
+                    # commitarray contains all the sha256 sums of our git commits
+                    commitarray=($(git log -6 | grep commit | sed 's/commit//g'))
+                    # verbosecommits is a long format output of all our commit messages
+                    verbosecommits=$(git shortlog -6 --reverse | sed 1d);
+
+                    # displays the sha256 sums of our git commits, along with the git commit messages
+                    numcommits=6
+                    for ((i = 0; i < numcommits; i++)) do
+                        # j is simply 1 count ahead of i, this is specifically to be used in nextcommit
+                        j=$(echo ${i} + 1 | bc)
+                        # nextcommit prints out each verbosecommit message one by one
+                        nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
+                        echo -e "${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtwhite}"
+                    done
+
+                    # and asks the user to choose a commit to revert back to
+                    read -e -r -p "${txtwhite}Choose commit to revert back to: ${txtyellow}" version
+
+                    # notifies the user of which version they are rolling back to with the sha256 sum
+                    echo "${txtblue}Reverting back to version: ${txtyellow}${commitarray[$version]}"
+
+                    # Reset output style
+                    tput bold & tput setaf 7
+
+                    # and finally resets the local repository to that version
+                    git reset --hard ${commitarray[$version]}
+
+                    # and pushes it to remote repository
+                    for ((i = 0; i < numrepos; i++)) ; do
+                        git push --force ${remotearray[i]} ;
+                    done
+
+                    # git remote | xargs -L1 git push --all
+
+                    echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
+                    exit 0
+                else
+                    echo "${txtblue}No revisions to git branch have been made.${txtwhite}"
+                fi ;;
+            *)
+                echo "${txtred}Flag not recognized...exiting bgit."
+                exit 1;;
+        esac
+    done
+
+    # Reports what is staged for commit
+    # If there is anything to commit...
+    if [[ ! -z $newfiles || ! -z $modified || ! -z $deleted ]] ; then
+        # Let the user know what is staged for commit
+        echo "${txtwhite}The following files are staged for commit:"
+    # Otherwise, if there isn't anything to commit...
+    else
+        # Let the user know that everything is up to date
+        echo "${txtred}everything up-to-date...exiting bgit${txtwhite}"
+        # and exit the program
+        exit 0
+    fi
+
+    # Let the user know what is staged for commit
+    if [[ $newfiles ]]; then
+        echo "${txtgreen}  ADDED: ${txtgreen}$newfiles"
+    fi
+    if [[ $modified ]]; then
+        echo "${txtblue} פֿ MODIFIED: ${txtblue}$modified"
+    fi
+    if [[ $deleted ]]; then
+        echo "${txtred} ✗ DELETED: ${txtred}$deleted"
+    fi
+
+    while true
+    do
+        # Prompts user if they'd like to commit the changes
+        read -e -r -p "${txtwhite}commit changes?(y/n): ${txtyellow}" change
+        # If the user chooses to commit the changes...
+        if [[ $change == "y" || $change == "yes" ]] ; then
+            # prompt if user wants to specify gitmoji:
+            while [ true ]
+            do
+                read -e -r -p "${txtwhite}add a gitmoji?(y/n): ${txtyellow}" gmojiprompt
+                if [[ $gmojiprompt == "y" || $gmojiprompt == "yes" ]] ; then
+                    read -e -r -p "${txtwhite}enter gitmoji: ${txtyellow}" gitmoji
+                    gitmoji=":$gitmoji:"
+                    break
+                else
+                    echo "${txtblue}no gitmoji specified...${txtwhite}"
+                    gitmoji=""
+                    break
+                fi
+            done
+            # Grabs commit message
+            while [ true ]
+            do
+                # Prompts the user to input their commit message
+                # (does not allow for multiple message commits)
+                read -e -r -p "${txtwhite}commit message: ${txtyellow}" message
+                cmessage=("$message")
+                # capitalizes first character of commit message
+                cmessage="$(tr '[:lower:]' '[:upper:]' <<< ${cmessage:0:1})${cmessage:1}"
+                # if the user entered a commit message over 50 characters...
+                if [ "${#message}" -ge 51 ] ; then
+                    echo "${txtred}commit message is too large!"
+                    echo "${txtred}please limit to 50 or less characters${txtwhite}"
+                # if the user inputted a commit message..
+                elif [ -n "$message" ] ; then
+                    # then break out of the while loop and continue with the commit...
+                    break
+                # if the user did NOT input a commit message...
+                else
+                    # tell the user to do so or to quit
+                    echo "${txtred}commit message is empty, please write a commit message"
+                    echo "${txtred}or type 'CTRL+C' to quit${txtwhite}"
+                fi
+            done
+
+            # Reset output style
+            tput bold & tput setaf 7
+
+            # adds the modified and new files
+            # (suppresses message anyways if only deleted files are to be committed)
+            if [[ $newfiles || $modified ]] ; then
+                # also remembers password for 1 hour after last use
+                # (comment out if more security needed, or just use ssh...)
+                echo "${txtgreen}bgit will remember your password for 1 hour!"
+                echo "(doesn't apply to gpg or ssh)${txtwhite}"
+                git config credential.helper 'cache --timeout=3600';
+                git config advice.addEmptyPathspec false;
+                git add $modified $newfiles;
+            fi
+
+            # commits the user's message (multi-word supported)
+            git commit -m "$gitmoji $cmessage" ;
+
+            # pushes the commit to each repository
+            for ((i = 0; i < numrepos; i++)) ; do
+                git push --force ${remotearray[i]} ;
+            done
+            # git remote | xargs -L1 git push --all
+
+            echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
+            exit 0
+        # If the user chooses to not the commit the changes ...
+        elif [[ $change == "n" || $change == "no" ]] ; then
+
+            # Reset output style
+            tput bold & tput setaf 7
+
+            # Report the git status
+            git status --short
+
+            # And let the user know no changes were committed
+            echo "${txtred}no changes committed"
+
+            exit 0
+        # If the user chooses to quit...
+        elif [[ $change == "q" || $change == "quit" ]] ; then
+            exit 0
+        # If the user continues to just press enter...
+        else
+            echo "${txtred}please enter y or n or type 'q' or 'quit' or 'CTRL+C' to quit${txtwhite}"
+        fi
+    done
+fi
