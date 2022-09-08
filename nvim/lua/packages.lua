@@ -49,11 +49,11 @@ require('packer').startup(function()
     use 'windwp/nvim-autopairs'
     use 'simeji/winresizer'
     use '907th/vim-auto-save'
-    use 'David-Kunz/jester' -- for unit tests using jest
     use 'rinx/nvim-ripgrep'
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use 'arrufat/vala.vim' -- for vala programming language
     use 'chemzqm/neovim'
+    use {'nvim-neotest/neotest', requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'haydenmeade/neotest-jest', 'nvim-neotest/neotest-python', 'rouge8/neotest-rust' }}
 end)

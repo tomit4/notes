@@ -37,5 +37,4 @@ make sure to install all of the test files (jest should already be set up, but y
 
 doas npm install -g jest
 pip install pytest
-cargo install rstest
 

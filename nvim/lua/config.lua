@@ -14,10 +14,7 @@ require('nvim-autopairs').setup{}
 require('gitsigns').setup()
 -- nvim-treesiter configuration: -- setup with all defaults
 require'nvim-treesitter.configs'.setup{
-    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "rust", "vim", "vue", "wgsl", "yaml",},
-    highlight = { enable = 'true' }
-}
-
+    ensure_installed = {"bash", "c", "c_sharp", "cmake", "cpp", "css", "dockerfile", "go", "html", "http", "java", "javascript", "json", "json5", "jsonc", "lua", "make", "perl", "php", "pug", "python", "regex", "ruby", "toml", "tsx", "typescript", "rust", "vim", "vue", "wgsl", "yaml",}, highlight = { enable = 'true' } }
 -- To enable basic vim folding methods/expressions:
 --
 -- vim.opt.foldmethod = "expr"
@@ -96,7 +93,7 @@ local on_attach = function(client)
     require'completion'.on_attach(client)
 end
 
--- Enable quick-lint-js
+-- Enable quick-lint-js lsp
 require('lspconfig/quick_lint_js').setup {}
 
 -- Enable use of ripgrep
@@ -119,7 +116,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   }
 )
 
--- Enable rust-analyzer
+-- Enable rust-analyzer lsp
 lspconfig.rust_analyzer.setup({
     on_attach=on_attach,
     settings = {
@@ -149,6 +146,24 @@ for _, lsp in ipairs(servers) do
      capabilities = capabilities,
    }
 end
+
+-- neotest setup
+require('neotest').setup({
+    adapters = {
+        require('neotest-jest')({
+            jestCommand = "npm test --",
+            jestConfigFile = "custom.jest.config.ts",
+            env = { CI = true },
+            cwd = function(path)
+                return vim.fn.getcwd()
+            end,
+        }),
+        require('neotest-python'),
+        require('neotest-rust')
+    }
+})
+
+require('neotest').run.run()
 
 -- Nvim_Tree configuration: -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -377,6 +392,7 @@ vim.cmd[[hi! NonText ctermbg=NONE guibg=NONE]]
 
 -- never create swap files
 vim.cmd[[set noswapfile]]
+
 
 -- do not close the markdown preview tab when switching to other buffers
 -- vim.g.mkdp_auto_close = 0
