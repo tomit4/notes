@@ -40,7 +40,6 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     use 'junegunn/fzf.vim' -- better fuzzy find files
     use 'preservim/nerdcommenter'
-    use 'prettier/vim-prettier'
     use {'lewis6991/gitsigns.nvim'}
     use 'Yggdroot/indentLine'
     use 'mg979/vim-visual-multi'-- {'branch': 'master'}
@@ -53,7 +52,6 @@ require('packer').startup(function()
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-    use 'arrufat/vala.vim' -- for vala programming language
     use 'chemzqm/neovim'
     use {'nvim-neotest/neotest', requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'haydenmeade/neotest-jest', 'nvim-neotest/neotest-python',}}
 end)
