@@ -445,7 +445,7 @@ alias wiki='ddgr \!w "${1}"'
 alias gh='ddgr \!gh "${1}"'
 alias mdn='ddgr \!mdn "${1}"'
 # must have account to use gitlab bang
-alias glab='ddgr \!glab "${1}"'
+# alias glab='ddgr \!glab "${1}"'
 alias red='ddgr \!r "${1}"'
 # alias yt='ddgr \!yt "${1}"'
 
@@ -464,5 +464,5 @@ alias regen_initramfs="doas mkinitcpio -P"
 alias {sd,sdir}="source $HOME/scripts/sdir"
 alias {rd,rdir}="source $HOME/scripts/rdir"
 
-source .n_hidden
+source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
