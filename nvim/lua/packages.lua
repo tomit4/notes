@@ -55,5 +55,5 @@ require('packer').startup(function()
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use 'arrufat/vala.vim' -- for vala programming language
     use 'chemzqm/neovim'
-    use {'nvim-neotest/neotest', requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'haydenmeade/neotest-jest', 'nvim-neotest/neotest-python', 'rouge8/neotest-rust' }}
+    use {'nvim-neotest/neotest', requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'haydenmeade/neotest-jest', 'nvim-neotest/neotest-python',}}
 end)
