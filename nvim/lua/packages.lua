@@ -52,6 +52,5 @@ require('packer').startup(function()
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-    use 'chemzqm/neovim'
     use {'nvim-neotest/neotest', requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'haydenmeade/neotest-jest', 'nvim-neotest/neotest-python',}}
 end)
