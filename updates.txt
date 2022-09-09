@@ -65,7 +65,8 @@ doas firecfg
 
 doas apparmor_parser -r /etc/appamor.d/firejail-default
 
-ufw rules (adjust)
+doas ufw logging on
+Status: active
 
 To                         Action      From
 --                         ------      ----
@@ -76,6 +77,7 @@ To                         Action      From
 8118                       ALLOW       Anywhere
 3306                       DENY        Anywhere
 5432                       DENY        Anywhere
+6904                       ALLOW       Anywhere
 443 (v6)                   ALLOW       Anywhere (v6)
 22 (v6)                    DENY        Anywhere (v6)
 21 (v6)                    LIMIT       Anywhere (v6)
@@ -83,6 +85,5 @@ To                         Action      From
 8118 (v6)                  ALLOW       Anywhere (v6)
 3306 (v6)                  DENY        Anywhere (v6)
 5432 (v6)                  DENY        Anywhere (v6)
+6904 (v6)                  ALLOW       Anywhere (v6)
 
-
-doas ufw logging on
