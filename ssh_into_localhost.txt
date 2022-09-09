@@ -3,7 +3,7 @@ You can "practice" with ssh by setting up the ssh_config and sshd_config files c
 /etc/ssh_config
 ForwardAgent yes
 ForwardX11 yes
-Port 9669
+Port 9669 -- comment this out if you wish to connect over standard port 22 (i.e. github connections won't work over different ports)
 XauthLocation /usr/bin/xauth
 
 /etc/sshd_config
