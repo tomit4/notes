@@ -65,6 +65,10 @@ doas firecfg
 
 doas apparmor_parser -r /etc/appamor.d/firejail-default
 
+to disable certain applications in firejail, simply navigate to /usr/local/bin where you will find many of the soft links created by firejail:
+
+doas mv someapp someapp_disabled (will break the link, simply name it back to its original to reenable it)
+
 doas ufw logging on
 Status: active
 
