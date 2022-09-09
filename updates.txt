@@ -84,3 +84,5 @@ To                         Action      From
 3306 (v6)                  DENY        Anywhere (v6)
 5432 (v6)                  DENY        Anywhere (v6)
 
+
+doas ufw logging on
