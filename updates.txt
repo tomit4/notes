@@ -53,3 +53,5 @@ doas touch down
 doas chmod +x down
 
 doas sv stop sshd
+
+Currently troubleshooting fail2ban to work with this, but due to no systemd, fail2ban needs further configuration that I have yet to figure out
