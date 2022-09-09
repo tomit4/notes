@@ -38,3 +38,18 @@ make sure to install all of the test files (jest should already be set up, but y
 doas npm install -g jest
 pip install pytest
 
+sshd is disabled by default on Artix (a good practice), but let's enable it, follow your harden_sshd.txt guide (just some flags), and add a down file to disable it:
+
+doas ln -s /etc/runit/sv/sshd /run/runit/service
+
+doas sv start sshd
+
+edit /etc/ssh/sshd_config file using harden_sshd.txt guide
+
+cd /etc/runit/sv/sshd
+
+doas touch down
+
+doas chmod +x down
+
+doas sv stop sshd

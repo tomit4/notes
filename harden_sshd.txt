@@ -1,0 +1,11 @@
+/etc/ssh/sshd_config
+
+PermitEmptyPasswords no
+Port 2345 (or some other port than default 22)
+PermitRootLogin no
+ClientAliveInterval 300
+ClientAliveCountMax 2
+X11Forwarding no
+MaxAuthTries 3
+
+sshd -T
