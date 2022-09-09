@@ -48,6 +48,28 @@ function b_init() {
                 fi
             done
 
+            # prompt user if they'd like to generate a license
+            while true
+            do
+                read -e -r -p "${txtblue} would you like to generate a LICENSE?(y/n/help): ${txtyellow}" confirmlegit
+                if [[ $confirmlegit == "y" || $confirmlegit == "yes" ]] ; then
+                    dependencycheck legit
+                    read -e -r -p "${txtblue} enter license type: ${txtyellow}" license
+                    legit p "${license}"
+                    break
+                elif [[ $confirmlegit == "h" || $confirmlegit == "help" ]] ; then
+                    dependencycheck legit
+                    if command -v "bat" &> /dev/null ; then
+                        legit l | bat
+                    else
+                        dependencycheck less
+                        legit l | less
+                    fi
+                else
+                    break
+                fi
+            done
+
             while true
             do
                 read -e -r -p "${txtblue} would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
