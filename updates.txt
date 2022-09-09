@@ -64,3 +64,23 @@ doas pacman -S firejail
 doas firecfg
 
 doas apparmor_parser -r /etc/appamor.d/firejail-default
+
+ufw rules (adjust)
+
+To                         Action      From
+--                         ------      ----
+443                        ALLOW       Anywhere
+22                         DENY        Anywhere
+21                         LIMIT       Anywhere
+9050                       ALLOW       Anywhere
+8118                       ALLOW       Anywhere
+3306                       DENY        Anywhere
+5432                       DENY        Anywhere
+443 (v6)                   ALLOW       Anywhere (v6)
+22 (v6)                    DENY        Anywhere (v6)
+21 (v6)                    LIMIT       Anywhere (v6)
+9050 (v6)                  ALLOW       Anywhere (v6)
+8118 (v6)                  ALLOW       Anywhere (v6)
+3306 (v6)                  DENY        Anywhere (v6)
+5432 (v6)                  DENY        Anywhere (v6)
+
