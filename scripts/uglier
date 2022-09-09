@@ -54,6 +54,8 @@ function uglier() {
         fi
 
     done
+    mkdir minified
+    mv *.min.* minified
 }
 
 uglier "$@"
