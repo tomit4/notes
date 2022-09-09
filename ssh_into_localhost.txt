@@ -1,0 +1,26 @@
+You can "practice" with ssh by setting up the ssh_config and sshd_config files correctly
+
+/etc/ssh_config
+ForwardAgent yes
+ForwardX11 yes
+Port 9669
+XauthLocation /usr/bin/xauth
+
+/etc/sshd_config
+Port 9669
+PermitRootLogin no
+MaxAuthTries 3
+AuthorizedKeysFiles
+PermitEmptyPasswords no
+X11Forwarding yes
+ClientAliveInterval 200
+ClientAliveCountMax 3
+
+restart the sshd server
+
+Commands:
+Then connect via the LAN:
+ssh -Y 192.168.0.76 -t /usr/bin/zsh
+
+Or whatever:
+ssh -Y 192.168.0.76 -t firefox
