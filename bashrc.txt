@@ -7,7 +7,8 @@
 #
 history -c && history -w && hash -r
 # create custom env variables:
-export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
+# export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
+export cproj="$HOME/Documents/Code/bash/bgit"
 # custom BROWSER env for ddgr:
 export BROWSER=links
 export TUIR_BROWSER=librewolf

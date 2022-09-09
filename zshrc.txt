@@ -8,7 +8,8 @@ set -o noclobber
 # set +o noclobber
 
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment_midterm"
+# export cproj="/home/brian/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment_midterm"
+export cproj="/home/brian/Documents/Code/bash/bgit"
 
 # custom BROWSER env for ddgr:
 export BROWSER=librewolf
