@@ -34,3 +34,11 @@ Currently troubleshooting fail2ban to work with this, but due to no systemd, fai
 install paxtest
 
 doas pacman -S paxtest
+
+install firejail
+
+doas pacman -S firejail
+
+doas firecfg
+
+doas apparmor_parser -r /etc/appamor.d/firejail-default
