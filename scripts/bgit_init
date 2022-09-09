@@ -9,13 +9,31 @@ function b_init() {
             break
         elif [[ $init == "y" || $init == "yes" ]] ; then
 
+            while true
+            do
+                read -e -r -p "${txtblue} please enter title of your project: ${txtyellow}" projectname
+                if [[ $projectname != "" ]] ; then
+                    break
+                fi
+            done
 
             # Creates a default README.md
             if [ ! -f "README.md" ] ; then
-                echo -e "## A Simple README\n\nSome Text\n\n__Some Checklist__\n\n- [x] Completed task\n- [ ] Incomplete task" > README.md
+                read -e -r -p "${txtblue} would you like bgit to generate a default README.md?(y/n): ${txtyellow}" generatereadme
+                if [[ $generatereadme == "y" || $generatereadme == "yes" ]] ; then
+                    echo -e "## My Project: ${projectname}\n\nSome text about my project.\n\n__Checklist__\n\n- [x] Completed Task\n- [ ] Incomplete Task" > README.md
+                fi
             fi
+
             # Creates a default .gitignore
-            echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
+            if [ ! -f ".gitignore" ] ; then
+                read -e -r -p "${txtblue} would you like bgit to generate a default .gitignore?(y/n): ${txtyellow}" generategitignore
+                if [[ $generategitignore == "y" || $generategitignore == "yes" ]] ; then
+                    # import function that prompts user for type of project and grabs a default gitignore
+                    echo -e "node_modules\n*.env\n*.out\n.pretterrc\n.gitignore" > .gitignore
+                fi
+            fi
+
             # Initializes git repository cwd...
             git init > /dev/null 2>&1
 
@@ -65,31 +83,6 @@ function b_init() {
                         dependencycheck less
                         legit l | less
                     fi
-                else
-                    break
-                fi
-            done
-
-            while true
-            do
-                read -e -r -p "${txtblue} would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
-                if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
-                    dependencycheck node npm
-
-                    npm init -y > /dev/null 2>&1
-                    npm install -D nodemon prettier jest > /dev/null 2>&1
-
-                    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
-
-                    echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
-                    mkdir scripts
-                    mkdir css
-                    mkdir tests
-                    touch tests/index.test.js
-                    echo 'console.log("Hello World!");' > scripts/index.js
-                    echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
-                    sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
-                    break
                 else
                     break
                 fi

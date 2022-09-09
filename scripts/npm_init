@@ -1,0 +1,26 @@
+#!/bin/bash
+
+while true
+do
+read -e -r -p "${txtblue} would you like to make this an npm project?(y/n): ${txtyellow}" confirmnpm
+if [[ $confirmnpm == "y" || $confirmnpm == "yes" ]] ; then
+    dependencycheck node npm
+    npm init -y > /dev/null 2>&1
+    npm install -D nodemon prettier jest > /dev/null 2>&1
+
+    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' > .prettierrc
+
+    echo -e '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="utf-8">\n        <meta name="viewport" content="width=device-width">\n        <title>My Website</title>\n        <link rel="stylesheet" href="css/styles.css" />\n    </head>\n    <body>\n        <h1>Header 1</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n        <script src="scripts/index.js" defer></script>\n    </body>\n</html>' > index.html
+    mkdir scripts
+    mkdir css
+    mkdir tests
+    touch tests/index.test.js
+    echo 'console.log("Hello World!");' > scripts/index.js
+    echo -e '* {\n    font-family: monospace;\n    text-align: center;\n    background-color: #dedede;\n}' > css/styles.css
+    sed 's/1"/1",/' package.json > package2.json && sed -i '/no test/a\ \ \ \ "start":\ "nodemon\ scripts/index.js"' package2.json && mv package2.json package.json
+    break
+    else
+    break
+    fi
+done
+
