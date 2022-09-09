@@ -1,19 +1,27 @@
 #!/bin/bash
 
 function b_revert() {
-    read -e -r -p "${txtblue} Would you like to revert back to a previous commit?: ${txtyellow}" revert
+    read -e -r -p "${txtblue} would you like to revert back to a previous commit?: ${txtyellow}" revert
     tput bold & tput setaf 7
     if [[ $revert == "y" || $revert == "yes" ]] ; then
-        commitarray=($(git log -6 | grep commit | sed 's/commit//g'))
-        verbosecommits=$(git shortlog -6 --reverse | sed 1d);
-        numcommits=6
+
+        read -e -r -p "${txtblue} how many previous commits would you like to see?: ${txtyellow}" numcommits
+        if [[ $numcommits == "" ]]; then
+            numcommits=6
+        fi
+
+        commitarray=($(git log -$numcommits | grep commit | sed 's/commit//g'))
+        verbosecommits=$(git shortlog -$numcommits --reverse | sed 1d);
+
+        tput bold & tput setaf 7
+
         for ((i = 0; i < numcommits; i++)) do
             j=$(echo ${i} + 1 | bc)
             nextcommit=$(echo "${verbosecommits}" | head -n $j | tail -n 1)
             echo -e "${i}) ${txtyellow}${commitarray[$i]}${txtblue}${nextcommit}${txtwhite}"
         done
-        read -e -r -p "${txtblue} Choose commit to revert back to: ${txtyellow}" version
-        echo "${txtblue} Reverting back to version: ${txtyellow}${commitarray[$version]}"
+        read -e -r -p "${txtblue} choose commit to revert back to: ${txtyellow}" version
+        echo "${txtblue} reverting back to version: ${txtyellow}${commitarray[$version]}"
         git reset --hard ${commitarray[$version]}
         for ((i = 0; i < numrepos; i++)) ; do
             git push --force ${remotearray[i]} ;
@@ -21,6 +29,6 @@ function b_revert() {
         echo "${txtblue}bgit script has completed! goodbye!${txtwhite}"
         exit 0
     else
-        echo "${txtblue} No revisions to git branch have been made.${txtwhite}"
+        echo "${txtblue} no revisions to git branch have been made.${txtwhite}"
     fi
 }
