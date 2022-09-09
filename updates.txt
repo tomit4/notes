@@ -29,7 +29,29 @@ To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/g
 
 Check out artix-news on github and look at its source code to understand a basic web-scraper written in python: https://github.com/ryukinix/artix-news
 
-Currently troubleshooting fail2ban to work with this, but due to no systemd, fail2ban needs further configuration that I have yet to figure out
+SOLVED:Currently troubleshooting fail2ban to work with this, but due to no systemd, fail2ban needs further configuration that I have yet to figure out
+
+ANSWER: In /etc/fail2ban/jail.conf, comment out the line that says 'polling' under the search for 'backend'
+
+This will allow for logging to be done with a native logger instead of it searching for systemd's journald by default.
+
+Then create a file called /etc/fail2ban/jail.d/sshd.local and input the following:
+[sshd]
+enabled   = true
+filter    = sshd
+banaction = ufw
+backend   = polling
+maxretry  = 3
+findtime  = 1d
+bantime   = 1d
+ignoreip  = 127.0.0.1/8
+
+In /etc/ssh/sshd_config
+Change LogLevel to VERBOSE
+
+restart the fail2ban service and test it with:
+
+doas fai2ban -client status
 
 install paxtest
 
