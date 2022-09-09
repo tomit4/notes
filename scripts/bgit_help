@@ -1,0 +1,5 @@
+#!/bin/bash
+
+function b_help() {
+    echo "${txtgreen}help message will go here${txtwhite}"
+}

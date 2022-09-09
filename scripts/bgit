@@ -171,6 +171,10 @@ function bgit() {
     elif [[ $numrepos -ge 1 && $numargs -eq 1 && $1 == "-r" ]] ; then
             source $HOME/.config/bgit/bgit_revert
             b_revert "$@"
+
+    elif [[ $numargs -eq 1 && $1 == "-h" || $1 == "--help" ]] ; then
+        source $HOME/.config/bgit/bgit_help
+        b_help "$@"
     fi
 }
 
