@@ -29,29 +29,8 @@ To understand google-font-installer(gfi): visit: https://github.com/lordgiotto/g
 
 Check out artix-news on github and look at its source code to understand a basic web-scraper written in python: https://github.com/ryukinix/artix-news
 
-Neovim is currently in the middle of being set up for testing/debugging, testing comes first as it is far easier to set up:
-
-Simply copy the new config/packages lua files and :PackerSync
-
-make sure to install all of the test files (jest should already be set up, but y'know):
-
-doas npm install -g jest
-pip install pytest
-
-sshd is disabled by default on Artix (a good practice), but let's enable it, follow your harden_sshd.txt guide (just some flags), and add a down file to disable it:
-
-doas ln -s /etc/runit/sv/sshd /run/runit/service
-
-doas sv start sshd
-
-edit /etc/ssh/sshd_config file using harden_sshd.txt guide
-
-cd /etc/runit/sv/sshd
-
-doas touch down
-
-doas chmod +x down
-
-doas sv stop sshd
-
 Currently troubleshooting fail2ban to work with this, but due to no systemd, fail2ban needs further configuration that I have yet to figure out
+
+install paxtest
+
+doas pacman -S paxtest
