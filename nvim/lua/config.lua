@@ -147,23 +147,6 @@ for _, lsp in ipairs(servers) do
    }
 end
 
--- neotest setup
-require('neotest').setup({
-    adapters = {
-        require('neotest-jest')({
-            jestCommand = "npm test --",
-            jestConfigFile = "custom.jest.config.ts",
-            env = { CI = true },
-            cwd = function(path)
-                return vim.fn.getcwd()
-            end,
-        }),
-        require('neotest-python'),
-    }
-})
-
-require('neotest').run.run()
-
 -- Nvim_Tree configuration: -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
