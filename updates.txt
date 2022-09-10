@@ -67,30 +67,4 @@ doas apparmor_parser -r /etc/appamor.d/firejail-default
 
 to disable certain applications in firejail, simply navigate to /usr/local/bin where you will find many of the soft links created by firejail:
 
-doas mv someapp someapp_disabled (will break the link, simply name it back to its original to reenable it) rtorrent, newsboat
-
-cp -r ~/.newsboat ~/.config/
-mv ~/.config/.newsboat ~/.config/newsboat
-
-doas ufw logging on
-Status: active
-
-To                         Action      From
---                         ------      ----
-443                        ALLOW       Anywhere
-22                         DENY        Anywhere
-21                         LIMIT       Anywhere
-9050                       ALLOW       Anywhere
-8118                       ALLOW       Anywhere
-3306                       DENY        Anywhere
-5432                       DENY        Anywhere
-6904                       ALLOW       Anywhere
-443 (v6)                   ALLOW       Anywhere (v6)
-22 (v6)                    DENY        Anywhere (v6)
-21 (v6)                    LIMIT       Anywhere (v6)
-9050 (v6)                  ALLOW       Anywhere (v6)
-8118 (v6)                  ALLOW       Anywhere (v6)
-3306 (v6)                  DENY        Anywhere (v6)
-5432 (v6)                  DENY        Anywhere (v6)
-6904 (v6)                  ALLOW       Anywhere (v6)
-
+doas mv someapp someapp_disabled (will break the link, simply name it back to its original to reenable it) rtorrent, newsboat mpv
