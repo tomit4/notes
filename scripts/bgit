@@ -41,7 +41,7 @@ tput bold & tput setaf 7
 
 function bgit() {
     # Intro Prompt
-    echo "${txtblue} bgit: a handy shell script for git inits/commits${txtred}"
+    echo -e "${txtblue} bgit: a handy shell script for git inits/commits${txtred}\n"
 
     numrepos=$(git remote | wc -l)
     numargs="$#"
@@ -63,7 +63,7 @@ function bgit() {
         deleted=$(git status | grep deleted | awk '{print $2}' | tr '\n' ' ')
 
         if [[ -n $newfiles || -n $modified || -n $deleted ]] ; then
-            echo "${txtwhite}The following files are staged for commit:"
+            echo "${txtgreen} The following files are staged for commit:"
         else
             echo "${txtgreen}✓ everything up-to-date...exiting bgit${txtwhite}"
             exit 0
@@ -139,7 +139,7 @@ function bgit() {
                 for ((i = 0; i < numrepos; i++)) ; do
                     git push --force ${remotearray[i]} > /dev/null 2>&1;
                 done
-                echo "${txtblue} bgit script has completed! goodbye!${txtwhite}"
+                echo -e "\n${txtblue} bgit script has completed! goodbye!${txtwhite}"
                 exit 0
 
             elif [[ $change == "n" || $change == "no" ]] ; then
@@ -157,7 +157,7 @@ function bgit() {
             fi
         done
 
-    elif [[ $numrepos -eq 0 || $numargs -eq 1 && $1 == "-i" ]] ; then
+    elif [[ $numrepos -eq 0 || $numargs -eq 1 && $1 == "-i" || $1 == "--init" ]] ; then
         if [[ $numrepos -eq 0 ]] ; then
             echo "${txtgreen} no git repository found, executing git init...${txtwhite}"
             source $HOME/.config/bgit/bgit_init
@@ -168,7 +168,7 @@ function bgit() {
             b_init "$@"
         fi
 
-    elif [[ $numrepos -ge 1 && $numargs -eq 1 && $1 == "-r" ]] ; then
+    elif [[ $numrepos -ge 1 && $numargs -eq 1 && $1 == "-r" || $1 == "--revert" ]] ; then
             source $HOME/.config/bgit/bgit_revert
             b_revert "$@"
 
