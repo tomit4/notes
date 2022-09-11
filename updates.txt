@@ -72,3 +72,7 @@ doas mv someapp someapp_disabled (will break the link, simply name it back to it
 Install ncpamixer (ncurses pavu controller replacement)
 
 paru ncpamixer (1st)
+
+Install difftastic (better diff version with colors written in rust)
+
+paru difftastic (only 1 option, very new program)
