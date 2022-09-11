@@ -434,6 +434,8 @@ alias textbelt="librewolf https://textbelt.com/ &"
 alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
 # harden a nodejs server
 alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-checklist/ &"
+# optimizing nginx web server
+alias webinoly="librewolf https://webinoly.com &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"

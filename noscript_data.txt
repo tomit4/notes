@@ -117,7 +117,12 @@
         "https://pagespeed.web.dev",
         "https://hackernoon.com",
         "https://news.ycombinator.com",
-        "https://unsplash.com/developers"
+        "https://unsplash.com/developers",
+        "https://somafm.com",
+        "https://www.nerdfonts.com/cheat-sheet",
+        "https://textbelt.com",
+        "https://www.mankier.com",
+        "https://webinoly.com"
       ],
       "untrusted": [
         "google.com",
