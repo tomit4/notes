@@ -74,5 +74,5 @@ Install ncpamixer (ncurses pavu controller replacement)
 paru ncpamixer (1st)
 
 Install difftastic (better diff version with colors written in rust)
-
+subtle change here
 paru difftastic (only 1 option, very new program)
