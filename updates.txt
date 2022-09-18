@@ -76,3 +76,22 @@ paru ncpamixer (1st)
 Install difftastic (better diff version with colors written in rust)
 subtle change here
 paru difftastic (only 1 option, very new program)
+
+Install local network sniffer avahi:
+
+doas pacman -S avahi avahi-runit nss-mdns
+
+doas ln -s /etc/runit/sv/avahi-daemon /run/runit/service/
+
+Install brother printer drivers
+paru brother-mfc-j615w 1.1.3-2
+
+Set up the printer using first by searching for all printers in the area:
+
+lpinfo --include-schemes dnssd -v
+
+This will provide you with the needed uri to name the printer:
+
+lpadmin -p Brother
+
+lpadmin -p Brother -E -v socket://10.0.0.251
