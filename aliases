@@ -65,7 +65,6 @@ alias {doasedit,sudoedit}="doas rnano"
 alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
-# difftastic is diff rewritten in rust...very nice, gotten from aur via paru
 alias diff=difft
 alias cdiff="colordiff"
 alias kfonts="kitty +list-fonts"
@@ -120,7 +119,7 @@ alias rsm="doas rsm"
 alias updatedb="doas updatedb"
 alias iftop-w="doas iftop -i wlan0 -P"
 alias wmon="wavemon"
-alias ncpam="ncpamixer"
+alias ncpa="ncpamixer"
 alias spdtst="speedtest --simple"
 alias {spdtstjs,spdtstjson}="speedtest --json | jq"
 # usage p0f -i wlan0
@@ -143,6 +142,7 @@ alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
+alias printdoc="lp -d Brother"
 alias catp="xclip -out -selection clipboard; echo"
 alias mouse="mousepad"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
@@ -437,8 +437,6 @@ alias textbelt="librewolf https://textbelt.com/ &"
 alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
 # harden a nodejs server
 alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-checklist/ &"
-# optimizing nginx web server
-alias webinoly="librewolf https://webinoly.com &"
 
 # ddgr shebang bookmarks
 alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
