@@ -65,6 +65,7 @@ alias {doasedit,sudoedit}="doas rnano"
 alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
 alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
 alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
+# difftastic is diff rewritten in rust...very nice, gotten from aur via paru
 alias diff=difft
 alias cdiff="colordiff"
 alias kfonts="kitty +list-fonts"
