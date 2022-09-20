@@ -429,6 +429,9 @@ alias textbelt="librewolf https://textbelt.com/ &"
 # specifically a series of drop down animations in css
 # https://codepen.io/codypearce/pen/PdBXpj
 
+# beginner web developer portfolio examples:
+# https://www.mary-snopok.com/
+
 # SOLID principles explained in JavaScript:
 # https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c
 #
@@ -456,10 +459,6 @@ alias red='ddgr \!r "${1}"'
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias regen_initramfs="doas mkinitcpio -P"
 
-# DEPRECATED aliases (noted here for posterity):
-
-# pjson is now easily replaced by package jq
-# alias pjson="json_pp | pygmentize -l json" # pipe expected json output through pjson to prettify it
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
 #
