@@ -95,3 +95,9 @@ This will provide you with the needed uri to name the printer:
 lpadmin -p Brother
 
 lpadmin -p Brother -E -v socket://10.0.0.251
+
+Install ripdrag:
+
+cargo install ripdrag
+
+your zshrc has ~/.cargo/bin added to the $PATH variable to use ripdrag
