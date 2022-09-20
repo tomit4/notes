@@ -105,3 +105,7 @@ your zshrc has ~/.cargo/bin added to the $PATH variable to use ripdrag
 Set difftastic as git diff default:
 
 git config --global diff.external difft
+
+Install glsxinfo (mesa-utils):
+
+doas pacman -S glsxinfo
