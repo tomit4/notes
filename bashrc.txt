@@ -183,7 +183,7 @@ export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m
 
 # Configure thefuck
 eval "$(thefuck --alias)"
-export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers"
+export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
 export GREP_COLORS='ms=01;34'
 
 # icons-in-terminal

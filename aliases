@@ -2,6 +2,7 @@
 alias .="cd && ls"
 alias more="less"
 alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue' -N"
+alias rdrag="ripdrag"
 alias lf="ranger"
 alias ogrep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
