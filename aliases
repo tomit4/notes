@@ -196,7 +196,7 @@ alias hwclock="doas hwclock"
 alias killport="fuser -k"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 # alias npm_upgrade="doas npm install --location=global npm@latest"
-alias pacgrep="pacman -Q | grep $1"
+alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
