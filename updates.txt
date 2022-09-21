@@ -67,7 +67,15 @@ doas apparmor_parser -r /etc/appamor.d/firejail-default
 
 to disable certain applications in firejail, simply navigate to /usr/local/bin where you will find many of the soft links created by firejail:
 
-doas mv someapp someapp_disabled (will break the link, simply name it back to its original to reenable it) rtorrent, newsboat, mpv, librewolf, chromium, links
+doas mv someapp someapp_disabled (will break the link, simply name it back to its original to reenable it) rtorrent, newsboat, mpv, librewolf, chromium, links, steam, steam-runtime
+
+also comment out in /etc/firejail/steam* all rules
+
+cd /etc/firejail
+
+doas nvim steam-native.profile
+doas nvim steam.profile
+doas nvim steam-runtime.profile
 
 Install ncpamixer (ncurses pavu controller replacement)
 
