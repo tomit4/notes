@@ -117,3 +117,7 @@ git config --global diff.external difft
 Install glsxinfo (mesa-utils):
 
 doas pacman -S glsxinfo
+
+Install extra backgrounds
+
+doas pacman -S artix-backgrounds artix-backgrounds-extra
