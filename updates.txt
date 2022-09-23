@@ -121,3 +121,7 @@ doas pacman -S glsxinfo
 Install extra backgrounds
 
 doas pacman -S artix-backgrounds artix-backgrounds-extra
+
+Install mktorrent
+
+doas pacman -S mktorrent
