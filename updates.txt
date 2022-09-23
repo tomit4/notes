@@ -125,3 +125,7 @@ doas pacman -S artix-backgrounds artix-backgrounds-extra
 Install mktorrent
 
 doas pacman -S mktorrent
+
+Install opanai whisper (speech recognition ai software for transcription):
+
+paru whisper (option 7)
