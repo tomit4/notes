@@ -129,9 +129,3 @@ doas pacman -S mktorrent
 Add difftastic to IgnorePkg in /etc/pacman.conf (compiling does not recognize update on paru):
 
 IgnorePkg = difftastic-git
-
-More importantly, add nvidia packages to IgnorePkg in /etc/pacman.conf due to recent breakage of steam:
-
-IgnorePkg = lib32-nvidia-utils
-IgnorePkg = nvidia-dkms
-IgnorePkg = nvidia-utils
