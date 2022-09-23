@@ -122,7 +122,9 @@
         "https://www.nerdfonts.com/cheat-sheet",
         "https://textbelt.com",
         "https://www.mankier.com",
-        "https://webinoly.com"
+        "https://webinoly.com",
+        "https://www.mary-snopok.com",
+        "https://www.wilfred.me.uk"
       ],
       "untrusted": [
         "google.com",
