@@ -299,6 +299,12 @@ alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 alias nothingnew="librewolf https://nothingnew.com &"
 alias wamaundies="librewolf https://wamaunderwear.com &"
 
+# Podcasts
+alias {1up,1upsmanship}="librewolf https://www.iheart.com/podcast/1119-1upsmanship-97574019/ &"
+alias smallbeans="librewolf https://soundcloud.com/user-682532119 &"
+alias lexfridman="librewolf https://lexfridman.com/podcast/ &"
+alias somemorenews="librewolf https://www.iheart.com/podcast/269-even-more-news-29429923/ &"
+
 # Privacy Related
 # simplelogin.io is like a VPN for email (aliases away your email address essentially)
 alias simplelogin="librewolf https://simplelogin.io/ &"

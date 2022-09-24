@@ -124,7 +124,10 @@
         "https://www.mankier.com",
         "https://webinoly.com",
         "https://www.mary-snopok.com",
-        "https://www.wilfred.me.uk"
+        "https://www.wilfred.me.uk",
+        "https://www.iheart.com",
+        "https://soundcloud.com",
+        "https://lexfridman.com/podcast/"
       ],
       "untrusted": [
         "google.com",
