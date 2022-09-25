@@ -299,7 +299,7 @@ alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 alias nothingnew="librewolf https://nothingnew.com &"
 alias wamaundies="librewolf https://wamaunderwear.com &"
 
-# Podcasts
+# Podcasts (downloadable using yt-dlp or wget, and playable using mpv)
 alias {1up,1upsmanship}="librewolf https://www.iheart.com/podcast/1119-1upsmanship-97574019/ &"
 alias smallbeans="librewolf https://soundcloud.com/user-682532119 &"
 alias lexfridman="librewolf https://lexfridman.com/podcast/ &"
