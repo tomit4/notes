@@ -89,6 +89,12 @@ GOOD FOR USE WITHIN FUNCTITON ENCAPSULATIONS
 [{ - go to beginning encapsulation that begins with { ( can also be used with '(' )
 ]} - got o the ending encapsulation that ends with } ( can also be used with ')' )
 
+WINDOW MANIPULATION BINDINGS
+ctrl + w + o - close all window buffers except for the one selected
+ctrl + w + v - open up a vertical split window
+ctrl + w + s - open up a horizontal split window
+
+:e ./name_of_file_to_open - not as good as fzf, but is a decent native file finder in nvim
 
 FROM NORMAL MODE, ENTERING OTHER MODES
 i - enter INSERT mode at the current cursor position
