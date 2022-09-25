@@ -196,3 +196,5 @@ super + r
     rustdesk &
 super + q
     xfce4-screenshooter &
+super + x
+    cpu-x
