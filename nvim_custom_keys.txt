@@ -54,6 +54,8 @@ de - delete current cursor position to the end of the word
 db - delete current cursor position to the beginning of the word
 x - delete character under current cursor position
 
+c - c can be used instead of d, and will do pretty much the same thing, except it will go into INSERT mode after deletion
+
 interesting use case:
 di( - will delete everything encapsulated in the following parenthesis
 di{ - will delete everything encapsulated in the following curly brackets
@@ -73,6 +75,15 @@ y0 - copies from current cursor position to beginning of line
 y$ - copies from current cursor position to end of line
 yG - copies from current cursor position to the end of document
 ygg - copies from current cursor position to the beginning of document
+
+o - create line below
+shift + o - create line above
+
+f - go to the next instant of the next character (i.e. f+g will go to the next instance of 'g')
+shift + f - same as f, but goes backwards (i.e. shift+f+g will go to the last instance of 'g')
+
+t - same as f, but will go to one character before entered character
+shift + t -same as shift + f, but goes backwards to one character before entered character
 
 FROM NORMAL MODE, ENTERING OTHER MODES
 i - enter INSERT mode at the current cursor position
