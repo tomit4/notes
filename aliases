@@ -142,6 +142,7 @@ alias snowlogs="doas docker logs -f snowflake-proxy"
 alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
+# one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
 alias printdoc="lp -d Brother"
 alias catp="xclip -out -selection clipboard; echo"
