@@ -293,6 +293,7 @@ alias theregister="librewolf https://www.theregister.com &"
 alias apnews="links https://apnews.com"
 alias sheldonbrown="links https://sheldonbrown.com"
 alias somafm="links https://somafm.com"
+alias bandcamp="librewolf https://bandcamp.com/ &"
 alias {viruscomix,subnormality}="librewolf https://viruscomix.com/subnormality.html &"
 alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 # sustainable clothing brands (shoes and underwear)
