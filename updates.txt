@@ -133,3 +133,11 @@ IgnorePkg = difftastic-git
 Install calibre (ebooks utilities package):
 
 doas pacman -S calibre
+
+Install pdfgrep (grep utility within pdfs)
+
+doas pacman -S pdfgrep
+
+Install cpu-x
+
+paru cpu-x (choose x11 from galaxy when prompted)
