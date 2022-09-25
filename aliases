@@ -430,6 +430,7 @@ alias icomoon="librewolf https://icomoon.io &"
 alias unsplash="librewolf https://unsplash.com/developers &"
 # wesbos tutorials/articles/etc
 alias wesbos="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://courses.wesbos.com &"
+alias frontendmasters="librewolf https://frontendmasters.com/ &"
 # send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
 alias textbelt="librewolf https://textbelt.com/ &"
 
