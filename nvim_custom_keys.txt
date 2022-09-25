@@ -85,6 +85,11 @@ shift + f - same as f, but goes backwards (i.e. shift+f+g will go to the last in
 t - same as f, but will go to one character before entered character
 shift + t -same as shift + f, but goes backwards to one character before entered character
 
+GOOD FOR USE WITHIN FUNCTITON ENCAPSULATIONS
+[{ - go to beginning encapsulation that begins with { ( can also be used with '(' )
+]} - got o the ending encapsulation that ends with } ( can also be used with ')' )
+
+
 FROM NORMAL MODE, ENTERING OTHER MODES
 i - enter INSERT mode at the current cursor position
 a - enter INSERT mode at the following cursor position (appending)
