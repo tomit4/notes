@@ -38,7 +38,6 @@ require('packer').startup(function()
     use 'mattn/emmet-vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'airblade/vim-gitgutter'
-    use 'tpope/vim-fugitive'
     use 'junegunn/fzf.vim' -- better fuzzy find files
     use 'preservim/nerdcommenter'
     use {'lewis6991/gitsigns.nvim'}
