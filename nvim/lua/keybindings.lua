@@ -40,7 +40,7 @@ keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 
 -- <Shift -m> brings up a preview of Markdown files
 keymap('n', '<s-m>', '<c-w>:MarkdownPreview<CR>', {})
---
+
 -- Toggle Multi-Cursor with j or k
 vim.cmd[[nmap <C-j> <C-Down>]]
 vim.cmd[[nmap <C-k> <C-Up>]]

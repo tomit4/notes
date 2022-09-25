@@ -157,8 +157,8 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
-  open_on_setup = true,
-  open_on_setup_file = true,
+  open_on_setup = false,
+  open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
   update_cwd = false,
@@ -358,6 +358,9 @@ function! FzfExplore(...)
 endfunction]]
 
 vim.cmd[[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]]
+
+-- fzf is on bottom of screen
+vim.cmd[[let g:fzf_layout = { 'down': '~30%' }]]
 
 --Removes trailing spaces on save
 vim.cmd[[autocmd FileWritePre * call TrimWhiteSpace()]]
