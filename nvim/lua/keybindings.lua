@@ -51,6 +51,9 @@ keymap('i', 'ii', '<Esc>', {})
 -- Alias replace all to shift + S
 vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
 
+-- Alias replace all on current line (shift + Y)
+vim.cmd[[nnoremap Y :.,.s///g<Left><Left><Left>]]
+
 -- Format C and C++ Code using cp alias ( thus far preferable to Neoformat)
 vim.cmd[[nnoremap cp :silent :ClangFormat]]
 
