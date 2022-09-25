@@ -36,7 +36,7 @@ keymap('n', '<s-d>', '<c-w>:DiffviewOpen<CR>', {})
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
 
 -- <Ctrl-x> redraws the screen and removes any search highlighting
-keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
+keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 
 -- <Shift -m> brings up a preview of Markdown files
 keymap('n', '<s-m>', '<c-w>:MarkdownPreview<CR>', {})
@@ -50,15 +50,6 @@ keymap('i', 'ii', '<Esc>', {})
 
 -- Alias replace all to shift + S
 vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
-
--- Alias jest unit testing for current file
-vim.cmd[[nnoremap T :lua require"jester".run_file()]]
--- Other jest commands you may need in the future:
--- :lua require"jester".run()
--- :lua require"jester".run_last()
--- :lua require"jester".debug()
--- :lua require"jester".debug_file()
--- :lua require"jester".debug_last()
 
 -- Format C and C++ Code using cp alias ( thus far preferable to Neoformat)
 vim.cmd[[nnoremap cp :silent :ClangFormat]]
