@@ -129,3 +129,7 @@ doas pacman -S mktorrent
 Add difftastic to IgnorePkg in /etc/pacman.conf (compiling does not recognize update on paru):
 
 IgnorePkg = difftastic-git
+
+Install calibre (ebooks utilities package):
+
+doas pacman -S calibre
