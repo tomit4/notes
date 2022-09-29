@@ -52,4 +52,5 @@ require('packer').startup(function()
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use { '0x100101/lab.nvim', run = 'cd js && npm ci', requires = { 'nvim-lua/plenary.nvim' } }
 end)

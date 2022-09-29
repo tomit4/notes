@@ -378,6 +378,16 @@ vim.cmd[[hi! NonText ctermbg=NONE guibg=NONE]]
 -- never create swap files
 vim.cmd[[set noswapfile]]
 
+-- set up lab.nvim
+sources = cmp.config.sources({ {name = 'lab.quick_data', keyword_length = 4 }})
+require('lab').setup {
+    code_runner = {
+        enabled = true,
+    },
+    quick_data = {
+        enabled = true,
+    }
+}
 
 -- do not close the markdown preview tab when switching to other buffers
 -- vim.g.mkdp_auto_close = 0
