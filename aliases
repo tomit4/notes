@@ -145,7 +145,8 @@ alias lxapp="lxappearance"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
-alias printdoc="lp -d Brother"
+# alias printdoc="lp -d Brother"
+alias printdoc="lp -d MFCJ615W"
 alias catp="xclip -out -selection clipboard; echo"
 alias mouse="mousepad"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
@@ -354,6 +355,7 @@ alias jvns="librewolf https://jvns.ca &"
 alias untangled="librewolf https://roy.gbiv.com/untangled/ &"
 # software development blog:
 alias joelonsoftware="librewolf https://www.joelonsoftware.com/ &"
+alias gabmus="librewolf https://gabmus.org/ &"
 
 # C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
