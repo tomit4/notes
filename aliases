@@ -170,6 +170,9 @@ alias {trans,translate}="gtktranslate"
 alias rgif="byzanz-record"
 alias scast="silentcast"
 
+# interfaces with asciinema.org for creating simple video tutorials on cli programs
+alias ascii="asciinema"
+
 alias {yt-listen,mpva}='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
