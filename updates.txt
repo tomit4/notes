@@ -147,3 +147,7 @@ Install byzanz and silentcast (gif recorders, silentcast good for finding pixel 
 doas pacman -S byzanz
 
 paru silentcast
+
+Install asciinema (records terminal sessions for demoing of cli projects and uploads it to asciinema.org for use, login via proton):
+
+doas pacman -S asciinema
