@@ -141,3 +141,9 @@ doas pacman -S pdfgrep
 Install cpu-x
 
 paru cpu-x (choose x11 from galaxy when prompted)
+
+Install byzanz and silentcast (gif recorders, silentcast good for finding pixel start points for byzanz)
+
+doas pacman -S byzanz
+
+paru silentcast

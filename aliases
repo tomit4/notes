@@ -164,7 +164,13 @@ alias toolongdidntread="tldr"
 alias cheatsheet="cheat"
 alias stallman="vrms"
 alias {trans,translate}="gtktranslate"
-alias mpva='mpv "${1}" --no-video'
+
+# gif recording, peek doesn't work right now...
+# help for this can be hard, use byzanz-record --help for more info, use silentcast to find x and y dimensions
+alias rgif="byzanz-record"
+alias scast="silentcast"
+
+alias {yt-listen,mpva}='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
@@ -181,7 +187,6 @@ alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
 alias {odysee,lbry}="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
-alias yt-listen='mpv "${1}" --no-video'
 alias ytdl="yt-dlp -f mp4"
 alias ytdl-a="yt-dlp -x --audio-format mp3"
 alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
