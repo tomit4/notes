@@ -217,6 +217,7 @@ alias slink="streamlink"
 alias scrot="scrot --count --delay"
 alias grip="grip 6969"
 alias sudoku="sku"
+alias figma="figma-linux"
 # pip list and pip freeze command list pip packages
 
 #Particularly useful commands more to remember than to use as aliases:

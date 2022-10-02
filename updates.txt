@@ -151,3 +151,6 @@ paru silentcast
 Install asciinema (records terminal sessions for demoing of cli projects and uploads it to asciinema.org for use, login via proton):
 
 doas pacman -S asciinema
+
+Install figma-linux (sign in using email z3r pr@w)
+paru figma-linux
