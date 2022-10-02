@@ -404,6 +404,10 @@ alias opengroup="librewolf https://publications.opengroup.org/ &"
 # for web accessibility information
 alias aditus="librewolf https://aditus.io/ &"
 alias a11y="librewolf https://a11y-guidelines.orange.com/en/ &"
+
+# library for simple and accessible sliders
+alias a11yslider="librewolf https://a11yslider.js.org/ &"
+
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
 # for downloading web fonts
