@@ -400,6 +400,8 @@ alias smarden="links http://smarden.org/runit/"
 alias opengroup="librewolf https://publications.opengroup.org/ &"
 
 # Web Development Resources
+# for web accessibility information
+alias aditus="librewolf https://aditus.io/ &"
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
 # for downloading web fonts
