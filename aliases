@@ -440,7 +440,9 @@ alias demo2s="librewolf https://www.demo2s.com &"
 alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
 # icomoon is a site with free icons
 alias icomoon="librewolf https://icomoon.io &"
-#unsplash.com is an api site for developers to import and use photos
+# svgsprites creates sprites from dragging svg files into its
+alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
+# unsplash.com is an api site for developers to import and use photos
 alias unsplash="librewolf https://unsplash.com/developers &"
 # wesbos tutorials/articles/etc
 alias wesbos="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://courses.wesbos.com &"
