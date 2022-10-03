@@ -301,7 +301,7 @@ vim.g.nosplitright = true
 require'colorizer'.setup()
 
 -- specify markdown-preview browser / set to dark mode
-vim.g.mkdp_browser = 'chromium'
+vim.g.mkdp_browser = 'librewolf'
 vim.g.mkdp_theme = 'dark'
 
 -- set relative number
