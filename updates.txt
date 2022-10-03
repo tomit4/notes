@@ -158,3 +158,17 @@ paru figma-linux
 Install brave and uninstall ungoogled chromium (configure brave first with extensions and chrome://flags)
 
 Install css LSP in neovim
+
+Install openresolv (for use with Mullvad)
+
+doas pacman -S openresolv
+
+log into mullvadvpn using your account number (see offline notes on desktop):
+
+download configuration files (use default udp)
+
+xtract -zip the mullvad.zip configuration and copy all files to /etc/openvpn/client
+
+edit mullvad_x.conf to reflect all files to /etc/openvpn/client/files*
+
+In /etc/runit/sv/openvpn/run, edit to exec /usr/bin/openvpn --config /etc/openvpn/client/mullvad_x.conf
