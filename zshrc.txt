@@ -13,7 +13,6 @@ export cproj="/home/brian/Documents/Code/web_tutorials/kevin_powell/build_a_resp
 
 # custom BROWSER env for ddgr:
 export BROWSER=librewolf
-export BROWSER_2=chromium
 export TUIR_BROWSER=librewolf
 export EDITOR=nvim
 export PF_INFO="ascii os kernel pkgs shell wm editor"

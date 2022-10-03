@@ -77,8 +77,7 @@ alias tshift='doas timeshift --delete && notify-send "  Previous Backup Delet
 alias btop="bst -e btop"
 alias {librewolf,firefox}="librewolf"
 alias tor-browser="tor-browser &"
-alias chromium="chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &"
-alias leetcode="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://leetcode.com/accounts/login &"
+alias leetcode="brave https://leetcode.com/accounts/login &"
 alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias toonz="opentoonz"
@@ -449,7 +448,7 @@ alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
 # unsplash.com is an api site for developers to import and use photos
 alias unsplash="librewolf https://unsplash.com/developers &"
 # wesbos tutorials/articles/etc
-alias wesbos="/usr/bin/chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerpriting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs https://courses.wesbos.com &"
+alias wesbos="brave https://courses.wesbos.com &"
 alias frontendmasters="librewolf https://frontendmasters.com/ &"
 # send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
 alias textbelt="librewolf https://textbelt.com/ &"

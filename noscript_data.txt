@@ -127,7 +127,16 @@
         "https://www.wilfred.me.uk",
         "https://www.iheart.com",
         "https://soundcloud.com",
-        "https://lexfridman.com/podcast/"
+        "https://lexfridman.com/podcast/",
+        "https://bandcamp.com",
+        "https://frontendmasters.com",
+        "https://gabmus.org",
+        "https://asciinema.org",
+        "https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421",
+        "https://www.aditus.io",
+        "https://a11y-guidelines.orange.com/en/",
+        "https://svgsprit.es",
+        "https://a11yslider.js.org"
       ],
       "untrusted": [
         "google.com",

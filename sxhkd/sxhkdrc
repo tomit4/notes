@@ -165,7 +165,7 @@ super + z
 super + f
     librewolf &
 super + c
-    chromium --incognito --disable-search-engine-collection --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --popups-to-tabs &
+    brave &
 super + i
     inkscape &
 super + g
