@@ -156,3 +156,5 @@ Install figma-linux (sign in using email z3r pr@w)
 paru figma-linux
 
 Install brave and uninstall ungoogled chromium (configure brave first with extensions and chrome://flags)
+
+Install css LSP in neovim
