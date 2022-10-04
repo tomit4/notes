@@ -409,8 +409,10 @@ alias a11yslider="librewolf https://a11yslider.js.org/ &"
 
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
+
 #alternative to searching on google fonts
-alias fontsquirrel="librewolf https://www.fontsquirrel.com/ &"
+alias fontspace="librewolf https://www.fontspace.com &"
+
 # for downloading web fonts
 alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
 #gfi is a utility that downloads google fonts from the cli:
