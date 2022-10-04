@@ -410,6 +410,9 @@ alias a11yslider="librewolf https://a11yslider.js.org/ &"
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
 
+# css example sites
+alias devsnap="librewolf https://devsnap.me/ &"
+
 #alternative to searching on google fonts
 alias fontspace="librewolf https://www.fontspace.com &"
 
