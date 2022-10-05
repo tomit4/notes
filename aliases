@@ -413,6 +413,10 @@ alias hugo="librewolf https://gohugo.io/ &"
 # css example sites
 alias devsnap="librewolf https://devsnap.me/ &"
 
+#auto generate decent color schemes
+alias mycolor="librewolf https://mycolor.space/ &"
+alias adobecolor="librewolf https://color.adobe.com/create/color-wheel &"
+
 #alternative to searching on google fonts
 alias fontspace="librewolf https://www.fontspace.com &"
 
