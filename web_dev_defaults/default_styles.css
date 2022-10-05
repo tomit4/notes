@@ -1,8 +1,39 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+/* * { */
+    /* border: 2px solid lime; */
+/* } */
+
+/* alternatively select using :root */
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+}
+
+/* more for a centered div, doesn't play well with main below*/
+/* body { */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: 0 auto; */
+/* } */
+
+main {
+    max-width: 38rem;
+    padding: 1.5em;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 3em 0 1em;
+    font-family: sans-serif;
+}
+
+p, ul, ol {
+    margin-bottom: 2em;
+    color: #1d1d1d;
+    font-family: sans-serif;
 }
