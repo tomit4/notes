@@ -136,7 +136,17 @@
         "https://www.aditus.io",
         "https://a11y-guidelines.orange.com/en/",
         "https://svgsprit.es",
-        "https://a11yslider.js.org"
+        "https://a11yslider.js.org",
+        "https://css-tricks.com",
+        "https://www.fontsquirrel.com",
+        "https://www.fontspace.com",
+        "http://www.justinaguilar.com/animations/index.html",
+        "https://devsnap.me",
+        "https://mycolor.space",
+        "https://color.adobe.com/create/color-wheel",
+        "https://cssgradient.io",
+        "https://thenounproject.com",
+        "https://swiperjs.com"
       ],
       "untrusted": [
         "google.com",
