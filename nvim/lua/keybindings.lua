@@ -45,6 +45,10 @@ keymap('n', '<s-m>', '<c-w>:MarkdownPreview<CR>', {})
 vim.cmd[[nmap <C-j> <C-Down>]]
 vim.cmd[[nmap <C-k> <C-Up>]]
 
+-- Toggle relativenumber
+vim.cmd[[nmap <s-n> :set relativenumber! number<cr>]]
+
+
 -- Escape Insert Mode with ii
 keymap('i', 'ii', '<Esc>', {})
 
