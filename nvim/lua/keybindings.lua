@@ -46,7 +46,7 @@ vim.cmd[[nmap <C-j> <C-Down>]]
 vim.cmd[[nmap <C-k> <C-Up>]]
 
 -- Toggle relativenumber
-vim.cmd[[nmap <s-n> :set relativenumber! number<cr>]]
+vim.cmd[[nmap <s-x> :set relativenumber! number<cr>]]
 
 
 -- Escape Insert Mode with ii

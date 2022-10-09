@@ -305,8 +305,8 @@ vim.g.mkdp_browser = 'librewolf'
 vim.g.mkdp_theme = 'dark'
 
 -- set relative number
--- vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number = true
+-- vim.opt.relativenumber = true
 
 vim.opt.cursorcolumn = true
 -- vim.opt.cursor = true
