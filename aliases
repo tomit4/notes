@@ -316,6 +316,7 @@ alias {1up,1upsmanship}="librewolf https://www.iheart.com/podcast/1119-1upsmansh
 alias smallbeans="librewolf https://soundcloud.com/user-682532119 &"
 alias lexfridman="librewolf https://lexfridman.com/podcast/ &"
 alias somemorenews="librewolf https://www.iheart.com/podcast/269-even-more-news-29429923/ &"
+alias owlsatdawn="librewolf https://www.owlsatdawn.com &"
 
 # Privacy Related
 # simplelogin.io is like a VPN for email (aliases away your email address essentially)
