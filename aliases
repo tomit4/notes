@@ -420,6 +420,9 @@ alias devsnap="librewolf https://devsnap.me/ &"
 alias mycolor="librewolf https://mycolor.space/ &"
 alias adobecolor="librewolf https://color.adobe.com/create/color-wheel &"
 
+# change hex to rgba colors (usesful for CSS)
+alias rgba="librewolf https://rgbacolorpicker.com/hex-to-rgba &"
+
 # alternative to searching on google fonts
 alias fontspace="librewolf https://www.fontspace.com &"
 # 1001 fonts, home of anime ace and other good fonts
