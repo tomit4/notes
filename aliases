@@ -172,7 +172,7 @@ alias scast="silentcast"
 # interfaces with asciinema.org for creating simple video tutorials on cli programs
 alias ascii="asciinema"
 
-alias {yt-listen,mpva}='mpv "${1}" --no-video'
+alias {listen,yt-listen,mpva}='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
