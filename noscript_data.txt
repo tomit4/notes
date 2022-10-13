@@ -71,7 +71,6 @@
         "https://gitlab.com",
         "https://stackoverflow.com",
         "https://stackexchange.com",
-        "127.0.0.1",
         "localhost",
         "https://sw.kovidgoyal.net//kitty/",
         "https://forum.artixlinux.org",
@@ -146,7 +145,14 @@
         "https://color.adobe.com/create/color-wheel",
         "https://cssgradient.io",
         "https://thenounproject.com",
-        "https://swiperjs.com"
+        "https://swiperjs.com",
+        "https://www.1001fonts.com",
+        "https://www.owlsatdawn.com",
+        "http://127.0.0.1",
+        "http://127.0.0.1:8080",
+        "127.0.0.1",
+        "https://rgbacolorpicker.com",
+        "https://websitemetadata.com/meta-tags-generator"
       ],
       "untrusted": [
         "google.com",
