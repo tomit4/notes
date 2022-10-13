@@ -9,13 +9,16 @@ keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {}) keymap('n', '<s-tab>', '<c-w>:tabpr
 keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
-
 -- Use ctrl- [hl] to select the active split!
 keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
 -- open fzf
 vim.cmd[[nnoremap fzf :silent :FZFExplore]]
 keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
+
+-- toggle gitblame
+-- vim.cmd[[nnoremap gb :silent :GitBlameToggle]]
+keymap('n', '<c-g>', '<c-w>:GitBlameToggle<CR>', {})
 
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]

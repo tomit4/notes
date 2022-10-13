@@ -3,12 +3,8 @@ keymap = vim.api.nvim_set_keymap
 -- Enable ColorScheme
 vim.cmd[[colorscheme nord]]
 
--- Enable lorem ipsum
--- require("lorem-nvim").setup()
-
 -- Enable autopairs
 require('nvim-autopairs').setup{}
-
 
 -- Enable gitsigns
 require('gitsigns').setup()
@@ -288,10 +284,10 @@ vim.g.auto_save = 1
 vim.g.auto_save_silent = 1
 
 -- Create Default Mappings for NerdCommenter
-vim.g.NERDCreateDefaultMappings= 1
+vim.g.NERDCreateDefaultMappings = 1
 
 -- Add spaces after NerdCommenter delimiters by default
-vim.g.NERDSpaceDelims= 1
+vim.g.NERDSpaceDelims = 1
 
 -- this variable must be enabled for colors to be applied properly
 vim.opt.termguicolors = true
@@ -334,6 +330,10 @@ vim.opt.signcolumn = 'yes'
 -- Fix Splitting
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
+-- Disable git-blame by default
+-- vim.cmd[[g:gitblame_enabled = 0]]
+vim.g.gitblame_enabled = 0
 
 -- Vertically center document when entering Insert mode
 vim.cmd[[autocmd InsertEnter * norm zz]]
