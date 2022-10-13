@@ -35,6 +35,10 @@ vim.cmd[[nnoremap nf :silent :Neoformat]]
 -- invoke PackerSync
 keymap('n', '<s-p>', '<c-w>:PackerSync<CR>', {})
 
+-- invoke numbered line counter
+-- simple enter two numbers in between the range (0,10) will yield 1 to 10 all on new lines
+vim.cmd[[nnoremap rp :silent :put =range(,)]]
+
 --invoke Diffview
 keymap('n', '<s-d>', '<c-w>:DiffviewOpen<CR>', {})
 
