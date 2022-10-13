@@ -1,0 +1,15 @@
+#!/bin/bash
+
+main() {
+    orig_file="$1"
+    read -e -r -p "how many copies of $orig_file would you like to make?: " num_copies
+    parsed_file_name=$(echo "$orig_file" | awk -F. '{print $1}')
+    file_type=$(echo "$orig_file" | awk -F. '{print $2}')
+
+    for num in $(seq 1 "$num_copies")
+    do
+        cp "$orig_file" "$parsed_file_name-$num.$file_type"
+    done
+}
+
+main "$@"
