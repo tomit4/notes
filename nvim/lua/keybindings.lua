@@ -20,6 +20,9 @@ keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]
 
+--open a new vertical split
+vim.cmd[[nnoremap nv :silent :vnew]]
+
 -- open lsp-installer
 vim.cmd[[nnoremap lsp :silent :LspInstallInfo]]
 
@@ -50,7 +53,7 @@ vim.cmd[[nmap <s-x> :set relativenumber! number<cr>]]
 
 
 -- Escape Insert Mode with ii
-keymap('i', 'ii', '<Esc>', {})
+-- keymap('i', 'ii', '<Esc>', {})
 
 -- Alias replace all to shift + S
 vim.cmd[[nnoremap S :%s///gI<Left><Left><Left><Left>]]
