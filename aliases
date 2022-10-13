@@ -443,9 +443,6 @@ alias nounproject="librewolf https://thenounproject.com &"
 # css gradients
 alias cssgradients="librewolf htttps://cssgradient.io &"
 
-# meta tags generator
-alias metatags="librewolf https://websitemetadata.com/meta-tags-generator &"
-
 #for domain names
 alias namecheap="librewolf https://namecheap.com/ &"
 # a great introduction to tls/ssl practices and rules of thumb:
