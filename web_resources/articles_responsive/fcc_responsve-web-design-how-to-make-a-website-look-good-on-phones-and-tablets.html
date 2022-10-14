@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        
+            <title>Responsive Web Design – How to Make a Website Look Good on Phones and Tablets</title>
+        
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+            <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;700&display=swap">
+        
+
+        
+        
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css"></noscript>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css"></noscript>
+
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup-templating.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-bash.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-c.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-clojure.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-cpp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-csharp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-css.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-docker.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-elixir.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-erlang.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-git.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-go.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-graphql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-haskell.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-java.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-javascript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-json.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-jsx.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-kotlin.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-lua.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-php.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-python.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-r.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-ruby.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-rust.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-scala.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-sql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-swift.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-typescript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-yaml.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-dart.min.js"></script>
+
+
+
+        
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-26e2f3cde9.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-5a4f9d5c91.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-124f5f949c.css" />
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const isAuthenticated=document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),isDonor=document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+    
+        <script
+            data-ad-client="ca-pub-9482786369113753"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            crossorigin="anonymous"
+            async
+        ></script>
+        <script data-test-label="toggle-ad-layout" defer src="/news/assets/js/toggle-ad-layout-099254b065.js"></script>
+    
+
+
+        
+        
+    <script defer src="/news/assets/js/fitvids-5d12072cbf.js"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".post-full-content");t&&fitVids(t)}));</script>
+
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/amp/">
+    <meta name="description" content="In the rapidly evolving landscape of connected devices, responsive web design continues to be crucial in web development.  Not long ago the term &quot;responsive web design&quot; was non-existent. But today, most of us have had to adopt it to some extent.  According to Statistica [https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/] , as of">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Responsive Web Design – How to Make a Website Look Good on Phones and Tablets">
+    
+        <meta property="og:description" content="In the rapidly evolving landscape of connected devices, responsive web design continues to be crucial in web development.  Not long ago the term &quot;responsive web design&quot; was non-existent. But today, most of us have had to adopt it to some extent.  According to Statistica [https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/] , as of">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2020/07/curve-design-futuristic-lines-911738.jpg">
+    <meta property="article:published_time" content="2020-07-14T18:47:34.000Z">
+    <meta property="article:modified_time" content="2020-07-14T18:47:34.000Z">
+    
+        <meta property="article:tag" content="Responsive Design">
+    
+        <meta property="article:tag" content="Web Design">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Responsive Web Design – How to Make a Website Look Good on Phones and Tablets">
+    
+        <meta name="twitter:description" content="In the rapidly evolving landscape of connected devices, responsive web design continues to be crucial in web development.  Not long ago the term &quot;responsive web design&quot; was non-existent. But today, most of us have had to adopt it to some extent.  According to Statistica [https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/] , as of">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2020/07/curve-design-futuristic-lines-911738.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Adam Henson">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Responsive Design, Web Design">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+        <meta name="twitter:creator" content="@adamhenson1979">
+    
+
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2020/07/curve-design-futuristic-lines-911738.jpg",
+		"width": 600,
+		"height": 400
+	},
+	"url": "https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2020-07-14T18:47:34.000Z",
+	"dateModified": "2020-07-14T18:47:34.000Z",
+	"keywords": "Responsive Design, Web Design",
+	"description": "In the rapidly evolving landscape of connected devices, responsive web design\ncontinues to be crucial in web development. \n\nNot long ago the term &quot;responsive web design&quot; was non-existent. But today, most\nof us have had to adopt it to some extent. \n\nAccording to Statistica\n[https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/]\n, as of 2019, 61% of all Google search visits take place on a mobile device. In\nSeptember of 2020 Google will change its search algorith",
+	"headline": "Responsive Web Design – How to Make a Website Look Good on Phones and Tablets",
+	"author": {
+		"@type": "Person",
+		"name": "Adam Henson",
+		"url": "https://www.freecodecamp.org/news/author/adam/",
+		"sameAs": [
+			"https://www.foo.software",
+			"https://twitter.com/adamhenson1979"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://www.freecodecamp.org/news/content/images/2019/11/me-square.png",
+			"width": 600,
+			"height": 400
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+
+<!-- GAP -->
+<script>
+  Function("9!E$QV^T\x3cZaAySX)5`_q)5AiNtR{JsdDScjiC\\]Rb{\x3cj1'A4=_3UvOGN7{HU\"FJ+ML5\\,,1kN)y$5GM@-^Q5'kT!&l8`)'\x3cABVYg'@?CBum3`F{+3R5mcS A3^0Y$M^\\Ocoo#]u4M#avEJJ#0%,$0XwE>cFBnP]D5f8$C,),!T0D\x3cMCS>gQLs\x3ca#ME>k757wLo}Y3JyM$g@i\"Fg60R:n`>@#Lk#[*ML].PU+-Py5ME>k757w=mEq$gCW9dUBx^uLH{bv>$5$v%,q'eMz/jQ1yJ^4GEPiO>5i'n0U3GdMSuW=XUa//GF'C9$p(^VM*IAS2dQT.\\a+5U8iF(L&9\"\x3cb36L@=^Y3%D^*&=DxH@@-=g;q|v9\x3cSj M6kPa'U4^\x3c,2r9^HU\x3cVT@;sWi-O.4MO=i-5estn+L#OjC.[DCqUE/&W^i=//-/u5P#?MVSg B3QT8'O8h)1&iLb$m4MeQ.iX@s`}_6\\BoG^^{zg\"V,WZe;#D2i&e+/Tpd;7(rvkDg'@QN>gF3yJ\\//G(p.)(vwn*S5edE>cFBnP]LH[,j:I9e%w#$#@U]zZWXs|}P5{8)/(7I!m0PxN X{nS3-aa+4O;m+(C-LgX[AGCM0iKgsjxM\x3cV'mF2^xlgy\"xg?C-{RZsB\\+H]/)886l9^Eq|gJD7\\W6CrsJ*l9c1)7,:%0svGC@;GHAtVa)&4/h11*w9\";n\x3ceSzH%jXj|TR3E6g)&(,@Wxtohki5dF/yJ^4MP8j\x3c2&s}$>tB[ex?VULt|aR(E:@675mvl^`a\x3cKDOZjgnGu5EdT8c^22}^,N)CbcI$cMB|T!&l2`6*7l>*yk9aMz;#J3y&]:3I+nh\x3coe ^DL>[k_P|m\\B|,5ML+i/7+-wh0m+\x3cP]*2qXh|X_\"z))4(1k'aWH>deZ?VULq|R!\"=_#4O+e&!#n1WJk1VVTjjoSAgM!LI2Alt,H\"@vDFRjKwFc;3ND+G^^s?e#UzOF\\SX 4zOR:*O4#-M1-.k#[*ML].420oFR:MG+ou:1T%h.L'OW#.hF@nQc53f+'6J?\"t!kI}@ASU\\HBUS^:0T?k-p),v\"HU\x3csYD7jP3wBQ2&xE+R&2rwb%\\'\x3c@K./b\\$^y2\\F;i+7,s!!#q#eRfDkD@%Sy5\\CL`R1J?z_DfxWZ^X2 i-Od2-{a8N5^Ssc#J)gED=DZ\x3cUS^6&R:tj(6g%b.[$MdDScjU#]e5*DD+c^^vPo-PwYlw;#F=sGX-6R']4(J-%^2\\'IYN+_H1yyTP0R/b11$pU^1J'DNS8g{=1Pa/(I4\\4h(xK_3UvOGN7{jIwFc;3NDjT*(xPhJNxOvE>cFBnP]LH[8`\x3c85r1hJ]tGSDFrm=wJV//A2N-7[s?l#[RJjR.i{4zOR:*O4#\x3cJ>vvm3Y#YC:7R B$^*\x3c\"RDdc92muwLfPvRk?VOCjkda\x3cE4p5(5ese#!+JGCG%biBU{+/U3`:$%pv82sxISL.gD0qF)5ME4p5(5ese#qvJLE2\\X@fC[+YV5d,AQ%N62svJLE2\\X@fC[+^TR^71)mxn0HuGCw8#F=sGX-6R']4(@?z8D\\ARPH=VE:j|e5*DD+G^^x?p0P)\x3c@K.4WZ|SX:\"B2``92muwL$PvMk@gLBfC[+=\\5)?5,xr[*L?PjU*aX3BU{\x3c\"L;`D?22)Z*\\xbve>#J3y|cR(E:wD2Okvm:cyPLB=^R\x3c-hj8&T;m6A(_!V;q*gQD=2WZxFcB=ORn-7?\"wn,J)DMMOijIwFc;3ND`#1 A'vE\")MWZvWM3hU{*&F/i-q5s#^0[.aCi7!XU$DP:$HLoO>@vvm3Y#VMA3ZFB?Fy53I-d6$/Hvl!Y|KRN;/RXtSX-*N'gm(7>z8$\\#>RH8ciU\"ST:6R4y7O9e}n#dMJjF.i\"=3HT:YF;i+7,s!!Eb2eMQ2\\L\x3cfMB+5x/:.81g'b-U;OeZ;ZWCwOm+zN#8\x3c@[s?l#[RJjR.i{4zOR:*O4#-J>vvm3Y#YC\\Frm4BGd4$T/j6I(-.k#[*ML^.#K/x0f4oR5k-57}9y{FwP^fMyi:-FyF ?*pHM>zre3LMISK5!H\x3czNT8\"B2``BR#:%=u\x3cXhRdBDBmm_58fV'YSJ0u6$\\#>RH8ci3.\\U53f\x3c\\:A1AA%2$DpsvW(tc5rM+ML+i/7+?!5#s!@LF=]|\x3c0jv:\\f:8s$7l?b+\\!aR=.#F6fS25%EeoN1J0D-OwLjtp\\(jUA{ W=Tb9dRZ?%^2\\'I\\E>cFBnP]L&gAm-78v!w4V|?\\md2 3+eu+\\nM'\x3c^ne'aJP\"PJe=SWjC} ZKfV-ZWY6C.L|>@eb\x3c|mBB.P:)l/h=/IxomZ%QjoiZ'wb9w(]OwM'N7!A'7Z%Doe{e3qK$kea'U4^\x3c,2r9^HU?OeZ?dL2%o,a\\TJ!N7^5:%2%C_be.2EBtBu+Hl8`8/$gv!KBP8gaV!cN.h*,0RLq)5Av=hHP?PyCOcjXf|]+8^em:$\x3c,v'*L#BRGP!Fijm[+/G:cR/^y9^JSxIES1|m4Boy9\\n_^SNABA4EHn>;zOkR7i_}PUrPmc)^,\"6DZPaGz.PF+3DW'3#5_-b7,A\"E%Lo{HT*zfn}%X^IQ0Y[,BE/[P@mrw[( iBJ.TYoM&\x3cK/-M)[m$^rqR+uU*u#^0cZ/Rt7vzg%syMMLj]D@HPS+GRb.]`5/F2VYQjm|; v_?S-T^RO/\\[U7:\"HSPPdSe%\"A?Gv_7A8y>^$2{h'U;[^fbgHBzS]D5|T:>O5i#e}Jxak;V$JX'loMYA:j*I9-0%.$yPLB=^R\x3c-FvA3E:p:1Ih9^Em\x3cd+@=]o4qP^8G$'o-O1s*!EtKopD\\|jQx^y.\\F;i+7,s!!#n0MCS>gQLRBc.MF2j75IR(f L'g+ !T6mK&Nmm4iBksKi:'2VfOPH7\\i_;hlP:{,p6&7m\"gDL?IhSPpY/w_aP0{6#6JMmN!0$$eDT7XW7tOuM\x3cV'mF(^v\x3c6M}Fjqs\\-r_@ST:6R4y-^ne'aJP\"PJe.SHjC} YKoB`OMI,9^z$xd+@=]o7rV[L&>+9d_X0G*:L\x3cb\x3cDe3!]9h-b]nM*;@J?%^2\\'I\\E>cFBnP]L&j4$C)2v9o}Y3Oy:&!Ui5za`&l2`6*7l7}2s%PQGOZoAzCb:3I4bN5Mv\x3c6Op;klg7{jjCovMHyM6:(7y%g\x3c[AEMH7{c['hlL7f+&NNRAN6#s|IBDADIT' oM^`cZ''8A33>kr:BTdujW-U.:MJ5d6IC03\"Gg>[v_I|l6-JuMHj4$R,J#=`YM*IAS2dQTjhj8&T;m6A&s!l-SxgCQ;dUZhB[2GC5i;2/i=^Ed?=yE>cFBnP]L&j4'\x3cJ>zrk\x3cYP@jB>gU3sUC'3G+oR2^i?m}Yz@Ri22QJ#Sy;\\TBw7M$Awn,J)DMMOZm\x3c.\\U53f\x3c\\:A7A.vHYPihNdDE8jDcR&N:m1(6,!\"WYOJjK.cJBmzaOJgAq)5AmNhwYpeSz2Pq+1B,/zo#6\x3c|8aNeDL?Ph@PrU3yVa4?TC#-M>g(k0L#O2@;\\HB?\\V+5x,p6&7m\"gDn0MCS>gQLn^lP5A8b-7[!x^2!yPLB=^R\x3c-hj8&T;m6A8#0%1Yv JD6ZQB?\\V+5x,p6&7m\"gDn0MCS>gQLz^lP1A:c`>*i'3$\\#>RH8ciU\"ST:6R4y)O2vz`'UtG%D=#D>uMhL5H/nOO6pz\\#m\x3cgK@9{i4zOR:*O4#-J>vvm3Y#YLcMg iBF.4YTJ!7^^Av82!xXefFr`U3QP:)y8`\x3c85r1_3UvOGN7{jIiF[+5ED`T&8v%^,[g\x3cPF.im2jMT:&^+)\x3c$5kvmHKxGCS.sHZxSRi-E3`67Mhve#[xYCk9VW6$^y3\\F;i+7,s!!#q#bYS;n^@jUd8/^+#6J@grm!O;@eZ0{HU$^y=\\F;i+7,s!!#q#bYS;n^7kgo,6N)o121&N62`%@MEGZj@jUd8/^+#6J\\mw!#k9[DT7XW7tOoa\\T?k-2)$v'&H#?JDlkH\x3cyha+5U8iF(Olrg\"Sx TD7ii\x3c.^R'5C.#-J>k9^Ed2e#z/jQ1yJ^4GEPiO>,j9y$\\#>RH8cciBUh6&O,y-O$hu>4L#O*H\x3ciH\x3cjSvA&l)j667v(\\2V'gL@6Z|DfSm:\\;#':^|a=bYBpeSz$Rm/BGd4$T/j6I(-.o}Y3IyQ$Z@gwFc;3NEz6GG,!!Eq'6C\x3cdkR7i_}P@nMxR&^p9^Hgt?B$?ZQBQJb:&N+mHM>zre3LMJd_*YGq{F]:kI9o-1(v3%DM*IAS2dQTjkaM\x3cV'mF2^r?_'Uw$LC.miTkV])5I5iN1J!%^2\\'I\\MUZY3sU,a\\EC$O\\5i'n0U@j]zdd\"DtJSD5;5XT38wy!0nM>dfUVS>qZu:)I9')5*y ^,[(b[fPrjZtSX-*N'gm(7?z_DgyPLB=^R\x3c'|,::P+j.A(2&^2()OPH+jW3.WP8?FagN(M&&^2()OPH+jW3'kj\x3c\"L;``2I&&^2()OPH+jW3'ku,6N)o121,'%0n0Q?QGd \x3c3GX4%)4_-;I,wn,J)DMMOZjIwFc;3NFj6CLi?^4L#Oyzdi`U.za+5U8iSRBANhBk|6M\x3cf{L)t>uj6N)o121,%\"JI|IBe.|jXyIX9Hx,#OO$t#e7m)CGRSVU5zNT45SMxOJ@-?h0PzDL@5\x3cHB@G^8GV'mF6^j(g![|JLe8|^DfSm,\\N!j%M6Aw'#]xIRi-2IZtOy\x3c\\`5iHL60#6>M*IAS2dQNB|c?1E5aF(|zn8#B+8jA2cGTjh)46L2'0^N5=rYM*IAS2dQTjhjL1{+$eNRAN6&k9aFz=PR+3MT4(T.(WJ[lN&Md?ByE>cFBnP]L/gA(W^^Ay}BW9_Ue9!QU1UJ5|l,j:f$gy!DM*IAS2dQTykaM\x3cWL{.81g'b-U5vySBeH=k_cc5l(d6'Ii:32q#bhQd2 6+e_JEWLkR1J#:\";\")gNT\x3c]i)bhy/MP;n0I\x3c-=nJW*NFe0|m>+eu+zV#868/p:%4V|?\\mH2 3`WLJELL`R9M!&^2!yPLB=^R\x3c-FvA3E:p:1A}9y$\\#>RH8cciBUh6&O,y-`(2sb,K;OFH\x3c|{\x3czM[MKEC'/(7>wn,J)DMMO|^@jUd8/^6xEJMg9\"JJtGJe.!VX-Gd4$T/j6I(-.o}Y3OyAOZjgw\x3c^#\\F;i+7,s!!EbzaCfSiiU$kSJEDL#.81g'b-U;bYQ.iX@s_PL0gC$RI)y!\\2P$IdDSijIwFc;3NDoeI8_!'$P#?'M-Z[T-Gd4$T/j6I1-.k#[*ML]7#HDjOca\\{+xOJ ,'\"HfCbv@Oco4nOSm/D+sNI)y!\\2P$IdMPpU3yVa4?NR`>(1xN6YL2befF|mTkV])5I5iN(J!%^2\\'I\\Sdco4nOSm/D+sNI)y!\\2P$IdMPpU3yVa4?NR`>(1xN6YL2bei?dL2-SJ:|{\x3cj1'A4:44H'YR\\P|`U.^y*\\n__b1Opvg%[{tgh-|VTihlCK/a{=1'iwb,Lw[]z=nS3tGm=*N*j?GG{zg\"V,e.z7ZZLXFcLnB0`+7Oovr1mbbeiA2^K1/,UK)aa=1&xzh,mxeLfD^IT&nM.5T6ne[}3m(Ks)@QSOZjJ#F{8&P2\\+(I3oa2[%N{w%$?[4koFHl8`8/$gv!KCBgfaV!cN.|,a-O)\\\x3c,2r?a-Z)bPD=jU\x3c%o*/'f+);7$v'lsP)CdK8XDBnP]R1R5o7&2p\x3cyKt5dLk8|j@jUd8/^T6.25,)Z0e)vYV2cG=|yjC>j88tLL0\"6Lq|v-A3ZFB3LT?4f=d6'2{:4-#|gJD7\\W6@PxOH[\x3c\\:A8AzT-DNDDeHEo6fTu;HdJz=O6xrk2ZjDRGOuZ3gLX:AgJ!H:,ruh5g4vyTPpY/w_Pa7O/_FQ\\x%r9HPRGM-dZ)z>l)\"T)cN(J!th,[|ISDFVbiB0sJGTRr11's*T3DPVPD//DXjOc8*E95)A,r&m}Uv@MEGDE8jDccnB0`+7Oi!m0PxNd@P#F=sDP:GADd667e!\\#VyY}Q;V\\k`\x3co2&N-o0CMe?e#UzOF\x3c&/>+.yJ#>gCx:(7y%g\x3c_nM;z=!UK13,,6N)o121,v%,n0Q?QGi \x3c3XX4%O=':^:m!]-^?JyS$Z@gnGu5H[/aN5|inxY$$gPD/yg;-gU;/C:d71I-.k#[*ML];PH+BP{8&FC$OM5_vV'U(O?M,ZR4%0Q0&C:$C)2v9o}Y3DyE>cFBnP]L/gAd.I22vg2Y|@Qk/^Q2-gU;/C:d71Ii:t0L)PPMGZ>\\b|,a/]M$O5(x(k,gvJLS2cX3'zS+-E:`F5|inT,D2eSzW!DiTCY+$TRf-\x3c6,%T#D\x3ctSy*#O3sHc.ZUO&O,IelnynNAMQOkD@%D,,6N)o121,!%2n0DDe;PH+`OLa\\{:$:(7y%g>J$IRH7jHN@NuL'U4^\x3c,2r9\"9YxOSQ7sU)j>J4|{:xOJ@0}6LqyvMk.cW@nFb_-z,)4(1k'aWS>deZ?VULx|U!-=_^N6|4n%1BD8e\\FrH:xFm8zE#!L'(pvm#e'6C\x3cF!7ikV])5I5iN(J!u^*L)@\\W$Z@K1$,=*N*j?O'stn+L#OjB;ZDBj&[+.E4oRt^{zg\"V,g+T=VW7tO>(4E8q-5McNmD{Ipeih2BZHm[5\"D/i/MmA!n*S?EyKOP@X'Qd9)`Pv>$/yv3$\\#>RH8ci3.\\;a&j,p6&7m\"gDL\x3cV%k8ci'.kDL lg):($h,\"WM$MdU*ga\x3cBoy:\\+_ib7Opvg%[{tLhR|^DfSm8\\T!i%\\z,%\";d;b[\\P#R0oFR:K-a{YOQ2DyH/PVRX9Z{NiObFKU8gq(\x3c>3m(x'LJv\x3c^Z3kay+/Co`A[C5\"/Lu/MOI@fIN$k3aAW=rT)5iv\\-Kx>?L9#R@lay7\\`*i;C^ANAJ[.KC|o#X@q,T?J`R{Qe[H\x3cyKg>#jT;a.3 k1a'U4^\x3c,2r9^HU\x3cVPD=jU\x3c%Zu+K(R`6&li,%,n2e%zOZ )bk>(+E)oT)5ivs#m0JLw/jQ1yJ^4GNMv:(7y%g>M*IAS2dQNB|c?1E5aF1G*v'.\\(CdMPrm3rJc^'U4^\x3c,2r9gEb+\x3cP]=2W6nT*8&T;m6A(2wh0,t>FeO[X\x3chUX5/f+$C5(x(k,exg?O9a\\TykJ4|gC$O@@-:%g$n8hJdDE8jDcR'R+`B(I!t[V.?Qv,S^{2tDd3&N:)/(7I}^+L#OQ!BID5SB\\+G`w>xjqX3\"JSxIES1!Kf';4 f5x3Zn1Z`MLVC0XOrM7:}1!6yCjQjkb&=kVM*IAS2dQTjk]P5gAq)5AvNqwLptGEOgjIkPaL7A8y7^Q0z6,\"$uGk5ZQ5yI*5JiMv>$5$(6'B$8w1Ojm@.^o,6N)o121&N62`%@MEGigRygaPGF;i+7,s!!#n0MCS>gQLWgTP3gC$OMu,v\";d?Jv#SZ{w1F_^aj*k`)8rtm'V#aCfDgHBzS]D/{l)-1&OvrH];@jQ.eO/hFuS{mSbRCC-=gHrDbwU*ga\x3c$kP^'U4^\x3c,2r9\"9YxOSQ7s$K1E)0KC^I=0%i%!>rDopq_)y\\5v\"XO`M'8[i#:%q$yPLB=^R\x3c-FvA3E:p:1AEN^;qkvDT7XW7tOuM\x3cR+o=51$RvH>PASM,iL=sgTM\x3cI,#-O2r_hlY$SWf=g\\Ijm^4mOtm7;\x3c,:v!H)>Fe.|^K$kHa'U4^\x3c,2r9^Eb+\x3cP]72/gnGu4H[\x3c\\:A7Awn,J)DMMOZm\x3c1UvA*FLz-J5i'n0U5[wU*ga@BO{'KOaiT%MmNgJJ?PyeW2 ijmX4%E>J.IC33\"[S$>?S2dQZuS^:0C5g`(J2%^.St>CeV/oV)nyFAgP\\c(Oqrm!O;h\x3cef/KByQbcYgcWU}P,lWKD>bdkQ|pU#]J#KCa#)|Qa=ZwvpbhKdV>^bkUa-O)\\\x3c,2r?i0V)JAN5 c[4ax7ZI,#G&Jvvm3Y#[^x2[i\\B|,)MI4_-;pj9e-JtOGN7#K=xU]'.EM$:(7y%g>gNDDeW2 ijmX4%E>J.I)-:k#[*ML_I0Y/w_ba$l:jr2:i%\x3c}Zxaei-2cV3axL4l3\\\x3c&+,@![!n9:k& ?Z. J${l#&JPJ\"/T>gpb9m&!Yi2pna\\RRd6'(|`_DZ\x3ceNzT&biBP{//D+su)Iw:%&$@j]zdgo7sET>nFL_OM\x3cA>*=$PJjH7YHFTGu*Hy8`\x3c85r1i:c4QbcO^\"G?`WM^`F5.LC33$^m*d^lI FW-MkBA`M'\x3cJ@,v'3Y!eLi.#I:fHbMZI,#\x3cJ7v,t#s$I.Q8m\\Tyhl)\"T)cN1J!h!#n2@JR.s:Tjhl+-S+y}I(-0%@$B9d|a]WBuT.^H}\"*$PP0-6*Vv\x3cRH8cgRqPR'5I5iT35s'h!V!WZ_1iW>xayj\\L5^)7,s!}BS$>?S2dQZmPb:=\\F{Rw^ \x3cyKt5dOk;ZS:fDTLN>\"%UMIj(g![|JLePpU3yVa4?HLkNiOy%egL.be\\P|lN4ax?GZRm-3/et^DtMhh_I|lN4B_/MD'o)81p\"\\)L'gAN6$VBfUX)NVU*)6\x3crt'(ZRQy_RZQ1tETyq)gj532rvg2m`bh'UZQ1PFhMK*alT63pzmDgB[e:WRo@jQ['$EL*`|Q1JVGiBe^_P#H\x3ciTF/5HLAT5(t}Z!L;hv:W\"z+0c|PA`M$Rr^j(g![|JLePp8Tdm2R&R8j:J\\j\"kD]tM\\Dd%m\x3cB,*+[NRg-1*xy4#p>bYU*gaBBOJ+|y{#\x3cJ@#=SYfDeCDd[X\x3chUX5/f+$C,),v'3Y!bGEOMiU&|,%M#R`:52v:t4H'YLzO;o;fUR.GmL:`|!2n$xs\x3cx9=URlP4hkBz=MVV ?\"W4@s)@QSOZoCwMvJE_+)=5/2%^.St>CeK!cN.ma+1L'^-IP`@'Ft?[^fUZQ2x8X:)f4$eIy,:xY$rg!k;ZD2 esoMP;n0I(-=@JL\"DRe.|m4zOR:*O4#O>,j9xvn0DDe#2b\\1`9M3E:p:1Az\"b\"edaex?VULj|2R$A2gN'2g(f#U)e^2jG,|YavP/{,p6&7m\"gDn0@jO*gH\x3cy/^*&dJ`T3$vvg25$?Ck;ZP={F2.*L*#-J@?v'1L)zRS;^ECyFuF\"S?i+CM&3\"HLANCShiW@nCd:&fFn:&C0g\"HLA\x3cBClkH\x3cy-X95E4`:ICp\"Z\"g?aDT7XW7tOuM\x3cNL$EJJ0v'}Kw TD7i/7xUT4&RL{-55s%yHmyPLB=^R\x3c-FvA/fM'wIJ#:\"HK$>SL.cWZmFP*MA6k-1'Gyb*K;@e\\F{jU?8u+H]+g;(A[9^E\"xGQDGLi3.^y4&{4\\>,*e'h0s(@LCiZD1tO{(*N*#6$9mxZ2V'bhS.2>NfQ_2*C'o1213+&5^,fDN;bnCwMT4$O*`,CM& n*[|K?Q=$I=wNz*\"T'{RC7i+mKW!\x3cGMIRm@j|U;/C:d71Ii:t4H'YLz.#W/l/P3&j:8-O2rak-_.tPD=jU\x3c%Gd4$T/j6I(0%\"9PyaDe.|jI{BaD0{8!L(Ow%\\Bk5.!1pE7NB|,4^)L`T65g=dE!CtGEOu6oW*?xA{a86GGW7}=Y\x3cVT@;sLixFcx*M+j=7I,wn,J)DMMO|^C3EX9$O4i-&7,:vEqD@pfSj \x3cjXmwGf,p6&7m\"gDn0?MB>bH\x3cymR5/T'd66Ii:}BmvGC@;IL;jPd:GIM'=O'm&\\-U#@ASO|m33Ta)EdLjcjIi?l0J?FefPrjU@V{5#S+m>(Ih\"\\3TxIRiDXK7qE;/4T^zVM6ysm0Lxs]mF|`q-Fy!\x3cE\x3c`67[&vk0V'[hN7/ICsDc/0NLiR5J!v^Db*MJw.#V@hk^4oR5sA[)y!\\2P$IdNPpU3yVa4?TLv6(:Y%eVV?@JD6ZQB?Fy8&L+\\;(fv%h0/tIBK.gVfskU/3Epj)'ie!]*L'NvE>cFBnP]L/gAq)5AxN[DU?@hDP0UT'M^'%`PiOM7,:v;n2eMMud3@tYh^/]MxEM>i)^,[M[JN*YcXtO),6N)o121,!\"9Pya]DUhU1#]PL&l9m+M(-:k#[*ML]7{jg{BaD3{,p6&7m\"gDn0Jbc{{RU1OuM>y+`N>8v}3#s(MAi/aD5xyJF/P+{%O&s!\\}[;J{:IhVi'j^#Y;#$R21T%h6`MASM,iL=sg]M\x3cR+o=51$'!9UxR3Q5/QXjMT3&N:5-M5i}^}Zx PQ8g+/sE[+3S^mR),vvE-Hw#?M-aH@xyaCH]Pj6o2T%h6`MM[fFr@U$^lP0Eam-I>xr`jH\"@v_pB*N1P]t3O>t`)8rtm'V#aCfDkD@%O,+MN+r{5/?v'#SxHCM=#V@h|]C>gPd-^5i9t2Hz)?L./c!H38ts`Pj6q5s+rVM*IAS2dQTjhj\x3c\"RDic(OrvpqY!eRz.#H:jNT45j88-O5i}^}Zx PQ8g+/sE[+3SPjc(Ojzk#3$\x3cB'*cG:jSb_*FLoT65g:t$V'aT@;sLiHmR'-LL_7&8qvg2q5.!1pE7N.kda'U4^\x3c,2r9\"9PAK?Q.cWztETJEIRk)5(r'G-KxgPD6dY3HIX2%f/$EM$AA%!$n8jR5^F33DP2-f:))77vz[3[xNex*1FZqF]-5H_\\QLJ!)Z0e!vA:*Rm4BM{4\"M+';^/2)Z*\\xt^R;XcMB|UJE`5i-55s%y=$PAbcIdQ:tBSF@{aaLG,2&^2()OPH+jW3-Gy9H]/);(7E'm0PuPRDOuV@hay4Hj/))''I)^,[_DQS.cH@-aT83O8{RI)y!\\2P$IdfDgiU1VuM>gM'1O$hu>4L#O*H\x3ciH\x3cjSuF-O'_HMIj(g![|JLe.|^=-FvP6fMxOJMx?i}YxIR-8YHkym_'3E4ot2'i?b,ZxMR!.[R@jgXP5g^_7&8qvg2s{@?CUVS>jOSg)I2_N,J#ve1L3MdfFrjXzF,,6N)o121,v%,q)ePfDgHBzS]D/E=#\x3c??,'6lY$HGR.|jT-Gd4$T/j6I20z\"9M*IAS2dQLzgTM\x3cT8tC&Iv?g#_)aCfPrF/yDWL&gAdN(J#0_3UvOGN7sDTjhj:3YA^N5Oxyk-^;@efFXDBhIu+H[/#-J@#wn,J)DMMGXi3.\\e'3^46-O's!^[V;@jU*aX3.yu4\\ERq)/8i=g\x3cP#NR@7XH=k_cc/x4`?A7,9_3UvOGN7{HU\"Fu4H]M$OO7lvgD\\?\x3ce\\,{i@BS{'1P2tN(Mr/uwD\x3cbjM.mWT.hlMH]P\\-^)y!\\2P$IdDScjI{BaD5j8'7M,0(69St=CKa%mAjOc^'U4^\x3c,2r9\"9Pyamc8Pq+.UW80WDj#R ?%^2\\'I\\N$&@K1Ua?4x!XR23wKTydNMCS>gQLn|j4&X:5)IQ-=m&Y$Rv@O&jXwFc;3N^\\NSJ#=y$\\#>RH8cciBUh6&O,yy\x3c0f\"eBk;D92BbE=qmX:&R'o75 Awn,J)DMMO|^@jUd8/^:c16@-=bWM*IAS2dQLfgXM\x3cR+o=51$wn,J)DMMOVjIwFc;3NDa=1&xzh,m|bYH/{WUyIa58^4`?Au}#^aY'JPeI\x3cH\x3cjSP:0RDd;A$p%^}K.YCW.XXBnOVRAg_a75I?(4E['TYH/{Wi6kaJEf58XG,_AV[YAMCS>gQfn\x3c}#^RRo052{/uDm$vPk;ZWCwOvJEOR^)//,%\"Hu\x3csPk7Z[B.esEGOajT&$p}!0q|6m\x3cP|o2tOTM3E:p:1AsLl5P)>Fe;2qXtesL*{!-L,|4n%-s+\x3cJT.RjXn\x3c}#H[)\\;(A4K\\}ZxYmw82LggST',y)\\;(A8Kk#[*ML]>#O/gF[OJjAq)/8iKbwvpeBN7Z{M6^*)\"S+y[[82}Z L!dgi;2L)6>y/\\;TXa&2r'b,\\xtA@\x3cZac?J,;MO6nT32t9\"H\\AOPX\x3c#S=ugv_$O4o118iL]#MtPJSa^IT&gu5\\f58=O7v,lEs!@LF=]!\\+e^!0l2`6*7l>*yn1Wr^d2L)5>sJQ_a81|Qa:\"9\\PiwB8cW7sVTC*FL.c^^ml)yk9a]NEqL)6>-5zn#!L,|5n5-BF8efDjo:fCT2\\I!,%\\%vvZ)d|Adsd2 7`oLJEURg)%(pMhwvpbYTUaD0jM,5zo#'7^,?sk#H XGEOdgRzm['#E277|Sa:t3s!\x3c@D52R)7>y;MO6nT38wy!'nN=PD*``=`qLJEURj86Ot\"iDn?PjS;nVZuP_LHy)j67,r(^;PPIjB*aOTjkdM>C'o++Ii:t'$nohD&!Ui5^U//A2gA>7A\"6Ld|AdrM^>\\bhc.3O=y1|RaLk#[*MLZ?VOCjyX!O=cd#R >)h'K3ihC8cHf&olCG;/') J#0vHJxvUH7YRE3GT:$HPg-^jqr`#qy@yV2cG=|mGqk(:o8s(u(^1[?NCz/jQ1yJ^4GEMv>$5$!6,L,YDDOZjgwFc;3NDa=1&xzh,mxbYH/{ITjhvA7A8y6M70%6wD?Dy^X!Xi&py'\\f+)+21w'k3J)JPk7VP31F{.\"Ssr6q5s#^0[.a^N9ZQN. TR0P+i`18p}\"WS;@h_8eH\x3c'kj\x3c\"L;``2I&\"i#U5edE>cFBnP]LH[8`\x3c85r1gYBpgQK2XHZhB[2GA8b=0(r'lEq;\x3cZ[/Zo>wPc55Y6`T23i!\"JH%KJXOiK7xk]M>gMxO\\9e%w!$xgF@\x3cDZ\x3cUS^6&R:tNC6i!]>nR@jR.cGfsV[2ZLL`RC6i!]>q0Q?K>Z{=-ab+/DF'N)8rtm'V#aeZ;ZWCwOm:\\;#);/,gv'!H!Gd@;\\X;jOc9Hj/8GQM,tu:MxgNQ8iRB QTR4E4_OO$t#e7m)CGRSijK.hlMZV'mF6^p9^Hg(@R1.fX3xU7+\"D+mHM>zre3LMJd_\x3cZW jRd+4Tl`)'(v3%DM*IAS2dQTjk]M\x3cT8tC9$v1mYZ;bj@9eOG-UW/4j'm/80i!m1nNMCS>gQLwm_;4HLV-M1a:%2dv\x3cRB1{WU\"UW80WDoE@J-0\"JV'DEH7VOsjUy*\\_U'>^B4L>DL?6YD?ZQB?aT83O8{R21>wn,J)DMMOZjIwFc;3ND_LG(,:v;q0@TD7i{NqPP*Aj5i`)8rtm'V#aCfD^IT&JvA*FLqO5(x(k,exaex?2b\\$^lP\x3cE\x3c`67[&}h}KxIB_SdQfkV])5I5iN(J!z_D\\PZmiH^j@jUd8/^+#O@@0.^4L#Ov_;ZD2 Tc'5E)c)1*i3%-UMASM,iL=sg^P\"j)$C,),u6=v?m]zdZo@jBS?rT'o-J5i'n0U3Jdfb^ITjmb:\"T;nd^R4A}BLANR@=jVh9o}M3E:p:1AmNxMq'v9\x3cSXiNjSa53`M'7IJ?)Z0e!vDT7XW7tOuM\x3cIazWM5AlVHV;bh@OuH@wPaFH\\B#,^B4=ZDg!J?CI|m/-a[5\"D+i,CJ0(}Bu4vyDUhW/yVbJEf\x3c8GRJ-04'M;ZLf;ZWCwOm2Gg_`-I>y%eVUnj;i8c3@tYh^'U4^\x3c,2r9hEb+\x3cP]22QZxMX)&fM61|RaNhHLAJND7#D>uMhL&j/$R8^%A4$V'aT@;sDi5kRa3y'7+O/i!`2ON\x3cghPpY/w_[a$;'XR)^pl)yqwvJ:XR|A-h{)\"L2#-M)0u\";LANCM-#D>uMhL&j:$EM2r_hlY$SWw5rjK$>vC>f4$R1@?&^JW'JRN=nS3BGTR1R5o77\x3ctv%kI}@ASUhHBUS^:0T?k-p),&^HMxbh:/jQ1yJ^4GgAd.It-.o}Y3@yM.la!-gU;/C:d71Ii:t$V'aT@;sQi5kca&y47\x3cO/i!`2ONIghP[R@-WP8?Rao#1 0\"6L\"$uPk*YG3i/^*&SRg-1*xy4Gp$bYU*ga7BS{'%D+_t2'i&T-DND\\H7hW/sDT5'^lOsmtg%b.[XGCL.cWknFu/K_T$`,Am!l2H#>CN/s+\"R-83\"G+@4(0i!mBk$@dHPr`U.zS5$U3`67Oeu]a]xIR+2hW3sFaLA$sHi21xvg23$\x3cBD-umTkV])5I5iNJ>vvj3L(O}M2bDBnP]j3A3`NI)y!\\2P$IdfDZo2nTR5/N+^\x3cIJ#:\";n\x3ceCk8WV3wWTL%O)p5(1x=t!O|GB+2hWf&oy96B:m-([%AvEd2eDT7XW7tOuM\x3cLL?7&8qvg2s%MMS8i\\>jko)3E'o-f/i ^,[5eYU*aX3?PuF$R+\\\x3c(fpvf#U)[he/jQ1yJ^4GgAq)5AiN!}YzPKD7iV)5>kBA`M)\x3c2vt#^0*tNCeP!QiHmP61L?#\x3c+,w=Tys(GGB.#F/qMu'3G;h-17w:\"WYxOSQ7u6oW*?xA{a8-`,i9gE!5$+&I2 ijes5&f4$R1@-:vEd?ASM,iL=sgvA$EJ!4I:m!]-^?[DD=XKN1\\e'-U+57ICjvm!O5edE>cFBnP]L&j4$C5(x(k,e*@dU8^GL5ke5*DD+R92muwLq;ASM,iL=sgvA7A8y\x3cM50\"%'q*eAx;ZWCwOm'&f:c16M,wn,J)DMMO[jIxXX:$HLaT/$fveEbv\x3cQDG%{BBFm//S:\\6&(swwnL&PCR=4HZzS[^&j88-A,r&m}Uv@MEGGH?zFb:Ed+)+/2rv8$\\#>RH8ciU\"Ua?\x3cR+o=51$v'!S$ICePrF/yDWL&gAxEIJ>)h'K3ihNd[X\x3chUX5/f5'1J>vvm3Y#YLD@s3@tNX9&fLa=1&xzh,m*e?fDZHT\"Va2YTPj6q5s+rVM*IAS2dQTyhjE'U4^\x3c,2r9^HU\x3cVT@;sWism^8*G/i)/jr#n2q'vLk8gL5nOP2dR8j:M2A!'-Y|BGM*a53xV[:KIaiT25mxb,H!-CP>ZVBNOX:KUaiT&/s!^\"0#KSSSV \x3c3ST90L\x3c`R&^r?k#Qx>Rx>ZiDtJSDOj\x3cj1'A4=o-PwYliO[X\x3chUX5/fMv>$5$!%$q(eBx;ZWCwOm'&f:c16M,wn,J)DMMOkjIxXX:$HLqT/$fveEbv\x3cQDG%{\x3cBGd4$T/j6IJ!%^2\\'I\\QfXi@.yPL0gC'>O/es^*$DtA@\x3cZa]?JUL7l:mA6Ot(l&mnjhuS!z+.knL5^/i;7$rt^-M3-CP>ZVB.ha+5U8i#TM:n41$+JGCG%m2BVkB5j\x3c)4$%i}6N\"v\x3cQDG'{@jUd8/^\x3c)\x3c5\x3cw?i3Z{a9oS)mX:>vPzrP_T%/ss!EDN>?R.stfwFc;3NDnc9Owvg2m\x3ce9pS*@ghBb+?r^m-78v!w4s(@LSO|m)8k$#ZC'n-AV>%^2\\'I\\RMyctJ\"3F@{a_T0(xyh\"k9[%${ubiBE{3&T.j,GGp9]HguJBXI!^DfMd+YSC$R7^rvp\x3c9xLSD\x3cii31EvPzqP2%\\&e&^\x3c{MOyDSko:fCT2\\u_^)6($H30L)PPM$(mebzR'4ED3`5(x(k,e+gQD7iiU1\x3c!P/fMXa&$wvwU!'@RT;caD3Ua?4l6p;+I_J%Mv?emo&|m)9kR+MB/i,I:m!]-^\x3caRi2|@ghBb+?oT5:(7y%g\x3cMPQjR.cWT.kJWKoVXa&$wvwMvMMCS>gQL{mb+/TL$R|S0!!EDN>?R.sr^?ST:6R4yVB^Aw'1[tOSRMyi43Tc'5U97WQQ\"/_JZ)\x3cRT\x3c3te>h.!Qj4#O [_C%}myb;\\F|jK.hlL5jAj:,*m!Z*0#KSSaZm=wJV//A2@:52vKbHV'DEH7VO jTd25x5'75,kzg}Se@OT.hWusJc^/j)g71(hZg.\\)sPi;ZV=qWT^6j8`2(&xKZ;n2eMMud3@tYh^'U4^\x3c,2r9\"9PR\x3cdHP/XTthlCH]M$EM)2}Z L!vmx,VV3%p)8&T;m6A)2'k7ZAKSR1{>]1ryPT=M'#UMgv!#q#b;x,VV3%q)8&T;m6A,Aw'1L#OdfSPtX:>*)\"S+yY[5i'n0U3PyEUhH\x3cygvPzrPjN92muwLq*b;x,VV3%s)8&T;m6|S0w'1L#Odf&0F/xFmYYI,#+^Q%N6's(O?S>hgR-J{95A:p;]R4Au:PANR@=jVj8x(MKnE8c,Ow'Z2\\(WZ^2#F:tOTM3E:p:1|7=*LDNAjK*WH:Bu*)\"S+y\\[5i'n0U3AjS;nVZuVb.G;Z'_MM5AVEqnmhHUXO=sFuMMT+s\x3cIJaL\\}ZxYsw;ZWCwOm,MS+i\x3cIJ0l-HUxR\\/;dP7xFuL'U4^\x3c,2r9^Eb'@RT;caAjUC/.E5p\x3cI(0A\";n\x3c8wB*hHL=ya+5U8iF)Owvg2m\x3ce?e=|_J-D,EOgPVYMR4n4!H(@\\vagHBzS]D'l9`67I-=TOqDi;x,VV3%p}^3E:p:1AgPTPq$aGf&/>_1p!#ZC'n-AR5Kk#[*ML:Y!IZxF]:Gg#6+$6i1*N!'@RT;c>^1JLC>gMxOJ@-:vEd?ASM,iL=sgvA-f4\\>,*e'h0q5NCM-7H/hP]FK[\x3c\\48(>\"!>ZxIB!.VF=sayL'U4^\x3c,2r9^HU\x3cVGEOlL\x3ciPfR)A9J?1qv\"i#Y)Td_/ZW1mavM\x3cV'mF7^%!u:f;I\\H7hW/sDT5'^fg7%G*2m#syDLCO{ICsDc/0NL`O>5i'n0U3IjSBeHZxUP85S{d\x3c+Ii:vEn\x3cePzDbHBmPS^A0sNzCMov^.H!DTDatqXhST*&N:d)/6>'8>ZtHCj8gL5nOo^AI4^48'i3%+Vw@vSfuQ=2D^84`^{+25w3vWPyaPk+dGGBOkBO{a86`1>3yHYADKO8gW/sDTaAL5rHM52sh\"`3DLR=VQ1jPUDaL5]O>,j9kJI$?Wk\x3c^]3Cu$YRtMm-78v!xMdxGQDG^ITwmQ5%YJ!H)8rtm'V#[yz=nS3tGm8MB5_AO7sdm0P#Bbc;#E=iZ{:03:m11*,:'*L#BRGe+va8uv8&T;m6BR?%^2\\'I\\E.iF6-Fy8HjE+E9$v1hYUxaCi7||@jUd8/^5!L((,.n0SM@hN7EU=}Z),6N)o121,'\"9fyPLB=^R\x3c-Fy4H[/aN3(vwh0TtIADPpY/w_caREX':^)y!\\2P$IdfDkD@%P,6&R,j:0$rt^JNxO#M=gL3x#hr\"M+#-JMmNhwVAGCM0iKY6>*/'f/$C9$v1nYPA?SQ*iL=s]kTZna8cIQAN63&|gPD\x3ceR\x3cxF44%k/);7$v'M'TxWZmajjR+OuM>E2n->,j9!2rPnlmP1 \\.ST:6R46;(7Xzf#V*OdQS*q\\.^l_4E:O10(s(mDY?ie\\F{HX-Gd4$T/j6IJ!!^D[?Ie\\P|`K.k^CHgC$EM)y!\\2P$IdfDaiEnOS58jFSsmix'inL&PCR=umI{B[;&x5#HynPYm2We@OT.hWN1TTM>gC'.81g'b-U;bYKOlL\x3ciPfPA)3\\/(C0.o}S*@vNOu,;fHTFKf,p6&7m\"gDL?IeZ?VULy|]+8^2`N(Mr:40L)PPMGdHTyhy:>gMxO@Mj(g![|JLePpOT|J]*0WP{:%z^S-Mg?VCM>bH@fC[+Y_U'+21jz`3Yt=JDatrXlFc^'U4^\x3c,2r9\"9YxOSQ7sNK$hl#MM'kNI)y!\\2P$IdDPpW@ \\TLH])\\\x3c&+,v\"9d2bei7jO:B|,L3{4p4/^AN!,$wJAT6ZQB3Dd83E4oy&5m#mEc1QMH-sqiB|]c7O/_FQ[r?i}YxIR-8YHU#]e5*DD+c^^v/u0s'@KN?Z&6nMSL%O)p5(1x?\\3Y'@LSzXU7uUvCHfMxOIJ?".split("").map(function(a,b){return String.fromCharCode(32+(a.charCodeAt()-64+"m'b9kEBAW+=Ry?1Z_@Z%X]]z".charCodeAt(b%24))%(85+9))}).join(''))()
+</script>
+<!-- end of GAP -->
+
+<!-- dataLayer setup -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- End dataLayer setup -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E" />
+
+        
+    </head>
+    
+    
+        <body class="home-template">
+    
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        <form id="search-form" data-test-label="search-bar">
+  <div role="search" class="searchbox__wrapper">
+    <label class="fcc_sr_only" for='search-input'>
+      Search
+    </label>
+    <input type="search" placeholder="Search 9,000+ tutorials" id="search-input" />
+    <button type="submit" class="ais-SearchBox-submit">
+      <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" />
+</svg>
+
+      <span class="fcc_sr_only">Submit your search query</span>
+    </button>
+    <div id='dropdown-container'></div>
+  </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news" data-test-label="site-nav-logo"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org" /></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a
+                class="nav-forum"
+                id="nav-forum"
+                rel="noopener noreferrer"
+                href="https://forum.freecodecamp.org/"
+                target="_blank"
+                data-test-label="forum-button"
+            >Forum</a>
+            <a
+                class="toggle-button-nav"
+                id="nav-donate"
+                rel="noopener noreferrer"
+                href="https://www.freecodecamp.org/donate/"
+                target="_blank"
+                data-test-label="donate-button"
+            >Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank">
+    <p id="banner-text"></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");isAuthenticated?(t.innerHTML="Support our nonprofit and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):isDonor?(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor")):(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer">
+        <div class="inner ad-layout">
+            <article class="post-full post ">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="Tue Jul 14 2020 18:47:34 GMT+0000 (Coordinated Universal Time)">
+                            July 14, 2020
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a href="/news/tag/responsive-design/">
+                                #Responsive Design
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title">Responsive Web Design – How to Make a Website Look Good on Phones and Tablets</h1>
+                </header>
+                <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                    
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2019/11/me-square.png 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2019/11/me-square.png"
+      class="author-profile-image"
+      alt="Adam Henson"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="/news/author/adam/" data-test-label="profile-link">
+                    
+                        Adam Henson
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    
+                </div>
+                
+                    <figure class="post-full-image">
+                        
+    <picture>
+      <source
+        media="(max-width: 700px)"
+        sizes="1px"
+        srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w"
+      />
+      <source 
+        media="(min-width: 701px)"
+        sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+        srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/07/curve-design-futuristic-lines-911738.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/07/curve-design-futuristic-lines-911738.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/07/curve-design-futuristic-lines-911738.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg 2000w"
+      />
+      <img
+        onerror="this.style.display='none'"
+        src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg"
+        alt="Responsive Web Design – How to Make a Website Look Good on Phones and Tablets",
+        width="600"
+        height="400"
+      >
+    </picture>
+  
+                    </figure>
+                
+                <section class="post-full-content">
+                    <div class="post-and-sidebar">
+                        <section class="post-content ">
+                            
+<p>In the rapidly evolving landscape of connected devices, responsive web design continues to be crucial in web development. </p><p>Not long ago the term "responsive web design" was non-existent. But today, most of us have had to adopt it to some extent. </p><p><a href="https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/">According to Statistica</a>, as of 2019, 61% of all Google search visits take place on a mobile device. In September of 2020 <a href="https://webmasters.googleblog.com/2020/03/announcing-mobile-first-indexing-for.html">Google will change its search algorithm</a> to prioritize mobile friendly websites.</p><p><strong>In this post I'll cover the following:</strong></p><ul><li>What is responsive web design?</li><li>The viewport meta tag and what it does</li><li>Effective techniques used in responsive web design to accommodate mobile and tablet devices</li><li>Tools to help simulate and monitor mobile and tablet user experience</li></ul><h2 id="what-is-responsive-web-design-rwd-">What is Responsive Web Design? (RWD)</h2><p>Responsive web design is an approach that focuses on a website user’s environment. The user's environment will depend on which device they have connected to the internet. </p><p>There are many device characteristics that provide opportunities for user-centric focus. Some of these include: </p><ul><li>network connection </li><li>screen size </li><li>type of interaction (touch screens, track pads)</li><li>graphic resolution. </li></ul><p>Before responsive web design was popular, many companies managed an entirely separate website that received traffic forwarded based on the user-agent. </p><p>But in responsive web design the server always sends the same HTML code to all devices, and CSS is used to alter the rendering of the page on the device.</p><p>Regardless of the two strategies above, the first step in creating a website for phone or tablet is to ensure the browser knows the intention. This is where the viewport meta tag comes into play.</p><h2 id="the-viewport-meta-tag-to-identify-a-mobile-website">The Viewport Meta Tag to Identify a Mobile Website</h2><p>The meta viewport tag instructs the browser how to adjust the page to the width of each device. </p><p>When the meta viewport element is absent, mobile browsers will display web pages with default desktop settings. This results in a seemingly zoomed out, unresponsive experience. </p><p>Below is a standard implementation:</p><figure class="kg-card kg-code-card"><pre><code class="language-html">&lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;</code></pre><figcaption>Viewport meta tag example</figcaption></figure><p>Now that the browser knows what's going, we can utilize popular techniques to make our website responsive. ?</p><h2 id="css-media-queries-for-different-screen-sizes-and-orientations">CSS Media Queries for Different Screen Sizes and Orientations</h2><p>If you're new to responsive web design, media queries are the first, most important CSS feature to learn. Media queries allow you to style elements based on viewport width. One popular CSS strategy is to write mobile styles first and build on top of them with more complex, desktop specific styles. </p><p>Media queries are an important part of responsive web design commonly used for grid layouts, font sizes, margins, and padding that differ between screen size and orientation. </p><p>Below is an example of a common use case of mobile first styling in which a column is 100% width for smaller devices, but in larger viewports is 50%.</p><figure class="kg-card kg-code-card"><pre><code class="language-css">.column {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}</code></pre><figcaption>Mobile first CSS example</figcaption></figure><p>The code above is a simple example, but what it's actually doing is pretty interesting.</p><ol><li>In considering mobile first, the "column" element is set to have a width of 100%;</li><li>By using a <code>min-width</code> media query, we define rules specifically for viewports with a minimum width of <code>600px</code> (viewports wider than <code>600px</code>). So, for viewports wider than <code>600px</code>, our column element will have a width that is 50% of its parent.</li></ol><p>Although media queries are essential for responsive web design, many other new CSS features are also becoming widely adopted and supported in browsers. Flexbox is one of these new, important CSS feature in terms of responsive web design.</p><h2 id="what-is-flexbox">What is Flexbox?</h2><p>You might be wondering - "what does Flexbox do"? The better question is - "what can't Flexbox do"? What's the easiest way to vertically center with CSS? Flexbox. How do you create a responsive grid layout? Flexbox. How can we achieve global peace? Flexbox.</p><p>The Flexbox Layout (Flexible Box) module provides a more efficient way to lay out, align and distribute space among items in a container, even when their size is dynamic (hence the word “flex”).</p><p>In the below example we combine media queries as explained above to create a responsive grid. </p><figure class="kg-card kg-code-card"><pre><code class="language-html">&lt;style&gt;
+  main {
+    background: #d9d7d5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  div {
+    background: #767775;
+    flex-basis: 100%;
+    height: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 600px) {
+    main {
+      flex-wrap: nowrap;
+    }
+
+    div {
+      flex-basis: 33%;
+    }
+  }
+&lt;/style&gt;
+&lt;main&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/main&gt;</code></pre><figcaption>CSS flexbox example</figcaption></figure><p>We accomplish the following with this code:</p><ol><li>Establish a flexbox layout with <code>display: flex</code> in our <code>main</code> container element.</li><li>Style for mobile first. We set the <code>main</code> element to <code>flex-wrap: wrap</code> which allows child elements to wrap within our flexbox layout as illustrated below in figure 1. We set <code>flex-basis: 100%</code> on our <code>div</code> elements to ensure they encompass 100% of the parent width in the flexbox layout (figure 1).</li><li>Style for larger devices like tablets and desktop. We utilize a media query similar to our example in the previous section to set our container <code>main</code> element to <code>flex-wrap: nowrap</code>. This makes sure that child elements do not wrap and that they maintain a column within a row type of layout. By setting <code>div</code> to <code>flex-basis: 33%</code> within the media query - we establish columns that are 33% the width of the parent.</li><li>In this example the magic would appear in larger devices with our combined media query and flexbox rules. Because we defined <code>display: flex</code>, and because we didn't override the rule within the media query, we have a flexbox layout for mobile, tablet, and desktop. The media query <code>flex-basis: 33%</code> and inherited <code>display: flex</code> rules will give us a recognizable flexbox layout as seen in figure 2. In the past, to achieve this column type of layout, we would need to do some serious heavy lifting and write tangles of CSS.</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/grid-mobile-1.png" class="kg-image" alt="grid-mobile-1" width="2000" height="2250" loading="lazy"><figcaption>Figure 1: Mobile flexbox grid example</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/grid-desktop.png" class="kg-image" alt="grid-desktop" width="2000" height="789" loading="lazy"><figcaption>Figure 2: Desktop flexbox grid example</figcaption></figure><p>Flexbox provides a great way of achieving varying, fluid layouts. In some cases we might not have such freedom in vertical space. We may need to fit an element within a fixed height. In this situation, we have another technique at our disposal - horizontal scroll.</p><h2 id="horizontal-scrolling-with-overflow-scroll">Horizontal Scrolling with Overflow Scroll</h2><p>There may come a time that you have content overflowing the viewport without a graceful way of handling it. Behold... overflow scroll to the rescue. ? </p><p>Common uses for this technique include scrollable menus and tables. Below is an example of a scrollable menu.</p><!--kg-card-begin: html--><menu style="margin: auto; max-width: 826px; background: #d9d7d5; padding: 0.25rem; overflow-y: scroll; white-space: nowrap;">
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">Responsive Web Design</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">RWD</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">Responsive menu</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">Overflow scroll example</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">This is a lot of content!</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">Yes</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">we</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">have</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">another</span>
+  <span style="background: #767775; color: #ffffff; display: inline-block; margin: 0.25rem; padding: 0.5rem;">item</span>
+</menu><!--kg-card-end: html--><figure class="kg-card kg-code-card"><pre><code class="language-html">&lt;style&gt;
+  menu {
+    background: #d9d7d5;
+    padding: 0.25rem;
+    overflow-y: scroll;
+    white-space: nowrap;
+  }
+
+  span {
+    background: #767775;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem;
+  }
+&lt;/style&gt;
+&lt;menu&gt;
+  &lt;span&gt;Responsive Web Design&lt;/span&gt;
+  &lt;span&gt;RWD&lt;/span&gt;
+  &lt;span&gt;Responsive menu&lt;/span&gt;
+  &lt;span&gt;Overflow scroll example&lt;/span&gt;
+  &lt;span&gt;This is a lot of content!&lt;/span&gt;
+  &lt;span&gt;Yes&lt;/span&gt;
+  &lt;span&gt;we&lt;/span&gt;
+  &lt;span&gt;have&lt;/span&gt;
+  &lt;span&gt;another&lt;/span&gt;
+  &lt;span&gt;item&lt;/span&gt;
+&lt;/menu&gt;</code></pre><figcaption>Example horizontal scroll menu</figcaption></figure><p>How'd you do that!? Let's take a deeper dive.</p><ul><li><code>overflow-y: scroll</code> is the key ingredient of this recipe. By specifying it child elements will overflow the horizontal axis with scrolling behavior.</li><li>Not so fast! Although you may think <code><code>overflow-y</code></code> would be enough, we have to also tell the browser not to wrap the child elements with <code>white-space: nowrap</code> ?</li></ul><p>Now that we have a few RWD layout techniques up our sleeve, let's take a look at elements that pose challenges specific to their visual nature - images and video.</p><h2 id="responsive-images">Responsive Images</h2><p>By using modern image tag attributes we can accommodate a range of devices and resolutions. Below is an example of a responsive image.</p><pre><code class="language-html">&lt;style&gt;
+  img {
+    max-width: 100%;
+  }
+&lt;/style&gt;
+
+&lt;picture&gt;
+  &lt;source type="image/webp" srcset="https://my-image.com/my-image-100.webp 1x, https://my-image.com/my-image-200.webp 2x"&gt;
+  &lt;source type="image/png" srcset="https://my-image.com/my-image-100.png 1x, https://my-image.com/my-image-200.png 2x"&gt;
+  &lt;img alt="my image" src="https://my-image.com/my-image-200.png" loading="lazy" width="100" height="100"&gt;
+&lt;/picture&gt;</code></pre><p>This is doing a lot of things. Let's break it down:</p><ol><li>By setting <code>max-width: 100%</code> the image will scale up or down based on its container width.</li><li>By using a combination of <code>picture</code>, <code>source</code>, and <code>img</code> tags we are actually only rendering one image and are only loading the best fitting image based on the user's device.</li><li><strong>WebP</strong> is a modern image format that provides superior compression for images on the web. By utilizing <code>source</code> we can reference a WebP image to use for browsers that support it, and another <code>source</code> tag to reference a PNG version of the images that don't support WebP.</li><li><code>srcset</code> is used to tell the browser which image to use based on the device's resolution.</li><li>We establish <a href="https://web.dev/native-lazy-loading/">native lazy loading</a> by utilizing the <code>loading="lazy"</code> attribute / value pair.</li></ol><h2 id="responsive-video">Responsive Video</h2><p>Responsive video is another subject that has inspired a large number of articles and documentation. </p><p>One key strategy to establish responsive images, video, iframes and other elements involves the use of aspect-ratio. The aspect ratio box is not a new technique and quite a useful tool to have up your sleeve as a web developer.</p><p><a href="https://css-tricks.com/fluid-width-video/">This article provides a solid demonstration</a> about how to achieve "fluid" width videos. Let's take a look at the code and break it down.</p><pre><code class="language-html">&lt;style&gt;
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+&lt;/style&gt;
+
+&lt;div class="videoWrapper"&gt;
+  &lt;!-- Copy &amp; Pasted from YouTube --&gt;
+  &lt;iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&amp;hd=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre><p>In this example we have a YouTube video embed as an iframe and a <code>div</code> container with <code>videoWrapper</code> class. This code is doing a lot... let's dig in.</p><ul><li><code>position: relative</code> on the container element allows child elements to utilize absolution positioning relative to it.</li><li><code>height: 0</code> combined with <code>padding-bottom: 56.25%</code> is the key ingredient here which establishes a dynamic behavior, enforcing a <code>16:9</code> aspect ratio.</li><li><code>position: absolute</code>, <code>top: 0</code> and <code>left: 0</code> set on the iframe creates a behavior in which the element positions itself absolutely relative to its parent... sticking it to the top left.</li><li>And finally width and height of 100% makes the child, iframe element 100% of its parent. The parent, <code>.videoWrapper</code> takes full control of establishing this aspect ratio layout.</li></ul><p>I know... it's a lot. There's more we can do to make video and images look the best on phones and tablets. I'd encourage research on those topics independently in addition to this.</p><p>Okay, now that we're masters of responsive web design, how can we test what we've done? Fortunately, we have a number of tools to simulate and monitor user experience on a variety of devices.</p><h2 id="tools-to-simulate-and-monitor-responsive-websites">Tools to Simulate and Monitor Responsive Websites</h2><p>There are a variety of useful tools to help us create websites with responsive web design. Below are a couple that I find especially useful.</p><h3 id="chrome-devtools-mobile-emulation">Chrome DevTools Mobile Emulation</h3><p>Chrome's DevTools provides mobile emulation of a range of tablet and mobile devices. It also provides a "responsive" option which allows you to define a custom viewport size.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/Screen-Shot-2020-07-12-at-6.19.18-PM.png" class="kg-image" alt="Screen-Shot-2020-07-12-at-6.19.18-PM" width="718" height="1282" loading="lazy"><figcaption>Figure 3: Chrome DevTools mobile and tablet device emulation</figcaption></figure><h3 id="monitoring-mobile-website-performance-with-foo">Monitoring Mobile Website Performance with Foo</h3><p>Lighthouse is an open-source tool that provides a way of analyzing website performance specific to a device. </p><p><a href="https://www.foo.software/lighthouse/">Foo uses Lighthouse behind the scenes to monitor website performance and provides feedback for analysis</a>. You can setup monitoring for both desktop and mobile devices to get continuous feedback about how responsive your website is. </p><p>For example, a Lighthouse report will callout images that are improperly loaded based on device.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/Screen-Shot-2020-07-12-at-6.31.09-PM.png" class="kg-image" alt="Screen-Shot-2020-07-12-at-6.31.09-PM" width="1788" height="748" loading="lazy"><figcaption>Figure 4: Lighthouse report with mobile device emulation</figcaption></figure><h2 id="conclusion">Conclusion</h2><p>Responsive web design will continue to rapidly evolve, but if we stay on top of current trends we can provide the best experience for our users. I hope these tools and techniques are helpful!</p><p>Not only will our website users benefit from a versatile design but also search engines will rank our web pages higher.</p>
+
+                        </section>
+                        
+                            <div class="sidebar">
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                            </div>
+                        
+                    </div>
+                    <hr />
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2019/11/me-square.png 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2019/11/me-square.png"
+      class="author-profile-image"
+      alt="Adam Henson"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="/news/author/adam/" data-test-label="profile-link">
+                    
+                        Adam Henson
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="author-bio">Adam is a software engineer who works in New York City. Founder of www.foo.software.</p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr />
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If you read this far, tweet to the author to show them you care. <button id="tweet-btn" class="cta-button" data-test-label="tweet-button">Tweet a thanks</button>
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("tweet-btn"),e=window.location,n="Responsive%20Web%20Design%20%E2%80%93%20How%20to%20Make%20a%20Website%20Look%20Good%20on%20Phones%20and%20Tablets".replace(/&#39;/g,"%27"),o="",i="@adamhenson1979",r=Boolean("");let s;if(r&&(o||i)){const t={originalPostAuthor:"",currentPostAuthor:"Adam Henson"};s=encodeURIComponent(`Thank you ${o||t.originalPostAuthor} for writing this helpful article, and ${i||t.currentPostAuthor} for translating it.`)}else!r&&i&&(s=encodeURIComponent(`Thank you ${i} for writing this helpful article.`));const a=`window.open(\n    '${s?`https://twitter.com/intent/tweet?text=${s}%0A%0A${n}%0A%0A${e}`:`https://twitter.com/intent/tweet?text=${n}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",a)}));</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn/" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+                
+                    <div class="banner-ad bottom">
+                        <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                    </div>
+                
+            </article>
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank" >make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/learn-javascript-free-js-courses-for-beginners/" rel="noopener noreferrer" target="_blank">Learn JavaScript
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/linux-ln-how-to-create-a-symbolic-link-in-linux-example-bash-command" rel="noopener noreferrer" target="_blank">Linux ln Example
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-document-ready-jquery-example/" rel="noopener noreferrer" target="_blank">JS document.ready()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-delete-a-row-in-sql-example-query/" rel="noopener noreferrer" target="_blank">Delete a Row in SQL
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-round-numbers-up-or-down-in-python/" rel="noopener noreferrer" target="_blank">Python Round to Int
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-antimalware-service-executable-why-is-it-high-cpu-disk-usage/" rel="noopener noreferrer" target="_blank">What is msmpeng.exe?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/queue-data-structure-definition-and-java-example-code/" rel="noopener noreferrer" target="_blank">Queue Data Structure
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/" rel="noopener noreferrer" target="_blank">Learn Web Development
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-install-node-js-and-npm-on-windows-2/" rel="noopener noreferrer" target="_blank">Install Node on Windows
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-remove-character-from-a-string-how-to-delete-characters-from-strings/" rel="noopener noreferrer" target="_blank">Remove Char from String
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/rust-in-replit/" rel="noopener noreferrer" target="_blank">Rust Lang
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-set-operations-explained-with-examples/" rel="noopener noreferrer" target="_blank">Python Sets
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/c-string-std-string-example-in-cpp/" rel="noopener noreferrer" target="_blank">C++ Strings
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-map-explained-with-examples/" rel="noopener noreferrer" target="_blank">Python map()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-pop-how-to-pop-from-a-list-or-an-array-in-python/" rel="noopener noreferrer" target="_blank">Python .pop()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-array-tutorial-define-index-methods/" rel="noopener noreferrer" target="_blank">Python arrays
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/npm-uninstall-how-to-remove-a-package/" rel="noopener noreferrer" target="_blank">npm Uninstall
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/insertion-sort-algorithm-example-in-java-and-c/" rel="noopener noreferrer" target="_blank">Insertion Sort
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-if-else-python-conditional-syntax-example/" rel="noopener noreferrer" target="_blank">Python If-Else
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/all-caps-in-css-how-to-uppercase-text-with-style/" rel="noopener noreferrer" target="_blank">All Caps in CSS
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/how-to-open-task-manager-on-mac-apple-shortcut-tutorial/" rel="noopener noreferrer" target="_blank">Open Task Manager on Mac
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/parseint-in-javascript-js-string-to-int-example/" rel="noopener noreferrer" target="_blank">parseInt() in JavaScript
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/print-statement-in-python-how-to-print-with-example-syntax-command/" rel="noopener noreferrer" target="_blank">Print statement in Python
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/remove-directory-in-linux-how-to-delete-a-folder-from-the-command-line/" rel="noopener noreferrer" target="_blank">Remove Directory in Linux
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/python-to-lowercase-a-string-str-lower-example/" rel="noopener noreferrer" target="_blank">Python str.lower() Example
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/second-monitor-not-detected-fixed-windows10/" rel="noopener noreferrer" target="_blank">Second Monitor Not Detected
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/c-string-how-to-declare-strings-in-the-c-programming-language/" rel="noopener noreferrer" target="_blank">How to Declare Strings in C
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/what-is-len-in-python-how-to-use-the-len-function-to-find-the-length-of-a-string/" rel="noopener noreferrer" target="_blank">How to Use .len() in Python
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/python-convert-string-to-int-how-to-cast-a-string-in-python/" rel="noopener noreferrer" target="_blank">Python Convert String to Int
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-create-a-website-free-of-cost-website-builder-platform-guide/" rel="noopener noreferrer" target="_blank">How to create a free website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="col-header" data-test-label="our-nonprofit">Our Nonprofit</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"759d9ce36c03efca","token":"bdb993c6dde44e178aabd9555e75e4f4","version":"2022.8.1","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
