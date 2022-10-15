@@ -20,6 +20,11 @@ _also italicized text_
 - Second item of Unordered List
 - Third item of Unordered List
 
+
+triple up on the backticks for a nicer code block (with copy button to the right on github)
+
+```code block```
+
 `code block`
 
 ---
