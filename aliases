@@ -364,6 +364,8 @@ alias untangled="librewolf https://roy.gbiv.com/untangled/ &"
 # software development blog:
 alias joelonsoftware="librewolf https://www.joelonsoftware.com/ &"
 alias gabmus="librewolf https://gabmus.org/ &"
+# Austin Gil works for Linode and has some good articles
+alias austingil="librewolf https://austingil.com/ &"
 
 # C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
@@ -414,6 +416,8 @@ alias hugo="librewolf https://gohugo.io/ &"
 
 # css example sites
 alias devsnap="librewolf https://devsnap.me/ &"
+# css gradients
+alias cssgradients="librewolf htttps://cssgradient.io &"
 
 #auto generate decent color schemes
 alias mycolor="librewolf https://mycolor.space/ &"
@@ -421,29 +425,36 @@ alias adobecolor="librewolf https://color.adobe.com/create/color-wheel &"
 
 # change hex to rgba colors (usesful for CSS)
 alias rgba="librewolf https://rgbacolorpicker.com/hex-to-rgba &"
+# for colorizing code snippets
+alias prismjs="librewolf https://prismjs.com/ &"
+# cssbattle is a web dev game site which challenges your css skills
+alias cssbattle="librewolf https://cssbattle.dev/ &"
 
 # alternative to searching on google fonts
 alias fontspace="librewolf https://www.fontspace.com &"
 # 1001 fonts, home of anime ace and other good fonts
 alias 1001fonts="librewolf https://www.1001fonts.com &"
-
 # saved list of libre-foundries list of libre/free font sites
 alias librefonts="librewolf ~/Documents/notes/libre_foundries_font_list.html &"
-
 # for downloading web fonts
 alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
 #gfi is a utility that downloads google fonts from the cli:
 alias google-font-installer="gfi"
 
-# for icons(use svg codes as they are faster)
+# Icon Websites
 alias iconify="librewolf https://iconify.design/ &"
+alias icomoon="librewolf https://icomoon.io &"
+alias iconsearch="librewolf https://iconsear.ch &"
+alias feathericons="librewolf https://feathericons.com &"
+alias lucide="librewolf https://lucide.dev &"
 alias nounproject="librewolf https://thenounproject.com &"
-
-# css gradients
-alias cssgradients="librewolf htttps://cssgradient.io &"
 
 #for domain names
 alias namecheap="librewolf https://namecheap.com/ &"
+
+# for captchas (open source version)
+alias hcaptcha="librewolf https://www.hcaptcha.com/ &"
+
 # a great introduction to tls/ssl practices and rules of thumb:
 alias feistyduck="librewolf https://www.feistyduck.com/library/bulletproof-tls-guide/online/ &"
 # tutorials including how to set up ssl authentication and renewals with cerbot:
@@ -454,24 +465,18 @@ alias letsencrypt="librewolf https://letsencrypt.org &"
 alias certbotsite="librewolf https://certbot.eff.org &"
 #certbot has some issues when used with cron, acme.sh is an alternative:
 alias acmesh="librewolf https://github.com/acmesh-official/acme.sh &"
-# for colorizing code snippets
-alias prismjs="librewolf https://prismjs.com/ &"
 # cool front end ideas
 alias codinhood="librewolf https://codinhood.com/ &"
 # bun is an alternative to nodejs/npm, still in beta... check in from time to time
 alias bun="librewolf https://bun.sh/ &"
 # languagetool.org is a resource site for starting up an open source version of grammerly
 alias langtool="librewolf https://languagetool.org/dev/ &"
-# cssbattle is a web dev game site which challenges your css skills
-alias cssbattle="librewolf https://cssbattle.dev/ &"
 #egghead.io has a lot of free courses
 alias egghead="librewolf https://egghead.io/ &"
 # cool little demos website
 alias demo2s="librewolf https://www.demo2s.com &"
 # mothereffinghsl hsl color picker site
 alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
-# icomoon is a site with free icons
-alias icomoon="librewolf https://icomoon.io &"
 # svgsprites creates sprites from dragging svg files into its
 alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
 # unsplash.com is an api site for developers to import and use photos
@@ -479,8 +484,11 @@ alias unsplash="librewolf https://unsplash.com/developers &"
 # wesbos tutorials/articles/etc
 alias wesbos="brave https://courses.wesbos.com &"
 alias frontendmasters="librewolf https://frontendmasters.com/ &"
+
 # send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
 alias textbelt="librewolf https://textbelt.com/ &"
+# create an email server backend using nodejs (& express...)
+alias nodemailer="librewolf https://nodemailer.com/ &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css

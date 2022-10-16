@@ -152,7 +152,12 @@
         "http://127.0.0.1:8080",
         "127.0.0.1",
         "https://rgbacolorpicker.com",
-        "https://websitemetadata.com/meta-tags-generator"
+        "https://websitemetadata.com/meta-tags-generator",
+        "https://austingil.com",
+        "https://www.hcaptcha.com",
+        "https://lucide.dev",
+        "https://iconsear.ch",
+        "https://feathericons.com"
       ],
       "untrusted": [
         "google.com",

@@ -1,2 +1,2 @@
 #!/bin/bash
-fuser -k "$1"/tcp
+doas fuser -k "$1"/tcp
