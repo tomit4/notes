@@ -172,3 +172,7 @@ xtract -zip the mullvad.zip configuration and copy all files to /etc/openvpn/cli
 edit mullvad_x.conf to reflect all files to /etc/openvpn/client/files*
 
 In /etc/runit/sv/openvpn/run, edit to exec /usr/bin/openvpn --config /etc/openvpn/client/mullvad_x.conf
+
+Install mkcert (good for ssl certification generation so you can use https on localhost...just have to figure out how it works...)
+
+doas pacman -S mkcert
