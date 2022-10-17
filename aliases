@@ -455,6 +455,9 @@ alias namecheap="librewolf https://namecheap.com/ &"
 # for captchas (open source version)
 alias hcaptcha="librewolf https://www.hcaptcha.com/ &"
 
+# for responsive design, you'll need access to plenty of screen dimensions:
+alias screensize="librewolf https://screensiz.es/ &"
+
 # a great introduction to tls/ssl practices and rules of thumb:
 alias feistyduck="librewolf https://www.feistyduck.com/library/bulletproof-tls-guide/online/ &"
 # tutorials including how to set up ssl authentication and renewals with cerbot:
@@ -481,6 +484,8 @@ alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
 alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
 # unsplash.com is an api site for developers to import and use photos
 alias unsplash="librewolf https://unsplash.com/developers &"
+# wikimedia commons provides public domain images
+alias wikimedia="librewolf https://commons.wikimedia.org/wiki/Main_Page/ &"
 # wesbos tutorials/articles/etc
 alias wesbos="brave https://courses.wesbos.com &"
 alias frontendmasters="librewolf https://frontendmasters.com/ &"
