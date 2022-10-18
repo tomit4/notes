@@ -1,0 +1,4 @@
+#!/bin/bash
+# makes a list of paru only downloaded files
+#
+pacman -Qqet | grep -U -v "$(pacman -Qqm)" > my_paru_list.txt
