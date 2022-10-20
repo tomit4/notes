@@ -176,3 +176,7 @@ In /etc/runit/sv/openvpn/run, edit to exec /usr/bin/openvpn --config /etc/openvp
 Install mkcert (good for ssl certification generation so you can use https on localhost...just have to figure out how it works...)
 
 doas pacman -S mkcert
+
+Install gobuster
+
+paru gobuster (1st option)
