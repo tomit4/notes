@@ -177,7 +177,10 @@ Install mkcert (good for ssl certification generation so you can use https on lo
 
 doas pacman -S mkcert
 
-Install gobuster and dirb
+Install gobuster and dirb and strace
+
+doas pacman -S strace
 
 paru gobuster (1st option)
 paru dirb (1st option)
+
