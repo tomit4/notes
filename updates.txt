@@ -184,3 +184,4 @@ doas pacman -S strace
 paru gobuster (1st option)
 paru dirb (1st option)
 
+Go to Chrome store and install CSS Dig on brave
