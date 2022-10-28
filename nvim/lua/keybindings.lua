@@ -40,7 +40,7 @@ keymap('n', '<s-p>', '<c-w>:PackerSync<CR>', {})
 vim.cmd[[nnoremap rp :silent :put =range(,)]]
 
 --invoke Diffview
-keymap('n', '<s-d>', '<c-w>:DiffviewOpen<CR>', {})
+-- keymap('n', '<s-d>', '<c-w>:DiffviewOpen<CR>', {})
 
 -- Toggle NERDCommenter with Ctrl + c
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
