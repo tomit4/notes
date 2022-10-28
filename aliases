@@ -367,6 +367,8 @@ alias joelonsoftware="librewolf https://www.joelonsoftware.com/ &"
 alias gabmus="librewolf https://gabmus.org/ &"
 # Austin Gil works for Linode and has some good articles
 alias austingil="librewolf https://austingil.com/ &"
+# Interrupt is a shared blog that specializes in hardware/driver development articles
+alias interrupt="librewolf https://interrupt.memfault.com/ &"
 
 # C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
