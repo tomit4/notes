@@ -4,19 +4,21 @@ article and Unix Sheikh's Choose your Browser Carefully article):
 
 Install Ublock Origin
 Install Decentraleyes
-Install Canvas Blocker
+Install Canvas Blocker (on librewolf no need)
 Install Measure-it
 Install FastForward
 Install Firefox Translations
-Install LocalCDN
+Install LocalCDN (conflicts witht Decentraleyes)
 Install ForgetMeNot
 Install FastForward
 Install NoScript
 Install Chameleon
+Install User-Agent-Switcher and Manager
 Install OverbiteWX
 Install OneTab
 Install Return YouTube Dislike
-Install DuckDuckGo Lite Search
+Install Nitter Redirect
+Install DuckDuckGo Lite Search (doesn't quite work, just use DuckDuckGo)
 Install SponsorBlock for Youtube-Skip Sponsorships
 Install ClearURLs
 Install DarkReader (in DarkReader menu under More, set to Static)
