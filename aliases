@@ -417,7 +417,7 @@ alias swiperjs="librewolf https://swiperjs.com/ &"
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
 # for random pics of not real people (for test sites)
-alias thispersondoesnotexist = "librewolf https://thispersondoesnotexist.com &"
+alias thispersondoesnotexist="librewolf https://thispersondoesnotexist.com &"
 # css example sites
 alias devsnap="librewolf https://devsnap.me/ &"
 # css gradients
