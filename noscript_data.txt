@@ -157,7 +157,15 @@
         "https://www.hcaptcha.com",
         "https://lucide.dev",
         "https://iconsear.ch",
-        "https://feathericons.com"
+        "https://feathericons.com",
+        "https://screensiz.es",
+        "https://matthewjamestaylor.com",
+        "https://fasterthanli.me",
+        "https://interrupt.memfault.com",
+        "https://thispersondoesnotexist.com",
+        "https://supabase.com",
+        "https://pocketbase.io",
+        "https://solidproject.org"
       ],
       "untrusted": [
         "google.com",

@@ -416,7 +416,8 @@ alias a11yslider="librewolf https://a11yslider.js.org/ &"
 alias swiperjs="librewolf https://swiperjs.com/ &"
 # for static site generation
 alias hugo="librewolf https://gohugo.io/ &"
-
+# for random pics of not real people (for test sites)
+alias thispersondoesnotexist = "librewolf https://thispersondoesnotexist.com &"
 # css example sites
 alias devsnap="librewolf https://devsnap.me/ &"
 # css gradients
@@ -492,11 +493,19 @@ alias wikimedia="librewolf https://commons.wikimedia.org/wiki/Main_Page/ &"
 # wesbos tutorials/articles/etc
 alias wesbos="brave https://courses.wesbos.com &"
 alias frontendmasters="librewolf https://frontendmasters.com/ &"
-
 # send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
 alias textbelt="librewolf https://textbelt.com/ &"
 # create an email server backend using nodejs (& express...)
 alias nodemailer="librewolf https://nodemailer.com/ &"
+
+# firebase alternatives (database as a service)
+# postgres
+alias supabase="librewolf https://supabase.com &"
+# sqlite
+alias pocketbase="librewolf https://pocketbase.io &"
+
+# solidproject is an interesting project that promotes privacy respecting data collection
+alias solidproject="librewolf https://solidproject.org &"
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
