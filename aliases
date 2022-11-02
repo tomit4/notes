@@ -33,6 +33,7 @@ alias Code="cd ~/Documents/Code && ls"
 alias cplus="cd ~/Documents/Code/cpp && ls"
 alias js="cd ~/Documents/Code/javascript && ls"
 alias py="cd ~/Documents/Code/python && ls"
+alias logs="cd /var/log && ls"
 alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
 alias btuts="cd ~/Documents/Code/book_tutorials && ls"
 alias fonts="fc-list"
@@ -516,6 +517,9 @@ alias solidproject="librewolf https://solidproject.org &"
 
 # beginner web developer portfolio examples:
 # https://www.mary-snopok.com/
+
+# not so beginner web developer portfolio examples:
+# https://brittanychiang.com/
 
 # SOLID principles explained in JavaScript:
 # https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c
