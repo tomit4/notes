@@ -1,0 +1,34 @@
+viewport,
+GtkViewport {
+	background: none;
+}
+
+notebook tab,
+.notebook {
+	background: #3675AD;
+	font-weight: bold;
+}
+
+notebook header,
+notebook stack,
+.notebook > .frame,
+.notebook > .vertical {
+	background: #B7D6EA;
+	font-weight: bold;
+}
+
+notebook tab label,
+.notebook > .horizontal .label {
+	color: #B7D6EA;
+}
+
+notebook tab:checked label,
+.notebook > .horizontal.active-page .label {
+	color: #FFFFFF;
+}
+
+notebook stack label,
+.notebook > .vertical .label,
+.button .label {
+	color: #3675AD;
+}

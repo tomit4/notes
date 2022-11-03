@@ -1,0 +1,138 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  # - trigger: ":shell"
+    # replace: "{{output}}"
+    # vars:
+      # - name: output
+        # type: shell
+        # params:
+          # cmd: "echo 'Hello from your shell"
+
+  # Print the $USER
+  - trigger: ":user"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo $USER"
+
+  # Print the $HOST
+  - trigger: ":term"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo $TERM" # returns "linux"...
+
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo $SHELL"
+
+  - trigger: ":kernel"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "uname -r"
+
+  - trigger: ":lorem"
+    replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  - trigger: ":for"
+    replace: "for (;;) {}"
+
+  - trigger: ":while"
+    replace: "while () {}"
+
+  - trigger: ":if"
+    replace: "if () {}"
+
+  - trigger: ":elif"
+    replace: "else if () {}"
+
+  - trigger: ":else"
+    replace: "else {}"
+
+  - trigger: ":$"
+    replace: "`${}`"
+
+  - trigger: ":do"
+    replace: "do {} while ()"
+
+  - trigger: ":func"
+    replace: "function () {}"
+
+  - trigger: ":=>"
+    replace: "() => {}"
+
+  - trigger: ":try"
+    replace: "try {} catch(error) {}"
+
+  - trigger: ":def"
+    replace: "def():"
+
+  - trigger: ":fn"
+    replace: "pub fn () {}"
+
+  - trigger: ":cll"
+    replace: "console.log()"
+
+  - trigger: ":cle"
+    replace: "console.error()"
+
+  - trigger: ":clt"
+    replace: "console.table()"
+
+  - trigger: ":inc"
+    replace: "#include"
+
+  - trigger: ":sh"
+    replace: "#!/bin/sh"
+
+  # Pings google dns server
+  - trigger: ":ping"
+    replace: "ping 8.8.8.8"
+
+  # Returns public ip address
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl ifconfig.me ; echo ''"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/

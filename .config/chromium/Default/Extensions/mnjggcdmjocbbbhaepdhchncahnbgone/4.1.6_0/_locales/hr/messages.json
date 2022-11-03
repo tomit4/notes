@@ -1,0 +1,522 @@
+{
+   "0": {
+      "message": "Veza istekla. Provjerite svoju internetski vezu. Ako vaš internet radi, poslužitelj je vjerojatno preopterećen ili nedostupan."
+   },
+   "400": {
+      "message": "Server je rekao da je zahtjev neispravan"
+   },
+   "409": {
+      "message": "Ovo je već unešeno prije"
+   },
+   "429": {
+      "message": "Unio si previše vremena sponzora za ovaj video, jesi li siguran da ih ima toliko?"
+   },
+   "502": {
+      "message": "Čini se da je poslužitelj preopterećen. Pokušajte ponovno za nekoliko sekundi."
+   },
+   "ChangeCategoryTooltip": {
+      "message": "Ovo će se odmah primijeniti na vaše isječke"
+   },
+   "ContinueVoting": {
+      "message": "Nastavite glasati"
+   },
+   "CopyAndDownvote": {
+      "message": "Kopiraj i glasaj protiv"
+   },
+   "Credits": {
+      "message": "Zasluge"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Preskoči sponzore, zamolbe za pretplatu i drugo na YouTube videima. Prijavi sponzore na videima koje gledaš kako bi uštedio drugima vrijeme."
+   },
+   "Dismiss": {
+      "message": "Odbaci"
+   },
+   "Donate": {
+      "message": "Doniraj"
+   },
+   "Editing": {
+      "message": "Uređivanje"
+   },
+   "Hide": {
+      "message": "Nikad ne prikazuj"
+   },
+   "LearnMore": {
+      "message": "Saznajte više"
+   },
+   "Loading": {
+      "message": "Učitavanje..."
+   },
+   "OpenCategoryWikiPage": {
+      "message": "Otvorite wiki stranicu ove kategorije."
+   },
+   "Options": {
+      "message": "Opcije"
+   },
+   "Segment": {
+      "message": "odsječak"
+   },
+   "Segments": {
+      "message": "odsječci"
+   },
+   "Submissions": {
+      "message": "Prijava"
+   },
+   "SubmitTimes": {
+      "message": "Podnesi isječke"
+   },
+   "Submitting": {
+      "message": "Slanje"
+   },
+   "Unknown": {
+      "message": "Dogodila se pogreška pri unošenju tvojih vremena sponzora, molim te probaj ponovno kasnije."
+   },
+   "Username": {
+      "message": "Korisničko ime"
+   },
+   "add": {
+      "message": "Dodaj"
+   },
+   "addInvidiousInstanceError": {
+      "message": "Ova domena je neispravna. Trebaš unijeti SAMO domenu. Primjer: invidious.ajay.app"
+   },
+   "autoHideInfoButton": {
+      "message": "Automatski sakrij info gumb"
+   },
+   "autoSkip": {
+      "message": "Automatsko preskakanje"
+   },
+   "bracketEnd": {
+      "message": "(kraj)"
+   },
+   "bracketNow": {
+      "message": "(sada)"
+   },
+   "cancel": {
+      "message": "Odustani"
+   },
+   "category": {
+      "message": "Kategorija"
+   },
+   "categoryUpdate1": {
+      "message": "Stigle su kategorije!"
+   },
+   "categoryUpdate2": {
+      "message": "Otvori opcije za preskakanje uvoda, kraja, proizvoda itd."
+   },
+   "category_filler_short": {
+      "message": "Popuna"
+   },
+   "category_interaction": {
+      "message": "Podsjetnik interakcije (Pretplati se)"
+   },
+   "category_interaction_short": {
+      "message": "Podsjetnik interakcije"
+   },
+   "category_intro": {
+      "message": "Stanka/Uvodna animacija"
+   },
+   "category_intro_description": {
+      "message": "Interval bez stvarnog sadržaja. Može biti stanka, statični kadar, ponavljajuća animacija. Ovo se ne bi trebalo koristiti za prijelaze koji sadrže informacije."
+   },
+   "category_intro_short": {
+      "message": "Stanka"
+   },
+   "category_livestream_messages": {
+      "message": "Livestream: čitanje donacija/poruka"
+   },
+   "category_livestream_messages_short": {
+      "message": "Čitanje poruka"
+   },
+   "category_music_offtopic": {
+      "message": "Glazba: Ne-glazbeni dio"
+   },
+   "category_music_offtopic_description": {
+      "message": "Samo za videospotove. Ovo bi se trebalo koristiti samo za dijelove videospotova koji još nisu obuhvaćeni drugom kategorijom."
+   },
+   "category_music_offtopic_short": {
+      "message": "Ne-glazbeni"
+   },
+   "category_outro": {
+      "message": "Završni kadrovi/Zasluge"
+   },
+   "category_poi_highlight": {
+      "message": "Istaknuto"
+   },
+   "category_preview": {
+      "message": "Pregled/Sažetak"
+   },
+   "category_selfpromo": {
+      "message": "Neplaćena promocija ili samopromocija"
+   },
+   "category_selfpromo_description": {
+      "message": "Slično kao „sponzor”, osim za neplaćenu promociju i samopromociju. To uključuje odlomke marketinga, donacija ili informacija o tome, s kim su surađivali."
+   },
+   "category_sponsor": {
+      "message": "Sponzor"
+   },
+   "category_sponsor_description": {
+      "message": "Plaćene promocije, plaćene preporuke i izravne reklame. Nije za samopromociju ili besplatno pozivanje na događaje/kreatore/web stranice/proizvode koji im se sviđaju."
+   },
+   "channelWhitelisted": {
+      "message": "Kanal je dodan na popis dopuštenih!"
+   },
+   "chooseACategory": {
+      "message": "Odaberi kategoriju"
+   },
+   "clearThis": {
+      "message": "Jesi li siguran da želiš očistiti ovo?\n\n"
+   },
+   "clearTimes": {
+      "message": "Očisti isječke"
+   },
+   "clearTimesButton": {
+      "message": "Očisti vremena"
+   },
+   "closePopup": {
+      "message": "Zatvori izbornik"
+   },
+   "confirmMSG": {
+      "message": "Kako bi uredio ili obrisao pojedinačne vrijednosti, klikni na gumb info ili otvori okvir dodatka klikom na ikonu dodatka u gornjem desnom kutu."
+   },
+   "confirmNoticeTitle": {
+      "message": "Pošalji segment"
+   },
+   "connectionError": {
+      "message": "Dogodija se greška u povezivanju. Kod pogreške: "
+   },
+   "copyDebugInformationOptions": {
+      "message": "Kopira informacije u međuspremnik koje treba dati razvojnom programeru kada otkrije grešku / kada to programer zatraži. Osjetljive informacije kao što su vaš korisnički ID, kanali s popisa dopuštenih i prilagođena adresa poslužitelja uklonjeni su. Međutim, sadrži informacije kao što su vaš korisnički agent, preglednik, operativni sustav i broj verzije proširenja. "
+   },
+   "copyPublicID": {
+      "message": "Kopiraj javni UserID"
+   },
+   "createdBy": {
+      "message": "Izradio"
+   },
+   "currentInstances": {
+      "message": "Trenutne instance:"
+   },
+   "customServerAddress": {
+      "message": "Adresa SponsorBlock poslužitelja"
+   },
+   "delete": {
+      "message": "Izbriši"
+   },
+   "disableAutoSkip": {
+      "message": "Deaktiviraj automatsko preskakanje"
+   },
+   "disableSkipping": {
+      "message": "Preskakanje je aktivirano"
+   },
+   "discordAdvert": {
+      "message": "Pridružite nam se u službenoj Discord zajednici i pošaljite svoje prijedloge i povrate informacije!"
+   },
+   "downvoteDescription": {
+      "message": "Neispravno/krivo vrijeme"
+   },
+   "edit": {
+      "message": "Uredi"
+   },
+   "enableAutoSkip": {
+      "message": "Aktiviraj automatsko preskakanje"
+   },
+   "enableSkipping": {
+      "message": "Preskakanje je deaktivirano"
+   },
+   "enableTestingServer": {
+      "message": "Omogućite poslužitelj za beta testiranje"
+   },
+   "enableThisCategoryFirst": {
+      "description": "Used when submitting segments to only let them select a certain category if they have it enabled in the options.",
+      "message": "Da biste poslali segmente s kategorijom \"{0}\", morate je omogućiti u postavkama. Sada ćete biti preusmjereni na postavke."
+   },
+   "enableViewTracking": {
+      "message": "Omogući brojanje preskakanja"
+   },
+   "errorCode": {
+      "message": "Kȏd greške: "
+   },
+   "exportOptions": {
+      "message": "Uvezi/Izvezi sve postavke"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock za YouTube - preskoči sponzore"
+   },
+   "guidelines": {
+      "message": "Smjernice"
+   },
+   "helpPageSourceCode": {
+      "message": "Gdje mogu pronaći izvorni kod?"
+   },
+   "helpPageSubmitting2": {
+      "message": "Klikom na gumb za reprodukciju označava se početak segmenta, a klik na ikonu za zaustavljanje označava kraj. Možete pripremiti više sponzora prije nego što pritisnete \"Pošalji\". Klikom na gumb za slanje bit će poslano. Klikom na kantu za smeće izbrisat će se."
+   },
+   "helpPageThanksForInstalling": {
+      "message": "Hvala na instaliranju SponsorBlocka."
+   },
+   "helpPageTooSlow": {
+      "message": "Ovo je presporo"
+   },
+   "hideButtons": {
+      "message": "Sakrij gumbe na YouTube playeru"
+   },
+   "hideButtonsDescription": {
+      "message": "Ovo skriva gumbe koji se pojavljuju na YouTube playeru za slanje odsječaka za preskakanje."
+   },
+   "hideDeleteButton": {
+      "message": "Sakrij gumb za brisanje na YouTube playeru"
+   },
+   "hideInfoButton": {
+      "message": "Sakrij gumb za informacije na YouTube Playeru"
+   },
+   "hideThis": {
+      "message": "Sakrijte ovo"
+   },
+   "hitGoBack": {
+      "message": "Klikni unskip kako bi se vratio otkuda si došao."
+   },
+   "hourLower": {
+      "message": "h"
+   },
+   "hoursLower": {
+      "message": "h"
+   },
+   "incorrectCategory": {
+      "message": "Promijenite kategoriju"
+   },
+   "inspect": {
+      "message": "Provjeri"
+   },
+   "manualPaused": {
+      "message": "Timer zaustavljen"
+   },
+   "manualSkip": {
+      "message": "Ručno preskakanje"
+   },
+   "minDuration": {
+      "message": "Minimalno trajanje (u sekundama):"
+   },
+   "minDurationDescription": {
+      "message": "Isječci kraći od postavljene vrijednosti neće biti preskočeni ili prikazani u playeru."
+   },
+   "minLower": {
+      "message": "min"
+   },
+   "minsLower": {
+      "message": "min"
+   },
+   "moreCategories": {
+      "message": "Više kategorija"
+   },
+   "multipleSegments": {
+      "message": "Više segmenata"
+   },
+   "muteSegments": {
+      "message": "Dopustite isječke koji isključuju zvuk umjesto da ga preskaču"
+   },
+   "mute_category": {
+      "message": "Utišati {0}?"
+   },
+   "noVideoID": {
+      "message": "Nijedan YouTube video nije pronađen.\nAko ovo nije točno, osvježite karticu."
+   },
+   "nonMusicCategoryOnMusic": {
+      "message": "Ovaj je video kategoriziran kao glazba. Je li stvarno ima sponzora? Ako je ovo zapravo „Ne-glazbeni segment”, otvori opcije proširenja i aktiviraj ovu kategoriju. Zatim ovaj segment možeš posalti kao „Ne-glazbeni” umjesto sponzora. Pročitaj smjernice ako nešto nije jasno."
+   },
+   "openPopup": {
+      "message": "Otvori okvir SponsorBlock"
+   },
+   "optionsInfo": {
+      "message": "Omogući podržavanje Invidiousa, onemogući automatsko preskakanje, sakrij gumbe i drugo."
+   },
+   "paused": {
+      "message": "Pauzirano"
+   },
+   "popupHint": {
+      "message": "Savjet: Možete namjestiti tipke za podnošenje u opcijama"
+   },
+   "preview": {
+      "message": "Pregledaj"
+   },
+   "previewColor": {
+      "description": "Referring to submissions that have not been sent to the server yet.",
+      "message": "Boja neposlanog"
+   },
+   "publicStats": {
+      "message": "Ovo se koristi na stranici sa javnim statistikama da se pokaže koliko se pridonijeli. Pogledajte"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "Pročitaj Smjernice!"
+   },
+   "recordTimesDescription": {
+      "message": "Pošalji"
+   },
+   "refreshSegments": {
+      "message": "Osvježi segmente"
+   },
+   "removeFromWhitelist": {
+      "message": "Izbaci kanal iz bijele liste"
+   },
+   "reportButtonInfo": {
+      "message": "Prijavi unos kao nesipravan."
+   },
+   "reportButtonTitle": {
+      "message": "Prijavi"
+   },
+   "reset": {
+      "message": "Resetiraj"
+   },
+   "resetInvidiousInstance": {
+      "message": "Resetiraj popis instanci Invidiousa"
+   },
+   "resetInvidiousInstanceAlert": {
+      "message": "Upravo ćeš resetirati popis instanci Invidiousa"
+   },
+   "reskip": {
+      "message": "Preskoči opet"
+   },
+   "save": {
+      "message": "Spremi"
+   },
+   "savedPeopleFrom": {
+      "message": "Sačuvali ste ljude od"
+   },
+   "serverDown": {
+      "message": "Čini se da server ne radi. Kontaktiraj razvojne programere odmah."
+   },
+   "setOptions": {
+      "message": "Postavi opcije"
+   },
+   "setUserID": {
+      "message": "Postavi UserID"
+   },
+   "setUsername": {
+      "message": "Postavi korisničko ime"
+   },
+   "showButtons": {
+      "message": "Prikaži gumbe na YouTube Playeru"
+   },
+   "showDeleteButton": {
+      "message": "Pokaži gumb za brisanje na YouTube sviraču"
+   },
+   "showInfoButton": {
+      "message": "Prikaži gumb za informacije na YouTube Playeru"
+   },
+   "showSkipButton": {
+      "message": "Zadržite gumb za preskakanje i označavanje na playeru"
+   },
+   "showSkipNotice": {
+      "message": "Pokaži obavijest nakon preskakanja isječka"
+   },
+   "skip": {
+      "message": "Preskoči"
+   },
+   "skipNoticeDuration": {
+      "message": "Duljina trajanja obavijesti o preskakanju (sekunde):"
+   },
+   "skipNoticeDurationDescription": {
+      "message": "Obavijest o preskakanju ostat će na zaslonu barem ovoliko dugo. Za ručno preskakanje može biti duže vidljivo."
+   },
+   "skipOption": {
+      "description": "Used on the options page to describe the ways to skip the segment (auto skip, manual, etc.)",
+      "message": "Preskoči opciju"
+   },
+   "skip_category": {
+      "message": "Preskočiti {0}?"
+   },
+   "skip_to_category": {
+      "description": "Used for skipping to things (Skip to Highlight)",
+      "message": "Preskočiti na {0}?"
+   },
+   "skipped_to_category": {
+      "description": "Used for skipping to things (Skipped to Highlight)",
+      "message": "Preskočeno na {0}"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Izvorni kod"
+   },
+   "sponsor404": {
+      "message": "Nije pronađen isječak"
+   },
+   "sponsorCancel": {
+      "message": "Otkaži Kreiranje Segmenta"
+   },
+   "sponsorEnd": {
+      "message": "Isječak završava sada"
+   },
+   "sponsorFound": {
+      "message": "Ovaj video ima isječke u bazi podataka!"
+   },
+   "sponsorStart": {
+      "message": "Isječak započinje sada"
+   },
+   "statusReminder": {
+      "message": "Provjerite status.sponsor.ajay.app za status poslužitelja."
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "Uređivanje dijela prikazat će se nakon što pritisneš gumb za slanje"
+   },
+   "submit": {
+      "message": "Pošalji"
+   },
+   "submitCheck": {
+      "message": "Jesi li siguran da želiš unijeti ovo?"
+   },
+   "submitTimesButton": {
+      "message": "Unesi vremena"
+   },
+   "success": {
+      "message": "Uspjeh!"
+   },
+   "supportedSites": {
+      "message": "Podržane stranice: "
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "do"
+   },
+   "unmute": {
+      "message": "Uključi zvuk"
+   },
+   "unskip": {
+      "message": "Ne preskači"
+   },
+   "unsubmitted": {
+      "message": "Neposlano"
+   },
+   "upvoteButtonInfo": {
+      "message": "Glasaj za ovaj unos"
+   },
+   "userIDChangeWarning": {
+      "message": "Oprez: Promjena UserID-a je trajna. Jesi li siguran da želiš ovo napraviti? Napravi kopiju starog UserID-a za svaki slučaj."
+   },
+   "viewLeaderboard": {
+      "message": "Ljestvica"
+   },
+   "voteOnTime": {
+      "message": "Glasaj za isječak"
+   },
+   "voted": {
+      "message": "Glas podnešen!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Web-stranica"
+   },
+   "whitelistChannel": {
+      "message": "Dopusti kanal"
+   },
+   "youMustSelectACategory": {
+      "message": "Moraš odabrati kategoriju za sve segmente koje šalješ!"
+   },
+   "yourWork": {
+      "description": "Used to describe the section that will show you the statistics from your submissions.",
+      "message": "Tvoja slanja"
+   }
+}

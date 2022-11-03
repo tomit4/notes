@@ -1,0 +1,23 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "32": "images/lh_favicon_32x32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Lighthouse"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'none'",
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "icons": {
+      "128": "images/lh_logo_128x128.png",
+      "16": "images/lh_favicon_16x16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA00cKAZklxckk0bxDnX9pY8xk8z/mNLoijlkjNBNrLg1dcpzuYvyyPCZpfh3p6UhgZtYt0kM7LzUBzqv0pzW1W6S7WHQcpWfRrMtBqyl/G1u7dwg8CXBQAgCU+imfFUd3hh4NzG8329ufYjzXHTe9JDj4CNc1Mc2IWzchg59WZ3pwGKnvmmUJbKG5MnCHKMJnvAA/GqMINILhMh7UR+XTvhgiDvCP/NBFpYvI0WJ7GksHR7ObryJrvkqO2/WphUK52Mk5PubIQch+XRFcy4Z74tLVmnSeitCWIvKWi+LXEdf+DAVhp22e3FSJNUBvFycQy9NIhQYsfLm05W6cw3BGbwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "72",
+   "name": "__MSG_appName__",
+   "permissions": [ "activeTab", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "100.0.0.0"
+}

@@ -1,0 +1,118 @@
+{
+   "409": {
+      "message": "Naisumite na ito noon"
+   },
+   "429": {
+      "message": "Masyadong kang maraming beses na nagsumite ng sponsor times para sa video na ito, sigurado ka na marami yan?"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "I-skip ang mga sponsorships, subscription begging at marami pa sa mga YouTube videos. I-report ang mga sponsor sa videos na napapanood mo upang makatipid sa oras ng iba."
+   },
+   "Dismiss": {
+      "message": "I-dismiss"
+   },
+   "Hide": {
+      "message": "Hindi ipakita"
+   },
+   "Loading": {
+      "message": "Loading..."
+   },
+   "Segment": {
+      "message": "segment"
+   },
+   "Segments": {
+      "message": "segments"
+   },
+   "SubmitTimes": {
+      "message": "I-submit ang mga segments"
+   },
+   "Unknown": {
+      "message": "May error na nagkaroon sa pagsusumite sa iyong sponsor times, subukang muli mamaya."
+   },
+   "channelWhitelisted": {
+      "message": "Whitelisted na ang channel na ito!"
+   },
+   "clearThis": {
+      "message": "Sigurado ka bang gusto mong tanggalin ito?"
+   },
+   "clearTimes": {
+      "message": "I-clear ang mga segments"
+   },
+   "closePopup": {
+      "message": "Isara ang Popup"
+   },
+   "confirmMSG": {
+      "message": "Para sa pag-edit o tanggalin ng mga individual values, pindutin ang info button o ang extension icon sa kanang sulok sa itaas."
+   },
+   "connectionError": {
+      "message": "Nagkaroon ng error sa koneksyon. Error code: "
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock para YouTube - I-skip ang mga Sponsorships"
+   },
+   "hitGoBack": {
+      "message": "Pindutin ang \"unskip\" para bumalik ka sa iyong dating posisyon sa video."
+   },
+   "manualPaused": {
+      "message": "Tigilan ang timer"
+   },
+   "noVideoID": {
+      "message": "Walang YouTube video na nakita.\nKung mali ito, i-refresh ang tab mo."
+   },
+   "openPopup": {
+      "message": "I-buksan ang SponsorBlock popup"
+   },
+   "paused": {
+      "message": "Naka-pause na"
+   },
+   "refreshSegments": {
+      "message": "I-refresh ang mga segments"
+   },
+   "reportButtonInfo": {
+      "message": "I-report ang submission na ito bilang mali."
+   },
+   "reportButtonTitle": {
+      "message": "I-report"
+   },
+   "reskip": {
+      "message": "I-reskip"
+   },
+   "sponsor404": {
+      "message": "Walang nakitang segment"
+   },
+   "sponsorCancel": {
+      "message": "Kanselahin ang Paggawa ng Segment"
+   },
+   "sponsorEnd": {
+      "message": "Nagtatapos ang Segment Ngayon"
+   },
+   "sponsorFound": {
+      "message": "May mga segments sa database para sa video na ito!"
+   },
+   "sponsorStart": {
+      "message": "Simula ang Segment Ngayon"
+   },
+   "submitCheck": {
+      "message": "Sigurado ka bang gusto mong isumite ito?"
+   },
+   "success": {
+      "message": "Tagumpay na!"
+   },
+   "unmute": {
+      "message": "I-unmute"
+   },
+   "unskip": {
+      "message": "I-unskip"
+   },
+   "upvoteButtonInfo": {
+      "message": "I-upvote ang submission na ito"
+   },
+   "voted": {
+      "message": "Bumoto na!"
+   },
+   "whitelistChannel": {
+      "message": "I-whitelist itong channel"
+   }
+}

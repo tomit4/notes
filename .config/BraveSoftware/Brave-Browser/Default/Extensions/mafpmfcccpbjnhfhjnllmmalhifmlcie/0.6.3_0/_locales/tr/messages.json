@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": "Bağımsız bir vekil sunucu işletin"
+   },
+   "appDesc": {
+      "message": "Sansür uygulanan ülkelerdeki kullanıcıların sizin ağ bağlantınızı kullanarak Tor ağına ulaşmasını sağlayın."
+   },
+   "badgeCookiesOff": {
+      "message": "Çerezler etkin değil."
+   },
+   "browser": {
+      "message": "Sansürü aşmak için Snowflake kullanın"
+   },
+   "bugTracker": {
+      "message": "Tor Project GitLab üzerinde \u003Ca href=\"https://gitlab.onionize.space/\">bir hesap açılmasını istedikten\u003C/a> sonra Snowflake projesinde \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">yeni bir sorun bildirebilirsiniz\u003C/a>."
+   },
+   "censoredUsers": {
+      "message": "VPN hizmetlerinin aksine, bir Snowflake vekil sunucusuna bağlanmak ve sansürü aşmak için ayrı bir uygulama kurmanız gerekmez. Genellikle var olan uygulamalara gömülü bir engellemeyi aşma özelliğidir. Şu anda Snowflake, \u003Ca href=\"https://torproject.org/download\">Tor Browser\u003C/a> masaüstü ve Android sürümlerinde, \u003Ca href=\"https://onionbrowser.com\">Onion Browser\u003C/a>\u003Ca href=\"https://orbot.app\">Orbot\u003C/a> Android ve iOS sürümlerinde bulunabilir. Bu uygulamalardan herhangi birini indirip kurduysanız ve bunlar ülkenizde sansürleniyorsa, uygulamaların ayarlar sayfasından Snowflake seçeneğini etkinleştirerek engellemeyi aşabilirsiniz."
+   },
+   "contactSnowflakeDevs": {
+      "message": "Uygulamanızda Snowflake kullanmakla ilgileniyorsanız, \u003Ca href=\"https://lists.torproject.org/cgi-bin/mailman/listinfo/anti-censorship-team\">anti-sansür ekibiyle görüşebilirsiniz."
+   },
+   "descriptive": {
+      "message": "Lütfen bildirim kaydında olabildiğince açıklayıcı olun ve yapabiliyorsanız hatayı yeniden oluşturmamıza yardımcı olabilecek günlük kayıtlarını ekleyin."
+   },
+   "embed": {
+      "message": "Ekleme"
+   },
+   "extension": {
+      "message": "İnsanların sansürü aşmasına yardımcı olun: Bir Snowflake vekil sunucusu işletin"
+   },
+   "faq": {
+      "message": "Snowflake kullanımı hakkında destek almak"
+   },
+   "fileBug": {
+      "message": "Kullanırken ya da işletirken Snowflake ile ilgili sorunlar yaşarsanız, hata bildiriminde bulunmanız iyi olur. Hata bildirimini iki şekilde gönderebilirsiniz:"
+   },
+   "howSnowflakeWorks": {
+      "message": "Snowflake uygulamasının nasıl çalıştığı hakkında ayrıntılı bilgi alın"
+   },
+   "installChrome": {
+      "message": "Chrome üzerine kurulum"
+   },
+   "installExtension": {
+      "message": "Snowflake vekil sunucularının tamamen gönüllüler tarafından işletildiğini biliyor muydunuz? Başka bir deyişle, bir kullanıcı sizin gibi bir gönüllü tarafından işletilen rastgele bir Snowflake gönüllü vekil sunucusu ile eşleştirilir! İnsanların sansürü aşmasına yardımcı olmak istiyorsanız, bir Snowflake vekil sunucusu kurup işletmeyi düşünün. Tek ön koşul, ülkenizdeki internet ağının zaten yoğun bir şekilde \u003Cstrong>sansürlenmiyor\u003C/strong> olmasıdır."
+   },
+   "installFirefox": {
+      "message": "Firefox üzerine kurulum"
+   },
+   "installOptions": {
+      "message": "Bir Snowfloake vekil sunucusu işletmenin farklı yolları vardır (başlangıç ve ileri düzey):"
+   },
+   "installStandalone": {
+      "message": "Masaüstü bilgisayarınızda ya da sunucunuzda Snowflake vekil sunucusunun komut satırı sürümünü çalıştırmak istiyorsanız, bağımsız bir vekil sunucusu çalıştırmak hakkındaki \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">rehberimize\u003C/a> bakabilirsiniz."
+   },
+   "installWebExtension": {
+      "message": "Web uzantısı, bir Snowflake vekil sunucusu işletmenin en kolay yoludur. Uzantıyı \u003Ca href=\"https://addons.mozilla.org/en-US/firefox/addon/torproject-snowflake/\">Firefox\u003C/a> ya da \u003Ca href=\"https://chrome.google.com/webstore/detail/snowflake/mafpmfcccpbjnhfhjnllmmalhifmlcie\">Chrome\u003C/a> üzerine kurduktan sonra etkinleştirin ve bir kullanıcı vekil sunucunuz üzerinden bağlantı kurduğunda simgenin yeşile dönmesini izleyin!"
+   },
+   "installWebExtensionIntro": {
+      "message": "Web uzantısını kurun"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Köprü ile bağlantı kurulamadı."
+   },
+   "popupDescOn": {
+      "message": "Snowflake uygulamanız son 24 saatte $1 kullanıcının sansürü aşmasına yardımcı oldu."
+   },
+   "popupEnabled": {
+      "message": "Etkin"
+   },
+   "popupLearnMore": {
+      "message": "Ayrıntılı bilgi alın"
+   },
+   "popupRetry": {
+      "message": "Yeniden dene"
+   },
+   "popupRetrying": {
+      "message": "Yeniden deneniyor..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake kapalı"
+   },
+   "popupStatusOn": {
+      "message": "Şu anda bağlı olan kullanıcı sayısı: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake uygulamanız kullanıcıların sansürü aşmasına yardımcı olmaya hazır"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC özelliği algılanamadı."
+   },
+   "possible": {
+      "message": "Alternatif olarak, bir Snowflake vekil sunucusunu kendi web sitenizdeki bir sayfanın içine gömebilirsiniz (\u003Ca href=\"https://relay.love\">aktarici.sevgisi\u003C/a> gibi). Sitenizi ziyaret edenler sayfaya girebilir, vekil sunucuyu etkinleştirebilir ve başkalarının sayfa üzerinden vekil sunucu kullanmasını sağlamak için açık bırakabilir (tam olarak bir web eklentisi gibi davranır ve görünür)."
+   },
+   "reportingBugs": {
+      "message": "Hata bildirimi"
+   },
+   "sharedAccount": {
+      "message": "Bir belirteç üretip onunla oturum açarak \u003Ca href=\"https://anonticket.onionize.space/\">anonim bir destek kaydı\u003C/a> gönderebilirsiniz. Daha sonra \u003Cstrong>tüm projeler listesine\u003C/strong> giderek Snowflake projesini bulun ve yeni bir sorun bildirin."
+   },
+   "snowflakeTechOverview": {
+      "message": "Snowflake, \u003Ca href=\"https://gitweb.torproject.org/torspec.git/tree/pt-spec.txt\">Değiştirilebilir taşıyıcılar\u003C/a> ailesinin bir parçası olan ve sürekli geliştirilmekte olan yeni bir engellemeyi aşma teknolojisidir. Mimarisi hakkında ayrınlı bilgi edinmek mi istiyorsunuz? \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/Technical%20Overview\">Teknik özeti\u003C/a> (İngilizce) okuyabilirsiniz."
+   },
+   "support": {
+      "message": "Snowflake kullanarak Tor bağlantısı kurmaya çalışırken sorun yaşarsanız, Tor destek kanalına \u003Ca href=\"https://t.me/TorProjectSupportBot\">Telegram\u003C/a> üzerinden ulaşabilirsiniz. Yanıt bulmak için \u003Ca href=\"https://support.torproject.org/censorship/\">Tor destek sitesi\u003C/a> ve \u003Ca href=\"https://forum.torproject.net/tag/snowflake\">Tor forumu\u003C/a> sitelerine de göz atabilirsiniz."
+   },
+   "volunteer": {
+      "message": "Dünyanın dört bir yanında Snowflake vekil sunucusu kurmuş ve işleten binlerce gönüllüye katılabilirsiniz. İnsanların Snowflake vekil sunucunuz üzerinden hangi web sitelerine eriştiği konusunda endişelenmenize gerek yok. Gezinme IP adresleri, vekil sunucunuzun IP adresi değil, Tor çıkış aktarıcılarının IP adresleri olarak görünür."
+   },
+   "webBadgeInstructions": {
+      "message": "Aşağıdan Snowflake uygulamasını açar ve tarayıcı sekmesini açık bırakırsanız, bir kullanıcı yeni vekil sunucunuz üzerinden bağlanabilir!"
+   },
+   "webBadgeTitle": {
+      "message": "Bu tarayıcı sekmesini açık bırakın veya web sitenize bir web afişi yerleştirin"
+   },
+   "websiteIntro": {
+      "message": "Snowflake, \u003Cstrong>dünyanın her yerinden insanların engellenen web sitelerine ve uygulamalara erişmesini sağlayan\u003C/strong> bir sistemdir. VPN hizmetlerinin kullanıcılarına internet sansürünü aşmakta yardımcı olması gibi, Snowflake internet etkinliğinizin normal bir görüntülü ya da sesli arama için kullanıyormuşsunuz gibi görünmesini sağlar. Böylece internetinizi sansürleyenler tarafından fark edilmenizi engeller."
+   },
+   "websiteIntro2": {
+      "message": "Her biri farklı bir teknik kullanarak internet etkinliğini \"dönüştüren\" Snowflake gibi çok sayıda araç vardır. Bazıları internet trafiğini Microsoft Azure ve Amazon Web Services gibi popüler bulut hizmeti sağlayıcılarından geliyormuş gibi görünecek şekilde yöneltir. Diğerleri, tamamen rastgele görünmesi için internet trafiğini karıştırır."
+   },
+   "websiteIntro3": {
+      "message": "Başlangıçta amaçlanan hedefe ulaşmak için büyük internet bölümlerinin engellenmesi gerekeceğinden, sansür uygulayıcıların bu tür engellemeyi aşma araçlarını da engellemeyi düşünmesinin maliyeti artar."
+   }
+}

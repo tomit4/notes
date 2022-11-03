@@ -1,0 +1,6 @@
+rendezvous_server = 'rs-ny.rustdesk.com'
+nat_type = 1
+serial = 3
+
+[options]
+rendezvous-servers = 'rs-ny.rustdesk.com,rs-sg.rustdesk.com,rs-cn.rustdesk.com'

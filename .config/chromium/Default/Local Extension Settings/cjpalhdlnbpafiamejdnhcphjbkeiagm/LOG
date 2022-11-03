@@ -1,0 +1,20 @@
+2022/10/02-20:41:44.195 76a0 Reusing MANIFEST /home/brian/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2022/10/02-20:41:44.195 76a0 Recovering log #982
+2022/10/02-20:41:44.197 76a0 Reusing old log /home/brian/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000982.log 
+2022/10/02-20:51:46.199 76a0 Level-0 table #986: started
+2022/10/02-20:51:46.220 76a0 Level-0 table #986: 2569217 bytes OK
+2022/10/02-20:51:46.222 76a0 Delete type=0 #982
+2022/10/02-20:51:46.223 76a0 Compacting 4@0 + 4@1 files
+2022/10/02-20:51:46.263 76a0 Generated table #987@0: 13 keys, 2098525 bytes
+2022/10/02-20:51:46.292 76a0 Generated table #988@0: 10 keys, 2191115 bytes
+2022/10/02-20:51:46.312 76a0 Generated table #989@0: 18 keys, 849288 bytes
+2022/10/02-20:51:46.312 76a0 Compacted 4@0 + 4@1 files => 5138928 bytes
+2022/10/02-20:51:46.313 76a0 compacted to: files[ 0 3 1 0 0 0 0 ]
+2022/10/02-20:51:46.313 76a0 Delete type=2 #983
+2022/10/02-20:51:46.313 76a0 Delete type=2 #986
+2022/10/02-20:51:46.313 76a0 Delete type=2 #975
+2022/10/02-20:51:46.313 76a0 Delete type=2 #976
+2022/10/02-20:51:46.313 76a0 Delete type=2 #981
+2022/10/02-20:51:46.313 76a0 Delete type=2 #973
+2022/10/02-20:51:46.313 76a0 Delete type=2 #979
+2022/10/02-20:51:46.313 76a0 Delete type=2 #974

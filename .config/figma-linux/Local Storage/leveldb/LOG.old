@@ -1,0 +1,6 @@
+2022/10/05-16:04:12.091 4f7e Reusing MANIFEST /home/brian/.config/figma-linux/Local Storage/leveldb/MANIFEST-000001
+2022/10/05-16:04:12.091 4f7e Recovering log #9
+2022/10/05-16:04:12.091 4f7e Reusing old log /home/brian/.config/figma-linux/Local Storage/leveldb/000009.log 
+2022/10/05-16:46:14.858 4fdb Level-0 table #13: started
+2022/10/05-16:46:14.860 4fdb Level-0 table #13: 17812 bytes OK
+2022/10/05-16:46:14.861 4fdb Delete type=0 #9

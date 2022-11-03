@@ -1,0 +1,70 @@
+{
+   "advancedLabel": {
+      "description": "Advanced label.",
+      "message": "Edistynyt"
+   },
+   "amountInjectedDescription": {
+      "description": "Amount injected description.",
+      "message": "Paikallisilla resursseilla korvattujen pyyntöjen määrä asennuksen jälkeen."
+   },
+   "amountInjectedTitle": {
+      "description": "Amount injected title.",
+      "message": "Paikallisesti korvattua resurssia"
+   },
+   "blockMissingDescription": {
+      "description": "Block requests for missing resources description.",
+      "message": "Estä kaapattu pyyntö, jos paikallista resurssia ei ole saatavilla."
+   },
+   "blockMissingTitle": {
+      "description": "Block requests for missing resources title.",
+      "message": "Estä pyynnöt puuttuviin resursseihin"
+   },
+   "disablePrefetchDescription": {
+      "description": "Disable prefetch description.",
+      "message": "Estä kiellettyjä pyyntöjä vuotamasta jakeluverkkoihin."
+   },
+   "disablePrefetchTitle": {
+      "description": "Disable prefetch title.",
+      "message": "Poista linkkien esihaku käytöstä"
+   },
+   "disableProtectionTitle": {
+      "description": "Disable protection title.",
+      "message": "Poista suojaus käytöstä tällä sivustolla"
+   },
+   "enableProtectionTitle": {
+      "description": "Enable protection title.",
+      "message": "Ota suojaus käyttöön"
+   },
+   "extensionDescription": {
+      "description": "Extension description.",
+      "message": "Suojaa seurannalta \"ilmaisen\", keskitetyn sisällön jakelun välityksellä."
+   },
+   "optionsTitle": {
+      "description": "Options title.",
+      "message": "Asetukset"
+   },
+   "showIconBadgeDescription": {
+      "description": "Show icon badge description.",
+      "message": "Näyttää korvattujen resurssien määrän lisäosan kuvakkeessa."
+   },
+   "showIconBadgeTitle": {
+      "description": "Show icon badge title.",
+      "message": "Näytä tapahtumien määrä kuvakkeessa"
+   },
+   "stripMetadataDescription": {
+      "description": "Strip metadata description.",
+      "message": "Poista arkaluontoiset tiedot jakeluverkkojen pyynnöistä yksityisyyden parantamiseksi."
+   },
+   "stripMetadataTitle": {
+      "description": "Strip metadata title.",
+      "message": "Poista metatiedot sallituista pyynnöistä"
+   },
+   "whitelistedDomainsDescription": {
+      "description": "Whitelisted domains description.",
+      "message": "Lisää verkkotunnukset, joita et halua käsiteltävän. Erota useat verkkotunnukset puolipisteellä (;)."
+   },
+   "whitelistedDomainsTitle": {
+      "description": "Whitelisted domains title.",
+      "message": "Ohitettavat verkkotunnukset, joita ei käsitellä"
+   }
+}

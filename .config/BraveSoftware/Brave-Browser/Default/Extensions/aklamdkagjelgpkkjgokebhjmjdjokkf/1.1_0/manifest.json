@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/forgetmenot-16_x_16.png"
+   },
+   "content_security_policy": "script-src 'self' https://js.stripe.com; object-src 'self'; frame-src 'self' https://js.stripe.com",
+   "description": "Window manager",
+   "icons": {
+      "128": "images/forgetmenot-128_x_128.png",
+      "16": "images/forgetmenot-16_x_16.png",
+      "32": "images/forgetmenot-32_x_32.png",
+      "48": "images/forgetmenot-48_x_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmG6JnE3fBv4XobbMaXgYO2W4FKw3rDxoOTqTK3CyzQWTM7p5JltMNUPbAWI4mkBdDekmvAyTiaOe+PFr1Y5C4wzcWA01BinQdJI7aZrXTfKWO9/xSf2pshDBnXzKzZ7hUICEcZ8NhqOhSrNpoa83X3wCh3Yt9BWh/wwSSAqWkJdM9Z/5U3xfEB9lZu4eeM1VpWee4tq9gENmVkdU1jjJ3OUTH8PSPFuRmWIvaUVgcFTwKrZfRoj5Ko72ZgJH9ROG3f1UEsUZOd5K9Yw2jz/LK60m+XJSfKVPNFKiKa4p2z9xpXqFjlidQqGrQuktVsGWJsU0RRy/3yiKviHw3wJLeQIDAQAB",
+   "manifest_version": 2,
+   "name": "ForgetMeNot",
+   "permissions": [ "storage", "tabs", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

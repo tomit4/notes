@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "i/icon19.png",
+         "38": "i/icon38.png"
+      },
+      "default_title": "CSS Dig"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.min.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Collect and analyze CSS.",
+   "icons": {
+      "128": "i/icon128.png",
+      "16": "i/icon16.png",
+      "48": "i/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmMyGaGKcT9LOfVINXD0uUB3N3eAn4fJqHN2EUgJiaNDTPOwSFCroFcYpsDVZAmt4BYowcTQayIQd+GO0xahXnk4X3LnE9xKBj+tZ23+H41kMihOwlFtc+nDJI8UkKdMV9s90Do/AENDwBoRr2kOi208WF6fvaxW7ijCbBNZIzVHhM70eCvAZ5FHEx4wo4LdEMGBTHUiuaMQiyfWs+KLvms6PPyTcNsIQ/vd8gBDhgb66NEUX1Od9MIG5otD4W7raobw/nDSSeRg8sS04/J+vzFxX9QVumofYb1G0yMk7fIe0TRa6xI39BVYS7vnZiIPJPTqs4MzPnvKw/7lT8dQHKQIDAQAB",
+   "manifest_version": 2,
+   "name": "CSS Dig",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.7",
+   "web_accessible_resources": [ "html/dig.html", "i/icon48.png", "css/cssdig.css", "js/cssdig.js" ]
+}

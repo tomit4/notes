@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake je priključni WebRTC transport za Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Kolačići nisu aktivirani."
+   },
+   "browser": {
+      "message": "Koristi Snowflake"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Zatraži račun\u003C/a> u Tor Project GitLab, a zatim \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">otvori novi problem\u003C/a> u projektu Snowflake."
+   },
+   "censoredUsers": {
+      "message": "Ako je tvoj pristup internetu cenzuriran, preuzmi \u003Ca href=\"https://www.torproject.org/download/\">Tor preglednik\u003C/a>."
+   },
+   "descriptive": {
+      "message": "Opiši problem što opširnije i po mogućnosti uključi poruke log-zapisa koje će nam pomoći reproducirati grešku."
+   },
+   "embed": {
+      "message": "Ugradi"
+   },
+   "extension": {
+      "message": "Pokreni proxy"
+   },
+   "faq": {
+      "message": "Često postavljana pitanja"
+   },
+   "fileBug": {
+      "message": "Ako imaš problema sa Snowflakeom kao klijentom ili poslužiteljem, prijavi grešku. Za prijavljivanje greške postoje dvije mogućnosti:"
+   },
+   "installChrome": {
+      "message": "Instaliraj u Chromeu"
+   },
+   "installExtension": {
+      "message": "Ako tvoj pristup internetu \u003Cstrong>nije\u003C/strong> cenzuriran, razmisli o instaliranju Snowflake proširenja kako bi pomogao/la korisnicima u cenzuriranim mrežama. Ne brini o tome, kojim web lokacijama ljudi pristupaju putem tvog poslužitelja. Njihova vidljiva IP adresa pregledavanja odgovarat će njihovom izlaznom Tor-čvoru, a ne tvom."
+   },
+   "installFirefox": {
+      "message": "Instaliraj u Firefoxu"
+   },
+   "installStandalone": {
+      "message": "Ako želiš pokrenuti verziju Snowflake proxyja na radnoj površini ili poslužitelju, pogledaj našu \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">dokumentaciju zajednice\u003C/a> za pokretanje samostalnog Snowflake proxyja."
+   },
+   "looksLike": {
+      "message": "Izgleda ovako:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Nije bilo moguće povezati se na most."
+   },
+   "popupDescOn": {
+      "message": "Broj korisnika kojima je Snowflake pomogao zaobići cenzuru u zadnjih 24 sata: $1"
+   },
+   "popupEnabled": {
+      "message": "Aktivirano"
+   },
+   "popupLearnMore": {
+      "message": "Saznaj više"
+   },
+   "popupRetry": {
+      "message": "Pokušaj ponovo"
+   },
+   "popupRetrying": {
+      "message": "Pokušava se ponovo …"
+   },
+   "popupStatusOff": {
+      "message": "Snowflake je isključen"
+   },
+   "popupStatusOn": {
+      "message": "Broj trenutačno povezanih korisnika: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake je spreman pomoći korisnicima zaobići cenzuru"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC funkcija nije otkrivena."
+   },
+   "possible": {
+      "message": "Sada je moguće umetnuti Snowflake značku na bilo koju web stranicu:"
+   },
+   "reportingBugs": {
+      "message": "Prijavljivanje grešaka"
+   },
+   "sharedAccount": {
+      "message": "Pošaljite datoteku \u003Ca href=\"https://anonticket.onionize.space/\">anonimni tiket\u003C/a> generiranjem identifikatora i prijavom s njim. Zatim pronađite projekt Snowflake u \u003Cstrong>Popisu svih projekata\u003C/strong> i izradite novi problem."
+   },
+   "support": {
+      "message": "Pogledajte temu \u003Ca href=\"https://support.torproject.org/censorship/\">Cenzura\u003C/a> na Torovom \u003Ca href=\"https://support.torproject.org/\">portalu za podršku\u003C/a>."
+   },
+   "websiteIntro": {
+      "message": "Snowflake (snježna pahuljica) je sustav za nadvladavanje internetske cenzure. Osobe pod cenzurom mogu koristiti Snowflake za pristup internetu. Njihova veza prolazi kroz Snowflake poslužitelje, kojima upravljaju volonteri. Za detaljnije informacije o tome kako radi Snowflake, pogledaj našu \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">wiki dokumentaciju\u003C/a>."
+   }
+}

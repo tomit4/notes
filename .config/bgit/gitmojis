@@ -1,0 +1,75 @@
+A full list can be found at:
+https://gitmoji.dev/
+
+:art: ............................. improve structure/format code ................................... 
+:zap: ............................. improve performance ............................................. ⚡️
+:fire: ............................ remove code or files ............................................ 
+:bug: ............................. fix a bug ....................................................... ﴫ
+:ambulance: ....................... critical hotfix ................................................. 🚑️
+:sparkles: ........................ introduce new features .......................................... 
+:memo: ............................ add or update documentation ..................................... 
+:rocket: .......................... deploy stuff .................................................... 異
+:lipstick: ........................ add or update the ui and style files ............................ 
+:tada: ............................ begin a project ................................................. 
+:white_check_mark: ................ add, update, or pass tests ...................................... 
+:lock: ............................ fix security issues ............................................. 🔒️
+:closed_lock_with_key: ............ add or update secrets ........................................... 
+:bookmark: ........................ release/version tags ............................................ 
+:rotating_light: .................. fix compiler/linter warnings .................................... ﲍ
+:construction: .................... work in progress ................................................ 
+:green_heart: ..................... fix ci build .................................................... 
+:arrow_down: ...................... downgrade dependencies .......................................... ﰬ
+:arrow_up: ........................ upgrade dependencies ............................................ ﰵ
+:pushpin: ......................... pin dependencies to specific versions ........................... 
+:construction_worker: ............. add or udpate CI build system ................................... 華
+:chart_with_upwards_trend: ........ add or update analytics or track code ........................... 
+:recycle: ......................... refactor code ................................................... 屢
+:heavy_plus_sign: ................. add a dependency ................................................ 
+:heavy_minus_sign: ................ remove a dependency ............................................. 
+:wrench: .......................... add or update configuration files ............................... 襁
+:hammer: .......................... add or update developement scripts .............................. 
+:globe_with_meridians: ............ internationalization and localization ........................... 🌐
+:pencil2: ......................... fix typos ....................................................... 
+:poop: ............................ write bad code that needs to be improved ........................ 
+:rewind: .......................... revert changes .................................................. ⏪️
+:twisted_rightwards_arrows ........ merge branches .................................................. 
+:package: ......................... add or update compiled files or packages ........................ 
+:alien: ........................... update code due to external api changes ......................... 
+:truck: ........................... move or rename resources (e.g. files, paths, routes) ............ 
+:page_facing_up: .................. add or update license ........................................... 
+:boom: ............................ introduce breaking changes ...................................... 
+:bento: ........................... add or udpate assets ............................................ ﳨ
+:wheelchair: ...................... improve accessibility............................................ 
+:bulb: ............................ add or update comments in source code ........................... ﯦ
+:beers: ........................... write code drunkenly ............................................ 
+:speech_balloon: .................. add or udpate text and literals ................................. 
+:card_file_box: ................... perform database related changes ................................ 
+:loud_sound: ...................... add or update logs .............................................. 
+:mute: ............................ remove logs ..................................................... 婢
+:busts_in_silhouette: ............. add or update contributor(s) .................................... 
+:children_crossing: ............... improve user experience/usability ............................... 
+:building_construction: ........... make architectural changes....................................... 
+:iphone: .......................... work on responsive design ....................................... 
+:clown_face: ...................... mock things ..................................................... 
+:egg: ............................. add or update easter egg ........................................ 
+:see_no_evil: ..................... add or update a .gitignore file .................................  
+:camera_flash: .................... add or update snapshots ......................................... 
+:alembic: ......................... perform experiments ............................................. 
+:mag: ............................. improve SEO ..................................................... 
+:label: ........................... add or udpate types ............................................. 
+:seedling: ........................ add or update seed files ........................................ 
+:triangular_flag_on_post: ......... add, update, or remove feature flags ............................ 
+:goal_net: ........................ catch errors .................................................... 
+:dizzy: ........................... add or update animations and transitions ........................ 💫
+:wastebasket: ..................... deprecate code that needs to be cleaned update .................. 
+:passport_control: ................ work on code related to authorization, roles, and permissions ... 
+:adhesive_bandages: ............... simple fix for a non-critical issue ............................. 🩹
+:monocole_face: ................... data exploration/inspection ..................................... 
+:coffin: .......................... remove dead code ................................................ ﮊ
+:test_tube: ....................... add a failing test .............................................. ﭧ
+:necktie: ......................... add or update business logic .................................... 礼
+:stethoscope: ..................... add or update healthcheck ....................................... 
+:bricks: .......................... infrastructure related changes .................................. 
+:technologist: .................... improve developer experience .................................... 
+:money_with_wings: ................ add sponsorships or money related infrastructure ................ 
+:thread: .......................... add or update code related to multithreading or concurrency...... 

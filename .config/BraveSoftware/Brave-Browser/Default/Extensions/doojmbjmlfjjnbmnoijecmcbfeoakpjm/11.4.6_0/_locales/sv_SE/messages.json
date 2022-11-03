@@ -1,0 +1,930 @@
+{
+   "Add": {
+      "description": "",
+      "message": "Lägg till"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "L"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "Ytterligare behörigheter för betrodda webbplatser"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "Ytterligare restriktioner för inte betrodda webbplatser"
+   },
+   "Allow": {
+      "description": "",
+      "message": "Tillåt"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "Tillåt webbplatser att öppnas via bokmärken"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "Tillåt att kopiera och klistra in formaterad text från externt urklipp"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "Tillåt lokala länkar"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "Tillåt allt på den här webbplatsen"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "Tillåt \u003CA PING…>"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "Tillåt webbplatser som öppnas via bokmärken"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "Blockera varje objekt som kommer från en webbplats som är markerad som inte betrodd"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "Ställ tillfälligt in sidor i högsta nivå till BETRODDA"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "Uppdatera aktuella sidor automatiskt när behörigheterna ändras"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "Uppdatera endast den aktuella fliken"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "Bas 2:a nivå domäner (noscript.net)"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": "Blockerat $1 av $2 objekt."
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "NoScript blockerade objekt"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "Säkerhetskopiera NoScript-konfiguration i ett bokmärke för enkel synkronisering"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "Avbryt"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "För över toppdokumentets behörigheter till tredjepartsskript"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "Any capability blocked in the top document must be blocked in its subdocuments too"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript avlyssnade en mus- eller tangentbordsinteraktion med ett delvis dolt element. Klicka på bilden nedan för att växla mellan den blockerade och den tydliga versionen."
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "Potentiell clickjacking / UI åtgärdar försök!"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "ClearClick-skydd på webbplatser..."
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "Rapportera"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "Rapport-ID:"
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "ClearClick-varning"
+   },
+   "Close": {
+      "description": "",
+      "message": "Stäng"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "Kollapsa blockerade objekt"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "Be om bekräftelse innan du tillfälligt blockerar ett objekt"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "Kontextuell meny"
+   },
+   "Custom": {
+      "description": "",
+      "message": "Anpassad"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "Förinställd anpassning (för alla webbplatser som delar en förinställning)"
+   },
+   "Default": {
+      "description": "",
+      "message": "Standard"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "Standardpolicyer"
+   },
+   "Description": {
+      "description": "",
+      "message": "Maximalt skydd för din webbläsare: NoScript tillåter aktivt innehåll endast för betrodda domäner som du väljer för att förhindra exploatering."
+   },
+   "Donate": {
+      "description": "",
+      "message": "Donera"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript is Free Software and can't exist without your help. Please donate now!"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "Donera"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "Inbäddningar"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "Aktivera begränsningar globalt"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "Aktivera begränsningar för den här fliken"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "Undantag..."
+   },
+   "Export": {
+      "description": "",
+      "message": "Exportera"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "Försök att åtgärda JavaScript-länkar"
+   },
+   "Hider": {
+      "description": "",
+      "message": "Släpp här för att dölja."
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "Hög kontrast"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "HTTPS-vanliga frågor..."
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "Tvinga följande webbplatser att använda säkra (HTTPS)-anslutningar:"
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "Tvinga aldrig säkra (HTTPS)-anslutningar till följande webbplatser:"
+   },
+   "Https_always": {
+      "description": "",
+      "message": "Alltid"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "Beteende"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Kakor"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "Förbjuda aktivt webbinnehåll om det inte kommer från en säker (HTTPS)-anslutning:"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "Aldrig"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "När du använder en proxy (rekommenderas med Tor)"
+   },
+   "Import": {
+      "description": "",
+      "message": "Importera"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "Behåll det här elementet låst (rekommenderat)"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "Mönstermatchning prov:"
+   },
+   "Next": {
+      "description": "",
+      "message": "Nästa"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "Inaktivera begränsningar globalt (farligt)"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "Inaktivera begränsningar för den här fliken"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "Ingen platshållare för objekt som kommer från platser markerade som opålitliga"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "Begränsningar inaktiverade"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "Aviseringar"
+   },
+   "Notify": {
+      "description": "",
+      "message": "Visa meddelande om blockerade skript"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "Visa meddelande om blockerade META-omdirigeringar"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "Placera meddelandet längst ner"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "Visa \u003CNOSCRIPT>element som följer en blockerad\u003CSCRIPT>"
+   },
+   "NselNever": {
+      "description": "",
+      "message": "Dölj \u003CNOSCRIPT> element"
+   },
+   "OK": {
+      "description": "",
+      "message": "OK"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "Återkalla tillfälliga behörigheter för NoScript-uppdateringar, även om webbläsaren inte startas om"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "Blockera CSS-baserade skannare"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "Sanera webbplatsöverskridande misstänkta förfrågningar"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "Förvandla webbplatsöverskridande POST-förfrågningar till mindre-data GET-förfrågningar"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "Aktivera inställning av permanenta behörigheter i inkognito/privata flikar.\nAKTA: att göra detta kan läcka webbplatsinformation!"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "Åsidosätt förinställning i Tor Browser för säkerhetsnivå"
+   },
+   "Options": {
+      "description": "",
+      "message": "Alternativ…"
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "NoScript-alternativ"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "Permanent \"Tillåt\"-kommandon i privata fönster"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "Du kan ange vilka webbplatser som får köra skript. Skriv adressen eller domänen (t. ex. \"http://www.site.com\" eller \"site.com\") av den webbplats du vill tillåta och klicka sedan på Tillåt."
+   },
+   "Plugins": {
+      "description": "",
+      "message": "Insticksmoduler"
+   },
+   "Policies": {
+      "description": "",
+      "message": "Riktlinjer"
+   },
+   "Preset": {
+      "description": "",
+      "message": "Säkerhetsnivå"
+   },
+   "Prev": {
+      "description": "",
+      "message": "Föregående"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "Nyligen blockerade webbplatser"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "Uppdatera"
+   },
+   "Reload": {
+      "description": "",
+      "message": "Uppdatera"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "Dessa alternativ kommer att träda i kraft på nya eller (manuellt) uppdaterade sidor"
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "Ta bort valda platser"
+   },
+   "Reset": {
+      "description": "",
+      "message": "Återställ"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "Återställ till standardvärden"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "Klicka här för att hämta knapparna som saknas..."
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "Återkalla tillfälliga behörigheter"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "Avancerat"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "Utseende"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "Allmänt"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "Behörigheter per webbplats"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "Aktivera automatisk säker hantering av kakor"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "Ignorera osäkra kakor som ställs in över HTTPS av följande webbplatser:"
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "Tvinga kryptering för alla kakor som ställs in över HTTPS av följande webbplatser:"
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "säkerhetshanterare"
+   },
+   "Show": {
+      "description": "",
+      "message": "Visa…"
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "Visa konsol..."
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "Visa bricka för antal blockerade objekt"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "Visa NoScript kontextuella menyalternativ"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "Lista fullständiga adresser i behörighetspopup (https://www.noscript.net)"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "Visa ikonen för platshållare"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "Visa versionsanteckningarna om uppdateringar"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "Webbplatsbehörigheter"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "Webbplatsspecifika policyer"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "Gör sidbehörigheter permanenta"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "Ställ in allt på den här webbplatsen till tillfälligt BETRODD"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "Markera som betrodd"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "Betrodd"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "betrodd"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "BETRODD"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "Tillfälligt betrodd"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "Avinstallera"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "Okänd"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "Osäker uppdatering"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "Markera som inte betrodd"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "Inte betrodd"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "inte betrodd"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "Sök eller lägg till en webbplats:"
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "Rensa XSS-val"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "Visa XSS-aviseringar"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "Tillåt denna förfråga"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "Tillåt alltid dokumentförfrågningar från $1 till $2"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "Blockera alltid dokumentförfrågningar från $1 till $2"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "Blockera denna förfråga"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "Sanera denna begäran"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript upptäckte en potentiell webbplatsöverskridande skript attack \nfrån $1 till $2.\nMisstänkta data:\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "NoScript XSS-varning"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "Undantag för Anti-XSS skydd"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "Destinationer som matchar dessa reguljära uttryck kommer INTE att skyddas mot XSS."
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "XSS-vanliga frågor…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "Om $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "Tillåt alla från $1"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "Inaktivera alla behörighetskontroller (farligt)"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "Tillåt $1"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "Tillåt tillfälligt $1"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "Tillåt tillfälligt alla från $1"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "För närvarande förbjudna skript"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "Delvis tillåtna skript"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "För närvarande tillåtna skript"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "Fråga alltid efter bekräftelse"
+   },
+   "anySite": {
+      "description": "",
+      "message": "ANY SITE"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "Ljudprover"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript har hittat ett konfigurationsbokmärke som till synes sparats på\n$1.\nVill du verkligen skriva över din lokala NoScript-konfiguration med detta bokmärkesinnehåll?"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "Det här bokmärket är INTE meningen att öppnas, men att det ska synkroniseras med hjälp av en tjänst som Weave eller XMarks-förlängningen."
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "NoScript-konfigurationsbokmärke"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "hämta"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "typsnitt"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "ram"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "LAN"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "media"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "objekt"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "andra"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "skript"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "unrestricted CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "webgl"
+   },
+   "caps": {
+      "description": "",
+      "message": "Enable these capabilities"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "Enable these capabilities when top page matches"
+   },
+   "changelog": {
+      "description": "",
+      "message": "Ändringslogg"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "Visa ändringslogg"
+   },
+   "confirm": {
+      "description": "",
+      "message": "Är du säker?"
+   },
+   "disable": {
+      "description": "",
+      "message": "Inaktivera $1"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "Markera $1 som inte betrodd"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "Bidragsgivare:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "Personer du bör tacka för det här tillägget"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "Författare:"
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "Besök författarens webbplats"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "Besök tilläggets webbplats"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "Förbjud skript globalt (rekommenderas)"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "Förbjud $1"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "För att kunna fungera på den här fliken måste NoScript uppdatera den.\nFortsätt?"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "Matcha endast HTTPS-innehåll"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\"\när oförenlig med \"$2\".\nVill du aktivera den förra och inaktivera den senare?"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "Oförenliga alternativ varning"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "Besök InformActions webbplats"
+   },
+   "license": {
+      "description": "",
+      "message": "Licens"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "Läs slutanvändarlicens"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "Besök tilläggets webbplats"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript blockerade en \u003CMETA> omdirigering inuti ett \u003CNOSCRIPT> element: $1 på $2 sekunder."
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "Detta är en privilegierad webbplats, vars behörigheter inte kan konfigureras."
+   },
+   "removal_message": {
+      "description": "",
+      "message": "Genom att inaktivera eller avinstallera NoScript, ger du upp alla skydd som tillhandahålls av NoScript.\n\nOm du bara är trött på att hantera skriptbehörigheter per webbplats, finns det ett säkrare val.\n\nNoScript kan sluta blockera skript, förutom de som du markerar som inte betrodda, samtidigt som du skyddar dig med de mest avancerade säkerhetsåtgärderna mot XSS, Clickjacking, CSRF och andra webbhot.\n\nVill du verkligen ta bort ALLA NoScript-skydd?"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "Nej, sluta bara att blockera skript"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "Säkerhetsdegradering varning"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "Ja, ta bort ALLA skydd"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "Återställ NoScript"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "ALLA NoScript-inställningarna och platsbehörigheterna återställs till deras standardvärden omedelbart.\nDen här åtgärden kan inte återställas.\nVill du fortsätta?"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "Theme"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "Du är på väg att be om information om \"$1\"-webbplatsen\ngenom att skicka en fråga till $2.\nVill du fortsätta?"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "Mellanklick eller skift+klick för webbplatsinformation..."
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "Besök sponsorns webbplats"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "Auto"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "Dark"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "Light"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "OSÄKERT uppdatering av en misstänkt\n\n$1 [$2]\n\nFRÅN [$3]\n\nNoScript skyddar inte den här begäran!"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "ett inte betrott ursprung"
+   },
+   "version": {
+      "description": "",
+      "message": "Version $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

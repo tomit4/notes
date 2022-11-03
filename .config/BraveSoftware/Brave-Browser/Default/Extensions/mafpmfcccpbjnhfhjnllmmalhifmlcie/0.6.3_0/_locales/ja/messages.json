@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": ""
+   },
+   "appDesc": {
+      "message": "検閲されている国にいるユーザーがあなたのネットワークを使って Tor ネットワークに接続するのを手助けします。"
+   },
+   "badgeCookiesOff": {
+      "message": "Cookie が有効になっていません。"
+   },
+   "browser": {
+      "message": ""
+   },
+   "bugTracker": {
+      "message": "Tor Project の GitLab から\u003Ca href=\"https://gitlab.onionize.space/\">アカウントをリクエスト\u003C/a>し、Snowflake プロジェクトで\u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">課題を開きます\u003C/a>。"
+   },
+   "censoredUsers": {
+      "message": ""
+   },
+   "contactSnowflakeDevs": {
+      "message": ""
+   },
+   "descriptive": {
+      "message": "バグに関する情報をできるだけ詳細に説明するようにしてください。可能であればバグを再現するのに役立つログメッセージも記載してください。"
+   },
+   "embed": {
+      "message": "埋め込む"
+   },
+   "extension": {
+      "message": ""
+   },
+   "faq": {
+      "message": ""
+   },
+   "fileBug": {
+      "message": ""
+   },
+   "howSnowflakeWorks": {
+      "message": "Snowflake の動作原理についての詳細"
+   },
+   "installChrome": {
+      "message": "Chrome にインストールする"
+   },
+   "installExtension": {
+      "message": ""
+   },
+   "installFirefox": {
+      "message": "Firefox にインストールする"
+   },
+   "installOptions": {
+      "message": ""
+   },
+   "installStandalone": {
+      "message": ""
+   },
+   "installWebExtension": {
+      "message": ""
+   },
+   "installWebExtensionIntro": {
+      "message": "Web 拡張機能をインストール"
+   },
+   "popupBridgeUnreachable": {
+      "message": "ブリッジに接続できませんでした。"
+   },
+   "popupDescOn": {
+      "message": "Snowflake が過去 24 時間に検閲回避を支援したユーザーの数: $1"
+   },
+   "popupEnabled": {
+      "message": "常駐する"
+   },
+   "popupLearnMore": {
+      "message": "さらに知る"
+   },
+   "popupRetry": {
+      "message": "再試行"
+   },
+   "popupRetrying": {
+      "message": "再試行中..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake はオフです"
+   },
+   "popupStatusOn": {
+      "message": "現在接続しているユーザー数: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake は、ユーザーの検閲回避を支援する準備ができました。"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC 機能が見つかりませんでした"
+   },
+   "possible": {
+      "message": ""
+   },
+   "reportingBugs": {
+      "message": "バグを報告中です"
+   },
+   "sharedAccount": {
+      "message": ""
+   },
+   "snowflakeTechOverview": {
+      "message": ""
+   },
+   "support": {
+      "message": ""
+   },
+   "volunteer": {
+      "message": ""
+   },
+   "webBadgeInstructions": {
+      "message": ""
+   },
+   "webBadgeTitle": {
+      "message": ""
+   },
+   "websiteIntro": {
+      "message": ""
+   },
+   "websiteIntro2": {
+      "message": ""
+   },
+   "websiteIntro3": {
+      "message": ""
+   }
+}

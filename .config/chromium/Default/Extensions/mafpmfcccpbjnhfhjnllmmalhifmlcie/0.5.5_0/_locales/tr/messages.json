@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake, Tor için bir WebRTC değiştirilebilir taşıyıcısıdır."
+   },
+   "badgeCookiesOff": {
+      "message": "Çerezler etkin değil."
+   },
+   "browser": {
+      "message": "Snowflake kullanılsın"
+   },
+   "bugTracker": {
+      "message": "Tor Project GitLab üzerinde \u003Ca href=\"https://gitlab.onionize.space/\">bir hesap açılmasını istedikten\u003C/a> sonra Snowflake projesinde \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">yeni bir sorun bildirebilirsiniz\u003C/a>."
+   },
+   "censoredUsers": {
+      "message": "İnternet erişiminiz sansürleniyorsa \u003Ca href=\"https://www.torproject.org/download/\">Tor Browser\u003C/a> uygulamasını indirmelisiniz."
+   },
+   "descriptive": {
+      "message": "Lütfen bildirim kaydında olabildiğince açıklayıcı olun ve yapabiliyorsanız hatayı yeniden oluşturmamıza yardımcı olabilecek günlük kayıtlarını ekleyin."
+   },
+   "embed": {
+      "message": "Ekleme"
+   },
+   "extension": {
+      "message": "Bir vekil sunucu çalıştır"
+   },
+   "faq": {
+      "message": "SSS"
+   },
+   "fileBug": {
+      "message": "Bir istemci ya da vekil sunucu olarak Snowflake kullanırken sorun yaşarsanız, hata bildiriminde bulunmanız iyi olur. Hata bildirimini iki şekilde gönderebilirsiniz:"
+   },
+   "installChrome": {
+      "message": "Chrome üzerine kurulum"
+   },
+   "installExtension": {
+      "message": "İnternet erişiminiz \u003Cstrong>sansürlenmiyorsa\u003C/strong>, sansürlenen ağlardaki kullanıcılara yardımcı olmak için Snowflake uzantısını kurabilirsiniz. Diğer kullanıcıların vekil sunucunuz üzerinden eriştiği sayfalar hakkında endişelenmeniz gerekmez. Bu kullanıcıların görülebilecek IP adresleri sizin değil Tor çıkış durağının adresi olur."
+   },
+   "installFirefox": {
+      "message": "Firefox üzerine kurulum"
+   },
+   "installStandalone": {
+      "message": "Masaüstü bilgisayarınızda ya da sunucunuzda Snowflake vekil sunucusunun komut satırı sürümünü çalıştırmak istiyorsanız, bağımsız bir Snowflake vekil sunucusu çalıştırmak hakkındaki \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">topluluk belgemize\u003C/a> bakabilirsiniz."
+   },
+   "looksLike": {
+      "message": "Şu şekilde görüntülenir:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Köprü ile bağlantı kurulamadı."
+   },
+   "popupDescOn": {
+      "message": "Snowflake uygulamanız son 24 saatte $1 kullanıcının sansürü aşmasına yardımcı oldu."
+   },
+   "popupEnabled": {
+      "message": "Etkin"
+   },
+   "popupLearnMore": {
+      "message": "Ayrıntılı bilgi alın"
+   },
+   "popupRetry": {
+      "message": "Yeniden dene"
+   },
+   "popupRetrying": {
+      "message": "Yeniden deneniyor..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake kapalı"
+   },
+   "popupStatusOn": {
+      "message": "Şu anda bağlı olan kullanıcı sayısı: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake uygulamanız kullanıcıların sansürü aşmasına yardımcı olmaya hazır"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC özelliği algılanamadı."
+   },
+   "possible": {
+      "message": "Artık Snowflake logosunu istediğiniz web sitesine ekleyebilirsiniz."
+   },
+   "reportingBugs": {
+      "message": "Hata bildirimi"
+   },
+   "sharedAccount": {
+      "message": "Bir belirteç üretip onunla oturum açarak \u003Ca href=\"https://anonticket.onionize.space/\">anonim bir destek kaydı\u003C/a> gönderebilirsiniz. Daha sonra \u003Cstrong>tüm projeler listesine\u003C/strong> giderek Snowflake projesini bulun ve yeni bir sorun bildirin."
+   },
+   "support": {
+      "message": "Tor \u003Ca href=\"https://support.torproject.org/\">Destek Portalında\u003C/a> bulunan \u003Ca href=\"https://support.torproject.org/censorship/\">Sansür\u003C/a> başlığına bakabilirsiniz."
+   },
+   "websiteIntro": {
+      "message": "Snowflake İnternet sansürünü aşmaya yönelik bir sistemdir. Sansüre uğrayan kişiler, Snowflake kullanarak İnternete erişebilir. Bağlantı, gönüllüler tarafından işletilen Snowflake vekil sunucuları üzerinden kurulur. Snowflake hakkında ayrıntılı bilgi almak için \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">belgeler viki\u003C/a> sayfamıza bakabilirsiniz."
+   }
+}

@@ -1,0 +1,155 @@
+{
+   "add_site_to_list": {
+      "message": "Dodajte sajt na listu"
+   },
+   "automation": {
+      "message": "Automacija"
+   },
+   "brightness": {
+      "message": "Osvetljenje"
+   },
+   "change_browser_theme": {
+      "message": "Promenite temu pregledača"
+   },
+   "contrast": {
+      "message": "Kontrast"
+   },
+   "custom_browser_theme_off": {
+      "message": "Difolt"
+   },
+   "custom_browser_theme_on": {
+      "message": "Podešena"
+   },
+   "dark": {
+      "message": "Tamni"
+   },
+   "donate": {
+      "message": "Donirajte"
+   },
+   "engine_dynamic": {
+      "message": "Dinamično"
+   },
+   "engine_filter": {
+      "message": "Filter"
+   },
+   "engine_filter_plus": {
+      "message": "Filter+"
+   },
+   "engine_static": {
+      "message": "Statično"
+   },
+   "extension_description": {
+      "message": "Tamni mod za svaki sajt. Pazite na svoje oči, koristite tamnu temu danju i noću."
+   },
+   "filter": {
+      "message": "Filter"
+   },
+   "grayscale": {
+      "message": "Sivi mod"
+   },
+   "help": {
+      "message": "Pomoć"
+   },
+   "invert_listed_only": {
+      "message": "Invertujte izlistane"
+   },
+   "latitude": {
+      "message": "Latituda"
+   },
+   "light": {
+      "message": "Svetli"
+   },
+   "loading_please_wait": {
+      "message": "Učitavanje, molimo sačekajte"
+   },
+   "longitude": {
+      "message": "Longituda"
+   },
+   "mode": {
+      "message": "Mod"
+   },
+   "more": {
+      "message": "Više"
+   },
+   "news": {
+      "message": "Vesti"
+   },
+   "not_invert_listed": {
+      "message": "Ne invertujte izlistane"
+   },
+   "off": {
+      "message": "Isklj."
+   },
+   "on": {
+      "message": "Uklj."
+   },
+   "only_for": {
+      "message": "Samo za"
+   },
+   "only_for_description": {
+      "message": "Primenite podešavanja samo za trenutni sajt"
+   },
+   "open_dev_tools": {
+      "message": "Alatke za razvoj"
+   },
+   "page_in_dark_list": {
+      "message": "Ovaj sajt je u globalnoj\nlisti tamnih sajtova"
+   },
+   "page_protected": {
+      "message": "Ovu stranicu štiti\nveb pregledač"
+   },
+   "privacy": {
+      "message": "Privatnost"
+   },
+   "read_more": {
+      "message": "Čitajte više"
+   },
+   "select_font": {
+      "message": "Izaberite font"
+   },
+   "sepia": {
+      "message": "Sepija"
+   },
+   "set_active_hours": {
+      "message": "Podesite aktivne sate"
+   },
+   "set_location": {
+      "message": "Aktivirajte po zalaski sunca"
+   },
+   "setup_add_site_hotkey": {
+      "message": "Podesite dugme za dodavanje sajta"
+   },
+   "setup_hotkey_toggle_extension": {
+      "message": "Podesite ekstenziju\nuklj. dugme"
+   },
+   "setup_hotkey_toggle_site": {
+      "message": "Podesite trenutni sajt\nuklj. dugme"
+   },
+   "site_list": {
+      "message": "Lista sajtova"
+   },
+   "store_listing": {
+      "message": "Ova ekstenzija brine o vašim očima tako što omogućava tamnu temu za sajtove. Dark Reader invertuje svetle boje i pojačava kontrast što omogućava lakše čitanje noću.\n\nMožete podesiti osvetljenje, kontrast, sepija filter, tamni mod, font i listu ignorisanih sajtova.\n\nDark Reader ne prikazuje reklame i nigde ne šalje podatke korisnika. Kod ekstenzije je upotpunosti otvoren: https://github.com/darkreader/darkreader\n\nPre instalacije, isključite druge slične ekstenzije. Uživajte!"
+   },
+   "system_dark_mode": {
+      "message": "Koristite temu sistema"
+   },
+   "system_dark_mode_description": {
+      "message": "Aktivacija kada sistem koristi tamni mod"
+   },
+   "text_stroke": {
+      "message": "Debljina teksta"
+   },
+   "theme_generation_mode": {
+      "message": "Mod generacije tema"
+   },
+   "toggle_current_site": {
+      "message": "Uklj. trenutni sajt"
+   },
+   "toggle_extension": {
+      "message": "Uklj. ekstenziju"
+   },
+   "try_experimental_theme_engines": {
+      "message": "Probajte **eksperimentalne** teme:\n**Filter+** čuva saturaciju boja, koristi GPU\n**Statična tema** kreira prostu brzu temu\n**Dinamična tema** analizira boje i slike"
+   }
+}

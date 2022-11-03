@@ -1,0 +1,1562 @@
+{
+   "checksum": "237b6862b3f6c32f983561e870943f72",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13306208070000000",
+            "guid": "3f212844-1901-41e6-80a4-8d1d2bccb1ac",
+            "id": "5",
+            "name": "Sign in · GitLab",
+            "type": "url",
+            "url": "https://gitlab.com/users/sign_in/"
+         }, {
+            "date_added": "13306222651000000",
+            "guid": "1cccf568-8ef5-48fa-a586-f3aa9a8961f1",
+            "id": "6",
+            "name": "Courses Dashboard | Wes Bos",
+            "type": "url",
+            "url": "https://courses.wesbos.com/account/signin"
+         }, {
+            "date_added": "13306313500000000",
+            "guid": "7493b232-0c17-4756-90dc-f69d949faef4",
+            "id": "7",
+            "name": "Mothereffing HSL",
+            "type": "url",
+            "url": "https://mothereffinghsl.com/"
+         }, {
+            "date_added": "13306313637000000",
+            "guid": "3b6f9a8b-54cb-4fd6-98c9-60f2077fac4d",
+            "id": "8",
+            "name": "Icon Font & SVG Icon Sets ❍ IcoMoon",
+            "type": "url",
+            "url": "https://icomoon.io/"
+         }, {
+            "date_added": "13306594491000000",
+            "guid": "dcacd3ea-bab3-496b-b842-4020d2957572",
+            "id": "9",
+            "name": "DevDocs API Documentation",
+            "type": "url",
+            "url": "https://devdocs.io/"
+         }, {
+            "date_added": "13306717438000000",
+            "guid": "90c3a6c0-4df2-43ae-984c-43ac23612100",
+            "id": "10",
+            "name": "Get .CRX Chrome Extension file, it's source code and download .CRX to your computer.",
+            "type": "url",
+            "url": "https://crxextractor.com/"
+         }, {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13293806857000000",
+                  "guid": "d8d83a4d-6d90-42dd-bc4f-ebc773bf1b56",
+                  "id": "189",
+                  "name": "yt-dlp/supportedsites.md at master · yt-dlp/yt-dlp · GitHub",
+                  "type": "url",
+                  "url": "https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md"
+               }, {
+                  "date_added": "13294186746000000",
+                  "guid": "66398563-ac72-4117-8167-45f2e74134d4",
+                  "id": "190",
+                  "name": "kitty",
+                  "type": "url",
+                  "url": "https://sw.kovidgoyal.net//kitty/"
+               }, {
+                  "date_added": "13295586938000000",
+                  "guid": "e19358c2-5b03-40df-b503-e8e907e93c23",
+                  "id": "191",
+                  "name": "NCURSES Programming HOWTO",
+                  "type": "url",
+                  "url": "https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/"
+               }, {
+                  "date_added": "13295586941000000",
+                  "guid": "2d8b6c25-ab20-4f94-9321-b623c52fcda2",
+                  "id": "192",
+                  "name": "The Linux Documentation Project",
+                  "type": "url",
+                  "url": "https://tldp.org/"
+               }, {
+                  "date_added": "13295587038000000",
+                  "guid": "01f4c9d7-c572-40d6-a578-91ccebbe7a17",
+                  "id": "193",
+                  "name": "Dev1 Galaxy Forum",
+                  "type": "url",
+                  "url": "https://dev1galaxy.org/"
+               }, {
+                  "date_added": "13295603344000000",
+                  "guid": "409378fb-ce0e-49b8-910d-b4a661e0b854",
+                  "id": "194",
+                  "name": "RARBG Rarbg Index page",
+                  "type": "url",
+                  "url": "https://rarbg.to/index80.php"
+               }, {
+                  "date_added": "13295805504000000",
+                  "guid": "e7adc392-0009-4755-b10f-c724974db6c8",
+                  "id": "195",
+                  "name": "Odysee",
+                  "type": "url",
+                  "url": "https://odysee.com/"
+               }, {
+                  "date_added": "13295831941000000",
+                  "guid": "c7743fe3-20f0-457d-86db-148d2caa60b0",
+                  "id": "196",
+                  "name": "mirrors.dotsrc.org",
+                  "type": "url",
+                  "url": "https://mirrors.dotsrc.org/artix-linux/"
+               }, {
+                  "date_added": "13295985068000000",
+                  "guid": "86f28c0b-317c-4108-9419-4a2f92b1d4ef",
+                  "id": "197",
+                  "name": "Secure email: ProtonMail is free encrypted email.",
+                  "type": "url",
+                  "url": "https://protonmail.com/"
+               }, {
+                  "date_added": "13296176444000000",
+                  "guid": "a177bb15-01ad-4768-a602-9da18d06abb6",
+                  "id": "198",
+                  "name": "Codeberg.org",
+                  "type": "url",
+                  "url": "https://codeberg.org/"
+               }, {
+                  "date_added": "13296680963000000",
+                  "guid": "bfd6abcd-cfec-450c-a28e-b5abccf7cb0b",
+                  "id": "199",
+                  "name": "Linux.org",
+                  "type": "url",
+                  "url": "https://www.linux.org/"
+               }, {
+                  "date_added": "13296680992000000",
+                  "guid": "eb6e59d8-9bb7-48e8-bcba-63a8935931e7",
+                  "id": "200",
+                  "name": "LinuxQuestions.org",
+                  "type": "url",
+                  "url": "https://www.linuxquestions.org/"
+               }, {
+                  "date_added": "13298494480000000",
+                  "guid": "e9ea167a-21f2-4986-be15-1895a5369b18",
+                  "id": "201",
+                  "name": "Sheldon Brown-Bicycle Technical Information",
+                  "type": "url",
+                  "url": "https://sheldonbrown.com/"
+               }, {
+                  "date_added": "13298669364000000",
+                  "guid": "1867291b-3d3f-4bb7-bf9b-766c0dcd3405",
+                  "id": "202",
+                  "name": "C Tutorial",
+                  "type": "url",
+                  "url": "https://www.demo2s.com/c/c.html"
+               }, {
+                  "date_added": "13298669372000000",
+                  "guid": "09997dbe-3426-4619-a6b2-2ec736b16115",
+                  "id": "203",
+                  "name": "Learn C - Free Interactive C Tutorial",
+                  "type": "url",
+                  "url": "https://www.learn-c.org/"
+               }, {
+                  "date_added": "13298671818000000",
+                  "guid": "6fdded73-3145-4ec7-9946-14464a6dd8e2",
+                  "id": "204",
+                  "name": "C programming | Programming Simplified",
+                  "type": "url",
+                  "url": "https://www.programmingsimplified.com/c/"
+               }, {
+                  "date_added": "13298675812000000",
+                  "guid": "a9e584f1-9438-4981-bbfa-616fc52e8cd6",
+                  "id": "205",
+                  "name": "My st (suckless terminal) Build: The Even Bester Terminal! - YouTube",
+                  "type": "url",
+                  "url": "https://www.youtube.com/watch?v=FJmm7wl4JUI"
+               }, {
+                  "date_added": "13298683480000000",
+                  "guid": "4d2cbb07-ca88-442c-aa8c-b08947cef5a0",
+                  "id": "206",
+                  "name": "https://tronche.com/gui/x/xlib/",
+                  "type": "url",
+                  "url": "https://tronche.com/gui/x/xlib/"
+               }, {
+                  "date_added": "13298683849000000",
+                  "guid": "ca3b26d3-a931-4f94-bb4a-1b0a655ec42b",
+                  "id": "207",
+                  "name": "X.Org",
+                  "type": "url",
+                  "url": "https://www.x.org/wiki/"
+               }, {
+                  "date_added": "13298956825000000",
+                  "guid": "907a5724-1edc-44b0-8044-798ac4db6fe0",
+                  "id": "208",
+                  "name": "Introduction to File Locking in Linux | Baeldung on Linux",
+                  "type": "url",
+                  "url": "https://www.baeldung.com/linux/file-locking"
+               }, {
+                  "date_added": "13298958003000000",
+                  "guid": "340a5bb2-051f-443d-90eb-00881d9df36b",
+                  "id": "209",
+                  "name": "crifo.org",
+                  "type": "url",
+                  "url": "https://crifo.org/"
+               }, {
+                  "date_added": "13299376299000000",
+                  "guid": "3ff29457-2fb9-41de-8b0c-aaa493fc04a7",
+                  "id": "210",
+                  "name": "LeetCode - The World's Leading Online Programming Learning Platform",
+                  "type": "url",
+                  "url": "https://leetcode.com/"
+               }, {
+                  "date_added": "13299387830000000",
+                  "guid": "18e06e5a-71b7-4821-9756-ab0247a2f3e7",
+                  "id": "211",
+                  "name": "Privacy by default | Proton",
+                  "type": "url",
+                  "url": "https://proton.me/"
+               }, {
+                  "date_added": "13299558058000000",
+                  "guid": "6879a8a9-fabc-4d25-a9be-6395ab7b357c",
+                  "id": "212",
+                  "name": "The UNIX and Linux Forums - Free Tech Support",
+                  "type": "url",
+                  "url": "https://www.unix.com/"
+               }, {
+                  "date_added": "13299740692000000",
+                  "guid": "7b1640dd-52ec-4a8d-8c9b-4bcbb9d885e8",
+                  "id": "213",
+                  "name": "The linux-kernel mailing list FAQ",
+                  "type": "url",
+                  "url": "http://vger.kernel.org/lkml/"
+               }, {
+                  "date_added": "13299752141000000",
+                  "guid": "2311d460-7a8f-4b87-a9d5-54fc6bd8cdf9",
+                  "id": "214",
+                  "name": "The Linux Kernel",
+                  "type": "url",
+                  "url": "https://tldp.org/LDP/tlk/tlk.html"
+               }, {
+                  "date_added": "13299803264000000",
+                  "guid": "b8b9afac-4158-41aa-96ac-491afe650554",
+                  "id": "215",
+                  "name": "Show Your Screenshots Here - Page 4",
+                  "type": "url",
+                  "url": "https://forum.artixlinux.org/index.php/topic,8.msg26772/boardseen.html#new"
+               }, {
+                  "date_added": "13299900655000000",
+                  "guid": "5189b871-3b03-48ea-a476-735ea7e45995",
+                  "id": "216",
+                  "name": "Bash Guide for Beginners",
+                  "type": "url",
+                  "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html"
+               }, {
+                  "date_added": "13299999916000000",
+                  "guid": "0a49b5ae-4346-4de9-b920-3e48a8b19f14",
+                  "id": "217",
+                  "name": "1 Introduction",
+                  "type": "url",
+                  "url": "https://www.lysator.liu.se/c/rat/a.html#1-1"
+               }, {
+                  "date_added": "13300360867000000",
+                  "guid": "f97949eb-8d6b-4e38-b2e9-ad0ff22952ab",
+                  "id": "218",
+                  "name": "Jan Schaumann",
+                  "type": "url",
+                  "url": "https://stevens.netmeister.org/"
+               }, {
+                  "date_added": "13300451225000000",
+                  "guid": "3f5b0794-f0fe-4515-a864-b18b264ca2cb",
+                  "id": "219",
+                  "name": "google webfonts helper",
+                  "type": "url",
+                  "url": "https://google-webfonts-helper.herokuapp.com/fonts"
+               }, {
+                  "date_added": "13300458117000000",
+                  "guid": "b62724fd-a72c-4cb1-8d6a-51b683c874ff",
+                  "id": "220",
+                  "name": "gitmoji | An emoji guide for your commit messages",
+                  "type": "url",
+                  "url": "https://gitmoji.dev/"
+               }, {
+                  "date_added": "13300463046000000",
+                  "guid": "97005890-77b7-45a8-9de8-b428c468eff2",
+                  "id": "221",
+                  "name": "The world’s fastest framework for building websites | Hugo",
+                  "type": "url",
+                  "url": "https://gohugo.io/"
+               }, {
+                  "date_added": "13300464543000000",
+                  "guid": "c11a9b6e-ca94-4787-86f5-a604804c54fe",
+                  "id": "222",
+                  "name": "Iconify",
+                  "type": "url",
+                  "url": "https://iconify.design/"
+               }, {
+                  "date_added": "13300774916000000",
+                  "guid": "968ad507-7cda-4789-b6cd-04b290e52146",
+                  "id": "223",
+                  "name": "Sorting Algorithms In C | C Program For Sorting | Edureka",
+                  "type": "url",
+                  "url": "https://www.edureka.co/blog/sorting-algorithms-in-c/"
+               }, {
+                  "date_added": "13300776739000000",
+                  "guid": "69f1c407-701f-4853-b6aa-b5f049a9ee1c",
+                  "id": "224",
+                  "name": "Techie Delight | Ace your Coding Interview",
+                  "type": "url",
+                  "url": "https://www.techiedelight.com/"
+               }, {
+                  "date_added": "13300825189000000",
+                  "guid": "450e41f9-6cbd-4062-a096-ab66b4d16341",
+                  "id": "225",
+                  "name": "Basic Graphics Programming With The XCB Library",
+                  "type": "url",
+                  "url": "https://www.x.org/releases/X11R7.5/doc/libxcb/tutorial/"
+               }, {
+                  "date_added": "13300976371000000",
+                  "guid": "faf350f2-b840-4313-939b-e94c9d3086fd",
+                  "id": "226",
+                  "name": "Alex Blackie",
+                  "type": "url",
+                  "url": "https://www.alexblackie.com/"
+               }, {
+                  "date_added": "13301074742000000",
+                  "guid": "3e7e2758-0f2f-4675-a82c-a431195edb26",
+                  "id": "227",
+                  "name": "getopt() function in C to parse command line arguments",
+                  "type": "url",
+                  "url": "https://www.tutorialspoint.com/getopt-function-in-c-to-parse-command-line-arguments"
+               }, {
+                  "date_added": "13301178285000000",
+                  "guid": "3d06a282-d7cd-4037-bad0-4938ded343ed",
+                  "id": "228",
+                  "name": "LinuxQuestions.org - where Linux users come for help",
+                  "type": "url",
+                  "url": "https://www.linuxquestions.org/questions/index.php"
+               }, {
+                  "date_added": "13301179405000000",
+                  "guid": "ccf4bac8-a4cb-4d9a-ab9d-fa2234e88845",
+                  "id": "229",
+                  "name": "Aaron Swartz - Wikipedia",
+                  "type": "url",
+                  "url": "https://en.wikipedia.org/wiki/Aaron_Swartz#Congress"
+               }, {
+                  "date_added": "13301345992000000",
+                  "guid": "9837062f-d0e5-47d4-bad7-f1de2f17d945",
+                  "id": "230",
+                  "name": "Stranger Things - Wikipedia",
+                  "type": "url",
+                  "url": "https://en.wikipedia.org/wiki/Stranger_things#Video_games"
+               }, {
+                  "date_added": "13301952126000000",
+                  "guid": "41e65f8a-504a-433a-b33b-4572e15c825b",
+                  "id": "231",
+                  "name": "Buy a domain name - Register cheap domain names from $0.99 - Namecheap",
+                  "type": "url",
+                  "url": "https://www.namecheap.com/"
+               }, {
+                  "date_added": "13302040973000000",
+                  "guid": "abfd62d4-598e-4192-9590-dc9bf28c709d",
+                  "id": "232",
+                  "name": "Welcome to leafbytes!",
+                  "type": "url",
+                  "url": "https://leafbytes.com/"
+               }, {
+                  "date_added": "13302201347000000",
+                  "guid": "0d639cb1-af2f-4a74-ab24-05da5cb44988",
+                  "id": "233",
+                  "name": "Prism",
+                  "type": "url",
+                  "url": "https://prismjs.com/"
+               }, {
+                  "date_added": "13302886510000000",
+                  "guid": "0a660d52-a78b-4c44-9acb-630946c9524e",
+                  "id": "234",
+                  "name": "Untangled",
+                  "type": "url",
+                  "url": "https://roy.gbiv.com/untangled/"
+               }, {
+                  "date_added": "13303079331000000",
+                  "guid": "cdf41435-66a8-48f4-abc0-41f0b51f0d1a",
+                  "id": "235",
+                  "name": "Codinhood | Codinhood",
+                  "type": "url",
+                  "url": "https://codinhood.com/"
+               }, {
+                  "date_added": "13303387801000000",
+                  "guid": "81ee1a1a-a20c-425b-ae5b-f5047a089986",
+                  "id": "236",
+                  "name": "Bun is a fast all-in-one JavaScript runtime",
+                  "type": "url",
+                  "url": "https://bun.sh/"
+               }, {
+                  "date_added": "13303387938000000",
+                  "guid": "9787bbd6-9683-4f54-8935-4198e587da09",
+                  "id": "237",
+                  "name": "LanguageTool - Open Source",
+                  "type": "url",
+                  "url": "https://languagetool.org/dev"
+               }, {
+                  "date_added": "13303433199000000",
+                  "guid": "19d1e5a6-c7c1-4673-aa67-a0d38352e03e",
+                  "id": "238",
+                  "name": "CSSBattle - the CSS code-golfing game!",
+                  "type": "url",
+                  "url": "https://cssbattle.dev/"
+               }, {
+                  "date_added": "13303590080000000",
+                  "guid": "d83a5b6d-a0ff-4142-bdb1-c0e449d7bd0b",
+                  "id": "239",
+                  "name": "Load balancing (computing) - Wikipedia",
+                  "type": "url",
+                  "url": "https://en.wikipedia.org/wiki/Load_balancing_(computing)"
+               }, {
+                  "date_added": "13304069631000000",
+                  "guid": "1c404780-45f0-4259-a212-985c1cee09b8",
+                  "id": "240",
+                  "name": "Artix needs your help - Page 2",
+                  "type": "url",
+                  "url": "https://forum.artixlinux.org/index.php/topic,508.50.html"
+               }, {
+                  "date_added": "13304205937000000",
+                  "guid": "c88af141-50b2-4656-b462-0fa10f5bec96",
+                  "id": "241",
+                  "name": "CSS Border Radius | A Quick Glance of CSS Border Radius | Examples",
+                  "type": "url",
+                  "url": "https://www.educba.com/css-border-radius/"
+               }, {
+                  "date_added": "13304267267000000",
+                  "guid": "8b35ff89-2a90-4707-90bd-9edf61d8a450",
+                  "id": "242",
+                  "name": "Build the portfolio you need to be a badass web developer. | egghead.io",
+                  "type": "url",
+                  "url": "https://egghead.io/"
+               }, {
+                  "date_added": "13304276552000000",
+                  "guid": "3159f7c7-b9dc-48e8-b961-008242b251f0",
+                  "id": "243",
+                  "name": "Programming Language Tutorials",
+                  "type": "url",
+                  "url": "https://www.demo2s.com/"
+               }, {
+                  "date_added": "13304350932000000",
+                  "guid": "a1a739e2-a847-47df-b40e-59dac0c47c17",
+                  "id": "244",
+                  "name": "Dropdown Animations with CSS Transforms",
+                  "type": "url",
+                  "url": "https://codepen.io/codypearce/pen/PdBXpj"
+               }, {
+                  "date_added": "13304358431000000",
+                  "guid": "baf40afe-3def-4ca6-a117-520f33e8d3a4",
+                  "id": "245",
+                  "name": "unixsheikh.com",
+                  "type": "url",
+                  "url": "https://www.unixsheikh.com/"
+               }, {
+                  "date_added": "13304437722000000",
+                  "guid": "7233409d-c4e9-4cae-b876-a01201eb6f33",
+                  "id": "246",
+                  "name": "Nvim documentation: spell",
+                  "type": "url",
+                  "url": "https://neovim.io/doc/user/spell.html"
+               }, {
+                  "date_added": "13304441310000000",
+                  "guid": "349f31af-844f-48ef-bf37-245ac23c7d58",
+                  "id": "247",
+                  "name": "nginx news",
+                  "type": "url",
+                  "url": "https://nginx.org/"
+               }, {
+                  "date_added": "13304443478000000",
+                  "guid": "6df6c373-9fa2-4858-8b1d-9760c2a48c6c",
+                  "id": "248",
+                  "name": "Docker Hub",
+                  "type": "url",
+                  "url": "https://hub.docker.com/"
+               }, {
+                  "date_added": "13304449717000000",
+                  "guid": "e44d9cf1-977d-41ee-8942-c79ca299bb50",
+                  "id": "249",
+                  "name": "DuckDuckGo !Bang",
+                  "type": "url",
+                  "url": "https://duckduckgo.com/bang?"
+               }, {
+                  "date_added": "13304450342000000",
+                  "guid": "ff52a602-59bf-4d97-b303-6e1b3c004e40",
+                  "id": "250",
+                  "name": "Why I love using bspwm for my Linux window manager | Opensource.com",
+                  "type": "url",
+                  "url": "https://opensource.com/article/21/4/bspwm-linux"
+               }, {
+                  "date_added": "13304554876000000",
+                  "guid": "1acd5d87-2bb1-4c47-8c0b-c5290e889003",
+                  "id": "251",
+                  "name": "Julia Evans",
+                  "type": "url",
+                  "url": "https://jvns.ca/"
+               }, {
+                  "date_added": "13304616180000000",
+                  "guid": "de317b18-7043-4bf0-b333-968261f4085e",
+                  "id": "252",
+                  "name": "Comparison of programming languages - Wikipedia",
+                  "type": "url",
+                  "url": "https://en.wikipedia.org/wiki/Comparison_of_programming_languages"
+               }, {
+                  "date_added": "13304721352000000",
+                  "guid": "293da482-5fd9-4649-bae6-02ec7040770e",
+                  "id": "253",
+                  "name": "nvim-lspconfig/server_configurations.md at master · neovim/nvim-lspconfig · GitHub",
+                  "type": "url",
+                  "url": "https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md"
+               }, {
+                  "date_added": "13304736141000000",
+                  "guid": "167c1250-9353-45ab-a98f-c3d781734d76",
+                  "id": "254",
+                  "name": "SOLID Principles with Javascript Examples | by Hayreddin Tüzel | Medium",
+                  "type": "url",
+                  "url": "https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c"
+               }, {
+                  "date_added": "13304736882000000",
+                  "guid": "92abde42-7278-4669-8a4c-125587884433",
+                  "id": "255",
+                  "name": "Beej's Guide to Network Programming",
+                  "type": "url",
+                  "url": "https://beej.us/guide/bgnet/html/"
+               }, {
+                  "date_added": "13304880268000000",
+                  "guid": "c00d17bf-8215-4ee5-89e9-759f1ea6714f",
+                  "id": "256",
+                  "name": "SearXNG and searx instances",
+                  "type": "url",
+                  "url": "https://searx.space/#"
+               }, {
+                  "date_added": "13305316159000000",
+                  "guid": "94afef8d-ce1f-47d3-8c5e-61007d9fb62a",
+                  "id": "257",
+                  "name": "Nothing New® - Sustainable with Style",
+                  "type": "url",
+                  "url": "https://nothingnew.com/"
+               }, {
+                  "date_added": "13305316243000000",
+                  "guid": "88e58acc-cbd8-41da-bf1f-4931ec3390f9",
+                  "id": "258",
+                  "name": "WAMA Underwear | Leaders in Hemp Underwear",
+                  "type": "url",
+                  "url": "https://wamaunderwear.com/"
+               }, {
+                  "date_added": "13305684746000000",
+                  "guid": "4b85feb3-f4a6-46ef-8535-443504fdea7c",
+                  "id": "259",
+                  "name": "Joel on Software",
+                  "type": "url",
+                  "url": "https://www.joelonsoftware.com/"
+               }, {
+                  "date_added": "13305887409000000",
+                  "guid": "9cf3c5be-0f9a-4be5-9843-69281d067d46",
+                  "id": "260",
+                  "name": "Let's Encrypt",
+                  "type": "url",
+                  "url": "https://letsencrypt.org/"
+               }, {
+                  "date_added": "13305887431000000",
+                  "guid": "9e644666-2502-490d-bf53-5bd2f4e10d4f",
+                  "id": "261",
+                  "name": "Easy Newbie",
+                  "type": "url",
+                  "url": "https://easynewbie.com/"
+               }, {
+                  "date_added": "13305887578000000",
+                  "guid": "0c23d9fa-410d-4185-a08a-aa5077b7f3c8",
+                  "id": "262",
+                  "name": "Certbot | Certbot",
+                  "type": "url",
+                  "url": "https://certbot.eff.org/"
+               }, {
+                  "date_added": "13305887902000000",
+                  "guid": "b3cb2523-8d4d-4a3f-9df0-080cd60c833d",
+                  "id": "263",
+                  "name": "Installing an SSL certificate on your server, using cPanel - Hosting - Namecheap.com",
+                  "type": "url",
+                  "url": "https://www.namecheap.com/support/knowledgebase/article.aspx/9418/33/installing-an-ssl-certificate-on-your-server-using-cpanel/"
+               }, {
+                  "date_added": "13305888395000000",
+                  "guid": "a118eb74-1018-48a4-838a-8754c1c7e08f",
+                  "id": "264",
+                  "name": "acme.sh/acme.sh at master · acmesh-official/acme.sh · GitHub",
+                  "type": "url",
+                  "url": "https://github.com/acmesh-official/acme.sh/blob/master/acme.sh"
+               }, {
+                  "date_added": "13305888728000000",
+                  "guid": "774f2d1b-945b-44af-be5d-6c70b22b0f06",
+                  "id": "265",
+                  "name": "Bulletproof TLS Guide",
+                  "type": "url",
+                  "url": "https://www.feistyduck.com/library/bulletproof-tls-guide/online/"
+               }, {
+                  "date_added": "13305952254000000",
+                  "guid": "7637a2be-4df0-4e4b-ba4d-a55e3b8f1317",
+                  "id": "266",
+                  "name": "Mutexes and Semaphores Demystified",
+                  "type": "url",
+                  "url": "https://barrgroup.com/embedded-systems/how-to/rtos-mutex-semaphore"
+               }, {
+                  "date_added": "13305965285000000",
+                  "guid": "44622cc1-02a4-4308-99a1-ab1e349bc1d9",
+                  "id": "267",
+                  "name": "SimpleLogin | Open source anonymous email service",
+                  "type": "url",
+                  "url": "https://simplelogin.io/"
+               }, {
+                  "date_added": "13306200027000000",
+                  "guid": "b0c1c693-45d5-44bb-af1f-ae441e25d85f",
+                  "id": "268",
+                  "name": "The One DevOps Platform | GitLab",
+                  "type": "url",
+                  "url": "https://about.gitlab.com/"
+               }, {
+                  "date_added": "13306221886000000",
+                  "guid": "dcbf6e30-b934-48b7-96cd-ebccd756722a",
+                  "id": "269",
+                  "name": "WebAssembly",
+                  "type": "url",
+                  "url": "https://webassembly.org/"
+               }, {
+                  "date_added": "13306222678000000",
+                  "guid": "081850c5-0bf3-482a-8f03-e6041a736288",
+                  "id": "270",
+                  "name": "Courses Dashboard | Wes Bos",
+                  "type": "url",
+                  "url": "https://courses.wesbos.com/account/signin"
+               }, {
+                  "date_added": "13306223600000000",
+                  "guid": "6df23a19-6fcc-4bdc-a1bd-55fdbd21beec",
+                  "id": "271",
+                  "name": "GitHub: Where the world builds software · GitHub",
+                  "type": "url",
+                  "url": "https://github.com/"
+               }, {
+                  "date_added": "13306313518000000",
+                  "guid": "19758268-042e-4911-ba38-401fcf77ea4b",
+                  "id": "272",
+                  "name": "Mothereffing HSL",
+                  "type": "url",
+                  "url": "https://mothereffinghsl.com/"
+               }, {
+                  "date_added": "13306313652000000",
+                  "guid": "b481a576-7984-40ee-93ad-7f92527c39e0",
+                  "id": "273",
+                  "name": "Icon Font & SVG Icon Sets ❍ IcoMoon",
+                  "type": "url",
+                  "url": "https://icomoon.io/"
+               }, {
+                  "date_added": "13306406712000000",
+                  "guid": "eb5aabd0-209e-4a33-8d00-d082e6b4e08c",
+                  "id": "274",
+                  "name": "DuckDuckGo !Bang",
+                  "type": "url",
+                  "url": "https://duckduckgo.com/bang?q="
+               }, {
+                  "date_added": "13306593677000000",
+                  "guid": "7d3463ee-37f9-456b-a06c-8d126380b3b8",
+                  "id": "275",
+                  "name": "MDN Web Docs",
+                  "type": "url",
+                  "url": "https://developer.mozilla.org/en-US/"
+               }, {
+                  "date_added": "13306593820000000",
+                  "guid": "98da5b11-7c96-47bf-be17-703a863ef653",
+                  "id": "276",
+                  "name": "DevDocs API Documentation",
+                  "type": "url",
+                  "url": "https://devdocs.io/#q=lua%20packer"
+               }, {
+                  "date_added": "13306678821000000",
+                  "guid": "402174aa-9f24-4758-adfa-cf24b59b67ef",
+                  "id": "277",
+                  "name": "Certbot | Certbot",
+                  "type": "url",
+                  "url": "https://certbot.eff.org/en"
+               }, {
+                  "date_added": "13306680662000000",
+                  "guid": "3b61474c-c9be-4dff-b9ea-d578e6ba6e86",
+                  "id": "278",
+                  "name": "Wikipedia",
+                  "type": "url",
+                  "url": "https://www.wikipedia.org/"
+               }, {
+                  "date_added": "13306718060000000",
+                  "guid": "f45f47de-3cf0-466c-93a8-ccfd7a4e81d9",
+                  "id": "279",
+                  "name": "PageSpeed Insights",
+                  "type": "url",
+                  "url": "https://pagespeed.web.dev/"
+               }, {
+                  "date_added": "13306723916000000",
+                  "guid": "edd3a4cd-f5d9-4546-9e27-278d3bfa805e",
+                  "id": "280",
+                  "name": "SEO for Web Developers - DEV Community 👩‍💻👨‍💻",
+                  "type": "url",
+                  "url": "https://dev.to/deviouslab/seo-for-web-developers-m54"
+               }, {
+                  "date_added": "13306723921000000",
+                  "guid": "8d1084b9-0af6-4f8a-b641-1a44bb5970e8",
+                  "id": "281",
+                  "name": "8 SEO best practices for Web Developers - DEV Community 👩‍💻👨‍💻",
+                  "type": "url",
+                  "url": "https://dev.to/mattzajechowski/8-seo-best-practices-for-web-developers-484a"
+               }, {
+                  "date_added": "13306738801000000",
+                  "guid": "621487d0-c4f0-4d76-bed3-d2817800f59b",
+                  "id": "282",
+                  "name": "HackerNoon - read, write and learn about any technology",
+                  "type": "url",
+                  "url": "https://hackernoon.com/"
+               }, {
+                  "date_added": "13306738865000000",
+                  "guid": "2b2cd9d6-8012-453d-aace-ac73cfd3bcce",
+                  "id": "283",
+                  "name": "Hacker News",
+                  "type": "url",
+                  "url": "https://news.ycombinator.com/"
+               }, {
+                  "date_added": "13306741684000000",
+                  "guid": "8309b335-dc8c-454c-b9cf-5c003ed067ca",
+                  "id": "284",
+                  "name": "Unsplash Image API | Free HD Photo API",
+                  "type": "url",
+                  "url": "https://unsplash.com/developers"
+               }, {
+                  "date_added": "13306809067000000",
+                  "guid": "7b9ab085-099d-4248-8a28-ce3dcd78e6e1",
+                  "id": "285",
+                  "name": "SomaFM: All Channels sorted by Genre",
+                  "type": "url",
+                  "url": "https://somafm.com/listen/listeners.html"
+               }, {
+                  "date_added": "13306820903000000",
+                  "guid": "bd770dbc-94c3-4222-91a0-289b085b698c",
+                  "id": "286",
+                  "name": "PostgreSQL: Documentation: 14: CREATE TABLE",
+                  "type": "url",
+                  "url": "https://www.postgresql.org/docs/current/sql-createtable.html"
+               }, {
+                  "date_added": "13306823551000000",
+                  "guid": "3d88bac1-39dd-4fbf-a79c-d6bf0f098059",
+                  "id": "287",
+                  "name": "Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher",
+                  "type": "url",
+                  "url": "https://www.nerdfonts.com/cheat-sheet"
+               }, {
+                  "date_added": "13306850481000000",
+                  "guid": "461d7566-fa56-4f94-8561-46755ef0defb",
+                  "id": "288",
+                  "name": "SMS Texting API | Keep it Simple",
+                  "type": "url",
+                  "url": "https://textbelt.com/"
+               }, {
+                  "date_added": "13306905853000000",
+                  "guid": "8e5b19e4-7013-4b7b-9494-3bd407ec036e",
+                  "id": "289",
+                  "name": "Man Pages | ManKier",
+                  "type": "url",
+                  "url": "https://www.mankier.com/"
+               }, {
+                  "date_added": "13307373052000000",
+                  "guid": "9397bd3d-2211-4a13-b9dd-60ffecb8ed49",
+                  "id": "290",
+                  "name": "Optimized NGINX Web Server » Webinoly",
+                  "type": "url",
+                  "url": "https://webinoly.com/"
+               }, {
+                  "date_added": "13308172602000000",
+                  "guid": "580c4d65-49db-4242-8c51-5853922173c0",
+                  "id": "291",
+                  "name": "MarySnopok-Portfolio-Frontend",
+                  "type": "url",
+                  "url": "https://www.mary-snopok.com/"
+               }, {
+                  "date_added": "13308445352000000",
+                  "guid": "f7294ebb-5121-4ae5-b312-f860132951af",
+                  "id": "292",
+                  "name": "Wilfred Hughes::Blog",
+                  "type": "url",
+                  "url": "https://www.wilfred.me.uk/"
+               }, {
+                  "date_added": "13308534741000000",
+                  "guid": "a3010591-2d47-4b58-8651-0cac70b97496",
+                  "id": "293",
+                  "name": "♫ 1Upsmanship | Michael likes story-driven games with lots of contemplative moral quandaries and inventory management. Adam likes action-driven FPS games with gorgeous graphics and no down-time. Together, their friendship is constantly on the verge of ruin! But you can watch it all crumble before your very ears on 1Upsmanship, the pod where two lifelong gamers run one game an episode through the crucible to determine if it belongs on the Celestial Hard Drive. GAME ON.",
+                  "type": "url",
+                  "url": "https://www.iheart.com/podcast/1119-1upsmanship-97574019/"
+               }, {
+                  "date_added": "13308534873000000",
+                  "guid": "66828764-a207-4a44-9aa9-9dd862baf478",
+                  "id": "294",
+                  "name": "Stream Small Beans | Listen to podcast episodes online for free on SoundCloud",
+                  "type": "url",
+                  "url": "https://soundcloud.com/user-682532119"
+               }, {
+                  "date_added": "13308534934000000",
+                  "guid": "9fcda527-e5f2-40c5-b769-2909b6248aaa",
+                  "id": "295",
+                  "name": "Lex Fridman Podcast - Lex Fridman",
+                  "type": "url",
+                  "url": "https://lexfridman.com/podcast/"
+               }, {
+                  "date_added": "13308534995000000",
+                  "guid": "cf90b3e1-9bbb-4336-90d9-15cbd0595050",
+                  "id": "296",
+                  "name": "♫ Some More News | Comedian Cody Johnston hosts this always fair, always well-researched, but most importantly, always entertaining take on the topical news of the week. Every Tuesday, Some More News dives into the world's weekly events with a mix of wit, dread, hope and compassion. Since the news cycle never stops spinning, Johnston returns every Friday for Even More News, co-hosted by Katy Stoll. Together, they present an informative and comedic spin on the viewers’ frustrations with the news that week.",
+                  "type": "url",
+                  "url": "https://www.iheart.com/podcast/269-even-more-news-29429923/"
+               }, {
+                  "date_added": "13308541669000000",
+                  "guid": "7fc2d4b1-cb40-4900-abeb-ca4ee844f5e6",
+                  "id": "297",
+                  "name": "Bandcamp",
+                  "type": "url",
+                  "url": "https://bandcamp.com/"
+               }, {
+                  "date_added": "13308621417000000",
+                  "guid": "8f32d3f7-3c02-4c9c-82fa-dc48db4f2a7f",
+                  "id": "298",
+                  "name": "Frontend Masters — Learn JavaScript, React, Vue & Angular from Masters of Front-End Development!",
+                  "type": "url",
+                  "url": "https://frontendmasters.com/"
+               }, {
+                  "date_added": "13308968146000000",
+                  "guid": "15c6630b-142e-47af-a7d1-b23494f47818",
+                  "id": "299",
+                  "name": "GabMus's Dev Log",
+                  "type": "url",
+                  "url": "https://gabmus.org/"
+               }, {
+                  "date_added": "13309078312000000",
+                  "guid": "b3d68235-cd51-4819-9998-0ff6d99b4d67",
+                  "id": "300",
+                  "name": "asciinema - Record and share your terminal sessions, the simple way",
+                  "type": "url",
+                  "url": "https://asciinema.org/"
+               }, {
+                  "date_added": "13309142559000000",
+                  "guid": "493a1b12-e5a9-4a38-b02c-5f11a9f3c120",
+                  "id": "301",
+                  "name": "Modern CSS Reset - Andy Bell",
+                  "type": "url",
+                  "url": "https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421"
+               }, {
+                  "date_added": "13309148999000000",
+                  "guid": "c39b1ff3-1792-4787-96e8-5a55443e3a20",
+                  "id": "302",
+                  "name": "The Accessibility Tool For Your Team | Aditus",
+                  "type": "url",
+                  "url": "https://www.aditus.io/"
+               }, {
+                  "date_added": "13309154623000000",
+                  "guid": "346646a0-3b51-435c-aa7c-c54b7a609629",
+                  "id": "303",
+                  "name": "Home - Orange digital accessibility guidelines",
+                  "type": "url",
+                  "url": "https://a11y-guidelines.orange.com/en/"
+               }, {
+                  "date_added": "13309208866000000",
+                  "guid": "da9011ef-7732-41c3-93d6-5534cc613929",
+                  "id": "304",
+                  "name": "https://svgsprit.es/",
+                  "type": "url",
+                  "url": "https://svgsprit.es/"
+               }, {
+                  "date_added": "13309221968000000",
+                  "guid": "0705b418-6a53-4a26-9274-4f70e84d86a0",
+                  "id": "305",
+                  "name": "A11Y Slider - Library for simple and accessible sliders",
+                  "type": "url",
+                  "url": "https://a11yslider.js.org/"
+               }, {
+                  "date_added": "13309250623000000",
+                  "guid": "8c8d304c-63de-42c3-8391-25f75db6dc32",
+                  "id": "306",
+                  "name": "CSS-Tricks - Tips, Tricks, and Techniques on using Cascading Style Sheets.",
+                  "type": "url",
+                  "url": "https://css-tricks.com/"
+               }, {
+                  "date_added": "13309335886000000",
+                  "guid": "94668b5c-48c4-4cdd-9e0a-bd9f1828da05",
+                  "id": "307",
+                  "name": "Free Fonts! Legit Free & Quality » Font Squirrel",
+                  "type": "url",
+                  "url": "https://www.fontsquirrel.com/"
+               }, {
+                  "date_added": "13309336350000000",
+                  "guid": "7071382e-a731-48af-8679-dc3c720612b0",
+                  "id": "308",
+                  "name": "Free Fonts | 98,000+ Font Downloads | FontSpace",
+                  "type": "url",
+                  "url": "https://www.fontspace.com/"
+               }, {
+                  "date_added": "13309337665000000",
+                  "guid": "1a2d7589-f5f2-4ad1-a4ef-0e9b9971508b",
+                  "id": "309",
+                  "name": "README.md · master · Raphaël Bastide / libre-foundries · GitLab",
+                  "type": "url",
+                  "url": "https://gitlab.com/raphaelbastide/libre-foundries/-/blob/master/README.md"
+               }, {
+                  "date_added": "13309339090000000",
+                  "guid": "33cbdf8d-9786-46fa-8ea3-4d15c30cad3e",
+                  "id": "310",
+                  "name": "CSS3 Animation Cheat Sheet - Justin Aguilar",
+                  "type": "url",
+                  "url": "http://www.justinaguilar.com/animations/index.html#"
+               }, {
+                  "date_added": "13309339829000000",
+                  "guid": "d8183046-8fb4-4268-b210-5480c5c3abce",
+                  "id": "311",
+                  "name": "How to Create CSS Animations on Scroll [With Examples]",
+                  "type": "url",
+                  "url": "https://alvarotrigo.com/blog/css-animations-scroll/"
+               }, {
+                  "date_added": "13309399800000000",
+                  "guid": "c1b1c22f-577a-4a27-a6ca-f9768f2e0f82",
+                  "id": "312",
+                  "name": "Dev Snap: The Ultimate Web Developer Resource",
+                  "type": "url",
+                  "url": "https://devsnap.me/"
+               }, {
+                  "date_added": "13309422860000000",
+                  "guid": "30790290-7baf-4b94-affb-4a5b883604df",
+                  "id": "313",
+                  "name": "ColorSpace - Color Palettes Generator and Color Gradient Tool",
+                  "type": "url",
+                  "url": "https://mycolor.space/"
+               }, {
+                  "date_added": "13309422970000000",
+                  "guid": "5e1c30b6-13bb-4f41-b563-8bc9bb4e5e39",
+                  "id": "314",
+                  "name": "Color wheel, a color palette generator | Adobe Color",
+                  "type": "url",
+                  "url": "https://color.adobe.com/create/color-wheel"
+               }, {
+                  "date_added": "13309495354000000",
+                  "guid": "9f953eba-4884-4b8d-8fb2-d2593876d393",
+                  "id": "315",
+                  "name": "CSS Gradient — Generator, Maker, and Background",
+                  "type": "url",
+                  "url": "https://cssgradient.io/"
+               }, {
+                  "date_added": "13309495693000000",
+                  "guid": "4df8b87c-17ad-4501-b0e6-c194b2d1dc7e",
+                  "id": "316",
+                  "name": "Noun Project: Free Icons & Stock Photos for Everything",
+                  "type": "url",
+                  "url": "https://thenounproject.com/"
+               }, {
+                  "date_added": "13309509434000000",
+                  "guid": "1c93448d-a338-4bce-9ffa-88cd2f06168d",
+                  "id": "317",
+                  "name": "Swiper - The Most Modern Mobile Touch Slider",
+                  "type": "url",
+                  "url": "https://swiperjs.com/"
+               }, {
+                  "date_added": "13309567107000000",
+                  "guid": "236f1285-16be-4ccb-b410-b7f46246649a",
+                  "id": "318",
+                  "name": "1001 Fonts ❤ Free Fonts Baby!",
+                  "type": "url",
+                  "url": "https://www.1001fonts.com/"
+               }, {
+                  "date_added": "13309756853000000",
+                  "guid": "8db64fbe-c3f0-4802-af89-3a838f5328b9",
+                  "id": "319",
+                  "name": "How To Use CSS Animation Easing With Different Examples",
+                  "type": "url",
+                  "url": "https://www.positioniseverything.net/css-animation-easing"
+               }, {
+                  "date_added": "13309762088000000",
+                  "guid": "53269c9e-11a8-43fe-b86d-bc13aa6d2a7f",
+                  "id": "320",
+                  "name": "Creating HTML Scrollable Div: A Thorough and Step by Step Guide",
+                  "type": "url",
+                  "url": "https://www.positioniseverything.net/html-scrollable-div"
+               }, {
+                  "date_added": "13309815738000000",
+                  "guid": "1f5eb822-d502-48dc-8077-a2a01764aedd",
+                  "id": "321",
+                  "name": "Owls at Dawn",
+                  "type": "url",
+                  "url": "https://www.owlsatdawn.com/"
+               }, {
+                  "date_added": "13310024051000000",
+                  "guid": "2991cb92-a973-4542-adfc-11444ea445e9",
+                  "id": "322",
+                  "name": "Hex to RGBA",
+                  "type": "url",
+                  "url": "https://rgbacolorpicker.com/hex-to-rgba"
+               }, {
+                  "date_added": "13310080183000000",
+                  "guid": "e5cb81cf-4d52-4aff-aa9d-4f8ebb6616dc",
+                  "id": "323",
+                  "name": "HTTP Error 403 Forbidden: What It Means and How to Fix It",
+                  "type": "url",
+                  "url": "https://www.freecodecamp.org/news/http-error-403-forbidden-what-it-means-and-how-to-fix-it/"
+               }, {
+                  "date_added": "13310104448000000",
+                  "guid": "5d2aae84-64be-41d4-ba04-c859353549e9",
+                  "id": "324",
+                  "name": "How to Use HTML to Open a Link in a New Tab",
+                  "type": "url",
+                  "url": "https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/"
+               }, {
+                  "date_added": "13310113614000000",
+                  "guid": "6a0c9c43-009f-4473-8995-ce46f2175c3b",
+                  "id": "325",
+                  "name": "Meta Tags Generator Tool — Website Metadata",
+                  "type": "url",
+                  "url": "https://websitemetadata.com/meta-tags-generator"
+               }, {
+                  "date_added": "13310195728000000",
+                  "guid": "c3a704e2-27e7-452c-9a83-574fec836a89",
+                  "id": "326",
+                  "name": "Responsive Web Design – How to Make a Website Look Good on Phones and Tablets",
+                  "type": "url",
+                  "url": "https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/"
+               }, {
+                  "date_added": "13310195822000000",
+                  "guid": "4e5c427a-4cbc-4619-a748-da8766824654",
+                  "id": "327",
+                  "name": "Responsive Web Design – How to Make a Website Look Good on Phones and Tablets",
+                  "type": "url",
+                  "url": "file:///home/brian/Documents/notes/web_resources/articles_responsive/fcc_responsve-web-design-how-to-make-a-website-look-good-on-phones-and-tablets.html"
+               }, {
+                  "date_added": "13310197248000000",
+                  "guid": "351b28af-7577-450c-9828-67ba9eef3ba7",
+                  "id": "328",
+                  "name": "cpupower command - Adjust CPU frequency - LinuxStar",
+                  "type": "url",
+                  "url": "https://linuxstar.info/cpupower/"
+               }, {
+                  "date_added": "13310278443000000",
+                  "guid": "4a220186-3f8a-44e7-9b82-d72ab2212f01",
+                  "id": "329",
+                  "name": "Contact form with HTML, CSS, and Javascript - StackHowTo",
+                  "type": "url",
+                  "url": "https://stackhowto.com/contact-form-with-html-css-and-javascript/"
+               }, {
+                  "date_added": "13310370558000000",
+                  "guid": "c1a617ac-8398-4dd2-8127-436548e10078",
+                  "id": "330",
+                  "name": "Hi, I'm Austin Gil. I write about code and stuff.",
+                  "type": "url",
+                  "url": "https://austingil.com/"
+               }, {
+                  "date_added": "13310370727000000",
+                  "guid": "68e68c35-e9f2-44ab-8175-de9010874c49",
+                  "id": "331",
+                  "name": "hCaptcha - Stop more bots. Start protecting privacy.",
+                  "type": "url",
+                  "url": "https://www.hcaptcha.com/"
+               }, {
+                  "date_added": "13310421940000000",
+                  "guid": "93f7206c-157a-42ab-9340-6630120e93f1",
+                  "id": "332",
+                  "name": "Lucide",
+                  "type": "url",
+                  "url": "https://lucide.dev/"
+               }, {
+                  "date_added": "13310422052000000",
+                  "guid": "26abb25c-fe50-46e9-8f6e-bab4f59d76c9",
+                  "id": "333",
+                  "name": "IconSearch: Instant icon search for SVG icons",
+                  "type": "url",
+                  "url": "https://iconsear.ch/"
+               }, {
+                  "date_added": "13310422133000000",
+                  "guid": "09e0e1cc-53ab-4f0d-9b55-1ab92e782eb0",
+                  "id": "334",
+                  "name": "Feather – Simply beautiful open source icons",
+                  "type": "url",
+                  "url": "https://feathericons.com/"
+               }, {
+                  "date_added": "13310424001000000",
+                  "guid": "a1318855-40db-4511-a3e4-3b22a2bd2291",
+                  "id": "335",
+                  "name": "Screen Sizes | Viewport Sizes and Pixel Densities for Popular Devices",
+                  "type": "url",
+                  "url": "https://screensiz.es/"
+               }, {
+                  "date_added": "13310795902000000",
+                  "guid": "f2e05eea-e42b-4b3e-8ad5-1edff1a1fc74",
+                  "id": "336",
+                  "name": "leafbytes",
+                  "type": "url",
+                  "url": "http://127.0.0.1:8080/"
+               }, {
+                  "date_added": "13310799290000000",
+                  "guid": "4e3411b6-4090-437d-96f0-5cd1b03430f3",
+                  "id": "337",
+                  "name": "Matthew James Taylor: Artist. Designer. Author.",
+                  "type": "url",
+                  "url": "https://matthewjamestaylor.com/"
+               }, {
+                  "date_added": "13310896639000000",
+                  "guid": "2c204cca-4cfc-47a6-a9dc-0aeffb6f6c09",
+                  "id": "338",
+                  "name": "The HTTP crash course nobody asked for",
+                  "type": "url",
+                  "url": "https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for#making-http-1-1-requests-with-reqwest"
+               }, {
+                  "date_added": "13310898122000000",
+                  "guid": "85a8c612-9dab-4c29-99f1-da5a699853ac",
+                  "id": "339",
+                  "name": "fasterthanli.me",
+                  "type": "url",
+                  "url": "https://fasterthanli.me/"
+               }, {
+                  "date_added": "13311419095000000",
+                  "guid": "4aa916f0-7f8f-421d-b953-3ae7efffbd0e",
+                  "id": "340",
+                  "name": "Interrupt | A community and blog for embedded software makers",
+                  "type": "url",
+                  "url": "https://interrupt.memfault.com/"
+               }, {
+                  "date_added": "13311655109000000",
+                  "guid": "2883ee74-847f-429a-af89-652608200e06",
+                  "id": "341",
+                  "name": "This Person Does Not Exist",
+                  "type": "url",
+                  "url": "https://thispersondoesnotexist.com/"
+               }, {
+                  "date_added": "13311655148000000",
+                  "guid": "0ce5d601-2920-4d71-a878-786223209d60",
+                  "id": "342",
+                  "name": "The Open Source Firebase Alternative | Supabase",
+                  "type": "url",
+                  "url": "https://supabase.com/"
+               }, {
+                  "date_added": "13311655156000000",
+                  "guid": "937a87f6-affb-475d-beda-73cb4e782a33",
+                  "id": "343",
+                  "name": "PocketBase - Open Source backend in 1 file",
+                  "type": "url",
+                  "url": "https://pocketbase.io/"
+               }, {
+                  "date_added": "13311655188000000",
+                  "guid": "98e3b275-1991-49b3-8e06-bfeffc3d1514",
+                  "id": "344",
+                  "name": "Home · Solid",
+                  "type": "url",
+                  "url": "https://solidproject.org/"
+               } ],
+               "date_added": "13311655588735679",
+               "date_modified": "0",
+               "guid": "8e364fd1-b22b-4c65-af3f-d419323a15d2",
+               "id": "188",
+               "name": "Bookmarks Toolbar",
+               "type": "folder"
+            }, {
+               "date_added": "13273781910000000",
+               "guid": "e333e079-431f-42b2-aa52-e9b5f1efa9d8",
+               "id": "345",
+               "name": "YVVAS: Gitea",
+               "type": "url",
+               "url": "http://gitea.yvvas.com:4000/"
+            }, {
+               "date_added": "13274031418000000",
+               "guid": "bc016dae-81be-496c-9e41-2b0e466be8f2",
+               "id": "346",
+               "name": "LinuxQuestions.org - where Linux users come for help",
+               "type": "url",
+               "url": "https://www.linuxquestions.org/questions/"
+            }, {
+               "date_added": "13274031449000000",
+               "guid": "99f8b125-af48-4c51-b786-27e4c5a231fe",
+               "id": "347",
+               "name": "Manjaro Linux Forum",
+               "type": "url",
+               "url": "https://forum.manjaro.org/"
+            }, {
+               "date_added": "13274831574000000",
+               "guid": "26425cf0-b892-4334-bf59-33d410fe614d",
+               "id": "348",
+               "name": "Learning JavaScript Design Patterns",
+               "type": "url",
+               "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/"
+            }, {
+               "children": [ {
+                  "date_added": "13274992359000000",
+                  "guid": "e23b8f89-ba33-49d3-8d13-91ffdc4aaa0e",
+                  "id": "350",
+                  "name": "What Is a Database Relationship?",
+                  "type": "url",
+                  "url": "https://www.lifewire.com/database-relationships-p2-1019758"
+               }, {
+                  "date_added": "13279410262000000",
+                  "guid": "586ad245-c1ce-4d50-84fc-67e7aa1b61d0",
+                  "id": "351",
+                  "name": "Codewars - Achieve mastery through coding practice and developer mentorship",
+                  "type": "url",
+                  "url": "https://www.codewars.com/"
+               }, {
+                  "date_added": "13281154306000000",
+                  "guid": "441ffe1a-a51b-46aa-8f24-4b4636b777cc",
+                  "id": "352",
+                  "name": "runit - a UNIX init scheme with service supervision",
+                  "type": "url",
+                  "url": "http://smarden.org/runit/"
+               }, {
+                  "date_added": "13281154338000000",
+                  "guid": "33f9c71a-4bec-48f5-b4b7-5ab751e1646a",
+                  "id": "353",
+                  "name": "Artix Linux Forum - Index",
+                  "type": "url",
+                  "url": "https://forum.artixlinux.org/"
+               }, {
+                  "date_added": "13281156483000000",
+                  "guid": "285c3bc4-44ff-492c-b13a-ec03e0d5ff9a",
+                  "id": "354",
+                  "name": "[SOLVED] PostrgreSQL Runit service unable to start",
+                  "type": "url",
+                  "url": "https://forum.artixlinux.org/index.php/topic,2229.0.html"
+               }, {
+                  "date_added": "13281156492000000",
+                  "guid": "7a35d591-05aa-437a-9751-be61e895e65a",
+                  "id": "355",
+                  "name": "PostgreSQL - ArchWiki",
+                  "type": "url",
+                  "url": "https://wiki.archlinux.org/title/PostgreSQL"
+               }, {
+                  "date_added": "13281196330000000",
+                  "guid": "9debc7ab-adcc-4f11-a83c-4fc4929f7fdb",
+                  "id": "356",
+                  "name": "DuckDuckGo !Bang",
+                  "type": "url",
+                  "url": "https://duckduckgo.com/bang_lite.html"
+               }, {
+                  "date_added": "13281820230000000",
+                  "guid": "39af4267-87f9-4b28-a826-e4870db3dfcb",
+                  "id": "357",
+                  "name": "Python 3 Module of the Week — PyMOTW 3",
+                  "type": "url",
+                  "url": "https://pymotw.com/3/"
+               }, {
+                  "date_added": "13282174081000000",
+                  "guid": "7c190c88-35c8-4ec0-b8d2-ff724329fc71",
+                  "id": "358",
+                  "name": "Tmux Cheat Sheet & Quick Reference",
+                  "type": "url",
+                  "url": "https://tmuxcheatsheet.com/"
+               }, {
+                  "date_added": "13282529980000000",
+                  "guid": "13ece3ac-48cd-4540-a685-3bbe97b76c12",
+                  "id": "359",
+                  "name": "OpenStreetMap",
+                  "type": "url",
+                  "url": "https://www.openstreetmap.org/#map=6/40.162/-120.808"
+               }, {
+                  "date_added": "13283093756000000",
+                  "guid": "ca266605-06e6-4738-a6b8-d617262dfe37",
+                  "id": "360",
+                  "name": "The Bash Guide",
+                  "type": "url",
+                  "url": "https://guide.bash.academy/"
+               }, {
+                  "date_added": "13283196995000000",
+                  "guid": "e28194fa-6847-4027-80bf-80e54ebaccd8",
+                  "id": "361",
+                  "name": "Free Programming Books – GoalKicker.com",
+                  "type": "url",
+                  "url": "https://goalkicker.com/"
+               }, {
+                  "date_added": "13283197019000000",
+                  "guid": "0d418295-3d39-4221-bb80-c925ab519d7b",
+                  "id": "362",
+                  "name": "FOLDOC - Computing Dictionary",
+                  "type": "url",
+                  "url": "https://foldoc.org/"
+               }, {
+                  "date_added": "13283464997000000",
+                  "guid": "21068161-b463-46a1-a5d7-44e8ad1c98ac",
+                  "id": "363",
+                  "name": "Linux Shell Scripting Wiki",
+                  "type": "url",
+                  "url": "https://bash.cyberciti.biz/guide/Main_Page"
+               }, {
+                  "date_added": "13283806215000000",
+                  "guid": "dadeabeb-22d8-41fe-b5dc-26641ab3c3cf",
+                  "id": "364",
+                  "name": "Noc.Social",
+                  "type": "url",
+                  "url": "https://noc.social/web/timelines/home"
+               }, {
+                  "date_added": "13283811749000000",
+                  "guid": "c7ba2a05-97d9-4cf3-beb9-c4b1a53894c7",
+                  "id": "365",
+                  "name": "LibreTranslate - Free and Open Source Machine Translation API",
+                  "type": "url",
+                  "url": "https://libretranslate.com/"
+               }, {
+                  "date_added": "13283814098000000",
+                  "guid": "373a4c61-d408-4ae1-a48c-cb0a9c396496",
+                  "id": "366",
+                  "name": "PeerTube instances",
+                  "type": "url",
+                  "url": "https://instances.joinpeertube.org/instances"
+               }, {
+                  "date_added": "13284310062000000",
+                  "guid": "383b9fee-1004-4921-8441-b71dbad7aa4e",
+                  "id": "367",
+                  "name": "Films By Kris",
+                  "type": "url",
+                  "url": "https://filmsbykris.com/v7/"
+               }, {
+                  "date_added": "13284583156000000",
+                  "guid": "8675bb19-5adf-4330-8498-60e156726a92",
+                  "id": "368",
+                  "name": "Advanced Bash-Scripting Guide",
+                  "type": "url",
+                  "url": "https://tldp.org/LDP/abs/html/"
+               }, {
+                  "date_added": "13284761460000000",
+                  "guid": "9d920a84-2b34-43f4-9db9-1d832c804f6b",
+                  "id": "369",
+                  "name": "We oppose DRM. | Defective by Design",
+                  "type": "url",
+                  "url": "https://www.defectivebydesign.org/"
+               }, {
+                  "date_added": "13284761571000000",
+                  "guid": "8f4a15a3-29b4-470c-be7f-c292ad7202a8",
+                  "id": "370",
+                  "name": "Welcome to a society for free software advocates, supporting the ethical cause of computer user freedom! | Free Software Foundation",
+                  "type": "url",
+                  "url": "https://my.fsf.org/"
+               }, {
+                  "date_added": "13284826128000000",
+                  "guid": "6135c6f4-40c5-401d-844e-f6bf0bbb6ba6",
+                  "id": "371",
+                  "name": "The Bash Hackers Wiki [Bash Hackers Wiki]",
+                  "type": "url",
+                  "url": "https://wiki.bash-hackers.org/"
+               }, {
+                  "date_added": "13284826420000000",
+                  "guid": "34cb0125-e1d2-4ed8-aa2f-6ab16b2dbd4c",
+                  "id": "372",
+                  "name": "Shell-Tips! Sharpen Your Tech Skills",
+                  "type": "url",
+                  "url": "https://www.shell-tips.com/"
+               }, {
+                  "date_added": "13284915140000000",
+                  "guid": "72fa89be-a3b7-4c37-a15f-773fe5e07923",
+                  "id": "373",
+                  "name": "The GNU Operating System and the Free Software Movement",
+                  "type": "url",
+                  "url": "https://www.gnu.org/"
+               }, {
+                  "date_added": "13284917829000000",
+                  "guid": "fff890d2-c60f-4356-80fb-a21ad1e42b76",
+                  "id": "374",
+                  "name": "Regular-Expressions.info - Regex Tutorial, Examples and Reference - Regexp Patterns",
+                  "type": "url",
+                  "url": "https://www.regular-expressions.info/"
+               }, {
+                  "date_added": "13286221826000000",
+                  "guid": "0186f9ea-6e34-4f4f-b0d9-f4dc6ce38e43",
+                  "id": "375",
+                  "name": "youtube-dl/supportedsites.md at master · ytdl-org/youtube-dl · GitHub",
+                  "type": "url",
+                  "url": "https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md"
+               }, {
+                  "date_added": "13286578201000000",
+                  "guid": "0260a720-c3af-46db-9711-bc09cad3b19e",
+                  "id": "376",
+                  "name": "Invent with Python",
+                  "type": "url",
+                  "url": "https://inventwithpython.com/invent4thed/"
+               }, {
+                  "date_added": "13287262078000000",
+                  "guid": "19e6750d-7644-452b-a3ee-b3d00dca53de",
+                  "id": "377",
+                  "name": "Teach Yourself Computer Science",
+                  "type": "url",
+                  "url": "https://teachyourselfcs.com/"
+               }, {
+                  "date_added": "13287885437000000",
+                  "guid": "57ad8569-b621-48ea-bc2d-bf1e0e0ca567",
+                  "id": "378",
+                  "name": "How to manually configure OpenVPN in Linux - ProtonVPN Support",
+                  "type": "url",
+                  "url": "https://protonvpn.com/support/linux-openvpn/"
+               }, {
+                  "date_added": "13287888914000000",
+                  "guid": "ddda7a93-e261-40d1-b170-52016174df6f",
+                  "id": "379",
+                  "name": "unixsheikh.com",
+                  "type": "url",
+                  "url": "https://www.unixsheikh.com/index.html"
+               }, {
+                  "date_added": "13288509658000000",
+                  "guid": "208e5e16-4766-4582-8224-519add124d90",
+                  "id": "380",
+                  "name": "Nexus mods and community",
+                  "type": "url",
+                  "url": "https://www.nexusmods.com/"
+               }, {
+                  "date_added": "13288545749000000",
+                  "guid": "232eae65-4538-437b-a26b-01ee765190d6",
+                  "id": "381",
+                  "name": "Jan-Piet Mens",
+                  "type": "url",
+                  "url": "https://jpmens.net/"
+               }, {
+                  "date_added": "13288545875000000",
+                  "guid": "212ed22a-77ca-4afa-9f6e-0107241af4fa",
+                  "id": "382",
+                  "name": "Daniel Stenberg - daniel.haxx.se",
+                  "type": "url",
+                  "url": "https://daniel.haxx.se/"
+               }, {
+                  "date_added": "13289152783000000",
+                  "guid": "f418a98a-025f-409c-af4c-d673c9e124e9",
+                  "id": "383",
+                  "name": "Md5 To Text",
+                  "type": "url",
+                  "url": "https://md5-hash.softbaba.com/converter/md5-to-text/"
+               }, {
+                  "date_added": "13289179610000000",
+                  "guid": "8d32078c-86fa-4e46-85f1-a57e79071288",
+                  "id": "384",
+                  "name": "searx.info",
+                  "type": "url",
+                  "url": "https://searx.info/"
+               }, {
+                  "date_added": "13289253585000000",
+                  "guid": "e9c204fa-31cf-443a-9643-d47a90627b10",
+                  "id": "385",
+                  "name": "FrogFind!",
+                  "type": "url",
+                  "url": "http://www.frogfind.com/"
+               }, {
+                  "date_added": "13289335113000000",
+                  "guid": "5470cd92-4cbd-4f54-9077-f7d7e1502f31",
+                  "id": "386",
+                  "name": "Podtail – Listen to Podcasts Online",
+                  "type": "url",
+                  "url": "https://podtail.com/"
+               }, {
+                  "date_added": "13289489806000000",
+                  "guid": "50f4068b-4fa0-4be2-96d8-b134b9b4bd60",
+                  "id": "387",
+                  "name": "ProtonDB | Gaming reports for Linux using Proton and Steam Play",
+                  "type": "url",
+                  "url": "https://www.protondb.com/"
+               }, {
+                  "date_added": "13289491673000000",
+                  "guid": "b79c21d2-cf01-4a19-b6f2-a037a6550012",
+                  "id": "388",
+                  "name": "skarnet.org",
+                  "type": "url",
+                  "url": "https://www.skarnet.org/"
+               }, {
+                  "date_added": "13289491781000000",
+                  "guid": "92a734c9-8835-416f-b72b-4767947173c3",
+                  "id": "389",
+                  "name": "Jude's Blog",
+                  "type": "url",
+                  "url": "https://judecnelson.blogspot.com/"
+               }, {
+                  "date_added": "13289491861000000",
+                  "guid": "41135bc8-a3de-42cd-a86b-06aecf8fdbe6",
+                  "id": "390",
+                  "name": "EWONTFIX",
+                  "type": "url",
+                  "url": "https://ewontfix.com/"
+               }, {
+                  "date_added": "13290090351000000",
+                  "guid": "c37966eb-e57d-4f44-a319-ef8432781bc2",
+                  "id": "391",
+                  "name": "Lemmy - A community of leftist privacy and FOSS enthusiasts, run by Lemmy’s developers",
+                  "type": "url",
+                  "url": "https://lemmy.ml/"
+               }, {
+                  "date_added": "13290110388000000",
+                  "guid": "6f2a0ce7-8d16-4750-a399-98413d0c207e",
+                  "id": "392",
+                  "name": "Services and Daemons - runit - Void Linux Handbook",
+                  "type": "url",
+                  "url": "https://docs.voidlinux.org/config/services/index.html"
+               }, {
+                  "date_added": "13290187626000000",
+                  "guid": "91fd44e7-b902-4936-b58d-637b6be3bd48",
+                  "id": "393",
+                  "name": "npm",
+                  "type": "url",
+                  "url": "https://www.npmjs.com/"
+               }, {
+                  "date_added": "13290550201000000",
+                  "guid": "b1b8df2f-327e-4a9a-9c7f-ef928d912321",
+                  "id": "394",
+                  "name": "Medusa: Open Source Shopify alternative",
+                  "type": "url",
+                  "url": "https://www.medusajs.com/"
+               }, {
+                  "date_added": "13290724024000000",
+                  "guid": "f2b66062-9568-4ad7-888d-5ef78801955f",
+                  "id": "395",
+                  "name": "5 Modern Bash Scripting Techniques That Only A Few Programmers Know | by Shalitha Suranga | Mar, 2022 | Level Up Coding",
+                  "type": "url",
+                  "url": "https://levelup.gitconnected.com/5-modern-bash-scripting-techniques-that-only-a-few-programmers-know-4abb58ddadad?sk=381451845c8d4213b52703e49206ad39&gi=91abd5c38a86"
+               }, {
+                  "date_added": "13290799632000000",
+                  "guid": "7cfc85d4-05be-4df2-bfed-7f9725d2282c",
+                  "id": "396",
+                  "name": "kitty.conf - kitty",
+                  "type": "url",
+                  "url": "https://sw.kovidgoyal.net/kitty/conf/"
+               }, {
+                  "date_added": "13291073720000000",
+                  "guid": "d7164193-fd6b-4e9d-92d3-2abcaae5f03d",
+                  "id": "397",
+                  "name": "Proxy Server List - List of Free Public Proxy Servers (Updated March 2022)",
+                  "type": "url",
+                  "url": "https://www.proxynova.com/proxy-server-list/"
+               }, {
+                  "date_added": "13291148845000000",
+                  "guid": "1331d824-3128-42d6-8150-9b6da9cdc840",
+                  "id": "398",
+                  "name": "1. Extending Python with C or C++ — Python 3.10.2 documentation",
+                  "type": "url",
+                  "url": "https://docs.python.org/3/extending/extending.html"
+               } ],
+               "date_added": "13311655588741682",
+               "date_modified": "0",
+               "guid": "4753e400-3ee2-4ddd-a935-aa5ad1a55556",
+               "id": "349",
+               "name": "Other Bookmarks",
+               "type": "folder"
+            } ],
+            "date_added": "13311655588735189",
+            "date_modified": "0",
+            "guid": "46e82655-8f8c-424e-bf82-3df3b3eceec4",
+            "id": "187",
+            "name": "Imported ",
+            "type": "folder"
+         } ],
+         "date_added": "13309242966564994",
+         "date_modified": "13309243646517357",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13309242966564995",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13309242966564996",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

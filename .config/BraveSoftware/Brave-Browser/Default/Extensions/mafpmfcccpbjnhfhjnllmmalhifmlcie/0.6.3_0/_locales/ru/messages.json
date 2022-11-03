@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": "Запуск отдельного прокси"
+   },
+   "appDesc": {
+      "message": "Позволяет пользователям в странах с цензурой использовать ваше сетевое подключение для доступа к сети Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Файлы-куки не включены."
+   },
+   "browser": {
+      "message": "Используйте Snowflake для обхода цензуры"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Запросите учетную запись\u003C/a> в Tor Project GitLab, затем \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">откройте новое соединение\u003C/a> в проекте Snowflake."
+   },
+   "censoredUsers": {
+      "message": ""
+   },
+   "contactSnowflakeDevs": {
+      "message": ""
+   },
+   "descriptive": {
+      "message": "Пожалуйста, постарайтесь быть как можно более описательным в своем заявлении и, если возможно, включите сообщения журнала, которые помогут нам воспроизвести ошибку."
+   },
+   "embed": {
+      "message": "Встроить"
+   },
+   "extension": {
+      "message": "Помогите людям обойти цензуру: используйте прокси-сервер Snowflake"
+   },
+   "faq": {
+      "message": ""
+   },
+   "fileBug": {
+      "message": ""
+   },
+   "howSnowflakeWorks": {
+      "message": "Узнайте больше о том, как работает Snowflake"
+   },
+   "installChrome": {
+      "message": "Установить в Chrome"
+   },
+   "installExtension": {
+      "message": ""
+   },
+   "installFirefox": {
+      "message": "Установить в Firefox"
+   },
+   "installOptions": {
+      "message": "Существуют разные способы запуска прокси-сервера Snowflake (от уровня начинающего до продвинутого)"
+   },
+   "installStandalone": {
+      "message": ""
+   },
+   "installWebExtension": {
+      "message": ""
+   },
+   "installWebExtensionIntro": {
+      "message": "Установить веб-расширение"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Не удалось подключиться к мосту."
+   },
+   "popupDescOn": {
+      "message": "Пользователей, которым ваш Snowflake помог обойти цензуру за последние 24 часа: $1"
+   },
+   "popupEnabled": {
+      "message": "Вкл / выкл"
+   },
+   "popupLearnMore": {
+      "message": "Узнать больше"
+   },
+   "popupRetry": {
+      "message": "Повторить"
+   },
+   "popupRetrying": {
+      "message": "Повторная попытка ..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake выключен"
+   },
+   "popupStatusOn": {
+      "message": "Сейчас подключено пользователей: $1"
+   },
+   "popupStatusReady": {
+      "message": "Ваш Snowflake готов помочь пользователям обойти цензуру"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC не обнаружен."
+   },
+   "possible": {
+      "message": ""
+   },
+   "reportingBugs": {
+      "message": "Сообщить об ошибке"
+   },
+   "sharedAccount": {
+      "message": ""
+   },
+   "snowflakeTechOverview": {
+      "message": ""
+   },
+   "support": {
+      "message": ""
+   },
+   "volunteer": {
+      "message": ""
+   },
+   "webBadgeInstructions": {
+      "message": ""
+   },
+   "webBadgeTitle": {
+      "message": "Оставьте эту вкладку браузера открытой или встройте веб-значок на свой сайт"
+   },
+   "websiteIntro": {
+      "message": "Snowflake — это система, которая \u003Cstrong>позволяет людям со всего мира получать доступ к подвергнутым цензуре веб-сайтам и приложениям\u003C/strong>. Подобно тому, как VPN помогают пользователям обходить интернет-цензуру, Snowflake помогает вам не быть замеченным интернет-цензорами, создавая впечатление, что вы используете Интернет для обычного видео или голосового звонка."
+   },
+   "websiteIntro2": {
+      "message": ""
+   },
+   "websiteIntro3": {
+      "message": ""
+   }
+}

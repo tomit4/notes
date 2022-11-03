@@ -1,0 +1,930 @@
+{
+   "Add": {
+      "description": "",
+      "message": "Ouzhpennañ"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "Aotreadurioù ouzhpenn evit lec'hiennoù a c'haller kaout fiziañs enno"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "Aotreadurioù ouzhpenn evit lec'hiennoù n'haller ket kaout fiziañs enno"
+   },
+   "Allow": {
+      "description": "",
+      "message": "Aotren"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "Aotren al lec'hiennoù digoret dre ar sinedoù"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "Aotren an eilañ kopiañ gant testennoù pinvidikaet diwar ar golver diavaez"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "Aotren al liammoù lec'hel"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "Aotren ar bajenn a-bezh"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "Aotren \u003CA PING…>"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "Aotren al lec'hiennoù digoret dre ar sinedoù"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "Stankañ an holl objedoù o tont eus ul lec'hienn merket evel bezañ disfizius"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "Termeniñ evit ur mareig al lec'hiennoù pennañ war FIZIET"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "Em-freskaat ar pajennoù merket pa cheñch an aotreadurioù"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "Freskaat an ivinell red hepken"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "Domanioù diazez a live 2 (noscript.net)"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": "Stanket $1 diwar $2 a elfennoù."
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "NoScript objedoù stanket"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "Enrolladur ar c'hefluniañ NoScript e-barzh ur sined evit aesaat ar sinkroneladur"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "Nullañ"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "Aotreadurioù e skaleriad an teul uhel war skriptoù 3tredeoù"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "Forzh peseurt arc'hweladur a vefe stanket en teuliad pennañ a vo stanket ivez en isteuliadoù ivez"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript en deus dastapet un etregwerad logodenn pe glavier gant un elfenn peuz-goachet. Klikit war ar skeudenn dindan evit merdeiñ etre ar stumm stanket hag ar stumm sklaer."
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "Bogodennoù-klikañ a c'hallfe bezañ / O klask ratreañ Etrefas an Implijer!"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "Gwarez ClearClick war ar pajennoù..."
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "Danevell"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "Danevell ID:"
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "Kemenn ClearClick"
+   },
+   "Close": {
+      "description": "",
+      "message": "Serriñ"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "Bihanaat an objedoù stanket"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "Goulenn ur c'hadarnadur a-raok distankañ evit ur mare un objed"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "Lañser kendestennel"
+   },
+   "Custom": {
+      "description": "",
+      "message": "Personnel"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "Personneladur rakwelet (evit al lec'hiennoù a rann ur rakreoliñ)"
+   },
+   "Default": {
+      "description": "",
+      "message": "Dre ziouer"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "Politikerezhioù dre ziouer"
+   },
+   "Description": {
+      "description": "",
+      "message": "Gwarez evit ho merdeer: NoScript a aotren an endalc'hadoù oberiant hepken evit an domanioù lakaet da fizius hervez ho tibaboù, kement-se evit mirout ouzh ar c'horvoiñ."
+   },
+   "Donate": {
+      "description": "",
+      "message": "Reiñ arc'hant"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript is Free Software and can't exist without your help. Please donate now!"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "Reiñ arc'hant"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "Enkorfadurioù"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "Enaouiñ ar strishadurioù en un doare hollek"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "Enaouiñ ar strishadurioù evit an ivinell-mañ"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "Nemedennoù…"
+   },
+   "Export": {
+      "description": "",
+      "message": "Ezporzhiañ"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "Klask kempenn al liammoù JavaScript"
+   },
+   "Hider": {
+      "description": "",
+      "message": "Bihanaat amañ evit kuzhat."
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "Dargemm uhel"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "HTTPS FAG…"
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "Rediañ al lec'hiennoù da-heul d'ober gant ur c'hevreadur suraet (HTTPS):"
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "Chom hep rediañ ar c'hevreadurioù suraet (HTTPS) evit al lec'hiennoù da-heul:"
+   },
+   "Https_always": {
+      "description": "",
+      "message": "Atav"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "Perc'henner"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Toupinoù"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "Forbanniñ an endalc'had Web oberiant nemet e teufe eus ur c'hevreadur suraet (HTTPS):"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "Morse"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "En ur implijout ur proksi (aliet gant Tor)"
+   },
+   "Import": {
+      "description": "",
+      "message": "Emporzhiañ"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "Mirit an elfenn-mañ morailhet (aliet)"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "Standilhon a genglot gant ar patrom:"
+   },
+   "Next": {
+      "description": "",
+      "message": "Da-heul"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "Lazhañ ar strishadurioù en un doare hollek (dañjerus)"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "Lazhañ ar strishadurioù evit an ivinell-mañ"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "Endalc'her-spas ebet evit ar an objedoù o tont eus lec'hiennoù merket evel disfizius"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "Strishadurioù lazhet"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "Kemennadurioù"
+   },
+   "Notify": {
+      "description": "",
+      "message": "Diskouez ur gemennadenn diwar-benn ar skriptoù stanket"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "Diskouez ur gemennadenn war an adheñchadurioù META stanket"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "Lakaat ar gemennadenn en traoñ"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "Diskouez an \u003CNOSCRIPT> elfenn hag a heul un \u003CSCRIPT> stanket"
+   },
+   "NselNever": {
+      "description": "",
+      "message": "Kuzhat \u003CNOSCRIPT> a elfennoù"
+   },
+   "OK": {
+      "description": "",
+      "message": "Mat eo"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "Dizober an aotreadurioù berr o fadelezh war hizivadurioù NoScript, ha pa ne vefe ket adloc'het gant ar merdeer"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "Stankiñ ar skanerioù diazezet war CSS"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "Yac'haat ar rekedoù susped dreuz-lec'hiennoù"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "Treuzfurmiñ ar rekedoù POST dreuz-lec'hiennoù e-barzh rekedoù GET diroadenn"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "Enaouiñ an arventenn aotreadurioù da badout en ivinelloù dizanv/prevez.\nDIWALLIT: titouroù 'zo el lec'hienn a c'hallo diverañ gant an dra-se!"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "Erlec'hiañ rak-arventennoù live surentez ar Merdeer Tor"
+   },
+   "Options": {
+      "description": "",
+      "message": "Dibarzhioù..."
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "Dibarzhioù NoScript"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "Urzhiad \"Aotren\" peurbadel e-barzh ar prenestr prevez"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "Gellout a rit spisaat al lec'hiennoù Web aotreet da sevenniñ skriptoù. Skrivit ar chomlec'h pe an domani (da skouer, «http://www.site.com» pe «site.com») al lec'hienn ho peus c'hoant implijout, klikit war Aotren."
+   },
+   "Plugins": {
+      "description": "",
+      "message": "Lugantoù"
+   },
+   "Policies": {
+      "description": "",
+      "message": "Politikerezhioù"
+   },
+   "Preset": {
+      "description": "",
+      "message": "Live surentez"
+   },
+   "Prev": {
+      "description": "",
+      "message": "Kent"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "Lec'hiennoù stanket nevez 'zo"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "Freskaat"
+   },
+   "Reload": {
+      "description": "",
+      "message": "Freskaat"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "An dibarzhioù-mañ a vo kemeret e kont war ar pajennoù nevez (gant an dorn) pe adfreskaet"
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "Dilemel al lec'hiennoù diuzet"
+   },
+   "Reset": {
+      "description": "",
+      "message": "Adderaouekaat"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "Adlakaat dre ziouer"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "Klikit amañ evit adpakañ ar boutonoù a vank..."
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "Dizober an aotradurioù padennek"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "Araokaet"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "Tres"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "Hollek"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "Aotradurioù dre lec'hienn"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "Enaouiñ emveradur an toupinoù suraet"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "Na ober van ouzh an toupinoù nann-suraet termennet war HTTPS evit al lec'hiennoù da-heul:"
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "Rediañ ar renigadur evit an toupinoù termenet war HTTPS gant al lec'hiennoù da-heul:"
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "Merour ar sutentez"
+   },
+   "Show": {
+      "description": "",
+      "message": "Diskouez..."
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "Diskouez ar c'hoñsol..."
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "Diskouez an elfennoù badj kont stanket"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "Diskouez objed lañser kendestennel NoScript"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "Listenn ar chomlec'hioù klok e-barzh prenestr kendestennel an aotreadurioù (https://www.noscript.net)"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "Diskouez arlun an endelc'her-spas"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "Diskouez an notennoù diwar-benn hizivadurioù an embannadur"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "Aotreadurioù al lec'hienn"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "Politikerezhioù ispisial al lec'hienn"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "Lakaat an aotradurioù pajenn war padel"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "Lakaat hollad ar bajenn war FIZIUS evit ur mare"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "Merkañ evel fizius"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "Fiziet"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "fiziet"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "FIZIET"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "FIZIUS evit ur mare"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "Distaliañ"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "Dizanv"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "Freskadur dañjerus"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "Merkañ evel disfizius"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "Disfiziet"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "disfiziet"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "Klask pe ouzhpennañ ul lec'hienn Web:"
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "Freskaat an dibaboù XSS"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "Diskouez ar c'hemennadurioù XSS"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "Aotren ar reked-mañ"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "Aotren dalc'hmat ar rekedoù goulenn eus $1 da $2"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "Aotren reked bloc'had an teulioù gant $1 da $2"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "Stankañ ar reked-mañ"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "Yac'haat ar reked-mañ"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript a zo bet diguzhet un dagadenn skriptiñ Dreuz-Lec'hienn eus $1 da $2.\nRoadennoù susped:\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "Kemennoù NoScript XSS"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "Nemedennoù gwareziñ enep-XSS"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "Al lec'hioù kas a genglot gant an troiennoù reoliataet na vezo KET gwarezet a-enep XSS."
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "FAG XSS…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "Diwar-benn $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "Aotren pep-tra digant  $1"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "Lazhañ an holl wiriadurioù aotradurioù (dañjerus)"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "Aotren $1"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "Aotren evit ur mare $1"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "Aotren evit ur mare pep-tra digant $1"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "Skriptoù forbannet er mare-mañ"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "Skriptoù aotreet a-zarn"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "Skriptoù aotreet er mare-mañ"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "Goulenn dalc'hmat evit kadarnaat"
+   },
+   "anySite": {
+      "description": "",
+      "message": "ANY SITE"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "Standilhonoù aodio"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript a zo bet kavet gantañ ur sined kefluniañ hag a zo enrollet war a-seblant war \n$1.\nHa fellout a ra deoc'h dreist-skrivañ ho keflunadurioù lec'hel da vat eus NoScript gant endalc'had ar sined?"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "NEKET sañset bezañ digoret ar sined-mañ, met da vezañ sinkronelaet en ur ober gant ur servij evel Weave pe an astenn XMarks."
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "Sined Kefluniadur NoScript"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "fetch"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "font"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "fram"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "LAN"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "media"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "objed"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "traoù all"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "skript"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "unrestricted CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "webgl"
+   },
+   "caps": {
+      "description": "",
+      "message": "Enable these capabilities"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "Enable these capabilities when top page matches"
+   },
+   "changelog": {
+      "description": "",
+      "message": "Cheñchamantoù"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "Diskouez ar cheñchamantoù"
+   },
+   "confirm": {
+      "description": "",
+      "message": "Ha sur oc'h?"
+   },
+   "disable": {
+      "description": "",
+      "message": "Diweredekaat $1"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "Merkañ $1 evel disfiziet"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "Kendaolerien:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "An dud da drugarekaat evit al lugant-mañ"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "Aozer:"
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "Gweladennit pajenn-degemer an aozer"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "Gweladennit pajenn-degemer al lugant"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "Forbannañ hollad ar skriptoù (aliet)"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "Forbannañ $1"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "Evit gellout kas da benn an oberiadenn war an ivinell-mañ, NoScript a rank freskaat anezhi. Kenderc'hel?"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "Klotañ a ra gant an endalc'had HTTPS hepken"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\"\na zo digenglotus gant \"$2\".\nHa c'hoant ho peus c'hoant da enaouiñ ar stummer ha lazhañ an diwezher?"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "Kemenn dibarzhioù digenglotus"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "Gweladenniñ pajenn-degemer InformAction"
+   },
+   "license": {
+      "description": "",
+      "message": "Lisañs"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "Lenn al lisañs implijer fin"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "Gweladennit pajenn-degemer al lugant"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript en deus stanket un \u003CMETA> adhenchañ e-barzh un elfenn \u003CNOSCRIPT>: $1 en $2 eilennoù."
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "Ur bajenn gant dreistgwirioù, n'hall ket bezañ kefluniet an aotreadurioù."
+   },
+   "removal_message": {
+      "description": "",
+      "message": "Dre ziweredekaat pe distaliañ NoScript, reiñ a reoc'h un termen d'an HOLL warezioù pourvezet gant NoScript.\n\nMa 'z oc'h just skuizh gant ar fet da verañ an aotreoù eus an eil lec'hienn war-lerc'h e-benn, bez ez eus ur choaz suroc'h.\n\nNoScript a c'hall paouez da stankañ ar skriptoù, war-bouez ar re ho peus merket evel disfizius, en ur genderc'hel da wareziñ ac'hanoc'h gant an enep-muzulioù araokaetañ a-enep XSS, Clickjacking, CSRF ha gourdrouzioù all ar web.\n\nDaoust hag-eñ e fell deoc'h dilemel HOLLAD da vat gwarezioù NoScript?\n"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "Ket, paouez da herzel ar skriptoù"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "Kemenn diglasadur surentez"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "Ya, dilemel an holl warezoù"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "Addeouerekadur NoScript"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "HOLLAD arventennoù NoScript hag aotreoù lec'hienn a vo adlakaet d'o zalvoud orin diouzhtu-dak.\nAn obererezh-mañ n'hall ket bezañ nullet.\nHa fellout a ra deoc'h kenderc'hel?"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "Theme"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "Emaoc'h war-nes goulenn war-lerc'h titouroù diwar-benn al lec'hienn \"$1\"\nen ur gas ur reked da $2.\nHa fellout a ra deoc'h kenderc'hel ganti?"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "Klik-kreiz pe Pennlizh+klik evit muioc'h a ditouroù..."
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "Gweladennit pajenn-degemer ar sponsor"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "Auto"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "Dark"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "Light"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "Oc'h adkargañ ur suspisionus DIASUR\n\n$1 [$2]\n\nADALEK [$3]\n\nNoScript NA warezo KET ar reked-mañ!\n"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "un orin disfizius"
+   },
+   "version": {
+      "description": "",
+      "message": "Stumm $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

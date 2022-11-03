@@ -1,0 +1,37 @@
+#!/bin/bash
+
+function b_check() {
+    read -e -r -p "${txtblue} this flag relies on the github api, is this a github project?(y/n): ${txtyellow}" isgithub
+    if [[ $isgithub == 'y' || $isgithub == 'yes' ]] ; then
+
+        if [[ ! -f $HOME/.gh_pat ]]; then
+        echo "${txtred} Github personal access token doesn't exist"
+        echo " See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
+        echo " create a $HOME/.gh_pat file and put your personal access token in it like so:"
+        echo ' echo > "GH_TOKEN=your_gh_token_goes_here'
+        tput bold & tput setaf 7
+        exit 1
+        fi
+
+        source $HOME/.gh_pat
+        deletegithubrepo
+    elif [[ $isgithub == 'n' || $isgithub == 'no' ]] ; then
+        echo "${txtblue} exiting bgit...${txtwhite}"
+    fi
+}
+
+function deletegithubrepo() {
+    read -e -r -p "${txtblue} would you like to use your default git username?(y/n): ${txtyellow}" amendusername
+    if [[ $amendusername == 'y' || $amendusername == 'yes' ]] ; then
+        username=$(git config --list | grep user.name | awk -F= '{print $2}')
+    elif [[ $amendusername == 'n' || $amendusername == 'no' ]] ; then
+        read -e -r -p "${txtblue} please enter your username: ${txtyellow}" preferredusername
+        username=$preferredusername
+    fi
+
+    read -e -r -p "${txtblue} please enter the name of the repository you'd like to delete: ${txtyellow}" reponame
+
+    tput bold & tput setaf 7
+    curl -i -H "Authorization: token $GH_TOKEN" -X 'DELETE' https://api.github.com/repos/$username/$reponame --http1.1 > /dev/null 2>&1
+}
+

@@ -1,0 +1,35 @@
+{
+   "extensionDesc": {
+      "message": "Regresa la posibilidad de ver los dislikes"
+   },
+   "extensionName": {
+      "message": "Regresar los Dislikes de YouTube"
+   },
+   "legendSettings": {
+      "message": "Ajustes"
+   },
+   "linkDonate": {
+      "message": "Donar"
+   },
+   "linkFAQ": {
+      "message": "P+F"
+   },
+   "linkHelp": {
+      "message": "Ayuda"
+   },
+   "linkWebsite": {
+      "message": "Página web"
+   },
+   "textDeveloper": {
+      "message": "por Dmitry Selivanov y la Comunidad"
+   },
+   "textSettings": {
+      "message": "Desactivar los dislikes"
+   },
+   "textSettingsHover": {
+      "message": "Dejar de contar los dislikes."
+   },
+   "textUpdate": {
+      "message": "actualizar a"
+   }
+}

@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": "Rulați un proxy independent"
+   },
+   "appDesc": {
+      "message": "Permiteți utilizatorilor din țările cenzurate să vă folosească conexiunea la rețea pentru a permite acces la rețeaua Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Cookie-urile nu sunt activate."
+   },
+   "browser": {
+      "message": "Folosiți Snowflake pentru a ocoli cenzura"
+   },
+   "bugTracker": {
+      "message": "Solicitați un cont la Tor Project pe GitLab, apoi deschideți o nouă problemă în proiectul Snowflake."
+   },
+   "censoredUsers": {
+      "message": "Spre deosebire de VPN-uri, nu trebuie să instalați o aplicație separată pentru a vă conecta la un proxy Snowflake și pentru a ocoli cenzura. De obicei, este o caracteristică de eludare încorporată în aplicațiile existente. În prezent, Snowflake este disponibil în interiorul \u003Ca href=\"https://torproject.org/download\">Tor Browser \u003C/a>pe Desktop și Android, \u003Ca href=\"https://onionbrowser.com\">Onion Browser\u003C/a> pe iOS și \u003Ca href=\"https://orbot.app\">Orbot\u003C/a> pe Android și iOS. Dacă ați descărcat și instalat oricare dintre aceste aplicații și acestea sunt cenzurate în țara dumneavoastră, puteți ocoli cenzura prin activarea Snowflake prin pagina de setări a aplicațiilor."
+   },
+   "contactSnowflakeDevs": {
+      "message": "Dacă sunteți interesat să utilizați Snowflake în interiorul aplicației dumneavoastră, luați legătura cu \u003Ca href=\"https://lists.torproject.org/cgi-bin/mailman/listinfo/anti-censorship-team\">echipa anti-cenzură."
+   },
+   "descriptive": {
+      "message": "Vă rugăm să fiți cât mai detaliat cu privire la eroare și să scrieți, dacă este posibil,  si un mesaj pentru a ne ajuta să indentificăm eroarea."
+   },
+   "embed": {
+      "message": "Încorporat"
+   },
+   "extension": {
+      "message": "Ajutați oamenii să evite cenzura: operați un proxy Snowflake"
+   },
+   "faq": {
+      "message": "Căutăm asistență pentru utilizarea Snowflake"
+   },
+   "fileBug": {
+      "message": "Dacă întâmpinați probleme cu Snowflake - indiferent dacă îl utilizați sau îl executați -, vă rugăm să luați în considerare depunerea unui raport de eroare. Există două moduri de a trimite un raport de eroare:"
+   },
+   "howSnowflakeWorks": {
+      "message": "Aflați mai multe despre cum funcționează Snowflake"
+   },
+   "installChrome": {
+      "message": "Instalați în Chrome"
+   },
+   "installExtension": {
+      "message": "Știați că proxy-urile Snowflake sunt operate în întregime de voluntari? Cu alte cuvinte, un utilizator se potrivește cu un proxy voluntar de Snowflake aleatoriu este condus de un voluntar ca tine! Deci, dacă doriți să ajutați oamenii să ocolească cenzura, luați în considerare instalarea și rularea unui proxy Snowflake. Singura condiție prealabilă este ca internetul din țara dumneavoastră să nu fie deja cenzurat."
+   },
+   "installFirefox": {
+      "message": "Instalați în Firefox"
+   },
+   "installOptions": {
+      "message": "Există diferite moduri de a rula un proxy Snowflake (începător la avansat):"
+   },
+   "installStandalone": {
+      "message": "Dacă doriți să rulați o versiune de linie de comandă a proxy-ului Snowflake pe desktop sau server, consultați \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">ghidul\u003C/a> nostru pentru rularea unui proxy independent Snowflake."
+   },
+   "installWebExtension": {
+      "message": ""
+   },
+   "installWebExtensionIntro": {
+      "message": "Instalați extensia web"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Nu s-a putut conecta la punte."
+   },
+   "popupDescOn": {
+      "message": "Numărul de utilizatori pe care Snowflake de pe dispozitivul dvs. i-a ajutat să ocolească cenzura în ultimile 24 de ore: $1"
+   },
+   "popupEnabled": {
+      "message": "Activat"
+   },
+   "popupLearnMore": {
+      "message": "Află mai mult"
+   },
+   "popupRetry": {
+      "message": "Încearcă din nou"
+   },
+   "popupRetrying": {
+      "message": "Reîncercare..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake este închis"
+   },
+   "popupStatusOn": {
+      "message": "Numărul de utilzatori conectați în prezent: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake de pe dispozitivul dvs. este gata să ajute utilizatorii să ocolească cenzura"
+   },
+   "popupWebRTCOff": {
+      "message": "Funcția WebRTC nu este detectată."
+   },
+   "possible": {
+      "message": "Alternativ, puteți încorpora singur un proxy Snowflake într-o pagină din propriul site web (de exemplu, \u003Ca href=\"https://relay.love\">relay.love\u003C/a>). Vizitatorii site-ului dumneavoastră pot intra pe pagină, activează proxy-ul și îl pot lăsa deschis pentru a permite oamenilor să utilizeze proxy prin intermediul acesteia (se comportă și arată exact ca extensia web)."
+   },
+   "reportingBugs": {
+      "message": "Raportarea erorilor"
+   },
+   "sharedAccount": {
+      "message": "Scrieți un \u003Ca href=\"https://anonticket.onionize.space/\">bilet anonim\u003C/a> prin generarea unui identificator și conectarea cu acesta. Apoi, găsiți proiectul Snowflake în \u003Cstrong>lista tuturor proiectelor\u003C/strong> și creați o nouă problemă."
+   },
+   "snowflakeTechOverview": {
+      "message": "Snowflake este o nouă tehnologie de eludare, parte a familiei \u003Ca href=\"https://gitweb.torproject.org/torspec.git/tree/pt-spec.txt\">transporturilor conectabile\u003C/a>, care este în continuă îmbunătățire. Ești curios să afli mai multe despre arhitectura sa? Nu ezitați să verificați această \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/Technical%20Overview\">prezentare tehnică\u003C/a> (în Engleză)."
+   },
+   "support": {
+      "message": "Dacă întâmpinați probleme în timp ce încercați să vă conectați la Tor folosind Snowflake, canalul de suport Tor poate fi accesat prin \u003Ca href=\"https://t.me/TorProjectSupportBot\">Telegram\u003C/a>. De asemenea, puteți naviga pe \u003Ca href=\"https://support.torproject.org/censorship/\">portalul de suport Tor\u003C/a> și pe \u003Ca href=\"https://forum.torproject.net/tag/snowflake\">forumul Tor\u003C/a> pentru răspunsuri."
+   },
+   "volunteer": {
+      "message": "Vă puteți alătura miilor de voluntari din întreaga lume care au un proxy Snowflake instalat și rulat. Nu este nevoie să vă faceți griji cu privire la site-urile web pe care oamenii le accesează prin proxy-ul dumneavoastră Snowflake. Adresa lor IP de navigare vizibilă se va potrivi cu nodul lor de ieșire Tor, nu cu al tău."
+   },
+   "webBadgeInstructions": {
+      "message": "Dacă porniți Snowflake de mai jos și lăsați fila browser-ului deschisă, un utilizator se poate conecta prin noul dumneavoastră proxy!"
+   },
+   "webBadgeTitle": {
+      "message": "Lăsați această filă de browser deschisă sau încorporați o insignă web pe site-ul dumneavoastră web"
+   },
+   "websiteIntro": {
+      "message": "Snowflake este un sistem care \u003Cstrong>permite oamenilor din întreaga lume să acceseze site-uri și aplicații cenzurate\u003C/strong>. Similar cu modul în care VPN-urile îi ajută pe utilizatori să ocolească cenzura pe internet, Snowflake vă ajută să evitați să fiți observați de cenzorii internetului, făcând ca activitatea dumneavoastră pe internet să apară ca și cum ați folosi internetul pentru un apel video sau vocal obișnuit."
+   },
+   "websiteIntro2": {
+      "message": "Există numeroase instrumente disponibile, cum ar fi Snowflake, care \"transformă\" activitatea pe Internet, fiecare folosind o tehnică diferită. Unele redirecționează traficul pe Internet pentru a părea că provin de la furnizori de cloud populari, cum ar fi Microsoft Azure și Amazon Web Services. Alții amestecă traficul pe Internet pentru a-l face să pară complet aleatoriu."
+   },
+   "websiteIntro3": {
+      "message": "Prin urmare, devine costisitor pentru cenzori să ia în considerare blocarea unor astfel de instrumente de eludare, deoarece ar necesita blocarea unor părți mari ale internetului pentru a atinge obiectivul inițial vizat."
+   }
+}

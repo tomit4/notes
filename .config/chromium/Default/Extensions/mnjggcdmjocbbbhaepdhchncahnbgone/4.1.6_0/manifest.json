@@ -1,0 +1,42 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "./js/vendor.js", "./js/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "SponsorBlock"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content.css", "./libs/Source+Sans+Pro.css", "popup.css" ],
+      "js": [ "./js/vendor.js", "./js/content.js" ],
+      "matches": [ "https://*.youtube.com/*", "https://www.youtube-nocookie.com/embed/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_Description__",
+   "homepage_url": "https://sponsor.ajay.app",
+   "icons": {
+      "1024": "icons/LogoSponsorBlocker1024px.png",
+      "128": "icons/LogoSponsorBlocker128px.png",
+      "16": "icons/IconSponsorBlocker16px.png",
+      "256": "icons/LogoSponsorBlocker256px.png",
+      "32": "icons/IconSponsorBlocker32px.png",
+      "512": "icons/LogoSponsorBlocker512px.png",
+      "64": "icons/LogoSponsorBlocker64px.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjc1iNthsC5JkHtm2GbB4mri2L7XOKyt6XTPg0ajyxKCcveSCZadWIQNY/K1YgrBYJoC8vkbv0dDNi9Zbgn29AsxODJWsqKkUN7q/n0rlFvzWQuDYG1IR6UUBCuMCEL8mxKCkJoz3ORZWmgAhAU8G0LEwtCaakrYvvPRpV/e/NytYMnuSeq63LUGxWB4/YhKFNCjoldqy1dpz8HfMQvqKaX5F7WeQjj1nlvtNGU21uP0FkIDY8+Hj8/cZVIb2a4dijb8HCIg/L4YHdn5GnTDoHaZ7UVM9Fvfa8uNdxbp+POQ4XztTWm4fXea0SU395ee171/CBOP7pp2UgnSrMu+VxwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_fullName__",
+   "optional_permissions": [ "*://*/*", "declarativeContent" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "https://sponsor.ajay.app/*" ],
+   "short_name": "SponsorBlock",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.1.6",
+   "web_accessible_resources": [ "icons/LogoSponsorBlocker256px.png", "icons/IconSponsorBlocker256px.png", "icons/PlayerStartIconSponsorBlocker.svg", "icons/PlayerStopIconSponsorBlocker.svg", "icons/PlayerUploadIconSponsorBlocker.svg", "icons/PlayerUploadFailedIconSponsorBlocker.svg", "icons/PlayerCancelSegmentIconSponsorBlocker.svg", "icons/clipboard.svg", "icons/settings.svg", "icons/pencil.svg", "icons/check.svg", "icons/upvote.png", "icons/downvote.png", "icons/thumbs_down.svg", "icons/thumbs_down_locked.svg", "icons/thumbs_up.svg", "icons/help.svg", "icons/report.png", "icons/close.png", "icons/skipIcon.svg", "icons/refresh.svg", "icons/beep.ogg", "icons/pause.svg", "icons/stop.svg", "icons/heart.svg", "icons/visible.svg", "icons/not_visible.svg", "icons/PlayerInfoIconSponsorBlocker.svg", "icons/PlayerDeleteIconSponsorBlocker.svg", "popup.html", "content.css" ]
+}

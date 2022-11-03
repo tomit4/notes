@@ -1,0 +1,45 @@
+filter
+add ~/Music/La foule [ShmWmMWI8rY].mp3
+add ~/Music/Dans ma ruche - Guizmo [0YXRxxMPVbs].mp3
+colorscheme green
+clear -l
+clear
+a ~/Music
+q
+set resume=true
+view
+view sorted
+set views
+set view
+set view 2
+set 2
+colorscheme amazon
+colorscheme zenburn
+colorscheme xterm-white
+colorscheme xterm-white-theme
+colorsheme amazon
+colorscheme none
+colorscheme green-mono-88
+colorscheme cyan
+colorscheme solarized-dark
+colorscheme nord
+colortheme nord
+a ~/Downloads
+c
+version
+save
+pwd
+add ~/Music/
+add ~/Music
+add ~/Music/After Dark - Mr. Kitty-wZLpU9SOHZc.m4a
+fset ogg-or-mp3=ogg|mp3
+fset unheard=play_count=0
+fset ogg=filename="*.ogg"
+fset mp3=filename="*.mp3"
+fset missing-tag=!stream&(artist=""|album=""|title=""|tracknumber=-1|date=-1)
+live-filter 
+fset 90s=date>=1990&date<2000
+fset 90s=date>=1990&date<200
+a Peaceful Piano & Soft Rain - Relaxing Sleep Music, A Bitter Rain-hj83cwfOF3Y.opus
+a https://www.learncpp.com/cpp-tutorial/introduction-to-objects-and-variables/
+a 'Peaceful

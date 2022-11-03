@@ -1,0 +1,930 @@
+{
+   "Add": {
+      "description": "",
+      "message": "Legg til"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "Ytterligere tilganger for betrodde sider"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "Ytterligere begrensninger for ubetrodde sider"
+   },
+   "Allow": {
+      "description": "",
+      "message": "Tillat"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "Tillat sider åpnet fra bokmerker"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "Tillat kopiering og innliming av rikholdig tekst fra ekstern utklippstavle"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "Tillat"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "Tillat alle på denne siden"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "Tillat \u003CET PING…>"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "Tillat sider åpnet fra bokmerker"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "Blokker alle objekter som kommer fra en side markert som ubetrodd"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "Sett toppnivåsider midlertidig til BETRODD"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "Last inn påvirkede sider igjen automatisk når tilgangene endrer seg"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "Kun last inn nåværende fane igjen"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "Baser andrenivådomener (noscript.net)"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": "Blokkerte $1 av $2 elementer."
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "NoScript Blokkerte  Objekter"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "Sikkerhetskopier NoScript-oppsett i et bokmerke for enkel synkronisering"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "Avbryt"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "Kaskader toppdokumenttilganger til tredjepartsskript"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "Any capability blocked in the top document must be blocked in its subdocuments too"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript mottok mus- eller tastaturklikk med et delvis skjult element. Klikk på bildet nedenfor for å veksle mellom tildekket og klar versjon."
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "Potensiell klikkovertagelse / grensesnittstilsløringsforsøk!"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "KlarKlikk-beskyttelse på sider…"
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "Innrapporter"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "Rapport-ID:"
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "KlarKlikk-advarsel"
+   },
+   "Close": {
+      "description": "",
+      "message": "Lukk"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "Fold sammen blokkerte objekter"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "Spør om bekreftelse før et objekt avblokkeres"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "Bindeleddsmeny"
+   },
+   "Custom": {
+      "description": "",
+      "message": "Egendefinert"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "Forhåndsvalgstilpasning (for alle sider som deler et forvalg)"
+   },
+   "Default": {
+      "description": "",
+      "message": "Forvalg"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "Forvalgte praksiser"
+   },
+   "Description": {
+      "description": "",
+      "message": "Maksimal beskyttelse for nettleseren din: NoScript tillater bare aktivt innhold for pålitelige domener du ønsker, for å forhindre utnyttelse."
+   },
+   "Donate": {
+      "description": "",
+      "message": "Doner"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript is Free Software and can't exist without your help. Please donate now!"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "Doner"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "Innebygginger"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "Skru på begrensninger globalt"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "Skru på begrensninger på denne fanen"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "Unntak…"
+   },
+   "Export": {
+      "description": "",
+      "message": "Eksporter"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "Forsøk å fikse JavaScript-lenker"
+   },
+   "Hider": {
+      "description": "",
+      "message": "Slipp her for å skjule."
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "High contrast"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "HTTPS- O-S-S…"
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "Tving følgende sider til å bruke sikre (HTTPS-) tilkoblinger:"
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "Aldri påtving sikre (HTTPS-) tilkoblinger for følgende sider:"
+   },
+   "Https_always": {
+      "description": "",
+      "message": "Alltid"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "Oppførsel"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Informasjonskapsler"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "Forby aktivt vevinnhold med mindre det kommer fra en sikker (HTTPS-) forbindelse:"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "Aldri"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "Når det brukes en mellomtjener (anbefalt med Tor)"
+   },
+   "Import": {
+      "description": "",
+      "message": "Importer"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "La dette elementet forbli låst (anbefalt)"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "Mønsterjamføringseksempel:"
+   },
+   "Next": {
+      "description": "",
+      "message": "Neste"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "Skru av begrensninger globalt (farlig)"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "Skru av begrensninger på denne fanen"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "Ingen plassholder for objekter som kommer fra sider markert som ubetrodd"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "Begrensninger avskrudd"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "Merknader"
+   },
+   "Notify": {
+      "description": "",
+      "message": "Vis melding om blokkerte skript"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "Vis melding om blokkerte META-videresendinger"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "Plasser melding på bunnen"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "Vis \u003CNOSCRIPT> -elementet som følger et blokkert \u003CSCRIPT>"
+   },
+   "NselNever": {
+      "description": "",
+      "message": "Skjul \u003CNOSCRIPT> -elementer"
+   },
+   "OK": {
+      "description": "",
+      "message": "OK"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "Revoke temporary permissions on NoScript updates, even if the browser is not restarted"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "Blokker CSS-baserte skannere"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "Vask mistenkelige mellomsidige forespørsler"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "Gjør mellomsidige POST-forespørsler til mindre datakrevende GET-forepørsler"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "Enable setting permanent permissions in incognito/private tabs.\nBEWARE: doing this can leak site information!"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "Overstyr Tor Browser sikkerhetsnivå forhåndsinnstilt"
+   },
+   "Options": {
+      "description": "",
+      "message": "Valg…"
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "NoScript-valg"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "Permanent \"Tillat\" -kommandoer i private vindu"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "Du kan angi hvilke sider som tillates å kjøre skript. Skriv in adressen eller domenet (f.eks. \"http://www.side.no\" or \"side.no\") for siden du ønsker å tillate, og klikk så \"Tillat\"."
+   },
+   "Plugins": {
+      "description": "",
+      "message": "Programtillegg"
+   },
+   "Policies": {
+      "description": "",
+      "message": "Praksiser"
+   },
+   "Preset": {
+      "description": "",
+      "message": "Sikkerhetsnivå"
+   },
+   "Prev": {
+      "description": "",
+      "message": "Forrige"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "Nylig blokkerte sider"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "Gjenoppfrisk"
+   },
+   "Reload": {
+      "description": "",
+      "message": "Reload"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "Disse valgene vil tre i effekt ved nye (eller manuelle) innlastinger av sider."
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "Fjern valgte sider"
+   },
+   "Reset": {
+      "description": "",
+      "message": "Tilbakestill"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "Tilbakestill til forvalg"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "Klikk her for å hente manglende knapper…"
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "Tilbakekall midlertidige tilganger"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "Avansert"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "Utseende"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "Generelt"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "Sidevise tilganger"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "Skru på automatisk sikker informasjonskapselsbehandling"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "Ignorer utrygge kaker satt over HTTPS av følgende sider:"
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "Tving gjennom kryptering for alle informasjonskapsler satt over HTTPS av følgende sider:"
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "Sikkerhetsbehandler"
+   },
+   "Show": {
+      "description": "",
+      "message": "Vis…"
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "Vis konsoll…"
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "Skilt antall blokkerte elementer"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "Vis menyelementet for NoScript-bindeleddsinfo"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "List opp hele adresser i tilgangsoppsprett (https://www.noscript.net)"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "Vis plassholdersikon"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "Vis versjonsnotater ved oppgraderinger"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "Sidetilganger"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "Sidevise praksiser"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "Gjør sidetilganger permanente"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "Sett alt på denne siden midlertidig til BETRODD"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "Marker som betrodd"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "Betrodd"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "betrodd"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "BETRODD"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "Midl. BETRODD"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "Avinstaller"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "Ukjent"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "Utrygg gjeninnlasting"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "Marker som ubetrodd"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "Ubetrodd"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "ubetrodd"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "Søk eller legg til en nettside:"
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "Tøm XSS-valg"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "Vis XSS-merknader"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "Tillat denne forespørselen"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "Alltid tillat dokumentforespørsler fra $1 til $2"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "Alltid blokker dokumentforespørsler fra $1 til $2"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "Blokker denne forespørselen"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "Vask denne forespørselen"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript oppdaget et mulig mellomsidig angrep\nfra $1 til $2.\nMistenkelig data:\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "NoScript- XSS-advarsel"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "Anti-XSS -beskyttelsesunntak"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "Mål som samsvarer med disse regulære uttrykkene vil IKKE beskyttes mot XSS."
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "XSS- O-S-S…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "Om $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "Tillat alt fra $1"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "Skru av alle tilgangssjekker (farlig)"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "Tillat $1"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "Tillat $1 midlertidig"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "Tillat alt fra $1 midlertidig"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "Skript er forbudt akkurat nå"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "Skript er delvis tillatt"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "Skript tillates nå"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "Alltid spør om bekreftelse"
+   },
+   "anySite": {
+      "description": "",
+      "message": "ANY SITE"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "Lydklipp"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript funnet et oppsettsbokmerke tilsynelatende lagret på\n$1.\nØnsker du virkelig å overskrive ditt lokale NoScript-oppsett med dette?"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "Dette bokmerket er IKKE ment for å bli åpnet, men snarere å synkroniseres med en tjeneste som Weave eller XMarks-programtillegget."
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "NoScript-oppsettsbokmerke"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "hent"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "skrift"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "ramme"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "LAN"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "media"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "objekt"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "annet"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "skript"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "unrestricted CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "WebGL"
+   },
+   "caps": {
+      "description": "",
+      "message": "Enable these capabilities"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "Enable these capabilities when top page matches"
+   },
+   "changelog": {
+      "description": "",
+      "message": "Endringslogg"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "Vis endringslogg"
+   },
+   "confirm": {
+      "description": "",
+      "message": "Er du sikker?"
+   },
+   "disable": {
+      "description": "",
+      "message": "Skru av $1"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "Marker $1 som ubetrodd"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "Bidragsytere:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "Folk du har å takke for dette programtillegget"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "Utvikler:"
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "Besøk utviklerens hjemmeside"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "Besøk programtilleggets hjemmeside"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "Forby skript globalt (anbefalt)"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "Forby $1"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "For å kunne betjene denne fanen, må NoScript gjeninnlaste den.\nFortsett?"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "Kun jamfør HTTPS-innhold"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\"\ngår ikke overens med \"$2\".\nØnsker du å skru på den første og skru av den siste?"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "Advarsel om ukompatible valg"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "Besøk InformActions hjemmeside"
+   },
+   "license": {
+      "description": "",
+      "message": "Friproglisens"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "Les sluttbrukerlisensen"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "Besøk programtilleggets hjemmeside"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript blokkerte en \u003CMETA> -videresendelse inne i et \u003CNOSCRIPT> -element: $1 i $2 sekunder."
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "Dette er en priviligert side, hvis tilganger ikke kan settes opp."
+   },
+   "removal_message": {
+      "description": "",
+      "message": "Ved å skru av eller å avinstallere NoScript gir du slipp på ALLE beskyttelse som tilbys av NoScroåt.\n\nHvis du bare er lei av å håndtere skripttilganger, er det et tryggere valg.\n\nNoScript kan stoppe blokkering av skript, bortsett fra de du markerer som ubetrodde, mens du fremdeles beskyttes av de mest avanserte sikkerhetstiltakene mot XSS, klikkovertagelse, CSRF og andre vevtrusler.\n\nØnsker du virkelig å fjerne ALLE NoScript-beskyttelser?\n"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "Nei, kun stopp blokkering av skript"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "Advarsel om sikkerhetsnedgradering"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "Ja, fjern ALLE beskyttelser"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "NoScript-tilbakestilling"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "ALLE NoScript-innstillinger og sidetilganger vil bli tilbakestilt til deres forvalgte verdier umiddelbart.\nDenne handlingen kan ikke angres.\nØnsker du å fortsette?"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "Tema"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "Du er i ferd med å forespørre info om \"$1\"-siden\nved å sende inn en spørring til $2.\nØnsker du å fortsette?"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "Midtklikk eller shift+klikk for sideinfo…"
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "Vis sponsorens hjemmeside"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "Auto"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "Dark"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "Light"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "Laster inn igjen mistenkelig\n\n$1 [$2]\n\nFROM [$3]\n\nNoScript gjør dette på utrygg måte og vil IKKE beskytte denne forespørselen!\n"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "av ubetrodd opphav"
+   },
+   "version": {
+      "description": "",
+      "message": "Versjon $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

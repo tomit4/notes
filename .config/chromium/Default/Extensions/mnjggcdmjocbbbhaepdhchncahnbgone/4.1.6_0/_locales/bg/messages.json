@@ -1,0 +1,933 @@
+{
+   "0": {
+      "message": "Времето за изчакване на връзката изтече. Проверете връзката си с интернет. Ако вашият интернет работи, вероятно сървърът е претоварен или не работи."
+   },
+   "400": {
+      "message": "Сървърът съобщава, че тази заявка е невалидна"
+   },
+   "409": {
+      "message": "Това спонсорство е вече изпратено"
+   },
+   "429": {
+      "message": "Подали сте прекалено много спонсорства за едно видео, сигурни ли сте, че има толкова много?"
+   },
+   "502": {
+      "message": "Сървърът изглежда претоварен. Опитайте отново след няколко секунди."
+   },
+   "ChangeCategoryTooltip": {
+      "message": "Това незабавно ще се приложи към вашите сегменти"
+   },
+   "ContinueVoting": {
+      "message": "Продължаване на гласуването"
+   },
+   "CopyAndDownvote": {
+      "message": "Копиране и гласуване против"
+   },
+   "CopyDownvoteButtonInfo": {
+      "message": "Гласуване против и създаване на локално копие, за да го изпратите отново"
+   },
+   "Credits": {
+      "message": "Заслуги"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Прескачайте спонсорства, напомняния за абониране и други неща в клипове в YouTube. Докладвайте спонсорства в клиповете, които гледате, за да спестите време на други потребители."
+   },
+   "Dismiss": {
+      "message": "Отхвърляне"
+   },
+   "Donate": {
+      "message": "Дарение"
+   },
+   "Editing": {
+      "message": "Редактиране"
+   },
+   "GotIt": {
+      "description": "Used as the button to dismiss a tooltip",
+      "message": "Разбрах"
+   },
+   "Hide": {
+      "message": "Никога да не се показва"
+   },
+   "LearnMore": {
+      "message": "Научете повече"
+   },
+   "Loading": {
+      "message": "Зареждане..."
+   },
+   "OpenCategoryWikiPage": {
+      "message": "Отваряне на wiki страницата на тази категория."
+   },
+   "Options": {
+      "message": "Опции"
+   },
+   "Segment": {
+      "message": "сегмент"
+   },
+   "Segments": {
+      "message": "сегмента"
+   },
+   "SponsorTimeEditScrollNewFeature": {
+      "message": "Използвайте колелото на мишката, докато държите курсора върху полето за редактиране, за да коригирате бързо времето. Комбинации с клавиша ctrl или shift могат да се използват за фина настройка на промените."
+   },
+   "Submissions": {
+      "message": "Изпратени сегменти"
+   },
+   "SubmitTimes": {
+      "message": "Изпращане на сегментите"
+   },
+   "Submitting": {
+      "message": "Изпращане"
+   },
+   "Unknown": {
+      "message": "Възникна грешка при подаването на вашите времена на спонсорства, моля, опитайте отново по-късно."
+   },
+   "Username": {
+      "message": "Потребител"
+   },
+   "acceptPermission": {
+      "message": "Даване на разрешение"
+   },
+   "adblockerIssueWhitelist": {
+      "message": "Ако не можете да разрешите това, деактивирайте настройката „Принудителна проверка на канала преди пропускане“, тъй като SponsorBlock не може да извлече информацията за канала за този видеоклип"
+   },
+   "add": {
+      "message": "Добавяне"
+   },
+   "addInvidiousInstance": {
+      "message": "Добавяне екземпляр на клиент на трета страна"
+   },
+   "addInvidiousInstanceDescription": {
+      "message": "Добавяне на персонализиран екземпляр. Това трябва да бъде форматирано само с домейна. Пример: invidious.ajay.app"
+   },
+   "addInvidiousInstanceError": {
+      "message": "Това е невалиден домейн. Трябва да включва само частта на домейна. Пример: invidious.ajay.app"
+   },
+   "areYouSureReset": {
+      "message": "Наистина ли искате да върнете началното състояние?"
+   },
+   "audioNotification": {
+      "message": "Звуково известие при пропускане"
+   },
+   "audioNotificationDescription": {
+      "message": "Звуковото известие при пропускане ще пуска звук всеки път, когато се пропусне сегмент. Ако е забранено (или автоматичното пропускане е деактивирано), няма да се пуска звук."
+   },
+   "autoHideInfoButton": {
+      "message": "Автоматично скриване на бутона за информация"
+   },
+   "autoSkip": {
+      "message": "Автоматично пропускане"
+   },
+   "autoSkipOnMusicVideos": {
+      "message": "Автоматично пропускане на всички сегменти, когато има сегмент без музика"
+   },
+   "autoSkip_POI": {
+      "message": "Автоматично прескачане до началото"
+   },
+   "bracketEnd": {
+      "message": "(Край)"
+   },
+   "bracketNow": {
+      "message": "(Сега)"
+   },
+   "cancel": {
+      "message": "Отказ"
+   },
+   "category": {
+      "message": "Категория"
+   },
+   "categoryPillNewFeature": {
+      "message": "Ново! Вижте кога видеоклипът е изцяло спонсориран или саморекламен"
+   },
+   "categoryPillTitleText": {
+      "message": "Целият видеоклип е обозначен с тази категория и е твърде тясно интегриран, за да може да се раздели"
+   },
+   "categoryUpdate1": {
+      "message": "Категориите са тук!"
+   },
+   "categoryUpdate2": {
+      "message": "Отворете опциите, за да пропускате въведения, заключения, продажба на стоки и т.н."
+   },
+   "category_exclusive_access": {
+      "message": "Ексклузивен достъп"
+   },
+   "category_exclusive_access_description": {
+      "message": "Само за обозначаване на цели видеоклипове. Използва се, когато видеоклипът представя продукт, услуга или място, до които е получен безплатен или субсидиран достъп."
+   },
+   "category_exclusive_access_pill": {
+      "description": "Short description for this category",
+      "message": "Този видеоклип представя продукт, услуга или място, до което е получен безплатен или субсидиран достъп"
+   },
+   "category_filler": {
+      "message": "Пълнеж/Шеги"
+   },
+   "category_filler_description": {
+      "message": "Съпътстващи сцени, добавени само за пълнеж или хумор, които не са необходими за разбирането на основното съдържание на видеоклипа. Това не трябва да включва сегменти, предоставящи контекст или справочни данни."
+   },
+   "category_filler_short": {
+      "message": "Пълнеж"
+   },
+   "category_interaction": {
+      "message": "Напомняне за действие (абониране)"
+   },
+   "category_interaction_description": {
+      "message": "Когато има кратко напомняне да харесате, да се абонирате или да последвате канала по средата на съдържанието. Ако е дълго или за нещо специфично, трябва да е под „самореклама“."
+   },
+   "category_interaction_short": {
+      "message": "Напомняне за взаимодействие"
+   },
+   "category_intro": {
+      "message": "Антракт/Начална анимация"
+   },
+   "category_intro_description": {
+      "message": "Интервал без реално съдържание. Може да бъде пауза, статичен кадър, повтаряща се анимация. Това не трябва да се използва за преходи, съдържащи информация."
+   },
+   "category_intro_short": {
+      "message": "Антракт"
+   },
+   "category_livestream_messages": {
+      "message": "Поточно предаване: Четене на съобщения/дарения"
+   },
+   "category_livestream_messages_short": {
+      "message": "Четене на съобщения"
+   },
+   "category_music_offtopic": {
+      "message": "Музика: Част без музика"
+   },
+   "category_music_offtopic_description": {
+      "message": "За използване само в музикални видеоклипове. Това трябва да се използва само за части от музикални видеоклипове, които вече не са обхванати от друга категория."
+   },
+   "category_music_offtopic_short": {
+      "message": "Без музика"
+   },
+   "category_outro": {
+      "message": "Крайни картички/Заслуги"
+   },
+   "category_outro_description": {
+      "message": "Заслуги или когато се показват крайните карти на YouTube. Не за заключения с информация."
+   },
+   "category_poi_highlight": {
+      "message": "Акцент"
+   },
+   "category_poi_highlight_description": {
+      "message": "Частта от видеото, която повечето хора търсят. Подобно на коментарите „Видеото започва от х“."
+   },
+   "category_preview": {
+      "message": "Кратко резюме/Обобщение"
+   },
+   "category_preview_description": {
+      "message": "Бързо обобщение на предишни епизоди или преглед на това, което предстои по-късно в текущия видеоклип. Предназначен за монтирани заедно клипове, а не за речеви обобщения."
+   },
+   "category_selfpromo": {
+      "message": "Неплатена/Самореклама"
+   },
+   "category_selfpromo_description": {
+      "message": "Подобно на „спонсорство“, но за безплатна реклама или самореклама. Това включва търговия със стоки, дарения или информация с кого каналът има сътрудничество."
+   },
+   "category_sponsor": {
+      "message": "Спонсорство"
+   },
+   "category_sponsor_description": {
+      "message": "Платена промоция, платени препоръки и директни реклами. Не за самореклама или безплатни препоръки за каузи/създатели/уебсайтове/продукти, които се харесват на автора."
+   },
+   "change": {
+      "message": "Промяна"
+   },
+   "changeUserID": {
+      "message": "Импортиране/експортиране на вашия UserID"
+   },
+   "channelDataNotFound": {
+      "description": "This error appears in an alert when they try to whitelist a channel and the extension is unable to determine what channel they are looking at.",
+      "message": "ID на канала все още не е зареден. Ако използвате вграден видеоклип, опитайте вместо това да използвате началната страница на YouTube. Това може да бъде причинено и от промени в оформлението на YouTube, ако мислите така, направете коментар тук:"
+   },
+   "channelWhitelisted": {
+      "message": "Каналът е добавен към белия списък!"
+   },
+   "chooseACategory": {
+      "message": "Изберете категория"
+   },
+   "clearThis": {
+      "message": "Наистина ли искате да изчистите това?\n\n"
+   },
+   "clearTimes": {
+      "message": "Изчистване на сегментите"
+   },
+   "clearTimesButton": {
+      "message": "Изчистване на времената"
+   },
+   "closePopup": {
+      "message": "Затваряне на прозореца"
+   },
+   "confirmMSG": {
+      "message": "За да редактирате или изтриете отделни стойности, щракнете върху бутона за информация или отворете изскачащия прозорец на разширението, като щракнете върху иконата на разширението в горния десен ъгъл."
+   },
+   "confirmNoticeTitle": {
+      "message": "Изпращане на сегмента"
+   },
+   "connectionError": {
+      "message": "Възникна грешка с връзката. Код на грешката: "
+   },
+   "considerDonating": {
+      "message": "Помогнете с финансиране на разработката"
+   },
+   "copyDebugInformation": {
+      "message": "Копиране на информацията за отстраняване на грешки в клипборда"
+   },
+   "copyDebugInformationComplete": {
+      "message": "Информацията за отстраняване на грешки е копирана в клипборда. Чувствайте се свободни да премахнете всяка информация, която предпочитате да не споделяте. Запазете това в текстов файл или го поставете в доклада за грешки."
+   },
+   "copyDebugInformationFailed": {
+      "message": "Неуспешно записване в клипборда"
+   },
+   "copyDebugInformationOptions": {
+      "message": "Копира информацията в клипборда, за да се предостави на разработчика при възникване на грешка или когато разработчикът поиска това. Деликатната информация като вашия user ID, канали в белия списък и потребителски адрес на сървъра са премахнати. Съдържа се обаче информация като вашия потребителски агент, браузър, операционна система и номер на версия на разширението. "
+   },
+   "copyPublicID": {
+      "message": "Копиране на публичния UserID"
+   },
+   "createdBy": {
+      "message": "Създаден от"
+   },
+   "currentInstances": {
+      "message": "Текущи екземпляри:"
+   },
+   "customAddressError": {
+      "message": "Този адрес не е в правилния формат. Уверете се, че имате http:// или https:// в началото и няма последващи наклонени черти."
+   },
+   "customServerAddress": {
+      "message": "Адрес на сървъра на SponsorBlock"
+   },
+   "customServerAddressDescription": {
+      "message": "Адресът, който SponsorBlock използва за осъществяване на заявки към сървъра.\nОсвен ако нямате собствен екземпляр на сървър, това не трябва да се променя."
+   },
+   "darkModeOptionsPage": {
+      "message": "Тъмен режим на страницата с опции"
+   },
+   "dayAbbreviation": {
+      "description": "100d",
+      "message": "д"
+   },
+   "delete": {
+      "message": "Изтриване"
+   },
+   "disable": {
+      "message": "Деактивиране"
+   },
+   "disableAutoSkip": {
+      "message": "Деактивиране на автоматичното пропускане"
+   },
+   "disableSkipping": {
+      "message": "Пропускането е активирано"
+   },
+   "discordAdvert": {
+      "message": "Елате в официалния Discord сървър, за да давате предложения!"
+   },
+   "downvoteDescription": {
+      "message": "Грешно/Неправилно време"
+   },
+   "edit": {
+      "message": "Редактиране"
+   },
+   "enableAutoSkip": {
+      "message": "Активиране на автоматичното пропускане"
+   },
+   "enableQueryByHashPrefix": {
+      "message": "Заявка по префикс на хеш"
+   },
+   "enableRefetchWhenNotFound": {
+      "message": "Повторно извличане на сегментите при нови видеоклипове"
+   },
+   "enableSkipping": {
+      "message": "Пропускането е деактивирано"
+   },
+   "enableTestingServer": {
+      "message": "Активиране на сървъра за бета тестване"
+   },
+   "enableThisCategoryFirst": {
+      "description": "Used when submitting segments to only let them select a certain category if they have it enabled in the options.",
+      "message": "За да изпратите сегменти с категория „{0}“, трябва да я активирате от опциите. Ще бъдете пренасочени към опциите сега."
+   },
+   "enableTrackDownvotes": {
+      "message": "Съхраняване на отрицателните гласове за сегменти"
+   },
+   "enableViewTracking": {
+      "message": "Активиране проследяването на броя пропускания"
+   },
+   "enableViewTrackingInPrivate": {
+      "message": "Активиране проследяването на броя пропускания в раздели „Инкогнито“"
+   },
+   "errorCode": {
+      "message": "Код на грешката: "
+   },
+   "experiementOptOut": {
+      "description": "This is used in a popup about a new experiment to get a list of unlisted videos to back up since all unlisted videos uploaded before 2017 will be set to private.",
+      "message": "Отказ от всички бъдещи експерименти"
+   },
+   "exportOptions": {
+      "message": "Импортиране/експортиране на всички опции"
+   },
+   "exportOptionsCopy": {
+      "message": "Редактиране/копиране"
+   },
+   "exportOptionsDownload": {
+      "message": "Записване във файл"
+   },
+   "exportOptionsUpload": {
+      "message": "Зареждане от файл"
+   },
+   "exportOptionsWarning": {
+      "message": "Внимание: Промяната на опциите е постоянна и може да повреди вашата инсталация. Наистина ли искате да направите това? Не забравяйте да архивирате старите си за всеки случай."
+   },
+   "forceChannelCheck": {
+      "message": "Принудителна проверка на канала преди пропускане"
+   },
+   "forceChannelCheckPopup": {
+      "message": "Помислете за активиране на „Принудителна проверка на канала преди пропускане“"
+   },
+   "full": {
+      "description": "Used for the name of the option to label an entire video as sponsor or self promotion.",
+      "message": "Целия видеоклип"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock за YouTube - пропускайте спонсорства"
+   },
+   "fullVideoSegments": {
+      "description": "Referring to the category pill that is now shown on videos that are entirely sponsor or entirely selfpromo",
+      "message": "Показване на икона, когато видеоклипът е изцяло реклама"
+   },
+   "fullVideoTooltipWarning": {
+      "message": "Този сегмент е голям. Ако целия видеоклип е на една тема, променете от „Пропускане“ на „Целия видеоклип“. Вижте насоките за повече информация."
+   },
+   "guidelines": {
+      "message": "Насоки"
+   },
+   "help": {
+      "message": "Помощ"
+   },
+   "helpPageCopyOfDatabase": {
+      "message": "Мога ли да получа копие от базата данни? Какво ще стане, ако изчезнете?"
+   },
+   "helpPageCopyOfDatabase1": {
+      "message": "Базата данни е публична и достъпна на адрес"
+   },
+   "helpPageCopyOfDatabase2": {
+      "message": "Програмният код е достъпен свободно. Така че, дори нещо да ми се случи, вашият принос не се губи."
+   },
+   "helpPageEditing1": {
+      "message": "Ако сте объркали, можете да редактирате или изтриете сегментите си, след като щракнете върху бутона със стрелка нагоре."
+   },
+   "helpPageFeatureDisclaimer": {
+      "message": "Много функции са деактивирани по подразбиране. Ако искате да пропускате въведения, заключения, да използвате Invidious и т.н., активирайте ги по-долу. Можете също да скриете/покажете елементи от потребителския интерфейс."
+   },
+   "helpPageHowSkippingWorks": {
+      "message": "Как работи пропускането"
+   },
+   "helpPageHowSkippingWorks1": {
+      "message": "Видео сегментите автоматично ще бъдат пропуснати, ако бъдат намерени в базата данни. Можете да отворите изскачащия прозорец, като щракнете върху иконата на разширението, за да прегледате какви са сегментите."
+   },
+   "helpPageHowSkippingWorks2": {
+      "message": "Всеки път, когато пропуснете сегмент, ще получите известие. Ако времето изглежда грешно, гласувайте против, като щракнете на палец надолу! Можете също така да гласувате в изскачащия прозорец."
+   },
+   "helpPageNews": {
+      "message": "Новини и как се прави"
+   },
+   "helpPageReviewOptions": {
+      "message": "Моля, прегледайте опциите по-долу"
+   },
+   "helpPageSourceCode": {
+      "message": "Къде мога да получа програмния код?"
+   },
+   "helpPageSubmitting1": {
+      "message": "Изпращането може да се извърши или в изскачащия прозорец, като натиснете бутона „Сегментът започва сега“, или във видеоплейъра с бутоните на плейъра."
+   },
+   "helpPageSubmitting2": {
+      "message": "Щракването върху бутона за възпроизвеждане показва началото на сегмента, а щракването върху иконата за спиране показва края. Можете да подготвите множество спонсори, преди да натиснете „изпращане“. Щракването върху бутона за качване ще изпрати данните. Щракването върху кошчето за боклук ще ги изтрие."
+   },
+   "helpPageThanksForInstalling": {
+      "message": "Благодарим ви, че инсталирахте SponsorBlock."
+   },
+   "helpPageTooSlow": {
+      "message": "Това е твърде бавно"
+   },
+   "helpPageTooSlow1": {
+      "message": "Има клавишни комбинации, ако искате да ги използвате. Натиснете клавиша с точка и запетая, за да посочите началото/края на спонсориран сегмент и щракнете върху апострофа, за да го изпратите. Клавишите могат да бъдат променени в опциите. Ако не използвате подредба QWERTY, вероятно трябва да промените зададените клавиши."
+   },
+   "hiddenDueToDownvote": {
+      "message": "скрито: глас против"
+   },
+   "hiddenDueToDuration": {
+      "message": "скрито: твърде кратко"
+   },
+   "hideButtons": {
+      "message": "Скриване на бутоните в плейъра на YouTube"
+   },
+   "hideButtonsDescription": {
+      "message": "Това скрива бутоните, които се показват в плейъра на YouTube за изпращане на сегменти за пропускане."
+   },
+   "hideDeleteButton": {
+      "message": "Скриване на бутона за изтриване в плейъра на YouTube"
+   },
+   "hideDonationLink": {
+      "message": "Скриване на връзката за дарение"
+   },
+   "hideForever": {
+      "message": "Скриване завинаги"
+   },
+   "hideInfoButton": {
+      "message": "Скриване на бутона за информация в плейъра на YouTube"
+   },
+   "hideThis": {
+      "message": "Скриване на това"
+   },
+   "hitGoBack": {
+      "message": "Натиснете „връщане“, за да се върнете там, където бяхте."
+   },
+   "hourAbbreviation": {
+      "description": "100h",
+      "message": "ч"
+   },
+   "hourLower": {
+      "message": "час"
+   },
+   "hoursLower": {
+      "message": "часа"
+   },
+   "incorrectCategory": {
+      "message": "Промяна на категорията"
+   },
+   "incorrectlyFormattedOptions": {
+      "message": "Този JSON не е форматиран правилно. Вашите опции не са променени."
+   },
+   "inspect": {
+      "message": "Изследване"
+   },
+   "keyAlreadyUsed": {
+      "message": "Тази клавишна комбинация е свързана с друго действие. Моля, изберете друга."
+   },
+   "keybindDescription": {
+      "message": "Изберете клавиш, като го натиснете, заедно с всички клавишни модификатори, които искате да използвате."
+   },
+   "liveOrPremiere": {
+      "message": "Не е разрешено изпращането по време на активен поток на живо или премиера. Моля, изчакайте, докато приключи, след което опреснете страницата и проверете дали сегментите са все още валидни."
+   },
+   "longDescription": {
+      "description": "Full description of the extension on the store pages.",
+      "message": "SponsorBlock ви позволява да прескачате спонсори, въведения, заключения, напомняния за абониране и други досадни части от видеоклиповете в YouTube. SponsorBlock е разширение за браузър, създадено от множество хора, което позволява на всеки да изпраща началния и крайния час на спонсорирани сегменти и други сегменти от видеоклиповете в YouTube. След като един човек подаде тази информация, всички останали с това разширение ще прескочат спонсорирания сегмент. Можете също да пропуснете части без музика при музикалните видеоклипове."
+   },
+   "manualPaused": {
+      "message": "Таймерът е спрян"
+   },
+   "manualSkip": {
+      "message": "Ръчно пропускане"
+   },
+   "manualSkip_POI": {
+      "message": "Питане, когато видеото се зарежда"
+   },
+   "manuallyHidden": {
+      "message": "ръчно скрито"
+   },
+   "minDuration": {
+      "message": "Минимална продължителност (секунди):"
+   },
+   "minDurationDescription": {
+      "message": "Сегменти, по-кратки от зададената стойност, няма да бъдат пропускани или показвани в плейъра."
+   },
+   "minLower": {
+      "message": "минута"
+   },
+   "minsLower": {
+      "message": "минути"
+   },
+   "mobileUpdateInfo": {
+      "message": "m.youtube.com вече се поддържа"
+   },
+   "moreCategories": {
+      "message": "Още категории"
+   },
+   "multipleSegments": {
+      "message": "Няколко сегмента"
+   },
+   "mute": {
+      "message": "Заглушаване"
+   },
+   "muteSegments": {
+      "message": "Разрешаване на сегменти, които заглушават звука, вместо да се пропускат"
+   },
+   "mute_category": {
+      "message": "Заглушаване на {0}?"
+   },
+   "muted": {
+      "description": "Example: Sponsor Muted",
+      "message": "{0} заглушено"
+   },
+   "noVideoID": {
+      "message": "Не е намерен видеоклип в YouTube.\nАко това не е правилно, опреснете раздела."
+   },
+   "nonMusicCategoryOnMusic": {
+      "message": "Това видео е категоризирано като музика. Сигурни ли сте, че това има спонсор? Ако това всъщност е „Немузикален сегмент“, отворете опциите на разширението и активирайте тази категория. След това можете да изпратите този сегмент като „Немузикален“ вместо като спонсор. Моля, прочетете указанията, ако сте объркани."
+   },
+   "notSet": {
+      "message": "Не е зададено"
+   },
+   "noticeUpdate": {
+      "description": "The first line of the message displayed after the notice was upgraded.",
+      "message": "Известието е обновено!"
+   },
+   "noticeUpdate2": {
+      "description": "The second line of the message displayed after the notice was upgraded.",
+      "message": "Ако все още не ви харесва, натиснете бутона „Никога да не се показва“."
+   },
+   "noticeVisibilityLabel": {
+      "description": "Option label",
+      "message": "Изглед на известията за пропускане"
+   },
+   "noticeVisibilityMode0": {
+      "message": "Известия за пропускане в пълен размер"
+   },
+   "noticeVisibilityMode1": {
+      "message": "Малки известия за пропускане при автоматично пропускане"
+   },
+   "noticeVisibilityMode2": {
+      "message": "Изцяло малки известия за пропускане"
+   },
+   "noticeVisibilityMode3": {
+      "message": "Плавни известия за пропускане при автоматично пропускане"
+   },
+   "noticeVisibilityMode4": {
+      "message": "Изцяло плавни известия за пропускане"
+   },
+   "openPopup": {
+      "message": "Отваряне на изскачащия прозорец на SponsorBlock"
+   },
+   "optionsInfo": {
+      "message": "Активиране поддръжката на Invidious, деактивиране на автоматичното пропускане, скриване на бутоните и др."
+   },
+   "optionsTabAdvanced": {
+      "description": "Appears in Options as a tab header for advanced/niche options. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Други"
+   },
+   "optionsTabBackup": {
+      "description": "Appears in Options as a tab header for options related to saving/restoring your settings. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Архивиране/Възстановяване"
+   },
+   "optionsTabBehavior": {
+      "description": "Appears in Options as a tab header for options related to categories and skipping behavior. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Поведение"
+   },
+   "optionsTabInterface": {
+      "description": "Appears in Options as a tab header for options related to GUI and sounds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Интерфейс"
+   },
+   "optionsTabKeyBinds": {
+      "description": "Appears in Options as a tab header for keybinds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Клавишни комбинации"
+   },
+   "paused": {
+      "message": "На пауза"
+   },
+   "permissionRequestFailed": {
+      "message": "Искането за разрешение не бе успешно, натиснахте ли Отказ?"
+   },
+   "permissionRequestSuccess": {
+      "message": "Искането за разрешение е успешно!"
+   },
+   "poiOnlyOneSegment": {
+      "message": "Внимание: Само един сегмент от този тип може да е активен. Изпращането на няколко ще доведе до показване на случаен."
+   },
+   "popupHint": {
+      "message": "Съвет: Можете да настроите клавиши за изпращане в опциите"
+   },
+   "preview": {
+      "message": "Преглед"
+   },
+   "previewColor": {
+      "description": "Referring to submissions that have not been sent to the server yet.",
+      "message": "Цвят на неизпратен сегмент"
+   },
+   "publicStats": {
+      "message": "Това се използва на страницата с публичната статистика, за да покаже колко сте допринесли. Вижте го"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "Прочетете насоките!!"
+   },
+   "recordTimesDescription": {
+      "message": "Изпращане"
+   },
+   "refreshSegments": {
+      "message": "Опресняване на сегментите"
+   },
+   "removeFromWhitelist": {
+      "message": "Премахване на канала от белия списък"
+   },
+   "reportButtonInfo": {
+      "message": "Подайте сигнал за неправилно предложение."
+   },
+   "reportButtonTitle": {
+      "message": "Докладване"
+   },
+   "reset": {
+      "message": "Начално състояние"
+   },
+   "resetInvidiousInstance": {
+      "message": "Нулиране списъка на Invidious"
+   },
+   "resetInvidiousInstanceAlert": {
+      "message": "На път сте да нулирате списъка на Invidious"
+   },
+   "reskip": {
+      "message": "Пропускане отново"
+   },
+   "save": {
+      "message": "Запазване"
+   },
+   "savedPeopleFrom": {
+      "message": "Помогнахте на хората да пропуснат "
+   },
+   "seekBarColor": {
+      "message": "Цвят на лентата на прогреса"
+   },
+   "serverDown": {
+      "message": "Изглежда, че сървърът не работи. Свържете се с програмиста незабавно."
+   },
+   "setOptions": {
+      "message": "Задаване на опции"
+   },
+   "setSkipShortcut": {
+      "description": "Keybind label",
+      "message": "Пропускане на сегмент"
+   },
+   "setStartSponsorShortcut": {
+      "description": "Keybind label",
+      "message": "Начало/край на сегмент"
+   },
+   "setSubmitKeybind": {
+      "description": "Keybind label",
+      "message": "Изпращане на сегментите"
+   },
+   "setUserID": {
+      "message": "Задаване на UserID"
+   },
+   "setUsername": {
+      "message": "Задайте потребителско име"
+   },
+   "shortCheck": {
+      "message": "Следното предложение е по-кратко от опцията за минимална продължителност. Това може да означава, че вече е изпратено и просто е игнорирано поради тази опция. Наистина ли искате да го изпратите?"
+   },
+   "showButtons": {
+      "message": "Показване на бутоните в плейъра на YouTube"
+   },
+   "showDeleteButton": {
+      "message": "Показване на бутона за изтриване в плейъра на YouTube"
+   },
+   "showInfoButton": {
+      "message": "Показване на бутона за информация в плейъра на YouTube"
+   },
+   "showNotice": {
+      "message": "Отново покажете известието"
+   },
+   "showOverlay": {
+      "message": "Показване в лентата на прогреса"
+   },
+   "showOverlay_POI": {
+      "message": "Показване в лентата на прогреса"
+   },
+   "showOverlay_full": {
+      "message": "Показване на етикета"
+   },
+   "showSkipButton": {
+      "message": "Оставяне в плейъра на бутона за преминаване към акцента"
+   },
+   "showSkipNotice": {
+      "message": "Показване на известие след пропускане на сегмент"
+   },
+   "showTimeWithSkips": {
+      "message": "Показване на времето с премахнати пропускания"
+   },
+   "showTimeWithSkipsDescription": {
+      "message": "Това време се показва в скоби до текущото време под лентата за прогреса. Това показва общата продължителност на видеоклипа минус всички сегменти. Това включва сегменти, маркирани само като „Показване в лентата за прогреса“."
+   },
+   "showUploadButton": {
+      "message": "Показване на бутона за качване"
+   },
+   "skip": {
+      "message": "Пропускане"
+   },
+   "skipNoticeDuration": {
+      "message": "Продължителност на известието за пропускане (секунди):"
+   },
+   "skipNoticeDurationDescription": {
+      "message": "Известието за пропускане ще остане на екрана поне толкова дълго. За ръчно пропускане може да се вижда по-дълго."
+   },
+   "skipOption": {
+      "description": "Used on the options page to describe the ways to skip the segment (auto skip, manual, etc.)",
+      "message": "Метод за пропускане"
+   },
+   "skip_category": {
+      "message": "Пропускане на {0}?"
+   },
+   "skip_to_category": {
+      "description": "Used for skipping to things (Skip to Highlight)",
+      "message": "Прескачане до {0}?"
+   },
+   "skipped": {
+      "description": "Example: Sponsor Skipped",
+      "message": "{0} пропуснат"
+   },
+   "skipped_to_category": {
+      "description": "Used for skipping to things (Skipped to Highlight)",
+      "message": "Прескочено до {0}"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Програмен код"
+   },
+   "sponsor404": {
+      "message": "Не са намерени сегменти"
+   },
+   "sponsorCancel": {
+      "message": "Отказ от създаването на сегмент"
+   },
+   "sponsorEnd": {
+      "message": "Сегментът свършва сега"
+   },
+   "sponsorFound": {
+      "message": "Този видеоклип има сегменти в базата данни!"
+   },
+   "sponsorStart": {
+      "message": "Сегментът започва сега"
+   },
+   "statusReminder": {
+      "message": "Проверете status.sponsor.ajay.app за състоянието на сървъра."
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "Редактирането на частите ще се появи, след като щракнете върху Изпращане"
+   },
+   "submit": {
+      "message": "Изпращане"
+   },
+   "submitCheck": {
+      "message": "Наистина ли искате да изпратите това?"
+   },
+   "submitTimesButton": {
+      "message": "Изпращане на времената"
+   },
+   "success": {
+      "message": "Успешно!"
+   },
+   "supportOtherSites": {
+      "message": "Поддръжка на YouTube-сайтове на трети страни"
+   },
+   "supportOtherSitesDescription": {
+      "description": "This replaces the 'supports Invidious' option because it now works on other YouTube sites such as Cloudtube",
+      "message": "Поддръжка на клиенти за YouTube на трети страни. За да активирате поддръжката, трябва да приемете допълнителните разрешения. Това НЕ работи в режим инкогнито в Chrome и други варианти на Chromium."
+   },
+   "supportedSites": {
+      "message": "Поддържани сайтове: "
+   },
+   "testingServerWarning": {
+      "message": "Всички предложения и гласове НЯМА ДА СЕ БРОЯТ към основния сървър, докато се свързвате с тестовия сървър. Не забравяйте да деактивирате това, когато искате да правите реални предложения."
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "до"
+   },
+   "trackDownvotesWarning": {
+      "message": "Внимание: Деактивирането на това ще изтрие всички по-рано запазени отрицателни гласове"
+   },
+   "unbind": {
+      "description": "Unbind keyboard shortcut",
+      "message": "Освобождаване"
+   },
+   "unmute": {
+      "message": "Вкл. на звука"
+   },
+   "unskip": {
+      "message": "Връщане"
+   },
+   "unsubmitted": {
+      "message": "Неизпратен"
+   },
+   "upvoteButtonInfo": {
+      "message": "Одобряване на това предложение"
+   },
+   "userIDChangeWarning": {
+      "message": "Внимание: Промяната на UserID е постоянна. Наистина ли искате да направите това? Не забравяйте да архивирате стария си за всеки случай."
+   },
+   "videoInfoFetchFailed": {
+      "message": "Изглежда, че нещо блокира способността на SponsorBlock да получава видео данни. Моля, вижте https://github.com/ajayyy/SponsorBlock/issues/741 за повече информация."
+   },
+   "viewLeaderboard": {
+      "message": "Класиране"
+   },
+   "voteOnTime": {
+      "message": "Гласувайте за сегмент"
+   },
+   "voteRejectedWarning": {
+      "description": "This is an integrated chat panel that will appearing allowing them to talk to the Discord/Matrix chat without leaving their browser.",
+      "message": "Гласуването е отхвърлено поради предупреждение. Щракнете, за да отворите чат и да го разрешите, или се върнете по-късно, когато имате време."
+   },
+   "voted": {
+      "message": "Гласувахте!"
+   },
+   "warningChatInfo": {
+      "message": "Получихте предупреждение и временно не можете да изпращате сегменти. Това означава, че забелязахме, че допускате някои често срещани грешки, които не са злонамерени. Моля, просто потвърдете, че разбирате правилата и ние ще премахнем предупреждението. Можете също да се присъедините към този чат от discord.gg/SponsorBlock или matrix.to/#/#sponsor:ajay.app"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Уебсайт"
+   },
+   "whatChangeUserID": {
+      "message": "Това трябва да се пази в тайна. То е като парола и не трябва да се споделя с никого. Ако някой го има, може да се представи за вас. Ако търсите своя публичен потребителски идентификатор, щракнете върху иконата на клипборда в изскачащия прозорец."
+   },
+   "whatEnableTestingServer": {
+      "message": "Вашите предложения и гласове НЯМА ДА СЕ БРОЯТ към основния сървър. Използвайте това само за тестване."
+   },
+   "whatExportOptions": {
+      "message": "Това е цялата ви конфигурация в JSON. Това включва вашия userID, така че се уверете, че споделяте това разумно."
+   },
+   "whatForceChannelCheck": {
+      "message": "По подразбиране ще пропусне сегменти веднага, преди дори да разбере какъв е каналът. По подразбиране някои сегменти в началото на видеоклипа може да бъдат пропуснати в канали от белия списък. Активирането на тази опция ще предотврати това, но при всички пропускания ще има леко забавяне, тъй като получаването на ID на канала може да отнеме известно време. Това забавяне може да бъде незабележимо, ако имате бърз интернет."
+   },
+   "whatQueryByHashPrefix": {
+      "message": "Вместо да се изискват сегменти от сървъра с помощта на videoID, се изпращат първите 4 знака от хеша на videoID. Този сървър ще изпрати обратно данни за всички видеоклипове с подобни хешове."
+   },
+   "whatRefetchWhenNotFound": {
+      "message": "Ако видеоклипът е нов и няма намерени сегменти, той ще продължи да извлича на всеки няколко минути, докато гледате."
+   },
+   "whatTrackDownvotes": {
+      "message": "Всички сегменти, за които гласувате против, ще останат скрити дори след опресняване"
+   },
+   "whatViewTracking": {
+      "message": "Тази функция проследява кои сегменти сте пропуснали, за да уведоми потребителите доколко приносът им е помогнал на другите и се използва като показател заедно с положителните гласове, за да се гарантира, че спамът няма да попадне в базата данни. Разширението изпраща съобщение до сървъра всеки път, когато пропуснете сегмент. Надяваме се, че повечето хора няма да променят тази настройка, така че броят на прегледите да е точен. :)"
+   },
+   "whitelistChannel": {
+      "message": "Добавяне на канала към белия списък"
+   },
+   "youHaveSavedTime": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": "Спестили сте на хората"
+   },
+   "youHaveSavedTimeEnd": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": " от живота им"
+   },
+   "youHaveSkipped": {
+      "message": "Пропуснали сте "
+   },
+   "youMustSelectACategory": {
+      "message": "Трябва да изберете категория за всички сегменти, които изпращате!"
+   },
+   "yourWork": {
+      "description": "Used to describe the section that will show you the statistics from your submissions.",
+      "message": "Вашата работа"
+   },
+   "youtubeKeybindWarning": {
+      "message": "Това е вградена клавишна комбинация в YouTube. Наистина ли искате да я използвате?"
+   },
+   "youtubePermissionRequest": {
+      "message": "Изглежда, че SponsorBlock не може да достигне API на YouTube. За да поправите това, приемете подканата за разрешение, която ще се появи след това, изчакайте няколко секунди и след това презаредете страницата."
+   }
+}

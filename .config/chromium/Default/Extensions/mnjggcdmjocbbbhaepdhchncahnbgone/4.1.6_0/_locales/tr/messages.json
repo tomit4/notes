@@ -1,0 +1,933 @@
+{
+   "0": {
+      "message": "Bağlantı zaman aşımına uğradı. İnternet bağlantınızı kontrol ediniz. Eğer internetiniz çalışıyor ise, büyük ihtimalle sunucuya erişilemiyor veya sunucuya aşırı yüklenilmiş olabilir."
+   },
+   "400": {
+      "message": "Sunucu isteğin geçersiz olduğunu iletti"
+   },
+   "409": {
+      "message": "Bu daha önce zaten gönderilmiş"
+   },
+   "429": {
+      "message": "Sadece bu video için çok fazla sponsor süresi belirtti, bu kadar fazla olduğuna emin misin?"
+   },
+   "502": {
+      "message": "Sunucuya aşırı yüklenilmiş gibi gözüküyor. Birazdan tekrar deneyin."
+   },
+   "ChangeCategoryTooltip": {
+      "message": "Bu, kısımlarınız için anında geçerli olur"
+   },
+   "ContinueVoting": {
+      "message": "Oylamaya devam et"
+   },
+   "CopyAndDownvote": {
+      "message": "Kopyala ve olumsuz"
+   },
+   "CopyDownvoteButtonInfo": {
+      "message": "Olumsuz oy verir ve yeni bir kısım seçmeniz için bir kopya oluşturur"
+   },
+   "Credits": {
+      "message": "Emeği Geçenler"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Videolardaki sponsorlukları, abonelik isteklerini ve daha fazlasını atlayın. Başkalarının vaktini kurtarmak için izlediğiniz videolardaki sponsorları bildirin."
+   },
+   "Dismiss": {
+      "message": "Yoksay"
+   },
+   "Donate": {
+      "message": "Bağış Yap"
+   },
+   "Editing": {
+      "message": "Düzenleme"
+   },
+   "GotIt": {
+      "description": "Used as the button to dismiss a tooltip",
+      "message": "Anladım"
+   },
+   "Hide": {
+      "message": "Asla Gösterme"
+   },
+   "LearnMore": {
+      "message": "Dahasını Öğren"
+   },
+   "Loading": {
+      "message": "Yükleniyor..."
+   },
+   "OpenCategoryWikiPage": {
+      "message": "Bu kategorinin wiki sayfasını açın."
+   },
+   "Options": {
+      "message": "Ayarlar"
+   },
+   "Segment": {
+      "message": "kısım"
+   },
+   "Segments": {
+      "message": "kısım"
+   },
+   "SponsorTimeEditScrollNewFeature": {
+      "message": "Zaman aralığını hızlı bir şekilde ayarlamak için düzenleme kutusunun üzerinde fare tekerini kullanın. Değişikliklere ince ayar yapmak için ctrl veya shift tuşunun kombinasyonları kullanılabilir."
+   },
+   "Submissions": {
+      "message": "Gönderimleriniz"
+   },
+   "SubmitTimes": {
+      "message": "Kısımları gönder"
+   },
+   "Submitting": {
+      "message": "Gönderme"
+   },
+   "Unknown": {
+      "message": "Sponsor sürelerini yollarken bir sorun oluştur, lütfen tekrar deneyin."
+   },
+   "Username": {
+      "message": "Kullanıcı adı"
+   },
+   "acceptPermission": {
+      "message": "İzni kabul et"
+   },
+   "adblockerIssueWhitelist": {
+      "message": "Bunu çözemiyorsanız, SponsorBlock, bu video için kanal bilgilerini alamadığı için 'Atlamadan Önce Kanal Kontrolünü Zorla' ayarını devre dışı bırakın"
+   },
+   "add": {
+      "message": "Ekle"
+   },
+   "addInvidiousInstance": {
+      "message": "3. Taraf İstemci Örneği Ekle"
+   },
+   "addInvidiousInstanceDescription": {
+      "message": "Özel bir örnek ekle. Buraya sadece alan adı yazılmalıdır. Örnek: invidious.ajay.app"
+   },
+   "addInvidiousInstanceError": {
+      "message": "Bu geçersiz bir alan adı. Bu SADECE alan adı kısmını içermelidir. Örnek: invidious.ajay.app"
+   },
+   "areYouSureReset": {
+      "message": "Bunu sıfırlamak istediğinize emin misiniz?"
+   },
+   "audioNotification": {
+      "message": "Atlamada Sesli Bildirim"
+   },
+   "audioNotificationDescription": {
+      "message": "Atlama sırasında sesli bildirim, bir kısım atlandığında bir ses çıkarır. Devre dışı bırakılırsa (veya otomatik atlama devre dışı bırakılırsa), ses çalınmaz."
+   },
+   "autoHideInfoButton": {
+      "message": "Bilgi düğmesini otomatik gizle"
+   },
+   "autoSkip": {
+      "message": "Otomatik Atla"
+   },
+   "autoSkipOnMusicVideos": {
+      "message": "Müzik olmayan kısım varsa tüm kısımları otomatik atla"
+   },
+   "autoSkip_POI": {
+      "message": "Başlangıca otomatik atla"
+   },
+   "bracketEnd": {
+      "message": "(Son)"
+   },
+   "bracketNow": {
+      "message": "(Şimdi)"
+   },
+   "cancel": {
+      "message": "İptal"
+   },
+   "category": {
+      "message": "Kategori"
+   },
+   "categoryPillNewFeature": {
+      "message": "Yeni! Videonun bütünü sponsor veya kendi reklamıysa bu uyarıyı görün"
+   },
+   "categoryPillTitleText": {
+      "message": "Bu videonun bütünü bu şekilde sınıflandırılmış ve kısımları birbirinden ayrılamayacak kadar sıkı bütünleştirilmiş"
+   },
+   "categoryUpdate1": {
+      "message": "Kategoriler burada!"
+   },
+   "categoryUpdate2": {
+      "message": "Girişleri, bitişleri, ürünleri ve benzeri şeyleri atlamak için ayarları açın."
+   },
+   "category_exclusive_access": {
+      "message": "Özel Erişim"
+   },
+   "category_exclusive_access_description": {
+      "message": "Yalnızca bütün videoyu etiketlemek için kullanın. Video; ücretli veya ücretsiz elde edilen bir ürünün, hizmetin veya bir yerin reklamını yapıyorsa kullanılır."
+   },
+   "category_exclusive_access_pill": {
+      "description": "Short description for this category",
+      "message": "Bu video; yayıncıya özel ücretle veya ücretsiz sunulan bir ürünün, hizmetin veya bir yerin reklamını yapıyor"
+   },
+   "category_filler": {
+      "message": "Konuyla Alakasız / Şaka"
+   },
+   "category_filler_description": {
+      "message": "Videonun ana içeriğini anlamak için gerekli olmayan, yalnızca alakasız konu veya mizah için eklenen sahneler. Bu, alakalı veya arka plan ayrıntısı veren kısımları içermemelidir."
+   },
+   "category_filler_short": {
+      "message": "Alakasız Konu"
+   },
+   "category_interaction": {
+      "message": "Etkileşim Hatırlatıcısı (Abonelik)"
+   },
+   "category_interaction_description": {
+      "message": "Videonun ortasında beğenmek, abone olmak veya takip etmek için kısa bir hatırlatma olan kısımdır. Eğer süresi uzunsa veya belirli bir şey hakkındaysa, kendi reklamını yapan kategorisi seçilmelidir."
+   },
+   "category_interaction_short": {
+      "message": "Etkileşim Hatırlatıcısı"
+   },
+   "category_intro": {
+      "message": "Aralık/Giriş Animasyonu"
+   },
+   "category_intro_description": {
+      "message": "Gerçek içeriği olmayan bir aralık. Duraklama, sabit ekran, tekrar eden animasyon olabilir. Bu bilgi içeren geçişler için kullanılmamalıdır."
+   },
+   "category_intro_short": {
+      "message": "Aralık"
+   },
+   "category_livestream_messages": {
+      "message": "Canlı Yayın: Bağış/Mesaj Okuma"
+   },
+   "category_livestream_messages_short": {
+      "message": "Canlı Yayın Mesajlarını Okumak"
+   },
+   "category_music_offtopic": {
+      "message": "Müzik: Müzik Olmayan Bölüm"
+   },
+   "category_music_offtopic_description": {
+      "message": "Yalnızca müzik videolarında kullanım içindir. Bu yalnızca başka bir kategoriye katılmamış müzik videolarının parçaları için kullanılmalıdır."
+   },
+   "category_music_offtopic_short": {
+      "message": "Müzik Olmayan Bölüm"
+   },
+   "category_outro": {
+      "message": "Bitiş Ekranı/Jenerik"
+   },
+   "category_outro_description": {
+      "message": "Videoda emeği geçenlerin veya video sonunda çıkan kartların gösterildiği kısımlar. Bilgilendirici sona sahip videolar için değil."
+   },
+   "category_poi_highlight": {
+      "message": "Vurgu"
+   },
+   "category_poi_highlight_description": {
+      "message": "Videoda, çoğu insanın aradığı kısım. \"Video x sürede başlıyor\" yorumlarına benzer."
+   },
+   "category_preview": {
+      "message": "Ön İzleme/Özet"
+   },
+   "category_preview_description": {
+      "message": "Önceki bölümlerin bir özeti veya geçerli videonun içeriğine yönelik bir ön izleme. Bu özellik birleştirilmiş klipler içindir, konuşarak anlatılan özetleri kapsamaz."
+   },
+   "category_selfpromo": {
+      "message": "Karşılıksız/Kendi Reklamı"
+   },
+   "category_selfpromo_description": {
+      "message": "\"Sponsor\" seçeneğinden farkı para karşılığı olmaması veya kendi reklamını yapmasıdır. Buna kendi markalı ürünlerini satmak, bağış toplamak ve videoda işbirliği yaptığı kimselerden bahsetmek dahildir."
+   },
+   "category_sponsor": {
+      "message": "Sponsor"
+   },
+   "category_sponsor_description": {
+      "message": "Ücretli tanıtım, ücretli yönlendirmeler ve doğrudan reklamlar. Kendini pazarlayan veya beğendiği içerik üreticilerine/sitelere/ürünlere atıfta bulunanlar için değil."
+   },
+   "change": {
+      "message": "Değiştir"
+   },
+   "changeUserID": {
+      "message": "Kullanıcı kimliğini Dışarı/İçeri Aktar"
+   },
+   "channelDataNotFound": {
+      "description": "This error appears in an alert when they try to whitelist a channel and the extension is unable to determine what channel they are looking at.",
+      "message": "Kanal kimliği henüz yüklenmedi. Gömülü bir video kullanıyorsanız, bunun yerine YouTube ana sayfasından izlemeyi deneyin. Bu, YouTube düzenindeki değişikliklerden de kaynaklanabilir, eğer öyleyse, buraya bir yorum yazın:"
+   },
+   "channelWhitelisted": {
+      "message": "Kanal beyazlistede!"
+   },
+   "chooseACategory": {
+      "message": "Bir Kategori Seç"
+   },
+   "clearThis": {
+      "message": "Bunu silmek istediğinize emin misiniz?\n\n"
+   },
+   "clearTimes": {
+      "message": "Kısımları temizle"
+   },
+   "clearTimesButton": {
+      "message": "Süreleri Temizle"
+   },
+   "closePopup": {
+      "message": "Açılır Pencereyi kapat"
+   },
+   "confirmMSG": {
+      "message": "Değerleri tek başına düzenlemek ve silmek için, bilgi butonuna basın veya sağ yukarıdaki eklenti simgesine tıklayarak eklenti menüsünü açın."
+   },
+   "confirmNoticeTitle": {
+      "message": "Bölüm Gönder"
+   },
+   "connectionError": {
+      "message": "Bağlantı hatası oluştu. Hata kodu: "
+   },
+   "considerDonating": {
+      "message": "Geliştirme sürecinin fonlanmasına yardım et"
+   },
+   "copyDebugInformation": {
+      "message": "Onarım Bilgisini Panoya Kopyala"
+   },
+   "copyDebugInformationComplete": {
+      "message": "Bu çözüm bilgisi panoya kopyalandı. Paylaşmak istemediğiniz herhangi bir bilgiyi silmekte özgürsünüz. Bir yazı dosyası olarak kaydedin veya hata raporuna kopyalayın."
+   },
+   "copyDebugInformationFailed": {
+      "message": "Panoya kopyalanamadı"
+   },
+   "copyDebugInformationOptions": {
+      "message": "Panoya, geliştiricinin hata gideriminde veya ulaşmak istediğinde geliştiriciye sağlamak üzerine bilgileri kaydeder. Kullanıcı kimliği, beyaz listenizdeki kanallar ve düzenlenmiş sunucu adresleri gibi hassas bilgiler silinmiştir. Ancak tarayıcı bilgileri, işletim sisteminiz ve eklenti numaranız gibi bilgileri içerebilir. "
+   },
+   "copyPublicID": {
+      "message": "Herkese Açık Kullanıcı Kimliğini Kopyala"
+   },
+   "createdBy": {
+      "message": "Oluşturan"
+   },
+   "currentInstances": {
+      "message": "Mevcut Oluşumlar:"
+   },
+   "customAddressError": {
+      "message": "Bu adres doğru formatta değil. Başında http:// veya https:// olduğundan ve sonda / işareti olmadığından emin olun."
+   },
+   "customServerAddress": {
+      "message": "SponsorBlock Sunucu Adresi"
+   },
+   "customServerAddressDescription": {
+      "message": "SponsorBlock'un sunucu ile iletişimi sağlamak için kullandığı adres.\nKendi sunucu kopyanız olmadığı sürece bu değiştirilmemelidir."
+   },
+   "darkModeOptionsPage": {
+      "message": "Ayarlar Sayfasında Karanlık Modu"
+   },
+   "dayAbbreviation": {
+      "description": "100d",
+      "message": "d"
+   },
+   "delete": {
+      "message": "Sil"
+   },
+   "disable": {
+      "message": "Devredışı"
+   },
+   "disableAutoSkip": {
+      "message": "Otomatik Atlamayı Devredışı Bırak"
+   },
+   "disableSkipping": {
+      "message": "Atlama etkin"
+   },
+   "discordAdvert": {
+      "message": "Öneri ve geri bildirimleriniz için resmi Discord serverımıza katılın!"
+   },
+   "downvoteDescription": {
+      "message": "Hatalı/Yanlış Zaman"
+   },
+   "edit": {
+      "message": "Düzenle"
+   },
+   "enableAutoSkip": {
+      "message": "Otomatik Atlamayı Devreye Sok"
+   },
+   "enableQueryByHashPrefix": {
+      "message": "Karma Ön eki ile Sorgula"
+   },
+   "enableRefetchWhenNotFound": {
+      "message": "Yeni Videolardaki Kısımları Sürekli Sorgula"
+   },
+   "enableSkipping": {
+      "message": "Atlama devre dışı"
+   },
+   "enableTestingServer": {
+      "message": "Beta Deneme Sunucusunu Devreye Sok"
+   },
+   "enableThisCategoryFirst": {
+      "description": "Used when submitting segments to only let them select a certain category if they have it enabled in the options.",
+      "message": "\"{0}\" kategorisinde bir kısım göndermek için onu ayarlardan açmalısınız. Ayarlara yönlendiriliyorsunuz."
+   },
+   "enableTrackDownvotes": {
+      "message": "Kısımların olumsuz oylarını depola"
+   },
+   "enableViewTracking": {
+      "message": "Kısım Atlama Sayaç Takibine İzin Ver"
+   },
+   "enableViewTrackingInPrivate": {
+      "message": "Özel/Gizli sekmelerde atlama sayısı takibini etkinleştir"
+   },
+   "errorCode": {
+      "message": "Hata Kodu: "
+   },
+   "experiementOptOut": {
+      "description": "This is used in a popup about a new experiment to get a list of unlisted videos to back up since all unlisted videos uploaded before 2017 will be set to private.",
+      "message": "Gelecekteki deneylerin hiçbirine katılma"
+   },
+   "exportOptions": {
+      "message": "Bütün Ayarlarını İçe/Dışa Aktar"
+   },
+   "exportOptionsCopy": {
+      "message": "Düzenle/kopyala"
+   },
+   "exportOptionsDownload": {
+      "message": "Dosyaya kaydet"
+   },
+   "exportOptionsUpload": {
+      "message": "Dosyadan yükle"
+   },
+   "exportOptionsWarning": {
+      "message": "Uyarı: Ayarları değiştirmek kalıcıdır ve yüklemenizi bozabilir. Bunu yapmak istediğinizden emin misiniz? Eskisini yenilediğinizden emin olun."
+   },
+   "forceChannelCheck": {
+      "message": "Atlamadan Önce Kanal Kontrolüne Zorla"
+   },
+   "forceChannelCheckPopup": {
+      "message": "\"Atlamadan Önce Kanal Kontrolünü Zorla\" Seçeneğini Etkinleştirmeyi Düşünebilirsiniz"
+   },
+   "full": {
+      "description": "Used for the name of the option to label an entire video as sponsor or self promotion.",
+      "message": "Bütün Video"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "Youtube için SponsorBlock - Sponsorlukları Atla"
+   },
+   "fullVideoSegments": {
+      "description": "Referring to the category pill that is now shown on videos that are entirely sponsor or entirely selfpromo",
+      "message": "Video bütünüyle bir reklamsa simge göster"
+   },
+   "fullVideoTooltipWarning": {
+      "message": "Bu kısım büyük. Bütün video tek bir konu hakkındaysa \"Atla\" yerine \"Bütün Video\"yu seçin. Daha çok bilgi için kılavuzlara bakın."
+   },
+   "guidelines": {
+      "message": "Kılavuz"
+   },
+   "help": {
+      "message": "Yardım"
+   },
+   "helpPageCopyOfDatabase": {
+      "message": "Veri tabanının bir kopyasını alabilir miyim? Bir gün ortadan kaybolursanız ne olacak?"
+   },
+   "helpPageCopyOfDatabase1": {
+      "message": "Veri tabanı herkese açıktır ve şuradan erişilebilir: "
+   },
+   "helpPageCopyOfDatabase2": {
+      "message": "Kaynak koduna serbestçe erişilebilir. Ben bir gün bu dünyada yalan olsam dahi, sizin gönderdiğiniz kısımlar kaybolmayacak."
+   },
+   "helpPageEditing1": {
+      "message": "Eğer kısımlarda hata yaptıysanız, yukarı ok işareti olan düğmeye tıkladıktan sonra kısımları silebilir veya düzeltebilirsiniz."
+   },
+   "helpPageFeatureDisclaimer": {
+      "message": "Birçok özellik varsayılan olarak devre dışıdır. İntroları, outroları atlamak vb. kullanmak istiyorsanız, bunları aşağıdan etkinleştirin. Ayrıca arayüz öğelerini gizleyebilir/gösterebilirsiniz."
+   },
+   "helpPageHowSkippingWorks": {
+      "message": "Atlama nasıl çalışıyor"
+   },
+   "helpPageHowSkippingWorks1": {
+      "message": "Video kısımları veri tabanında mevcut ise otomatikman atlanır. Eklentinin simgesine tıklayınca açılan pencereden, video için mevcut olan kısımları görebilirsiniz."
+   },
+   "helpPageHowSkippingWorks2": {
+      "message": "Bir kısmı atladığınızda size bildirim gönderilir. Eğer kısım hatalıysa bunu eksi oylayınız. Eklentinin penceresinde de oy verebilirsiniz."
+   },
+   "helpPageNews": {
+      "message": "Haberler ve nasıl yapılır"
+   },
+   "helpPageReviewOptions": {
+      "message": "Lütfen aşağıdaki seçenekleri inceleyin"
+   },
+   "helpPageSourceCode": {
+      "message": "Kaynak koduna nereden ulaşabilirim?"
+   },
+   "helpPageSubmitting1": {
+      "message": "Gönderi, açılır pencerede \"Kısım Şimdi Başlıyor\" düğmesine basılarak veya oynatıcıdaki düğmelerle video oynatıcıda yapılabilir."
+   },
+   "helpPageSubmitting2": {
+      "message": "Oynat düğmesine tıklamak bir kısımın başlangıcını, durdurma simgesine tıklamak ise bitişini gösterir. Gönder düğmesine basmadan önce birden fazla sponsor hazırlayabilirsiniz. Yükle düğmesine tıklamak kısımları gönderir. Çöp kutusuna tıkladığınızda silinir."
+   },
+   "helpPageThanksForInstalling": {
+      "message": "SponsorBlock'u yüklediğiniz için teşekkürler."
+   },
+   "helpPageTooSlow": {
+      "message": "Bu fazla yavaş"
+   },
+   "helpPageTooSlow1": {
+      "message": "Kullanmak isterseniz kısayol tuşları var. Sponsorlu kısmın başlangıcını/sonunu belirtmek için noktalı virgül tuşuna basın ve göndermek için kesme işaretine tıklayın. Bu tuşlar ayarlarda değiştirilebilir. QWERTY klavye kullanmıyorsanız, tuş ayarlarını değiştirmelisiniz."
+   },
+   "hiddenDueToDownvote": {
+      "message": "gizlendi: eksile"
+   },
+   "hiddenDueToDuration": {
+      "message": "gizlendi: çok kısa"
+   },
+   "hideButtons": {
+      "message": "YouTube Oynatıcısındaki Butonları Gizle"
+   },
+   "hideButtonsDescription": {
+      "message": "Bu YouTube oynatıcısındaki bölüm geçişlerini yolladığınız butonları saklayacaktır."
+   },
+   "hideDeleteButton": {
+      "message": "YouTube Oynatıcısında Silme Tuşunu Gizle"
+   },
+   "hideDonationLink": {
+      "message": "Bağış Bağlantısını Gizle"
+   },
+   "hideForever": {
+      "message": "Asla gösterme"
+   },
+   "hideInfoButton": {
+      "message": "YouTube Oynatıcısındaki Bilgi Butonunu Gizle"
+   },
+   "hideThis": {
+      "message": "Bunu sakla"
+   },
+   "hitGoBack": {
+      "message": "Geldiğiniz yere dönmek istiyorsanız atlama'ya basın."
+   },
+   "hourAbbreviation": {
+      "description": "100h",
+      "message": "h"
+   },
+   "hourLower": {
+      "message": "saat"
+   },
+   "hoursLower": {
+      "message": "saat"
+   },
+   "incorrectCategory": {
+      "message": "Kategoriyi değiştir"
+   },
+   "incorrectlyFormattedOptions": {
+      "message": "Bu JSON doğru formatlanmamış. Ayarlarınız değiştirilmedi."
+   },
+   "inspect": {
+      "message": "Kontrol et"
+   },
+   "keyAlreadyUsed": {
+      "message": "Bu kısayol başka bir eyleme atanmış. Lütfen başka kısayol seçin."
+   },
+   "keybindDescription": {
+      "message": "Kullanmak istediğiniz tuşu yazın ve kombine etmek istediğiniz tuşları seçin."
+   },
+   "liveOrPremiere": {
+      "message": "Bir canlı yayın veya ön gösterim sırasında kısım gönderilemez. Yayının bitmesini bekleyin, sonra sayfayı tazeleyip kısımların geçerli olduğunu kontrol edin."
+   },
+   "longDescription": {
+      "description": "Full description of the extension on the store pages.",
+      "message": "SponsorBlock, sponsorları, giriş ve bitiş kısımlarını, abonelik hatırlatıcılarını ve YouTube videolarının diğer can sıkıcı kısımlarını atlamanıza olanak tanır. SponsorBlock, herkesin sponsorlu kısımları ve YouTube videolarının diğer kısımlarının başlangıç ve bitiş zamanlarını göndermesine izin veren kitle kaynaklı bir tarayıcı uzantısıdır. Bir kişi bu bilgiyi gönderdikten sonra, bu uzantıya sahip diğer herkes sponsorlu kısımları hemen atlayacaktır. Müzik videolarının müzik dışı bölümlerini de atlayabilirsiniz."
+   },
+   "manualPaused": {
+      "message": "Zamanlayıcı Durduruldu"
+   },
+   "manualSkip": {
+      "message": "Elle Atla"
+   },
+   "manualSkip_POI": {
+      "message": "Videonun başında sor"
+   },
+   "manuallyHidden": {
+      "message": "elle gizlendi"
+   },
+   "minDuration": {
+      "message": "Minimum süre (saniye):"
+   },
+   "minDurationDescription": {
+      "message": "Ayarlanan değerden daha kısa kısımlar atlanmayacak veya oynatıcıda gösterilmeyecektir."
+   },
+   "minLower": {
+      "message": "dakika"
+   },
+   "minsLower": {
+      "message": "dakika"
+   },
+   "mobileUpdateInfo": {
+      "message": "m.youtube.com şu an desteklenmektedir"
+   },
+   "moreCategories": {
+      "message": "Daha Fazla Kategori"
+   },
+   "multipleSegments": {
+      "message": "Birden Çok Bölüm"
+   },
+   "mute": {
+      "message": "Sustur"
+   },
+   "muteSegments": {
+      "message": "Atlamak yerine sesi kapatan bölümlere izin ver"
+   },
+   "mute_category": {
+      "message": "{0} susturulsun mu?"
+   },
+   "muted": {
+      "description": "Example: Sponsor Muted",
+      "message": "{0} susturuldu"
+   },
+   "noVideoID": {
+      "message": "YouTube videosu bulunamadı.\nHatalı olduğunu düşünüyorsanız sayfayı yenileyin."
+   },
+   "nonMusicCategoryOnMusic": {
+      "message": "Bu video müzik olarak sınıflandırılmıştır. Bunun bir sponsor olduğundan emin misin? Bu aslında bir \"Müzik Dışı bölüm\" ise, uzantı seçeneklerini açın ve bu kategoriyi etkinleştirin. Ardından, bu kısmı sponsor yerine \"Müzik Olmayan\" olarak gönderebilirsiniz. Kafanız karıştıysa lütfen yönergeleri okuyun."
+   },
+   "notSet": {
+      "message": "Ayarlanmadı"
+   },
+   "noticeUpdate": {
+      "description": "The first line of the message displayed after the notice was upgraded.",
+      "message": "Uyarı güncellendi!"
+   },
+   "noticeUpdate2": {
+      "description": "The second line of the message displayed after the notice was upgraded.",
+      "message": "Eğer hala beğenmediyseniz, asla gösterme butonuna basın."
+   },
+   "noticeVisibilityLabel": {
+      "description": "Option label",
+      "message": "Atlama uyarısı görünümü"
+   },
+   "noticeVisibilityMode0": {
+      "message": "Tam Boyutlu Atlama Bildirimleri"
+   },
+   "noticeVisibilityMode1": {
+      "message": "Otomatik Atlama için Küçük Atlama Bildirimleri"
+   },
+   "noticeVisibilityMode2": {
+      "message": "Tüm Küçük Atlama Bildirimleri"
+   },
+   "noticeVisibilityMode3": {
+      "message": "Otomatik Atlama için Soluk Atlama Bildirimleri"
+   },
+   "noticeVisibilityMode4": {
+      "message": "Tüm Soluk Atlama Bildirimleri"
+   },
+   "openPopup": {
+      "message": "SponsorBlock Penceresini Aç"
+   },
+   "optionsInfo": {
+      "message": "Invidious desteğini, otomatik atlamayı, butonları saklamayı ve daha fazlasını etkinleştir."
+   },
+   "optionsTabAdvanced": {
+      "description": "Appears in Options as a tab header for advanced/niche options. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Çeşitli"
+   },
+   "optionsTabBackup": {
+      "description": "Appears in Options as a tab header for options related to saving/restoring your settings. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Yedekle/Geri Yükle"
+   },
+   "optionsTabBehavior": {
+      "description": "Appears in Options as a tab header for options related to categories and skipping behavior. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Davranış"
+   },
+   "optionsTabInterface": {
+      "description": "Appears in Options as a tab header for options related to GUI and sounds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Arayüz"
+   },
+   "optionsTabKeyBinds": {
+      "description": "Appears in Options as a tab header for keybinds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "Klavye kısayolları"
+   },
+   "paused": {
+      "message": "Duraklatıldı"
+   },
+   "permissionRequestFailed": {
+      "message": "İzin isteği başarısız. Reddet butonuna mı tıkladınız?"
+   },
+   "permissionRequestSuccess": {
+      "message": "İzin isteği başarılı!"
+   },
+   "poiOnlyOneSegment": {
+      "message": "Uyarı: Bu tür kısımlardan sadece bir adet etkin olabilir. Birden fazla gönderdiğinizde onlardan rastgele biri gösterilir."
+   },
+   "popupHint": {
+      "message": "İpucu: Gönderim için ayarlardan kısayol tuşu atayabilirsiniz"
+   },
+   "preview": {
+      "message": "Önizle"
+   },
+   "previewColor": {
+      "description": "Referring to submissions that have not been sent to the server yet.",
+      "message": "Gönderilmemiş Renk"
+   },
+   "publicStats": {
+      "message": "Bu, ne kadar katkı sağladığınızı göstermek için herkese açık istatistik sayfasında kullanılacaktır. Görün"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "Kılavuzu Oku!!"
+   },
+   "recordTimesDescription": {
+      "message": "Gönder"
+   },
+   "refreshSegments": {
+      "message": "Kısımları tazele"
+   },
+   "removeFromWhitelist": {
+      "message": "Kanalı izin listesinden çıkar"
+   },
+   "reportButtonInfo": {
+      "message": "Bu öneriyi hatalı olarak bildir."
+   },
+   "reportButtonTitle": {
+      "message": "Raporla"
+   },
+   "reset": {
+      "message": "Sıfırla"
+   },
+   "resetInvidiousInstance": {
+      "message": "Invidious Oluşum Listesini Sıfırla"
+   },
+   "resetInvidiousInstanceAlert": {
+      "message": "Invidious Oluşum listesini sıfırlamak üzeresiniz"
+   },
+   "reskip": {
+      "message": "Tekrar atla"
+   },
+   "save": {
+      "message": "Kaydet"
+   },
+   "savedPeopleFrom": {
+      "message": "İnsanları şu kadar kısımdan kurtardınız: "
+   },
+   "seekBarColor": {
+      "message": "Oynatma Çubuğu Rengi"
+   },
+   "serverDown": {
+      "message": "Sunucu çökmüş gibi duruyor. Derhal geliştiriciyle iletişime geçin."
+   },
+   "setOptions": {
+      "message": "Seçenekleri Ayarla"
+   },
+   "setSkipShortcut": {
+      "description": "Keybind label",
+      "message": "Kısmı atla"
+   },
+   "setStartSponsorShortcut": {
+      "description": "Keybind label",
+      "message": "Kısmı başlat/durdur"
+   },
+   "setSubmitKeybind": {
+      "description": "Keybind label",
+      "message": "Kısımları gönder"
+   },
+   "setUserID": {
+      "message": "Kullanıcı kimliği Belirle"
+   },
+   "setUsername": {
+      "message": "Kullanıcı Adı Belirle"
+   },
+   "shortCheck": {
+      "message": "Sıradaki öneri belirlediğiniz minimum süre ayarından daha kısa. Bu zaten yollandığı ve bu ayardan dolayı yok sayıldığı anlamına gelebilir. Göndermek istediğinizden emin misiniz?"
+   },
+   "showButtons": {
+      "message": "YouTube oynatıcısında Butonları Göster"
+   },
+   "showDeleteButton": {
+      "message": "YouTube Oynatıcısında Silme Tuşunu Göster"
+   },
+   "showInfoButton": {
+      "message": "YouTube Oynatıcısındaki Bilgi Butonunu Göster"
+   },
+   "showNotice": {
+      "message": "Uyarıyı Tekrar Göster"
+   },
+   "showOverlay": {
+      "message": "Arama Çubuğunda Göster"
+   },
+   "showOverlay_POI": {
+      "message": "Arama Çubuğunda Göster"
+   },
+   "showOverlay_full": {
+      "message": "Etiketi Göster"
+   },
+   "showSkipButton": {
+      "message": "“Asıl Kısma Atla” Düğmesi Oynatıcıda Kalsın"
+   },
+   "showSkipNotice": {
+      "message": "Bir Kısmı Atladıktan Sonra Uyarı Göster"
+   },
+   "showTimeWithSkips": {
+      "message": "Atlanan Kısımları Silinmiş Süreyi Göster"
+   },
+   "showTimeWithSkipsDescription": {
+      "message": "Bu süre, video ilerleme çubuğunun altındaki geçerli zamanın yanında parantez içinde görüntülenir. Bu, videodaki kısımların silinmiş toplam video süresini gösterir. Bu, yalnızca \"Video İlerleme Çubuğunda Göster\" olarak işaretlenen kısımları içerir."
+   },
+   "showUploadButton": {
+      "message": "Karşıya Yükleme Butonunu Göster"
+   },
+   "skip": {
+      "message": "Atla"
+   },
+   "skipNoticeDuration": {
+      "message": "Atlandı uyarısı süresi (saniye cinsinden):"
+   },
+   "skipNoticeDurationDescription": {
+      "message": "Bir kısım atlandığında ekranda atlandı uyarısı bu süre kadar gösterilir. Atlama elle gerçekleştiğinde bu uyarı daha uzun sürebilir."
+   },
+   "skipOption": {
+      "description": "Used on the options page to describe the ways to skip the segment (auto skip, manual, etc.)",
+      "message": "Atlama Seçeneği"
+   },
+   "skip_category": {
+      "message": "{0} atla?"
+   },
+   "skip_to_category": {
+      "description": "Used for skipping to things (Skip to Highlight)",
+      "message": "{0} kısmına atlansın mı?"
+   },
+   "skipped": {
+      "description": "Example: Sponsor Skipped",
+      "message": "{0} Atlandı"
+   },
+   "skipped_to_category": {
+      "description": "Used for skipping to things (Skipped to Highlight)",
+      "message": "{0} kısmına atlandı"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Kaynak Kodu"
+   },
+   "sponsor404": {
+      "message": "Kısım bulunamadı"
+   },
+   "sponsorCancel": {
+      "message": "Kısım Oluşturmayı İptal Et"
+   },
+   "sponsorEnd": {
+      "message": "Kısım Şimdi Bitiyor"
+   },
+   "sponsorFound": {
+      "message": "Bu videonun kısımları veri tabanımızda mevcut"
+   },
+   "sponsorStart": {
+      "message": "Kısım Şimdi Başlıyor"
+   },
+   "statusReminder": {
+      "message": "Sunucu durumu için status.sponsor.ajay.app kontrol edin."
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "Kısım düzenlemesi Gönder'e tıkladığınızda görünecek"
+   },
+   "submit": {
+      "message": "Gönder"
+   },
+   "submitCheck": {
+      "message": "Bunu göndermek istediğinize emin misiniz?"
+   },
+   "submitTimesButton": {
+      "message": "Süreleri Gönder"
+   },
+   "success": {
+      "message": "Başarılı!"
+   },
+   "supportOtherSites": {
+      "message": "3. Taraf Youtube Sitelerini Destekle"
+   },
+   "supportOtherSitesDescription": {
+      "description": "This replaces the 'supports Invidious' option because it now works on other YouTube sites such as Cloudtube",
+      "message": "Üçüncü taraf YouTube istemci desteği. Desteği etkinleştirmek için özel izinleri kabul etmelisiniz. Bu özellik Chrome ve diğer Chromium tarayıcılarda gizli modda çalışmaz."
+   },
+   "supportedSites": {
+      "message": "Desteklenen Siteler: "
+   },
+   "testingServerWarning": {
+      "message": "Tüm öneriler ve oylar, test sunucusuna bağlandığınız sürece ana sunucuya iletilmeyecektir. Gerçek öneriler yapmak istediğinizde bu ayarı kapatmayı unutmayın."
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "'e"
+   },
+   "trackDownvotesWarning": {
+      "message": "Uyarı: Bu ayarı devre dışı bırakırsanız, halihazırda saklanan olumsuz oylar silinecek"
+   },
+   "unbind": {
+      "description": "Unbind keyboard shortcut",
+      "message": "Klavye kısayolunu kaldır"
+   },
+   "unmute": {
+      "message": "Sesi Aç"
+   },
+   "unskip": {
+      "message": "Atlama"
+   },
+   "unsubmitted": {
+      "message": "Gönderilmemiş"
+   },
+   "upvoteButtonInfo": {
+      "message": "Bu öneriye oy ver"
+   },
+   "userIDChangeWarning": {
+      "message": "Uyarı: Kullanıcı kimliği değiştirmek kalıcıdır. Bunu yapmak istediğinizden emin misiniz? Eskisini yedeklediğinizden emin olun."
+   },
+   "videoInfoFetchFailed": {
+      "message": "SponsorBlock'un video verilerini almasını engelleyen bir şey var gibi görünüyor. Lütfen daha fazla bilgi için şuraya göz atın: https://github.com/ajayyy/SponsorBlock/issues/741"
+   },
+   "viewLeaderboard": {
+      "message": "Lider Tablosu"
+   },
+   "voteOnTime": {
+      "message": "Bir Kısmı Oyla"
+   },
+   "voteRejectedWarning": {
+      "description": "This is an integrated chat panel that will appearing allowing them to talk to the Discord/Matrix chat without leaving their browser.",
+      "message": "Bir uyarı nedeniyle oy reddedildi. Çözüm bulmak için buraya tıklayarak bir sohbet açın veya daha sonra vaktiniz olduğunda uğrayın."
+   },
+   "voted": {
+      "message": "Oylandı!"
+   },
+   "warningChatInfo": {
+      "message": "Bir uyarı aldınız ve geçici olarak gönderim yapamazsınız. Bu, kötü niyetli olmayan bazı yaygın hatalar yaptığınızı fark ettiğimiz anlamına gelir, lütfen kuralları anladığınızı onaylayın, uyarıyı sonra kaldıracağız. Bu konuşmaya discord.gg/SponsorBlock ya da matrix.to/#/#sponsor:ajay.app kullanarak katılabilirsiniz."
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Website"
+   },
+   "whatChangeUserID": {
+      "message": "Bu gizli tutulmalıdır. Bu bir şifre gibidir ve kimseyle paylaşılmamalıdır. Eğer birisi buna sahipse, seni taklit edebilir. Herkese açık kullanıcı kimliğinizi arıyorsanız, açılır pencerede pano simgesine tıklayın."
+   },
+   "whatEnableTestingServer": {
+      "message": "Önerileriniz ve oylarınız ana sunucuya GÖNDERİLMEYECEKTİR. Bunu sadece deneme amacıyla kullanın."
+   },
+   "whatExportOptions": {
+      "message": "Bu, JSON formatında bütün kurulumunuzu gösterir. Kullanıcı kimliğinizi içerir, bu sebeple paylaşırken dikkatli olun."
+   },
+   "whatForceChannelCheck": {
+      "message": "Varsayılan olarak, kanalın ne olduğunu bile bilmeden hemen kısımları atlayacaktır. Videonun başlangıcındaki bazı kısımları beyaz listeye eklenmiş kanallarda atlayabilir. Bu seçeneğin etkinleştirilmesi bunu önleyecektir ancak tüm atlamaların yapılması, kanal kimliğinin alınması biraz zaman alabileceğinden küçük bir gecikmeye neden olur. Hızlı bir bağlantın varsa bu gecikme fark edilmeyebilir."
+   },
+   "whatQueryByHashPrefix": {
+      "message": "Video Kimliğini kullanarak sunucudan kısımları talep etmek yerine, Video Kimliğinin karmasının ilk 4 karakterini gönderir. Bu sunucu, benzer karmalara sahip tüm videolar için verileri geri gönderir."
+   },
+   "whatRefetchWhenNotFound": {
+      "message": "Eğer video yeni ve kısımları bulunmuyorsa, sen videoyu izlerken her birkaç dakikada bir kısımları edinmeye çalışır."
+   },
+   "whatTrackDownvotes": {
+      "message": "Olumsuz oy verdiğiniz kısımlar, sayfayı tazeledikten sonra da gizli kalacaktır"
+   },
+   "whatViewTracking": {
+      "message": "Bu özellik, hangi kısımları atladığınızı takip ederek kullanıcıların gönderilerinin diğerlerine ne kadar yardımcı olduğunu bilmelerini sağlar ve olumlu oyları bir ölçüm aracı olarak kullanarak gereksiz yollanan kısımların veri tabanına girmemesini sağlar. Eklenti, bir kısmı her atladığınızda sunucuya bir mesaj gönderir. Umarım çoğu insan bu ayarı değiştirmez böylece görüntüleme sayıları doğru olur. :)"
+   },
+   "whitelistChannel": {
+      "message": "Kanala izin ver"
+   },
+   "youHaveSavedTime": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": "İnsanların şu kadar vaktini kurtardınız:"
+   },
+   "youHaveSavedTimeEnd": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": " yaşam süresi"
+   },
+   "youHaveSkipped": {
+      "message": "Şu kadar kısım atladınız: "
+   },
+   "youMustSelectACategory": {
+      "message": "Göndereceğin tüm kısımlar için bir kategori seçmelisin!"
+   },
+   "yourWork": {
+      "description": "Used to describe the section that will show you the statistics from your submissions.",
+      "message": "Çalışmalarınız"
+   },
+   "youtubeKeybindWarning": {
+      "message": "Bu kısayol YouTube tarafından kullanılıyor. Bunu kullanmak istediğinize emin misiniz?"
+   },
+   "youtubePermissionRequest": {
+      "message": "SponsorBlock YouTube API'sine ulaşamıyor gibi gözüküyor. Bunu düzeltmek için, bundan sonra görünecek izin isteğini kabul edin, birkaç saniye bekleyin ve ardından sayfayı yeniden yükleyin."
+   }
+}

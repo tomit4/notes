@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function b_gitignore() {
+    if [[ $1 == "c" ]]; then
+        cp $HOME/.config/bgit/default_gitignores/C.gitignore .gitignore
+    elif [[ $1 == "js" ]] ; then
+        cp $HOME/.config/bgit/default_gitignores/Node.gitignore .gitignore
+    elif [[ $1 == "py" ]] ; then
+        cp $HOME/.config/bgit/default_gitignores/Python.gitignore .gitignore
+    fi
+}

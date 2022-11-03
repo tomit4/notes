@@ -1,0 +1,185 @@
+#!/bin/bash
+function b_init() {
+    while true
+    do
+    #Prompts the user if they'd like to initialize repository
+    read -e -r -p "${txtblue} initialize repository?(y/n): ${txtyellow}" init
+        if [[ $init == "n" || $init = "no" ]]; then
+            echo "${txtred} no git repository initialized...exiting${txtwhite}"
+            break
+        elif [[ $init == "y" || $init == "yes" ]] ; then
+
+            while true
+            do
+                read -e -r -p "${txtblue} please enter title of your project: ${txtyellow}" projectname
+                if [[ $projectname != "" ]] ; then
+                    break
+                fi
+            done
+
+            # Creates a default README.md
+            if [ ! -f "README.md" ] ; then
+                read -e -r -p "${txtblue} would you like bgit to generate a default README.md?(y/n): ${txtyellow}" generatereadme
+                if [[ $generatereadme == "y" || $generatereadme == "yes" ]] ; then
+                    echo -e "## My Project: ${projectname}\n\nSome text about my project.\n\n__Checklist__\n\n- [x] Completed Task\n- [ ] Incomplete Task" > README.md
+                fi
+            fi
+
+            # Creates a default .gitignore
+            if [ ! -f ".gitignore" ] ; then
+                read -e -r -p "${txtblue} would you like bgit to generate a default .gitignore?(y/n): ${txtyellow}" generategitignore
+                if [[ $generategitignore == "y" || $generategitignore == "yes" ]] ; then
+                    read -e -r -p "${txtblue} what programming language is this project in?(c/js/py)?: ${txtyellow}" projecttype
+                    source $HOME/.config/bgit/bgit_gitignore
+                    b_gitignore $projecttype
+                fi
+            fi
+
+            # Initializes git repository cwd...
+            git init > /dev/null 2>&1
+
+            # defaults to not requiring gpg key sign
+            git config commit.gpgsign false
+
+            while [ true ];
+            do
+                # prompts user to change default username/email and changes them if they'd like (no input defaults to global values)
+                read -e -r -p "${txtblue} would you like to change username/password from global defaults?(y/n): ${txtyellow}" changedefaults
+                if [[ $changedefaults == "y" || $changedefaults == "yes" ]] ; then
+                    read -e -r -p "${txtblue} enter your username: ${txtyellow}" uname
+                    if [[ -n $uname ]] ; then
+                        git config user.name $uname
+                        read -e -r -p "${txtblue}﫯 enter your email: ${txtyellow}" uemail
+                        if [[ -n $uemail ]] ; then
+                            git config user.email $uemail
+                            break
+                        else
+                            echo "${txtblue}﫯 no email entered, defaulting to global value${txtwhite}"
+                            break
+                        fi
+                    else
+                        echo "${txtblue} no username entered, defaulting to global value${txtwhite}"
+                        break
+                    fi
+                else
+                    echo "${txtblue} defaulting to global username/password${txtwhite}"
+                    break
+                fi
+            done
+
+            # prompt user if they'd like to generate a license
+            while true
+            do
+                read -e -r -p "${txtblue} would you like to generate a LICENSE?(y/n/help): ${txtyellow}" confirmlegit
+                if [[ $confirmlegit == "y" || $confirmlegit == "yes" ]] ; then
+                    dependencycheck legit
+                    read -e -r -p "${txtblue} enter license type: ${txtyellow}" license
+                    legit p "${license}"
+                    break
+                elif [[ $confirmlegit == "h" || $confirmlegit == "help" ]] ; then
+                    dependencycheck legit
+                    if command -v "bat" &> /dev/null ; then
+                        legit l | bat
+                    else
+                        dependencycheck less
+                        legit l | less
+                    fi
+                else
+                    break
+                fi
+            done
+
+            tput bold & tput setaf 7
+
+            git add . > /dev/null 2>&1
+            git commit -m ":tada: Initial commit!" > /dev/null 2>&1
+            echo "${txtblue} Initial commit!${txtwhite}"
+
+            while true
+            do
+            read -e -r -p "${txtblue} change branch name?(y/n): ${txtyellow}" chbranch
+                if [[ $chbranch == "y" || $chbranch == "yes" ]] ; then
+                    read -e -r -p "${txtblue} branch name?(i.e. 'main'): ${txtyellow}" branch
+                    if [ -n "$branch" ] ; then
+                        git branch -M $branch
+                        break
+                    else
+                        echo "${txtred} branch name is empty, please enter branch name!${txtwhite}"
+                    fi
+                else
+                    echo "${txtblue} branch name will be left as ${txtyellow}'master'${txtwhite}"
+                    branch="master"
+                    break
+                fi
+            done
+
+            # main git init loop
+            while true
+            do
+                uname=$(git config user.name)
+                read -e -r -p "${txtblue} Please enter remote to add(i.e. origin): ${txtyellow}" remote
+
+                # if the user doesn't enter anything for the remote prompt, it defaults to origin
+                if [[ -z $remote ]]; then
+                    remote="origin"
+                fi
+
+                while [ -z $host ]
+                do
+                    read -e -r -p "${txtblue} Please enter host site (i.e. github.com): ${txtyellow}" host
+                done
+
+                while [ -z $repo ]
+                do
+                    read -e -r -p "${txtblue} Please enter name of repository: ${txtyellow}" repo
+                done
+
+                tput bold & tput setaf 7
+
+                if [[ -n $host && $host == "github.com" ]] ; then
+                    read -e -r -p "${txtblue} Host site is github.com, would you like bgit to create the repository?(y/n): ${txtyellow}" crepo
+
+                    tput bold & tput setaf 7
+
+                    if [[ ! -f $HOME/.gh_pat ]]; then
+                        echo "${txtred} Github personal access token doesn't exist"
+                        echo " See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
+                        echo " create a $HOME/.gh_pat file and put your personal access token in it like so:"
+                        echo ' echo > "GH_TOKEN=your_gh_token_goes_here'
+                        tput bold & tput setaf 7
+                        exit 1
+                    fi
+
+                    source $HOME/.gh_pat
+
+                    if [[ $crepo == 'y' || $crepo == 'yes' ]] ; then
+
+                        dependencycheck curl
+
+                        echo "${txtgreen} Host Site is github.com, creating repository...${txtwhite}"
+                        curl -u $uname:$GH_TOKEN https://api.github.com/user/repos -d '{"name": "'${repo}'"}' > /dev/null 2>&1
+
+                    fi
+
+                    echo -e "${txtblue} Your \$GH_TOKEN is saved to your clipboard...\nsimply enter CTRL+SHIFT+V to paste your token...\nwhen prompted for your password${txtwhite}"
+                    echo $GH_TOKEN | xclip -sel clip
+                fi
+
+                git remote add $remote "https://$host/$uname/$repo"
+                git push --set-upstream $remote $branch > /dev/null 2>&1
+
+                if [[ $host == "github.com" ]] ; then
+                    echo "${txtgreen} GitHub repository created and initiated!!${txtwhite}"
+                    echo '' | xclip && xclip -selection clipboard /dev/null
+                else
+                    echo "${txtgreen} Git repository initiated!!${txtwhite}"
+                fi
+
+                break
+            done
+            break
+        else
+            break
+        fi
+    done
+}

@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icon128.png",
+         "48": "images/icon48.png"
+      },
+      "default_popup": "pages/popup/popup.html"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "{513646f8-fb87-4135-a41e-4cf1d1ccccf2}"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "content-script.js" ],
+      "matches": [ "*://twitter.com/*", "*://www.twitter.com/*", "*://mobile.twitter.com/*", "*://pbs.twimg.com/*", "*://video.twimg.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Redirects Twitter requests to Nitter, the privacy friendly alternative.",
+   "icons": {
+      "128": "images/icon128.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgLsCbiJ7KY9niS6XzbVb0lBNryu6QMezjIgKsrj/F3giJQbxbAAaq2aNg5OfC6ZCRoxrhyUpSnn8/pYKYfCcAbX/wHe30aWVlZcXO6ufHJ+UUs6rji1X+sh+WQQnDZob903KvfCxQ61yUpGbL+UynWTe22T6kDSY65RI/+6ZML73U1iehqV9lRBrJyRkESVriiOjQPpTZnkpAVuuowBYtWBwSyRdQOvYPdOHk5SvgKKEyLsLN2kyBHUOzPfPqtpLqbDzyyIOPsZuRKmU4E3j0swfl8l8HcBgWwpygTSu9XdkGj+Uw13FIrXxLmaqQ9NDwRFy2UI4aF+UoEswtkNErwIDAQAB",
+   "manifest_version": 2,
+   "name": "Nitter Redirect",
+   "permissions": [ "storage", "webRequest", "webRequestBlocking", "*://twitter.com/*", "*://www.twitter.com/*", "*://mobile.twitter.com/*", "*://pbs.twimg.com/*", "*://video.twimg.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5"
+}

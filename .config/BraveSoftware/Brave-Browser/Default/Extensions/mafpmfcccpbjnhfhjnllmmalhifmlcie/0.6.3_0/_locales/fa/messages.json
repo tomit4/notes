@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": "یک پروکسی مستقل اجرا کنید"
+   },
+   "appDesc": {
+      "message": "به کاربران کشورهای تحت سانسور اجازه دهید از اتصال شبکه شما برای دسترسی به شبکه Tor استفاده کنند."
+   },
+   "badgeCookiesOff": {
+      "message": "کوکی ها فعال نیستند."
+   },
+   "browser": {
+      "message": "از Snowflake برای دور زدن سانسور استفاده کنید"
+   },
+   "bugTracker": {
+      "message": "یک حساب کاربری در Tor Project GitLab درخواست کنید ، سپس یک شماره جدید در پروژه Snowflake باز کنید."
+   },
+   "censoredUsers": {
+      "message": "برخلاف VPN‌ها، برای اتصال به پروکسی Snowflake و دور زدن سانسور، نیازی به نصب برنامه جداگانه ندارید. این  ویژگی دور زدن در برنامه موجود تعبیه شده است. در حال حاضر Snowflake در داخل \u003Ca href=\"https://torproject.org/download\">مرورگر Tor\u003C/a> در دسکتاپ و اندروید، \u003Ca href=\"https://onionbrowser.com\">مرورگر Onion\u003C/a> در iOS و \u003Ca href=\"https://orbot.app\">Orbot\u003C/a> در اندروید و iOS در دسترس است. اگر هر یک از این برنامه‌ها را دانلود و نصب کرده‌اید و در کشور خود تحت سانسور هستید، می‌توانید با فعال کردن Snowflake از طریق صفحه تنظیمات برنامه‌ها، سانسور را دور بزنید."
+   },
+   "contactSnowflakeDevs": {
+      "message": "اگر علاقه‌مند به استفاده از Snowflake در داخل برنامه خود هستید، با \u003Ca href=\"https://lists.torproject.org/cgi-bin/mailman/listinfo/anti-censorship-team\">تیم ضد سانسور تماس بگیرید."
+   },
+   "descriptive": {
+      "message": "لطفاً سعی کنید تا حد امکان در مورد بلیط خود توصیفی داشته باشید و در صورت امکان پیام های گزارش را وارد کنید که به ما در تولید مجدد اشکال کمک می کند."
+   },
+   "embed": {
+      "message": "جاگذاری"
+   },
+   "extension": {
+      "message": "به مردم کمک کنید تا سانسور را دور بزنند: یک پروکسی Snowflake را اجرا کنید"
+   },
+   "faq": {
+      "message": "درخواست پشتیبانی هنگام استفاده از Snowflake"
+   },
+   "fileBug": {
+      "message": "اگر با Snowflake به مشکل بر خوردید - چه در حال استفاده از آن یا اجرای آن -، لطفا ارسال گزارش اشکال را در نظر بگیرید. دو راه برای ثبت گزارش اشکال وجود دارد:"
+   },
+   "howSnowflakeWorks": {
+      "message": "درباره نحوه عملکرد Snowflake بیشتر بدانید"
+   },
+   "installChrome": {
+      "message": "نصب در کروم"
+   },
+   "installExtension": {
+      "message": "آیا می‌دانستید که پروکسی‌های Snowflake به طور کامل توسط داوطلبان اداره می‌شوند؟ به عبارت دیگر، کاربر با یک پروکسی داوطلبانه تصادفی Snowflake پیوند داده می‌شود که توسط داوطلبی مانند شما اداره می‌شود! بنابراین، اگر می‌خواهید به مردم کمک کنید تا سانسور را دور بزنند، نصب و اجرای پروکسی Snowflake را در نظر بگیرید. تنها پیش‌نیاز این است که اینترنت در کشور شما در حال حاضر به شدت سانسور \u003Cstrong>نشده باشد\u003C/strong>."
+   },
+   "installFirefox": {
+      "message": "نصب در فایرفاکس"
+   },
+   "installOptions": {
+      "message": "راه‌های مختلفی برای اجرای پروکسی Snowflake (مبتدی تا پیشرفته) وجود دارد:"
+   },
+   "installStandalone": {
+      "message": "اگر مایل به اجرای نسخه خط فرمان پروکسی Snowflake بر روی دسکتاپ یا سرور خود هستید، به \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">راهنمای\u003C/a> ما برای اجرای پروکسی مستقل Snowflake مراجعه کنید."
+   },
+   "installWebExtension": {
+      "message": "افزونه وب ساده‌ترین راه برای اجرای یک پروکسی Snowflake است. به سادگی آن را روی \u003Ca href=\"https://addons.mozilla.org/en-US/firefox/addon/torproject-snowflake/\">فایرفاکس\u003C/a> یا \u003Ca href=\"https://chrome.google.com/webstore/detail/snowflake/mafpmfcccpbjnhfhjnllmmalhifmlcie\">Chrome\u003C/a> نصب کنید، افزونه را فعال کنید و زمانی که یک کاربر از طریق پروکسی شما متصل می‌شود، سبز شدن آن را تماشا کنید!"
+   },
+   "installWebExtensionIntro": {
+      "message": "افزونه وب را نصب کنید"
+   },
+   "popupBridgeUnreachable": {
+      "message": "اتصال به پل ممکن نشد."
+   },
+   "popupDescOn": {
+      "message": "تعداد کاربرانی که برف‌دانه‌ی شما در 24 ساعت گذشته به آنها کمک کرده تا سانسور را دور بزنند: $1"
+   },
+   "popupEnabled": {
+      "message": "فعال"
+   },
+   "popupLearnMore": {
+      "message": "اطلاعات بیشتر"
+   },
+   "popupRetry": {
+      "message": "تلاش دوباره"
+   },
+   "popupRetrying": {
+      "message": "در حال تلاش مجدد..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake خاموش است"
+   },
+   "popupStatusOn": {
+      "message": "تعداد کاربرانی که متصل هستند: $1"
+   },
+   "popupStatusReady": {
+      "message": "برف‌دانه‌ی شما آماده‌ی کمک به دور زدن سانسور است."
+   },
+   "popupWebRTCOff": {
+      "message": "ویژگی WebRTC شناسایی نشده است."
+   },
+   "possible": {
+      "message": "همچنین می‌توانید یک پروکسی Snowflake را خودتان در یک صفحه در وب‌سایت خود جاسازی کنید (به عنوان مثال، \u003Ca href=\"https://relay.love\">relay.love\u003C/a>). بازدیدکنندگان سایت شما می‌توانند وارد صفحه شوند، پروکسی را فعال کنند و آن را باز بگذارند تا افراد بتوانند از طریق آن پروکسی کنند (این صفحه دقیقا مانند افزونه وب عمل می‌کند و به نظر می‌رسد)."
+   },
+   "reportingBugs": {
+      "message": "گزارش اشکال"
+   },
+   "sharedAccount": {
+      "message": "با ایجاد یک شناسه و ورود به سیستم با آن، یک \u003Ca href=\"https://anonticket.onionize.space/\">درخواست ناشناس\u003C/a> را ثبت کنید. سپس، پروژه Snowflake را در \u003Cstrong>لیست همه پروژه‌ها\u003C/strong> پیدا کنید و یک مشکل جدید ایجاد کنید."
+   },
+   "snowflakeTechOverview": {
+      "message": "Snowflake یک فناوری جدید دور زدن و بخشی از خانواده \u003Ca href=\"https://gitweb.torproject.org/torspec.git/tree/pt-spec.txt\">حامل‌های انتقال\u003C/a> است که به طور مداوم در حال بهبود است. در مورد نحوه طراحی آن کنجکاوید؟ به راحتی می‌توانید این \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/Technical%20Overview\">نمای کلی فنی\u003C/a> (به زبان انگلیسی) را بررسی کنید."
+   },
+   "support": {
+      "message": "اگر هنگام تلاش برای اتصال به Tor با استفاده از Snowflake با مشکلاتی مواجه شدید، کانال پشتیبانی Tor در \u003Ca href=\"https://t.me/TorProjectSupportBot\">تلگرام\u003C/a> قابل دسترسی است. همچنین می‌توانید برای دریافت پاسخ، \u003Ca href=\"https://support.torproject.org/censorship/\">پورتال پشتیبانی Tor\u003C/a> و \u003Ca href=\"https://forum.torproject.net/tag/snowflake\">انجمن Tor\u003C/a> را مطالعه کنید."
+   },
+   "volunteer": {
+      "message": "شما می‌توانید به هزاران داوطلب از سراسر جهان بپیوندید که پروکسی Snowflake را نصب و اجرا کرده‌اند. نیازی به نگران اینکه مردم از طریق پروکسی Snowflake شما به چه وب‌سایت‌هایی دسترسی دارند نباشید. آدرس IP مرور آن‌ها با گره خروجی Tor خودشان مطابقت دارد نه با شما."
+   },
+   "webBadgeInstructions": {
+      "message": "اگر Snowflake را در زیر روشن کنید و برگه مرورگر را باز بگذارید، کاربر می‌تواند از طریق پروکسی جدید شما متصل شود!"
+   },
+   "webBadgeTitle": {
+      "message": "این برگه مرورگر را باز بگذارید یا یک نشان وب در وب‌سایت خود جاسازی کنید"
+   },
+   "websiteIntro": {
+      "message": "Snowflake سیستمی است که \u003Cstrong>به افراد از سراسر جهان اجازه می‌دهد تا به وب‌سایت‌ها و برنامه‌های سانسور شده دسترسی داشته باشند\u003C/strong>. مشابه روشی که VPN‌ها به کاربران در دور زدن سانسور اینترنت کمک می‌کنند، Snowflake به شما کمک می‌کند تا سانسورگرهای اینترنتی شما را شناسایی نکنند و فعالیت اینترنتی خود را طوری جلوه دهید که انگار از اینترنت برای یک تماس ویدیویی یا صوتی معمولی استفاده می‌کنید."
+   },
+   "websiteIntro2": {
+      "message": "ابزارهای متعددی مانند Snowflake وجود دارد که فعالیت اینترنت را تغییر می‌دهد و هر کدام از تکنیک‌های متفاوتی استفاده می‌کنند. بخشی از ترافیک اینترنت به نظر می‌رسد که از سمت ارائه دهندگان ابری محبوب مانند Microsoft Azure و Amazon Web Services می‌آیند. دیگران ترافیک اینترنت را به هم می‌زنند تا کاملا تصادفی به نظر برسند."
+   },
+   "websiteIntro3": {
+      "message": "بنابراین برای سانسورگران مسدود کردن چنین ابزارهای گران تمام خواهد شد، زیرا برای دستیابی به هدف خود، نیاز به مسدود کردن بخش‌های وسیعی از اینترنت را دارند."
+   }
+}

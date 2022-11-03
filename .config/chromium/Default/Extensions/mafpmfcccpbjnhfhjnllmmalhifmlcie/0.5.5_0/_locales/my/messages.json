@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake သည် Tor အတွက် WebRTC တင်သွင်းနိုင်သော ပို့ဆောင်မှုဖြစ်သည် (pluggable transport)။"
+   },
+   "badgeCookiesOff": {
+      "message": "ကွတ်ကီးများ မဖွင့်ထားပါ။"
+   },
+   "browser": {
+      "message": "Use Snowflake"
+   },
+   "bugTracker": {
+      "message": "Tor Project Gitlab တွင် \u003Ca href=\"https://gitlab.onionize.space/\"> အကောင့်တစ်ခု တောင်းဆို \u003C/a> ပါ၊ ထို့နောက် Snowflake ပရောဂျက်ထဲတွင် \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\"> ကိစ္စအသစ်တစ်ခု ဖွင့်ပါ \u003C/a>။"
+   },
+   "censoredUsers": {
+      "message": "သင့် အင်တာနက်သုံးစွဲမှုသည် ဆင်ဆာခံထားရပါက \u003Ca href=\"https://www.torproject.org/download/\"> Tor ဘရောင်ဇာ \u003C/a> ကို သင် ဒေါင်းလုပ်ဆွဲထားသင့်ပါသည်။"
+   },
+   "descriptive": {
+      "message": "ကျေးဇူးပြု၍ သင့်လက်မှတ်ပေါ်တွင် အချက်အလက်များကို တတ်နိုင်သမျှ ပြည့်စုံစွာဖြည့်ပေးပါ၊ ဖြစ်နိုင်လျှင် ကျွန်ုပ်တို့ဘက်မှ ပျက်ကွက်မှုကို ခြေရာပြန်လိုက်နိုင်ရန် မှတ်တမ်းမက်ဆေ့ချ်များပါ ပါဝင်ပေးပါ။"
+   },
+   "embed": {
+      "message": "ထည့်သွင်း (embed)"
+   },
+   "extension": {
+      "message": "Run a Proxy"
+   },
+   "faq": {
+      "message": "မကြာခဏမေးလေ့ရှိသောမေးခွန်းများ"
+   },
+   "fileBug": {
+      "message": "Snowflake ကို သုံးသူ သို့မဟုတ် ကြားခံ proxy အနေဖြစ် ပြဿနာများ ကြုံတွေ့ပါက ပျက်ကွက်မှု တိုင်ကြားစာတင်ရန် စဥ်းစာပေးပါ။ ပျက်ကွက်မှု တိုင်ကြားစာတင်ရန် နည်း ၂ နည်းရှိပါသည် -"
+   },
+   "installChrome": {
+      "message": "Chrome တွင်တပ်ဆင်မယ်"
+   },
+   "installExtension": {
+      "message": "သင့် အင်နက်သုံးစွဲခြင်းကို ဆင်ဆာခံထားခြင်း \u003Cstrong>မ\u003C/strong> ရှိလျှင် သင်သည် ဆင်ဆာခံထားသော ကွန်ယက်ပေါ်ရှိ သုံးသူများကို ကူညီသော Snowflake ထပ်တိုးဆော့ဝဲ ကိုတပ်ဆင်ထားသင့်ပါသည်။ မည်သည့်ဝဘ်ဆိုဒ်များမှ​ သင့်ကြားခံ proxy သုံးခြင်းကို စိတ်ပူစရာမလိုပါ။​ ၎င်းတို့၏ မြင်တွေ့နိုင်သော IP လိပ်စာသည် Tor ထွက်ပေါက်နှင့် ကိုက်ညီပါမည်၊ သင့်ဟာမဟုတ်။"
+   },
+   "installFirefox": {
+      "message": "Firefox တွင်တပ်ဆင်မယ်"
+   },
+   "installStandalone": {
+      "message": "If you would like to run a command-line version of the Snowflake proxy on your desktop or server, see our \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">community documentation\u003C/a> for running a standalone Snowflake proxy."
+   },
+   "looksLike": {
+      "message": "အောက်ပါလိုမျိုး ပုံစံ အတိုင်း -"
+   },
+   "popupBridgeUnreachable": {
+      "message": "အချင်းချင်း ချွေတာရန် ချိတ်ဆက်မှု (bridge) ပြုလုပ်၍ မရပါ။"
+   },
+   "popupDescOn": {
+      "message": "နောက်ဆုံး ၂၄ နာရီအတွင်း Snowflake မှ​ဆင်ဆာခံရခြင်းများကို ရှောင်ရှားပေးခဲ့သော သုံးသူဦးရေ - $1"
+   },
+   "popupEnabled": {
+      "message": "ဖွင့်ထားသည်"
+   },
+   "popupLearnMore": {
+      "message": "ထပ်မံလေ့လာမယ်"
+   },
+   "popupRetry": {
+      "message": "ထပ်ကြိုးစားရန်"
+   },
+   "popupRetrying": {
+      "message": "ထပ်ကြိုးစားနေပါသည် ..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake ပိတ်ထားသည်"
+   },
+   "popupStatusOn": {
+      "message": "လက်ရှိ ချိတ်ဆက်ထားသော သုံးသူ ဦးရေ - $1"
+   },
+   "popupStatusReady": {
+      "message": "သင့် Snowflake သည် သုံးသူများ ဆင်ဆာများဖြတ်ကျော်ရန် ကူညီဖို့ အဆင်သင့်ဖြစ်ပါပြီ။"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC အင်္ဂါရပ် မတွေ့ရှိပါ။"
+   },
+   "possible": {
+      "message": "မည်သည့်ဝဘ်ဆိုဒ်ပေါ်တွင် Snowflake အမှတ်တံဆိပ် ကို ယခုထည့်သွင်း (embed) နိုင်ပါပြီ။"
+   },
+   "reportingBugs": {
+      "message": "ပျက်ကွက်မှုများ တိုင်ကြားနေသည်"
+   },
+   "sharedAccount": {
+      "message": "အမှတ်အသားတစ်ခု (\"Identifier\") ပြုလုပ်၍ ၎င်းနှင့် လော့အင်ဝင်ရာ \u003Ca href=\"https://anonticket.onionize.space/\"> အမည်မသိ လက်မှတ် \u003C/a> တစ်စောင် တင်ပါ။ သို့နောက် \u003Cstrong> ပရောဂျက် အားလုံးစာရင်း \u003C/strong> ထဲတွင် Snowflake ရှာပြီး ကိစ္စ အကြောင်းအသစ် ရေးသားပေးပါ။ "
+   },
+   "support": {
+      "message": "Tor \u003Ca href=\"https://support.torproject.org/\">ပံ့ပိုးပေါ်တယ်\u003C/a> တွင် \u003Ca href=\"https://support.torproject.org/censorship/\">ဆင်ဆာခံခြင်း\u003C/a> ခေါင်းစဥ်ကို ကြည့်ရှုပါ။"
+   },
+   "websiteIntro": {
+      "message": "Snowflake သည် အင်တာနက်ဆင်ဆာလုပ်ခြင်းများကို ရှောင်ကွင်းရန် စနစ်တစ်ခု ဖြစ်သည်။ ဆင်ဆာလုပ်ခံရသောသူများသည် Snowflake ကို သုံး၍ အင်တာနက်ကို သုံးနိုင်ပါသည်။ ဆင်ဆာခံရသောသူများ၏ ဆက်သွယ်မှုများသည် လုပ်အားပေးသူများမှ လုပ်ဆောင်ထားသော Snowflake ကြားခံ proxy များဖြင့် ဖြတ်ကျော်ပါသည်။ Snowflake ၏ လုပ်နည်းများနှင့် ပတ်သက်၍ အသေးစိတ်အချက်အလက်များကို လေ့လာရန် ကျွန်ုပ်တို့၏ \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\"> documentation wiki \u003C/a> ကိုကြည့်ပါ။"
+   }
+}

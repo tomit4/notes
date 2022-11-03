@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake é um transporte ligável WebRTC para o Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Os cookies não estão ativados."
+   },
+   "browser": {
+      "message": "Use Snowflake"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Request an account\u003C/a> at the Tor Project GitLab, then \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">open a new issue\u003C/a> in the Snowflake project."
+   },
+   "censoredUsers": {
+      "message": "Se o seu acesso à Internet é censurado, deveria transferir o \u003Ca href=\"https://www.torproject.org/download/\">Tor Browser\u003C/a>"
+   },
+   "descriptive": {
+      "message": "Please try to be as descriptive as possible with your ticket and if possible include log messages that will help us reproduce the bug."
+   },
+   "embed": {
+      "message": "Integrado"
+   },
+   "extension": {
+      "message": "Run a Proxy"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fileBug": {
+      "message": "If you encounter problems with Snowflake as a client or a proxy, please consider filing a bug report.  There are two ways to file a bug report:"
+   },
+   "installChrome": {
+      "message": "Instalar no Chrome"
+   },
+   "installExtension": {
+      "message": "Se o seu acesso À Internet \u003Cstrong>não\u003C/strong> está censurado, deveria considerar instalar a extensão Snowflake para ajudar os utilizadores nas redes censuradas. Não precisa de se preocupar com os ''sites'' que as pessoas estão a aceder através da sua proxy. O endereço de IP de navegação visível será o do nodo de saída do Tor, não o seu."
+   },
+   "installFirefox": {
+      "message": "Instalar no Firefox"
+   },
+   "installStandalone": {
+      "message": "If you would like to run a command-line version of the Snowflake proxy on your desktop or server, see our \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">community documentation\u003C/a> for running a standalone Snowflake proxy."
+   },
+   "looksLike": {
+      "message": "Que se parece com isto:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Não foi possível ligar à ponte."
+   },
+   "popupDescOn": {
+      "message": "Número de utilizadores que o seu Snowflake ajudou a contornar a censura nas últimas 24 horas: $1"
+   },
+   "popupEnabled": {
+      "message": "Ativado"
+   },
+   "popupLearnMore": {
+      "message": "Saber mais"
+   },
+   "popupRetry": {
+      "message": "Retry"
+   },
+   "popupRetrying": {
+      "message": "Retrying ..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake está desligado"
+   },
+   "popupStatusOn": {
+      "message": "Número de utilizadores atualmente ligados: $1"
+   },
+   "popupStatusReady": {
+      "message": "O seu Snowflake está pronto para ajudar os utilizadores a contornar a censura"
+   },
+   "popupWebRTCOff": {
+      "message": "A funcionalidade WebRTC não foi detetada."
+   },
+   "possible": {
+      "message": "Agora é possível incorporar o emblema do Snowflake em qualquer ''site'' da Web:"
+   },
+   "reportingBugs": {
+      "message": "Reportar Erros"
+   },
+   "sharedAccount": {
+      "message": "File an \u003Ca href=\"https://anonticket.onionize.space/\">anonymous ticket\u003C/a> by generating an identifier and logging in with it.  Then, find the Snowflake project in the \u003Cstrong>List of all projects\u003C/strong> and create a new issue."
+   },
+   "support": {
+      "message": "See the \u003Ca href=\"https://support.torproject.org/censorship/\">Censorship\u003C/a> topic in Tor's \u003Ca href=\"https://support.torproject.org/\">Support Portal\u003C/a>."
+   },
+   "websiteIntro": {
+      "message": "Snowflake is a system to defeat internet censorship. People who are censored can use Snowflake to access the internet. Their connection goes through Snowflake proxies, which are run by volunteers. For more detailed information about how Snowflake works see our \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">documentation wiki\u003C/a>."
+   }
+}

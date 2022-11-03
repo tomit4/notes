@@ -1,0 +1,7 @@
+# Set the layout of the current tab
+layout tall:bias=50;full_size=1;mirrored=false
+# Set the working directory for windows in the current tab
+# cd ~
+# Create a window and run the specified command in it
+launch zsh
+launch zsh

@@ -1,0 +1,9 @@
+include /home/brian/.config/kitty/.nord-kitty.conf
+background_opacity 0.80
+remember_window_size yes
+map ctrl+shift+enter new_window_with_cwd
+cursor_stop_blinking_after 0.25
+cursor_shape block
+shell_integration no-cursor
+enable_audio_bell no
+font_size 15

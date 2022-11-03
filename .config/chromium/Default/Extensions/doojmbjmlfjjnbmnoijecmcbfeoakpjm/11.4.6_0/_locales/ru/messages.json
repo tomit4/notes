@@ -1,0 +1,946 @@
+{
+   "Add": {
+      "description": "",
+      "message": "Добавить"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "Дополнительные разрешения для доверенных сайтов"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "Дополнительные ограничения для недоверенных сайтов"
+   },
+   "Allow": {
+      "description": "",
+      "message": "Разрешить"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "Разрешать сайты, открываемые через закладки"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "Расширенные копирование и вставка из внешнего буфера обмена"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "Разрешить локальные ссылки"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "Разрешить все скрипты на этой странице"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "Разрешить \u003CA PING…>"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "Разрешать сайты, открываемые через закладки"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "Блокировать любой объект с сайта, отмеченного как недоверенный"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "Временно установить «ДОВЕРЕННЫЕ» для сайтов верхнего уровня"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "Автоматически перезагружать зависимые страницы при изменении разрешений"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "Перезагружать только активную вкладку"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "Базовые домены 2-го уровня (noscript.net)"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": "Заблокировано: $1 из $2 элементов."
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "Объекты, заблокированные NoScript’ом"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "Создать резервную копию настроек в закладках для лёгкой синхронизации"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "Отменить"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "Каскадное разрешение скриптов третьей стороны"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "Любые разрешения, заблокированные в документе верхнего уровня, \nдолжны быть заблокированы и в его субдокументах"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript перехватил взаимодействие мыши или клавиатуры с частично скрытым элементом. Нажмите на изображение, чтобы увидеть разницу."
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "Возможно Clickjacking / Попытка изменения UI"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "ClearClick-защита на страницах…"
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "Сообщение об ошибке"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "ID сообщения:"
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "Предупреждения ClearClick"
+   },
+   "Close": {
+      "description": "",
+      "message": "Закрыть"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "Сворачивать заблокированные объекты"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "Подтверждать временную разблокировку объекта"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "Пункт в контекстном меню"
+   },
+   "Custom": {
+      "description": "",
+      "message": "Индивидуальная"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "Преднастройки (для всех страниц, использующих эти преднастройки)"
+   },
+   "Default": {
+      "description": "",
+      "message": "По умолчанию"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "Политики по умолчанию"
+   },
+   "Description": {
+      "description": "",
+      "message": "Максимальная защита вашего браузера: для предотвращения использования уязвимостей NoScript разрешает активное содержимое только для доверенных доменов, выбранных вами."
+   },
+   "Donate": {
+      "description": "",
+      "message": "Сделать пожертвование"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript — это свободное ПО и ему необходима ваша помощь. Сделайте пожертвование сейчас!"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "Пожертвование"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "Встроенные объекты"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "Глобальное включение ограничений"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "Включить ограничения для этой вкладки"
+   },
+   "EnforceOnRestart": {
+      "description": "",
+      "message": "Восстанавливать ограничения при перезапуске браузера"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "Исключения…"
+   },
+   "Export": {
+      "description": "",
+      "message": "Экспорт"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "Пытаться исправить JavaScript-ссылки"
+   },
+   "Hider": {
+      "description": "",
+      "message": "Перетащить сюда, чтобы скрыть."
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "Высокий контраст"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "ЧаВо по HTTPS…"
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "Заставлять указанные сайты использовать защищённое (HTTPS) соединение:"
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "Не принуждать указанные сайты использовать защищённое (HTTPS) соединение:"
+   },
+   "Https_always": {
+      "description": "",
+      "message": "Всегда"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "Поведение"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Cookies"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "Запрещать активное веб-содержимое, за исключением защищённых (HTTPS) соединений:"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "Никогда"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "При использовании прокси (рекомендуется Tor)"
+   },
+   "Import": {
+      "description": "",
+      "message": "Импорт"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "Оставить этот элемент заблокированным (рекомендуется)"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "Пример шаблона:"
+   },
+   "ModernRed": {
+      "description": "",
+      "message": "Modern Red"
+   },
+   "Next": {
+      "description": "",
+      "message": "Следующий"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "Глобальное отключение ограничений (опасно)"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "Отключить ограничения для этой вкладки"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "Не показывать заполнитель вместо объектов с сайтов, отмеченных как недоверенные"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "Ограничения отключены настройками пользователя:\nNoScript ничего не блокирует на этой странице"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "Уведомления"
+   },
+   "Notify": {
+      "description": "",
+      "message": "Отображать сообщения о заблокированных скриптах"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "Показывать сообщения о заблокированных META перенаправлениях"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "Располагать сообщения внизу окна"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "Показывать элемент &lt;NOSCRIPT&gt;, который следует за заблокированным &lt;SCRIPT&gt;"
+   },
+   "NselNever": {
+      "description": "",
+      "message": "Скрывать элементы &lt;NOSCRIPT&gt;"
+   },
+   "OK": {
+      "description": "",
+      "message": "OK"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "Отменять временные разрешения при обновлении NoScript, даже если браузер не перезапущен"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "Блокировать CSS-сканеры"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "Обезопасить подозрительные межсайтовые запросы"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "Заменять межсайтовые POST-запросы на GET-запросы без данных"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "Возможность устанавливать постоянные разрешения в инкогнито/приватных вкладках.\nОСТОРОЖНО: возможна утечка информации со страницы!"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "Переопределить заданный уровень безопасности Tor Browser’а"
+   },
+   "Options": {
+      "description": "",
+      "message": "Настройки…"
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "Настройки NoScript"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "Пункты постоянных разрешений в приватном режиме"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "Вы можете указать, каким веб-сайтам разрешено выполнение скриптов. Введите адрес или домен (например: «http://www.site.com» или «site.com») сайта, который хотите разрешить, затем нажмите кнопку «Разрешить»."
+   },
+   "Plugins": {
+      "description": "",
+      "message": "Плагины"
+   },
+   "Policies": {
+      "description": "",
+      "message": "Политики"
+   },
+   "Preset": {
+      "description": "",
+      "message": "Уровень защиты"
+   },
+   "Prev": {
+      "description": "",
+      "message": "Предыдущий"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "Недавно заблокированные сайты"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "Обновить"
+   },
+   "Reload": {
+      "description": "",
+      "message": "Перезагрузить"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "Изменения этих параметров вступают в силу на новых или перезагруженных (вручную) страницах"
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "Удалить выбранные сайты"
+   },
+   "Reset": {
+      "description": "",
+      "message": "Сброс"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "Сбросить настройки"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "Кликнуть здесь для возврата скрытых кнопок…"
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "Отменить временные разрешения"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "Расширенные"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "Внешний вид"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "Основные"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "Разрешения для сайтов"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "Автоматическая система управления безопасностью cookies"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "Игнорировать небезопасные cookies, устанавливаемые через HTTPS со следующих сайтов:"
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "Использовать шифрование для всех cookies, устанавливаемых через HTTPS со следующих сайтов:"
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "Управление безопасностью"
+   },
+   "Show": {
+      "description": "",
+      "message": "Отображать…"
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "Открыть консоль…"
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "Показывать счётчик заблокированных элементов"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "Пункт в контекстном меню"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "Полные адреса в раскрывающемся списке разрешений (https://www.noscript.net)"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "Заполнитель вместо заблокированных объектов"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "Показывать примечания к релизу при обновлениях"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "Разрешения для сайтов"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "Специальные политики для сайтов"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "Сохранить установленные разрешения"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "Установить  «Врем. ДОВЕРЕННЫЕ» \nдля всех элементов страницы"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "Отметить как Доверенный"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "Доверенные"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "доверенных"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "ДОВЕРЕННЫЕ"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "Врем. ДОВЕРЕННЫЕ"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "Удалить"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "Неизвестный"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "Небезопасная перезагрузка"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "Отметить как Недоверенный"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "Недоверенные"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "недоверенных"
+   },
+   "VintageBlue": {
+      "description": "",
+      "message": "Vintage Blue"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "Найти или добавить сайт:"
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "Очистить выбор действий для XSS"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "Показывать XSS-уведомления"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "Разрешить этот запрос"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "Всегда разрешать запросы от $1 к $2"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "Всегда блокировать запросы от $1 к $2"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "Блокировать этот запрос"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "Обезопасить этот запрос"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript определил потенциальную Cross-Site Scripting атаку\nс $1 на $2.\nПодозрительные данные:\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "XSS предупреждение NoScript"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "Исключения анти-XSS защиты"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "Целевые страницы, соответствующие этим регулярным выражениям, НЕ будут защищаться против XSS."
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "XSS FAQ…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "О $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "Разрешить все скрипты с $1"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "Разрешить скрипты глобально (опасно)"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "Разрешить $1"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "Временно разрешить $1"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "Временно разрешить все скрипты с $1"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "Скрипты на этой странице запрещены"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "Скрипты частично разрешены"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "Скрипты на этой странице разрешены"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "Всегда спрашивать подтверждение"
+   },
+   "anySite": {
+      "description": "",
+      "message": "ЛЮБАЯ"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "Аудиопример"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript обнаружил сохранённую закладку-конфигурацию расширения\n$1.\nЖелаете обновить настройки расширения NoScript на указанные в ней?"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "Эта закладка предназначена не для открытия, а для синхронизации с помощью сервиса Weave или расширения XMarks"
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "Закладка конфигурации NoScript"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "fetch"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "font"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "frame"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "LAN"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "media"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "object"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "other"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "script"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "unrestricted CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "webgl"
+   },
+   "caps": {
+      "description": "",
+      "message": "Разрешить отмеченное"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "Разрешить отмеченное, если страница"
+   },
+   "changelog": {
+      "description": "",
+      "message": "История версий"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "Просмотреть историю версий"
+   },
+   "confirm": {
+      "description": "",
+      "message": "Вы уверены?"
+   },
+   "disable": {
+      "description": "",
+      "message": "Отключить $1"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "Отметить $1 как Недоверенный"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "Участники:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "Люди, которых можно поблагодарить за помощь"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "Автор:"
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "Открыть домашнюю страницу автора"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "Открыть домашнюю страницу расширения"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "Отменить глобальное разрешение скриптов (рекомендуется)"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "Запретить $1"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "Для функционирования в этой вкладке NoScript должен перезагрузить её.\nПродолжить?"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "Соответствие только HTTPS-содержимому"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\" \nнесовместимы с \"$2\". \nЖелаете включить предыдущие и отключить последние?"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "Предупреждение о несовместимых настройках"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "Открыть домашнюю страницу InformAction"
+   },
+   "license": {
+      "description": "",
+      "message": "Лицензионное соглашение"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "Лицензионное соглашение конечного пользователя"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "Открыть домашнюю страницу расширения"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript заблокировал \u003CMETA> перенаправление внутри элемента \u003CNOSCRIPT>: $1 за $2 секунд."
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "Это привилегированная страница, разрешения для которой нельзя сконфигурировать."
+   },
+   "removal_message": {
+      "description": "",
+      "message": "Отключая или удаляя NoScript, вы отказываетесь от всех мер защиты, предоставляемых NoScript.\n\nЕсли вы просто устали от обработки разрешений скриптов для каждого сайта, то есть безопасный вариант.\n\nNoScript может прекратить блокировать скрипты, за исключением отмеченных вами как недоверенные, в то же время применяя самые передовые контрмеры против XSS, Clickjacking, CSRF и других веб-угроз.\n\nВы действительно хотите удалить всю защиту NoScript?\n"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "Нет, но не блокировать скрипты"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "Предупреждение о понижении уровня безопасности"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "Да, удалить ВСЮ защиту"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "Сброс настроек NoScript"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "ВСЕ настройки NoScript и разрешения сайтов будут сброшены к значениям, установленным по умолчанию.\nДанную операцию невозможно отменить.\nПродолжить?"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "Тема"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "Вы собираетесь узнать информацию о сайте \"$1\",\nотправив запрос к $2.\nПродолжить?"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "Middle-click или shift+click для информации о сайте…"
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "Открыть домашнюю страницу спонсора"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "Автовыбор"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "Тёмная"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "Светлая"
+   },
+   "toVintageBlue": {
+      "description": "",
+      "message": "Переключить стиль Modern Red / Vintage Blue"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "НЕБЕЗОПАСНАЯ, подозрительная перезагрузка\n\n$1 [$2]\n\nОТ [$3]\n\nNoScript НЕ сможет защитить данный запрос!\n"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "как недоверенный источник"
+   },
+   "version": {
+      "description": "",
+      "message": "Версия $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

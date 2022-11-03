@@ -1,0 +1,70 @@
+{
+   "advancedLabel": {
+      "description": "Advanced label.",
+      "message": "ਤਕਨੀਕੀ"
+   },
+   "amountInjectedDescription": {
+      "description": "Amount injected description.",
+      "message": "ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਬਾਅਦ ਲੋਕਲ ਸਮੱਗਰੀ ਡਿਲਵਰੀ ਨੈੱਟਵਰਕ ਸਰੋਤਾਂ ਦੀ ਮਾਤਰਾ ਹੈ।"
+   },
+   "amountInjectedTitle": {
+      "description": "Amount injected title.",
+      "message": "ਲੋਕਲ ਪਾਏ ਸਰੋਤਾਂ ਦੀ ਗਿਣਤੀ"
+   },
+   "blockMissingDescription": {
+      "description": "Block requests for missing resources description.",
+      "message": "Cancel intercepted request if the required resource is not locally available."
+   },
+   "blockMissingTitle": {
+      "description": "Block requests for missing resources title.",
+      "message": "Block requests for missing resources"
+   },
+   "disablePrefetchDescription": {
+      "description": "Disable prefetch description.",
+      "message": "Prevent disallowed requests from leaking out to delivery networks."
+   },
+   "disablePrefetchTitle": {
+      "description": "Disable prefetch title.",
+      "message": "Disable link prefetching"
+   },
+   "disableProtectionTitle": {
+      "description": "Disable protection title.",
+      "message": "ਇਸ ਸਾਈਟ ਲਈ ਸੁਰੱਖਿਆ ਅਸਮਰੱਥ ਕਰੋ"
+   },
+   "enableProtectionTitle": {
+      "description": "Enable protection title.",
+      "message": "ਸੁਰੱਖਿਆ ਸਮਰੱਥ ਕਰੋ"
+   },
+   "extensionDescription": {
+      "description": "Extension description.",
+      "message": "ਖੁਦ ਨੂੰ \"ਮੁਫ਼ਤ\", ਕੇਂਦਰੀਕ੍ਰਿਤ, ਸਮੱਗਰੀ ਪਹੁੰਚ ਰਾਹੀਂ ਟਰੈਕਿੰਗ ਤੋਂ ਸੁਰੱਖਿਅਤ ਕਰੋ।"
+   },
+   "optionsTitle": {
+      "description": "Options title.",
+      "message": "ਚੋਣਾਂ"
+   },
+   "showIconBadgeDescription": {
+      "description": "Show icon badge description.",
+      "message": "Show the number of injected resources on the extension icon."
+   },
+   "showIconBadgeTitle": {
+      "description": "Show icon badge title.",
+      "message": "ਆਈਕਾਨ ਉੱਤੇ ਪਾਇਆ ਦੀ ਗਿਣਤੀ ਵੇਖਾਓ"
+   },
+   "stripMetadataDescription": {
+      "description": "Strip metadata description.",
+      "message": "Erase sensitive data from allowed CDN requests for improved privacy."
+   },
+   "stripMetadataTitle": {
+      "description": "Strip metadata title.",
+      "message": "Strip metadata from allowed requests"
+   },
+   "whitelistedDomainsDescription": {
+      "description": "Whitelisted domains description.",
+      "message": "Enter domains to whitelist them. Separate multiple entries with semi-colons (;)."
+   },
+   "whitelistedDomainsTitle": {
+      "description": "Whitelisted domains title.",
+      "message": "Exclude domains from inspections"
+   }
+}

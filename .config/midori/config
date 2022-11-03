@@ -1,0 +1,11 @@
+[settings]
+last-window-width=1130
+last-window-height=819
+toolbar-items=TabNew,Back,ReloadStop,Homepage,Location,BookmarkAdd,CompactMenu
+homepage=https://artixlinux.org
+maximum-history-age=7
+enable-plugins=false
+
+[extensions]
+libadblock.so=true
+libstatusbar-features.so=true

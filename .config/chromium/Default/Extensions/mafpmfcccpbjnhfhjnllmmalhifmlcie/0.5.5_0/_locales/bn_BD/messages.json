@@ -1,0 +1,89 @@
+{
+   "appDesc": {
+      "message": "Snowflake Tor এর জন্য একটি WebRTC প্লাগযোগ্য পরিবহন।"
+   },
+   "badgeCookiesOff": {
+      "message": "কুকিজ সক্রিয় নয়।"
+   },
+   "browser": {
+      "message": "ব্রাউজার"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Request an account\u003C/a> at the Tor Project GitLab, then \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">open a new issue\u003C/a> in the Snowflake project."
+   },
+   "censoredUsers": {
+      "message": "যদি আপনার ইন্টারনেট অ্যাক্সেস সেন্সর করা থাকে তবে আপনার \u003Ca href=\"https://www.torproject.org/download/\">Tor Browser\u003C/a> ডাউনলোড করা উচিত।"
+   },
+   "descriptive": {
+      "message": "Please try to be as descriptive as possible with your ticket and if possible include log messages that will help us reproduce the bug."
+   },
+   "embed": {
+      "message": "বসান"
+   },
+   "extension": {
+      "message": "এক্সটেনশন"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fileBug": {
+      "message": "If you encounter problems with Snowflake as a client or a proxy, please consider filing a bug report.  There are two ways to file a bug report:"
+   },
+   "installChrome": {
+      "message": "Chrome এ ইনস্টল করুন"
+   },
+   "installExtension": {
+      "message": "যদি আপনার ইন্টারনেট অ্যাক্সেস সেন্সর \u003Cstrong>না করা হয়\u003C/strong> তবে সেন্সরযুক্ত নেটওয়ার্কগুলিতে ব্যবহারকারীদের সহায়তা করার জন্য আপনার Snowflake এক্সটেনশনটি ইনস্টল করার কথা বিবেচনা করা উচিত। লোকেরা আপনার প্রক্সি দিয়ে কোন ওয়েবসাইটগুলিতে অ্যাক্সেস করছে তা নিয়ে চিন্তা করার দরকার নেই। তাদের দৃশ্যমান ব্রাউজিং আইপি ঠিকানাটি আপনার TOR প্রস্থান নোডের সাথে মিলবে।"
+   },
+   "installFirefox": {
+      "message": "ফায়ারফক্সে ইনস্টল করুন"
+   },
+   "looksLike": {
+      "message": "যা দেখতে এরকম দেখাচ্ছে:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "ব্রিজের সাথে সংযোগ স্থাপন করা যায়নি।"
+   },
+   "popupDescOn": {
+      "message": "বিগত ২৪ ঘন্টায় আপনার Snowflake ব্যাবহারকারিদের সেন্সর থেকে দূরে রাখতে সহায়তাকারীর সংখ্যা : $1"
+   },
+   "popupEnabled": {
+      "message": "সক্রিয়"
+   },
+   "popupLearnMore": {
+      "message": "আরও জানুন"
+   },
+   "popupRetry": {
+      "message": "Retry"
+   },
+   "popupRetrying": {
+      "message": "Retrying ..."
+   },
+   "popupStatusOff": {
+      "message": "Snowflake বন্ধ আছে"
+   },
+   "popupStatusOn": {
+      "message": "বর্তমানে সংযুক্ত ব্যবহারকারীর সংখ্যা: $1"
+   },
+   "popupStatusReady": {
+      "message": "আপনার Snowflake  ব্যবহারকারীদের সেন্সর ছাড়িয়ে দেওয়ার জন্য প্রস্তুত"
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC বৈশিষ্ট্য সনাক্ত করা যায়নি।"
+   },
+   "possible": {
+      "message": "এখন কোনও ওয়েবসাইটে Snowflake ব্যাজ বসানো সম্ভব:"
+   },
+   "reportingBugs": {
+      "message": "বাগ রিপোর্টিং"
+   },
+   "sharedAccount": {
+      "message": "File an \u003Ca href=\"https://anonticket.onionize.space/\">anonymous ticket\u003C/a> by generating an identifier and logging in with it.  Then, find the Snowflake project in the \u003Cstrong>List of all projects\u003C/strong> and create a new issue."
+   },
+   "support": {
+      "message": "See the \u003Ca href=\"https://support.torproject.org/censorship/\">Censorship\u003C/a> topic in Tor's \u003Ca href=\"https://support.torproject.org/\">Support Portal\u003C/a>."
+   },
+   "websiteIntro": {
+      "message": "Snowflake is a system to defeat internet censorship. People who are censored can use Snowflake to access the internet. Their connection goes through Snowflake proxies, which are run by volunteers. For more detailed information about how Snowflake works see our \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">documentation wiki\u003C/a>."
+   }
+}

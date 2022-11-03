@@ -1,0 +1,125 @@
+{
+  "appDesc": {
+    "message": "Leyfðu notendum í ritskoðuðum löndum að nota nettenginguna þína við að fá aðgang að Tor-netinu."
+  },
+  "popupEnabled": {
+    "message": "Virkt"
+  },
+  "popupLearnMore": {
+    "message": "Fræðast frekar"
+  },
+  "popupStatusOff": {
+    "message": "Slökkt er á Snowflake"
+  },
+  "popupStatusOn": {
+    "message": "Fjöldi notenda sem núna eru tengdir: $1"
+  },
+  "popupStatusReady": {
+    "message": "Snowflake-tilvikið þitt er reiðubúið að hjálpa notendum við að komast framhjá ritskoðun"
+  },
+  "popupWebRTCOff": {
+    "message": "WebRTC-eiginleikinn fannst ekki."
+  },
+  "popupBridgeUnreachable": {
+    "message": "Tókst ekki að tengjast brúnni."
+  },
+  "popupDescOn": {
+    "message": "Fjöldi notenda sem Snowflake-tilvikið þitt hefur hjálpað við að komast framhjá ritskoðun á síðustu 24 klukkustundum: $1"
+  },
+  "popupRetry": {
+    "message": "Reyna aftur"
+  },
+  "popupRetrying": {
+    "message": "Prófa aftur ..."
+  },
+  "badgeCookiesOff": {
+    "message": "Vefkökur eru ekki virkar."
+  },
+  "websiteIntro": {
+    "message": ""
+  },
+  "websiteIntro2": {
+    "message": ""
+  },
+  "websiteIntro3": {
+    "message": ""
+  },
+  "browser": {
+    "message": "Notaðu Snowflake til að komast hjá ritskoðun"
+  },
+  "censoredUsers": {
+    "message": ""
+  },
+  "extension": {
+    "message": "Hjálpaðu fólki við að komast framhjá ritskoðun: rektu Snowflake-milliþjón"
+  },
+  "installExtension": {
+    "message": ""
+  },
+  "volunteer": {
+    "message": ""
+  },
+  "installOptions": {
+    "message": ""
+  },
+  "installWebExtensionIntro": {
+    "message": "Settu vefviðaukann (web extension)"
+  },
+  "installWebExtension":{
+    "message": ""
+  },
+  "installFirefox": {
+    "message": "Setja upp í Firefox"
+  },
+  "installChrome": {
+    "message": "Setja upp í Chrome"
+  },
+  "webBadgeTitle":{
+    "message": ""
+  },
+  "webBadgeInstructions":{
+    "message": ""
+  },
+  "possible": {
+    "message": ""
+  },
+  "StandaloneTitle":{ 
+    "message": "Keyrðu sjálfstæðan milliþjón"
+  },
+  "installStandalone": {
+    "message": ""
+  },
+  "reportingBugs": {
+    "message": "Tilkynna villur"
+  },
+  "fileBug": {
+    "message": ""
+  },
+  "sharedAccount": {
+    "message": ""
+  },
+  "bugTracker": {
+    "message": "<a href=\"https://gitlab.onionize.space/\">Biddu um aðgang</a> á GitLab-þjóni Tor-verkefnisins, síðan ættirðu að <a href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">opna nýja verkbeiðni</a> í Snowflake-verkefninu."
+  },
+  "descriptive": {
+    "message": "Reyndu að gera verkbeiðnina eins greinargóða og lýsandi og auðið er, hafa jafnvel með þau skilaboð úr atvikaskráningu (log) sem geta hjálpað við að endurgera villuna."
+  },
+  "contactSnowflakeDevs": { 
+    "message": ""
+  },
+  "howSnowflakeWorks": {
+    "message":"Lærðu meira um hvernig Snowflake virkar"
+  },
+  "snowflakeTechOverview": {
+    "message": ""
+  },
+  "embed": {
+    "message": "Ívefja"
+  },
+  "faq": {
+    "message": ""
+  },
+  "support": {
+    "message": ""
+  }
+}

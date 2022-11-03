@@ -1,0 +1,12 @@
+app=none
+last_user=
+last_extension=png
+screenshot_dir=file:/home/brian
+enable_imgur_upload=true
+action=1
+delay=5
+region=3
+show_mouse=0
+show_border=1
+show_in_folder=false
+

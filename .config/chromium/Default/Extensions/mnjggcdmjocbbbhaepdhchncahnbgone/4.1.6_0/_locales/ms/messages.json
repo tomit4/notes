@@ -1,0 +1,551 @@
+{
+   "0": {
+      "message": "Masa sambungan telah tamat. Periksa sambungan internet anda. Sekiranya internet anda berfungsi, pelayan mungkin berlebihan atau tidak berfungsi."
+   },
+   "400": {
+      "message": "Pelayan mengatakan permintaan ini tidak sah"
+   },
+   "409": {
+      "message": "Perkara ini telah dikemukakan sebelumnya"
+   },
+   "429": {
+      "message": "Anda telah menghantar terlalu banyak masa penaja untuk video yang satu ini, adakah anda pasti ada banyak ini?"
+   },
+   "502": {
+      "message": "Pelayan nampaknya berlebihan. Cuba lagi dalam beberapa saat."
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Lewati sponsor, meminta subscriber dan lain-lain di video YouTube. Laporkan sponsor di video yang anda tonton untuk menghemat waktu orang lain."
+   },
+   "Dismiss": {
+      "message": "Ketepikan"
+   },
+   "Hide": {
+      "message": "Jangan Tunjukkan"
+   },
+   "Loading": {
+      "message": "Memuat..."
+   },
+   "Options": {
+      "message": "Pilihan"
+   },
+   "Segment": {
+      "message": "segmen"
+   },
+   "Segments": {
+      "message": "segmen"
+   },
+   "Submissions": {
+      "message": "Penyerahan"
+   },
+   "SubmitTimes": {
+      "message": "Hantar Segmen"
+   },
+   "Unknown": {
+      "message": "Terdapat kesalahan semasa menghantar masa penaja anda, sila cuba sebentar lagi."
+   },
+   "Username": {
+      "message": "Nama pengguna"
+   },
+   "add": {
+      "message": "Tambah"
+   },
+   "addInvidiousInstanceError": {
+      "message": "Ini adalah domain yang tidak sah. Ini mesti HANYA merangkumi bahagian domain. Contoh: invidious.ajay.app"
+   },
+   "areYouSureReset": {
+      "message": "Adakah anda pasti mahu menetapkan semula ini?"
+   },
+   "audioNotification": {
+      "message": "Pemberitahuan Audio Semasa Langkau"
+   },
+   "audioNotificationDescription": {
+      "message": "Pemberitahuan audio di langkau akan memainkan suara setiap kali segmen dilangkau. Sekiranya dilumpuhkan (atau langkau automatik dinonaktifkan), suara tidak akan dimainkan."
+   },
+   "autoSkip": {
+      "message": "Langkau Auto"
+   },
+   "bracketEnd": {
+      "message": "(Tamat)"
+   },
+   "bracketNow": {
+      "message": "(Sekarang)"
+   },
+   "cancel": {
+      "message": "Batal"
+   },
+   "category": {
+      "message": "Kategori"
+   },
+   "categoryUpdate1": {
+      "message": "Kategori ada di sini!"
+   },
+   "categoryUpdate2": {
+      "message": "Buka pilihan untuk melangkau perkenalan, pengeluaran luar, barang dagangan, dll."
+   },
+   "category_interaction": {
+      "message": "Peringatan Interaksi (Langgan)"
+   },
+   "category_interaction_description": {
+      "message": "Apabila ada peringatan pendek untuk menyukai, melanggan atau mengikutinya di tengah-tengah kandungan. Sekiranya ia panjang atau mengenai sesuatu yang spesifik, ia harus dipromosikan sendiri."
+   },
+   "category_interaction_short": {
+      "message": "Peringatan Interaksi"
+   },
+   "category_intro": {
+      "message": "Intermission / Pengenalan Animasi"
+   },
+   "category_intro_description": {
+      "message": "Selang tanpa kandungan sebenar. Boleh jadi jeda, bingkai statik, mengulangi animasi. Ini tidak boleh digunakan untuk peralihan yang mengandungi maklumat."
+   },
+   "category_intro_short": {
+      "message": "Selang"
+   },
+   "category_livestream_messages": {
+      "message": "Strim Langsung: Bacaan Derma / Mesej"
+   },
+   "category_livestream_messages_short": {
+      "message": "Bacaan Mesej"
+   },
+   "category_music_offtopic": {
+      "message": "Muzik: Bahagian Bukan Muzik"
+   },
+   "category_music_offtopic_description": {
+      "message": "Hanya untuk digunakan dalam video muzik. Ini hanya harus digunakan untuk bahagian video muzik yang belum dilindungi oleh kategori lain."
+   },
+   "category_music_offtopic_short": {
+      "message": "Bukan Muzik"
+   },
+   "category_outro": {
+      "message": "Kad Akhir / Kredit"
+   },
+   "category_outro_description": {
+      "message": "Kredit atau ketika kad akhir YouTube muncul. Bukan untuk kesimpulan dengan maklumat."
+   },
+   "category_selfpromo": {
+      "message": "Promosi Tanpa Bayaran / Diri"
+   },
+   "category_selfpromo_description": {
+      "message": "Sama dengan \"penaja\" kecuali untuk promosi tanpa gaji atau diri. Ini merangkumi bahagian mengenai barang dagangan, sumbangan, atau maklumat tentang siapa mereka bekerjasama."
+   },
+   "category_sponsor": {
+      "message": "Penaja"
+   },
+   "category_sponsor_description": {
+      "message": "Promosi berbayar, rujukan berbayar dan iklan langsung. Bukan untuk promosi diri atau sapaan percuma kepada penyebab / pencipta / laman web / produk yang mereka suka."
+   },
+   "changeUserID": {
+      "message": "Import / Eksport Id Pengguna Anda"
+   },
+   "channelWhitelisted": {
+      "message": "Saluran Senarai Putih!"
+   },
+   "chooseACategory": {
+      "message": "Pilih Kategori"
+   },
+   "clearThis": {
+      "message": "Adakah anda pasti mahu membersihkannya?\n\n"
+   },
+   "clearTimes": {
+      "message": "Kosongkan Segmen"
+   },
+   "clearTimesButton": {
+      "message": "Jelas Masa"
+   },
+   "closePopup": {
+      "message": "Tutup Pop timbul"
+   },
+   "confirmMSG": {
+      "message": "Untuk mengedit atau menghapus nilai individu, klik butang maklumat atau buka pop timbul pelanjutan dengan mengklik ikon pelanjutan di sudut kanan atas."
+   },
+   "confirmNoticeTitle": {
+      "message": "Hantar Segmen"
+   },
+   "connectionError": {
+      "message": "Ralat sambungan telah berlaku. Kod salah: "
+   },
+   "copyDebugInformation": {
+      "message": "Salin Maklumat Debug Ke Papan Keratan"
+   },
+   "copyDebugInformationComplete": {
+      "message": "Maklumat debug telah disalin ke papan klip. Jangan ragu untuk membuang maklumat yang anda tidak mahu kongsi Simpan ini dalam fail teks atau tampal ke laporan pepijat."
+   },
+   "copyDebugInformationFailed": {
+      "message": "Gagal menulis ke papan keratan"
+   },
+   "copyDebugInformationOptions": {
+      "message": "Menyalin maklumat ke papan keratan untuk diberikan kepada pembangun semasa menaikkan pepijat / ketika pembangun memintanya. Maklumat sensitif seperti ID pengguna anda, saluran dalam senarai putih, dan alamat pelayan tersuai telah dikeluarkan. Namun, ia mengandungi maklumat seperti agen pengguna, penyemak imbas, sistem operasi, dan nombor versi pelanjutan anda. "
+   },
+   "createdBy": {
+      "message": "Dicipta oleh"
+   },
+   "currentInstances": {
+      "message": "Contoh Semasa:"
+   },
+   "customAddressError": {
+      "message": "Alamat ini tidak dalam bentuk yang betul. Pastikan anda mempunyai http: // atau https: // pada awalnya dan tiada garis miring."
+   },
+   "customServerAddress": {
+      "message": "Alamat Pelayan Sponsorblock"
+   },
+   "customServerAddressDescription": {
+      "message": "Alamat yang digunakan SponsorBlock untuk membuat panggilan ke pelayan.\nKecuali anda mempunyai contoh pelayan anda sendiri, ini tidak boleh diubah."
+   },
+   "delete": {
+      "message": "Padam"
+   },
+   "disable": {
+      "message": "Nyahaktifkan"
+   },
+   "disableAutoSkip": {
+      "message": "Lumpuhkan Langkau Auto"
+   },
+   "disableSkipping": {
+      "message": "Melangkau diaktifkan"
+   },
+   "discordAdvert": {
+      "message": "Mari sertai pelayan perselisihan rasmi untuk memberi cadangan dan maklum balas!"
+   },
+   "downvoteDescription": {
+      "message": "Pemasaan Tidak Betul / Salah"
+   },
+   "edit": {
+      "message": "Sunting"
+   },
+   "enableAutoSkip": {
+      "message": "Dayakan Langkau Auto"
+   },
+   "enableQueryByHashPrefix": {
+      "message": "Pertanyaan Oleh Awalan Hash"
+   },
+   "enableRefetchWhenNotFound": {
+      "message": "Perbaharui Segmen Pada Video Baru"
+   },
+   "enableSkipping": {
+      "message": "Melangkau dilumpuhkan"
+   },
+   "enableTestingServer": {
+      "message": "Dayakan Pelayan Pengujian Beta"
+   },
+   "enableThisCategoryFirst": {
+      "description": "Used when submitting segments to only let them select a certain category if they have it enabled in the options.",
+      "message": "Untuk menghantar segmen dengan kategori \"{0}\", anda mesti mengaktifkannya dalam pilihan. Anda akan diarahkan ke pilihan sekarang."
+   },
+   "enableViewTracking": {
+      "message": "Dayakan Skip Count Tracking"
+   },
+   "errorCode": {
+      "message": "Kod ralat: "
+   },
+   "exportOptions": {
+      "message": "Import / Eksport Semua Pilihan"
+   },
+   "exportOptionsWarning": {
+      "message": "Amaran: Mengubah pilihan adalah kekal dan boleh menghentikan pemasangan anda. Adakah anda pasti mahu melakukan ini? Pastikan untuk membuat sandaran lama anda sekiranya berlaku."
+   },
+   "forceChannelCheck": {
+      "message": "Pakai Pemeriksaan Saluran Sebelum Melangkau"
+   },
+   "forceChannelCheckPopup": {
+      "message": "Pertimbangkan untuk Mengaktifkan \"Paksa Pemeriksaan Saluran Sebelum Melangkau\""
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock untuk YouTube - Lewati Sponsor"
+   },
+   "guidelines": {
+      "message": "Garis Panduan"
+   },
+   "hiddenDueToDownvote": {
+      "message": "tersembunyi: undi"
+   },
+   "hiddenDueToDuration": {
+      "message": "tersembunyi: terlalu pendek"
+   },
+   "hideButtons": {
+      "message": "Sembunyikan Butang Pada Pemain YouTube"
+   },
+   "hideButtonsDescription": {
+      "message": "Ini menyembunyikan butang yang muncul di pemain YouTube untuk menyerahkan segmen langkau."
+   },
+   "hideDeleteButton": {
+      "message": "Sembunyikan Butang Padam Pada Pemain YouTube"
+   },
+   "hideInfoButton": {
+      "message": "Sembunyikan Butang Maklumat Pada Pemain YouTube"
+   },
+   "hideThis": {
+      "message": "Sembunyikan ini"
+   },
+   "hitGoBack": {
+      "message": "Tekan langgan untuk sampai ke tempat asal anda."
+   },
+   "hourLower": {
+      "message": "jam"
+   },
+   "hoursLower": {
+      "message": "jam"
+   },
+   "incorrectlyFormattedOptions": {
+      "message": "JSON ini tidak diformat dengan betul. Pilihan anda belum diubah."
+   },
+   "inspect": {
+      "message": "Periksa"
+   },
+   "longDescription": {
+      "description": "Full description of the extension on the store pages.",
+      "message": "SponsorBlock membolehkan anda melewati penaja, intro, outro, peringatan langganan, dan bahagian lain dari video YouTube yang menjengkelkan. SponsorBlock adalah pelanjutan penyemak imbas yang banyak untuk membolehkan sesiapa sahaja menghantar segmen tajaan dan masa tayangan dari segmen video YouTube yang lain. Setelah satu orang menyerahkan maklumat ini, semua orang yang mempunyai pelanjutan ini akan melangkau segmen yang ditaja. Anda juga boleh melangkau bahagian muzik video muzik bukan."
+   },
+   "manualPaused": {
+      "message": "Pemasa Berhenti"
+   },
+   "manualSkip": {
+      "message": "Langkau Manual"
+   },
+   "minDuration": {
+      "message": "Tempoh minimum (saat):"
+   },
+   "minDurationDescription": {
+      "message": "Segmen yang lebih pendek daripada nilai yang ditetapkan tidak akan dilangkau atau ditunjukkan dalam pemain."
+   },
+   "minLower": {
+      "message": "minit"
+   },
+   "minsLower": {
+      "message": "minit"
+   },
+   "mobileUpdateInfo": {
+      "message": "m.youtube.com kini disokong"
+   },
+   "moreCategories": {
+      "message": "Lebih banyak kategori"
+   },
+   "multipleSegments": {
+      "message": "Pelbagai Segmen"
+   },
+   "noVideoID": {
+      "message": "Tiada video YouTube dijumpai.\nSekiranya ini tidak betul, muat semula tab."
+   },
+   "nonMusicCategoryOnMusic": {
+      "message": "Video ini dikategorikan sebagai muzik. Adakah anda pasti ini mempunyai penaja? Sekiranya ini sebenarnya adalah \"Segmen Bukan Muzik\", buka pilihan peluasan dan aktifkan kategori ini. Kemudian, anda boleh menghantar segmen ini sebagai \"Bukan Muzik\" dan bukannya penaja. Sila baca panduan sekiranya anda keliru."
+   },
+   "noticeUpdate": {
+      "description": "The first line of the message displayed after the notice was upgraded.",
+      "message": "Notis telah ditingkatkan!"
+   },
+   "noticeUpdate2": {
+      "description": "The second line of the message displayed after the notice was upgraded.",
+      "message": "Sekiranya anda masih tidak menyukainya, tekan butang jangan tunjukkan."
+   },
+   "openPopup": {
+      "message": "Buka Pop timbul PenajaBlokir"
+   },
+   "optionsInfo": {
+      "message": "Dayakan sokongan Invidious, lumpuhkan autoskip, sembunyikan butang dan banyak lagi."
+   },
+   "paused": {
+      "message": "Dijeda"
+   },
+   "popupHint": {
+      "message": "Petunjuk: Anda boleh menetapkan kunci untuk dihantar dalam pilihan"
+   },
+   "preview": {
+      "message": "Pratonton"
+   },
+   "publicStats": {
+      "message": "Ini digunakan di halaman statistik awam untuk menunjukkan berapa banyak yang anda sumbangkan. Lihatlah"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "Baca Garis Panduan!!"
+   },
+   "recordTimesDescription": {
+      "message": "Hantar"
+   },
+   "removeFromWhitelist": {
+      "message": "Alih keluar saluran dari senarai putih"
+   },
+   "reportButtonInfo": {
+      "message": "Laporkan penyerahan ini sebagai tidak betul."
+   },
+   "reportButtonTitle": {
+      "message": "Lapor"
+   },
+   "reset": {
+      "message": "Tetapkan semula"
+   },
+   "resetInvidiousInstance": {
+      "message": "Tetapkan semula Senarai Instance Invidious yang Tidak Diingini"
+   },
+   "resetInvidiousInstanceAlert": {
+      "message": "Anda akan menetapkan semula senarai contoh Invidious"
+   },
+   "reskip": {
+      "message": "Reskip"
+   },
+   "save": {
+      "message": "Simpan"
+   },
+   "savedPeopleFrom": {
+      "message": "Anda telah menyelamatkan orang dari "
+   },
+   "seekBarColor": {
+      "message": "Cari Warna Bar"
+   },
+   "serverDown": {
+      "message": "Nampaknya pelayan tidak berfungsi. Segera hubungi dev."
+   },
+   "setOptions": {
+      "message": "Tetapkan Pilihan"
+   },
+   "setUserID": {
+      "message": "Tetapkan Id Pengguna"
+   },
+   "setUsername": {
+      "message": "Tetapkan Nama Pengguna"
+   },
+   "shortCheck": {
+      "message": "Penyerahan berikut lebih pendek daripada pilihan tempoh minimum anda. Ini mungkin bermaksud ini sudah dihantar, dan hanya diabaikan kerana pilihan ini. Adakah anda pasti mahu menghantar?"
+   },
+   "showButtons": {
+      "message": "Tunjukkan Butang Pada Pemain YouTube"
+   },
+   "showDeleteButton": {
+      "message": "Tunjukkan Butang Padam Pada Pemain YouTube"
+   },
+   "showInfoButton": {
+      "message": "Tunjukkan Butang Maklumat Pada Pemain YouTube"
+   },
+   "showNotice": {
+      "message": "Tunjukkan Notis Lagi"
+   },
+   "showOverlay": {
+      "message": "Tunjukkan Di Bar Mencari"
+   },
+   "showSkipNotice": {
+      "message": "Tunjukkan Makluman Setelah Segmen Dilangkau"
+   },
+   "showTimeWithSkips": {
+      "message": "Tunjukkan Masa Dengan Langkau Dihapus"
+   },
+   "showTimeWithSkipsDescription": {
+      "message": "Kali ini muncul dalam tanda kurung di sebelah waktu semasa di bawah bar carian. Ini menunjukkan jumlah durasi video tolak segmen mana pun. Ini merangkumi segmen yang ditandai sebagai \"Show In Seekbar\" sahaja."
+   },
+   "showUploadButton": {
+      "message": "Tunjukkan Butang Muat Naik"
+   },
+   "skip": {
+      "message": "Langkau"
+   },
+   "skipOption": {
+      "description": "Used on the options page to describe the ways to skip the segment (auto skip, manual, etc.)",
+      "message": "Langkau Pilihan"
+   },
+   "skip_category": {
+      "message": "Langkau {0}?"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Kod sumber"
+   },
+   "sponsor404": {
+      "message": "Tidak terdapat segmen"
+   },
+   "sponsorEnd": {
+      "message": "Segmen Berakhir Sekarang"
+   },
+   "sponsorFound": {
+      "message": "Video ini mempunyai segmen dalam pangkalan data!"
+   },
+   "sponsorStart": {
+      "message": "Segmen Bermula Sekarang"
+   },
+   "statusReminder": {
+      "message": "Periksa status.sponsor.ajay.app untuk status pelayan."
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "Penyuntingan bahagian akan muncul setelah anda mengklik hantar"
+   },
+   "submit": {
+      "message": "Hantar"
+   },
+   "submitCheck": {
+      "message": "Adakah anda pasti mahu menghantarnya?"
+   },
+   "submitTimesButton": {
+      "message": "Hantar Masa"
+   },
+   "success": {
+      "message": "Berjaya!"
+   },
+   "testingServerWarning": {
+      "message": "Semua penyerahan dan undian TIDAK AKAN DITETAPKAN ke pelayan utama semasa menyambung ke pelayan ujian. Pastikan untuk melumpuhkan ini semasa anda ingin membuat penghantaran sebenar."
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "ke"
+   },
+   "unskip": {
+      "message": "Hentikan"
+   },
+   "upvoteButtonInfo": {
+      "message": "Sokong penyerahan ini"
+   },
+   "userIDChangeWarning": {
+      "message": "Amaran: Mengubah UserID adalah kekal. Adakah anda pasti mahu melakukan ini? Pastikan untuk membuat sandaran lama anda sekiranya berlaku."
+   },
+   "viewLeaderboard": {
+      "message": "Papan pendahulu"
+   },
+   "voteOnTime": {
+      "message": "Undi Segmen"
+   },
+   "voted": {
+      "message": "Mengundi!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Laman web"
+   },
+   "whatEnableTestingServer": {
+      "message": "Penyerahan dan undian anda TIDAK AKAN DITUNTUT ke pelayan utama. Gunakan ini hanya untuk ujian."
+   },
+   "whatExportOptions": {
+      "message": "Ini adalah keseluruhan konfigurasi anda di JSON. Ini termasuk ID pengguna anda, jadi pastikan untuk membagikannya dengan bijak."
+   },
+   "whatForceChannelCheck": {
+      "message": "Secara lalai, ia akan melangkau segmen dengan segera sebelum mengetahui saluran itu. Secara lalai, beberapa segmen pada permulaan video mungkin dilangkau pada saluran yang disenaraikan. Mengaktifkan pilihan ini akan mengelakkannya tetapi membuat semua melangkau sedikit kelewatan kerana mendapatkan saluran Id memerlukan sedikit masa. Kelewatan ini mungkin tidak dapat dilihat jika anda mempunyai internet yang pantas."
+   },
+   "whatQueryByHashPrefix": {
+      "message": "Daripada meminta segmen dari pelayan menggunakan videoID, 4 watak pertama hash videoID dihantar. Pelayan ini akan menghantar kembali data untuk semua video dengan hash yang serupa."
+   },
+   "whatRefetchWhenNotFound": {
+      "message": "Sekiranya videonya baru, dan tidak ada segmen yang dijumpai, video akan terus diambil setiap beberapa minit semasa anda menonton."
+   },
+   "whatViewTracking": {
+      "message": "Fungsi ini mengesan segmen mana yang telah anda lewati untuk memberi tahu pengguna seberapa banyak penyerahan mereka telah membantu orang lain dan digunakan sebagai metrik bersama dengan suara positif untuk memastikan bahawa spam tidak masuk ke dalam pangkalan data. Sambungan tersebut menghantar mesej ke pelayan setiap kali anda melewatkan segmen. Mudah-mudahan kebanyakan orang tidak mengubah tetapan ini supaya nombor paparan tepat. :)"
+   },
+   "whitelistChannel": {
+      "message": "Saluran senarai putih"
+   },
+   "youHaveSavedTime": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": "Anda telah menyelamatkan orang"
+   },
+   "youHaveSavedTimeEnd": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": " kehidupan mereka"
+   },
+   "youHaveSkipped": {
+      "message": "Anda telah melangkau "
+   },
+   "youMustSelectACategory": {
+      "message": "Anda mesti memilih kategori untuk semua segmen yang anda kirimkan!"
+   },
+   "yourWork": {
+      "description": "Used to describe the section that will show you the statistics from your submissions.",
+      "message": "Kerja awak"
+   }
+}

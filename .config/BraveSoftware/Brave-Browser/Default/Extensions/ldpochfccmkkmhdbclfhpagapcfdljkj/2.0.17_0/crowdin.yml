@@ -1,0 +1,65 @@
+#
+# API Configuration
+#
+
+"project_id" : "153483"
+"base_url" : "https://api.crowdin.com"
+
+#
+# Directory Configuration
+#
+
+"preserve_hierarchy" : true
+
+#
+# File Configuration
+#
+
+files: [{
+
+  "source" : "/_locales/en_US/messages.json",
+  "translation" : "/_locales/%locale_with_underscore%/messages.json",
+  "export_only_approved" : true,
+
+  "languages_mapping" : {
+    "locale_with_underscore" : {
+
+      "ar" : "ar",
+      "bg" : "bg",
+      "bn" : "bn",
+      "ca" : "ca",
+      "cs" : "cs",
+      "da" : "da",
+      "de" : "de",
+      "el" : "el",
+      "eo" : "eo",
+      "es-ES" : "es",
+      "et" : "et",
+      "fi" : "fi",
+      "fr" : "fr",
+      "he" : "he",
+      "hr" : "hr",
+      "hu" : "hu",
+      "id" : "id",
+      "is" : "is",
+      "it" : "it",
+      "ja" : "ja",
+      "ko" : "ko",
+      "lb" : "lb",
+      "nb" : "nb",
+      "nl" : "nl",
+      "pa-IN" : "pa",
+      "pl" : "pl",
+      "ro" : "ro",
+      "ru" : "ru",
+      "si-LK" : "si",
+      "sq" : "sq",
+      "sr" : "sr",
+      "sv-SE" : "sv",
+      "tl" : "tl",
+      "tr" : "tr",
+      "uk" : "uk",
+      "vi" : "vi"
+    }
+  }
+}]

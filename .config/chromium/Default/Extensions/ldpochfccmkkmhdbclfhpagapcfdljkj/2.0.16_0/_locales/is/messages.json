@@ -1,0 +1,70 @@
+{
+   "advancedLabel": {
+      "description": "Advanced label.",
+      "message": "Ítarlegt"
+   },
+   "amountInjectedDescription": {
+      "description": "Amount injected description.",
+      "message": "Fjöldi tilfanga frá miðlægum efnisveitum sem skipt hefur verið út síðan viðbótin var sett upp."
+   },
+   "amountInjectedTitle": {
+      "description": "Amount injected title.",
+      "message": "Fjöldi staðvært inspýttra tilfanga"
+   },
+   "blockMissingDescription": {
+      "description": "Block requests for missing resources description.",
+      "message": "Hætta við veiddar beiðnir ef umbeðið tilfang er ekki til staðar á tölvunni."
+   },
+   "blockMissingTitle": {
+      "description": "Block requests for missing resources title.",
+      "message": "Loka á beiðnir vegna tilfanga sem vantar"
+   },
+   "disablePrefetchDescription": {
+      "description": "Disable prefetch description.",
+      "message": "Kemur í veg fyrir að bannaðar beiðnir leki út til afhendingarveitna."
+   },
+   "disablePrefetchTitle": {
+      "description": "Disable prefetch title.",
+      "message": "Gera forsöfnun tengla óvirka"
+   },
+   "disableProtectionTitle": {
+      "description": "Disable protection title.",
+      "message": "Slökkva á vörn fyrir þetta vefsvæði"
+   },
+   "enableProtectionTitle": {
+      "description": "Enable protection title.",
+      "message": "Virkja vernd"
+   },
+   "extensionDescription": {
+      "description": "Extension description.",
+      "message": "Verndar þig gegn eftirliti frá \"ókeypis\" miðlægum efnisveitum."
+   },
+   "optionsTitle": {
+      "description": "Options title.",
+      "message": "Valkostir"
+   },
+   "showIconBadgeDescription": {
+      "description": "Show icon badge description.",
+      "message": "Sýnir merki fyrir fjölda innspýttra tilfanga á táknmynd viðbótarinnar."
+   },
+   "showIconBadgeTitle": {
+      "description": "Show icon badge title.",
+      "message": "Birta fjölda innspýtinga á táknmynd"
+   },
+   "stripMetadataDescription": {
+      "description": "Strip metadata description.",
+      "message": "Þurrka viðkvæm gögn út úr leyfðum beiðnum til efnisveitna til að auka gagnaleynd."
+   },
+   "stripMetadataTitle": {
+      "description": "Strip metadata title.",
+      "message": "Hreinsa lýsigögn úr leyfðum beiðnum"
+   },
+   "whitelistedDomainsDescription": {
+      "description": "Whitelisted domains description.",
+      "message": "Settu inn lén til að skrá þau á lista yfir leyfð lén. Aðgreindu færslur með semíkommum (;)."
+   },
+   "whitelistedDomainsTitle": {
+      "description": "Whitelisted domains title.",
+      "message": "Undanskilja lén frá athugun"
+   }
+}

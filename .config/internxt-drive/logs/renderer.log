@@ -1,0 +1,120 @@
+[2021-11-18 12:42:52.907] [info]  No xUser is set on database
+[2021-11-18 12:43:47.611] [info]  Start sync
+[2021-11-18 12:43:47.612] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:43:47.614] [info]  Start sync
+[2021-11-18 12:43:47.614] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:43:47.635] [info]  Account: z3ror0ne@protonmail.com, User platform: linux x64, version: 1.4.1
+[2021-11-18 12:43:47.980] [info]  Sync started IsUploadOnly?  false
+[2021-11-18 12:43:47.980] [info]  Started sync lock update interval
+[2021-11-18 12:43:47.981] [info]  Updating user sync device time
+[2021-11-18 12:43:47.985] [info]  Sync started at 2021-11-18T20:43:47.985Z
+[2021-11-18 12:43:47.987] [info]  Updating cloud folders and files
+[2021-11-18 12:43:48.500] [info]  Checking local folders
+[2021-11-18 12:43:48.518] [info]  Checking local files
+[2021-11-18 12:43:48.521] [info]  Checking cloud folders
+[2021-11-18 12:43:48.526] [info]  Checking cloud files
+[2021-11-18 12:43:48.531] [info]  Creating folders
+[2021-11-18 12:43:48.536] [info]  Synchronizing files
+[2021-11-18 12:43:48.551] [info]  Delete temp file /home/brian/.config/internxt-drive/.internxt-desktop/tmp/6196b603d968ca0009aff179.dat
+[2021-11-18 12:43:48.552] [info]  DRIVE resolveFile, bucket: 2f9826285ef062f7037e9d0c, file: 6196b603d968ca0009aff179
+[2021-11-18 12:43:52.881] [info]  Download finished
+[2021-11-18 12:43:52.901] [info]  Delete temp file /home/brian/.config/internxt-drive/.internxt-desktop/tmp/6196b7a8ac15f900080eb2c4.dat
+[2021-11-18 12:43:52.902] [info]  DRIVE resolveFile, bucket: 2f9826285ef062f7037e9d0c, file: 6196b7a8ac15f900080eb2c4
+[2021-11-18 12:43:57.129] [info]  Download finished
+[2021-11-18 12:43:57.144] [info]  Delete temp file /home/brian/.config/internxt-drive/.internxt-desktop/tmp/6196b632ac15f900080eaf09.dat
+[2021-11-18 12:43:57.144] [info]  DRIVE resolveFile, bucket: 2f9826285ef062f7037e9d0c, file: 6196b632ac15f900080eaf09
+[2021-11-18 12:44:00.130] [info]  Download finished
+[2021-11-18 12:44:00.133] [info]  Remove folders
+[2021-11-18 12:44:00.139] [info]  Stopped sync lock update interval
+[2021-11-18 12:44:00.140] [info]  Sync unlocked
+[2021-11-18 12:44:00.145] [info]  SYNC END
+[2021-11-18 12:44:00.146] [info]  Start sync
+[2021-11-18 12:44:00.146] [info]  Waiting 300 secs for next sync. Version: v1.4.1
+[2021-11-18 12:49:02.848] [info]  Sync started IsUploadOnly?  false
+[2021-11-18 12:49:02.848] [info]  Started sync lock update interval
+[2021-11-18 12:49:02.849] [info]  Updating user sync device time
+[2021-11-18 12:49:02.854] [info]  Sync started at 2021-11-18T20:49:02.854Z
+[2021-11-18 12:49:02.855] [info]  Updating cloud folders and files
+[2021-11-18 12:49:03.657] [info]  Checking local folders
+[2021-11-18 12:49:04.089] [info]  Checking local files
+[2021-11-18 12:49:05.679] [info]  Checking cloud folders
+[2021-11-18 12:49:05.881] [info]  Checking cloud files
+[2021-11-18 12:49:07.107] [info]  Creating folders
+[2021-11-18 12:49:28.127] [info]  Updating user sync device time
+[2021-11-18 12:49:53.127] [info]  Updating user sync device time
+[2021-11-18 12:50:08.100] [info]  Synchronizing files
+[2021-11-18 12:50:09.495] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/ajv/lib/dot/ref.jst, size: 2454
+[2021-11-18 12:50:15.839] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/lodash/fp/plant.js, size: 183
+[2021-11-18 12:50:18.128] [info]  Updating user sync device time
+[2021-11-18 12:50:20.021] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/lodash/fp/props.js, size: 34
+[2021-11-18 12:50:30.588] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/is-ci/index.js, size: 55
+[2021-11-18 12:50:34.618] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/tslint/lib/rules/strictStringExpressionsRule.js, size: 6382
+[2021-11-18 12:50:41.240] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/ajv-keywords/keywords/_util.js, size: 402
+[2021-11-18 12:50:43.127] [info]  Updating user sync device time
+[2021-11-18 12:50:48.526] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/lodash/fp/trimStart.js, size: 163
+[2021-11-18 12:50:53.159] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/semver/internal/debug.js, size: 226
+[2021-11-18 12:50:57.560] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-json/node_modules/vscode-json-languageservice/node_modules/vscode-nls/License.txt, size: 1112
+[2021-11-18 12:51:01.628] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/lodash/lt.js, size: 590
+[2021-11-18 12:51:08.127] [info]  Updating user sync device time
+[2021-11-18 12:51:09.311] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/lodash/unary.js, size: 469
+[2021-11-18 12:51:13.219] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/@eslint/eslintrc/package.json, size: 1664
+[2021-11-18 12:51:17.765] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/lodash/fp/includes.js, size: 161
+[2021-11-18 12:51:21.192] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/acorn/dist/bin.js, size: 2291
+[2021-11-18 12:51:25.265] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/lodash/_baseMatches.js, size: 710
+[2021-11-18 12:51:29.199] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/caniuse-lite/data/features/focusoptions-preventscroll.js, size: 1186
+[2021-11-18 12:51:33.127] [info]  Updating user sync device time
+[2021-11-18 12:51:33.149] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/lodash/_setWrapToString.js, size: 847
+[2021-11-18 12:51:42.608] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/async-limiter/LICENSE, size: 1107
+[2021-11-18 12:51:46.216] [info]  Upload file /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/core-js/stable/typed-array/int8-array.js, size: 128
+[2021-11-18 12:51:50.594] [error] Error uploading file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/esrecurse/gulpfile.babel.js. Error: Error: ENOENT: no such file or directory, copyfile '/home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/esrecurse/gulpfile.babel.js' -> '/home/brian/.config/internxt-drive/.internxt-desktop/tmp/ec13f5925b783241f5033bc0f4484f84c47ed5f3'
+[2021-11-18 12:51:52.057] [info]  Removing local file: /home/brian/Internxt Drive/bashrc.txt.
+[2021-11-18 12:51:54.006] [info]  Removing local file: /home/brian/Internxt Drive/curl-format.txt.
+[2021-11-18 12:51:58.127] [info]  Updating user sync device time
+[2021-11-18 12:52:16.880] [info]  Removing local file: /home/brian/Internxt Drive/firefox_notes.txt.
+[2021-11-18 12:52:23.127] [info]  Updating user sync device time
+[2021-11-18 12:52:25.471] [info]  Remove folders
+[2021-11-18 12:52:25.583] [info]  Stopped sync lock update interval
+[2021-11-18 12:52:25.584] [info]  Sync unlocked
+[2021-11-18 12:52:25.589] [info]  SYNC END
+[2021-11-18 12:52:25.589] [info]  Start sync
+[2021-11-18 12:52:25.589] [info]  Waiting 300 secs for next sync. Version: v1.4.1
+[2021-11-18 12:55:56.157] [info]  Start sync
+[2021-11-18 12:55:56.158] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:55:56.161] [info]  Start sync
+[2021-11-18 12:55:56.162] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:55:56.187] [info]  Account: z3ror0ne@protonmail.com, User platform: linux x64, version: 1.4.1
+[2021-11-18 12:55:57.701] [info]  Sync started IsUploadOnly?  false
+[2021-11-18 12:55:57.702] [info]  Started sync lock update interval
+[2021-11-18 12:55:57.702] [info]  Updating user sync device time
+[2021-11-18 12:55:58.984] [info]  Sync started at 2021-11-18T20:55:58.984Z
+[2021-11-18 12:55:58.986] [info]  Updating cloud folders and files
+[2021-11-18 12:56:23.429] [info]  Updating user sync device time
+[2021-11-18 12:56:23.554] [info]  Checking local folders
+[2021-11-18 12:56:23.756] [info]  Checking local files
+[2021-11-18 12:56:23.762] [info]  Checking cloud folders
+[2021-11-18 12:56:24.047] [info]  Checking cloud files
+[2021-11-18 12:56:24.063] [info]  Creating folders
+[2021-11-18 12:56:24.213] [info]  Synchronizing files
+[2021-11-18 12:56:24.217] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/ajv/lib/dot/ref.jst. file id: 6196bb6964a2220008fef0f9
+[2021-11-18 12:56:24.660] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/lodash/fp/plant.js. file id: 6196bb6da46f070007530e4b
+[2021-11-18 12:56:25.133] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-sh/node_modules/lodash/fp/props.js. file id: 6196bb727085720007a09aa5
+[2021-11-18 12:56:25.656] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/is-ci/index.js. file id: 6196bb7c7085720007a09ac4
+[2021-11-18 12:56:26.101] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/tslint/lib/rules/strictStringExpressionsRule.js. file id: 6196bb83d7140d0009cea163
+[2021-11-18 12:56:26.584] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/ajv-keywords/keywords/_util.js. file id: 6196bb8a7085720007a09aec
+[2021-11-18 12:56:28.529] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/lodash/fp/trimStart.js. file id: 6196bb8fa46f070007530ebe
+[2021-11-18 12:56:29.677] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-prettier/node_modules/semver/internal/debug.js. file id: 6196bb936d879b0009ca2193
+[2021-11-18 12:56:30.139] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-json/node_modules/vscode-json-languageservice/node_modules/vscode-nls/License.txt. file id: 6196bb9764a2220008fef1ae
+[2021-11-18 12:56:30.585] [info]  Removing cloud file: /home/brian/Internxt Drive/notes/coc/extensions/node_modules/coc-vetur/node_modules/lodash/lt.js. file id: 6196bb9ca46f070007530ee9
+[2021-11-18 12:56:37.189] [info]  Start sync
+[2021-11-18 12:56:37.190] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:56:37.193] [info]  Start sync
+[2021-11-18 12:56:37.193] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:56:37.218] [info]  Account: z3ror0ne@protonmail.com, User platform: linux x64, version: 1.4.1
+[2021-11-18 12:56:39.259] [warn]  sync not started: another device already syncing
+[2021-11-18 12:56:44.691] [info]  Start sync
+[2021-11-18 12:56:44.691] [info]  Waiting 300 secs for next sync. Version: v1.4.1
+[2021-11-18 12:56:44.720] [info]  Start sync
+[2021-11-18 12:56:44.720] [info]  Waiting 0 secs for next sync. Version: v1.4.1
+[2021-11-18 12:56:45.542] [warn]  sync not started: another device already syncing
+[2021-11-18 12:56:45.543] [info]  Start sync
+[2021-11-18 12:56:45.544] [info]  Waiting 300 secs for next sync. Version: v1.4.1

@@ -1,0 +1,946 @@
+{
+   "Add": {
+      "description": "",
+      "message": "添加"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "给受信任网站额外的权限"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "针对不受信任网站的额外限制"
+   },
+   "Allow": {
+      "description": "",
+      "message": "允许"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "允许通过书签打开网站"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "允许从外部剪贴板中复制和粘贴 rtf 文本"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "允许本地链接"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "此页面全部允许"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "允许 \u003CA PING…>"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "允许通过书签打开网站"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "拦截来自标记为不受信任网站的全部对象"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "临时将顶级网站设置为受信任"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "权限更改时自动重新加载受影响的网页"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "仅重新加载当前标签页"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "基础二级域名（noscript.net）"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": "拦截了 $2 个对象中的 $1 个。"
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "NoScript 拦截了  个对象"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "在书签中备份 NoScript 配置以同步"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "取消"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "将顶级文件的权限下发到第三方脚本"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "在顶部文档中被阻止的任何功能也必须在其子文档中被阻止"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript 使用半隐蔽的元素拦截鼠标或键盘的交互。点击下面的图片可以交替显示拦截和未拦截的版本。"
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "有潜在的点击劫持/UI 重定向尝试！"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "ClearClick 页面保护…"
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "报告"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "报告 ID："
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "ClearClick 警告"
+   },
+   "Close": {
+      "description": "",
+      "message": "关闭"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "折叠被拦截的对象"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "在临时解除拦截对象前要求确认"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "右键菜单"
+   },
+   "Custom": {
+      "description": "",
+      "message": "自定义"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "预设定制（针对所有共享预设的网站）"
+   },
+   "Default": {
+      "description": "",
+      "message": "默认"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "默认策略"
+   },
+   "Description": {
+      "description": "",
+      "message": "最大限度地保护您的浏览器：NoScript 只允许您选择的信任域名显示活动内容，以防止漏洞利用。"
+   },
+   "Donate": {
+      "description": "",
+      "message": "捐赠"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript 是自由软件，没有你的帮助便无法存在。请考虑捐赠！"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "捐赠"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "嵌入"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "全局启用限制"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "启用此标签页的限制"
+   },
+   "EnforceOnRestart": {
+      "description": "",
+      "message": "浏览器重启时恢复限制"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "例外…"
+   },
+   "Export": {
+      "description": "",
+      "message": "导出"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "尝试修正 JavaScript 链接"
+   },
+   "Hider": {
+      "description": "",
+      "message": "拖到这里来隐藏。"
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "高对比度"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "HTTPS 常见问题…"
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "对以下网站强制使用安全（HTTPS）连接："
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "不对以下网站强制使用安全（HTTPS）连接："
+   },
+   "Https_always": {
+      "description": "",
+      "message": "总是"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "行为"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Cookie"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "除非网页内容来自安全（HTTPS）连接，否则禁止动态网页内容。"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "永不"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "使用代理时（推荐使用 Tor）"
+   },
+   "Import": {
+      "description": "",
+      "message": "导入"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "保持此元素锁定（推荐）"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "模式匹配示例："
+   },
+   "ModernRed": {
+      "description": "",
+      "message": "现代红"
+   },
+   "Next": {
+      "description": "",
+      "message": "下一步"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "全局解除限制（危险）"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "解除此标签页的限制"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "对标记为不信任的网站上的对象不保留占位符"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "根据用户设置禁用了限制：NoScript 在此页面上不会拦截任何东西！"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "通知"
+   },
+   "Notify": {
+      "description": "",
+      "message": "显示有关被拦截脚本的消息"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "显示有关被拦截的 META 重定向的消息"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "消息置于底部"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "显示被拦截的 \u003CSCRIPT> 元素之前 \u003CNOSCRIPT> 元素"
+   },
+   "NselNever": {
+      "description": "",
+      "message": "隐藏 \u003CNOSCRIPT> 元素"
+   },
+   "OK": {
+      "description": "",
+      "message": "确定"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "NoScript 更新时撤销临时权限，即使浏览器没有重新启动"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "屏蔽基于 CSS 的扫描器"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "净化跨网站的可疑请求"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "将跨网站的 POST 请求转换为无数据的 GET 请求"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "允许在隐身/私密选项卡中设置永久权限。\n注意:这样做会泄露网站信息！"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "覆盖 Tor 浏览器的安全级别预设"
+   },
+   "Options": {
+      "description": "",
+      "message": "选项…"
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "NoScript 选项"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "在隐私窗口中永久”允许“命令"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "你可以设置允许哪些网站运行脚本。输入要允许的网址或域名（比如\"http://www.site.com\"或\"site.com\"），然后点击允许。"
+   },
+   "Plugins": {
+      "description": "",
+      "message": "插件"
+   },
+   "Policies": {
+      "description": "",
+      "message": "策略"
+   },
+   "Preset": {
+      "description": "",
+      "message": "安全等级"
+   },
+   "Prev": {
+      "description": "",
+      "message": "上一步"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "最近拦截的网站"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "刷新"
+   },
+   "Reload": {
+      "description": "",
+      "message": "重新载入"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "这些选项会在新打开或手动重新载入页面时生效。"
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "移除选定网站"
+   },
+   "Reset": {
+      "description": "",
+      "message": "重置"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "重置为默认设置"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "点击此处找回丢失的按钮…"
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "撤销临时权限"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "高级"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "外观"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "常规"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "网站权限"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "启用自动的安全 Cookie 管理"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "忽略下列网站通过 HTTPS 设置的不安全 Cookie："
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "强制加密下列网站通过 HTTPS 设置的所有 Cookie："
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "安全管理器"
+   },
+   "Show": {
+      "description": "",
+      "message": "显示…"
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "显示控制台…"
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "显示脚本计数角标"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "在右键菜单中显示 NoScript 菜单项"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "在授权弹窗里显示完整网址（https://www.noscript.net）。"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "显示占位符图标"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "显示更新的发行说明"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "网站权限"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "网站专属策略"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "保存页面权限设置"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "临时信任此页上所有对象"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "标记为受信任"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "受信任"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "受信任"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "受信任"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "临时信任"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "卸载"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "未知"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "不安全重新载入"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "标记为不信任"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "不信任"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "不信任"
+   },
+   "VintageBlue": {
+      "description": "",
+      "message": "古董蓝"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "搜索或添加网站："
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "清除 XSS 设置"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "显示 XSS 通知"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "允许此请求"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "始终允许从 $1 到 $2 的文档请求"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "始终拦截从 $1 到 $2 的文档请求"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "阻止此请求"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "净化此请求"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript 发现潜在的跨站脚本攻击\n从 $1 到 $2。\n可疑数据：\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "NoScript XSS 警告"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "反-XSS 保护例外"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "满足这些正则表达式的目标将不会受到针对 XSS 的保护。"
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "XSS 常见问题解答…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "关于 $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "允许所有来自 $1 的资源"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "解除所有权限检查（危险）"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "允许 $1"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "临时允许 $1"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "临时允许所有来自 $1 的资源"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "当前禁止的脚本"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "部分允许的脚本"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "当前允许的脚本"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "总是要求确认"
+   },
+   "anySite": {
+      "description": "",
+      "message": "任意站点"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "音频示例"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript 发现一个可能保存在 $1 的配置书签。是否要使用此书签的内容覆盖本地 NoScript 配置？"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "本书签不应被直接打开，正确用法是用来通过 Weave 或 XMarks 之类的服务来同步设置。"
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "NoScript 配置书签"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "获取"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "字体"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "框"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "局域网"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "媒体"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript 元素"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "对象"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "其他"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping 属性"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "脚本"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "不受限的 CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "WebGL"
+   },
+   "caps": {
+      "description": "",
+      "message": "启用这些功能"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "当顶部页面匹配时，启用这些功能"
+   },
+   "changelog": {
+      "description": "",
+      "message": "更新日志"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "显示更新日志"
+   },
+   "confirm": {
+      "description": "",
+      "message": "您确认吗?"
+   },
+   "disable": {
+      "description": "",
+      "message": "禁用 $1"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "标记 $1 为不信任"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "贡献者:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "为您带来此扩展的人们"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "作者："
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "访问作者主页"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "访问扩展主页"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "全局禁止脚本（推荐）"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "禁止 $1"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "为了操作该标签页，NoScript 需要重新加载该标签页。\n继续吗？"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "仅匹配 HTTPS 内容"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\"和\"$2\"不兼容。\n是否启用前者，禁用后者？"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "选项不兼容警告"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "访问 InformAction 主页"
+   },
+   "license": {
+      "description": "",
+      "message": "许可协议"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "阅读用户许可协议"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "访问扩展主页"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript 在 \u003CNOSCRIPT> 元素里拦截了一个 \u003CMETA> 重定向：$1（在 $2 秒钟内）。"
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "这是一个特权页面，无法配置其权限。"
+   },
+   "removal_message": {
+      "description": "",
+      "message": "禁用或卸载 NoScript 的同时，您也舍弃了 NoScript 带来的所有保护。\n\n如果您疲于逐个设置网站脚本权限，那么还有一个更好的选择。\n\nNoScript 可以在所有未被标记为不信任的网站上停止拦截脚本，同时针对 XSS、点击劫持、CSRF 和其他网络威胁仍然保持最先进的安全防护。\n\n您确定要解除 NoScript 带来的所有保护吗？\n"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "不, 只停止拦截脚本"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "安全降级警告"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "是，移除所有保护"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "NoScript 重置"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "所有 NoScript 偏好设置和网站权限将立即重置为默认值。此操作无法还原。是否继续？"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "主题"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "您将向 $2 提交一个查询网站“$1”信息的请求。\n要继续吗？"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "中键单击或 shift + 单击查看网站信息..."
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "访问赞助商主页"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "自动"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "深色"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "亮"
+   },
+   "toVintageBlue": {
+      "description": "",
+      "message": "切换到古董蓝样式"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "以不安全方式重新载入可疑的\n\n $1 [$2]\n\n来源：[$3]\n\nNoScript 不会保护此请求！\n"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "不受信任的来源"
+   },
+   "version": {
+      "description": "",
+      "message": "版本 $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "A Snowflake (Hópihe) egy WebRTC cserélhető átvitel a Tor-hoz."
+   },
+   "badgeCookiesOff": {
+      "message": "A cookie-k nincsenek engedélyezve."
+   },
+   "browser": {
+      "message": "Snowflake használata"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Igényeljen egy fiókot\u003C/a> a Tor Project GitLabjához, majd \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">nyisson egy hibajegyet\u003C/a> a Snowflake projektben."
+   },
+   "censoredUsers": {
+      "message": "Ha az internet hozzáférése blokkolt, javasolt a \u003Ca href=\"https://www.torproject.org/download/\">Tor Böngésző\u003C/a> letöltése."
+   },
+   "descriptive": {
+      "message": "Kérjük legyen annyira leíró, amennyire lehet a hibajegyében és ha van rá lehetősége csatolja a logot, ami segítheti a probléma reprodukálását."
+   },
+   "embed": {
+      "message": "Beágyazás"
+   },
+   "extension": {
+      "message": "Proxy futtatása"
+   },
+   "faq": {
+      "message": "GYIK"
+   },
+   "fileBug": {
+      "message": "Ha problémát tapasztal a Snowflake-kel, mint kliens vagy proxy, gondoljon arra, hogy beküldjön egy hibát. Két módja van a hiba beküldésének:"
+   },
+   "installChrome": {
+      "message": "Telepítés Chrome-ba"
+   },
+   "installExtension": {
+      "message": "Ha az internet hozzáférése \u003Cstrong>nem\u003C/strong> cenzúrázott, javasolt a Snowflake bővítmény telepítése, hogy segítse a felhasználókat a cenzúrázott hálózatokon. Nem kell aggódnia milyen weboldalakat érnek el a proxyján keresztül. A látható IP címük a Tor kilépési ponttal fog egyezni, nem az Önével."
+   },
+   "installFirefox": {
+      "message": "Telepítés Firefox-ba"
+   },
+   "installStandalone": {
+      "message": "Ha szeretné futtatni a parancssori verzióját a Snowflake proxy-nak az asztali gépén vagy szerverén, tekintse meg a \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">közösségi dokumentációt\u003C/a> az önálló Snowflake proxy futtatásához."
+   },
+   "looksLike": {
+      "message": "Amely így néz ki:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Sikertelen a hídhoz csatlakozás."
+   },
+   "popupDescOn": {
+      "message": "Az Ön Snowflake-je az elmúlt 24 órában ennyi felhasználónak segített a cenzúra elkerülésében: $1"
+   },
+   "popupEnabled": {
+      "message": "Engedélyezve"
+   },
+   "popupLearnMore": {
+      "message": "További információ"
+   },
+   "popupRetry": {
+      "message": "Újra"
+   },
+   "popupRetrying": {
+      "message": "Újra próbálkozás ..."
+   },
+   "popupStatusOff": {
+      "message": "A Snowflake kikapcsolt"
+   },
+   "popupStatusOn": {
+      "message": "Jelenleg kapcsolódott felhasználók száma: $1"
+   },
+   "popupStatusReady": {
+      "message": "Az ön Snowflake-je kész arra, hogy segítse a cenzúra elkerülésében."
+   },
+   "popupWebRTCOff": {
+      "message": "WebRTC szolgáltatás nem észlelt."
+   },
+   "possible": {
+      "message": "Most már lehetséges, hogy beágyazza a Snowflake kitűzőt bármelyik weboldalba:"
+   },
+   "reportingBugs": {
+      "message": "Hibajelentés"
+   },
+   "sharedAccount": {
+      "message": "Küldjön be egy \u003Ca href=\"https://anonticket.onionize.space/\">névtelen hibajegyet\u003C/a> egy azonosító generálásával és azzal belépéssel.  Utána keresse meg a Snowflake projektet a \u003Cstrong>Minden projekt listája\u003C/strong> alatt és hozzon létre egy hibajegyet."
+   },
+   "support": {
+      "message": "Lásd a\u003Ca href=\"https://support.torproject.org/censorship/\">Cenzúra\u003C/a> témát a Tor \u003Ca href=\"https://support.torproject.org/\">Support Portálján\u003C/a>."
+   },
+   "websiteIntro": {
+      "message": "A Snowflake egy cenzúra elleni rendszer. Azok, akiket cenzúráznak a Snowflake-et használhatják az internet elérésére. A kapcsolatuk Snowflake proxykon megy keresztül, amiket önkéntesek futtatnak. Részletesebb információkért, arról, hogy a Snowflake hogyan működik látogassa meg a \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">dokumentáció wiki\u003C/a>-t."
+   }
+}

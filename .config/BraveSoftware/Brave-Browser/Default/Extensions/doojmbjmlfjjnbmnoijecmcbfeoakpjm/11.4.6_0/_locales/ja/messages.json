@@ -1,0 +1,930 @@
+{
+   "Add": {
+      "description": "",
+      "message": "追加する"
+   },
+   "Add_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AdditionalPermissions": {
+      "description": "",
+      "message": "信頼済みサイトの追加ためのアクセス許諾"
+   },
+   "AdditionalRestrictions": {
+      "description": "",
+      "message": "信頼できないサイトの追加を制限"
+   },
+   "Allow": {
+      "description": "",
+      "message": "許可する"
+   },
+   "AllowBookmarks": {
+      "description": "",
+      "message": "ブックマークを介して開かれたサイトを許可する"
+   },
+   "AllowClipboard": {
+      "description": "",
+      "message": "外部のクリップボードからのリッチテキストのコピーと貼り付けを許可する"
+   },
+   "AllowLocalLinks": {
+      "description": "",
+      "message": "ローカルリンクを許可する"
+   },
+   "AllowPage": {
+      "description": "",
+      "message": "このページをすべて許可する"
+   },
+   "AllowPage_accesskey": {
+      "description": "",
+      "message": "A"
+   },
+   "AllowPing": {
+      "description": "",
+      "message": "\u003CA PING…> を許可する"
+   },
+   "AllowViaBookmarks": {
+      "description": "",
+      "message": "ブックマークを介して開かれたサイトを許可する"
+   },
+   "Allow_accesskey": {
+      "description": "",
+      "message": "l"
+   },
+   "AlwaysBlockUntrustedContent": {
+      "description": "",
+      "message": "信頼できないとマークされたサイトからのすべてのオブジェクトをブロックする"
+   },
+   "AutoAllowTopLevel": {
+      "description": "",
+      "message": "トップレベルサイトを一時的に信頼できるに設定します"
+   },
+   "AutoReload": {
+      "description": "",
+      "message": "アクセス許諾が変更されたときに影響を受けるページを自動的に再読み込みする"
+   },
+   "AutoReload_currentTab": {
+      "description": "",
+      "message": "現在のタブのみを再読み込みします"
+   },
+   "BaseDom": {
+      "description": "",
+      "message": "セカンドレベルドメインを基準（noscript.net）"
+   },
+   "BlockedItems": {
+      "description": "",
+      "message": " $2 アイテムのうち $1 をブロックしました。"
+   },
+   "BlockedObjects": {
+      "description": "",
+      "message": "NoScript がブロックしたオブジェクト"
+   },
+   "BookmarkSync": {
+      "description": "",
+      "message": "簡単に同期できるように、ブックマークに NoScript の環境設定をバックアップします"
+   },
+   "Cancel": {
+      "description": "",
+      "message": "取り消す"
+   },
+   "CascadePermissions": {
+      "description": "",
+      "message": "サードパーティのスクリプトに対するカスケードトップドキュメントのアクセス許諾"
+   },
+   "CascadeRestrictions": {
+      "description": "",
+      "message": "トップドキュメントでブロックした機能をサブドキュメントでもブロックする"
+   },
+   "ClearClickDescription": {
+      "description": "",
+      "message": "NoScript は、マウスやキーボードの操作に部分的に隠された要素が相互作用することを検知し、阻止しました。 下の画像をクリックし、ブロックとクリアを切り替えます。"
+   },
+   "ClearClickHeader": {
+      "description": "",
+      "message": "潜在的なクリックジャック攻撃 / UI 改ざんの企て!"
+   },
+   "ClearClickOpt": {
+      "description": "",
+      "message": "…ページのClearClick 保護機能"
+   },
+   "ClearClickReport": {
+      "description": "",
+      "message": "レポート"
+   },
+   "ClearClickReportId": {
+      "description": "",
+      "message": "レポート ID:"
+   },
+   "ClearClickReport_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "ClearClickTitle": {
+      "description": "",
+      "message": "ClearClick 警告"
+   },
+   "Close": {
+      "description": "",
+      "message": "閉じる"
+   },
+   "CollapseBlockedObjects": {
+      "description": "",
+      "message": "ブロックされたオブジェクトを折りたたむ"
+   },
+   "ConfirmUnblock": {
+      "description": "",
+      "message": "オブジェクトのブロックを一時的に解除する前に、確認を求めます"
+   },
+   "CtxMenu": {
+      "description": "",
+      "message": "コンテキストメニュー"
+   },
+   "Custom": {
+      "description": "",
+      "message": "カスタム"
+   },
+   "CustomizePresets": {
+      "description": "",
+      "message": "プリセットのカスタマイズ（プリセットを共有するすべてのサイト用）"
+   },
+   "Default": {
+      "description": "",
+      "message": "既定"
+   },
+   "DefaultPolicies": {
+      "description": "",
+      "message": "デフォルトポリシー"
+   },
+   "Description": {
+      "description": "",
+      "message": "ブラウザの最大限の保護：NoScript は、悪用を防ぐために、選択した信頼できるドメインに対してのみアクティブコンテンツを許可します。"
+   },
+   "Donate": {
+      "description": "",
+      "message": "寄付する"
+   },
+   "DonateLong": {
+      "description": "",
+      "message": "NoScript is Free Software and can't exist without your help. Please donate now!"
+   },
+   "DonateShort": {
+      "description": "",
+      "message": "寄付のお願い"
+   },
+   "Donate_accesskey": {
+      "description": "",
+      "message": "o"
+   },
+   "Embeddings": {
+      "description": "",
+      "message": "埋め込み"
+   },
+   "Enforce": {
+      "description": "",
+      "message": "グローバルな制限を有効にする"
+   },
+   "EnforceForTab": {
+      "description": "",
+      "message": "このタブの制限を有効にする"
+   },
+   "Exceptions": {
+      "description": "",
+      "message": "例外…"
+   },
+   "Export": {
+      "description": "",
+      "message": "エクスポート"
+   },
+   "Export_accesskey": {
+      "description": "",
+      "message": "E"
+   },
+   "FixLinks": {
+      "description": "",
+      "message": "JavaScript リンクを修正しようとしました"
+   },
+   "Hider": {
+      "description": "",
+      "message": "ここにドロップして非表示にします。"
+   },
+   "HighContrast": {
+      "description": "",
+      "message": "高コントラスト"
+   },
+   "Https": {
+      "description": "",
+      "message": "HTTPS"
+   },
+   "HttpsFaq": {
+      "description": "",
+      "message": "HTTPS FAQ…"
+   },
+   "HttpsFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "HttpsForced": {
+      "description": "",
+      "message": "次のサイトには、強制的に安全な（HTTPS）接続を使用する:"
+   },
+   "HttpsForcedExceptions": {
+      "description": "",
+      "message": "次のサイトには、安全な（HTTPS）接続を強制しない:"
+   },
+   "Https_always": {
+      "description": "",
+      "message": "常に"
+   },
+   "Https_behavior": {
+      "description": "",
+      "message": "振る舞い"
+   },
+   "Https_cookies": {
+      "description": "",
+      "message": "Cookies"
+   },
+   "Https_description": {
+      "description": "",
+      "message": "安全な（HTTPS）接続からのものでない限り、アクティブな Web コンテンツを禁止する:"
+   },
+   "Https_never": {
+      "description": "",
+      "message": "どんな場合でも"
+   },
+   "Https_proxy": {
+      "description": "",
+      "message": "プロキシを使用する場合 （Tor を推奨）"
+   },
+   "Import": {
+      "description": "",
+      "message": "インポート"
+   },
+   "Import_accesskey": {
+      "description": "",
+      "message": "I"
+   },
+   "KeepLocked": {
+      "description": "",
+      "message": "この要素をロックしたままにする（推奨）"
+   },
+   "MatchSample": {
+      "description": "",
+      "message": "パターンマッチングサンプル:"
+   },
+   "Next": {
+      "description": "",
+      "message": "次に"
+   },
+   "NoEnforcement": {
+      "description": "",
+      "message": "グローバルな制限を無効にする　（危険）"
+   },
+   "NoEnforcementForTab": {
+      "description": "",
+      "message": "このタブの制限を無効にします"
+   },
+   "NoUntrustedPlaceholder": {
+      "description": "",
+      "message": "信頼できないとマークされたサイトからのオブジェクトのプレースホルダーはありません"
+   },
+   "NotEnforced": {
+      "description": "",
+      "message": "制限事項は無効"
+   },
+   "Notifications": {
+      "description": "",
+      "message": "通知"
+   },
+   "Notify": {
+      "description": "",
+      "message": "ブロックされたスクリプトに関するメッセージを表示する"
+   },
+   "NotifyMeta": {
+      "description": "",
+      "message": "ブロックされた META リダイレクトに関するメッセージを表示する"
+   },
+   "NotifyMeta_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Notify_bottom": {
+      "description": "",
+      "message": "下部にメッセージを配置"
+   },
+   "NselForce": {
+      "description": "",
+      "message": "ブロックされた \u003CSCRIPT> に続く \u003CNOSCRIPT> 要素を表示します"
+   },
+   "NselNever": {
+      "description": "",
+      "message": " \u003CNOSCRIPT> 要素を非表示"
+   },
+   "OK": {
+      "description": "",
+      "message": "OK"
+   },
+   "OptAmnesticUpdates": {
+      "description": "",
+      "message": "NoScript が更新されたとき，ブラウザを再起動しなくても一時的な権限を取り消す"
+   },
+   "OptBlockCssScanners": {
+      "description": "",
+      "message": "CSS ベースのスキャナーをブロックする"
+   },
+   "OptFilterXGet": {
+      "description": "",
+      "message": "クロスサイトが疑われるリクエストをサニタイズ（無害化）する"
+   },
+   "OptFilterXPost": {
+      "description": "",
+      "message": "クロスサイト POST リクエストをデータレス GET リクエストに変換します"
+   },
+   "OptIncognitoPerm": {
+      "description": "",
+      "message": "シークレット/プライベートタブで永続的な権限設定をする　注意：これはサイト情報の流出をもたらすかもしれません。"
+   },
+   "OptOverrideTorBrowserPolicy": {
+      "description": "",
+      "message": "Tor ブラウザのセキュリティレベルプリセットをオーバーライドする"
+   },
+   "Options": {
+      "description": "",
+      "message": "オプション…"
+   },
+   "OptionsLong": {
+      "description": "",
+      "message": "NoScript オプション"
+   },
+   "OptionsWidth": {
+      "description": "",
+      "message": "40em"
+   },
+   "Options_accesskey": {
+      "description": "",
+      "message": "O"
+   },
+   "PermanentInPrivate": {
+      "description": "",
+      "message": "プライベートウィンドウの永続的な \"許可\" コマンド"
+   },
+   "PermissionsText": {
+      "description": "",
+      "message": "スクリプトの実行を許可する Web サイトを指定できます。許可するサイトのアドレスやドメイン（例えば. \"http://www.site.com\" や \"site.com\"）を入力し、［許可］をクリックします。"
+   },
+   "Plugins": {
+      "description": "",
+      "message": "プラグイン"
+   },
+   "Policies": {
+      "description": "",
+      "message": "ポリシー"
+   },
+   "Preset": {
+      "description": "",
+      "message": "セキュリティレベル"
+   },
+   "Prev": {
+      "description": "",
+      "message": "直前の"
+   },
+   "RecentBlocked": {
+      "description": "",
+      "message": "最近ブロックされたサイト"
+   },
+   "Refresh": {
+      "description": "",
+      "message": "リフレッシュ"
+   },
+   "Reload": {
+      "description": "",
+      "message": "再読込"
+   },
+   "ReloadWarn": {
+      "description": "",
+      "message": "これらのオプションは、新しいページや（手動で）再読込されたページで有効になります"
+   },
+   "RemoveSelected": {
+      "description": "",
+      "message": "選択したサイトを削除"
+   },
+   "Reset": {
+      "description": "",
+      "message": "リセット"
+   },
+   "ResetDef": {
+      "description": "",
+      "message": "既定にリセット"
+   },
+   "ResetDef_accesskey": {
+      "description": "",
+      "message": "D"
+   },
+   "Reset_accesskey": {
+      "description": "",
+      "message": "s"
+   },
+   "Reveal": {
+      "description": "",
+      "message": "不足しているボタンを取得するにはここをクリックしてください…"
+   },
+   "RevokeTemp": {
+      "description": "",
+      "message": "一時的なアクセス許諾を取り消す"
+   },
+   "RevokeTemp_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "SectionAdvanced": {
+      "description": "",
+      "message": "上級者向け"
+   },
+   "SectionAppearance": {
+      "description": "",
+      "message": "外観"
+   },
+   "SectionGeneral": {
+      "description": "",
+      "message": "全般"
+   },
+   "SectionSitePermissions": {
+      "description": "",
+      "message": "サイトごとのアクセス許諾"
+   },
+   "SecureCookies": {
+      "description": "",
+      "message": "自動 Secure cookie 管理を有効にする"
+   },
+   "SecureCookiesExceptions": {
+      "description": "",
+      "message": "HTTPS 経由で設定された次のサイトは、安全でない Cookie を無視します:"
+   },
+   "SecureCookiesForced": {
+      "description": "",
+      "message": "HTTPS 経由で設定された次のサイトは、すべての Cookie を強制的に暗号化する:"
+   },
+   "SecurityManager": {
+      "description": "",
+      "message": "セキュリティ マネージャ"
+   },
+   "Show": {
+      "description": "",
+      "message": "表示…"
+   },
+   "ShowConsole": {
+      "description": "",
+      "message": "コンソールを表示…"
+   },
+   "ShowConsole_accesskey": {
+      "description": "",
+      "message": "S"
+   },
+   "ShowCountBadge": {
+      "description": "",
+      "message": "ブロックされたアイテムカウントバッジを表示"
+   },
+   "ShowCtxMenuItem": {
+      "description": "",
+      "message": "NoScript コンテキストメニュー項目を表示する"
+   },
+   "ShowFullAddresses": {
+      "description": "",
+      "message": "アクセス許諾ポップアップに、完全なアドレスを一覧表示する (https://www.noscript.net)"
+   },
+   "ShowPlaceholder": {
+      "description": "",
+      "message": "プレースホルダーアイコンを表示"
+   },
+   "ShowReleaseNotes": {
+      "description": "",
+      "message": "更新に関するリリースノートを表示する"
+   },
+   "SitePermissions": {
+      "description": "",
+      "message": "サイトのアクセス許諾"
+   },
+   "SitePermissions_accessKey": {
+      "description": "",
+      "message": "S"
+   },
+   "SitePolicies": {
+      "description": "",
+      "message": "サイト固有のポリシー"
+   },
+   "TempToPerm": {
+      "description": "",
+      "message": "ページのアクセス許諾を永続的にする"
+   },
+   "TempToPerm_accesskey": {
+      "description": "",
+      "message": "M"
+   },
+   "TempTrustPage": {
+      "description": "",
+      "message": "このページのすべてを、一時的に信頼済みに設定します"
+   },
+   "TempTrustPage_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trust": {
+      "description": "",
+      "message": "信頼済みとしてマーク"
+   },
+   "Trust_accesskey": {
+      "description": "",
+      "message": "T"
+   },
+   "Trusted": {
+      "description": "",
+      "message": "信頼済み"
+   },
+   "TrustedPagesAdj": {
+      "description": "",
+      "message": "信頼済み"
+   },
+   "Trusted_permanent": {
+      "description": "",
+      "message": "信頼済み"
+   },
+   "Trusted_temporary": {
+      "description": "",
+      "message": "一時的な信頼済み"
+   },
+   "Uninstall": {
+      "description": "",
+      "message": "アンイストール"
+   },
+   "Unknown": {
+      "description": "",
+      "message": "不明"
+   },
+   "UnsafeReload": {
+      "description": "",
+      "message": "安全でない再読込"
+   },
+   "UnsafeReload_accesskey": {
+      "description": "",
+      "message": "R"
+   },
+   "Untrust": {
+      "description": "",
+      "message": "信頼できないものとしてマーク"
+   },
+   "Untrust_accesskey": {
+      "description": "",
+      "message": "U"
+   },
+   "Untrusted": {
+      "description": "",
+      "message": "信頼できない"
+   },
+   "UntrustedPagesAdj": {
+      "description": "",
+      "message": "信頼できない"
+   },
+   "WebAddress": {
+      "description": "",
+      "message": "Web サイトを検索または追加する:"
+   },
+   "WebAddress_accesskey": {
+      "description": "",
+      "message": "w"
+   },
+   "XSS_clearUserChoices": {
+      "description": "",
+      "message": "明確な XSS の選択肢"
+   },
+   "XSS_notify": {
+      "description": "",
+      "message": "XSS 通知を表示"
+   },
+   "XSS_optAllow": {
+      "description": "",
+      "message": "このリクエストを許可"
+   },
+   "XSS_optAlwaysAllow": {
+      "description": "",
+      "message": "$1 から $2 へのドキュメントリクエストを、常に許可する"
+   },
+   "XSS_optAlwaysBlock": {
+      "description": "",
+      "message": "$1 から $2 へのドキュメントリクエストを、常にブロックする"
+   },
+   "XSS_optBlock": {
+      "description": "",
+      "message": "このリクエストをブロック"
+   },
+   "XSS_optSanitize": {
+      "description": "",
+      "message": "このリクエストをサニタイズ（無害化）します"
+   },
+   "XSS_promptMessage": {
+      "description": "",
+      "message": "NoScript がクロスサイトスクリプティング攻撃の可能性を検出しました\nfrom $1 to $2.\n疑わしいデータ:\n$3"
+   },
+   "XSS_promptTitle": {
+      "description": "",
+      "message": "NoScript XSS 警告"
+   },
+   "Xss": {
+      "description": "",
+      "message": "XSS"
+   },
+   "XssExceptions": {
+      "description": "",
+      "message": "XSS 対策保護の例外"
+   },
+   "XssExceptions_description": {
+      "description": "",
+      "message": "これらの正規表現に一致する宛先は、XSS から保護されません。"
+   },
+   "XssFaq": {
+      "description": "",
+      "message": "XSS FAQ…"
+   },
+   "XssFaq_accesskey": {
+      "description": "",
+      "message": "Q"
+   },
+   "Xss_accesskey": {
+      "description": "",
+      "message": "X"
+   },
+   "about": {
+      "description": "",
+      "message": "About $1"
+   },
+   "allowFrom": {
+      "description": "",
+      "message": "$1 からすべて許可"
+   },
+   "allowGlobal": {
+      "description": "",
+      "message": "すべてのアクセス許諾チェックを無効にします （危険）"
+   },
+   "allowLocal": {
+      "description": "",
+      "message": "$1 を許可"
+   },
+   "allowTemp": {
+      "description": "",
+      "message": "一時的に $1 を許可"
+   },
+   "allowTempFrom": {
+      "description": "",
+      "message": "一時的に $1 からの全てを許可"
+   },
+   "allowed_no": {
+      "description": "",
+      "message": "現在、禁止されているスクリプト"
+   },
+   "allowed_prt": {
+      "description": "",
+      "message": "部分的に、許可されたスクリプト"
+   },
+   "allowed_yes": {
+      "description": "",
+      "message": "現在、許可されているスクリプト"
+   },
+   "alwaysAsk": {
+      "description": "",
+      "message": "常に、尋ねる"
+   },
+   "anySite": {
+      "description": "",
+      "message": "ANY SITE"
+   },
+   "audio_samples": {
+      "description": "",
+      "message": "オーディオサンプル"
+   },
+   "bookmarkSync_confirm": {
+      "description": "",
+      "message": "NoScript が環境設定ブックマークを保存したようです。\n$1.\nこのブックマークのコンテンツで、ローカルの  NoScript 環境設定を本当に上書きしますか？"
+   },
+   "bookmarkSync_message": {
+      "description": "",
+      "message": "このブックマークは開くためのものではなく、Weave や XMarks 拡張機能などのサービスを使用して同期するためのものです。"
+   },
+   "bookmarkSync_title": {
+      "description": "",
+      "message": "NoScript 環境設定ブックマーク"
+   },
+   "cap_fetch": {
+      "description": "",
+      "message": "フェッチ"
+   },
+   "cap_font": {
+      "description": "",
+      "message": "フォント"
+   },
+   "cap_frame": {
+      "description": "",
+      "message": "フレーム"
+   },
+   "cap_lan": {
+      "description": "",
+      "message": "LAN"
+   },
+   "cap_media": {
+      "description": "",
+      "message": "メディア"
+   },
+   "cap_noscript": {
+      "description": "",
+      "message": "noscript"
+   },
+   "cap_object": {
+      "description": "",
+      "message": "オブジェクト"
+   },
+   "cap_other": {
+      "description": "",
+      "message": "other"
+   },
+   "cap_ping": {
+      "description": "",
+      "message": "ping"
+   },
+   "cap_script": {
+      "description": "",
+      "message": "スクリプト"
+   },
+   "cap_unchecked_css": {
+      "description": "",
+      "message": "無制限の CSS"
+   },
+   "cap_webgl": {
+      "description": "",
+      "message": "WebGL"
+   },
+   "caps": {
+      "description": "",
+      "message": "Enable these capabilities"
+   },
+   "capsContext": {
+      "description": "",
+      "message": "Enable these capabilities when top page matches"
+   },
+   "changelog": {
+      "description": "",
+      "message": "変更履歴"
+   },
+   "changelog_tip": {
+      "description": "",
+      "message": "変更履歴を表示"
+   },
+   "confirm": {
+      "description": "",
+      "message": "本気なの？"
+   },
+   "disable": {
+      "description": "",
+      "message": "$1 を無効にする"
+   },
+   "disable_accessKey": {
+      "description": "",
+      "message": "D"
+   },
+   "distrust": {
+      "description": "",
+      "message": "信頼できないものとして $1 をマークする"
+   },
+   "extensionContributors": {
+      "description": "",
+      "message": "貢献者:"
+   },
+   "extensionContributors_tip": {
+      "description": "",
+      "message": "この拡張機能のために感謝すべき人々"
+   },
+   "extensionCreatorLabel": {
+      "description": "",
+      "message": "作者:"
+   },
+   "extensionCreator_tip": {
+      "description": "",
+      "message": "作者のホームページをご覧ください"
+   },
+   "extensionHomepage_tip": {
+      "description": "",
+      "message": "拡張機能のホームページをご覧ください"
+   },
+   "forbidGlobal": {
+      "description": "",
+      "message": "スクリプトをグローバルに禁止（忠告）"
+   },
+   "forbidLocal": {
+      "description": "",
+      "message": "$1 を禁じる"
+   },
+   "freshInstallReload": {
+      "description": "",
+      "message": "このタブで操作するには、NoScript で再読込する必要があります。\n続行しますか？"
+   },
+   "httpsOnly": {
+      "description": "",
+      "message": "HTTPS コンテンツのみに一致"
+   },
+   "incompatibleOptions": {
+      "description": "",
+      "message": "\"$1\"\nは \"$2\"と互換性がありません。\n前者を有効にし、後者を無効にしますか？"
+   },
+   "incompatibleOptions_title": {
+      "description": "",
+      "message": "互換性のないオプションの警告"
+   },
+   "informaction_tip": {
+      "description": "",
+      "message": "InformAction のホームページをご覧ください"
+   },
+   "license": {
+      "description": "",
+      "message": "使用許諾"
+   },
+   "license_tip": {
+      "description": "",
+      "message": "エンドユーザー使用許諾を読む"
+   },
+   "logo_tip": {
+      "description": "",
+      "message": "拡張機能のホームページをご覧ください"
+   },
+   "metaRefresh_notify": {
+      "description": "",
+      "message": "NoScript が \u003CNOSCRIPT> 要素内の \u003CMETA> リダイレクトをブロックしました: $1 in $2 seconds."
+   },
+   "privilegedPage": {
+      "description": "",
+      "message": "これは特権ページであり、そのアクセス許諾は設定できません。"
+   },
+   "removal_message": {
+      "description": "",
+      "message": "NoScript を無効化または削除することにより、NoScript が提供するすべての保護が失われます。\n\nサイトごとにスクリプトのアクセス許可を処理することにうんざりしている場合は、より安全な選択があります。\n\nNoScript は、スクリプトのブロックを停止できます。 XSS（クロスサイトスクリプティング）、クリックジャック攻撃、CSRF（クロスサイトリクエストフォージェリ）、およびその他の Web 脅威に対する最新のセキュリティ対策であなたを保護しながら、信頼できないものとしてマークします。\n\nNoScript 保護のすべてを本当に削除しますか？\n"
+   },
+   "removal_no": {
+      "description": "",
+      "message": "いいえ、スクリプトのブロックを停止するだけです"
+   },
+   "removal_title": {
+      "description": "",
+      "message": "セキュリティダウングレード警告"
+   },
+   "removal_yes": {
+      "description": "",
+      "message": "はい、すべての保護を削除します"
+   },
+   "reset_title": {
+      "description": "",
+      "message": "NoScript のリセット"
+   },
+   "reset_warning": {
+      "description": "",
+      "message": "NoScript のすべての設定とサイトのアクセス許可は、すぐに既定値にリセットされます。\nこのアクションは元に戻せません。\n続行しますか？"
+   },
+   "settingsThemeLabel": {
+      "description": "",
+      "message": "テーマ"
+   },
+   "siteInfo_confirm": {
+      "description": "",
+      "message": "\"$1\" サイトに関する情報を照会しようとしています。 $2 にクエリを送信します。\n続行しますか？"
+   },
+   "siteInfo_tooltip": {
+      "description": "",
+      "message": "ミドルクリックまたは、Shift+クリックでサイト情報..."
+   },
+   "sponsor_tip": {
+      "description": "",
+      "message": "スポンサーのホームページをご覧ください"
+   },
+   "themeAuto": {
+      "description": "",
+      "message": "Auto"
+   },
+   "themeDark": {
+      "description": "",
+      "message": "Dark"
+   },
+   "themeLight": {
+      "description": "",
+      "message": "ライト"
+   },
+   "unsafeReload_warning": {
+      "description": "",
+      "message": "不審なファイルを安全ではない再読込をする\n[$3] からの\n\n\n$1 [$2]\n\nNoScript はこのリクエストを保護しません！"
+   },
+   "untrustedOrigin": {
+      "description": "",
+      "message": "信頼できない出処"
+   },
+   "version": {
+      "description": "",
+      "message": "Version $1"
+   },
+   "versionShort": {
+      "description": "",
+      "message": "v $1"
+   }
+}

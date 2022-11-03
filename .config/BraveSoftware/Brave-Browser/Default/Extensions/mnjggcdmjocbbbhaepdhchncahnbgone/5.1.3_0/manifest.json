@@ -1,0 +1,66 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "./js/vendor.js", "./js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/LogoSponsorBlocker128px.png",
+         "16": "icons/IconSponsorBlocker16px.png",
+         "32": "icons/IconSponsorBlocker32px.png",
+         "64": "icons/LogoSponsorBlocker64px.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "SponsorBlock",
+      "theme_icons": [ {
+         "dark": "icons/IconSponsorBlocker16px.png",
+         "light": "icons/IconSponsorBlocker16px.png",
+         "size": 16
+      }, {
+         "dark": "icons/IconSponsorBlocker32px.png",
+         "light": "icons/IconSponsorBlocker32px.png",
+         "size": 32
+      }, {
+         "dark": "icons/LogoSponsorBlocker64px.png",
+         "light": "icons/LogoSponsorBlocker64px.png",
+         "size": 64
+      }, {
+         "dark": "icons/LogoSponsorBlocker128px.png",
+         "light": "icons/LogoSponsorBlocker128px.png",
+         "size": 128
+      } ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content.css", "shared.css", "./libs/Source+Sans+Pro.css", "popup.css" ],
+      "js": [ "./js/vendor.js", "./js/content.js" ],
+      "matches": [ "https://*.youtube.com/*", "https://www.youtube-nocookie.com/embed/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_Description__",
+   "differential_fingerprint": "1.ab67aa60c004c40d64b09e3e00b59580ac56bcb647d6305b7c8c30e06e308dce",
+   "homepage_url": "https://sponsor.ajay.app",
+   "icons": {
+      "1024": "icons/LogoSponsorBlocker1024px.png",
+      "128": "icons/LogoSponsorBlocker128px.png",
+      "16": "icons/IconSponsorBlocker16px.png",
+      "256": "icons/LogoSponsorBlocker256px.png",
+      "32": "icons/IconSponsorBlocker32px.png",
+      "512": "icons/LogoSponsorBlocker512px.png",
+      "64": "icons/LogoSponsorBlocker64px.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjc1iNthsC5JkHtm2GbB4mri2L7XOKyt6XTPg0ajyxKCcveSCZadWIQNY/K1YgrBYJoC8vkbv0dDNi9Zbgn29AsxODJWsqKkUN7q/n0rlFvzWQuDYG1IR6UUBCuMCEL8mxKCkJoz3ORZWmgAhAU8G0LEwtCaakrYvvPRpV/e/NytYMnuSeq63LUGxWB4/YhKFNCjoldqy1dpz8HfMQvqKaX5F7WeQjj1nlvtNGU21uP0FkIDY8+Hj8/cZVIb2a4dijb8HCIg/L4YHdn5GnTDoHaZ7UVM9Fvfa8uNdxbp+POQ4XztTWm4fXea0SU395ee171/CBOP7pp2UgnSrMu+VxwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_fullName__",
+   "optional_permissions": [ "*://*/*", "declarativeContent" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "https://sponsor.ajay.app/*" ],
+   "short_name": "SponsorBlock",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1.3",
+   "web_accessible_resources": [ "icons/LogoSponsorBlocker256px.png", "icons/IconSponsorBlocker256px.png", "icons/PlayerStartIconSponsorBlocker.svg", "icons/PlayerStopIconSponsorBlocker.svg", "icons/PlayerUploadIconSponsorBlocker.svg", "icons/PlayerUploadFailedIconSponsorBlocker.svg", "icons/PlayerCancelSegmentIconSponsorBlocker.svg", "icons/clipboard.svg", "icons/settings.svg", "icons/pencil.svg", "icons/check.svg", "icons/check-smaller.svg", "icons/upvote.png", "icons/downvote.png", "icons/thumbs_down.svg", "icons/thumbs_down_locked.svg", "icons/thumbs_up.svg", "icons/help.svg", "icons/report.png", "icons/close.png", "icons/skipIcon.svg", "icons/refresh.svg", "icons/beep.ogg", "icons/pause.svg", "icons/stop.svg", "icons/skip.svg", "icons/heart.svg", "icons/visible.svg", "icons/not_visible.svg", "icons/sort.svg", "icons/money.svg", "icons/segway.png", "icons/close-smaller.svg", "icons/right-arrow.svg", "icons/campaign.svg", "icons/star.svg", "icons/lightbulb.svg", "icons/bolt.svg", "icons/stopwatch.svg", "icons/music-note.svg", "icons/import.svg", "icons/export.svg", "icons/PlayerInfoIconSponsorBlocker.svg", "icons/PlayerDeleteIconSponsorBlocker.svg", "popup.html", "content.css", "js/document.js" ]
+}

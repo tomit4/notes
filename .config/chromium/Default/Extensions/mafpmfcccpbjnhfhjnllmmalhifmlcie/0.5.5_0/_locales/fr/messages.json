@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake est un transport enfichable WebRTC pour Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Les témoins ne sont pas activés."
+   },
+   "browser": {
+      "message": "Utiliser Snowflake"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Demandez un compte\u003C/a> sur le GitLab du Projet Tor, puis \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">créez un nouveau ticket de problème\u003C/a> pour le projet Snowflake."
+   },
+   "censoredUsers": {
+      "message": "Si votre accès à Internet est censuré, vous devriez télécharger le \u003Ca href=\"https://www.torproject.org/fr/download/\">Navigateur Tor\u003C/a>."
+   },
+   "descriptive": {
+      "message": "Veuillez essayer de créer un ticket des plus descriptif et si possible, joignez-y des messages de journalisation qui nous aideront à reproduire le bogue."
+   },
+   "embed": {
+      "message": "Intégrer"
+   },
+   "extension": {
+      "message": "Exécuter un serveur mandataire"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fileBug": {
+      "message": "Si vous rencontrez des problèmes avec Snowflake comme client ou comme mandataire, veuillez envisager de remplir un relevé de bogue. Deux options s’offrent à vous :"
+   },
+   "installChrome": {
+      "message": "Installer dans Chrome"
+   },
+   "installExtension": {
+      "message": "Si votre accès à Internet n’est \u003Cstrong>pas\u003C/strong> censuré, vous devriez envisager d’installer l’extension Snowflake pour aider les utilisateurs sur les réseaux censurés. Vous n’avez pas à vous soucier des sites Web auxquels les utilisateurs accèdent par votre mandataire. Leur adresse IP visible de navigation correspondra à leur nœud de sortie de Tor, pas à la vôtre."
+   },
+   "installFirefox": {
+      "message": "Installer dans Firefox"
+   },
+   "installStandalone": {
+      "message": "Si vous voulez exécuter une version en ligne de commande du mandataire Snowflake sur votre ordinateur ou sur votre serveur, consultez notre \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">documentation\u003C/a> sur l’exécution d’un mandataire Snowflake autonome (en anglais)."
+   },
+   "looksLike": {
+      "message": "Qui ressemble à ceci :"
+   },
+   "popupBridgeUnreachable": {
+      "message": "Impossible de se connecter au pont."
+   },
+   "popupDescOn": {
+      "message": "Nombre d’utilisateurs aidés par votre Snowflake à contourner la censure au cours des dernières 24 heures : $1"
+   },
+   "popupEnabled": {
+      "message": "Activé"
+   },
+   "popupLearnMore": {
+      "message": "En apprendre davantage"
+   },
+   "popupRetry": {
+      "message": "Réessayer"
+   },
+   "popupRetrying": {
+      "message": "Nouvelle essai…"
+   },
+   "popupStatusOff": {
+      "message": "Snowflake est désactivé"
+   },
+   "popupStatusOn": {
+      "message": "Nombre d’utilisateurs connectés actuellement : $1"
+   },
+   "popupStatusReady": {
+      "message": "Votre Snowflake est prêt à aider des utilisateurs à contourner la censure"
+   },
+   "popupWebRTCOff": {
+      "message": "La fonction WebRTC n’est pas détectée."
+   },
+   "possible": {
+      "message": "Il est maintenant possible d’intégrer le macaron Snowflake sur n’importe quel site Web :"
+   },
+   "reportingBugs": {
+      "message": "Signaler des bogues"
+   },
+   "sharedAccount": {
+      "message": "Remplissez un \u003Ca href=\"https://anonticket.onionize.space/\">ticket anonyme\u003C/a> (site en anglais) en générant un identifiant et en l’utilisant pour vous connecter. Ensuite, trouvez le projet Snowflake dans la \u003Cstrong>liste de tous les projets\u003C/strong> et créez un nouveau ticket de problème."
+   },
+   "support": {
+      "message": "Consultez le sujet \u003Ca href=\"https://support.torproject.org/fr/censorship/\">Censure\u003C/a>  du \u003Ca href=\"https://support.torproject.org/fr/\">portail d’assistance\u003C/a> de Tor."
+   },
+   "websiteIntro": {
+      "message": "Snowflake est un système pour contrecarrer la censure sur Internet. Les personnes victimes de censure peuvent utiliser Snowflake pour accéder à Internet. Leur connexion passe par des mandataires Snowflake qui sont exploités par des bénévoles. Pour de plus amples renseignements sur le fonctionnement de Snowflake, consultez notre \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">wiki de documentation\u003C/a> (page en anglais)."
+   }
+}

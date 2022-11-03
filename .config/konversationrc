@@ -1,0 +1,168 @@
+[Aliases]
+AliasList=sayclip /exec sayclip,bug /exec bug,fortune /exec fortune,mail /exec mail,gauge /exec gauge,video /exec media video,audio /exec media audio,media /exec media,uptime /exec uptime,tinyurl /exec tinyurl,sysinfo /exec sysinfo,cmd /exec cmd
+
+[Appearance]
+BacklogLines=99
+ChannelSplitterSizes=836,156
+CloseButtons=true
+CustomTabFont=true
+CustomTextFont=true
+IrcColorCode1=90,90,90
+ListFont=Roboto Mono,10,-1,5,50,0,0,0,0,0,Regular
+NickColor8=0,122,4
+TabFont=Roboto,10,-1,5,50,0,0,0,0,0,Regular
+TextFont=Roboto Mono,10,-1,5,50,0,0,0,0,0,Regular
+TopicSplitterSizes=28,535
+TreeSplitterSizes=145,773
+
+[Autoreplace List]
+Direction0=o
+Direction1=o
+Pattern0=\\[\\[([^\\s]+)\\]\\]#
+Pattern1=(BUG:|bug:)([0-9]+)#
+Regex0=1
+Regex1=1
+Replace0=http://en.wikipedia.org/wiki/Special:Search?go=Go&search=%1#
+Replace1=https://bugs.kde.org/show_bug.cgi?id=%2#
+
+[BanList ViewSettings]
+ColumnSortDescending=false
+ColumnSorted=0
+ColumnWidths=100,100,100
+
+[Button List]
+Button0=Op,/OP %u%n
+Button1=DeOp,/DEOP %u%n
+Button2=WhoIs,/WHOIS %s,%%u%n
+Button3=Version,/CTCP %s,%%u VERSION%n
+Button4=Kick,/KICK %u%n
+Button5=Ban,/BAN %u%n
+Button6=Part,/PART %c Leaving...%n
+Button7=Quit,/QUIT Leaving...%n
+
+[Channel 0]
+Name=#artix
+Password=
+
+[Channel 1]
+EnableNotifications=true
+Name=#artix-unregistered
+Password=
+
+[ChannelOptionsDialog]
+Size=724,536
+SplitterSizes=230,192
+
+[DCC Settings]
+ColumnWidths=49,90,103,173,70,87,157,87,96,165
+IPv4FallbackIface=0
+PanelSplitter=AAAA/wAAAAEAAAACAAAAVAAAAQUB/////wEAAAACAA==
+
+[Flags]
+EncryptionType=1
+InputFieldsBackgroundColor=true
+TabPlacement=Top
+
+[General Options]
+AutomaticRememberLine=true
+RedirectServerAndAppMsgToStatusPane=true
+ShowTrayIcon=true
+TrayNotify=true
+
+[Highlight List]
+HighlightSoundsEnabled=true
+
+[Identity 0]
+AuthType=nickserv
+AutomaticAway=false
+AutomaticUnaway=false
+AwayInactivity=10
+AwayMessage=
+AwayNick=
+AwayReason=Gone away for now
+Bot=nickserv
+Codec=UTF-8
+Ident=artix-live
+InsertRememberLineOnAway=false
+KickReason=User terminated!
+Name=
+Nicknames=artix-live-01,artix-live-02,artix-live-03,artix-live-04,artix-live-05,artix-live-06,artix-live-07,artix-live-08,artix-live-09,artix-live-10,artix-live-11,artix-live-12,artix-live-13,artix-live-14,artix-live-15,artix-live-16,artix-live-17,artix-live-18,artix-live-19,artix-live-20,artix-live-21,artix-live-22,artix-live-23,artix-live-24,artix-live-25,artix-live-26,artix-live-27,artix-live-28,artix-live-29,artix-live-30,artix-live-31,artix-live-32,artix-live-33,artix-live-34,artix-live-35,artix-live-36,artix-live-37,artix-live-38,artix-live-39,artix-live-40,artix-live-41,artix-live-42,artix-live-43,artix-live-44,artix-live-45,artix-live-46,artix-live-47,artix-live-48,artix-live-49,artix-live-50
+NickservCommand=identify
+PartReason=Konversation terminated!
+Password=
+PemClientCertFile=
+PreShellCommand=
+QuitReason=Konversation terminated!
+Realname=artix-live
+ReturnMessage=
+SaslAccount=
+ShowAwayMessage=false
+
+[MainWindow]
+Height 768=705
+Height 828=693
+State=AAAA/wAAAAD9AAAAAAAAA+MAAAJ+AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1366=679
+Width 1472=995
+
+[Message Text Colors]
+ActionMessage=0,101,209
+AlternateBackground=20,20,20
+BacklogMessage=127,127,127
+ChannelMessage=230,230,230
+CommandMessage=196,0,196
+Hyperlink=0,221,255
+QueryMessage=195,195,195
+ServerMessage=200,138,13
+TextViewBackground=0,0,0
+
+[Notification Messages]
+ChannelListNoServerSelected=1
+ChannelListWarning=1
+ClearLogfileQuestion=1
+CloseQueryAfterIgnore=1
+HideMenuBarWarning=1
+HideOnCloseInfo=0
+IgnoreNick=1
+Invitation=0
+QuitChannelTab=1
+QuitDCCChatTab=1
+QuitQueryTab=1
+QuitServerTab=1
+QuitWithActiveDccTransfers=1
+ReconnectWithDifferentServer=1
+ReuseExistingConnection=1
+SaveLogfileNote=1
+UnignoreNick=1
+WarnEncodingConflict=1
+systemtrayquitKonversation=1
+
+[Server 0]
+BypassProxy=true
+Password=
+Port=7000
+SSLEnabled=true
+Server=chat.freenode.net
+
+[ServerGroup 0]
+AutoConnect=true
+AutoJoinChannels=Channel 0
+ChannelHistory=Channel 1
+ConnectCommands=
+EnableNotifications=true
+Expanded=true
+Identity=
+Name=freenode
+NotifyList=
+ServerList=Server 0
+
+[ServerListDialog]
+ServerListHeaderState=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xf4\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x01\x00\x00\x00\xc8
+Size=533,274
+
+[Tab Notifications]
+TabNotificationsLeds=true
+
+[Themes]
+IconTheme=square

@@ -1,0 +1,125 @@
+{
+   "StandaloneTitle": {
+      "message": ""
+   },
+   "appDesc": {
+      "message": "Να επιτρέπεται σε χρήστες από χώρες με λογοκρισία να χρησιμοποιούν τη σύνδεση δικτύου για πρόσβαση στο δίκτυο Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "Τα cookies δεν είναι ενεργοποιημένα."
+   },
+   "browser": {
+      "message": "Χρήση του Snowflake για παράκαμψη λογοκρισίας"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Κάντε αίτηση για έναν λογαριασμό\u003C/a> στο GitLab του Tor Project και έπειτα \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">δημιουργήστε μία νέα αναφορά σφάλματος \u003C/a> στο έργο Snowflake."
+   },
+   "censoredUsers": {
+      "message": ""
+   },
+   "contactSnowflakeDevs": {
+      "message": ""
+   },
+   "descriptive": {
+      "message": "Προσπαθήστε να είστε όσο το δυνατόν πιο ξεκάθαρος κατά την υποβολή του σφάλματός σας και, αν είναι δυνατόν, συμπεριλάβετε τα αρχεία καταγραφής για να μας βοηθήσετε να αναπαράγουμε το σφάλμα."
+   },
+   "embed": {
+      "message": "Ενσωμάτωση"
+   },
+   "extension": {
+      "message": "Βοηθήστε άλλους να ξεπεράσουν τη λογοκρισία: εκτελέστε ένα διακομιστή μεσολάβησης Snowflake"
+   },
+   "faq": {
+      "message": "Χρειάζεστε υποστήριξη για τη χρήση του Snowflake"
+   },
+   "fileBug": {
+      "message": "Αν αντιμετωπίσετε κάποιο πρόβλημα με το Snowflake κατά τη χρήση ή την εκτέλεσή του, παρακαλούμε υποβάλλετε αναφορά σφάλματος. Υπάρχουν δύο τρόποι να αναφέρετε σφάλματα:"
+   },
+   "howSnowflakeWorks": {
+      "message": ""
+   },
+   "installChrome": {
+      "message": "Εγκατάσταση στο Chrome"
+   },
+   "installExtension": {
+      "message": ""
+   },
+   "installFirefox": {
+      "message": "Εγκατάσταση στο Firefox"
+   },
+   "installOptions": {
+      "message": ""
+   },
+   "installStandalone": {
+      "message": "Εάν θέλετε να εκτελέσετε την έκδοση γραμμής εντολών του διακομιστή μεσολάβησης Snowflake στον υπολογιστή σας, δείτε τον \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">οδηγό μας\u003C/a> για την εκτέλεση αυτόνομου διακομιστή μεσολάβησης Snowflake. "
+   },
+   "installWebExtension": {
+      "message": ""
+   },
+   "installWebExtensionIntro": {
+      "message": ""
+   },
+   "popupBridgeUnreachable": {
+      "message": "Δεν ήταν δυνατή η σύνδεση στη γέφυρα."
+   },
+   "popupDescOn": {
+      "message": "Αριθμός ατόμων που έχουν παρακάμψει τη λογοκρισία τις τελευταίες 24 ώρες, χάρη στο Snowflake σας: $1"
+   },
+   "popupEnabled": {
+      "message": "Ενεργοποιημένο"
+   },
+   "popupLearnMore": {
+      "message": "Μάθετε περισσότερα"
+   },
+   "popupRetry": {
+      "message": "Προσπάθησε πάλι"
+   },
+   "popupRetrying": {
+      "message": "Το προσπαθούμε πάλι..."
+   },
+   "popupStatusOff": {
+      "message": "Το Snowflake είναι απενεργοποιημένο"
+   },
+   "popupStatusOn": {
+      "message": "Αριθμός χρηστών συνδεδεμένοι αυτή τη στιγμή: $1"
+   },
+   "popupStatusReady": {
+      "message": "Το Snowflake σας είναι έτοιμο να βοηθήσει άλλα άτομα να αποκτήσουν ελεύθερη πρόσβαση στο διαδίκτυο"
+   },
+   "popupWebRTCOff": {
+      "message": "Δεν εντοπίστηκε η λειτουργία WebRTC."
+   },
+   "possible": {
+      "message": ""
+   },
+   "reportingBugs": {
+      "message": "Αναφορά Σφαλμάτων"
+   },
+   "sharedAccount": {
+      "message": "Υποβάλετε μία \u003Ca href=\"https://anonticket.onionize.space/\">ανώνυμη αναφορά\u003C/a> δημιουργώντας ένα αναγνωριστικό και συνδεθείτε με αυτό. Έπειτα, εντοπίστε το έργο Snowflake στη \u003Cstrong>Λίστα όλων των έργων\u003C/strong> και δημιουργήστε ένα νέο ζήτημα."
+   },
+   "snowflakeTechOverview": {
+      "message": ""
+   },
+   "support": {
+      "message": ""
+   },
+   "volunteer": {
+      "message": ""
+   },
+   "webBadgeInstructions": {
+      "message": ""
+   },
+   "webBadgeTitle": {
+      "message": ""
+   },
+   "websiteIntro": {
+      "message": ""
+   },
+   "websiteIntro2": {
+      "message": ""
+   },
+   "websiteIntro3": {
+      "message": ""
+   }
+}

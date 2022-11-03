@@ -1,0 +1,174 @@
+{
+   "400": {
+      "message": "O servidor disse que este pedido foi inválido"
+   },
+   "409": {
+      "message": "Isso já foi enviado antes"
+   },
+   "429": {
+      "message": "Enviou muitos segmentos para este vídeo, tem certeza que tem assim tantos?"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Salte patrocinios, pedidos de subscrição e mais em videos do YouTube. Submeta anúncios nos videos que visualiza para poupar tempo a outros."
+   },
+   "Dismiss": {
+      "message": "Ignorar"
+   },
+   "Hide": {
+      "message": "Nunca mostrar"
+   },
+   "Loading": {
+      "message": "A carregar..."
+   },
+   "Options": {
+      "message": "Opções"
+   },
+   "Segment": {
+      "message": "segmento"
+   },
+   "Segments": {
+      "message": "segmentos"
+   },
+   "SubmitTimes": {
+      "message": "Submeter Segmentos"
+   },
+   "Unknown": {
+      "message": "Erro ao enviar os seus segmentos, tente novamente mais tarde."
+   },
+   "channelWhitelisted": {
+      "message": "Canal adicionado à whitelist!"
+   },
+   "clearThis": {
+      "message": "Tem certeza que deseja limpar isto?\n\n"
+   },
+   "clearTimes": {
+      "message": "Limpar Segmentos"
+   },
+   "clearTimesButton": {
+      "message": "Limpar Intervalos"
+   },
+   "closePopup": {
+      "message": "Fechar Popup"
+   },
+   "confirmMSG": {
+      "message": "\n\nPara editar ou remover linhas individuais, carregue com o botão direito ou abra o popup da extensão pelo icone no canto superior direito."
+   },
+   "connectionError": {
+      "message": "Deu-se um erro de conecção: Código: "
+   },
+   "discordAdvert": {
+      "message": "Junte-se ao discord oficial para sugerir dicas e sugestões!"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock para o YouTube - Salte patrocínios"
+   },
+   "hideButtons": {
+      "message": "Esconder botões no player do Youtube"
+   },
+   "hideButtonsDescription": {
+      "message": "Isto esconde os botões que aparecem no player do Youtube para submeter patrocínios. Entendemos que possa ser\n incómodo a algumas pessoas. Em vez de usar esses botões pode usar os do popup. Para esconder a mensagem que aparece, \n ususe o botão na mesma que diz \"Don't show this again\". Pode sempre reactivar estas definições novamente."
+   },
+   "hideDeleteButton": {
+      "message": "Esconder botão de Apagar no player do Youtube"
+   },
+   "hideInfoButton": {
+      "message": "Esconder botão de Informações no player do Youtube"
+   },
+   "hideThis": {
+      "message": "Esconder isto"
+   },
+   "hitGoBack": {
+      "message": "Carregue em reverter salto para voltar a onde estava"
+   },
+   "manualPaused": {
+      "message": "Temporizador parado"
+   },
+   "noVideoID": {
+      "message": "Nenhum vídeo do YouTube encontrado.\nSe isto não estiver correto, atualize o separador."
+   },
+   "openPopup": {
+      "message": "Abrir o Popup SponsorBlock"
+   },
+   "paused": {
+      "message": "Pausado"
+   },
+   "publicStats": {
+      "message": "Isto é usado na página pública de estatísticas que mostra o quanto já contríbuíu. Veje-a"
+   },
+   "refreshSegments": {
+      "message": "Atualizar segmentos"
+   },
+   "reportButtonInfo": {
+      "message": "Reportar esta submissão como incorrecta."
+   },
+   "reportButtonTitle": {
+      "message": "Reportar"
+   },
+   "reskip": {
+      "message": "Saltar novamente"
+   },
+   "serverDown": {
+      "message": "Parece que o servidor está em baixo. Contacte o desenvolvedor imediatamente."
+   },
+   "setUsername": {
+      "message": "Criar nomde de utilizador"
+   },
+   "showButtons": {
+      "message": "Mostrar botões no player do Youtube"
+   },
+   "showDeleteButton": {
+      "message": "Mostrar botão de Apagar no player do Youtube"
+   },
+   "showInfoButton": {
+      "message": "Mostrar botão de Informações no player do Youtube"
+   },
+   "showNotice": {
+      "message": "Mostrar notificação outra vez"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Código fonte"
+   },
+   "sponsor404": {
+      "message": "Nenhum segmento encontrado"
+   },
+   "sponsorCancel": {
+      "message": "Cancelar Criação de Segmento"
+   },
+   "sponsorEnd": {
+      "message": "O Segmento Acaba Agora"
+   },
+   "sponsorFound": {
+      "message": "Este vídeo tem segmentos na base de dados!"
+   },
+   "sponsorStart": {
+      "message": "O Segmento Começa Agora"
+   },
+   "submitCheck": {
+      "message": "Tem a certeza que pretende submeter?"
+   },
+   "submitTimesButton": {
+      "message": "Submeter Intervalos"
+   },
+   "success": {
+      "message": "Sucesso!"
+   },
+   "unmute": {
+      "message": "Ativar som"
+   },
+   "unskip": {
+      "message": "Reverter salto"
+   },
+   "upvoteButtonInfo": {
+      "message": "Votar positivamente esta submissão"
+   },
+   "voted": {
+      "message": "Votado!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Site"
+   }
+}

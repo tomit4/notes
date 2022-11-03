@@ -1,0 +1,719 @@
+{
+   "0": {
+      "message": "Λήξη χρονικού ορίου σύνδεσης. Παρακαλώ ελέγξτε ότι η σύνδεσή σας με το διαδίκτυο λειτουργεί, αλλιώς ο διακομιστής μπορεί να υπερφορτώθηκε ή να έπεσε."
+   },
+   "400": {
+      "message": "Ο διακομιστής ανέφερε πως αυτό το αίτημα δεν είναι έγκυρο"
+   },
+   "409": {
+      "message": "Αυτό έχει ήδη υποβληθεί στο παρελθόν"
+   },
+   "429": {
+      "message": "Έχετε υποβάλει πολλά τμήματα χορηγιών για αυτό το βίντεο, είστε σίγουροι ότι υπάρχουν τόσα πολλά;"
+   },
+   "502": {
+      "message": "Ο διακομιστής φαίνεται ότι έχει υπερφορτωθεί. Δοκιμάστε ξανά σε μερικά δευτερόλεπτα."
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Παράλειψη χορηγιών, έκκλησης συνδρομής και πολλά περισσότερα στα βίντεο του YouTube. Αναφέρετε χορηγίες σε βίντεο που βλέπετε για να κερδίσετε χρόνο στους υπολοίπους."
+   },
+   "Dismiss": {
+      "message": "Παράβλεψη"
+   },
+   "Donate": {
+      "message": "Δωρεά"
+   },
+   "GotIt": {
+      "description": "Used as the button to dismiss a tooltip",
+      "message": "Το' χω"
+   },
+   "Hide": {
+      "message": "Να μην ξαναεμφανιστεί"
+   },
+   "Loading": {
+      "message": "Φόρτωση…"
+   },
+   "Options": {
+      "message": "Ρυθμίσεις"
+   },
+   "Segment": {
+      "message": "τμήμα"
+   },
+   "Segments": {
+      "message": "τμήματα"
+   },
+   "Submissions": {
+      "message": "Υποβολές"
+   },
+   "SubmitTimes": {
+      "message": "Υποβολή Τμημάτων"
+   },
+   "Unknown": {
+      "message": "Παρουσιάστηκε ένα σφάλμα κατά την υποβολή των τμημάτων χορηγιών, παρακαλώ προσπαθήστε ξανά αργότερα."
+   },
+   "Username": {
+      "message": "Όνομα χρήστη"
+   },
+   "acceptPermission": {
+      "message": "Αποδεχτείτε την άδεια"
+   },
+   "adblockerIssueWhitelist": {
+      "message": "Εάν δεν μπορείτε να το επιδιορθώσετε, απενεργοποιείστε την επιλογή «Εξαναγκασμός Ελέγχου Καναλιού πριν την παράλειψη», καθώς το SponsorBlock δεν μπόρεσε να ανακτήσει τις πληροφορίες του καναλιού αυτού του βίντεο"
+   },
+   "add": {
+      "message": "Προσθήκη"
+   },
+   "addInvidiousInstance": {
+      "message": "Προσθήκη 3ου πελάτη συνεδρίας"
+   },
+   "addInvidiousInstanceDescription": {
+      "message": "Προσθέστε μια προσαρμοσμένη συνεδρία. Αυτό πρέπει να είναι μορφοποιημένο MONO με την διεύθυνση. Για παράδειγμα: invidious.ajay.app"
+   },
+   "addInvidiousInstanceError": {
+      "message": "Μη έγκυρη διεύθυνση. Θα πρέπει να περιλαμβάνεται ΜΟΝΟ αυτό το μέρος της διεύθυνσης.\nΓια παράδειγμα: invidious.ajay.app"
+   },
+   "areYouSureReset": {
+      "message": "Είστε σίγουροι ότι θέλετε να το επαναφέρετε;"
+   },
+   "audioNotification": {
+      "message": "Ηχητική ειδοποίηση κατά την παράληψη"
+   },
+   "audioNotificationDescription": {
+      "message": "Οι ειδοποιήσεις μετά την παράλειψη κάθε τμήματος θα αναπαράγουν ήχο. Εάν είναι ανενεργή αυτή η επιλογή εκτός αν η αυτόματη παράλειψη είναι ανενεργή."
+   },
+   "autoHideInfoButton": {
+      "message": "Αυτόματη απόκρυψη του κουμπιού «Πληροφορίες»"
+   },
+   "autoSkip": {
+      "message": "Αυτόματη Παράληψη"
+   },
+   "autoSkipOnMusicVideos": {
+      "message": "Αυτόματη παράλειψη όλων των τμημάτων όταν είναι «Χωρίς μουσική»"
+   },
+   "autoSkip_POI": {
+      "message": "Αυτόματη παράλειψη στην αρχή του τμήματος"
+   },
+   "bracketEnd": {
+      "message": "(τέλος)"
+   },
+   "bracketNow": {
+      "message": "(εδώ)"
+   },
+   "cancel": {
+      "message": "Ακύρωση"
+   },
+   "category": {
+      "message": "Κατηγορία"
+   },
+   "categoryUpdate1": {
+      "message": "Οι κατηγορίες είναι εδώ!"
+   },
+   "categoryUpdate2": {
+      "message": "Άνοιξε τις επιλογές για την παράλειψη τίτλων αρχής-τέλους, πωλήσεων κ. α."
+   },
+   "category_interaction": {
+      "message": "Υπενθύμιση Αλληλεπίδρασης (Εγγραφή)"
+   },
+   "category_interaction_description": {
+      "message": "Όταν υπάρχει μια σύντομη υπενθύμιση για να προσθέσετε το βίντεο στα βίντεο που σας αρέσουν, να εγγραφείτε ή να τους ακολουθήσετε στη μέση του περιεχομένου. Εάν διαρκεί για αρκετή ώρα, τότε αυτό περιλαμβάνεται στη κατηγορία «προσωπική προώθηση»."
+   },
+   "category_interaction_short": {
+      "message": "Υπενθύμιση Αλληλεπίδρασης"
+   },
+   "category_intro": {
+      "message": "Παύση/Εισαγωγή με Animation"
+   },
+   "category_intro_description": {
+      "message": "Ένα διάστημα χωρίς ουσιαστικό περιεχόμενο. Θα μπορούσε να είναι κάποια παύση, στατική εικόνα, επαναλαμβανόμενο animation. Δεν πρέπει να επιλέγεται για μεταβάσεις που περιέχουν πληροφορίες."
+   },
+   "category_intro_short": {
+      "message": "Διάλειμμα"
+   },
+   "category_livestream_messages": {
+      "message": "Ζωντανή μετάδοση: Δωρεές/Ανάγνωση Μηνυμάτων από δωρεές"
+   },
+   "category_livestream_messages_short": {
+      "message": "Ανάγνωση Μηνυμάτων"
+   },
+   "category_music_offtopic": {
+      "message": "Μουσική: Τμήμα χωρίς μουσική"
+   },
+   "category_music_offtopic_description": {
+      "message": "Μόνο για χρήση σε βίντεο μουσικής. Αυτό θα πρέπει να χρησιμοποιείται μόνο για τμήματα βίντεο μουσικής που δεν καλύπτονται ήδη από κάποια άλλη κατηγορία."
+   },
+   "category_music_offtopic_short": {
+      "message": "Χωρίς Μουσική"
+   },
+   "category_outro": {
+      "message": "Προτεινόμενα βίντεο καναλιών/Εύσημα"
+   },
+   "category_outro_description": {
+      "message": "Όταν εμφανίζονται τα εύσημα ή τα προτεινόμενα βίντεο των καναλιών. Όχι, για επίλογους που περιέχουν πληροφορίες."
+   },
+   "category_poi_highlight": {
+      "message": "Καλύτερη στιγμή"
+   },
+   "category_poi_highlight_description": {
+      "message": "Το κομμάτι του βίντεο που ψάχνουν να δουν οι περισσότεροι άνθρωποι. Παρόμοιο με το «Το βίντεο ξεκινάει από το x σημείο» στα σχόλια."
+   },
+   "category_preview": {
+      "message": "Προεπισκόπηση/Αναθεώρηση"
+   },
+   "category_preview_description": {
+      "message": "Γρήγορη ανακεφαλαίωση προηγουμένων επεισοδίων, ή προεπισκόπηση του τι ακολουθεί στο τρέχων βίντεο. Εννοώντας επεξεργασία μερικών κλιπ μαζί, όχι για προφορικές περιγραφές."
+   },
+   "category_selfpromo": {
+      "message": "Αφιλοκέρδεια/Προσωπική Προώθηση"
+   },
+   "category_selfpromo_description": {
+      "message": "Παρόμοιο με τη «χορηγία» αλλά για μη κερδοσκοπικό σκοπό ή για προσωπική προώθηση. Αυτό συμπεριλαμβάνει τμήματα από εμπορεύματα, δωρεές, ή πληροφορίες σχετικές με το ποιους συνεργάστηκαν."
+   },
+   "category_sponsor": {
+      "message": "Χορηγία"
+   },
+   "category_sponsor_description": {
+      "message": "Προώθηση επί πληρωμή, παραπομπές επί πληρωμή και άμεσες διαφημίσεις. Όχι, για προσωπική προώθηση ή δωρεάν αναφορές σε δημιουργούς/ιστοσελίδες/προϊόντα που τους αρέσουν."
+   },
+   "changeUserID": {
+      "message": "Εισαγωγή/Εξαγωγή της Ταυτότητας Χρήστη σας"
+   },
+   "channelDataNotFound": {
+      "description": "This error appears in an alert when they try to whitelist a channel and the extension is unable to determine what channel they are looking at.",
+      "message": "Η ταυτότητα καναλιού δεν έχει φορτώσει ακόμα. Εάν χρησιμοποιείτε ενσωματωμένο βίντεο, δοκιμάστε αντιθέτως να το ανοίξετε στο YouTube. Μπορεί επίσης να ευθύνονται αλλαγές στη διάταξη του YouTube, εάν το πιστεύετε, γράψτε ένα σχόλιο εδώ:"
+   },
+   "channelWhitelisted": {
+      "message": "Το κανάλι προστέθηκε στη λίστα αποδοχής!"
+   },
+   "chooseACategory": {
+      "message": "Επιλέξτε μια κατηγορία"
+   },
+   "clearThis": {
+      "message": "Θέλετε σίγουρα να σβήσετε τη φόρμα υποβολής τμημάτων;\n\n"
+   },
+   "clearTimes": {
+      "message": "Καθαρισμός τμημάτων"
+   },
+   "clearTimesButton": {
+      "message": "Σβήσιμο τμημάτων"
+   },
+   "closePopup": {
+      "message": "Κλείσιμο αναδυόμενου παραθύρου"
+   },
+   "confirmMSG": {
+      "message": "Για να επεξεργαστείτε ή να διαγράψετε τα τμήματα ξεχωριστά, ανοίξτε το αναδυόμενο παράθυρο πατώντας το κουμπί πληροφορίες (i) ή πατώντας το εικονίδιο της επέκτασης στην πάνω δεξιά γωνία του προγράμματος περιήγησης σας."
+   },
+   "confirmNoticeTitle": {
+      "message": "Υποβολή Τμήματος"
+   },
+   "connectionError": {
+      "message": "Παρουσιάστηκε σφάλμα σύνδεσης. Κωδικός σφάλματος: "
+   },
+   "copyDebugInformation": {
+      "message": "Αντιγραφή πληροφοριών αντιμετώπισης προβλημάτων στο πρόχειρο"
+   },
+   "copyDebugInformationComplete": {
+      "message": "Οι πληροφορίες εντοπισμού σφαλμάτων έχουν αντιγραφεί στο πρόχειρο. Μη διστάσετε να αφαιρέσετε οποιαδήποτε πληροφορία που προτιμάτε να μη μοιραστείτε. Αποθηκεύστε τες σε ένα αρχείο κειμένου ή επικολλήστε στην αναφορά σφάλματός σας."
+   },
+   "copyDebugInformationFailed": {
+      "message": "Αδυναμία εγγραφής στο πρόχειρο"
+   },
+   "copyDebugInformationOptions": {
+      "message": "Αντιγράφει πληροφορίες αντιμετώπισης προβλημάτων στο πρόχειρο, ώστε να μπορέσετε να τις στείλετε στον προγραμματιστή όταν αναφέρετε κάποιο σφάλμα / όταν ο προγραμματιστής σας το ζητήσει. Ευαίσθητες πληροφορίες όπως η ταυτότητα χρήστη σας, η λίστα αποδοχής καναλιών και η προσαρμοσμένη διεύθυνση διακομιστή έχουν αφαιρεθεί. Αλλά περιέχει πληροφορίες για τον περιηγητή ιστού σας, τον τύπο δυσκευής, το λειτουργικό σύστημα, και τον αριθμό έκδοσης της επέκτασης. "
+   },
+   "copyPublicID": {
+      "message": "Αντιγραφή δημόσιου αναγνωριστικού"
+   },
+   "createdBy": {
+      "message": "Δημιουργήθηκε από"
+   },
+   "currentInstances": {
+      "message": "Τρέχουσες Συνεδρίες:"
+   },
+   "customAddressError": {
+      "message": "Η διεύθυνση δεν έχει τη σωστή μορφή. Παρακαλώ ελέγξτε ότι έχετε http:// ή https:// στην αρχή της χωρίς κάθετους στο τέλος."
+   },
+   "customServerAddress": {
+      "message": "Διεύθυνση Διακομιστή SponsorBlock"
+   },
+   "customServerAddressDescription": {
+      "message": "Η διεύθυνση που χρησιμοποιείται για την επικοινωνία με τον διακομιστή του SponsorBlock. Εάν δε διαθέτετε το δικό σας διακομιστή, αυτή η επιλογή δεν πρέπει να αλλάξει."
+   },
+   "delete": {
+      "message": "Διαγραφή"
+   },
+   "disable": {
+      "message": "Απενεργοποίηση"
+   },
+   "disableAutoSkip": {
+      "message": "Απενεργοποίηση Αυτόματης Παράληψης"
+   },
+   "disableSkipping": {
+      "message": "Η παράλειψη είναι ενεργή"
+   },
+   "discordAdvert": {
+      "message": "Μπείτε στον επίσημο διακομιστή μας στο Discord για ανατροφοδότηση και προτάσεις!"
+   },
+   "downvoteDescription": {
+      "message": "Λάθος Συγχρονισμός"
+   },
+   "edit": {
+      "message": "Επεξεργασία"
+   },
+   "enableAutoSkip": {
+      "message": "Ενεργοποίηση Αυτόματης Παράληψης"
+   },
+   "enableQueryByHashPrefix": {
+      "message": "Αιτήματα μέσω προθέματος Hash"
+   },
+   "enableRefetchWhenNotFound": {
+      "message": "Επανάληψη αναζήτησης τμημάτων σε νέα βίντεο"
+   },
+   "enableSkipping": {
+      "message": "Η παράλειψη είναι ανενεργή"
+   },
+   "enableTestingServer": {
+      "message": "Ενεργοποίηση διακομιστή δοκιμαστικών λειτουργιών"
+   },
+   "enableThisCategoryFirst": {
+      "description": "Used when submitting segments to only let them select a certain category if they have it enabled in the options.",
+      "message": "Για να υποβάλετε τμήματα της «{0}» κατηγορίας, πρέπει να την ενεργοποιήσετε στις ρυθμίσεις. Θα μεταφερθείτε στις ρυθμίσεις τώρα."
+   },
+   "enableViewTracking": {
+      "message": "Ενεργοποίηση του μετρητή παραλείψεων"
+   },
+   "enableViewTrackingInPrivate": {
+      "message": "Ενεργοποίηση του μετρητή παραλείψεων σε καρτέλες Ιδιωτικής/Ανώνυμης περιήγησης"
+   },
+   "errorCode": {
+      "message": "Κωδικός σφάλματος: "
+   },
+   "experiementOptOut": {
+      "description": "This is used in a popup about a new experiment to get a list of unlisted videos to back up since all unlisted videos uploaded before 2017 will be set to private.",
+      "message": "Αποχή από μελλοντικά πειράματα"
+   },
+   "exportOptions": {
+      "message": "Εισαγωγή/Εξαγωγή όλων των ρυθμίσεων"
+   },
+   "exportOptionsWarning": {
+      "message": "Προσοχή: Η αλλαγή των επιλογών είναι μόνιμη και μπορεί να χαλάσει την εγκατάσταση σας. Είσαστε σίγουροι ότι θέλετε να προχωρήσετε; Σιγουρευτείτε ότι έχετε δημιουργήσει αντίγραφο ασφαλείας για καλό και για κακό."
+   },
+   "forceChannelCheck": {
+      "message": "Εξαναγκασμός Ελέγχου Καναλιού πριν την παράλειψη"
+   },
+   "forceChannelCheckPopup": {
+      "message": "Σκεφτείτε να ενεργοποιήσετε τη ρύθμιση «Εξαναγκασμός Ελέγχου Καναλιού πριν την παράλειψη»"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock για το YouTube - Παραλείπει Χορηγίες"
+   },
+   "guidelines": {
+      "message": "Οδηγίες"
+   },
+   "help": {
+      "message": "Βοήθεια"
+   },
+   "helpPageFeatureDisclaimer": {
+      "message": "Πολλές δυνατότητες είναι ανενεργές από προεπιλογή. Εάν θέλετε να παραλείπετε εισαγωγές, επίλογους, χρήση «Invidious», κτλ., ενεργοποιήστε τα παρακάτω. Μπορείτε επίσης να κρύψετε/εμφανίσετε στοιχεία της διεπαφής."
+   },
+   "helpPageHowSkippingWorks": {
+      "message": "Πως λειτουργεί η παράλειψη"
+   },
+   "helpPageHowSkippingWorks1": {
+      "message": "Τα τμήματα βίντεο θα παραλειφθούν αυτόματα αν βρεθούν στη βάση δεδομένων. Μπορείτε να ανοίξετε το αναδυόμενο παράθυρο κάνοντας κλικ στο εικονίδιο της επέκτασης για να πάρετε μια ιδέα του τι είναι."
+   },
+   "helpPageHowSkippingWorks2": {
+      "message": "Κάθε φορά που παραλείπετε κάποιο τμήμα, θα λαμβάνετε ειδοποίηση. Εάν ο συγχρονισμός σας φαίνεται λάθος, ψηφίστε αρνητικά πατώντας το εικονίδιο! Μπορείτε επίσης να ψηφίσετε μέσω του αναδυόμενου παράθυρου."
+   },
+   "helpPageReviewOptions": {
+      "message": "Παρακαλώ ελέγξτε τις παρακάτω ρυθμίσεις"
+   },
+   "helpPageThanksForInstalling": {
+      "message": "Ευχαριστούμε που εγκαταστήσατε το SponsorBlock."
+   },
+   "hiddenDueToDownvote": {
+      "message": "κρυφό: αρνητική ψήφος"
+   },
+   "hiddenDueToDuration": {
+      "message": "κρυφό: πολύ κοντό"
+   },
+   "hideButtons": {
+      "message": "Απόκρυψη Κουμπιών από την οθόνη αναπαραγωγής YouTube"
+   },
+   "hideButtonsDescription": {
+      "message": "Αυτό αποκρύπτει τα κουμπιά που εμφανίζονται στο πρόγραμμα αναπαραγωγής YouTube ώστε να υποβάλετε τμήματα προς παράλειψη."
+   },
+   "hideDeleteButton": {
+      "message": "Απόκρυψη κουμπιού «διαγραφή» από το πρόγραμμα αναπαραγωγής YouTube"
+   },
+   "hideDonationLink": {
+      "message": "Απόκρυψη Συνδέσμου Δωρεάς"
+   },
+   "hideForever": {
+      "message": "Απόκρυψη για πάντα"
+   },
+   "hideInfoButton": {
+      "message": "Απόκρυψη κουμπιού «πληροφορίες» από το πρόγραμμα αναπαραγωγής YouTube"
+   },
+   "hideThis": {
+      "message": "Απόκρυψη"
+   },
+   "hitGoBack": {
+      "message": "Πατήστε αναίρεση παράλειψης για να επιστρέψετε όπου βρισκόσασταν."
+   },
+   "hourLower": {
+      "message": "ώρα"
+   },
+   "hoursLower": {
+      "message": "ώρες"
+   },
+   "incorrectlyFormattedOptions": {
+      "message": "Αυτό το JSON δεν έχει μορφοποιηθεί σωστά. Οι ρυθμίσεις σας δεν έχουν αλλάξει."
+   },
+   "inspect": {
+      "message": "Επιθεώρηση"
+   },
+   "longDescription": {
+      "description": "Full description of the extension on the store pages.",
+      "message": "Το SponsorBlock σας επιτρέπει να παραλείψετε χορηγίες, εισαγωγές, επίλογους, υπενθυμίσεις εγγραφής, και άλλα ενοχλητικά μέρη των βίντεο YouTube. Το SponsorBlock είναι μια επέκταση που τροφοδοτείται, από τους ίδιους τους χρήστες, επιτρέπει στον κάθε έναν να υποβάλει το πότε ξεκινούν και πότε τελειώνουν τμήματα χορηγιών των βίντεο YouTube. Μόλις κάποιος χρήστης υποβάλει αυτή τη πληροφορία, ο οποιοσδήποτε άλλος που έχει αυτήν την επέκταση μπορεί να παραλείψει όλα αυτά τα ενοχλητικά τμήματα χορηγιών. Μπορείτε επίσης να παραλείψετε τμήματα, που δεν περιέχουν μουσική, σε μουσικά βίντεο."
+   },
+   "manualPaused": {
+      "message": "Λήξη Χρονομέτρου"
+   },
+   "manualSkip": {
+      "message": "Χειροκίνητη Παράληψη"
+   },
+   "manualSkip_POI": {
+      "message": "Ερώτηση μόλις φορτώνει το βίντεο"
+   },
+   "minDuration": {
+      "message": "Ελάχιστη διάρκεια (σε δευτερόλεπτα):"
+   },
+   "minDurationDescription": {
+      "message": "Τμήματα μικρότερα από την καθορισμένη τιμή δε θα παραλείπονται ή δε θα εμφανίζονται στην οθόνη αναπαραγωγής."
+   },
+   "minLower": {
+      "message": "λεπτό"
+   },
+   "minsLower": {
+      "message": "λεπτά"
+   },
+   "mobileUpdateInfo": {
+      "message": "Το m.youtube.com υποστηρίζεται πλέον"
+   },
+   "moreCategories": {
+      "message": "Περισσότερες κατηγορίες"
+   },
+   "multipleSegments": {
+      "message": "Πολλαπλά Τμήματα"
+   },
+   "mute": {
+      "message": "Σίγαση"
+   },
+   "noVideoID": {
+      "message": "Δε βρέθηκε βίντεο YouTube.\nΑν αυτό δεν είναι σωστό, παρακαλώ ανανεώστε την καρτέλα."
+   },
+   "nonMusicCategoryOnMusic": {
+      "message": "Αυτό το βίντεο έχει κατηγοριοποιηθεί ως μουσική. Είσαστε σίγουροι ότι έχει χορηγία; Εάν είναι ένα τμήμα «Χωρίς μουσική», ανοίξτε τις επιλογές της επέκτασης και ενεργοποιήστε αυτήν την κατηγορία. Μετά μπορείτε, να υποβάλετε αυτό το τμήμα ως «Χωρίς μουσική», αντί για χορηγία. Παρακαλώ διαβάστε τις οδηγίες, εάν είστε μπερδεμένοι."
+   },
+   "noticeUpdate": {
+      "description": "The first line of the message displayed after the notice was upgraded.",
+      "message": "Οι ειδοποιήσεις αναβαθμίστηκαν!"
+   },
+   "noticeUpdate2": {
+      "description": "The second line of the message displayed after the notice was upgraded.",
+      "message": "Εάν δεν σας αρέσουν, πατήστε το κουμπί «Να μην ξαναεμφανιστεί»."
+   },
+   "noticeVisibilityMode0": {
+      "message": "Ειδοποιήσεις παράλειψης πλήρους μεγέθους"
+   },
+   "noticeVisibilityMode1": {
+      "message": "Μικρές ειδοποιήσεις αυτόματης παράλειψης"
+   },
+   "noticeVisibilityMode2": {
+      "message": "Να είναι όλες μικρές ειδοποιήσεις"
+   },
+   "noticeVisibilityMode3": {
+      "message": "Ξεθωριασμένες ειδοποιήσεις αυτόματης παράλειψης"
+   },
+   "noticeVisibilityMode4": {
+      "message": "Να είναι όλες ξεθωριασμένες ειδοποιήσεις"
+   },
+   "openPopup": {
+      "message": "Εμφάνιση του αναδυόμενου παραθύρου του SponsorBlock"
+   },
+   "optionsInfo": {
+      "message": "Ενεργοποίηση υποστήριξης «Invidious», απενεργοποίηση αυτόματης παράληψης, απόκρυψη κουμπιών και άλλα."
+   },
+   "paused": {
+      "message": "Σε παύση"
+   },
+   "permissionRequestFailed": {
+      "message": "Η αίτηση της άδειας απέτυχε, πατήσατε απόρριψη;"
+   },
+   "permissionRequestSuccess": {
+      "message": "Επιτυχείς αίτηση της άδειας!"
+   },
+   "popupHint": {
+      "message": "Συμβουλή: Μπορείτε να ρυθμίσετε συντομεύσεις πλήκτρων για υποβολή στις ρυθμίσεις"
+   },
+   "preview": {
+      "message": "Προεπισκόπηση"
+   },
+   "previewColor": {
+      "description": "Referring to submissions that have not been sent to the server yet.",
+      "message": "Χρώμα Μη Υποβληθέντων"
+   },
+   "publicStats": {
+      "message": "Χρησιμοποιείται στη δημόσια σελίδα στατιστικών για να αναδειχθεί πόσο έχετε συμβάλει. Δείτε το"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "Διάβασε τις οδηγίες!!"
+   },
+   "recordTimesDescription": {
+      "message": "Υποβολή"
+   },
+   "refreshSegments": {
+      "message": "Ανανέωση των δεδομένων των τμημάτων"
+   },
+   "removeFromWhitelist": {
+      "message": "Αφαίρεση καναλιού από τη λίστα αποδοχής"
+   },
+   "reportButtonInfo": {
+      "message": "Αναφορά αυτής της υποβολής ως λανθασμένης."
+   },
+   "reportButtonTitle": {
+      "message": "Αναφορά"
+   },
+   "reset": {
+      "message": "Επαναφορά"
+   },
+   "resetInvidiousInstance": {
+      "message": "Επαναφορά Λίστας «Invidious»"
+   },
+   "resetInvidiousInstanceAlert": {
+      "message": "Πρόκειται να επαναφέρετε τη λίστα «Invidious»"
+   },
+   "reskip": {
+      "message": "Παράλειψη ξανά"
+   },
+   "save": {
+      "message": "Αποθήκευση"
+   },
+   "savedPeopleFrom": {
+      "message": "Έχετε γλιτώσει τον κόσμο από "
+   },
+   "seekBarColor": {
+      "message": "Χρώμα Μπάρας Χρόνου"
+   },
+   "serverDown": {
+      "message": "Φαίνεται ότι ο διακομιστής έχει πέσει. Παρακαλώ επικοινωνήστε με τον προγραμματιστή αμέσως."
+   },
+   "setOptions": {
+      "message": "Ορισμός Επιλογών"
+   },
+   "setUserID": {
+      "message": "Ορισμός Ταυτότητας Χρήστη"
+   },
+   "setUsername": {
+      "message": "Ορισμός ονόματος χρήστη"
+   },
+   "shortCheck": {
+      "message": "Η ακόλουθη υποβολή είναι μικρότερη από την επιλεγμένη ελάχιστη διάρκεια. Αυτό θα μπορούσε να σημαίνει ότι αυτό το τμήμα έχει ήδη υποβληθεί, και απλά αγνοείται λόγω αυτής της επιλογής. Είστε σίγουροι ότι θα θέλατε να το υποβάλετε;"
+   },
+   "showButtons": {
+      "message": "Εμφάνιση Κουμπιών στην οθόνη αναπαραγωγής YouTube"
+   },
+   "showDeleteButton": {
+      "message": "Εμφάνιση κουμπιού «διαγραφή» στο πρόγραμμα αναπαραγωγής YouTube"
+   },
+   "showInfoButton": {
+      "message": "Εμφάνιση κουμπιού «πληροφορίες» στο πρόγραμμα αναπαραγωγής YouTube"
+   },
+   "showNotice": {
+      "message": "Επανεμφάνιση ειδοποιήσεων"
+   },
+   "showOverlay": {
+      "message": "Εμφάνιση στην μπάρα χρόνου"
+   },
+   "showOverlay_POI": {
+      "message": "Εμφάνιση στην μπάρα χρόνου"
+   },
+   "showSkipButton": {
+      "message": "Διατήρηση του κουμπιού παράλειψης προς την καλύτερη στιγμή στο πρόγραμμα αναπαραγωγής"
+   },
+   "showSkipNotice": {
+      "message": "Εμφάνιση ειδοποιήσεων μετά την παράλειψη κάθε τμήματος"
+   },
+   "showTimeWithSkips": {
+      "message": "Εμφάνιση χρόνου συμπεριλαμβάνοντας τις παραλήψεις"
+   },
+   "showTimeWithSkipsDescription": {
+      "message": "Αυτός ο χρόνος εμφανίζεται σε παρενθέσεις δίπλα από τον τρέχων χρόνο που είναι κάτω από την μπάρα χρόνου. Αυτό δείχνει την συνολική διάρκεια του βίντεο πλην οποιουδήποτε τμήματος. Αυτό περιλαμβάνει και τα τμήματα που εμφανίζονται μόνο στην μπάρα χρόνου."
+   },
+   "showUploadButton": {
+      "message": "Εμφάνιση κουμπιού υποβολής"
+   },
+   "skip": {
+      "message": "Παράκαμψη"
+   },
+   "skipNoticeDuration": {
+      "message": "Διάρκεια ειδοποίησης παράλειψης (σε δευτερόλεπτα):"
+   },
+   "skipNoticeDurationDescription": {
+      "message": "Η ειδοποίηση παράλειψης θα παραμείνει στην οθόνη για τουλάχιστον τόσα δευτερόλεπτα. Στη μη αυτόματη παράκαμψη, μπορεί να είναι ορατή για μεγαλύτερο χρονικό διάστημα."
+   },
+   "skipOption": {
+      "description": "Used on the options page to describe the ways to skip the segment (auto skip, manual, etc.)",
+      "message": "Παράλειψη Επιλογής"
+   },
+   "skip_category": {
+      "message": "Παράλειψη {0};"
+   },
+   "skip_to_category": {
+      "description": "Used for skipping to things (Skip to Highlight)",
+      "message": "Παράλειψη προς το σημείο «{0}»;"
+   },
+   "skipped": {
+      "description": "Example: Sponsor Skipped",
+      "message": "Παραλείφθηκε «{0}»"
+   },
+   "skipped_to_category": {
+      "description": "Used for skipping to things (Skipped to Highlight)",
+      "message": "Παραλείφθηκε προς το σημείο «{0}»"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Πηγαίος Κώδικας"
+   },
+   "sponsor404": {
+      "message": "Δε βρέθηκαν τμήματα στη βάση δεδομένων"
+   },
+   "sponsorCancel": {
+      "message": "Ακύρωση δημιουργίας τμήματος"
+   },
+   "sponsorEnd": {
+      "message": "Το τμήμα τελειώνει εδώ"
+   },
+   "sponsorFound": {
+      "message": "Υπάρχουν τμήματα στη βάση δεδομένων για αυτό το βίντεο!"
+   },
+   "sponsorStart": {
+      "message": "Το τμήμα ξεκινάει εδώ"
+   },
+   "statusReminder": {
+      "message": "Ελέγξτε το status.sponsor.ajay.app για την κατάσταση διακομιστή."
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "Η επεξεργασία τμήματος θα εμφανιστεί αφότου πατήσετε υποβολή"
+   },
+   "submit": {
+      "message": "Υποβολή"
+   },
+   "submitCheck": {
+      "message": "Είσαστε σίγουροι για την υποβολή σας;"
+   },
+   "submitTimesButton": {
+      "message": "Υποβολή τμημάτων"
+   },
+   "success": {
+      "message": "Επιτυχία!"
+   },
+   "supportOtherSites": {
+      "message": "Υποστήριξη 3των ιστοσελίδων τύπου YouTube"
+   },
+   "supportOtherSitesDescription": {
+      "description": "This replaces the 'supports Invidious' option because it now works on other YouTube sites such as Cloudtube",
+      "message": "Υποστήριξη 3των πελατών διακομιστή YouTube. Για να ενεργοποιήσετε την υποστήριξη πρέπει να αποδεχτείτε επιπλέον άδειες. Αυτό ΔΕ λειτουργεί σε καρτέλες ανώνυμης περιήγησης του Chrome ή άλλων Chromium εκδοχών."
+   },
+   "supportedSites": {
+      "message": "Υποστηριζόμενες Ιστοσελίδες: "
+   },
+   "testingServerWarning": {
+      "message": "Όλες οι υποβολές και οι ψήφοι ΔΕΝ ΘΑ ΜΕΤΡΙΣΟΥΝ στον κύριο διακομιστή κατά τη σύνδεση με τον δοκιμαστικό διακομιστή. Σιγουρευτείτε για να την απενεργοποιήσετε όταν θέλετε να κάνετε πραγματικές υποβολές."
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "έως"
+   },
+   "unmute": {
+      "message": "Αναίρεση σίγασης"
+   },
+   "unskip": {
+      "message": "Αναίρεση παράλειψης"
+   },
+   "unsubmitted": {
+      "message": "Μη Υποβληθέντα"
+   },
+   "upvoteButtonInfo": {
+      "message": "Θετική ψήφος για αυτήν την υποβολή"
+   },
+   "userIDChangeWarning": {
+      "message": "Προσοχή: Η αλλαγή της Ταυτότητας Χρήστη είναι μόνιμη. Είστε βέβαιοι ότι θέλετε να το κάνετε; Βεβαιωθείτε ότι έχετε δημιουργήσει αντίγραφο ασφαλείας του παλιού σας για παν ενδεχόμενο."
+   },
+   "videoInfoFetchFailed": {
+      "message": "Φαίνεται ότι κάτι εμποδίζει το SponsorBlock να ανακτήσει δεδομένα βίντεο. Παρακαλώ δείτε αυτό https://github.com/ajayyy/SponsorBlock/issues/741 για περισσότερες πληροφορίες."
+   },
+   "viewLeaderboard": {
+      "message": "Πίνακας βαθμολογίας"
+   },
+   "voteOnTime": {
+      "message": "Ψηφίστε για κάποιο τμήμα"
+   },
+   "voteRejectedWarning": {
+      "description": "This is an integrated chat panel that will appearing allowing them to talk to the Discord/Matrix chat without leaving their browser.",
+      "message": "Η ψήφος απορρίφθηκε λόγο μιας προειδοποίησης. Πατήστε για να ανοίξετε μια συνομιλία ώστε να το διορθώσετε, ή επιστρέψτε όταν έχετε περισσότερο χρόνο."
+   },
+   "voted": {
+      "message": "Ψηφίστηκε!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Ιστοσελίδα"
+   },
+   "whatEnableTestingServer": {
+      "message": "Οι υποβολές και οι ψήφοι ΔΕΝ ΘΑ ΜΕΤΡΗΣΟΥΝ προς τον κεντρικό διακομιστή. Χρησιμοποίησέ το μόνο για δοκιμή."
+   },
+   "whatExportOptions": {
+      "message": "Αυτές είναι όλες σας οι ρυθμίσεις σε αρχείο JSON. Αυτό περιλαμβάνει και την Ταυτότητα Χρήστη, οπότε μοιραστείτε το με προσοχή."
+   },
+   "whatForceChannelCheck": {
+      "message": "Από προεπιλογή, παραλείπονται τμήματα αμέσως πριν ακόμα ανοιχνευτεί ποιό κανάλι είναι. Από προεπιλογή, ορισμένα τμήματα στην αρχή του βίντεο μπορεί να παραλείπονται στα επιτρεπόμενα κανάλια που είναι στην «Λίστα αποδοχής». Η ενεργοποίηση αυτής της επιλογής θα το αποτρέψει αυτό, αλλά μετά η παράλειψη όλων των τμημάτων θα έχει μια μικρή καθυστέρηση, καθώς η απόκτυση της ταυτότητας καναλιού μπορεί να πάρει κάμποσο χρόνο. Αυτή η καθυστέρηση μπορεί να είναι μη αντιληπτή αν έχετε γρήγορη σύνδεση στο διαδίκτυο."
+   },
+   "whatQueryByHashPrefix": {
+      "message": "Αντί να ζητάτε τα τμήματα από τον διακομιστή μέσω ολόκληρης της ταυτότητας του βίντεο, στέλνονται μόνο οι πρώτοι 4 κομμένοι χαρακτήρες από την ταυτότητα του βίντεο. Ο διακομιστής στέλνει πίσω δεδομένα για όλα τα βίντεο με παρόμοιους κομμένους χαρακτήρες."
+   },
+   "whatRefetchWhenNotFound": {
+      "message": "Εάν το βίντεο είναι καινούργιο, και δεν έχουν βρεθεί τμήματα, θα συνεχιστεί η αναζήτηση κάθε μερικά λεπτά, ενώ το παρακολουθείτε."
+   },
+   "whatViewTracking": {
+      "message": "Αυτή η δυνατότητα ανιχνεύει ποια τμήματα έχετε παραλείψει, ώστε να ξέρουν εκείνοι που τα υπέβαλαν, πόσο έχουν βοηθήσει τους συνανθρώπους τους, και χρησιμοποιείται ως μέτρηση μαζί με τις θετικές ψήφους, ώστε να βεβαιωθεί η βάση δεδομένων πως δεν είναι ανεπιθύμητο τμήμα. Κάθε φορά που παραλείπετε κάποιο τμήμα ή επέκταση το στέλνει στον διακομιστή. Ελπίζουμε οι περισσότεροι χρήστες να μην αλλάξουν αυτή τη ρύθμιση, ώστε ο αριθμός μη προβολής τμημάτων να είναι ακριβής. :)"
+   },
+   "whitelistChannel": {
+      "message": "Λίστα αποδοχής καναλιών"
+   },
+   "youHaveSavedTime": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": "Έχετε γλιτώσει τον κόσμο από"
+   },
+   "youHaveSavedTimeEnd": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": " της ζωής τους"
+   },
+   "youHaveSkipped": {
+      "message": "Έχετε παραλείψει "
+   },
+   "youMustSelectACategory": {
+      "message": "Πρέπει να επιλέξετε Κατηγορία για όλα τα τμήματα που υποβάλετε!"
+   },
+   "yourWork": {
+      "description": "Used to describe the section that will show you the statistics from your submissions.",
+      "message": "Η δουλειά σας"
+   },
+   "youtubePermissionRequest": {
+      "message": "Φαίνεται ότι το SponsorBlock δεν μπορεί να επικοινωνήσει με το YouTube API. Για να το διορθώσετε αυτό, αποδεχτείτε την προτροπή άδειας, που θα εμφανιστεί στη συνέχεια, περιμένετε μερικά δευτερόλεπτα και στη συνέχεια ανανεώστε τη σελίδα."
+   }
+}

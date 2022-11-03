@@ -1,0 +1,488 @@
+{
+   "400": {
+      "message": "الخادم قال أن هذا الطلب خاطيء"
+   },
+   "409": {
+      "message": "تم تقديم هذا بالفعل من قبل"
+   },
+   "429": {
+      "message": "لقد قدمت الكثير من اوقات الرعاية الاعلانية لهذا الفيديو الواحد، هل أنت متأكد من وجود هذا العدد؟"
+   },
+   "ContinueVoting": {
+      "message": "متابعة التصويت"
+   },
+   "CopyAndDownvote": {
+      "message": "نسخ وتصويت معارض"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "تخطي الرعاية الاعلانية ، التسول في الاشتراك والمزيد على مقاطع الفيديو على اليوتيوب. التبليغ عن الرعايه الاعلانيه علي مقاطع الفيديو التي تشاهدها لتوفير وقتك و وقت الآخرين."
+   },
+   "Dismiss": {
+      "message": "إلغاء"
+   },
+   "Donate": {
+      "message": "تبرع"
+   },
+   "Editing": {
+      "message": "التعديل"
+   },
+   "GotIt": {
+      "description": "Used as the button to dismiss a tooltip",
+      "message": "فهمت"
+   },
+   "Hide": {
+      "message": "لا تظهر أبداً"
+   },
+   "LearnMore": {
+      "message": "معرفة المزيد"
+   },
+   "Loading": {
+      "message": "جاري التحميل..."
+   },
+   "OpenCategoryWikiPage": {
+      "message": "افتح صفحة ويكي هذه الفئة."
+   },
+   "Options": {
+      "message": "خيارات"
+   },
+   "Segment": {
+      "message": "جزء"
+   },
+   "Segments": {
+      "message": "أجزاء"
+   },
+   "SponsorTimeEditScrollNewFeature": {
+      "message": "استخدم عجلة الماوس أثناء التمرير فوق مربع التعديل لضبط الوقت بسرعة. يمكن استخدام مجموعات مفتاح ctrl أو Shift لضبط التغييرات."
+   },
+   "Submissions": {
+      "message": "المشاركات"
+   },
+   "SubmitTimes": {
+      "message": "إرسال الأجزاء"
+   },
+   "Unknown": {
+      "message": "حدث خطأ في إرسال توقيت الرعاة الخاص بك، الرجاء المحاولة مرة أخرى لاحقاً."
+   },
+   "Username": {
+      "message": "اسم المستخدم"
+   },
+   "add": {
+      "message": "أضِف"
+   },
+   "autoHideInfoButton": {
+      "message": "إخفاء تلقائي لزر \"معلومات\""
+   },
+   "bracketNow": {
+      "message": "(الآن)"
+   },
+   "cancel": {
+      "message": "إلغاء"
+   },
+   "category": {
+      "message": "الفئة"
+   },
+   "categoryUpdate1": {
+      "message": "الفئات هنا!"
+   },
+   "category_exclusive_access": {
+      "message": "وصول حصري"
+   },
+   "category_filler_short": {
+      "message": "حشو"
+   },
+   "category_music_offtopic": {
+      "message": "الموسيقى: مقطع غير موسيقي"
+   },
+   "category_outro": {
+      "message": "الخاتمة/تترات النهاية"
+   },
+   "category_preview": {
+      "message": "معاينة/خلاصة"
+   },
+   "category_sponsor": {
+      "message": "الراعي"
+   },
+   "change": {
+      "message": "تغيير"
+   },
+   "channelWhitelisted": {
+      "message": "القناة في القائمة البيضاء!"
+   },
+   "chooseACategory": {
+      "message": "اختر فئة"
+   },
+   "clearThis": {
+      "message": "هل أنت متأكد أنك تريد حذف هذا؟\n\n"
+   },
+   "clearTimes": {
+      "message": "مسح الأجزاء"
+   },
+   "clearTimesButton": {
+      "message": "مسح الأوقات"
+   },
+   "closePopup": {
+      "message": "إغلاق النافذة المنبثقة"
+   },
+   "confirmMSG": {
+      "message": "لتحرير أو حذف قيّم فردياً، انقر فوق زر المعلومات أو فتح الإضافة عن طريق النقر على أيقونة الإضافة في الزاوية اليمنى العليا."
+   },
+   "connectionError": {
+      "message": "حدث خطأ في الاتصال. رمز الخطأ: "
+   },
+   "copyPublicID": {
+      "message": "نسخ معرف المستخدم العام"
+   },
+   "createdBy": {
+      "message": "أنشئت من قِبل"
+   },
+   "darkModeOptionsPage": {
+      "message": "الوضع الداكن في صفحة الخيارات"
+   },
+   "dayAbbreviation": {
+      "description": "100d",
+      "message": "ي"
+   },
+   "delete": {
+      "message": "حذف"
+   },
+   "disableAutoSkip": {
+      "message": "تعطيل التخطي التلقائي"
+   },
+   "discordAdvert": {
+      "message": "انضم إلى سيرفر \"ديسكورد\" الرسمي لتقديم اقتراحات وتعليقات!"
+   },
+   "downvoteDescription": {
+      "message": "خاطئ/التوقيت غير صحيح"
+   },
+   "edit": {
+      "message": "تعديل"
+   },
+   "enableAutoSkip": {
+      "message": "تفعيل التخطي التلقائي"
+   },
+   "errorCode": {
+      "message": "رمز الخطأ: "
+   },
+   "exportOptionsCopy": {
+      "message": "تعديل/نسخ"
+   },
+   "exportOptionsDownload": {
+      "message": "حفظ إلى ملف"
+   },
+   "exportOptionsUpload": {
+      "message": "تحميل من ملف"
+   },
+   "full": {
+      "description": "Used for the name of the option to label an entire video as sponsor or self promotion.",
+      "message": "فيديو كامل"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "سبونسر بلوك لليوتيوب - تخطي الرعاية الاعلانية"
+   },
+   "guidelines": {
+      "message": "الإرشادات"
+   },
+   "help": {
+      "message": "المساعدة"
+   },
+   "helpPageCopyOfDatabase": {
+      "message": "هل يمكنني الحصول على نسخة من قاعدة البيانات؟ ماذا يحدث إذا اختفيت؟"
+   },
+   "helpPageCopyOfDatabase1": {
+      "message": "قاعدة البيانات عامة ومتاحة على"
+   },
+   "helpPageNews": {
+      "message": "الأخبار وكيف تم صنعها"
+   },
+   "helpPageSourceCode": {
+      "message": "أين يمكنني الحصول على شفرة المصدر؟"
+   },
+   "helpPageTooSlow": {
+      "message": "هذا بطيء جداً"
+   },
+   "hideButtons": {
+      "message": "إخفاء الأزرار على مشغل اليوتيوب"
+   },
+   "hideButtonsDescription": {
+      "message": "هذا يخفي الأزرار التي تظهر على مشغل اليوتيوب لإرسال أجزاء للتخطي."
+   },
+   "hideDeleteButton": {
+      "message": "إخفاء زر \"حذف\" على مشغّل اليوتيوب"
+   },
+   "hideDonationLink": {
+      "message": "إخفاء رابط التبرع"
+   },
+   "hideInfoButton": {
+      "message": "إخفاء زر \"معلومات\" على مشغّل اليوتيوب"
+   },
+   "hideThis": {
+      "message": "إخفاء هذا"
+   },
+   "hitGoBack": {
+      "message": "قم الضغط علي تخطي للوصول إلى المكان الذي أتيت منه."
+   },
+   "hourAbbreviation": {
+      "description": "100h",
+      "message": "س"
+   },
+   "hourLower": {
+      "message": "ساعة"
+   },
+   "hoursLower": {
+      "message": "ساعات"
+   },
+   "incorrectCategory": {
+      "message": "تغيير الفئة"
+   },
+   "inspect": {
+      "message": "فحص"
+   },
+   "manualPaused": {
+      "message": "تم إيقاف الموقت"
+   },
+   "minLower": {
+      "message": "دقيقة"
+   },
+   "minsLower": {
+      "message": "دقائق"
+   },
+   "moreCategories": {
+      "message": "المزيد من الفئات"
+   },
+   "multipleSegments": {
+      "message": "أجزاء متعددة"
+   },
+   "mute": {
+      "message": "كتم"
+   },
+   "mute_category": {
+      "message": "كتم {0}؟"
+   },
+   "muted": {
+      "description": "Example: Sponsor Muted",
+      "message": "تم كتم {0}"
+   },
+   "noVideoID": {
+      "message": "لم يتم العثور على فيديو يوتيوب.\nإذا كان هذا غير صحيح، قم بتحديث الصفحة."
+   },
+   "notSet": {
+      "message": "لم يتم التعيين"
+   },
+   "noticeVisibilityLabel": {
+      "description": "Option label",
+      "message": "تخطي ظهور الإشعار"
+   },
+   "openPopup": {
+      "message": "فتح نافذة سبونسر بلوك المنبثقة"
+   },
+   "optionsTabAdvanced": {
+      "description": "Appears in Options as a tab header for advanced/niche options. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "متنوع"
+   },
+   "optionsTabBackup": {
+      "description": "Appears in Options as a tab header for options related to saving/restoring your settings. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "النسخ الاحتياطي/الاستعادة"
+   },
+   "optionsTabBehavior": {
+      "description": "Appears in Options as a tab header for options related to categories and skipping behavior. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "سلوك"
+   },
+   "optionsTabInterface": {
+      "description": "Appears in Options as a tab header for options related to GUI and sounds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "واجهه المستخدم"
+   },
+   "optionsTabKeyBinds": {
+      "description": "Appears in Options as a tab header for keybinds. To fit inside the button, it should not be longer than ~20-25 characters (depending on their width).",
+      "message": "اختصارات لوحة المفاتيح"
+   },
+   "paused": {
+      "message": "ايقاف مؤقت"
+   },
+   "permissionRequestFailed": {
+      "message": "فشل طلب الإذن ، هل نقرت على رفض؟"
+   },
+   "permissionRequestSuccess": {
+      "message": "نجح طلب الإذن!"
+   },
+   "popupHint": {
+      "message": "تلميح: يمكنك إعداد اختصارات مفاتيح للتقديم في الخيارات"
+   },
+   "preview": {
+      "message": "معاينة"
+   },
+   "publicStats": {
+      "message": "يستخدم هذا في صفحة الإحصائيات العامة لإظهار مقدار مساهمتك. قم برؤيتها"
+   },
+   "readTheGuidelines": {
+      "description": "Show the first time they submit or if they are \"high risk\"",
+      "message": "اقرأ الإرشادات!!"
+   },
+   "recordTimesDescription": {
+      "message": "إرسال"
+   },
+   "refreshSegments": {
+      "message": "تحديث الأجزاء"
+   },
+   "removeFromWhitelist": {
+      "message": "إزالة القناة من القائمة البيضاء"
+   },
+   "reportButtonInfo": {
+      "message": "الإبلاغ عن هذا التقديم كغير صحيح."
+   },
+   "reportButtonTitle": {
+      "message": "إبلاغ"
+   },
+   "reset": {
+      "message": "إعادة تعيين"
+   },
+   "reskip": {
+      "message": "اعاده التخطي"
+   },
+   "save": {
+      "message": "حفظ"
+   },
+   "savedPeopleFrom": {
+      "message": "لقد وفّرت على الناس "
+   },
+   "serverDown": {
+      "message": "يبدو أن الخادم غير متصل. تواصل مع المطوّر على الفور."
+   },
+   "setSkipShortcut": {
+      "description": "Keybind label",
+      "message": "تخطي الجزء"
+   },
+   "setStartSponsorShortcut": {
+      "description": "Keybind label",
+      "message": "بدء/إيقاف الجزء"
+   },
+   "setSubmitKeybind": {
+      "description": "Keybind label",
+      "message": "إرسال الأجزاء"
+   },
+   "setUsername": {
+      "message": "تعيين اسم مستخدم"
+   },
+   "showButtons": {
+      "message": "إظهار الأزرار على مشغل اليوتيوب"
+   },
+   "showDeleteButton": {
+      "message": "إظهار زر \"حذف\" على مشغّل اليوتيوب"
+   },
+   "showInfoButton": {
+      "message": "إظهار زر \"معلومات\" على مشغّل اليوتيوب"
+   },
+   "showNotice": {
+      "message": "إظهار الإشعار مرة أخرى"
+   },
+   "showSkipButton": {
+      "message": "إبقاء زر \"تخطي للعنوان الرئيس\" على المشغّل"
+   },
+   "skip": {
+      "message": "تخطي"
+   },
+   "skip_category": {
+      "message": "تخطي {0}؟"
+   },
+   "skip_to_category": {
+      "description": "Used for skipping to things (Skip to Highlight)",
+      "message": "تخطي إلى {0}؟"
+   },
+   "skipped": {
+      "description": "Example: Sponsor Skipped",
+      "message": "تم تخطي {0}"
+   },
+   "skipped_to_category": {
+      "description": "Used for skipping to things (Skipped to Highlight)",
+      "message": "تم التخطي إلى {0}"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "الشفرة المصدرية"
+   },
+   "sponsor404": {
+      "message": "لم يتم العثور على أجزاء"
+   },
+   "sponsorCancel": {
+      "message": "إلغاء إنشاء جزء"
+   },
+   "sponsorEnd": {
+      "message": "ينتهي الجزء الآن"
+   },
+   "sponsorFound": {
+      "message": "يحتوي هذا الفيديو على أجزاء في قاعدة البيانات!"
+   },
+   "sponsorStart": {
+      "message": "يبدأ الجزء الآن"
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "سيظهر تحرير القسم بعد النقر على إرسال"
+   },
+   "submit": {
+      "message": "إرسال"
+   },
+   "submitCheck": {
+      "message": "هل أنت متيقّن من إرسال هذا؟"
+   },
+   "submitTimesButton": {
+      "message": "إرسال الأوقات"
+   },
+   "success": {
+      "message": "تم بنجاح!"
+   },
+   "supportOtherSites": {
+      "message": "دعم مواقع يوتيوب الطرف الثالث"
+   },
+   "supportedSites": {
+      "message": "المواقع المدعومة: "
+   },
+   "to": {
+      "description": "Used between segments. Example: 1:20 to 1:30",
+      "message": "إلى"
+   },
+   "unbind": {
+      "description": "Unbind keyboard shortcut",
+      "message": "إلغاء ربط"
+   },
+   "unmute": {
+      "message": "إلغاء الكتم"
+   },
+   "unskip": {
+      "message": "الرجوع في التخطي"
+   },
+   "unsubmitted": {
+      "message": "غير مرسلة"
+   },
+   "upvoteButtonInfo": {
+      "message": "التصويت على هذا الإرسال"
+   },
+   "viewLeaderboard": {
+      "message": "لوحة الصدارة"
+   },
+   "voteOnTime": {
+      "message": "صوّت لجزء"
+   },
+   "voted": {
+      "message": "تم التصويت!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "موقع الويب"
+   },
+   "whitelistChannel": {
+      "message": "إضافة القناة إلى القائمة البيضاء"
+   },
+   "youHaveSavedTime": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": "لقد وفّرت على الناس"
+   },
+   "youHaveSavedTimeEnd": {
+      "description": "You've saved people from 887,362 segments (236d 15h 5.3 minutes of their lives).",
+      "message": " من حياتهم"
+   },
+   "youtubeKeybindWarning": {
+      "message": "هذا اختصار يوتيوب مدمج. هل أنت متأكد أنك تريد استخدامه؟"
+   }
+}

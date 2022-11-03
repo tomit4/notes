@@ -1,0 +1,11 @@
+remote_id = '12242749'
+size = [
+    890,
+    236,
+    800,
+    600,
+]
+fav = []
+
+[options]
+recent-sessions-style = 'list'

@@ -1,0 +1,50 @@
+{
+   "background": {
+      "scripts": [ "ua-parser.min.js", "common.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_popup": "data/popup/index.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "data/inject.js" ],
+      "match_about_blank": true,
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "homepage_url": "https://add0n.com/useragent-switcher.html",
+   "icons": {
+      "128": "data/icons/active/128.png",
+      "16": "data/icons/active/16.png",
+      "18": "data/icons/active/18.png",
+      "19": "data/icons/active/19.png",
+      "256": "data/icons/active/256.png",
+      "32": "data/icons/active/32.png",
+      "36": "data/icons/active/36.png",
+      "38": "data/icons/active/38.png",
+      "48": "data/icons/active/48.png",
+      "64": "data/icons/active/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxQpKpy712FYWcJR4QduPndXrgeJ1on1H/Q1/59O4etYCUDRgeWxSFOSZdAV8Je0VxEQHU70bFxOZFMaIL8JQ6v0pZDGrJaTQIJ2XnrXzOObRC2obHJG/ZGIh7ZJDQQnEpiT7s/h5VcAChw4y/Zw64+aHzIc/DuV7G6cKYo8eY41MEAnmcLSBjXIgtOLJ1PbgiYI1KawtDjJkkQH6A339pIc2gEyiZq4WYrK8ej3GJnMdsXMSJUxdoV54ykOg8CBiB+qudmQK039TCzTSLI6O5aIVcCPyoJMpXko7qLzQUZE6LG1i4dJMTnoziU1E36/vv/Mn4FpvtIF9qMf8NMmiQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extensionName__",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": true,
+      "page": "data/options/index.html"
+   },
+   "permissions": [ "tabs", "storage", "\u003Call_urls>", "webNavigation", "webRequest", "webRequestBlocking", "contextMenus" ],
+   "storage": {
+      "managed_schema": "schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.4.7"
+}

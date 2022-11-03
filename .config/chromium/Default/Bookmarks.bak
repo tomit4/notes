@@ -1,0 +1,68 @@
+{
+   "checksum": "34455f10c586339eb463bc6a0ded843d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13306208070702762",
+            "guid": "debde92e-6b1d-40f5-9afc-abd74667daf0",
+            "id": "5",
+            "name": "Sign in · GitLab",
+            "type": "url",
+            "url": "https://gitlab.com/users/sign_in/"
+         }, {
+            "date_added": "13306222651649027",
+            "guid": "8c362b1f-818d-4029-b536-f63188f6d70f",
+            "id": "7",
+            "name": "Courses Dashboard | Wes Bos",
+            "type": "url",
+            "url": "https://courses.wesbos.com/account/signin"
+         }, {
+            "date_added": "13306313500344321",
+            "guid": "3cf04a2e-b622-4d4f-b391-ff577e46c855",
+            "id": "9",
+            "name": "Mothereffing HSL",
+            "type": "url",
+            "url": "https://mothereffinghsl.com/"
+         }, {
+            "date_added": "13306313637763785",
+            "guid": "dacb35f6-1443-4bb2-8d19-0e0776590e08",
+            "id": "10",
+            "name": "Icon Font & SVG Icon Sets ❍ IcoMoon",
+            "type": "url",
+            "url": "https://icomoon.io/"
+         }, {
+            "date_added": "13306594491065113",
+            "guid": "7f35dc0b-0cce-4af1-b76b-c0864168b745",
+            "id": "13",
+            "name": "DevDocs API Documentation",
+            "type": "url",
+            "url": "https://devdocs.io/"
+         } ],
+         "date_added": "13294536544575135",
+         "date_modified": "13306594491065113",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13294536544575142",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13294536544575143",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

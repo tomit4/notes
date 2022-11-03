@@ -1,0 +1,126 @@
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --link-color: #234da7;
+    --text-color: #444;
+    --text-color-weak: #777;
+    --text-color-em: #333;
+    --bg-color: #fff;
+    --border-color: #ccc;
+    --dash-color: #ddd;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #8AB4F8;
+    --text-color: #E8EAED;
+    --text-color-weak: #a4a5a8;
+    --text-color-em: #fff;
+    --bg-color: #35363A;
+    --border-color: #ccc;
+    --shadow-color: #ddd;
+    --dash-color: #60666b;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size:14px;
+}
+
+a {
+  color: var(--link-color);
+}
+
+
+
+:root {
+  --drop-area-border: 1px dashed #4061a7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --drop-area-gradient: repeating-linear-gradient(
+        -45deg,
+        rgba(245, 249, 255, 1),
+        rgba(245, 249, 255, 1) 10px,
+        rgba(0, 0, 0, 0) 10px,
+        rgba(0, 0, 0, 0) 20px
+      );
+    --dragged-element-bg: rgba(255, 255, 255, 0.30);
+    --dragged-element-box-shadow: 2px 2px 16px var(--dash-color);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --drop-area-gradient: repeating-linear-gradient(
+        -45deg,
+        rgba(59, 64, 84, 1),
+        rgba(59, 64, 84, 1) 10px,
+        rgba(0, 0, 0, 0) 10px,
+        rgba(0, 0, 0, 0) 20px
+      );
+    --dragged-element-bg: rgba(255, 255, 255, 0.15);
+    --dragged-element-box-shadow: none;
+  }
+}
+
+textarea {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+input, select, textarea, button {
+  font-family:inherit;
+}
+
+.clickable {
+  cursor:pointer;
+  color: var(--link-color);
+}
+input[type=text] {
+  padding: 4px 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  outline: 0;
+  -webkit-appearance: textfield;
+}
+.tabGroupTitleText {
+  color: var(--text-color);
+}
+
+.spinner {
+  margin-top: 32px;
+  margin-left: 32px;
+  width: 70px;
+  text-align: center;
+  display: inline-block;
+}
+
+.spinner > div {
+  background-color: var(--text-color-weak);
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner div { margin-left:6px }
+.spinner div:nth-child(1) { animation-delay: -0.72s; }
+.spinner div:nth-child(2) { animation-delay: -0.64s; }
+.spinner div:nth-child(3) { animation-delay: -0.48s; }
+.spinner div:nth-child(4) { animation-delay: -0.32s; }
+.spinner div:nth-child(5) { animation-delay: -0.16s; }
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

@@ -1,0 +1,92 @@
+{
+   "appDesc": {
+      "message": "Snowflake הוא תעבורה נתיקה של WebRTC עבור Tor."
+   },
+   "badgeCookiesOff": {
+      "message": "עוגיות אינן מאופשרות."
+   },
+   "browser": {
+      "message": "Use Snowflake"
+   },
+   "bugTracker": {
+      "message": "\u003Ca href=\"https://gitlab.onionize.space/\">Request an account\u003C/a> at the Tor Project GitLab, then \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues\">open a new issue\u003C/a> in the Snowflake project."
+   },
+   "censoredUsers": {
+      "message": "אם הגישה אל האינטרנט שלך מצונזרת, אתה צריך להוריד את \u003Ca href=\"https://www.torproject.org/download/\">דפדפן Tor\u003C/a>."
+   },
+   "descriptive": {
+      "message": "אנא נסה להיות מפורט ככל האפשר עם הכרטיס שלך ואם אפשר כלול הודעות יומן שיעזרו לנו להפיק מחדש את התקל."
+   },
+   "embed": {
+      "message": "שבץ"
+   },
+   "extension": {
+      "message": "Run a Proxy"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fileBug": {
+      "message": "אם אתה נתקל בבעיות עם Snowflake כלקוח או כייפוי כוח, אנא שקול הגשת דוח תקל. יש שתי דרכים להגיש דוח תקל:"
+   },
+   "installChrome": {
+      "message": "התקן ב־Chrome"
+   },
+   "installExtension": {
+      "message": "אם הגישה אל האינטרנט שלך \u003Cstrong>אינה\u003C/strong> מצונזרת אתה צריך לשקול להתקין את ההרחבה Snowflake כדי לעזור למשתמשים ברשתות מצונזרות. אין צורך לדאוג לגבי אילו אתרים אנשים משיגים גישה דרך ייפוי הכוח שלך. כתובת IP הגלויה לגלישה שלהם תתאים אל צומת יציאת Tor שלהם, לא שלך."
+   },
+   "installFirefox": {
+      "message": "התקן ב־Firefox"
+   },
+   "installStandalone": {
+      "message": "If you would like to run a command-line version of the Snowflake proxy on your desktop or server, see our \u003Ca href=\"https://community.torproject.org/relay/setup/snowflake/standalone/\">community documentation\u003C/a> for running a standalone Snowflake proxy."
+   },
+   "looksLike": {
+      "message": "שנראה כך:"
+   },
+   "popupBridgeUnreachable": {
+      "message": "לא היה ניתן להתחבר אל הגשר."
+   },
+   "popupDescOn": {
+      "message": "מספר של משתמשים אשר Snowflake שלך עזר להם לעקוף צנזורה במהלך 24 השעות האחרונות: $1"
+   },
+   "popupEnabled": {
+      "message": "מאופשר"
+   },
+   "popupLearnMore": {
+      "message": "למד עוד"
+   },
+   "popupRetry": {
+      "message": "נסה שוב"
+   },
+   "popupRetrying": {
+      "message": "מנסה מחדש…"
+   },
+   "popupStatusOff": {
+      "message": "Snowflake מכובה"
+   },
+   "popupStatusOn": {
+      "message": "מספר של משתמשים המחוברים כרגע: $1"
+   },
+   "popupStatusReady": {
+      "message": "Snowflake שלך מוכן לעזור למשתמשים לעקוף צנזורה"
+   },
+   "popupWebRTCOff": {
+      "message": "איפיון WebRTC לא התגלה."
+   },
+   "possible": {
+      "message": "כעת זה אפשרי לשבץ את תג Snowflake בכל אתר שהוא:"
+   },
+   "reportingBugs": {
+      "message": "מדווח על תקלים"
+   },
+   "sharedAccount": {
+      "message": "File an \u003Ca href=\"https://anonticket.onionize.space/\">anonymous ticket\u003C/a> by generating an identifier and logging in with it.  Then, find the Snowflake project in the \u003Cstrong>List of all projects\u003C/strong> and create a new issue."
+   },
+   "support": {
+      "message": "See the \u003Ca href=\"https://support.torproject.org/censorship/\">Censorship\u003C/a> topic in Tor's \u003Ca href=\"https://support.torproject.org/\">Support Portal\u003C/a>."
+   },
+   "websiteIntro": {
+      "message": "Snowflake is a system to defeat internet censorship. People who are censored can use Snowflake to access the internet. Their connection goes through Snowflake proxies, which are run by volunteers. For more detailed information about how Snowflake works see our \u003Ca href=\"https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/home\">documentation wiki\u003C/a>."
+   }
+}

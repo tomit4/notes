@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function b_help() {
+    echo -e "${txtgreen} Usage: bgit <optional flags>"
+    echo -e "${txtblue} Description: bgit is a simple shell script that displays\n  a series of prompts to automate some of the everyday git process."
+    echo -e "${txtgreen}\n Options and Arguments:"
+    echo -e "${txtblue} bgit\t\t\t${txtgreen}prompts for git add, git commit -m, and git push"
+    echo -e "${txtblue} bgit -i \t\t${txtgreen}prompts to initialize repository"
+    echo -e "${txtblue} bgit -d \t\t${txtgreen}prompts to delete repository (github only)"
+    echo -e "${txtblue} bgit -l \t\t${txtgreen}prompts to show log of previous commits"
+    echo -e "${txtblue} bgit -r \t\t${txtgreen}prompts to revert back to an old commit"
+    echo -e "${txtblue} bgit -h \t\t${txtgreen}presents this help message"
+}
