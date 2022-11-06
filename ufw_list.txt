@@ -1,0 +1,27 @@
+Status: active
+
+To                         Action      From
+--                         ------      ----
+443                        ALLOW       Anywhere                  
+22                         DENY        Anywhere                  
+21                         LIMIT       Anywhere                  
+9050                       ALLOW       Anywhere                  
+8118                       ALLOW       Anywhere                  
+3306                       DENY        Anywhere                  
+5432                       DENY        Anywhere                  
+587                        ALLOW       Anywhere                  
+5000                       ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+Anywhere                   DENY        18.171.2.246              
+Anywhere                   DENY        35.177.10.231             
+443 (v6)                   ALLOW       Anywhere (v6)             
+22 (v6)                    DENY        Anywhere (v6)             
+21 (v6)                    LIMIT       Anywhere (v6)             
+9050 (v6)                  ALLOW       Anywhere (v6)             
+8118 (v6)                  ALLOW       Anywhere (v6)             
+3306 (v6)                  DENY        Anywhere (v6)             
+5432 (v6)                  DENY        Anywhere (v6)             
+587 (v6)                   ALLOW       Anywhere (v6)             
+5000 (v6)                  ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)             
+
