@@ -2,6 +2,8 @@ NOTES ON NEOVIM AND MY PERSONAL NEOVIM WORKFLOW
 
 FOR OFFICIAL DOCUMENTATION OF NEOVIM, PLEASE VISIT THEIR GITHUB: https://github.com/neovim/neovim
 
+ThePrimeagen: Command, Count, Motion
+
 I have created this small txt file to document my basic neoneovim work flow
 It is combined with notes about my espanso keybindings, which are meant to aid in the workflow
 Keep in mind these are specific to my neovim setup and will definitely not work in all neovim setups
@@ -27,6 +29,7 @@ w - go to the right to the beginning of the next word (delimited by spaces)
 b or shift b - go to the left to the beginning of the last word (delimited by spaces)
 e or shift e - go to the right to the ending of the next word (delimited by spaces)
 0 - go to beginning of line (prepend with a number to go that many characters)
+_ - go the first character in the line
 $ - go to the end of the line (prepend with a number to go that many characters)
 gg - go to top of the page
 shift + g - go to the bottom of the page
@@ -60,6 +63,7 @@ interesting use case:
 di( - will delete everything encapsulated in the following parenthesis
 di{ - will delete everything encapsulated in the following curly brackets
 di[ - will delte everything encapsulated in the following square brackets
+di" - will delte everything encapsulated in the following quotation marks
 
 y - beginning y keybinding, yanks or copies character or word for pasting elsewhere using the p keybinding
 (can be prepended by a number, and multiples the amount of words/lines to be copied)
@@ -76,14 +80,17 @@ y$ - copies from current cursor position to end of line
 yG - copies from current cursor position to the end of document
 ygg - copies from current cursor position to the beginning of document
 
-o - create line below
-shift + o - create line above
+o - create line below and go into insert mode
+shift + o - create line above and go into insert mod
 
-f - go to the next instant of the next character (i.e. f+g will go to the next instance of 'g')
+f - go to the next instance of the next character (i.e. f+g will go to the next instance of 'g')
 shift + f - same as f, but goes backwards (i.e. shift+f+g will go to the last instance of 'g')
 
 t - same as f, but will go to one character before entered character
 shift + t -same as shift + f, but goes backwards to one character before entered character
+
+; - after f or t search of character, iterates over to the next instance of it in the line
+, - after f or t search of character, iterates over to the last instance of it in the line
 
 GOOD FOR USE WITHIN FUNCTITON ENCAPSULATIONS
 [{ - go to beginning encapsulation that begins with { ( can also be used with '(' )
@@ -105,12 +112,13 @@ v - enter VISUAL mode
 shift + v enter VISUAL mode and select the current line
 shift + r enter REPLACE mode (think of this as INSERT in windows/mac, simply replaces all text beneath cursor while in this mode)
 ctrl + v - enter VISUAL BLOCK MODE
+shift + v - enteri VISUAL LINE MODE
 
 NO MATTER WHAT MODE YOU'RE IN, you can always:
 <ESC> to return to NORMAL MODE
+ctrl + { to return to NORMAL MODE
 
 INSERT MODE
-
 tab - configured for four spaces in my case
 
 VISUAL MODE
@@ -121,6 +129,9 @@ and you can use standard and custom commands here that would normally apply in N
 CTRL + V ENTERS VISUAL BLOCK MODE
 I only really use this for muliple commenting out of lines
 (ctrl + v + j or k and then ctrl+c to comment out code)
+
+VISUAL LINE MODE
+y - yank the line (more useful than yy, will past without having to create a new line)
 
 --Custom Keybindings
 
