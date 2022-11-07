@@ -48,7 +48,7 @@ require('packer').startup(function()
     use 'luochen1990/rainbow'
     use 'windwp/nvim-autopairs'
     use 'simeji/winresizer'
-    use '907th/vim-auto-save'
+    -- use '907th/vim-auto-save'
     use 'rinx/nvim-ripgrep'
     use 'sbdchd/neoformat' -- general formatter for various languages
     use 'rhysd/vim-clang-format' -- formatter for c and c++
