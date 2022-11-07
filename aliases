@@ -163,7 +163,6 @@ alias {sub,subreddit,subrd}="tuir -s"
 alias qwiki="wik -i"
 alias toolongdidntread="tldr"
 alias cheatsheet="cheat"
-alias stallman="vrms"
 alias {trans,translate}="gtktranslate"
 
 # gif recording, peek doesn't work right now...
