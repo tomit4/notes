@@ -358,6 +358,8 @@ alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
 # Blogs
 # Unix Sheikh, very good info regarding Unix and Linux
 alias unixsheikh="links https://unixsheikh.com"
+# A reddit like forum similar also to hackernews
+alias lobsters="links https://lobste.rs"
 #Julia Evans, developer and general programming blog
 alias jvns="librewolf https://jvns.ca &"
 # inventor of REST blog:
