@@ -186,6 +186,6 @@ paru dirb (1st option)
 
 Go to Chrome store and install CSS Dig on brave
 
-Install slop
+Install slop and gifsicle
 
-doas pacman -S slop
+doas pacman -S slop gifsicle

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -lt 3 ] ; then
+    printf "not enough arguments given\n\
+usage: gifpress input.gif width height\n"
+    exit 1
+fi
+
+if ! command -v gifsicle &> /dev/null ; then
+    echo "gifpress not installed!"
+    exit 1
+fi
+
+gifsicle "$1" --resize "$2x$3" > "$1_resized.gif"
