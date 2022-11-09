@@ -92,6 +92,9 @@ shift + t -same as shift + f, but goes backwards to one character before entered
 ; - after f or t search of character, iterates over to the next instance of it in the line
 , - after f or t search of character, iterates over to the last instance of it in the line
 
+* - search forward the word currently under the cursor
+# - search backward the word currently under the cursor
+
 GOOD FOR USE WITHIN FUNCTITON ENCAPSULATIONS
 [{ - go to beginning encapsulation that begins with { ( can also be used with '(' )
 ]} - got o the ending encapsulation that ends with } ( can also be used with ')' )
