@@ -4,6 +4,8 @@
 
 pacman -Q | awk '!($2="")' | tr '\n' ' ' > my_pacman_packages.txt
 
+pacman -Qm | awk '{ print $1 }' | tr '\n' ' ' > my_paru_packages.txt
+
 find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g' | tr '\n' ' ' > my_npm_packages.txt
 
 pip list | awk '{ print $1 }' | tr '\n' ' ' > my_pip_packages.txt
