@@ -13,7 +13,7 @@ dependencycheck() {
     missingdependencies=0
     for ((i = 0; i < numdependencies; i++)) ; do
         if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            printf "dependency not met: %s" "${dependencies[$i]}"
+            printf "dependency not met: %s\n" "${dependencies[$i]}"
             missingdependencies=$((missingdependencies+1))
         fi
     done

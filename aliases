@@ -163,7 +163,7 @@ alias {sub,subreddit,subrd}="tuir -s"
 alias qwiki="wik -i"
 alias toolongdidntread="tldr"
 alias cheatsheet="cheat"
-alias {trans,translate}="ltranslate"
+alias {ltrans,trans,translate}="ltranslate"
 
 # gif recording, peek doesn't work right now...
 # help for this can be hard, use byzanz-record --help for more info, use silentcast to find x and y dimensions
