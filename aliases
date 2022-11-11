@@ -163,7 +163,7 @@ alias {sub,subreddit,subrd}="tuir -s"
 alias qwiki="wik -i"
 alias toolongdidntread="tldr"
 alias cheatsheet="cheat"
-alias {trans,translate}="gtktranslate"
+alias {trans,translate}="ltranslate"
 
 # gif recording, peek doesn't work right now...
 # help for this can be hard, use byzanz-record --help for more info, use silentcast to find x and y dimensions
@@ -216,11 +216,11 @@ alias slink="streamlink"
 alias scrot="scrot --count --delay"
 alias grip="grip 6969"
 alias sudoku="sku"
-alias figma="figma-linux"
+alias rbd="checkrebuild -v"
 # pip list and pip freeze command list pip packages
 
 #Particularly useful commands more to remember than to use as aliases:
-alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
+# alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias {rlast,dlast}="sed -i '$ d'" # removes last line of file
 alias athena="athena-jot"

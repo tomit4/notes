@@ -1,11 +1,11 @@
 #!/bin/bash
-# test
+
 # Changing over to ZSH for now, bashrc is kept here as emergency shell/posterity
 
 # to change default shell, use chsh -s $(which bash)
 # ~/.bashrc
 #
-history -c && history -w && hash -r
+# history -c && history -w && hash -r
 # create custom env variables:
 # export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
 export cproj="$HOME/Documents/Code/bash/bgit"
@@ -15,7 +15,7 @@ export TUIR_BROWSER=librewolf
 export EDITOR=nvim # enable vi keybindings in terminal and terminal applications
 
 set -o vi
-set -o noclobber
+# set -o noclobber
 
 export PF_INFO="ascii os kernel pkgs shell wm editor"
 
@@ -179,8 +179,8 @@ ex ()
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Displays current git branch if there is any and also styles bash prompt
-export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
-
+# export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
+export PS1='\[\033[01;34m\][\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\033[01;34m\033[37m'
 # Configure thefuck
 eval "$(thefuck --alias)"
 export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
