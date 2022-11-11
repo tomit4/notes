@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# set -vx
+
+if [ $# -lt 3 ]; then
+    printf "not enough arguments given\n\
+usage: ltranslate sourcelang targetlang query\n"
+    exit 1
+fi
+
+dependencycheck() {
+    numdependencies="$#"
+    dependencies=("$@")
+    missingdependencies=0
+    for ((i = 0; i < numdependencies; i++)) ; do
+        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+            printf "dependency not met: %s" "${dependencies[$i]}"
+            missingdependencies=$((missingdependencies+1))
+        fi
+    done
+    if [ $missingdependencies -gt 0 ]; then
+        exit 1
+    fi
+}
+
+dependencycheck curl awk sed
+
+ua='Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+url="https://libretranslate.de/translate"
+headers="Content-Type: application/json"
+source=$1
+target=$2
+query="${*:3}"
+
+main() {
+    result=$(curl -sAX POST "${ua}" "${url}" -H "${headers}" -d  '{"q": "'"${query}"'", "source": "'"${source}"'", "target": "'"${target}"'"}' |  awk -F ':' '{ print $2 }' | sed 's/"//g; s/}//g')
+    printf '%s'"${result}\n"
+}
+
+main
