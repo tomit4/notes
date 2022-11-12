@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# simple script to determine OS type and linux distribution, this is good for cross platform scripts
+
+distro=$(lsb_release -i | cut -f 2-)
+
+echo "Your OS is ${OSTYPE} and your distribution is: ${distro}"
+
+if [ "${distro}" == "Debian" ] ; then
+    echo "Debian Linux is your distro!"
+else
+    echo "Debian Linux is not your distro!"
+fi
+
+# from stack overflow: https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
+#
+# if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # ...
+# elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+# elif [[ "$OSTYPE" == "cygwin" ]]; then
+        # POSIX compatibility layer and Linux environment emulation for Windows
+# elif [[ "$OSTYPE" == "msys" ]]; then
+        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+# elif [[ "$OSTYPE" == "win32" ]]; then
+        # I'm not sure this can happen.
+# elif [[ "$OSTYPE" == "freebsd"* ]]; then
+        # ...
+# else
+        # Unknown.
+# fi
+# addendum:
+# On Windows, you will get msys for Git Bash/msysGit, and cygwin for Cygwin –
+#
+# # Detect the platform (similar to $OSTYPE)
+# OS="`uname`"
+# case $OS in
+  # 'Linux')
+    # OS='Linux'
+    # alias ls='ls --color=auto'
+    # ;;
+  # 'FreeBSD')
+    # OS='FreeBSD'
+    # alias ls='ls -G'
+    # ;;
+  # 'WindowsNT')
+    # OS='Windows'
+    # ;;
+  # 'Darwin')
+    # OS='Mac'
+    # ;;
+  # 'SunOS')
+    # OS='Solaris'
+    # ;;
+  # 'AIX') ;;
+  # *) ;;
+# esac
