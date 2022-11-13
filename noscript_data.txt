@@ -81,7 +81,6 @@
         "https://www.quora.com",
         "https://sheldonbrown.com//",
         "https://google-webfonts-helper.herokuapp.com/fonts",
-        "https://leafbytes.com",
         "https://roy.gbiv.com/untangled/",
         "duckduckgo.com",
         "https://cssbattle.dev",
@@ -148,9 +147,6 @@
         "https://swiperjs.com",
         "https://www.1001fonts.com",
         "https://www.owlsatdawn.com",
-        "http://127.0.0.1",
-        "http://127.0.0.1:8080",
-        "127.0.0.1",
         "https://rgbacolorpicker.com",
         "https://websitemetadata.com/meta-tags-generator",
         "https://austingil.com",
@@ -165,7 +161,13 @@
         "https://thispersondoesnotexist.com",
         "https://supabase.com",
         "https://pocketbase.io",
-        "https://solidproject.org"
+        "https://solidproject.org",
+        "https://leafbytes.com",
+        "https://brittanychiang.com",
+        "127.0.0.1",
+        "https://commons.wikimedia.org/'",
+        "https://lobste.rs",
+        "https://www.brain-dump.org"
       ],
       "untrusted": [
         "google.com",
