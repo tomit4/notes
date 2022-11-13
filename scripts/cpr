@@ -1,6 +1,12 @@
 #!/bin/bash
 
 main() {
+    if [ $# -lt 1 ]; then
+        printf "not enough arguments given\n\
+usage: cpr file_to_copy\n"
+        exit 1
+    fi
+
     orig_file="$1"
     read -e -r -p "how many copies of $orig_file would you like to make?: " num_copies
     parsed_file_name=$(echo "$orig_file" | awk -F. '{print $1}')
