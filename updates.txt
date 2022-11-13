@@ -186,6 +186,8 @@ paru dirb (1st option)
 
 Go to Chrome store and install CSS Dig on brave
 
-Install slop and gifsicle and libimage-exiftool-perl and rebuild-detector and keynav
+Install slop and gifsicle and libimage-exiftool-perl and rebuild-detector and keynav and dvtm and dtach
 
-doas pacman -S slop gifsicle libimage-exiftool-perl rebuild-detector keynav
+doas pacman -S slop gifsicle libimage-exiftool-perl rebuild-detector keynav dvtm
+
+paru dtach
