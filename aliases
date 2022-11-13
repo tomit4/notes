@@ -164,12 +164,8 @@ alias qwiki="wik -i"
 alias toolongdidntread="tldr"
 alias cheatsheet="cheat"
 alias {ltrans,trans,translate}="ltranslate"
-
-# gif recording, peek doesn't work right now...
-# help for this can be hard, use byzanz-record --help for more info, use silentcast to find x and y dimensions
-alias rgif="byzanz-record"
-alias scast="silentcast"
-
+alias skey='screenkey --position fixed --geometry $(slop)'
+alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 # interfaces with asciinema.org for creating simple video tutorials on cli programs
 alias ascii="asciinema"
 
