@@ -11,4 +11,5 @@ if ! command -v gifsicle &> /dev/null ; then
     exit 1
 fi
 
-gifsicle "$1" --resize "$2x$3" > "$1_resized.gif"
+filename=$(echo "${1}" | awk -F. '{ print $1 }')
+gifsicle "$1" --resize "$2x$3" > "${filename}_resized.gif"
