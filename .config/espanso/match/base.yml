@@ -116,11 +116,14 @@ matches:
   - trigger: ":clt"
     replace: "console.table()"
 
+  - trigger: ":test"
+    replace: "test('', () => {\nexpect().()\n}\n)"
+
   - trigger: ":inc"
     replace: "#include"
 
   - trigger: ":sh"
-    replace: "#!/bin/sh"
+    replace: "#!/usr/bin/env bash"
 
   # Pings google dns server
   - trigger: ":ping"

@@ -497,7 +497,8 @@ alias frontendmasters="librewolf https://frontendmasters.com/ &"
 alias textbelt="librewolf https://textbelt.com/ &"
 # create an email server backend using nodejs (& express...)
 alias nodemailer="librewolf https://nodemailer.com/ &"
-
+# simple fake REST API for testing purposes make http requests to stuff like /users etc.
+alias jsonplaceholder="librewolf https://jsonplaceholder.typicode.com &"
 # firebase alternatives (database as a service)
 # postgres
 alias supabase="librewolf https://supabase.com &"
