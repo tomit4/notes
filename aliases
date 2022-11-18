@@ -404,6 +404,10 @@ alias isos="links https://ftp.crifo.org/artix"
 alias smarden="links http://smarden.org/runit/"
 alias opengroup="librewolf https://publications.opengroup.org/ &"
 
+# Ian Jackson runs chiark.greened.org.uk, home of PUTTY
+# He resigned from Debian in 2014 due to systemd fallout
+alias chiark="librewolf https://www.chiark.greenend.org.uk/ &"
+
 # Web Development Resources
 # for web accessibility information
 alias aditus="librewolf https://aditus.io/ &"
@@ -531,8 +535,8 @@ alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
 alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-checklist/ &"
 
 # ddgr shebang bookmarks
-alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
-alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
+# alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
+# alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
 alias {ddgi,dggi,images}='ddgr \!dggi "${1}"'
 alias aur='ddgr \!aur "${1}"'
 alias archwiki='ddgr \!archwiki "${1}"'
