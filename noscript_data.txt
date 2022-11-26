@@ -167,14 +167,30 @@
         "127.0.0.1",
         "https://commons.wikimedia.org/'",
         "https://lobste.rs",
-        "https://www.brain-dump.org"
+        "https://www.brain-dump.org",
+        "https://jsonplaceholder.typicode.com",
+        "https://www.chiark.greenend.org.uk",
+        "https://without-systemd.org"
       ],
       "untrusted": [
         "google.com",
         "hotmail.com",
-        "noscript.net"
+        "noscript.net",
+        "twitter.com",
+        "googletagmanager.com"
       ],
-      "custom": {}
+      "custom": {
+        "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "noscript",
+            "other",
+            "media"
+          ],
+          "temp": false
+        }
+      }
     },
     "enforced": true,
     "autoAllowTop": false
