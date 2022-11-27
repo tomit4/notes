@@ -170,7 +170,8 @@
         "https://www.brain-dump.org",
         "https://jsonplaceholder.typicode.com",
         "https://www.chiark.greenend.org.uk",
-        "https://without-systemd.org"
+        "https://without-systemd.org",
+        "https://quetre.iket.me"
       ],
       "untrusted": [
         "google.com",

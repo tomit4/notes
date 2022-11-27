@@ -17,7 +17,8 @@ Install User-Agent-Switcher and Manager
 Install OverbiteWX
 Install OneTab
 Install Return YouTube Dislike
-Install Nitter Redirect
+Install Invidition (redirect to invidious for youtube and nitter for twitter)
+Install Teddit Redirect (redirect from reddit to teddit)
 Install DuckDuckGo Lite Search (doesn't quite work, just use DuckDuckGo)
 Install SponsorBlock for Youtube-Skip Sponsorships
 Install ClearURLs
