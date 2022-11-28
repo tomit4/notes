@@ -17,7 +17,7 @@ Install User-Agent-Switcher and Manager
 Install OverbiteWX
 Install OneTab
 Install Return YouTube Dislike
-Install Invidition (redirect to invidious for youtube and nitter for twitter)
+Install Invidition (redirect to invidious for youtube and nitter for twitter, enable js for invidious instance in noscript)
 Install Teddit Redirect (redirect from reddit to teddit)
 Install DuckDuckGo Lite Search (doesn't quite work, just use DuckDuckGo)
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)

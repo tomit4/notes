@@ -171,7 +171,8 @@
         "https://jsonplaceholder.typicode.com",
         "https://www.chiark.greenend.org.uk",
         "https://without-systemd.org",
-        "https://quetre.iket.me"
+        "https://quetre.iket.me",
+        "https://inv.riverside.rocks"
       ],
       "untrusted": [
         "google.com",
