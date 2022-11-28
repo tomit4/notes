@@ -184,7 +184,7 @@ alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -it
 # alias ytube="ytfzf -l --features=subtitles"
 alias {yti,ytinfo}="ytfzf -I L"
 alias {ytd,ytdownload}="ytfzf -d"
-alias {odysee,lbry}="ytfzf -c O --features=subtitles"
+alias lbry="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 alias ytdl="yt-dlp -f mp4"
 alias ytdl-a="yt-dlp -x --audio-format mp3"
