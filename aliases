@@ -307,6 +307,7 @@ alias sheldonbrown="links https://sheldonbrown.com"
 alias somafm="links https://somafm.com"
 alias bandcamp="librewolf https://bandcamp.com/ &"
 alias {viruscomix,subnormality}="librewolf https://viruscomix.com/subnormality.html &"
+alias murena="librewolf https://murena.com &"
 alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 # sustainable clothing brands (shoes and underwear)
 alias nothingnew="librewolf https://nothingnew.com &"
