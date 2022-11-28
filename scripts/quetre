@@ -1,2 +1,13 @@
 #!/bin/bash
-links "https://quetre.iket.me/search?q=${1}"
+lastarg=("${@: -1}")
+
+search=""
+for ARG in "${@}" ; do
+    if [[ $ARG == "${lastarg[1]}" ]] ; then
+        search+="${ARG}"
+    else
+        search+="${ARG}+"
+    fi
+done
+
+links "https://quetre.iket.me/search?q=${search}"
