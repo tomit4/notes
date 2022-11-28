@@ -1,0 +1,6 @@
+#!/bin/bash
+# https://docs.ntfy.sh/
+
+read -e -r -p "enter topic name: " instance ;
+read -e -r -p "enter your message: " message;
+curl -d "${message}" ntfy.sh/"$instance"

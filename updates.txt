@@ -190,4 +190,4 @@ Install slop and gifsicle and libimage-exiftool-perl and rebuild-detector and ke
 
 doas pacman -S slop gifsicle libimage-exiftool-perl rebuild-detector keynav dvtm lowdown inotify-tools
 
-paru dtach
+paru dtach sherlock-git
