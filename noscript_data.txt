@@ -172,7 +172,9 @@
         "https://www.chiark.greenend.org.uk",
         "https://without-systemd.org",
         "https://quetre.iket.me",
-        "https://inv.riverside.rocks"
+        "https://inv.riverside.rocks",
+        "§:fmovies2.pro",
+        "https://oceanofpdf.com"
       ],
       "untrusted": [
         "google.com",
