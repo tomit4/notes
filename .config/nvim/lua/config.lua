@@ -389,7 +389,7 @@ vim.cmd[[hi! NonText ctermbg=NONE guibg=NONE]]
 vim.cmd[[set noswapfile]]
 
 -- enable hard/soft wrap
-vim.cmd[[set wrap linebreak nolist textwidth=80]]
+vim.cmd[[set wrap linebreak textwidth=80]]
 
 -- set up lab.nvim
 sources = cmp.config.sources({ {name = 'lab.quick_data', keyword_length = 4 }})
