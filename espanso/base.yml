@@ -130,11 +130,11 @@ matches:
     replace: "ping 8.8.8.8"
 
   # Prepares Odysee search
-  - trigger: "!od"
+  - trigger: "!ody"
     replace: "https://odysee.com/$/search?q="
 
   # Prepares Quetre search
-  - trigger: "!qu"
+  - trigger: "!que"
     replace: "https://quetre.iket.me/search?q="
 
   # Returns public ip address

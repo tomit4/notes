@@ -1,0 +1,13 @@
+#!/bin/bash
+lastarg=("${@: -1}")
+
+search=""
+for ARG in "${@}" ; do
+    if [[ $ARG == "${lastarg[1]}" ]] ; then
+        search+="${ARG}"
+    else
+        search+="${ARG}+"
+    fi
+done
+
+links "https://teddit.pussthecat.org/r/all/search?q=${search}"
