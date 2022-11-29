@@ -1,0 +1,2 @@
+#!/bin/bash
+links "https://teddit.pussthecat.org/r/${1}"
