@@ -174,7 +174,13 @@
         "https://quetre.iket.me",
         "https://inv.riverside.rocks",
         "§:fmovies2.pro",
-        "https://oceanofpdf.com"
+        "https://oceanofpdf.com",
+        "https://murena.com",
+        "https://vim.works",
+        "https://tmewett.com",
+        "https://levenez.com",
+        "https://whitep4nth3r.com",
+        "https://www.11ty.dev"
       ],
       "untrusted": [
         "google.com",
@@ -206,7 +212,21 @@
     "showFullAddresses": false,
     "amnesticUpdates": false,
     "storage": "local",
-    "uuid": "88160e9e-65ea-4711-b739-4d2819b7596c"
+    "uuid": "88160e9e-65ea-4711-b739-4d2819b7596c",
+    "toolbarLayout": {
+      "left": [
+        "reload",
+        "options",
+        "close"
+      ],
+      "right": [
+        "enforce",
+        "enforce-tab",
+        "temp-trust-page",
+        "revoke-temp"
+      ],
+      "hidden": []
+    }
   },
   "sync": {
     "global": false,
