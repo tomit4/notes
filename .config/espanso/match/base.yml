@@ -117,7 +117,7 @@ matches:
     replace: "console.table()"
 
   - trigger: ":test"
-    replace: "test('', () => {\nexpect().()\n}\n)"
+    replace: "test('', () => {})"
 
   - trigger: ":inc"
     replace: "#include"
@@ -128,6 +128,14 @@ matches:
   # Pings google dns server
   - trigger: ":ping"
     replace: "ping 8.8.8.8"
+
+  # Prepares Odysee search
+  - trigger: "!od"
+    replace: "https://odysee.com/$/search?q="
+
+  # Prepares Quetre search
+  - trigger: "!od"
+    replace: "https://quetre.iket.me/search?q="
 
   # Returns public ip address
   - trigger: ":ip"

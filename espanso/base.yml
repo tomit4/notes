@@ -133,6 +133,10 @@ matches:
   - trigger: "!od"
     replace: "https://odysee.com/$/search?q="
 
+  # Prepares Quetre search
+  - trigger: "!od"
+    replace: "https://quetre.iket.me/search?q="
+
   # Returns public ip address
   - trigger: ":ip"
     replace: "{{output}}"
