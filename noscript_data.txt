@@ -35,17 +35,13 @@
         "§:addons.mozilla.org",
         "§:afx.ms",
         "§:ajax.aspnetcdn.com",
-        "§:ajax.googleapis.com",
         "§:bootstrapcdn.com",
         "§:code.jquery.com",
         "§:firstdata.com",
         "§:firstdata.lv",
         "§:gfx.ms",
-        "§:googlevideo.com",
-        "§:gstatic.com",
         "§:live.com",
         "§:live.net",
-        "§:maps.googleapis.com",
         "§:mozilla.net",
         "§:netflix.com",
         "§:nflxext.com",
@@ -80,7 +76,6 @@
         "https://protonmail.com",
         "https://www.quora.com",
         "https://sheldonbrown.com//",
-        "https://google-webfonts-helper.herokuapp.com/fonts",
         "https://roy.gbiv.com/untangled/",
         "duckduckgo.com",
         "https://cssbattle.dev",
@@ -180,14 +175,24 @@
         "https://tmewett.com",
         "https://levenez.com",
         "https://whitep4nth3r.com",
-        "https://www.11ty.dev"
+        "https://www.11ty.dev",
+        "https://www.regextester.com",
+        "githubassets.com",
+        "pornhub.com",
+        "phncdn.com",
+        "xhcdn.com"
       ],
       "untrusted": [
         "google.com",
         "hotmail.com",
         "noscript.net",
         "twitter.com",
-        "googletagmanager.com"
+        "googletagmanager.com",
+        "gstatic.com",
+        "ajax.googleapis.com",
+        "https://google-webfonts-helper.herokuapp.com/fonts",
+        "googlevideo.com",
+        "maps.googleapis.com"
       ],
       "custom": {
         "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {
