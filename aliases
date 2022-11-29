@@ -48,6 +48,7 @@ alias lshw="doas lshw -short | less" # list hardware
 alias {hw,hwinfo}="hwinfo | less" # extensive info on hardware devices
 alias dmid="doas dmidecode | less"
 alias of="onefetch -o yaml | yq -C"
+alias dict="$HOME/scripts/dict"
 alias mkdir='mkdir -pv'
 alias {ex,esc}="exit"
 alias {his,hist}="history"
