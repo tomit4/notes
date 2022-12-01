@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>EWONTFIX</title>
+<link>https://ewontfix.com</link>
+<description>A blog about bugs</description>
+<language>en</language>
+<item><title>The worst of time64 breakage</title>
+<guid>https://ewontfix.com/19</guid>
+<link>https://ewontfix.com/19</link>
+<pubDate>15 Feb 2020 19:25:16 GMT</pubDate>
+<description><![CDATA[
+<p>In preparing to release musl 1.2.0, I worked with distro maintainers
+from <a href="https://www.adelielinux.org/">Adélie Linux</a> and
+<a href="https://github.com/YoeDistro">Yoe</a> to find serious application
+compatibility problems users would hit when upgrading, so that we
+could have patches ready and reduce user frustration with the upgrade.
+Here are some of the findings.</p>
+
+<p>By far the most dangerous type of app compatibility issue we found was
+in Berkeley DB 5.x, which defines its own wrong version of the
+<code>timespec</code> struct to pass to <code>clock_gettime</code>:</p>
+
+<pre><code>typedef struct {
+    time_t  tv_sec;             /* seconds */
+#ifdef HAVE_MIXED_SIZE_ADDRESSING
+</code></pre>
+
+<p>...</p>
+]]></description></item>
+<item><title>32-bit x86 Position Independent Code - It's that bad</title>
+<guid>https://ewontfix.com/18</guid>
+<link>https://ewontfix.com/18</link>
+<pubDate>15 Apr 2015 03:23:06 GMT</pubDate>
+<description><![CDATA[
+<p>Let's start by looking at a simple C function to be compiled as
+position-independent code (i.e. <code>-fPIC</code>, for use in a shared library):</p>
+
+<pre><code>void bar(void);
+
+void foo(void)
+{
+    bar();
+}
+</code></pre>
+
+<p>And now, what GCC compiles it to (listing 2):</p>
+
+<pre><code>foo:
+    pushl   %ebx
+</code></pre>
+
+<p>...</p>
+]]></description></item>
+<item><title>Multi-threaded setxid on Linux</title>
+<guid>https://ewontfix.com/17</guid>
+<link>https://ewontfix.com/17</link>
+<pubDate>15 Jan 2015 16:12:00 GMT</pubDate>
+<description><![CDATA[
+<h4>Background</h4>
+
+<p>Linux has a legacy of treating threads like processes that share
+memory. The situation was a lot worse about 15 years ago, but it's
+still far from perfect. Despite lots of fixes to the way signals,
+process termination and replacement via <code>execve</code>, etc. are handled to
+make threads behave like threads, plenty of ugly remnants of the idea
+that "threads are just processes sharing memory" remain; the big areas
+are:</p>
+
+<ul>
+<li>Scheduling properties</li>
+<li>Resource limits</li>
+<li>Permissions</li>
+</ul>
+
+<p>...</p>
+]]></description></item>
+<item><title>Open race-condition bugs in glibc</title>
+<guid>https://ewontfix.com/16</guid>
+<link>https://ewontfix.com/16</link>
+<pubDate>06 Mar 2014 19:10:09 GMT</pubDate>
+<description><![CDATA[
+<p>As part of the freeze announcement for
+<a href="http://www.musl-libc.org">musl</a> 1.0, we mentioned longstanding open
+race condition bugs in glibc. Shortly after the <a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTYyMzM">announcement went out
+on
+Phoronix</a>,
+I got a request for details on which bugs we were referring to, so I
+put together a list.</p>
+
+<p>The most critical (in my opinion) open race bugs are the ones <a href="http://ewontfix.com/2/">I
+described on this blog</a> back in 2012; they are
+reported in glibc issue 12683:</p>
+
+<ul>
+<li><a href="https://sourceware.org/bugzilla/show_bug.cgi?id=12683">Bug 12683 - Race conditions in pthread
+cancellation</a>
+...</li>
+</ul>
+]]></description></item>
+<item><title>Systemd has 6 service startup notification types, and they're all wrong</title>
+<guid>https://ewontfix.com/15</guid>
+<link>https://ewontfix.com/15</link>
+<pubDate>27 Feb 2014 04:14:26 GMT</pubDate>
+<description><![CDATA[
+<p>In my last post, <a href="../14">Broken by design: systemd</a>, I covered
+technical aspects of systemd <em>outside its domain of specialization</em>
+that make it a poor choice for the future of the Linux userspace's
+init system. Since then, it's come to my attention as a result of <a href="https://sourceware.org/ml/libc-alpha/2014-02/msg00707.html">a
+thread on the glibc development
+list</a> that
+systemd can't even get things right in its own problem domain: service
+supervision.</p>
+
+<p>Per the
+<a href="http://www.freedesktop.org/software/systemd/man/systemd.service.html">manual</a>,
+systemd has the following 6 "types" that can be used in a service file
+to control how systemd will supervise the service (daemon):</p>
+
+<p>...</p>
+]]></description></item>
+<item><title>Broken by design: systemd</title>
+<guid>https://ewontfix.com/14</guid>
+<link>https://ewontfix.com/14</link>
+<pubDate>09 Feb 2014 19:56:09 GMT</pubDate>
+<description><![CDATA[
+<p>Recently the topic of systemd has come up quite a bit in various
+communities in which I'm involved, including the
+<a href="http://www.musl-libc.org">musl</a> IRC channel and <a href="http://lists.busybox.net/pipermail/busybox/2014-February/080405.html">on the Busybox
+mailing
+list</a>.</p>
+
+<p>While the attitude towards systemd in these communities is largely
+negative, much of what I've seen has been either dismissable by folks
+in different circles as mere conservatism, or tempered by an idea that
+despite its flaws, "the design is sound". This latter view comes with
+the notion that systemd's flaws are fixable without scrapping it or
+otherwise incurring major costs, and therefore not a major obstacle to
+adopting systemd.</p>
+
+<p>...</p>
+]]></description></item>
+<item><title>Incorrect configure checks for availability of functions</title>
+<guid>https://ewontfix.com/13</guid>
+<link>https://ewontfix.com/13</link>
+<pubDate>14 Aug 2013 00:35:06 GMT</pubDate>
+<description><![CDATA[
+<p>The short version: using functions without prototypes is dangerous,
+and bad configure script recipes directly encourage this practice.</p>
+
+<p>One of the most basic and important checks configure scripts perform
+is checking for the availability of library functions (either in the
+standard library or third-party libraries) that are optional, present
+only in certain versions, wrongly missing on some systems, and so on.
+In a sense, this is the main purpose of having a configure script, and
+one would think this kind of check would be hard to get wrong.
+Unfortunately, these checks are not only possible to get wrong,
+they're <em>usually</em> wrong, especially in GNU software or other software
+using gnulib.</p>
+
+<p>The basic problem is that most configure scripts check only for the
+...</p>
+]]></description></item>
+<item><title>Breakincludes</title>
+<guid>https://ewontfix.com/12</guid>
+<link>https://ewontfix.com/12</link>
+<pubDate>04 Jul 2013 16:46:23 GMT</pubDate>
+<description><![CDATA[
+<p>A little-known part of GCC's build process is a script called
+"fixincludes", or <code>fixinc.sh</code>. Purportedly, the purpose of this script
+is to fix "non-ANSI system header files" which GCC "cannot compile".
+This description seems to correspond roughly to the original intended
+purpose of fixincludes, but the scope of what it does has since
+ballooned into all sorts of unrelated changes. Let's look at the first
+few rules in fixincludes' <code>inclhack.def</code>:</p>
+
+<ul>
+<li><p>Changing AIX's <code>_LARGE_FILES</code> redirection of <code>open</code> to <code>open64</code>,
+etc. to use GCC's <code>__asm__</code> keyword rather than <code>#define</code>, as the
+latter breaks C++.</p></li>
+<li><p>Exposing the <code>long double</code> math functions in math.h on Mac OS
+10.3.9, which inexplicably omitted declarations for them.
+...</p></li>
+</ul>
+]]></description></item>
+<item><title>NULL considered harmful</title>
+<guid>https://ewontfix.com/11</guid>
+<link>https://ewontfix.com/11</link>
+<pubDate>04 Jul 2013 03:25:02 GMT</pubDate>
+<description><![CDATA[
+<p>The C and C++ languages define the macro <code>NULL</code>, widely taught as the
+correct way to write a literal null pointer. The motivations for using
+<code>NULL</code> are well-meaning; largely they come down to fact that it
+documents the intent, much like how a macro named <code>FALSE</code> might better
+document boolean intent than a literal <code>0</code> would do. Unfortunately,
+use of the <code>NULL</code> macro without fully understanding it can lead to
+subtle bugs and portability issues, some of which are difficult for
+compilers and static analysis tools to diagnose.</p>
+
+<p>Despite it being superceded by the 2011 standard, I'm going to quote
+C99 because it's what I'm most familar with, and I suspect most
+readers are in the same situation. 7.17 specifies the <code>NULL</code> macro as:</p>
+
+<blockquote>
+  <p>NULL
+...</p>
+</blockquote>
+]]></description></item>
+<item><title>Non-invasive printf debugging</title>
+<guid>https://ewontfix.com/10</guid>
+<link>https://ewontfix.com/10</link>
+<pubDate>12 Dec 2012 16:09:05 GMT</pubDate>
+<description><![CDATA[
+<p>This post is not about any particular bug or bad programming practice,
+just a new “printf debugging” technique I came up with.</p>
+
+<p>Often when tracking down a bug, it’s useful to add extra output to
+track the state of the program in the moments leading up to the crash
+or incorrect behavior, aka “printf debugging”. However, this technique
+is “invasive” in the sense that it interleaves unwanted data into the
+program output. Using <code>stderr</code> instead of <code>stdout</code> can alleviate the
+problem to some extent, but when you’re inserting the debugging code
+into a widely-used library (in my case, <code>libc.so</code>) or a shell, even
+having unwanted output on <code>stderr</code> can be a problem.</p>
+
+<p>A previous approach I had used was sending the output to an arbitrary
+high file descriptor instead of <code>stdout</code> or <code>stderr</code>. For example,
+...</p>
+]]></description></item>
+<item><title>Stubborn and ignorant use of int where size_t is needed</title>
+<guid>https://ewontfix.com/9</guid>
+<link>https://ewontfix.com/9</link>
+<pubDate>25 Oct 2012 23:48:02 GMT</pubDate>
+<description><![CDATA[
+<p>What’s wrong with this C function?</p>
+
+<pre><code>char *my_strchr(char *s, int c)
+{
+    int i;
+    for (i=0; s[i]!=c; i++)
+        if (!s[i]) return 0;
+    return &amp;s[i];
+}
+</code></pre>
+
+<p>Unless its interface contract requires that the caller pass a string
+no longer than <code>INT_MAX</code>, it can invoke undefined behavior due to
+integer overflow, most likely resulting in a crash. Even if you change
+the type to <code>unsigned</code> instead of <code>int</code> to avoid the signed overflow
+...</p>
+]]></description></item>
+<item><title>Unexpected observability of lock states</title>
+<guid>https://ewontfix.com/8</guid>
+<link>https://ewontfix.com/8</link>
+<pubDate>25 Oct 2012 03:20:38 GMT</pubDate>
+<description><![CDATA[
+<p>This post is going to be the first that’s about one of my own bugs, in
+<a href="http://www.musl-libc.org">musl</a>. For a long time, I’ve had certain
+stdio functions such as <code>feof</code> and <code>ferror</code> forgoing any locking, and
+simply relying on the fact that, per the memory model that’s assumed,
+reading the associated flags is safe without any locks. The issue with
+doing this is that, while it’s <em>safe</em>, it’s not <em>correct</em>; it leads to
+observably incorrect behavior in some cases.</p>
+
+<p>Per POSIX,</p>
+
+<blockquote>
+  <p>All functions that reference ( FILE *) objects shall behave as if
+they use flockfile() and funlockfile() internally to obtain
+ownership of these ( FILE *) objects.</p>
+</blockquote>
+
+<p>...</p>
+]]></description></item>
+<item><title>vfork considered dangerous</title>
+<guid>https://ewontfix.com/7</guid>
+<link>https://ewontfix.com/7</link>
+<pubDate>21 Oct 2012 21:20:22 GMT</pubDate>
+<description><![CDATA[
+<p>Traditional unix systems had a <code>vfork</code> function, which works like
+<code>fork</code>, but without creating a new virtual address space; the parent
+and child run in the same address space. Unlike with <code>pthread_create</code>,
+where the new thread runs on its own stack, <code>vfork</code> behaves like
+<code>fork</code> and “returns twice”, once in the child and once in the parent.
+This seems impossible, since the parent and child would clobber one
+another’s stacks, but a clever trick saves the day: the parent process
+is suspended until the child performs <code>exec</code> or <code>_exit</code>, breaking the
+shared-memory-space relation between the two processes.</p>
+
+<p><code>vfork</code> was omitted from POSIX and modern standards because it’s
+difficult to use; the original specification for the function left it
+undefined to do basically <em>anything</em> except <code>exec</code> or <code>_exit</code> after
+<code>vfork</code> in the child. However, many systems (including Linux) still
+...</p>
+]]></description></item>
+<item><title>AS + DC = AC</title>
+<guid>https://ewontfix.com/6</guid>
+<link>https://ewontfix.com/6</link>
+<pubDate>15 Oct 2012 00:24:57 GMT</pubDate>
+<description><![CDATA[
+<p>Where A.S. are asynchronous signals, D.C. is deferred cancellation,
+and A.C. is asynchronous cancellation. In <a href="/5">the previous post</a>, I
+discussed asychronous versus deferred cancellation in POSIX threads,
+and issues that make it hard to use asynchronous cancellation well. I
+also mentioned that there are almost no functions which are
+async-cancel-safe. What if you want to cheat and get the behavior of
+asynchronous cancellation, but without having to follow the rules?</p>
+
+<p>Enter asynchronous signals. Particularly, I’m thinking of signals sent
+to a specific thread using <code>pthread_kill</code>, but really the signal could
+be coming from another source like pressing the interrupt or quit key
+on a terminal.</p>
+
+<p>Suppose the main flow of excution in a thread uses only
+...</p>
+]]></description></item>
+<item><title>Asynchronous cancellation pitfalls</title>
+<guid>https://ewontfix.com/5</guid>
+<link>https://ewontfix.com/5</link>
+<pubDate>07 Oct 2012 04:24 GMT</pubDate>
+<description><![CDATA[
+<p>In the past few posts, I’ve introduced <em>thread cancellation</em> and some
+of the implementation and application usage difficulties in making
+cancellation robust. One topic I haven’t yet touched on is
+asynchronous cancellation. POSIX threads support two cancellation
+types: asynchronous and deferred. The latter, deferred cancellation,
+is the default, whereby a cancellation request is only acted upon
+immediately if the thread to be cancelled is suspended at a
+cancellation point, and otherwise remains pending until the next call
+to a cancellation point.</p>
+
+<p>The other option, asynchronous cancellation, allows (but does not
+require) the implementation to act on cancellation requests at any
+time. This obviously has the potential, to leave data in a horribly
+inconsistent state, so rules are imposed; the application cannot call
+...</p>
+]]></description></item>
+<item><title>Updates on close, EINTR, &amp; cancellation</title>
+<guid>https://ewontfix.com/4</guid>
+<link>https://ewontfix.com/4</link>
+<pubDate>03 Oct 2012 00:05 GMT</pubDate>
+<description><![CDATA[
+<p>Last week I took the time to file a report with the Austin Group
+(responsible for POSIX) about the <code>close</code> issue. It
+is <a href="http://austingroupbugs.net/view.php?id=614">Issue #614</a>, and it
+turns out the problem was already solved by fixing the specification
+of <code>close</code> when interrupted by a signal. Whew. I thought that latter
+would be a lot more controversial and harder to get fixed</p>
+
+<p>Some basic history on the issue: Apparently, there was a historical
+disagreement over the behavior of <code>close</code> when interrupted by a
+signal. Some implementations (e.g. HPUX) had it leave the file
+descriptor open when returning with EINTR; others (Linux, AIX) closed
+it unconditionally, but returned with EINTR if a signal arrived while
+close() was interrupted before returning. This ambiguity was
+acceptable for single-threaded applications, which could just
+...</p>
+]]></description></item>
+<item><title>To overcommit or not to overcommit</title>
+<guid>https://ewontfix.com/3</guid>
+<link>https://ewontfix.com/3</link>
+<pubDate>23 Sep 2012 01:43 GMT</pubDate>
+<description><![CDATA[
+<p><a href="http://www.etalabs.net/overcommit.html">I’ve written in the past</a> on
+the topic of overcommit, which depending on your perspective, is
+either a feature of Linux and some other kernels, or a bug left over
+from a time when folks didn’t know how to do virtual memory accounting
+properly. I’m a serious proponent of strict commit accounting
+(opposite of overcommit), but for this article, I want to look at the
+state of the software ecosystem and how it often leaves us
+overcommit-enabled Linux systems being more failproof than their
+strict-accounting brothers and sisters.</p>
+
+<p>The idea of strict commit accounting is that <code>malloc</code> never reports
+success only to let your program crash when you actually try to use
+the memory. If the kernel cannot ensure that there’s no possible
+sequence of paging events that would cause it to run out of physical
+...</p>
+]]></description></item>
+<item><title>Thread cancellation and resource leaks</title>
+<guid>https://ewontfix.com/2</guid>
+<link>https://ewontfix.com/2</link>
+<pubDate>21 Sep 2012 02:00 GMT</pubDate>
+<description><![CDATA[
+<p>In a multi-threaded C program where threads share address space and
+may be operating on shared objects as long as they use the proper
+synchronization tools, it’s unsafe to asynchronously kill an
+individual thread without killing the whole process. Stale locks may
+be left behind and data being modified under those locks may be in an
+inconsistent state. This includes even internal heap management
+structures used by <code>malloc</code>.</p>
+
+<p>As such, the POSIX threads standard does not even offer a mechanism
+for forcible termination of individual threads. Instead, it offers
+<em>thread cancellation</em>, a mechanism by which early termination of a
+thread whose work is no longer needed can be negotiated in such a way
+that the thread to be cancelled cleans up any shared state and/or
+private resources it may be using before it terminates.
+...</p>
+]]></description></item>
+<item><title>Introducing EWONTFIX</title>
+<guid>https://ewontfix.com/1</guid>
+<link>https://ewontfix.com/1</link>
+<pubDate>22 Sep 2012 22:47 GMT</pubDate>
+<description><![CDATA[
+<p>Welcome to EWONTFIX, a blog about, well, bugs. Especially longstanding
+unfixed ones in C code for Linux or Unix-like systems. The idea for
+this blog grew out of conversations during the development of <a href="http://www.musl-libc.org">musl
+libc</a>. Aside from the fact that longstanding
+bugs in glibc were one of the original motivations for musl, it turns
+out that developing a libc leads to spending a lot of time building
+and testing applications. And in the process of testing, one ends up
+reading a lot of source. And a lot of source is appallingly bad.</p>
+
+<p>Most low-quality source code just isn’t that interesting to write
+about. It’s more just a matter of identifying the problems, submitting
+them to bug trackers, and following up until somebody fixes things.
+However there are also a good deal of cases where buggy code <em>is</em>
+interesting to discuss. These fall mostly under two major categories:
+...</p>
+]]></description></item>
+</channel></rss>
