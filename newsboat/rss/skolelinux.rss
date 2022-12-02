@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/' xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Petter Reinholdtsen</title>
+		<description></description>
+                <link>https://people.skolelinux.org/pere/blog/</link>
+                <atom:link href="https://people.skolelinux.org/pere/blog/index.rss" rel="self" type="application/rss+xml" />
+	
+	<item>
+		<title>Managing and using ONVIF IP cameras with Linux</title>
+		<link>https://people.skolelinux.org/pere/blog/Managing_and_using_ONVIF_IP_cameras_with_Linux.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Managing_and_using_ONVIF_IP_cameras_with_Linux.html</guid>
+                <pubDate>Wed, 19 Oct 2022 12:30:00 +0200</pubDate>
+		<description>&lt;p&gt;Recently I have been looking at how to control and collect data
+from a handful IP cameras using Linux.  I both wanted to change their
+settings and to make their imagery available via a free software
+service under my control.  Here is a summary of the tools I found.&lt;/p&gt;
+
+&lt;p&gt;First I had to identify the cameras and their protocols.  As far as
+I could tell, they were using some SOAP looking protocol and their
+internal web server seem to only work with Microsoft Internet Explorer
+with some proprietary binary plugin, which in these days of course is
+a security disaster and also made it impossible for me to use the
+camera web interface.  Luckily I discovered that the SOAP looking
+protocol is actually following &lt;a href=&quot;https://www.onvif.org/&quot;&gt;the
+ONVIF specification&lt;/a&gt;, which seem to be supported by a lot of IP
+cameras these days.&lt;/p&gt;
+
+&lt;p&gt;Once the protocol was identified, I was able to find what appear to
+be the most popular way to configure ONVIF cameras, the free software
+Windows tool named
+&lt;a href=&quot;https://sourceforge.net/projects/onvifdm/&quot;&gt;ONVIF Device
+Manager&lt;/a&gt;.  Lacking any other options at the time, I tried
+unsuccessfully to get it running using Wine, but was missing a dotnet
+40 library and I found no way around it to run it on Linux.&lt;/p&gt;
+
+&lt;p&gt;The next tool I found to configure the cameras were a non-free Linux Qt
+client &lt;a href=&quot;https://www.lingodigit.com/onvif_nvcdemo.html&quot;&gt;ONVIF
+Device Tool&lt;/a&gt;.  I did not like its terms of use, so did not spend
+much time on it.&lt;/p&gt;
+
+&lt;p&gt;To collect the video and make it available in a web interface, I
+found the Zoneminder tool in Debian.  A recent version was able to
+automatically detect and configure ONVIF devices, so I could use it to
+set up motion detection in and collection of the camera output.  I had
+initial problems getting the ONVIF autodetection to work, as both
+Firefox and Chromium &lt;a href=&quot;https://bugs.debian.org/1001188&quot;&gt;refused
+the inter-tab communication&lt;/a&gt; being used by the Zoneminder web
+pages, but managed to get konqueror to work.  Apparently the &quot;Enhanced
+Tracking Protection&quot; in Firefox cause the problem.  I ended up
+upgrading to the Bookworm edition of Zoneminder in the process to try
+to fix the issue, and believe the problem might be solved now.&lt;/p&gt;
+
+&lt;p&gt;In the process I came across the nice Linux GUI tool
+&lt;a href=&quot;https://gitlab.com/caspermeijn/onvifviewer/&quot;&gt;ONVIF Viewer&lt;/a&gt;
+allowing me to preview the camera output and validate the login
+passwords required.  Sadly its author has grown tired of maintaining
+the software, so it might not see any future updates.  Which is sad,
+as the viewer is sightly unstable and the picture tend to lock up.
+Note, this lockup might be due to limitations in the cameras and not
+the viewer implementation.  I suspect the camera is only able to
+provide pictures to one client at the time, and the Zoneminder feed
+might interfere with the GUI viewer.  I have
+&lt;a href=&quot;https://bugs.debian.org/1000820&quot;&gt;asked for the tool to be
+included in Debian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, I found what appear to be very nice Linux free software
+replacement for the Windows tool, named
+&lt;a href=&quot;https://github.com/sr99622/libonvif/&quot;&gt;libonvif&lt;/a&gt;.  It
+provide a C library to talk to ONVIF devices as well as a command line
+and GUI tool using the library.  Using the GUI tool I was able to change
+the admin passwords and update other settings of the cameras.  I have
+&lt;a href=&quot;https://bugs.debian.org/1021980&quot;&gt;asked for the package to be
+included in Debian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 2022-10-20&lt;/strong&gt;: Since my initial publication of
+this text, I got several suggestions for more free software Linux
+tools.  There is &lt;a href=&quot;https://github.com/quatanium/python-onvif&quot;&gt;a
+ONVIF python library&lt;/a&gt; (already
+&lt;a href=&quot;https://bugs.debian.org/824240&quot;&gt;requested into Debian&lt;/a&gt;) and
+&lt;a href=&quot;https://github.com/FalkTannhaeuser/python-onvif-zeep&quot;&gt;a python 3
+fork&lt;/a&gt; using a different SOAP dependency.  There is also
+&lt;a href=&quot;https://www.home-assistant.io/integrations/onvif/&quot;&gt;support for
+ONVIF in Home Assistant&lt;/a&gt;, and there is an alternative to Zoneminder
+called &lt;a href=&quot;https://www.shinobi.video/&quot;&gt;Shinobi&lt;/a&gt;.  The latter
+two are not included in Debian either.  I have not tested any of these
+so far.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Time to translate the Bullseye edition of the Debian Administrator&#39;s Handbook</title>
+		<link>https://people.skolelinux.org/pere/blog/Time_to_translate_the_Bullseye_edition_of_the_Debian_Administrator_s_Handbook.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Time_to_translate_the_Bullseye_edition_of_the_Debian_Administrator_s_Handbook.html</guid>
+                <pubDate>Mon, 12 Sep 2022 15:45:00 +0200</pubDate>
+		<description>&lt;p align=&quot;center&quot;&gt;&lt;img align=&quot;center&quot; src=&quot;http://people.skolelinux.org/pere/blog/images/2020-10-20-debian-handbook-nb-testprint.jpeg&quot; width=&quot;60%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;(The picture is of the previous edition.)&lt;/p&gt;
+
+&lt;p&gt;Almost two years after the previous Norwegian Bokmål translation of
+the &quot;&lt;a href=&quot;https://debian-handbook.info/&quot;&gt;The Debian Administrator&#39;s
+Handbook&lt;/a&gt;&quot; was published, a new edition is finally being prepared.  The
+english text is updated, and it is time to start working on the
+translations.  Around 37 percent of the strings have been updated, one
+way or another, and the translations starting from a complete Debian Buster
+edition now need to bring their translation up from 63% to 100%.  The
+complete book is licensed using a Creative Commons license, and has
+been published in several languages over the years.  The translations
+are done by volunteers to bring Linux in their native tongue.  The
+last time I checked, it complete text was available in English,
+Norwegian Bokmål, German, Indonesian, Brazil Portuguese and Spanish.
+In addition, work has been started for Arabic (Morocco), Catalan,
+Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish,
+Dutch, French, Greek, Italian, Japanese, Korean, Persian, Polish,
+Romanian, Russian, Swedish, Turkish and Vietnamese.&lt;/p&gt;
+
+&lt;p&gt;The translation is conducted on
+&lt;a href=&quot;https://hosted.weblate.org/projects/debian-handbook/&quot;&gt;the
+hosted weblate project page&lt;/a&gt;.  Prospective translators are
+recommeded to subscribe to
+&lt;a href=&quot;http://lists.alioth.debian.org/mailman/listinfo/debian-handbook-translators&quot;&gt;the
+translators mailing list&lt;/a&gt; and should also check out
+&lt;a href=&quot;https://debian-handbook.info/contribute/&quot;&gt;the instructions for
+contributors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am one of the Norwegian Bokmål translators of this book, and we
+have just started.  Your contribution is most welcome.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Automatic LinuxCNC servo PID tuning?</title>
+		<link>https://people.skolelinux.org/pere/blog/Automatic_LinuxCNC_servo_PID_tuning_.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Automatic_LinuxCNC_servo_PID_tuning_.html</guid>
+                <pubDate>Sat, 16 Jul 2022 22:30:00 +0200</pubDate>
+		<description>&lt;p&gt;While working on a CNC with servo motors controlled by the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/LinuxCNC&quot;&gt;LinuxCNC&lt;/a&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/PID_controller&quot;&gt;PID
+controller&lt;/a&gt;, I recently had to learn how to tune the collection of values
+that control such mathematical machinery that a PID controller is.  It
+proved to be a lot harder than I hoped, and I still have not succeeded
+in getting the Z PID controller to successfully defy gravity, nor X
+and Y to move accurately and reliably.  But while climbing up this
+rather steep learning curve, I discovered that some motor control
+systems are able to tune their PID controllers.  I got the impression
+from the documentation that LinuxCNC were not.  This proved to be not
+true&lt;/p&gt;
+
+&lt;p&gt;The LinuxCNC
+&lt;a href=&quot;http://linuxcnc.org/docs/html/man/man9/pid.9.html&quot;&gt;pid
+component&lt;/a&gt; is the recommended PID controller to use.  It uses eight
+constants &lt;tt&gt;Pgain&lt;/tt&gt;, &lt;tt&gt;Igain&lt;/tt&gt;, &lt;tt&gt;Dgain&lt;/tt&gt;,
+&lt;tt&gt;bias&lt;/tt&gt;, &lt;tt&gt;FF0&lt;/tt&gt;, &lt;tt&gt;FF1&lt;/tt&gt;, &lt;tt&gt;FF2&lt;/tt&gt; and
+&lt;tt&gt;FF3&lt;/tt&gt; to calculate the output value based on current and wanted
+state, and all of these need to have a sensible value for the
+controller to behave properly.  Note, there are even more values
+involved, theser are just the most important ones.  In my case I need
+the X, Y and Z axes to follow the requested path with little error.
+This has proved quite a challenge for someone who have never tuned a
+PID controller before, but there is at least some help to be found.
+
+&lt;p&gt;I discovered that included in LinuxCNC was this old PID component
+at_pid claiming to have auto tuning capabilities.  Sadly it had been
+neglected since 2011, and could not be used as a plug in replacement
+for the default pid component.  One would have to rewriting the
+LinuxCNC HAL setup to test at_pid.  This was rather sad, when I wanted
+to quickly test auto tuning to see if it did a better job than me at
+figuring out good P, I and D values to use.&lt;/p&gt;
+
+&lt;p&gt;I decided to have a look if the situation could be improved.  This
+involved trying to understand the code and history of the pid and
+at_pid components.  Apparently they had a common ancestor, as code
+structure, comments and variable names were quite close to each other.
+Sadly this was not reflected in the git history, making it hard to
+figure out what really happened.  My guess is that the author of
+&lt;a href=&quot;https://github.com/LinuxCNC/linuxcnc/blob/master/src/hal/components/at_pid.c&quot;&gt;at_pid.c&lt;/a&gt;
+took a version of
+&lt;a href=&quot;https://github.com/LinuxCNC/linuxcnc/blob/master/src/hal/components/pid.c&quot;&gt;pid.c&lt;/a&gt;,
+rewrote it to follow the structure he wished pid.c to have, then added
+support for auto tuning and finally got it included into the LinuxCNC
+repository.  The restructuring and lack of early history made it
+harder to figure out which part of the code were relevant to the auto
+tuning, and which part of the code needed to be updated to work the
+same way as the current pid.c implementation.  I started by trying to
+isolate relevant changes in pid.c, and applying them to at_pid.c.  My
+aim was to make sure the at_pid component could replace the pid
+component with a simple change in the HAL setup loadrt line, without
+having to &quot;rewire&quot; the rest of the HAL configuration.  After a few
+hours following this approach, I had learned quite a lot about the
+code structure of both components, while concluding I was heading down
+the wrong rabbit hole, and should get back to the surface and find a
+different path.&lt;/p&gt;
+
+&lt;p&gt;For the second attempt, I decided to throw away all the PID control
+related part of the original at_pid.c, and instead isolate and lift
+the auto tuning part of the code and inject it into a copy of pid.c.
+This ensured compatibility with the current pid component, while
+adding auto tuning as a run time option.  To make it easier to identify
+the relevant parts in the future, I wrapped all the auto tuning code
+with &#39;#ifdef AUTO_TUNER&#39;.  The end result behave just like the current
+pid component by default, as that part of the code is identical.  The
+&lt;a href=&quot;https://github.com/LinuxCNC/linuxcnc/pull/1820&quot;&gt;end result
+entered the LinuxCNC master branch&lt;/a&gt; a few days ago.&lt;/p&gt;
+
+&lt;p&gt;To enable auto tuning, one need to set a few HAL pins in the PID
+component.  The most important ones are &lt;tt&gt;tune-effort&lt;/tt&gt;,
+&lt;tt&gt;tune-mode&lt;/tt&gt; and &lt;tt&gt;tune-start&lt;/tt&gt;.  But lets take a step
+back, and see what the auto tuning code will do.  I do not know the
+mathematical foundation of the at_pid algorithm, but from observation
+I can tell that the algorithm will, when enabled, produce a square
+wave pattern centered around the &lt;tt&gt;bias&lt;/tt&gt; value on the output pin
+of the PID controller.  This can be seen using the HAL Scope provided
+by LinuxCNC.  In my case, this is translated into voltage (+-10V) sent
+to the motor controller, which in turn is translated into motor speed.
+So at_pid will ask the motor to move the axis back and forth.  The
+number of cycles in the pattern is controlled by the
+&lt;tt&gt;tune-cycles&lt;/tt&gt; pin, and the extremes of the wave pattern is
+controlled by the &lt;tt&gt;tune-effort&lt;/tt&gt; pin.  Of course, trying to
+change the direction of a physical object instantly (as in going
+directly from a positive voltage to the equivalent negative voltage)
+do not change velocity instantly, and it take some time for the object
+to slow down and move in the opposite direction.  This result in a
+more smooth movement wave form, as the axis in question were vibrating
+back and forth.  When the axis reached the target speed in the
+opposing direction, the auto tuner change direction again.  After
+several of these changes, the average time delay between the &#39;peaks&#39;
+and &#39;valleys&#39; of this movement graph is then used to calculate
+proposed values for Pgain, Igain and Dgain, and insert them into the
+HAL model to use by the pid controller.  The auto tuned settings are
+not great, but htye work a lot better than the values I had been able
+to cook up on my own, at least for the horizontal X and Y axis.  But I
+had to use very small &lt;tt&gt;tune-effort&lt;tt&gt; values, as my motor
+controllers error out if the voltage change too quickly.  I&#39;ve been
+less lucky with the Z axis, which is moving a heavy object up and
+down, and seem to confuse the algorithm.  The Z axis movement became a
+lot better when I introduced a &lt;tt&gt;bias&lt;/tt&gt; value to counter the
+gravitational drag, but I will have to work a lot more on the Z axis
+PID values.&lt;/p&gt;
+
+&lt;p&gt;Armed with this knowledge, it is time to look at how to do the
+tuning.  Lets say the HAL configuration in question load the PID
+component for X, Y and Z like this:&lt;/p&gt;
+ 
+&lt;blockquote&gt;&lt;pre&gt;
+loadrt pid names=pid.x,pid.y,pid.z
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Armed with the new and improved at_pid component, the new line will
+look like this:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+loadrt at_pid names=pid.x,pid.y,pid.z
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;The rest of the HAL setup can stay the same.  This work because the
+components are referenced by name.  If the component had used count=3
+instead, all use of pid.# had to be changed to at_pid.#.&lt;/p&gt;
+
+&lt;p&gt;To start tuning the X axis, move the axis to the middle of its
+range, to make sure it do not hit anything when it start moving back
+and forth.  Next, set the &lt;tt&gt;tune-effort&lt;/tt&gt; to a low number in the
+output range.  I used 0.1 as my initial value.  Next, assign 1 to the
+&lt;tt&gt;tune-mode&lt;/tt&gt; value. Note, this will disable the pid controlling
+part and feed 0 to the output pin, which in my case initially caused a
+lot of drift.  In my case it proved to be a good idea with X and Y to
+tune the motor driver to make sure 0 voltage stopped the motor
+rotation.  On the other hand, for the Z axis this proved to be a bad
+idea, so it will depend on your setup.  It might help to set the
+&lt;tt&gt;bias&lt;/tt&gt; value to a output value that reduce or eliminate the
+axis drift.  Finally, after setting &lt;tt&gt;tune-mode&lt;/tt&gt;, set
+&lt;tt&gt;tune-start&lt;/tt&gt; to 1 to activate the auto tuning.  If all go well,
+your axis will vibrate for a few seconds and when it is done, new
+values for Pgain, Igain and Dgain will be active.  To test them,
+change &lt;tt&gt;tune-mode&lt;/tt&gt; back to 0.  Note that this might cause the
+machine to suddenly jerk as it bring the axis back to its commanded
+position, which it might have drifted away from during tuning.  To
+summarize with some halcmd lines:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+setp pid.x.tune-effort 0.1
+setp pid.x.tune-mode 1
+setp pid.x.tune-start 1
+# wait for the tuning to complete
+setp pid.x.tune-mode 0
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;After doing this task quite a few times while trying to figure out
+how to properly tune the PID controllers on the machine in, I decided
+to figure out if this process could be automated, and wrote a script
+to do the entire tuning process from power on.  The end result will
+ensure the machine is powered on and ready to run, home all axis if it
+is not already done, check that the extra tuning pins are available,
+move the axis to its mid point, run the auto tuning and re-enable the
+pid controller when it is done.  It can be run several times.  Check
+out the
+&lt;a href=&quot;https://github.com/SebKuzminsky/MazakVQC1540/blob/bon-dev/scripts/run-auto-pid-tuner&quot;&gt;run-auto-pid-tuner&lt;/a&gt;
+script on github if you want to learn how it is done.&lt;/p&gt;
+
+&lt;p&gt;My hope is that this little adventure can inspire someone who know
+more about motor PID controller tuning can implement even better
+algorithms for automatic PID tuning in LinuxCNC, making life easier
+for both me and all the others that want to use LinuxCNC but lack the
+in depth knowledge needed to tune PID controllers well.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>My free software activity of late (2022)</title>
+		<link>https://people.skolelinux.org/pere/blog/My_free_software_activity_of_late__2022_.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/My_free_software_activity_of_late__2022_.html</guid>
+                <pubDate>Mon, 20 Jun 2022 14:30:00 +0200</pubDate>
+		<description>&lt;p&gt;I guess it is time to bring some light on the various free software
+and open culture activities and projects I have worked on or been
+involved in the last year and a half.&lt;/p&gt;
+
+&lt;p&gt;First, lets mention the book
+&lt;a href=&quot;http://www.hungry.com/~pere/publisher/&quot;&gt;releases I managed to
+publish&lt;/a&gt;.  The Cory Doctorow book &quot;Hvordan knuse
+overvåkningskapitalismen&quot; argue that it is not the magic machine
+learning of the big technology companies that causes the surveillance
+capitalism to thrive, it is the lack of trust busting to enforce
+existing anti-monopoly laws.  I also published a family of
+dictionaries for machinists, one sorted on the English words, one
+sorted on the Norwegian and the last sorted on the North Sámi words.
+A bit on the back burner but not forgotten is the Debian
+Administrators Handbook, where a new edition is being worked on.  I
+have not spent as much time as I want to help bring it to completion,
+but hope I will get more spare time to look at it before the end of
+the year.&lt;/p&gt;
+
+&lt;p&gt;With my Debian had I have spent time on several projects, both
+updating existing packages, helping to bring in new packages and
+working with upstream projects to try to get them ready to go into
+Debian.  The list is rather long, and I will only mention my own
+isenkram, openmotor, vlc bittorrent plugin, xprintidle, norwegian
+letter style for latex, bs1770gain, and recordmydesktop.  In addition
+to these I have sponsored several packages into Debian, like audmes.&lt;/p&gt;
+
+&lt;p&gt;The last year I have looked at several infrastructure projects for
+collecting meter data and video surveillance recordings.  This include
+several ONVIF related tools like onvifviewer and zoneminder as well as
+rtl-433, wmbusmeters and rtl-wmbus.&lt;/p&gt;
+
+&lt;p&gt;In parallel with this I have looked at fabrication related free
+software solutions like pycam and LinuxCNC.  The latter recently
+gained improved translation support using po4a and weblate, which was
+a harder nut to crack that I had anticipated when I started.&lt;/p&gt;
+
+&lt;p&gt;Several hours have been spent translating free software to
+Norwegian Bokmål on the Weblate hosted service.  Do not have a
+complete list, but you will find my contributions in at least gnucash,
+minetest and po4a.&lt;/p&gt;
+
+&lt;p&gt;I also spent quite some time on the Norwegian archiving specification
+Noark 5, and its companion project Nikita implementing the API
+specification for Noark 5.&lt;/p&gt;
+
+&lt;p&gt;Recently I have been looking into free software tools to do company
+accounting here in Norway., which present an interesting mix between
+law, rules, regulations, format specifications and API interfaces.&lt;/p&gt;
+
+&lt;p&gt;I guess I should also mention the Norwegian community driven
+government interfacing projects Mimes Brønn and Fiksgatami, which have
+ended up in a kind of limbo while the future of the projects is being
+worked out.&lt;/p&gt;
+
+&lt;p&gt;These are just a few of the projects I have been involved it, and
+would like to give more visibility.  I&#39;ll stop here to avoid delaying
+this post.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>LinuxCNC translators life just got a bit easier</title>
+		<link>https://people.skolelinux.org/pere/blog/LinuxCNC_translators_life_just_got_a_bit_easier.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/LinuxCNC_translators_life_just_got_a_bit_easier.html</guid>
+                <pubDate>Fri, 3 Jun 2022 21:10:00 +0200</pubDate>
+		<description>&lt;p&gt;Back in oktober last year, when I started looking at the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/LinuxCNC&quot;&gt;LinuxCNC&lt;/a&gt; system, I
+proposed to change the documentation build system make life easier for
+translators.  The original system consisted of independently written
+documentation files for each language, with no automated way to track
+changes done in other translations and no help for the translators to
+know how much was left to translated.  By using
+&lt;a href=&quot;https://po4a.org/&quot;&gt;the po4a system&lt;/a&gt; to generate POT and PO
+files from the English documentation, this can be improved.  A small
+team of LinuxCNC contributors got together and today our labour
+finally payed off.  Since a few hours ago, it is now possible to
+translate &lt;a href=&quot;https://hosted.weblate.org/projects/linuxcnc/&quot;&gt;the
+LinuxCNC documentation on Weblate&lt;/a&gt;, alongside the program itself.&lt;/p&gt;
+
+&lt;p&gt;The effort to migrate the documentation to use po4a has been both
+slow and frustrating.  I am very happy we finally made it.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>geteltorito make CD firmware upgrades a breeze</title>
+		<link>https://people.skolelinux.org/pere/blog/geteltorito_make_CD_firmware_upgrades_a_breeze.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/geteltorito_make_CD_firmware_upgrades_a_breeze.html</guid>
+                <pubDate>Wed, 20 Apr 2022 11:50:00 +0200</pubDate>
+		<description>&lt;p&gt;Recently I wanted to upgrade the firmware of my thinkpad, and
+located the firmware download page from Lenovo (which annoyingly do
+not allow access via Tor, forcing me to hand them more personal
+information that I would like).  The
+&lt;a href=&quot;https://support.lenovo.com/no/en/search?query=thinkpad firmware bios upgrade iso&amp;SearchType=Customer search&amp;searchLocation=Masthead&quot;&gt;download
+from Lenovo&lt;/a&gt; is a bootable ISO image, which is a bit of a problem
+when all I got available is a USB memory stick.  I tried booting the
+ISO as a USB stick, but this did not work.  But genisoimage came to
+the rescue.&lt;/p&gt;
+
+&lt;P&gt;The geteltorito program in
+&lt;a href=&quot;http://tracker.debian.org/cdrkit&quot;&gt;the genisoimage binary
+package&lt;/a&gt; is able to convert the bootable ISO image to a bootable
+USB stick using a simple command line recipe, which I then can write
+to the most recently inserted USB stick:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+geteltorito -o usbstick.img lenovo-firmware.iso
+sudo dd bs=10M if=usbstick.img of=$(ls -tr /dev/sd?|tail -1)
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This USB stick booted the firmware upgrader just fine, and in a few
+minutes my machine had the latest and greatest BIOS firmware in place.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Playing and encoding AV1 in Debian Bullseye</title>
+		<link>https://people.skolelinux.org/pere/blog/Playing_and_encoding_AV1_in_Debian_Bullseye.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Playing_and_encoding_AV1_in_Debian_Bullseye.html</guid>
+                <pubDate>Sat, 16 Apr 2022 08:40:00 +0200</pubDate>
+		<description>&lt;p&gt;Inspired by the recent news of
+&lt;a href=&quot;https://slashdot.org/story/22/04/03/2039219/intel-beats-amd-and-nvidia-with-arc-gpus-full-av1-support&quot;&gt;AV1
+hardware encoding support from Intel&lt;/a&gt;, I decided to look into
+the state of AV1 on Linux today.  AV1 is a
+&lt;a href=&quot;https://web.archive.org/web/20160618103850/http://www.digistan.org/open-standard:definition&quot;&gt;free
+and open standard&lt;/a&gt; as defined by Digistan without any royalty
+payment requirement, unlike its much used competitor encoding
+H.264.  While looking, I came across an 5 year
+&lt;a href=&quot;https://askubuntu.com/questions/1061908/how-to-encode-and-playback-video-with-the-av1-codec-on-bionic-beaver-18-04&quot;&gt;old
+question on askubuntu.com&lt;/a&gt; which in turn inspired me to check out
+how things are in Debian Stable regarding AV1.  The test file listed
+in the question (askubuntu_test_aom.mp4) did not exist any more, so I
+tracked down a different set of test files on
+&lt;a href=&quot;https://av1.webmfiles.org/&quot;&gt;av1.webmfiles.org&lt;/a&gt; to test them
+with the various video tools I had installed on my machine.  I was
+happy to discover that AV1 decoding and playback worked with almost
+every tool I tested:
+
+&lt;table align=&quot;center&quot;&gt;
+&lt;tr&gt;&lt;td&gt;mediainfo&lt;/td&gt;       &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;dragonplayer&lt;/td&gt;    &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ffmpeg / ffplay&lt;/td&gt; &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;gnome-mplayer&lt;/td&gt;   &lt;td&gt;fail&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;mplayer&lt;/td&gt; 	     &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;mpv&lt;/td&gt;	     &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;parole&lt;/td&gt; 	     &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;vlc&lt;/td&gt;	     &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;firefox&lt;/td&gt;         &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;chromium&lt;/td&gt;        &lt;td&gt;ok&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;AV1 encoding is available in Debian Stable from the aom-tools
+version 1.0.0.errata1-3 package, using the aomenc tool.  The encoding
+using the package in Debian Stable is quite slow, with the frame rate
+for my 10 second test video at around 0.25 fps.  My 10 second video
+test took 16 minutes and 11 seconds on my test machine.&lt;/p&gt;
+
+&lt;p&gt;I tested by first running ffmpeg and then aomenc using the recipe
+provided by the askubuntu recipe above.  I had to remove the
+&#39;--row-mt=1&#39; option, as it was not supported in my 1.0.0 version.  The
+encoding only used a single thread, according to &lt;tt&gt;top&lt;/tt&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+ffmpeg -i some-old-video.ogv -t 10 -pix_fmt yuv420p video.y4m
+aomenc --fps=24/1 -u 0 --codec=av1 --target-bitrate=1000 \
+  --lag-in-frames=25 --auto-alt-ref=1 -t 24 --cpu-used=8 \
+  --tile-columns=2 --tile-rows=2 -o output.webm video.y4m
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;As version 1.0.0 currently have several
+&lt;a href=&quot;https://security-tracker.debian.org/tracker/source-package/aom&quot;&gt;unsolved
+security issues in Debian Stable&lt;/a&gt;, and to see if the recent
+backport &lt;a href=&quot;https://tracker.debian.org/pkg/aom&quot;&gt;provided in
+Debian&lt;/a&gt; is any quicker, I ran &lt;tt&gt;apt -t bullseye-backports install
+aom-tools&lt;/tt&gt; to fetch the backported version and re-encoded the
+video using the latest version.  This time the &#39;--row-mt=1&#39; option
+worked, and the encoding was done in 46 seconds with a frame rate of
+around 5.22 fps.  This time it seem to be using all my four cores to
+encode.  Encoding speed is still too low for streaming and real time,
+which would require frame rates above 25 fps, but might be good enough
+for offline encoding.&lt;/p&gt;
+
+&lt;p&gt;I am very happy to see AV1 playback working so well with the
+default tools in Debian Stable.  I hope the encoding situation improve
+too, allowing even a slow old computer like my 10 year old laptop to
+be used for encoding.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Få en slutt på Digitale utslipp</title>
+		<link>https://people.skolelinux.org/pere/blog/F__en_slutt_p__Digitale_utslipp.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/F__en_slutt_p__Digitale_utslipp.html</guid>
+                <pubDate>Mon, 14 Mar 2022 22:00:00 +0100</pubDate>
+		<description>&lt;p&gt;På onsdag sendte jeg følgende epost til Utdanningsetaten i Oslo
+kommune (UDE).  Fikk beskjed om at min henvendelse har saksnummer
+22/7559-1 i den
+&lt;a href=&quot;https://www.oslo.kommune.no/etater-foretak-og-ombud/utdanningsetaten/postjournal-utdanningsetaten/&quot;&gt;offentlige
+postjournalen til UDE&lt;/a&gt;.  Jeg er spent på hva slags respons jeg får.
+Mistenker jo de fleste som sprer sine nettsideleseres
+personopplysninger til utlandet ikke har tenkt så nøye igjennom hva de
+gjør, og at det er håp om at de tenker seg litt nøyere om hvis de blir
+klar over problemstillingen.  Vet du noen som burde få tilsvarede
+beskjed og spørsmål?  Kanskje du kan sende dem en epost.  Hvis alle
+bidrar blir det kanskje litt bedre.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;To: postmottak (at) osloskolen.no
+&lt;br&gt;Subject: Digitale utslipp fra osloskolens nettsider&lt;/p&gt;
+
+&lt;p&gt;Hei.&lt;/p&gt;
+
+&lt;p&gt;Jeg ser at osloskolens nettsider har digitale utslipp av
+personopplysninger til Google, Facebook og andre, blant annet omtalt
+på &amp;lt;URL: &lt;a href=&quot;https://aktuelt.osloskolen.no/personvernerklaring-for-osloskolen/informasjonskapsler/&quot;&gt;https://aktuelt.osloskolen.no/personvernerklaring-for-osloskolen/informasjonskapsler/&lt;/a&gt;
+&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;URL: &lt;a href=&quot;https://webbkoll.dataskydd.net/&quot;&gt;https://webbkoll.dataskydd.net/&lt;/a&gt; &gt; kan være et nyttig verktøy for å holde øye med utslippsomfanget på ulike sider.&lt;/p&gt;
+
+&lt;p&gt;Kanskje det er en ide å gjøre noe med det, jamfør &amp;lt;URL: &lt;a href=&quot;https://www.digi.no/artikler/debatt-det-enkleste-tiltaket-er-a-skru-av-google-analytics/517378&quot;&gt;https://www.digi.no/artikler/debatt-det-enkleste-tiltaket-er-a-skru-av-google-analytics/517378&lt;/a&gt; &gt;?&lt;/p&gt;
+
+&lt;p&gt;Et alternativ til Google Analytics kan være en lokalt installert
+utgave av &amp;lt;URL:
+&lt;a href=&quot;https://matomo.org/&quot;&gt;https://matomo.org/&lt;/a&gt; &gt;.  Den og flere
+andre alternativer kan finnes via
+&amp;lt;URL: &lt;a href=&quot;https://www.digi.no/artikler/sverige-vil-skrote-amerikansk-skytjeneste-her-er-alternativene/516223?key=5QsV0wRG&quot;&gt;https://www.digi.no/artikler/sverige-vil-skrote-amerikansk-skytjeneste-her-er-alternativene/516223?key=5QsV0wRG&lt;/a&gt; &gt;
+på bakgrunn av at svenske myndigheter har innsett at dagens praksis
+nok er både lite lur og ulovlig.  Der henger Norge litt etter, men
+osloskolen har her mulighet til å være litt i forkant. :)&lt;/p&gt;
+
+&lt;p&gt;Fint om dere kan gi beskjed hvilket saksnummer denne henvendelsen får i
+offentlig postjournal når den er mottatt.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;/p&gt;Flere og flere innser at slik spredning av personopplysninger er
+ugreit.  Det har pågått i mange år.  Ser jeg blogget
+&lt;a href=&quot;https://people.skolelinux.org/pere/blog/Det_er_jo_makta_som_er_mest_s_rbar_ved_massiv_overv_kning_av_Internett.html&quot;&gt;første
+gang om Google Analytics i 2013&lt;/a&gt; og
+&lt;a href=&quot;https://people.skolelinux.org/pere/blog/Snurpenot_overv_kning_av_sensitiv_personinformasjon.html&quot;&gt;analyserte
+omfanget i 2015&lt;/a&gt;, men det er et langt lerret å bleke.&lt;/p&gt;
+
+&lt;p&gt;Som vanlig, hvis du bruker Bitcoin og ønsker å vise din støtte til
+det jeg driver med, setter jeg pris på om du sender Bitcoin-donasjoner
+til min adresse
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.
+Merk, betaling med bitcoin er ikke anonymt. :)&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Publish Hargassner wood chip boiler state to MQTT</title>
+		<link>https://people.skolelinux.org/pere/blog/Publish_Hargassner_wood_chip_boiler_state_to_MQTT.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Publish_Hargassner_wood_chip_boiler_state_to_MQTT.html</guid>
+                <pubDate>Sat, 12 Mar 2022 06:30:00 +0100</pubDate>
+		<description>&lt;p&gt;Recently I had a look at a
+&lt;a href=&quot;https://www.hargassner.at/&quot;&gt;Hargassner&lt;/a&gt;
+&lt;a href=&quot;https://www.hargassner.at/en/products/wood-chip-boiler.html&quot;&gt;wood
+chip boiler&lt;/a&gt;, and what kind of free software can be used to monitor
+and control it.  The boiler can be connected to some cloud service via
+what the producer call an Internet Gateway, which seem to be a
+computer connecting to the boiler and passing the information gathered
+to the cloud.  I discovered the boiler controller got an IP address on
+the local network and listen on TCP port 23 to provide status
+information as a text line of numbers.  It also provide a HTTP server
+listening on port 80, but I have not yet figured out what it can do
+beside return an error code.&lt;/p&gt;
+
+&lt;p&gt;If I am to believe various free software implementations talking to
+such boiler, the interpretation of the line of numbers differ between
+type of boiler and software version on the boiler.  By comparing the
+list of numbers on the front panel of the boiler with the numbers
+returned via TCP, I have been able to figure out several of the
+numbers, but there are a lot left to understand.  I&#39;ve located several
+temperature measurements and hours running values, as well as oxygen
+measurements and counters.&lt;/p&gt;
+
+I decided to write a simple parser in Python for the values I figured
+out so far, and a simple MQTT injector publishing both the interpreted
+and the unknown values on a MQTT bus to make collecting and graphing
+simpler.  The end result is available from the
+&lt;a href=&quot;https://gitlab.com/petterreinholdtsen/hargassner2mqtt&quot;&gt;hargassner2mqtt
+project page&lt;/a&gt; on gitlab.  I very much welcome patches extending the
+parser to understand more values, boiler types and software versions.
+I do not really expect very few free software developers got their
+hands on such unit to experiment, but it would be fun if others too find
+this project useful.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Run your industrial metal working machine using Debian?</title>
+		<link>https://people.skolelinux.org/pere/blog/Run_your_industrial_metal_working_machine_using_Debian_.html</link>
+		<guid isPermaLink="true">https://people.skolelinux.org/pere/blog/Run_your_industrial_metal_working_machine_using_Debian_.html</guid>
+                <pubDate>Wed, 2 Mar 2022 18:40:00 +0100</pubDate>
+		<description>&lt;p&gt;After many months of hard work by the good people involved in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/LinuxCNC&quot;&gt;LinuxCNC&lt;/a&gt;, the
+system was accepted Sunday
+&lt;a href=&quot;https://tracker.debian.org/pkg/linuxcnc&quot;&gt;into Debian&lt;/a&gt;.
+Once it was available from Debian, I was surprised to discover from
+&lt;a href=&quot;https://qa.debian.org/popcon.php?package=linuxcnc&quot;&gt;its
+popularity-contest numbers&lt;/a&gt; that people have been reporting its use
+since 2012.  &lt;a href=&quot;http://linuxcnc.org/&quot;&gt;Its project site&lt;/a&gt; might
+be a good place to check out, but sadly is not working when visiting
+via Tor.&lt;/p&gt;
+
+&lt;p&gt;But what is LinuxCNC, you are probably wondering?  Perhaps a
+Wikipedia quote is in place?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&quot;LinuxCNC is a software system for numerical control of
+machines such as milling machines, lathes, plasma cutters, routers,
+cutting machines, robots and hexapods. It can control up to 9 axes or
+joints of a CNC machine using G-code (RS-274NGC) as input. It has
+several GUIs suited to specific kinds of usage (touch screen,
+interactive development).&quot;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It can even control 3D printers.  And even though the Wikipedia
+page indicate that it can only work with hard real time kernel
+features, it can also work with the user space soft real time features
+provided by the Debian kernel.
+&lt;a href=&quot;https://github.com/linuxcnc/linuxcnc&quot;&gt;The source code&lt;/a&gt; is
+available from Github.  The last few months I&#39;ve been involved in the
+translation setup for the program and documentation.  Translators are
+most welcome to
+&lt;a href=&quot;https://hosted.weblate.org/engage/linuxcnc/&quot;&gt;join the
+effort&lt;/a&gt; using Weblate.&lt;/p&gt;
+
+&lt;p&gt;As usual, if you use Bitcoin and want to show your support of my
+activities, please send Bitcoin donations to my address
+&lt;b&gt;&lt;a href=&quot;bitcoin:15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&quot;&gt;15oWEoG9dUPovwmUL9KWAnYRtNJEkP1u1b&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>
