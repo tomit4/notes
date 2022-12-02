@@ -1,14 +1,11 @@
 #!/bin/bash
-#
 
 main() {
-
- if ! command -v bat &> /dev/null ; then
-     /usr/bin/dict "${1}" | less
- else
-     /usr/bin/dict "${1}" | bat
-fi
-
+    if ! command -v bat &> /dev/null ; then
+        /usr/bin/dict "${1}" | less
+    else
+        /usr/bin/dict "${1}" | bat
+    fi
 }
 
 main "$@"
