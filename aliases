@@ -359,6 +359,9 @@ alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
 
 # Blogs
+# the valueable.dev has some great solid timeless advice on programming (and
+# good vim tricks)
+alias valuable="librewolf https://thevaluable.dev/ &"
 # Unix Sheikh, very good info regarding Unix and Linux
 alias unixsheikh="links https://unixsheikh.com"
 # A reddit like forum similar also to hackernews

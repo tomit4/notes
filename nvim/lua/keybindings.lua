@@ -79,6 +79,9 @@ vim.cmd[[noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')]]
 vim.cmd[[nnoremap <silent> <F11> :set spell!<cr>]]
 vim.cmd[[inoremap <silent> <F11> <C-O>:set spell!<cr>]]
 
+-- prevents opening files with nv causing vim to hang
+vim.cmd[[nnoremap gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile") " &"<cr>]]
+
 -- lab.nvim keybindings
 vim.cmd[[nnoremap <F4> :Lab code stop<CR>]]
 vim.cmd[[nnoremap <F5> :Lab code run<CR>]]

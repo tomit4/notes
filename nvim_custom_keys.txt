@@ -65,6 +65,23 @@ di{ - will delete everything encapsulated in the following curly brackets
 di[ - will delte everything encapsulated in the following square brackets
 di" - will delte everything encapsulated in the following quotation marks
 
+g - go
+gg - go to top of document
+shift + g - go to bottom of document
+gf - go to file underneath cursor (html files are brought in using wget and
+        rendered in editor)
+gx - go to address and open with default BROWSER or FILE EXPLORER
+gX - open file in file manager
+gi - go to place in document where you last entered insert mode, and also enter insert mode (where did I leave off?)
+gv - go to last selected text and enter visual mode
+gn - go to the selection of your last search
+gI insert text at the beginning of the line, no matter what the first characters
+are
+ga - print the hex code of the character under the cursor
+gu - convert enter line to lowercase
+gU - convert enter line to uppercase
+
+
 y - beginning y keybinding, yanks or copies character or word for pasting elsewhere using the p keybinding
 (can be prepended by a number, and multiples the amount of words/lines to be copied)
 yh - copies one word back (equivalent to yb)
@@ -105,6 +122,15 @@ ctrl + w + v - open up a vertical split window
 ctrl + w + s - open up a horizontal split window
 
 :e ./name_of_file_to_open - not as good as fzf, but is a decent native file finder in nvim
+
+/ simple search command
+: enter COMMAND mode
+
+INTERESTING CHAINS
+:1,40d - Delete line 1 to 40 included
+:2,$d - Delete every line from the second one to the end of the file
+:.,$d - Delete every line from the current line to the end of the file
+:%d - delete every line
 
 FROM NORMAL MODE, ENTERING OTHER MODES
 i - enter INSERT mode at the current cursor position
@@ -157,6 +183,8 @@ CTRL + j/k Enter Multi-Cursor (red cursor is NORMAL MODE< yellow cursor is INSER
 SHIFT + m Open up Markdown Preview for .md files (mainly used for README.md)
 
 CTRL + p Open fuzzy file finder like search application
+
+CTRL + o Return from gf (navigate to file)
 
 :Neoformat Formats most code options (don't use with .c or .cpp files as there is another application i use for that)
 

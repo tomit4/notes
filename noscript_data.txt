@@ -180,7 +180,17 @@
         "githubassets.com",
         "pornhub.com",
         "phncdn.com",
-        "xhcdn.com"
+        "xhcdn.com",
+        "debian.org",
+        "https://www.linux-magazine.com",
+        "codeberg.org",
+        "https://people.skolelinux.org/pere/blog/",
+        "https://www.openstreetmap.org",
+        "https://lkml.org",
+        "§:bitchute.com",
+        "§:cloudflare.com",
+        "https://thevaluable.dev",
+        "§:icons8.com"
       ],
       "untrusted": [
         "google.com",
@@ -192,7 +202,8 @@
         "ajax.googleapis.com",
         "https://google-webfonts-helper.herokuapp.com/fonts",
         "googlevideo.com",
-        "maps.googleapis.com"
+        "maps.googleapis.com",
+        "google-analytics.com"
       ],
       "custom": {
         "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {
