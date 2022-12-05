@@ -391,6 +391,9 @@ vim.cmd[[set noswapfile]]
 -- enable hard/soft wrap
 vim.cmd[[set wrap linebreak textwidth=80]]
 
+-- enable clipboard
+vim.cmd[[set clipboard+=unnamedplus]]
+
 -- set up lab.nvim
 sources = cmp.config.sources({ {name = 'lab.quick_data', keyword_length = 4 }})
 require('lab').setup {
