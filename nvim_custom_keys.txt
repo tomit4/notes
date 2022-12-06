@@ -35,7 +35,10 @@ gg - go to top of the page
 shift + g - go to the bottom of the page
 ctrl u -page up
 ctrl d - page down
-/ - forwards slash searches foor the word/term you wish to jump to, just press enter once it is highlighted
+/ - forwards slash searches for the word/term you wish to jump to, just press enter once it is highlighted
+? - question mark searches for the word/term you wish to jump to, just press enter once it is highlighted
+n - jump to the next occurence of search term entered from / or ? (/ goes forwards in document, ? goes backwards in document)
+N - jump to the previous occurence of search term entered from / or ? (/ goes backwards in document, ? goes forwards in document)
 :w - writes (my nneovim setup as autosave, but it's still a good feature to have)
 :q - quits neovim (first neovim command to learn)
 u - undoes last change (can be used with prepended numbers depending on how many steps you want to undo)

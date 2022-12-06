@@ -20,6 +20,14 @@ keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
 -- vim.cmd[[nnoremap gb :silent :GitBlameToggle]]
 keymap('n', '<c-g>', '<c-w>:GitBlameToggle<CR>', {})
 
+-- pageup/pagedown autotmatically recenters
+vim.cmd[[:map <C-d> <C-d>zz]]
+vim.cmd[[:map <C-u> <C-u>zz]]
+
+-- search automatically recenters
+vim.cmd[[nnoremap n nzz]]
+vim.cmd[[nnoremap N Nzz]]
+
 -- open ripgrep
 vim.cmd[[nnoremap rg :silent :Rg]]
 
