@@ -18,6 +18,7 @@ Install OverbiteWX
 Install OneTab
 Install Return YouTube Dislike
 Install Alter (redirect for nitter, invidious, teddit, scribe, bibliogram, etc.)
+Install bypass-paywalls (not official, go to https://github.com/iamadamdev/bypass-paywalls-chrome)
 Install DuckDuckGo Lite Search (doesn't quite work, just use DuckDuckGo)
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)
 Install ClearURLs
