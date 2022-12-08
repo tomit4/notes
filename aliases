@@ -145,7 +145,6 @@ alias wifi-down="doas ifconfig wlan0 down"
 alias letitsnow="doas docker start snowflake-proxy"
 alias snowfall="doas docker stop snowflake-proxy"
 alias snowlogs="doas docker logs -f snowflake-proxy"
-alias {lsc,lscommits}="tig"
 alias lxapp="lxappearance"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
@@ -207,7 +206,7 @@ alias hwclock="doas hwclock"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 alias npm_upgrade="doas npm install --location=global npm@latest"
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
-alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g"
+alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
 alias jester="jest --watchAll"
 alias pip_upgrade="python -m pip install --upgrade pip"
@@ -272,7 +271,6 @@ alias cc="cc -Wall -Werror -Wextra"
 alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
 #create programming licences
-alias license="legit"
 
 # game shortcuts
 # alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
@@ -314,6 +312,10 @@ alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 # sustainable clothing brands (shoes and underwear)
 alias nothingnew="librewolf https://nothingnew.com &"
 alias wamaundies="librewolf https://wamaunderwear.com &"
+
+# Linux related
+alias elixir="librewolf https://exlir.bootlin.com/ &"
+alias lwn="librewolf https://lwn.net/ &"
 
 # Podcasts (downloadable using yt-dlp or wget, and playable using mpv)
 alias {1up,1upsmanship}="librewolf https://www.iheart.com/podcast/1119-1upsmanship-97574019/ &"

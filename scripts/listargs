@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# interesting things found on stack overflow regarding listing arguments and
+# grabbing values of other arguments
+
+# while getopts h x; do
+  # echo "has -h";
+# done; OPTIND=0
+
+# for ((i = 0; i < $#; i++)) ; do
+    # case "$*" in
+        # (-u) echo "Has -u";
+        # break
+    # esac
+# done
+
+list=( agpl-3.0 bsd-2-clause bsd-3-clause mit )
+# echo "list of arguments ${list[0]}"
+for (( i = 0; i < ${#list[@]}; i++)) ; do
+    if [[ "agpl-3.0" == "${list[$i]}" ]] ; then
+        echo "yep"
+        exit 0
+    else
+        echo "nope"
+    fi
+done
+#
+# args=("$@")
+# for (( i=0; i < $#; i++)) ; do
+    # j=$((i+1))
+    # if [[ "${args[$i]}" == '-u' ]] ; then
+        # echo "$i is equal -u"
+        # echo "the following argument to -u is ${args[$j]}"
+    # fi
+    # echo "${!i} ${!j}"
+# done
+
+# case "$*" in
+    # (-u) echo "Has -u";;
+# esac
+
+# for arg in "$@"
+# do
+    # echo "argument is: $arg"
+# done

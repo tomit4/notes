@@ -192,3 +192,7 @@ doas pacman -S slop gifsicle libimage-exiftool-perl rebuild-detector keynav dvtm
 lowdown inotify-tools lynis socat diffstat
 
 paru dtach sherlock-git
+
+Install moreutils package (pretty awesome)
+
+doas pacman -S moreutils

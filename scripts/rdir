@@ -2,7 +2,10 @@
 
 # A simple bookmarking alias used in conjunction with sdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
 
-# grabs the current $sdir environment variable
-source $HOME/.zshrc
+# grabs the rc file of preferred shell (only works with bash and zsh currently)
+shellrc=.$(echo "$SHELL" | awk -F '/' '{ print $NF }')rc
 
-cd $sdir && ls
+# grabs the current $sdir environment variable
+source "$HOME"/"$shellrc"
+
+cd "$sdir" && ls
