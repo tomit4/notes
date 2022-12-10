@@ -224,6 +224,9 @@ SHIFT + T Runs jester unit tester on appropriate .test.js files
 
 F11 Toggle Spellchecker
 
+Custom shortcut: nv (opens up new vertical pane)
+ctrl + w + r (rotates panes)
+
 -- INSERT MODE
 
 ii - equivaent to <ESC> key (return to normal mode from insert mode)
