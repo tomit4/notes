@@ -1,11 +1,15 @@
 #!/bin/bash
+# A simple bookmarking script used in conjunction with rdir
+# to save a directory for easy navigation later
 
-# A simple bookmarking alias used in conjunction with sdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
-
-# grabs the rc file of preferred shell (only works with bash and zsh currently)
-shellrc=.$(echo "$SHELL" | awk -F '/' '{ print $NF }')rc
-
+sdrc="$HOME"/.sdrc
 # grabs the current $sdir environment variable
-source "$HOME"/"$shellrc"
+if [[ -f "$sdrc" ]] ; then
+    source "$sdrc"
+else
+    prinf "%s\n" "error: no .sdrc file."
+    prinf "%s\n" "use sdir scriptt in desired directory first."
+    exit 1
+fi
 
 cd "$sdir" && ls

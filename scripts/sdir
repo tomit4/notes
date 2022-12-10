@@ -1,22 +1,18 @@
 #!/bin/bash
-# A simple bookmarking alias used in conjunction with rdir and our $HOME/.aliases file to bookmark our current directory to be returned to later using rdir.
-# make sure we don't overwrite our .shrc
-set -o noclobber
+# A simple bookmarking script used in conjunction with rdir
+# to save a directory for easy navigation later
+
 # save our current working directory
 sdir=$(pwd)
+# allow overwriting of sdrc
+set +o noclobber
 
-# grabs the rc file of preferred shell (only works with bash and zsh currently)
-shellrc=.$(echo "$SHELL" | awk -F '/' '{ print $NF }')rc
-# grabs the last line of our .zshrc, and grabs the first word
-last_line_first_word=$(awk '{w=$1} END{print w}' "$HOME"/"$shellrc")
-
-# if the last line of our rc file begins with "export"...
-# remove the last line of our rc file
-if [[ $last_line_first_word == "export" ]] ; then
-    sed -i '$ d' "$HOME"/"$shellrc"
+# define and create .sdrc file
+sdrc="$HOME/".sdrc
+if [[ ! -f "$sdir" ]] ; then
+    /usr/bin/touch "$sdir"
 fi
 
-# and write that directory temporarily, appending it onto the end of our rc
-echo 'export sdir='"$sdir" >> "$HOME"/"$shellrc"
-# immediately source it to use it in this shell session
-source "$HOME"/"$shellrc"
+echo 'export sdir='"$sdir" > "$sdrc"
+# immediately source ~/.sdrc
+source "$sdrc"
