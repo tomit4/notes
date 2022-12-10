@@ -145,7 +145,7 @@ fi
 bindkey -v
 
 # alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
-alias home="cd && history -p && zhome.sh && unset sdir"
+alias home="cd && history -p && clear"
 
 # Various source files (do not place at end of zshrc/bashrc)
 source ~/.aliases
