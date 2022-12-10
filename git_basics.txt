@@ -1,6 +1,6 @@
 # This document covers the basics of creating a simple git repository.
 
-################### CREATE NEW REPOSITORY ###################  
+################### CREATE NEW REPOSITORY ###################
 
 # Log into github: https://www.github.com/
 
@@ -24,7 +24,7 @@ git remote add origin https://github.com/<your_github_user_name>/test-repo.git #
 
 git push -u origin main # pushes your local repository to the online repository
 
-################### PUSH TO EXISTING REPOSITORY ################### 
+################### PUSH TO EXISTING REPOSITORY ###################
 
 git remote add origin https://github.com/<your_github_user_name>/test-repo.git
 
@@ -44,7 +44,7 @@ git push origin v0.1.0 and pushes it to the repository
 
 ################ DELETING ITEMS FROM YOUR REPOSITORY ####################
 
-git -rm <file name> 
+git -rm <file name>
 
 TO REMOVE FROM JUST THE REPOSITORY:
 
@@ -62,7 +62,7 @@ echo "node_modules/" > .gitignore
 git pull origin main --allow-unrelated-histories
 
 # Remember that certain files like our files.txt files in our reading-streams Node-Cookbook tutorials were over 50mb in size,
-# which github has as their file cap, so don't commit files over 50mb. 
+# which github has as their file cap, so don't commit files over 50mb.
 
 #################### SSH PUSHING #####################
 
@@ -83,8 +83,34 @@ git push origin_ssh main
 
 It will then prompt you for your ssh key's passphrase, enter it and you will be good to go (better than the security token option above)
 
+################### WORKING WITH OTHER CONTRIBUTORS ###################
 
-################### UPDATE NPM REGISTRY ################### 
+# Adding an new branch
+git checkout -b new_branch
+
+# Add new remote (often either a different website or fork of your project)
+git remote add new_remote <https://github.com/other_contributor/their_fork>
+
+# From within the new_branch, pull the repository
+git pull new_remote their_branch_name
+
+# Review the results using difft etc, once ready to merge, add, rm what is
+needed per usual git commands
+git add .
+git rm rm_file_1 rm_file_2
+git commit -m "merged changes contributed by other_contributor"
+
+# Once done, switch back to your branch, merge the results and push to your
+repository
+
+git checkout main
+git merge new_branch
+git push your_remote
+
+# Note: This will automatically close the pull request on the repository, so if
+you need to message them regarding this, be sure to do so.
+
+################### UPDATE NPM REGISTRY ###################
 
 npm login # Enter login credentials
 
