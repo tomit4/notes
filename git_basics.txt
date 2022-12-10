@@ -107,6 +107,9 @@ git checkout main
 git merge new_branch
 git push your_remote
 
+# Be sure to clean up the merged branch as it is now part of the main project
+git remote rm new_remote
+
 # Note: This will automatically close the pull request on the repository, so if
 you need to message them regarding this, be sure to do so.
 
