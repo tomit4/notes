@@ -111,6 +111,7 @@ function SetAutoCmp(mode)
         Mode = require('cmp.types').cmp.TriggerEvent.TextChanged
     end
 end
+SetAutoCmp(Mode)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
