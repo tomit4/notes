@@ -20,6 +20,9 @@ keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
 -- vim.cmd[[nnoremap gb :silent :GitBlameToggle]]
 keymap('n', '<c-g>', '<c-w>:GitBlameToggle<CR>', {})
 
+--toggle autocompletion
+vim.cmd[[nnoremap cm :silent lua SetAutoCmp(Mode)]]
+
 -- pageup/pagedown autotmatically recenters
 vim.cmd[[:map <C-d> <C-d>zz]]
 vim.cmd[[:map <C-u> <C-u>zz]]

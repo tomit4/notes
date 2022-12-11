@@ -31,6 +31,7 @@ lsp_installer.on_server_ready(function(server)
 end)
   -- Setup nvim-cmp.
 local cmp = require'cmp'
+vim.cmd[[set completeopt=menu,menuone,noselect]]
 
   cmp.setup({
      snippet = {
@@ -58,12 +59,19 @@ local cmp = require'cmp'
   })
 
   -- Set configuration for specific filetype.
-  cmp.setup.filetype('gitcommit', {
-    sources = cmp.config.sources({
-      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-    }, {
-      { name = 'buffer' },
-    })
+  -- cmp.setup.filetype('gitcommit', {
+    -- sources = cmp.config.sources({
+      -- { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+    -- }, {
+      -- { name = 'buffer' },
+    -- })
+  -- })
+
+-- auto completion doesn't apply to txt files
+  cmp.setup.filetype({ 'text' }, {
+      completion = {
+            autocomplete = false
+      }
   })
 
   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
@@ -83,6 +91,26 @@ local cmp = require'cmp'
       { name = 'cmdline' }
     })
   })
+
+-- function that is used with keybinding cm to toggle autocompletion
+Mode = require('cmp.types').cmp.TriggerEvent.TextChanged
+function SetAutoCmp(mode)
+    if mode then
+        cmp.setup({
+          completion = {
+            autocomplete = { Mode }
+          }
+        })
+        Mode = false
+    else
+        cmp.setup({
+            completion = {
+                autocomplete = Mode
+            }
+        })
+        Mode = require('cmp.types').cmp.TriggerEvent.TextChanged
+    end
+end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -339,8 +367,6 @@ vim.opt.splitright = true
 -- vim.cmd[[g:gitblame_enabled = 0]]
 vim.g.gitblame_enabled = 0
 
--- set up completion
-vim.cmd[[set completeopt=menu,menuone,noselect]]
 
 -- Vertically center document when entering Insert mode
 vim.cmd[[autocmd InsertEnter * norm zz]]
