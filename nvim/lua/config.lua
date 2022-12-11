@@ -39,6 +39,10 @@ local cmp = require'cmp'
         vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
      end,
     },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -79,15 +83,6 @@ local cmp = require'cmp'
       { name = 'cmdline' }
     })
   })
-
--- Setup lspconfig.
--- deprecated, see https://github.com/hrsh7th/cmp-nvim-lsp
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-require'cmp'.setup {
-    sources = {
-        { name = 'nvim_lsp' }
-    }
-}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -343,6 +338,9 @@ vim.opt.splitright = true
 -- Disable git-blame by default
 -- vim.cmd[[g:gitblame_enabled = 0]]
 vim.g.gitblame_enabled = 0
+
+-- set up completion
+vim.cmd[[set completeopt=menu,menuone,noselect]]
 
 -- Vertically center document when entering Insert mode
 vim.cmd[[autocmd InsertEnter * norm zz]]
