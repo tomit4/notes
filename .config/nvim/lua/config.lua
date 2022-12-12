@@ -397,6 +397,9 @@ vim.cmd[[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]]
 -- fzf is on bottom of screen
 vim.cmd[[let g:fzf_layout = { 'down': '~30%' }]]
 
+-- max tab characters
+vim.cmd[[let g:mintabline_tab_max_chars = 10 ]]
+
 --Removes trailing spaces on save
 vim.cmd[[autocmd FileWritePre * call TrimWhiteSpace()]]
 vim.cmd[[autocmd FileAppendPre * call TrimWhiteSpace()]]
