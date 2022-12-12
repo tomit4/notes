@@ -252,9 +252,10 @@ alias git-rrs="git reset --soft HEAD^"
 alias git-s="git status"
 alias git-ss="git status short"
 # for use with notes directory only
-alias git-pn="git push origin-ssh && git push codeberg"
 alias git-l="git log"
 alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
+alias vimtips="bat $HOME/Documents/notes/nvim_custom_keys.txt"
+
 
 # tmux multiplexer session aliases
 alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
@@ -569,6 +570,7 @@ alias regen_initramfs="doas mkinitcpio -P"
 # source scripts that need to utilize shell builtins
 alias {sd,sdir}="source $HOME/scripts/sdir"
 alias {rd,rdir}="source $HOME/scripts/rdir"
+alias unu="upnup"
 
 source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
