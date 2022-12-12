@@ -68,7 +68,7 @@ vim.cmd[[set completeopt=menu,menuone,noselect]]
   -- })
 
 -- auto completion doesn't apply to txt files
-  cmp.setup.filetype({ 'text', 'markdown', 'html' }, {
+  cmp.setup.filetype({ 'text', 'markdown' }, {
       completion = {
             autocomplete = false
       }

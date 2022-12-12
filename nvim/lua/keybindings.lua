@@ -4,13 +4,22 @@ vim.g.mapleader = ","
 -- remap Nvim_Tree toggle to CTRL+B
 keymap('n', '<c-b>', '<c-w>:NvimTreeToggle<CR>', {})
 
+-- vimium like options
 -- Tab Shortcuts
-keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {}) keymap('n', '<s-tab>', '<c-w>:tabprevious<CR>', {}) keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
+keymap('n', '<c-t>', '<c-w>:tabnew<CR>', {})
+keymap('n', 't', '<c-w>:tabnew<CR>', {})
+
+keymap('n', '<s-tab>', '<c-w>:tabprevious<CR>', {})
+keymap('n', '<s-j>', '<c-w>:tabprevious<CR>', {})
 keymap('n', '<a-left>', '<c-w>:tabprevious<CR>', {})
+
+keymap('n', '<a-tab>', '<c-w>:tabnext<CR>', {})
+keymap('n', '<s-k>', '<c-w>:tabnext<CR>', {})
 keymap('n', '<a-right>', '<c-w>:tabnext<CR>', {})
 
 -- Use ctrl- [hl] to select the active split!
-keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {}) keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
+keymap('n', '<c-h>', '<c-w>:wincmd h<CR>', {})
+keymap('n', '<c-l>', '<c-w>:wincmd l<CR>', {})
 
 -- open fzf
 vim.cmd[[nnoremap fzf :silent :FZFExplore]]
@@ -21,7 +30,7 @@ keymap('n', '<c-p>', '<c-w>:FZFExplore<CR>', {})
 keymap('n', '<c-g>', '<c-w>:GitBlameToggle<CR>', {})
 
 --toggle autocompletion
-vim.cmd[[nnoremap cm :silent lua SetAutoCmp(Mode)]]
+vim.cmd[[nnoremap cmp :silent lua SetAutoCmp(Mode)]]
 
 -- pageup/pagedown autotmatically recenters
 vim.cmd[[:map <C-d> <C-d>zz]]
@@ -57,7 +66,7 @@ vim.cmd[[nnoremap rp :silent :put =range(,)]]
 vim.cmd[[:map <C-c> <Plug>NERDCommenterToggle]]
 
 -- <Ctrl-x> redraws the screen and removes any search highlighting
-keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
+keymap('n', '<c-x>', '<c-w>:nohl<CR>', {silent = true})
 
 -- <Shift -m> brings up a preview of Markdown files
 keymap('n', '<s-m>', '<c-w>:MarkdownPreview<CR>', {})
