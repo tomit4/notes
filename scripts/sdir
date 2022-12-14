@@ -13,6 +13,11 @@ if [[ ! -f "$sdir" ]] ; then
     /usr/bin/touch "$sdir"
 fi
 
+if [[ $# -gt 0 ]] ; then
+    sdoc="$1"
+fi
+
 echo 'export sdir='"$sdir" > "$sdrc"
+echo 'export sdoc='"$sdoc" >> "$sdrc"
 # immediately source ~/.sdrc
 source "$sdrc"

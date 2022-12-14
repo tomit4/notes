@@ -12,4 +12,8 @@ else
     exit 1
 fi
 
-cd "$sdir" && ls
+if [ -z "$sdoc" ] ; then
+    cd "$sdir" && ls
+else
+    cd "$sdir" && $EDITOR $sdoc
+fi
