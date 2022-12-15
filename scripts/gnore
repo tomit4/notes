@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# set -vx
+
+# simple script that creates a .gitignore without an editor
+# usage: gnore sample_file sample_dir
+# usage: gnore (without arguments brings up prompt that recursively asks for
+# items to add to .gitignore, q or quit quits the program)
+
+main() {
+    if [[ ! -f ".gitignore" ]]; then
+        touch .gitignore
+    fi
+
+    if [[ "$#" -eq 0 ]] ; then
+        while :
+        do
+            read -e -r -p "add to .gitignore(q to quit): " addtogitignore
+            if [[ "$addtogitignore" == "q" || "$addtogitignore" == "quit" ]] ; then
+                break
+                exit 0
+            else
+                echo "$addtogitignore" >> .gitignore
+            fi
+        done
+    else
+        ignores=("$@")
+        for ((i = 0; i < "${#ignores[@]}"; i++)) ; do
+            echo "${ignores[$i]}" >> .gitignore
+        done
+        exit 0
+    fi
+}
+
+main "$@"
