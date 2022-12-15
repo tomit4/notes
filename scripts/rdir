@@ -15,5 +15,5 @@ fi
 if [ -z "$sdoc" ] ; then
     cd "$sdir" && ls
 else
-    cd "$sdir" && $EDITOR $sdoc
+    cd "$sdir" && $EDITOR -c \'a "$sdoc"
 fi
