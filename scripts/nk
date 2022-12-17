@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+servefile="$1"
+
+while :
+do
+    # echo -e "HTTP/1.1 200 OK\n\n$(echo '<h1>Hi there</h1>')" | nc -l -k -p 8080 -q 1
+    echo -e "HTTP/1.1 200 OK\n\n$(cat "$servefile")" | nc -l -k -p 8080 -q 1
+done
