@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+servefile="$1"
+port="$2"
+
+main() {
+    while :
+    do
+        echo -e "HTTP/1.1 200 OK\n\n$(cat "$servefile")" | nc -l -p "$port" -q 1
+    done
+}
+
+main
