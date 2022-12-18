@@ -13,7 +13,7 @@ else
 fi
 
 if [ -z "$sdoc" ] ; then
-    cd "$sdir" && ls
+    cd "$sdir" && /usr/bin/exa --icons
 else
     cd "$sdir" && $EDITOR -c \'a "$sdoc"
 fi
