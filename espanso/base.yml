@@ -78,10 +78,13 @@ matches:
     replace: "########################\n\n#######################"
 
   - trigger: ":rdr"
-    replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
+    replace: "source $HOME/.sdrc && cd $sdir && nvim +$sdline $sdoc"
 
   - trigger: ":rdd"
-    replace: "source $HOME/.sdrc && cd $sdir"
+    replace: "source $HOME/.sdrc && cd $sdir && ls"
+
+  - trigger: ":rds"
+    replace: ":! echo 'export sdline=' >> $HOME/.sdrc"
 
   - trigger: ":for"
     replace: "for (;;) {}"

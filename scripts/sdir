@@ -1,4 +1,5 @@
 #!/bin/bash
+# used with espanso :rdr and :rdd command
 # A simple bookmarking script used in conjunction with rdir
 # to save a directory for easy navigation later
 
@@ -13,11 +14,18 @@ if [[ ! -f "$sdir" ]] ; then
     /usr/bin/touch "$sdir"
 fi
 
-if [[ $# -gt 0 ]] ; then
+if [[ $# -eq 1 ]] ; then
     sdoc="$1"
+    sdline="0"
+else
+    sdoc=""
+fi
+
+if [[ $# -eq 2 ]] ; then
+    sdoc="$1"
+    sdline="$2"
 fi
 
 echo 'export sdir='"$sdir" > "$sdrc"
 echo 'export sdoc='"$sdoc" >> "$sdrc"
-# immediately source ~/.sdrc
-source "$sdrc"
+echo 'export sdline='"$sdline" >> "$sdrc"
