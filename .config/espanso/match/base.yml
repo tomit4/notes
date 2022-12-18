@@ -110,6 +110,9 @@ matches:
   - trigger: ":cll"
     replace: "console.log()"
 
+  - trigger: ":cla"
+    replace: "console.assert()"
+
   - trigger: ":cle"
     replace: "console.error()"
 
