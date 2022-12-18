@@ -83,8 +83,8 @@ matches:
   - trigger: ":rdd"
     replace: "source $HOME/.sdrc && cd $sdir && ls"
 
-  - trigger: ":rds"
-    replace: ":!sed -i '$d' $HOME/.sdrc && echo 'export sdline=' >> $HOME/.sdrc"
+  - trigger: ":sdir"
+    replace: ":! $HOME/scripts/sdir "
 
   - trigger: ":for"
     replace: "for (;;) {}"
