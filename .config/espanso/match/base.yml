@@ -74,6 +74,9 @@ matches:
   - trigger: ":cmm"
     replace: "/* *********************\n\n*********************/"
 
+  - trigger: ":cmh"
+    replace: "########################\n\n#######################"
+
   - trigger: ":rdr"
     replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
 
