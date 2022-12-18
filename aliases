@@ -171,6 +171,7 @@ alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 # interfaces with asciinema.org for creating simple video tutorials on cli programs
 alias ascii="asciinema"
 
+alias mpv="mpv --sub-font-size=40"
 alias {listen,yt-listen,mpva}='mpv "${1}" --no-video'
 alias mmpv='mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
@@ -566,7 +567,6 @@ alias regen_initramfs="doas mkinitcpio -P"
 
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
-#
 alias unu="upnup"
 
 source $HOME/.n_hidden
