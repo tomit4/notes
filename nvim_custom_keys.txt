@@ -35,6 +35,8 @@ gg - go to top of the page
 shift + g - go to the bottom of the page
 ctrl u -page up
 ctrl d - page down
+u - undoes last change (can be used with prepended numbers depending on how many steps you want to undo)
+ctrl + r - reverts changes over after unintentional undoing (undoes the last undo commands, also can be prepended by a number)
 
 / - forwards slash searches for the word/term you wish to jump to, just press enter once it is highlighted
 ? - question mark searches for the word/term you wish to jump to, just press enter once it is highlighted
@@ -42,10 +44,6 @@ n - jump to the next occurence of search term entered from / or ? (/ goes forwar
 N - jump to the previous occurence of search term entered from / or ? (/ goes backwards in document, ? goes forwards in document)
 * - search for all occurences of the word under current cursor
 
-:w - writes (my nneovim setup as autosave, but it's still a good feature to have)
-:q - quits neovim (first neovim command to learn)
-u - undoes last change (can be used with prepended numbers depending on how many steps you want to undo)
-ctrl + r - reverts changes over after unintentional undoing (undoes the last undo commands, also can be prepended by a number)
 
 d - beginning d keybinding, can be combined with many of the above commands (it cuts, so you can paste it using p keybinding)
 (can be prepended by a number, and multiples the amount of words/lines is deleted/cut)
@@ -126,8 +124,8 @@ WINDOW MANIPULATION BINDINGS
 ctrl + w + o - close all window buffers except for the one selected
 ctrl + w + v - open up a vertical split window
 ctrl + w + s - open up a horizontal split window
+ctrl + w + r - rotate windows
 
-:e ./name_of_file_to_open - not as good as fzf, but is a decent native file finder in nvim
 
 / simple search command
 : enter COMMAND mode
@@ -153,6 +151,13 @@ NO MATTER WHAT MODE YOU'RE IN, you can always:
 <ESC> to return to NORMAL MODE
 ctrl + { to return to NORMAL MODE
 
+COMMAND MODE
+:w - writes (my nneovim setup as autosave, but it's still a good feature to have)
+:q - quits neovim (first neovim command to learn)
+:wa - writes all files
+:wqa - writes all files and quits
+:e ./name_of_file_to_open - not as good as fzf, but is a decent native file finder in nvim
+
 INSERT MODE
 tab - configured for four spaces in my case
 
@@ -161,9 +166,6 @@ VISUAL MODE
 h,j,k,l,g,shift+g,0,$ all apply, it simply highlights them
 and you can use standard and custom commands here that would normally apply in NORMAL mode
 
-CTRL + V ENTERS VISUAL BLOCK MODE
-I only really use this for muliple commenting out of lines
-(ctrl + v + j or k and then ctrl+c to comment out code)
 
 VISUAL LINE MODE
 y - yank the line (more useful than yy, will past without having to create a new line)
@@ -173,10 +175,16 @@ y - yank the line (more useful than yy, will past without having to create a new
 NORMAL MODE
 
 nf Simply typing this in NORMAL MODE will invoke Neoformat, simply hit enter afterwards
+
 CTRL + p or fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
+
 rg Simply typing this in NORMAL MODE will invoke RipGrep, simply hit enter afterwards
 
-SHIFT + d Opens up diff view
+cmp To toggle code snippets
+
+CTRL + V ENTERS VISUAL BLOCK MODE
+I only really use this for muliple commenting out of lines
+(ctrl + v + j or k and then ctrl+c to comment out code)
 
 SHIFT + p Automatically Updates new Packages with :PackerSync
 
@@ -197,7 +205,7 @@ CTRL + o Return from gf (navigate to file)
 cp alias for using ClangFormat C/C++ Formatter
 
 CTRL + b : Open Nneovim Tree
-in Nneovim Tree there are specific keybindings (most standard neovim keybindings work here as well):
+in Neovim Tree there are specific keybindings (most standard neovim keybindings work here as well):
 a - creates new file (keep adding slashes to create directories or don't for regular files)
 d - deletes file (hit y when prompted)
 r - renames file (enter new name and hit enter)
@@ -212,23 +220,21 @@ CTRL + l Navigate to one vertical window to the right
 
 CTRL + e to adjust window width (h and l will adjust width, just hit enter afterwards to adjust, opening and closing nneovim tree readjusts back to defaults)
 
-CTRL + t open new tab
+t open new tab
 
-ALT + <right arrow> or <tab> goes to next tab
+SHIFT + k goes to next tab
 
-ALT + <left arrow> or SHIFT + <tab> goes to previous tab
+SHIFT + j goes to previous tab
 
 SHIFT + S Aliased to global search and replace
-
-SHIFT + T Runs jester unit tester on appropriate .test.js files
+SHIFT + Y Aliased to inline search and replace
 
 F11 Toggle Spellchecker
 
 Custom shortcut: nv (opens up new vertical pane)
-ctrl + w + r (rotates panes)
 
 -- INSERT MODE
-
+# deprecated when OKLB acquired...
 ii - equivaent to <ESC> key (return to normal mode from insert mode)
 
 -- ESPANSO BASED commands
@@ -242,6 +248,7 @@ In NeoVim's INSERT MODE, simply type
 :command-prepended-by-colon - expands to this
 
 :cll - console.log()
+:cla - console.assert()
 :cle - console.error()
 :clt - console.table()
 :func - function () {}
@@ -256,3 +263,11 @@ In NeoVim's INSERT MODE, simply type
 :try - try {} catch(error) {}
 :inc - #include
 :$ - `${}`
+:cmm -
+/* *********************
+* NICE COMMENT BLOCK
+*********************/
+:cmh -
+########################
+# NICE COMMENT BLOCK
+#######################

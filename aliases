@@ -255,7 +255,7 @@ alias git-ss="git status short"
 # for use with notes directory only
 alias git-l="git log"
 alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
-alias vimtips="bat $HOME/Documents/notes/nvim_custom_keys.txt"
+alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
 
 
 # tmux multiplexer session aliases
@@ -567,6 +567,7 @@ alias regen_initramfs="doas mkinitcpio -P"
 
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
+alias sd="sdir"
 alias unu="upnup"
 
 source $HOME/.n_hidden
