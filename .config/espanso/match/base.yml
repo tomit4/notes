@@ -84,7 +84,7 @@ matches:
     replace: "source $HOME/.sdrc && cd $sdir && ls"
 
   - trigger: ":sdir"
-    replace: ":! $HOME/scripts/sdir "
+    replace: ":! $HOME/scripts/sdir $sdoc "
 
   - trigger: ":for"
     replace: "for (;;) {}"
