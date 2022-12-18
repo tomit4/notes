@@ -5,25 +5,22 @@
 
 # save our current working directory
 sdir=$(pwd)
+sdoc="${1:-''}"
+sdline="${2:-0}"
 # allow overwriting of sdrc
 set +o noclobber
 
 # define and create .sdrc file
 sdrc="$HOME/".sdrc
-if [[ ! -f "$sdir" ]] ; then
-    /usr/bin/touch "$sdir"
+if [[ ! -f "$sdrc" ]] ; then
+    /usr/bin/touch "$sdrc"
+
 fi
 
-if [[ $# -eq 1 ]] ; then
+if [[ $# -gt 0 ]] ; then
     sdoc="$1"
-    sdline="0"
 else
     sdoc=""
-fi
-
-if [[ $# -eq 2 ]] ; then
-    sdoc="$1"
-    sdline="$2"
 fi
 
 echo 'export sdir='"$sdir" > "$sdrc"
