@@ -78,7 +78,7 @@ matches:
     replace: "########################\n\n#######################"
 
   - trigger: ":rdr"
-    replace: "source $HOME/.sdrc && cd $sdir && nvim +$sdline $sdoc"
+    replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
 
   - trigger: ":rdd"
     replace: "source $HOME/.sdrc && cd $sdir && ls"
