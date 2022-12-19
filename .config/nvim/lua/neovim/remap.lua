@@ -6,7 +6,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- remap for vim-smoothie
 vim.cmd [[nnoremap <C-D> <cmd>call smoothie#do("\<C-D>zz")<CR>]]
 vim.cmd [[nnoremap <C-U> <cmd>call smoothie#do("\<C-U>zz")<CR>]]
-vim.cmd [[nnoremap gg <cmd>call smoothie#do("\<gg>")<CR>]]
+vim.cmd [[nnoremap gg <cmd>call smoothie#do("gg")<CR>]]
 vim.cmd [[nnoremap <S-g> <cmd>call smoothie#do("\<S-g>zz")<CR>]]
 
 -- recenter on next/previous search
