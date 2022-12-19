@@ -14,7 +14,7 @@ declare -a confedit_list=(
 "dunst - $HOME/.config/dunst/dunstrc"
 "i3 - $HOME/.config/i3/config"
 "kitty - $HOME/.config/kitty/kitty.conf"
-"nvim - $HOME/.config/nvim/lua/config.lua"
+"nvim - $HOME/.config/nvim/lua/neovim/remap.lua"
 "ranger - $HOME/.config/ranger/rifle.conf"
 "tuir - $HOME/.config/tuir/tuir.cfg"
 )
