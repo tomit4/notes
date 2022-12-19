@@ -1,5 +1,5 @@
 #!/bin/bash
-# used with espanso :rdr and :rdd command
+# used with espanso :rr and :rd command
 # A simple bookmarking script used in conjunction with rdir
 # to save a directory for easy navigation later
 
