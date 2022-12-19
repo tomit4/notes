@@ -1,3 +1,3 @@
-require('lualine').setup({
-    options = { them = 'nord' }
+require("lualine").setup({
+	options = { them = "nord" },
 })

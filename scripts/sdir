@@ -11,16 +11,16 @@ set +o noclobber
 
 # define and create .sdrc file
 sdrc="$HOME/".sdrc
-if [[ ! -f "$sdrc" ]] ; then
+if [[ ! -f "$sdrc" ]]; then
     /usr/bin/touch "$sdrc"
 
 fi
 
-if [[ $# -gt 0 ]] ; then
+if [[ $# -gt 0 ]]; then
     sdoc="$1"
 else
     sdoc=""
 fi
 
-echo 'export sdir='"$sdir" > "$sdrc"
-echo 'export sdoc='"$sdoc" >> "$sdrc"
+echo 'export sdir='"$sdir" >"$sdrc"
+echo 'export sdoc='"$sdoc" >>"$sdrc"

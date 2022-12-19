@@ -160,6 +160,7 @@ COMMAND MODE
 :wa - writes all files
 :wqa - writes all files and quits
 :e ./name_of_file_to_open - not as good as fzf, but is a decent native file finder in nvim
+:100 - go to line 100 (any number)
 
 INSERT MODE
 tab - configured for four spaces in my case
@@ -239,6 +240,23 @@ Custom shortcut: nv (opens up new vertical pane)
 -- INSERT MODE
 # deprecated when OKLB acquired...
 ii - equivaent to <ESC> key (return to normal mode from insert mode)
+
+-- THE PRIMEAGEN AND HARPOON PLUGIN
+note: my configuration is based off of the primeagens, with a lot more added
+on, and a tiny bit taken out. The following is how I've set up his harpoon
+plugin:
+
+notes on harpoon: harpoon essentially replaces tabs (up to four, although more
+can be implemented). It has an interactive menu through telescope/plenary. Note
+that harpoon is powerful, it will save a buffer of its own and remember the four
+tabs you want for every project (no more re-opening tabs upon returning to your
+project):
+
+<leader>a - Saves the page you are currently on and line you're on.
+<leader>h - Go to your 1st saved page.
+<leader>j - Go to your 2nd saved page.
+<leader>k - Go to your 3rd saved page.
+<leader>l - Go to your 4th saved page.
 
 -- ESPANSO BASED commands
 NOTE: Espanso can be used in conjunction for some powerful aliases in neovim (as well as other applications)

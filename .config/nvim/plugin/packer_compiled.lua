@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
     url = "https://github.com/f-person/git-blame.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   indentLine = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/indentLine",
@@ -190,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-lastplace"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-lastplace",
+    url = "https://github.com/ethanholz/nvim-lastplace"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -225,15 +235,35 @@ _G.packer_plugins = {
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   rainbow = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-clang-format"] = {
     loaded = true,
     path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-clang-format",
     url = "https://github.com/rhysd/vim-clang-format"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/brian/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-gitgutter"] = {
     loaded = true,
