@@ -116,9 +116,12 @@ shift + t -same as shift + f, but goes backwards to one character before entered
 * - search forward the word currently under the cursor
 # - search backward the word currently under the cursor
 
-GOOD FOR USE WITHIN FUNCTITON ENCAPSULATIONS
+GOOD FOR USE WITHIN FUNCTION ENCAPSULATIONS
 [{ - go to beginning encapsulation that begins with { ( can also be used with '(' )
 ]} - got o the ending encapsulation that ends with } ( can also be used with ')' )
+
+COOL BITS
+ctrl + a - hops to nearest number and increments it
 
 WINDOW MANIPULATION BINDINGS
 ctrl + w + o - close all window buffers except for the one selected
