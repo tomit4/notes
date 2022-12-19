@@ -225,7 +225,7 @@ CTRL + e to adjust window width (h and l will adjust width, just hit enter after
 
 t open new tab
 
-SHIFT + k goes to next tab
+ALT + k goes to next tab
 
 SHIFT + j goes to previous tab
 
