@@ -7,7 +7,7 @@ usage: gifpress input.gif width height\n"
 fi
 
 if ! command -v gifsicle &> /dev/null ; then
-    echo "gifpress not installed!"
+    echo "gifsicle not installed!"
     exit 1
 fi
 
