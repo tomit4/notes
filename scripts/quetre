@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# queries quetre, a non-JS version of quora
+# to find a list of all instances and documentation, visit:
+# https://codeberg.org/zyachel/quetre/
+#
 lastarg=("${@: -1}")
 
 search=""
@@ -10,4 +15,10 @@ for ARG in "${@}" ; do
     fi
 done
 
-links "https://quetre.iket.me/search?q=${search}"
+# instances
+links "https://quora.vern.cc/search?q=${search}"
+# links "https://quetre.pussthecat.org/search?q=${search}"
+# links "https://quetreus.herokuapp.com/search?q=${search}"
+# links "https://quetre.tokhmi.xyz/search?q=${search}"
+# links "https://quetre.esmailelbob.xyz/search?q=${search}"
+# links "https://quetre.iket.me/search?q=${search}"
