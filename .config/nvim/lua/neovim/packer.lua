@@ -31,6 +31,7 @@ use {'simeji/winresizer'}
 use {'sbdchd/neoformat'}
 use {'rhysd/vim-clang-format'}
 use {'sangdol/mintabline.vim'}
+use {'ethanholz/nvim-lastplace'}
 use({
    "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,

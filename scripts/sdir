@@ -6,7 +6,6 @@
 # save our current working directory
 sdir=$(pwd)
 sdoc="${1:-''}"
-sdline="${2:-0}"
 # allow overwriting of sdrc
 set +o noclobber
 
@@ -25,4 +24,3 @@ fi
 
 echo 'export sdir='"$sdir" > "$sdrc"
 echo 'export sdoc='"$sdoc" >> "$sdrc"
-echo 'export sdline='"$sdline" >> "$sdrc"
