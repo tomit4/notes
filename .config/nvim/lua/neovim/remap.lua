@@ -38,7 +38,7 @@ vim.keymap.set('n', '<S-j>', '<c-w>:tabprevious<CR>', {})
 vim.keymap.set('n', '<A-left>', '<c-w>:tabprevious<CR>', {})
 
 vim.keymap.set('n', '<A-tab>', '<c-w>:tabnext<CR>', {})
-vim.keymap.set('n', '<S-k>', '<c-w>:tabnext<CR>', {})
+vim.keymap.set('n', '<A-k>', '<c-w>:tabnext<CR>', {})
 vim.keymap.set('n', '<A-right>', '<c-w>:tabnext<CR>', {})
 
 -- Use ctrl- [hl] to select the active split!
