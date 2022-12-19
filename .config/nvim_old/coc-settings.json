@@ -1,0 +1,59 @@
+{
+	"suggest.noselect": false,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"typescript",
+    "typescriptreact",
+    "typescriptvue",
+		"json",
+    "javascriptreact",
+    "javascriptvue",
+    "typescript.tsx",
+    "graphql"
+	],
+  "languageserver": {
+    "bash": {
+    "command": "bash-language-server",
+    "args": ["start"],
+    "filetypes": ["sh"],
+    "ignoredRootPaths": ["~"]
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupport": true
+        },
+        "compilationDatabaseDirectory": "build",
+        "clang": {
+            "extraArgs": ["-std=c++20"]
+        }
+      }
+    },
+    "sql": {
+    "command": "sql-language-server",
+    "args": ["up", "--method", "stdio"],
+    "filetypes": ["sql", "mysql"]
+    },
+    "dockerfile": {
+    "command": "docker-langserver",
+    "filetypes": ["dockerfile"],
+    "args": ["--stdio"]
+    },
+    "graphql": {
+    "command": "graphql-lsp",
+    "args": ["server", "-m", "stream"],
+    "filetypes": ["typescript", "typescriptreact", "graphql"]
+    },
+    "rust": {
+    	"command": "rust-analyzer",
+    	"filetypes": ["rust"],
+    	"rootPatterns": ["Cargo.toml"]
+    }
+  }
+}
