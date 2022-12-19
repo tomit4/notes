@@ -5,6 +5,7 @@ article and Unix Sheikh's Choose your Browser Carefully article):
 Install Ublock Origin
 Install Decentraleyes
 Install Canvas Blocker (on librewolf no need)
+Install Colorzilla
 Install Measure-it
 Install FastForward
 Install Firefox Translations
