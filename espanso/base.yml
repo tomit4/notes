@@ -77,10 +77,10 @@ matches:
   - trigger: ":cmh"
     replace: "########################\n\n#######################"
 
-  - trigger: ":rdr"
+  - trigger: ":rr"
     replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
 
-  - trigger: ":rdd"
+  - trigger: ":rd"
     replace: "source $HOME/.sdrc && cd $sdir && ls"
 
   - trigger: ":for"
