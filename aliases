@@ -161,7 +161,6 @@ alias {html,html_pp}="hxnormalize -e"
 # stock tickers
 alias ticker="ticker -w SPY,QQQ,DIA,IWM,VIX"
 alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
-alias {reddit,rd}="tuir"
 alias qwiki="wik -i"
 alias toolongdidntread="tldr"
 alias cheatsheet="cheat"

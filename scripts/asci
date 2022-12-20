@@ -1,0 +1,83 @@
+#!/bin/bash
+
+asci() { echo -e "\e[${1}m${*:2}\e[0m"; }
+bold() { asci 1 "$@"; }
+italic() { asci 3 "$@"; }
+underline() { asci 4 "$@"; }
+strikethrough() { asci 9 "$@"; }
+red() { asci 31 "$@"; }
+
+bold this text is written using the bold function
+italic and this text is written using the italic function
+underline same for underline...
+strikethrough and for strikethrough...
+red and even with red!
+
+echo -e "\e[3mitalic\e[0m"
+echo -e "\e[1mbold\e[0m"
+echo -e "\e[4munderline\e[0m"
+echo -e "\e[9mstrikethrough\e[0m"
+echo -e "\e[31mred\e[0m"
+echo -e "\e[32mgreen\e[0m"
+echo -e "\e[33myellow\e[0m"
+echo -e "\e[34mblue\e[0m"
+echo -e "\e[35mpurple\e[0m"
+echo -e "\e[36mcyan\e[0m"
+echo -e "\e[37mwhite\e[0m"
+
+echo -e "\033[31;1;3mitalic and red\033[0m"
+
+# %2d two digits printed this way
+printf "\e[1;34m%2d\e[0m\n" 42
+# %s indicates string
+printf "\e[1;35m%s\e[0m\n" "and this is a printf string in purple 42"
+
+echo -e "\033[30;0mwhite regular\e[0m"
+echo -e "\033[30;1mgrey bold\e[0m"
+echo -e "\033[30;4mgrey underline\e[0m"
+echo -e "\033[30;7mgrey background, black letters\e[0m"
+echo -e "\033[40;1mgrey background, white letters\e[0m"
+echo -e "\033[40;4mgrey background, white letters, underline\e[0m"
+echo -e "\033[40;7mwhite background, grey letters\e[0m"
+
+echo -e "\033[31;1mred bold\e[0m"
+echo -e "\033[31;4mred underline\e[0m"
+echo -e "\033[31;7mred background, black letters\e[0m"
+echo -e "\033[41;1mred background, white letters\e[0m"
+echo -e "\033[41;4mred background, white letters, underline\e[0m"
+echo -e "\033[41;7mwhite background, red letters\e[0m"
+
+echo -e "\033[32;1mgreen bold\e[0m"
+echo -e "\033[32;4mgreen underline\e[0m"
+echo -e "\033[32;7mgreen background, black letters\e[0m"
+echo -e "\033[42;1mgreen background, white letters\e[0m"
+echo -e "\033[42;4mgreen background, white letters, underline\e[0m"
+echo -e "\033[42;7mgrey background, green letters\e[0m"
+
+echo -e "\033[33;1myellow bold\e[0m"
+echo -e "\033[33;4myellow underline\e[0m"
+echo -e "\033[33;7myellow background, black letters\e[0m"
+echo -e "\033[43;1myellow background, white letters\e[0m"
+echo -e "\033[43;4myellow background, white letters, underline\e[0m"
+echo -e "\033[43;7mwhite background, yellow letters\e[0m"
+
+echo -e "\033[34;1mblue bold\e[0m"
+echo -e "\033[34;4mblue underline\e[0m"
+echo -e "\033[34;7mblue background, black letters\e[0m"
+echo -e "\033[44;1mblue background, white letters\e[0m"
+echo -e "\033[44;4mblue background, white letters, underline\e[0m"
+echo -e "\033[44;7mwhite background, blue letters\e[0m"
+
+echo -e "\033[35;1mpurple bold\e[0m"
+echo -e "\033[35;4mpurple underline\e[0m"
+echo -e "\033[35;7mpurple background, black letters\e[0m"
+echo -e "\033[45;1mpurple background, white letters\e[0m"
+echo -e "\033[45;4mpurple background, white letters, underline\e[0m"
+echo -e "\033[45;7mwhite background, purple letters\e[0m"
+
+echo -e "\033[36;1mcyan bold\e[0m"
+echo -e "\033[36;4mcyan underline\e[0m"
+echo -e "\033[36;7mcyan background, black letters\e[0m"
+echo -e "\033[46;1mcyan background, white letters\e[0m"
+echo -e "\033[46;4mcyan background, white letters, underline\e[0m"
+echo -e "\033[46;7mwhite background, cyan letters\e[0m"
