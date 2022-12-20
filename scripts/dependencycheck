@@ -36,22 +36,22 @@ function dependencycheck()
 # invoke function comment out if sourced
 dependencycheck "$@"
 
-# Barebones version without tput (for being sourced):
-# function dependencycheck()
-# {
-    # numdependencies="$#"
-    # dependencies=("$@")
-    # missingdependencies=0
+# Better simple version from tomocafe (see upnup script)
+# For use within scripts, not on its own
 
-    # for ((i = 0; i < numdependencies; i++)) ; do
-        # if ! command -v "${dependencies[$i]}" &> /dev/null ; then
-            # echo "dependency not met: ${dependencies[$i]}"
-            # missingdependencies=$((missingdependencies+1))
+#error() {
+    # printf "error: %s\n" "$1" 1>&2
+    # ${2:+exit $2}
+# }
+
+# dependencycheck() {
+    # local dep missingdependencies=0
+    # for dep in "$@" ; do
+        # if ! command -v "$dep" &> /dev/null ; then
+            # error "dependency not met: $dep"
         # fi
     # done
-
-    # if [ $missingdependencies -gt 0 ] ; then
-        # echo "Please install needed dependencies"
+    # if [[ $missingdependencies -gt 0 ]] ; then
         # exit 1
     # fi
 # }
