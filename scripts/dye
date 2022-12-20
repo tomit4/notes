@@ -32,7 +32,7 @@ EOM
 hex_to_rgb() {
     : "${1/\#/}"
     ((r = 16#${_:0:2}, g = 16#${_:2:2}, b = 16#${_:4:2}))
-    printf '%s\n' "rgba($r, $g, $b)"
+    printf '%s\n' "rgb($r, $g, $b)"
 }
 
 rgb_to_hex() {
@@ -64,12 +64,12 @@ main() {
     while getopts ":x:r:?" arg; do
         case $arg in
             x)
-                rgbaval=$(hex_to_rgb "${2:-''}")
-                printf "%s\n" "$rgbaval"
+                rgbval=$(hex_to_rgb "${2:-''}")
+                printf "%s\n" "$rgbval"
                 read -e -r -p "save code to clipboard?(y/n): " clipit
                 if [[ "$clipit" == "yes" || "$clipit" == "y" ]]; then
                     dependencycheck xclip
-                    printf "%s" "$rgbaval" | xclip -sel clip
+                    printf "%s" "$rgbval" | xclip -sel clip
                 fi
                 ;;
             r)
