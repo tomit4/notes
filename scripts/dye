@@ -20,7 +20,7 @@ printhelp() {
     cat <<EOM
 usage: dye [-h|-r] [color_code]
 options:
- -x             hex code to rgb
+ -x                  hex to rgb
  -r                  rgb to hex
 examples:
  dye -x "#FFFFFF"
