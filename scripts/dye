@@ -17,7 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 printhelp() {
-cat << EOM
+    cat <<EOM
 usage: dye [-h|-r] [color_code]
 options:
  -x             hex code to rgb
@@ -30,8 +30,8 @@ EOM
 }
 
 hex_to_rgb() {
-    : "${1/\#}"
-    ((r=16#${_:0:2},g=16#${_:2:2},b=16#${_:4:2}))
+    : "${1/\#/}"
+    ((r = 16#${_:0:2}, g = 16#${_:2:2}, b = 16#${_:4:2}))
     printf '%s\n' "rgba($r, $g, $b)"
 }
 
@@ -46,17 +46,21 @@ error() {
 
 dependencycheck() {
     local dep missingdependencies=0
-    for dep in "$@" ; do
-        if ! command -v "$dep" &> /dev/null ; then
+    for dep in "$@"; do
+        if ! command -v "$dep" &>/dev/null; then
             error "dependency not met: $dep"
         fi
     done
-    if [[ $missingdependencies -gt 0 ]] ; then
+    if [[ $missingdependencies -gt 0 ]]; then
         exit 1
     fi
 }
 
 main() {
+    if [[ "$#" -lt 1 ]]; then
+        printhelp
+    fi
+
     while getopts ":x:r:?" arg; do
         case $arg in
             x)
