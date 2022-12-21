@@ -18,7 +18,7 @@
 
 printhelp() {
     cat <<EOM
-usage: dye [-h|-r] [color_code]
+usage: dye [-x|-r] [color_code]
 options:
  -x                  hex to rgb
  -r                  rgb to hex
