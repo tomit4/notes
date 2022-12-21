@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+# simple wrapper alias around personal script upnup
+# generates simple license, just "unu license_name"
+# see man upnup
+#
+main () {
+    source "${HOME}/.full_name"
+    upnup -u "$full_name" p "$@"
+}
+
+main "$@"
