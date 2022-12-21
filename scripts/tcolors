@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# there are 255 total colors...
+echo "$(tput setaf 1)red"
+echo "$(tput setaf 2)green"
+echo "$(tput setaf 3)yellow"
+echo "$(tput setaf 4)blue"
+echo "$(tput setaf 5)purple"
+echo "$(tput setaf 6)cyan"
+echo "$(tput setaf 7)white"
+echo "$(tput setaf 8)grey"
+echo "$(tput setaf 9)red"
+echo "$(tput setaf 10)green"
