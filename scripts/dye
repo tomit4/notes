@@ -107,8 +107,7 @@ main() {
                     error "-r parses no less than three arguments"
                     exit 2
                 fi
-                # hexval=$(rgb_to_hex "${@:2}")
-                hexval=$(rgb_to_hex "${2:-''}")
+                hexval=$(rgb_to_hex "${@:2}")
                 printf "%s\n" "$hexval"
                 read -e -r -p "save code to clipboard?(y/n): " clipit
                 if [[ "$clipit" == "yes" || "$clipit" == "y" ]]; then
