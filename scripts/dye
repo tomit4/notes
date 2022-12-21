@@ -23,20 +23,43 @@ options:
  -x                  hex to rgb
  -r                  rgb to hex
 examples:
- dye -x "#FFFFFF"
+ dye -x "#ffffff"
  dye -r 255 255 255
+ dye -x "#43fF6480"
+ dye -r 67 255 100 0.5
 EOM
     exit 1
 }
 
+alpha_to_hex() {
+    printf "%02x\n" "$(echo "scale=0; $1*255" | bc)" 2>/dev/null
+}
+
 hex_to_rgb() {
     : "${1/\#/}"
-    ((r = 16#${_:0:2}, g = 16#${_:2:2}, b = 16#${_:4:2}))
-    printf '%s\n' "rgb($r, $g, $b)"
+    if ((${#_} == 8)); then
+        ((r = 16#${_:0:2}, g = 16#${_:2:2}, b = 16#${_:4:2}, a = 16#${_:6:2}))
+        a=$(echo "scale=2; $a / 255" | bc)
+    else
+        ((r = 16#${_:0:2}, g = 16#${_:2:2}, b = 16#${_:4:2}))
+        a=1.0
+    fi
+    printf "%s\n" "rgb($r, $g, $b, $a)"
 }
 
 rgb_to_hex() {
-    printf '#%02x%02x%02x\n' "$1" "$2" "$3"
+    echo "$@"
+    if [[ "$*" =~ rgb ]]; then
+        set -- "$(tr ',' ' ' <<<"$*" | tr -cd ' 0-9')"
+    fi
+
+    if [[ -n "$4" ]]; then
+        local a
+        a=$(alpha_to_hex "$4")
+        printf "#%02x%02x%02x%s\n" "$1" "$2" "$3" "$a"
+    else
+        printf "#%02x%02x%02x\n" "$1" "$2" "$3"
+    fi
 }
 
 error() {
@@ -64,6 +87,10 @@ main() {
     while getopts ":x:r:?" arg; do
         case $arg in
             x)
+                if [[ "$#" -gt 2 ]]; then
+                    error "-x only parses one following argument"
+                    exit 2
+                fi
                 rgbval=$(hex_to_rgb "${2:-''}")
                 printf "%s\n" "$rgbval"
                 read -e -r -p "save code to clipboard?(y/n): " clipit
@@ -73,6 +100,14 @@ main() {
                 fi
                 ;;
             r)
+                if [[ "$#" -gt 5 ]]; then
+                    error "-r parses up to four following argument"
+                    exit 2
+                elif [[ "$#" -lt 4 ]]; then
+                    error "-r parses no less than three arguments"
+                    exit 2
+                fi
+                # hexval=$(rgb_to_hex "${@:2}")
                 hexval=$(rgb_to_hex "${2:-''}")
                 printf "%s\n" "$hexval"
                 read -e -r -p "save code to clipboard?(y/n): " clipit
@@ -93,7 +128,8 @@ main "$@"
 # Credits:
 # hex_to_rgb() and rgb_to_hex() taken from Akash Mittal:
 # https://akashmittal.com/code-example-convert-hex-color-to-rgb-rgb-to-hex-using-bash-script/
-# https://www.linkedin.com/in/akashrishimittal/
-#
-# error() and dependencycheck() copied from tomocafe:
-# https://github.com/tomocafe
+
+# Both users zeekar and DyslexicHobo on reddit for their help:
+# https://reddit.com/r/bash/comments/zqmvz8/rgbhex_converter_syntax_how_does_this_work/
+# And yeah, I also used ChatGPT:
+# https://openai.com/blog/chatgpt/
