@@ -12,7 +12,8 @@ set -o noclobber
 export cproj="/home/brian/Documents/Code/leafbytes"
 
 # custom BROWSER env for ddgr:
-export BROWSER=librewolf
+# export BROWSER=librewolf
+export BROWSER=links
 export EDITOR=nvim
 export PF_INFO="ascii os kernel pkgs shell wm editor"
 
@@ -94,9 +95,11 @@ unsetopt BEEP
 
 # PROMPT='[%n@%m %1~]%F{green}(${vcs_info_msg_0_})%F{white}$ '
 # PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
-PROMPT='%B%F{blue}[ﴂ %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+# PROMPT='%B%F{blue}[ﴂ %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+# └─>%B%F{white} '
+PROMPT='%B%F{blue}[ﴂ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
 └─>%B%F{white} '
-#
+
 # function erase_history { local HISTSIZE=0; }
 # erase_history && hash -r
 
@@ -134,11 +137,11 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
-	autoload -Uz add-zle-hook-widget
-	function zle_application_mode_start { echoti smkx }
-	function zle_application_mode_stop { echoti rmkx }
-	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
-	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+    autoload -Uz add-zle-hook-widget
+    function zle_application_mode_start { echoti smkx }
+    function zle_application_mode_stop { echoti rmkx }
+    add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+    add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
 # Set up vim mode
@@ -163,20 +166,24 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Set up TTY colors
 # pulled form https://github.com/lewisacidic/nord-tty
 if [ "$TERM" = "linux" ]; then
-    echo -en \\e]P02E3440
-    echo -en \\e]P1BF616A
-    echo -en \\e]P2A3BE8C
-    echo -en \\e]P3EBCB8B
-    echo -en \\e]P481A1C1
-    echo -en \\e]P5B48EAD
-    echo -en \\e]P688C0D0
-    echo -en \\e]P7E5E9F0
-    echo -en \\e]P84C566A
-    echo -en \\e]P9BF616A
-    echo -en \\e]PAA3BE8C
-    echo -en \\e]PBEBCB8B
-    echo -en \\e]PCB48EAD
-    echo -en \\e]PD8FBCBB
-    echo -en \\e]PEECEFF4
-    clear
+echo -en \\e]P02E3440
+echo -en \\e]P1BF616A
+echo -en \\e]P2A3BE8C
+echo -en \\e]P3EBCB8B
+echo -en \\e]P481A1C1
+echo -en \\e]P5B48EAD
+echo -en \\e]P688C0D0
+echo -en \\e]P7E5E9F0
+echo -en \\e]P84C566A
+echo -en \\e]P9BF616A
+echo -en \\e]PAA3BE8C
+echo -en \\e]PBEBCB8B
+echo -en \\e]PCB48EAD
+echo -en \\e]PD8FBCBB
+echo -en \\e]PEECEFF4
+clear
+fi
+
+if [[ -f "$HOME/.sdrc" ]] ; then
+source "$HOME/.sdrc"
 fi
