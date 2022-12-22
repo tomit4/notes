@@ -49,13 +49,35 @@ hex_to_rgb() {
         a=1.0
     # else if hex value is 3 characters (minimal hex value provided)
     elif ((${#_} == 3)); then
-        ((r = 16#${_:0:1}, g = 16#${_:1:1}, b = 16#${_:2:1}))
+        # if the first character still has a hashtag in it...
+        if [[ ${1:0:1} != "#" ]]; then
+            color="#$1"
+        else
+            color="$1"
+        fi
+        # grab out each passed value
+        r="$(echo "$color" | cut -c2)"
+        g="$(echo "$color" | cut -c3)"
+        b="$(echo "$color" | cut -c4)"
+
+        # and convert them to hexadecimal
+        r=$(printf "%d" 0x$r$r)
+        g=$(printf "%d" 0x$g$g)
+        b=$(printf "%d" 0x$b$b)
+
+        # ((r = 16#${_:0:1}, g = 16#${_:1:1}, b = 16#${_:2:1}))
         a=1.0
     else
         error "$1 is not a recognized hex color code."
     fi
     printf "%s\n" "rgba($r, $g, $b, $a)"
 }
+
+# parse_rgb() takes rgb string to extract
+# numeric values from it and then pass that to rgb_to_hex()
+# parse_rgb() {
+#
+# }
 
 rgb_to_hex() {
     local a
@@ -91,6 +113,8 @@ main() {
                 fi
                 ;;
             r)
+                # parse an 'rgb()' or 'rgba' string here
+                # regex compare to string
                 if [[ "$#" -gt 5 ]]; then
                     error "-r parses up to four following argument"
                     exit 2
