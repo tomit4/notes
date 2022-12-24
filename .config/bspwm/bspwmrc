@@ -58,9 +58,8 @@ bspc rule -a Pavucontrol state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Brave-browser center=on rectangle=1595x970+1440+810 &
+bspc rule -a Pcmanfm center=on rectangle=1595x970+1440+810 &
 
-# bspc rule -a pavucontrol state=floating rectangle=480x270+1440+810 sticky=on layer=above
-# bspc rule -a lxappearance state=floating rectangle=480x270+1440+810 sticky=on layer=above
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a mplayer2 state=floating
