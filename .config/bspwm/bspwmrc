@@ -1,5 +1,5 @@
 #! /bin/sh
-# bspc rule -r "*"
+bspc rule -r "*" &
 
 # picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # feh --bg-fill /home/brian/Pictures/nord_mountains.png &
@@ -28,7 +28,7 @@ bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
-bspc config normal_border_color "#44444"
+bspc config normal_border_color "#444444"
 # bspc config active_border_color "#64a098"
 bspc config active_border_color "#2c77ac"
 # bspc config active_border_color "#a9b926"
@@ -51,7 +51,13 @@ bspc config right_padding 3
 bspc config border_width 1
 bspc config window_gap 5
 
-bspc rule -a -o st desktop=2
+# bspc rule -a -o st desktop=2
+bspc rule -a Gcolor3 state=floating &
+bspc rule -a Galculator state=floating &
+bspc rule -a Pavucontrol state=floating center=on rectangle=960x810+1440+810 &
+bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
+bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
+bspc rule -a Brave-browser center=on rectangle=1595x970+1440+810 &
 
 # bspc rule -a pavucontrol state=floating rectangle=480x270+1440+810 sticky=on layer=above
 # bspc rule -a lxappearance state=floating rectangle=480x270+1440+810 sticky=on layer=above
