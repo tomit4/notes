@@ -10,6 +10,7 @@ declare -a confedit_list=(
 "st - $HOME/.config/st/config.h"
 "bspwm - $HOME/.config/bspwm/bspwmrc"
 "sxhkd - $HOME/.config/sxhkd/sxhkdrc"
+"espanso - $HOME/.config/espanso/match/base.yml"
 "picom - $HOME/.config/picom/picom.conf"
 "dunst - $HOME/.config/dunst/dunstrc"
 "i3 - $HOME/.config/i3/config"
