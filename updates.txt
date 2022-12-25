@@ -191,7 +191,7 @@ Install slop and gifsicle and libimage-exiftool-perl and rebuild-detector and ke
 doas pacman -S slop gifsicle libimage-exiftool-perl rebuild-detector keynav dvtm
 lowdown inotify-tools lynis socat diffstat
 
-paru dtach sherlock-git moar
+paru dtach sherlock-git moar devour
 
 Install moreutils package (pretty awesome), yapf (python formatter), shfmt
 (shell formatter), stylua (lua formatter), ttf-joypixels (emojis in terminal)
