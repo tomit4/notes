@@ -1,1 +1,3 @@
-require("nvim-autopairs").setup()
+require("nvim-autopairs").setup({
+    ignored_next_char = "[%w%\"]"
+})
