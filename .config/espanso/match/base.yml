@@ -150,7 +150,7 @@ matches:
 
   # Prepares Quetre search
   - trigger: "!que"
-    replace: "https://quetre.iket.me/search?q="
+    replace: "https://qr.vern.cc/search?q="
 
   # Returns public ip address
   - trigger: ";ip"

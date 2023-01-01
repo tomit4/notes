@@ -16,7 +16,8 @@ for ARG in "${@}" ; do
 done
 
 # instances
-links "https://quora.vern.cc/search?q=${search}"
+# links "https://quora.vern.cc/search?q=${search}"
+links "https://qr.vern.cc/search?q=${search}"
 # links "https://quetre.pussthecat.org/search?q=${search}"
 # links "https://quetreus.herokuapp.com/search?q=${search}"
 # links "https://quetre.tokhmi.xyz/search?q=${search}"
