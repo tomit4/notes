@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en-US">
+		<channel>
+			<title>Artix Linux Forum</title>
+			<link>https://forum.artixlinux.org/index.php</link>
+			<description><![CDATA[Live information from Artix Linux Forum]]></description>
+			<generator>ElkArte</generator>
+			<ttl>30</ttl>
+			<image>
+				<url>https://artixlinux.org/forum/themes/silence/images/logo.png</url>
+				<title>Artix Linux Forum</title>
+				<link>https://forum.artixlinux.org/index.php</link>
+			</image>
+		<item>
+			<title>Re: xf86-video-intel is required for xrandr to work</title>
+			<link>https://forum.artixlinux.org/index.php/topic,4913.msg31492.html#msg31492</link>
+			<description>
+<![CDATA[It says on the arch wiki <a href="https://wiki.archlinux.org/title/Intel_graphics" class="bbc_link" target="_blank" rel="noopener noreferrer">https://wiki.archlinux.org/title/Intel_graphics</a> that the package is generally not recommended, I also heard that the package is deprecated or isn't updated as much but i might have misunderstood or smth changed.<br />So does this...]]>
+			</description>
+			<category><![CDATA[Applications &amp; Software]]></category>
+			<comments>https://forum.artixlinux.org/index.php?action=post;topic=4913.0</comments>
+			<pubDate>Sun, 01 Jan 2023 08:26:46 GMT</pubDate>
+			<guid>https://forum.artixlinux.org/index.php/topic,4913.msg31492.html#msg31492</guid>
+			<dc:creator>Will7</dc:creator>
+		</item>
+		<item>
+			<title>Re: Installing drivers for Canon i-SENSYS MF113w ppd files</title>
+			<link>https://forum.artixlinux.org/index.php/topic,4924.msg31491.html#msg31491</link>
+			<description>
+<![CDATA[This will be reminder to read manuals first.<br />From CUPS manual page.<br /><div class="quoteheader">Quote</div><blockquote class="bbc_quote">lpadmin -p Canon-i-SENSIS-MF113w -E -v ipp://192.168.1.***/ipp/print -m everywhere</blockquote><br />CUPS uses universal drivers everywhere for most network printers from 2009.]]>
+			</description>
+			<category><![CDATA[Applications &amp; Software]]></category>
+			<comments>https://forum.artixlinux.org/index.php?action=post;topic=4924.0</comments>
+			<pubDate>Sun, 01 Jan 2023 04:13:12 GMT</pubDate>
+			<guid>https://forum.artixlinux.org/index.php/topic,4924.msg31491.html#msg31491</guid>
+			<dc:creator>u0</dc:creator>
+		</item>
+		<item>
+			<title>[SOLVED] Installing drivers for Canon i-SENSYS MF113w ppd files</title>
+			<link>https://forum.artixlinux.org/index.php/topic,4924.msg31490.html#msg31490</link>
+			<description>
+<![CDATA[I want to install Canon i-SENSYS MF113w printer for network printing.<br />cups identify it as Canon_MF110_910_Series<br /><br />I installed every driver source I could: <br /><div class="quoteheader">Quote</div><blockquote class="bbc_quote"> foomatic-db-engine<br />foomatic-db <br />foomatic-db-ppds<br />foomatic-db-nonfree <br />foomatic-db-nonfre...</blockquote>]]>
+			</description>
+			<category><![CDATA[Applications &amp; Software]]></category>
+			<comments>https://forum.artixlinux.org/index.php?action=post;topic=4924.0</comments>
+			<pubDate>Sun, 01 Jan 2023 03:41:32 GMT</pubDate>
+			<guid>https://forum.artixlinux.org/index.php/topic,4924.msg31490.html#msg31490</guid>
+			<dc:creator>u0</dc:creator>
+		</item>
+		<item>
+			<title>Re: Why it's ridiculously dumb having a 100% random password</title>
+			<link>https://forum.artixlinux.org/index.php/topic,4690.msg31489.html#msg31489</link>
+			<description><![CDATA[Happy new year to you too.]]></description>
+			<category><![CDATA[General Discussion]]></category>
+			<comments>https://forum.artixlinux.org/index.php?action=post;topic=4690.0</comments>
+			<pubDate>Sun, 01 Jan 2023 02:55:47 GMT</pubDate>
+			<guid>https://forum.artixlinux.org/index.php/topic,4690.msg31489.html#msg31489</guid>
+			<dc:creator>gripped</dc:creator>
+		</item>
+		<item>
+			<title>Re: Why it's ridiculously dumb having a 100% random password</title>
+			<link>https://forum.artixlinux.org/index.php/topic,4690.msg31488.html#msg31488</link>
+			<description><![CDATA[   I'm not getting into cryptography, there is a total different accent meaning cryptography has to keep safe the secret so can't be reversed. In cryptography there's not only randomness involved there are other mathematical operations and so that is...]]></description>
+			<category><![CDATA[General Discussion]]></category>
+			<comments>https://forum.artixlinux.org/index.php?action=post;topic=4690.0</comments>
+			<pubDate>Sun, 01 Jan 2023 02:20:54 GMT</pubDate>
+			<guid>https://forum.artixlinux.org/index.php/topic,4690.msg31488.html#msg31488</guid>
+			<dc:creator>Surf3r</dc:creator>
+		</item>
+		</channel>
+	</rss>
