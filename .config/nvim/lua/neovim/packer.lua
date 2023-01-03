@@ -38,7 +38,6 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({ "tpope/vim-fugitive" })
-	use({ "ethanholz/nvim-lastplace" })
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
@@ -47,7 +46,7 @@ return require("packer").startup(function(use)
 	})
 	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use({ "junegunn/fzf.vim" })
-	use(" rinx/nvim-ripgrep" )
+	use("rinx/nvim-ripgrep" )
 	use({ "mbbill/undotree" })
 	use({
 		"debugloop/telescope-undo.nvim",
