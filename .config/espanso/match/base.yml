@@ -122,6 +122,9 @@ matches:
   - trigger: ";cll"
     replace: "console.log()"
 
+  - trigger: ";clc"
+    replace: "console.clear()"
+
   - trigger: ";cla"
     replace: "console.assert()"
 
