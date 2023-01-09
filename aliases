@@ -209,6 +209,9 @@ alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
 alias jester="jest --watchAll"
+# generate unique ids from cli, example for no special characters:
+# nanoid --alphabet "abcdefghijklmnopqrstuvwxyz" --size 40
+alias nanoid="npx nanoid"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
 alias nb="newsboat"
