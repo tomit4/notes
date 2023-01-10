@@ -15,5 +15,6 @@ file://./rss/ewontfix.rss
 file://./rss/0pointer.rss
 file://./rss/lkml.php
 file://./rss/artix.php
+file://./rss/nvim.rss
 file://./rss/skolelinux.rss
 file://rss/simonwillison.atom

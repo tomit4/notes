@@ -212,6 +212,8 @@ alias jester="jest --watchAll"
 # generate unique ids from cli, example for no special characters:
 # nanoid --alphabet "abcdefghijklmnopqrstuvwxyz" --size 40
 alias nanoid="npx nanoid"
+# informs on dependency updates
+alias taze="npx taze"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
 alias nb="newsboat"

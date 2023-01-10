@@ -87,3 +87,17 @@ vim.cmd([[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]])
 
 -- fzf is on bottom of screen
 vim.cmd([[let g:fzf_layout = { 'down': '~30%' }]])
+
+--lastplace ignores fzf
+vim.cmd([[let g:lastplace_ignore_buftype = "quickfix, nofile, help, FZF"]])
+
+-- jump to last place visited in file
+vim.api.nvim_create_autocmd('BufReadPost', {
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local lcount = vim.api.nvim_buf_line_count(0)
+    if mark[1] > 0 and mark[1] <= lcount then
+      pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    end
+  end,
+})
