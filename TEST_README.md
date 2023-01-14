@@ -10,6 +10,10 @@ __also bold text__
 
 _also italicized text_
 
+~~strikethrough text~~
+
+<u>underlined text</u>
+
 >blockquote
 
 1. First item of Ordered List
@@ -45,7 +49,7 @@ triple up on the backticks for a nicer code block (with copy button to the right
 ``
 {
     "firstName: "John",
-    "lastName": "Smith"
+    "lastName": "Smith",
     "age": 25
 }
 ``
