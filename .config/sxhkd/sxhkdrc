@@ -180,6 +180,8 @@ super + b
     bst -e btop &
 super + m
     mousepad &
+super + n
+    desktopeditors &
 super + l
     gcolor3 &
 super + u
