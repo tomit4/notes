@@ -1,4 +1,27 @@
+# config file for newsboat rss reader
+# sets color theme
 include /usr/share/doc/newsboat/contrib/colorschemes/nord
+
+# reloads on start, and loads 100 feeds at a time
 auto-reload yes
 reload-threads 100
+
+# set to open links in librewolf browser
 macro y set browser "mpv %u" ; open-in-browser ; set browser "librewolf %u"
+
+# unbind keys
+unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+unbind-key g # bound to `sort` by default
+unbind-key G # bound to `rev-sort` by default
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key g home
+bind-key G end
