@@ -86,7 +86,7 @@ endfunction]])
 vim.cmd([[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]])
 
 -- fzf is on bottom of screen
-vim.cmd([[let g:fzf_layout = { 'down': '~30%' }]])
+-- vim.cmd([[let g:fzf_layout = { 'down': '~30%' }]])
 
 --lastplace ignores fzf
 vim.cmd([[let g:lastplace_ignore_buftype = "quickfix, nofile, help, FZF"]])

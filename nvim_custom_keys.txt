@@ -17,6 +17,14 @@ bindkey -v
 
 When setting up keybindings in say a tiling window manager like i3 or bspwm(my preferred twm), it may be a good idea to set up vim keybindings in that. Lastly, install vimium into your browser, as this will allow you to navigate your browser using vim keybindings (hjkldu for navigation, yy to grab the current url, / to search the page, etc.). Vimium is available in either chromium or firefox based browsers and is an essential part of my workflow along with Neovim.
 
+-- Notes on opening/closing neovim
+All jokes aside (:q to quit btw), there are many command line flags you can add
+to opening nvim and interesting tricks.
+
+- Ctrl + Z will suspend nvim but save your session (place in text, open nvim
+tree folders, etc.). To re-enter from the shell, simply type 'fg' to
+return from suspend.
+
 -- Standard keybindings (all neovim)
 
 NORMAL MODE
