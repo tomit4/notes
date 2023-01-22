@@ -436,7 +436,6 @@ alias chiark="librewolf https://www.chiark.greenend.org.uk/ &"
 # for web accessibility information
 alias aditus="librewolf https://aditus.io/ &"
 alias a11y="librewolf https://a11y-guidelines.orange.com/en/ &"
-
 # library for simple and accessible sliders
 alias a11yslider="librewolf https://a11yslider.js.org/ &"
 
@@ -449,7 +448,9 @@ alias thispersondoesnotexist="librewolf https://thispersondoesnotexist.com &"
 # css example sites
 alias devsnap="librewolf https://devsnap.me/ &"
 # css gradients
-alias cssgradients="librewolf htttps://cssgradient.io &"
+alias cssgradients="librewolf https://cssgradient.io &"
+# cool css effect ideas
+alias tympanus="librewolf https://tympanus.net/codrops &"
 
 #auto generate decent color schemes
 alias mycolor="librewolf https://mycolor.space/ &"
