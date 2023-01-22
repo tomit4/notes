@@ -262,7 +262,17 @@
         "§:unpkg.com",
         "https://alexanderle.com",
         "§:vuejsexamples.com",
-        "https://this-week-in-neovim.org"
+        "https://this-week-in-neovim.org",
+        "§:godbolt.org",
+        "https://distro.tube",
+        "§:royalfig.github.io",
+        "§:accessibility-developer-guide.com",
+        "§:joshwcomeau.com",
+        "§:opera.com",
+        "https://www.awwwards.com",
+        "https://www.netlify.com",
+        "https://www.sqlitetutorial.net",
+        "https://www.rssboard.org"
       ],
       "untrusted": [
         "hotmail.com",
