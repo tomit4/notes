@@ -198,3 +198,6 @@ Install moreutils package (pretty awesome), yapf (python formatter), shfmt
 progress (useful for large file downloads)
 
 doas pacman -S moreutils yapf shfmt stylua ttf-joypixels progress
+
+Install xmlstarlet and liferea (xml parser and rss reader):
+doas pacman -S xmlstarlet liferea
