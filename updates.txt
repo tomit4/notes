@@ -201,3 +201,8 @@ doas pacman -S moreutils yapf shfmt stylua ttf-joypixels progress
 
 Install xmlstarlet and liferea (xml parser and rss reader):
 doas pacman -S xmlstarlet liferea
+
+Install openoffice-bin and xidel (minimal office suite and web scraper)
+
+paru openoffice (choose bin)
+paru xidel(1st option)
