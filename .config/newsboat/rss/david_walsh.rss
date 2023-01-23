@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>David Walsh Blog</title>
+	<atom:link href="https://davidwalsh.name/feed" rel="self" type="application/rss+xml" />
+	<link>https://davidwalsh.name</link>
+	<description>A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development.</description>
+	<lastBuildDate>Sun, 22 Jan 2023 22:05:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.0.2</generator>
+	<item>
+		<title>5 Web Design Trends for 2023 That You Should Pay Attention To (Sponsored)</title>
+		<link>https://davidwalsh.name/5-web-design-trends-for-2023-that-you-should-pay-attention-to</link>
+		<comments>https://davidwalsh.name/5-web-design-trends-for-2023-that-you-should-pay-attention-to#respond</comments>
+		<pubDate>Tue, 17 Jan 2023 14:00:41 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Sponsored]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27663</guid>
+		<description><![CDATA[<p>The start of a new year is usually a time when we start looking for ways to make something a little better. That something could be our life, work, or what we produce. Web designers, for example, might look for ways to make their designs more interesting or effective. In this post we will focus [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/5-web-design-trends-for-2023-that-you-should-pay-attention-to">5 Web Design Trends for 2023 That You Should Pay Attention To (Sponsored)</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>The start of a new year is usually a time when we start looking for ways to make something a little better. That something could be our life, work, or what we produce. Web designers, for example, might look for ways to make their designs more interesting or effective.</p>
+
+
+
+<p>In this post we will focus on 5 web design trends that are designed to help users get the most from the websites they visit and we will use 10 pre-built websites from <a href="https://muffingroup.com/betheme/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeTheme</a> to demonstrate how best to implement those trends .</p>
+
+
+
+<p><a href="https://muffingroup.com/betheme/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeTheme is one of the world’s most popular and highly-rated WordPress Themes</a> with 268,000+ sales and a 4.83/5 star-rating.</p>
+
+
+
+<h2>5 new web design trends for 2023</h2>
+
+
+
+<p>To improve anything, you have to know what it does or how it functions and what can have an impact on its performance, whether that impact is positive or negative.</p>
+
+
+
+<p>In our case, we want to have a impact on web design that will lead to improvements, which is what web design trends are expected to do. What follows is a discussion on how 5 trends designed to act in the best interests of web users can be implemented.</p>
+
+
+
+<h2>1. The benefits of hoverable iconography</h2>
+
+
+
+<p>One effective way of avoiding clutter is to keep the amount of text on a page to a minimum. A strategic use of icons can admirably serve that purpose –&nbsp; assuming users understand what the icons represent!</p>
+
+
+
+<p>When a situation is encountered where an icon would serve a purpose but it is not a familiar one, it would appear to be a no-win situation. You could of course add text, but that would contribute to clutter – or would it?&nbsp;</p>
+
+
+
+<p>Let us first start with an example of familiar icons. On the <a href="https://themes.muffingroup.com/be/biker4/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeBiker 4</a> website there are three icons on the left for:</p>
+
+
+
+<ul><li>Shopping bag/cart</li><li>Search</li><li>Account</li></ul>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/biker4/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/bebiker-header-icons.png" alt="" class="wp-image-27664" srcset="https://davidwalsh.name/demo/2023/01/bebiker-header-icons.png 1000w, https://davidwalsh.name/demo/2023/01/bebiker-header-icons-300x146.png 300w, https://davidwalsh.name/demo/2023/01/bebiker-header-icons-768x373.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>When these icons are used over and over again, on one website or many, users immediately understand what they represent.</p>
+
+
+
+<p>How then, do you address icons that are less familiar or don’t give a user an obvious clue as to what they represent?</p>
+
+
+
+<p>You could give each one a brief description, but that would require adding text – which, as you will see in the <a href="https://themes.muffingroup.com/be/jeweler2/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeJeweler 2</a> site, is not a bad idea, but a very good one:</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/jeweler2/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/bejeweler-hoverable-icons.gif" alt="" class="wp-image-27665"></a></p>
+
+
+
+<p>Hover-triggered helper text is the answer in this case, and it can have other uses as well since it can provide useful information without adding clutter. Hover-trigger helpers can increase user confidence and give those same users the impression that the website owner has their interests in mind.</p>
+
+
+
+<h2>2. Use social proof to build trust&nbsp;</h2>
+
+
+
+<p>Trust is an important part of relationship building, whether that relationship is personal or one a brand has with its customers. In the latter case, websites often serve as the initial touchpoints between brands and consumers and is where trust building needs to be initiated.</p>
+
+
+
+<p>Using social proof to build trust is a trend many web designers will add to their skillsets in 2023.&nbsp;</p>
+
+
+
+<p>One effective trust building approach used in website design entails a page dedicated to genuine testimonials and reviews <em>along with</em> a home page section that does the same, as demonstrated in the following <a href="https://themes.muffingroup.com/be/doctor/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeDoctor</a> site example:</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/doctor/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/bedoctor-testimonial-section.png" alt="" class="wp-image-27666" srcset="https://davidwalsh.name/demo/2023/01/bedoctor-testimonial-section.png 1000w, https://davidwalsh.name/demo/2023/01/bedoctor-testimonial-section-300x146.png 300w, https://davidwalsh.name/demo/2023/01/bedoctor-testimonial-section-768x373.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>BeDoctor uses three distinctive trust-building types:</p>
+
+
+
+<ul><li>A customer satisfaction rate</li><li>A customer testimonial</li><li>An average customer rating</li></ul>
+
+
+
+<ul><li>of which the latter could be linked to a ratings platform such as Google or Yelp.</li></ul>
+
+
+
+<p>Newer businesses that lack social proof to use for trust-building may need to rely on using trust marks instead. Placing an icon next to a “Checkout” button that signifies the transaction will be secure would be one example. Another example, shown in the approach taken by <a href="https://themes.muffingroup.com/be/marketing2/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeMarketing 2</a>, is to add context to its website claims:</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/marketing2/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/bemarketing-small-print-example.png" alt="" class="wp-image-27667" srcset="https://davidwalsh.name/demo/2023/01/bemarketing-small-print-example.png 1000w, https://davidwalsh.name/demo/2023/01/bemarketing-small-print-example-300x146.png 300w, https://davidwalsh.name/demo/2023/01/bemarketing-small-print-example-768x373.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>In this example, the “threefold” asterisk is repeated to include a brief textual statement linking to a page where proof to the claim is documented. &nbsp;</p>
+
+
+
+<h2>3. New mobile-specific trends</h2>
+
+
+
+<p>Given rules and straightforward procedures to follow, web designers have become quite proficient at addressing mobile design needs in recent years. So much so in fact that, in those instances where designers have found a comfort zone, stagnation has set in.</p>
+
+
+
+<p>Nevertheless, there remains room for improvement. In 2023 we will see greater attention paid to mobile-specific features that focus on overcoming specific frictions and obstacles.</p>
+
+
+
+<p>The <a href="https://themes.muffingroup.com/be/language4/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeLanguage 4</a> pre-built website addresses one of these in its navigation design:&nbsp;</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/language4/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/belanguage-custom-mobile-menu-order.jpg" alt="" class="wp-image-27668" srcset="https://davidwalsh.name/demo/2023/01/belanguage-custom-mobile-menu-order.jpg 1000w, https://davidwalsh.name/demo/2023/01/belanguage-custom-mobile-menu-order-300x210.jpg 300w, https://davidwalsh.name/demo/2023/01/belanguage-custom-mobile-menu-order-768x538.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>Note how the “Call Us” button is located at the top of the list of links, rather than at the end where it would normally appear on a desktop display.&nbsp; A slight change perhaps, but a helpful one for a mobile user.</p>
+
+
+
+<p>The <a href="https://themes.muffingroup.com/be/furniturestore/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeFurnitureStore</a> approach takes the account, cart, and favorites icons that are normally situated at the top on a desktop display and places them on a sticky bottom banner. &nbsp;</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/furniturestore/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/befurniturestore-sticky-bottom-bar.jpg" alt="" class="wp-image-27669" srcset="https://davidwalsh.name/demo/2023/01/befurniturestore-sticky-bottom-bar.jpg 1000w, https://davidwalsh.name/demo/2023/01/befurniturestore-sticky-bottom-bar-300x210.jpg 300w, https://davidwalsh.name/demo/2023/01/befurniturestore-sticky-bottom-bar-768x538.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>The use of sticky banners is also advantageous to mobile users. As long as web designers work to continuously improve the mobile web experience, it doesn’t matter how small some of their changes might appear to be. Mobile users will gain from them.</p>
+
+
+
+<h2>4. Shape texturization</h2>
+
+
+
+<p>Skeuomorphism was once the rage and played a dominant role in the web design world. This was at a time when web users were still getting used to the technology and skeuomorphism proved to be an extremely helpful design trend as it helped users become more and more comfortable interacting with the web.</p>
+
+
+
+<p>Eventually, the trend became less and less of a requirement and eventually began to be looked upon as a source of clutter and distraction. The trashcan and camera symbols remain in use, but most other examples of this design approach have gone by the wayside.</p>
+
+
+
+<p>In 2023, web designers will begin working with organic shapes by adding small, <em>strategic </em>textures to their designs. The <a href="https://themes.muffingroup.com/be/renovate5/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeRenovate 5</a> website illustrates an example of this new trend:</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/renovate5/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/berenovate-shape-textures.png" alt="" class="wp-image-27670" srcset="https://davidwalsh.name/demo/2023/01/berenovate-shape-textures.png 1000w, https://davidwalsh.name/demo/2023/01/berenovate-shape-textures-300x146.png 300w, https://davidwalsh.name/demo/2023/01/berenovate-shape-textures-768x373.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>The rounded shapes and lines that appear in the background have a softening effect while at the same time drawing attention to the central section, making the page more interesting and engaging.</p>
+
+
+
+<p>Digital texturization can also be used to draw attention to a specific area of a page. <a href="https://themes.muffingroup.com/be/coaching3/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeCoaching 3</a> provides an example of this effective design trend.</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/coaching3/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/becoaching-shape-textures.gif" alt=""></a></p>
+
+
+
+<p>The two digitally textured shapes seen here are used throughout this one-page website to help direct a visitor’s eyes and attention to the areas of the page you want them to go. All of the content in the example is important, but the image on the right is key and not to be missed.</p>
+
+
+
+<h2>5. Benefits of supplemental video</h2>
+
+
+
+<p>Different web users have different viewing habits, making it extremely difficult, if not impossible, to satisfy them all. Some prefer reading text or blogs. Others would rather to watch and listen to a video or a vlog.</p>
+
+
+
+<p>Rather than trying to satisfy both worlds, experiment with using supplemental videos or video alternatives whenever it makes sense to do so. You’re less apt to downgrade site loading speeds, and avoiding an overreliance on autoplay videos would probably earn you some good marks from your users.</p>
+
+
+
+<p>The <a href="https://themes.muffingroup.com/be/business6/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeBusiness 6</a> site’s full-width video section halfway down its home page jumps right out at you.</p>
+
+
+
+<p><a href="https://themes.muffingroup.com/be/business6/?utm_source=davidwalsh.name&#038;utm_medium=content&#038;utm_campaign=jan23"><img src="https://davidwalsh.name/demo/2023/01/bebusiness-embedded-video.png" alt="" class="wp-image-27671" srcset="https://davidwalsh.name/demo/2023/01/bebusiness-embedded-video.png 1000w, https://davidwalsh.name/demo/2023/01/bebusiness-embedded-video-300x146.png 300w, https://davidwalsh.name/demo/2023/01/bebusiness-embedded-video-768x373.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+
+
+
+<p>It could be used to summarize or expand on previous content, to show a video testimonial, or for a variety of other purposes.</p>
+
+
+
+<p>A video doesn’t have to be full width to be effective. This <a href="https://themes.muffingroup.com/be/pregnancy/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BePregnancy</a> hero section example includes a small cutout that features a supplemental video:</p>
+
+
+
+<p>The&nbsp; “Play” button is instantly recognizable and gives a visitor the option of whether or not to watch the video. In this instance, the choice to watch would probably win hands down, but if the video were autoplay it would probably be looked upon as being intrusive.&nbsp;</p>
+
+
+
+<p>Using videos sparingly and strategically makes sense. Visitor’s will likely approve, and it is easier for web designers to maintain reasonable page loading speeds.</p>
+
+
+
+<h2>What is your opinion of these website design trends?</h2>
+
+
+
+<p>Website design trends have more often than not focused on background and color trends, typological experimentation, attention-getting special effects, and other approaches that, while well-intentioned and usually effective, could also be viewed as being superficial to some degree.&nbsp;</p>
+
+
+
+<p>2023’s web design trends signify a sea change in website improvement techniques. The focus is more on trust building, responsiveness, and accessibility than on user engagement or entertainment.</p>
+
+
+
+<p>Use <a href="https://muffingroup.com/betheme/?utm_source=davidwalsh.name&amp;utm_medium=content&amp;utm_campaign=jan23">BeTheme</a> to build websites and you’ll discover that these new trends have already been incorporated to one degree or another in many of its 650+ pre-built sites. Good news indeed!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/5-web-design-trends-for-2023-that-you-should-pay-attention-to">5 Web Design Trends for 2023 That You Should Pay Attention To (Sponsored)</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/5-web-design-trends-for-2023-that-you-should-pay-attention-to/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>fetch with Timeout</title>
+		<link>https://davidwalsh.name/fetch-with-timeout</link>
+		<comments>https://davidwalsh.name/fetch-with-timeout#comments</comments>
+		<pubDate>Mon, 16 Jan 2023 10:03:37 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[AJAX]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Promises]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27659</guid>
+		<description><![CDATA[<p>A few years back I wrote a blog post about how write a fetch Promise that times out. The function was effective but the code wasn&#8217;t great, mostly because AbortController , which allows you to cancel a fetch Promise, did not yet exist. With AbortController and AbortSignal available, let&#8217;s create a better JavaScript function for [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fetch-with-timeout">fetch with Timeout</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>A few years back I wrote a blog post about <a href="https://davidwalsh.name/fetch-timeout">how write a <code>fetch</code> Promise that times out</a>. The function was effective but the code wasn&#8217;t great, mostly because <code>AbortController</code> , which allows you to <a href="https://davidwalsh.name/cancel-fetch">cancel a fetch Promise</a>, did not yet exist. With <code>AbortController</code> and <code>AbortSignal</code> available, let&#8217;s create a better JavaScript function for fetching with a timeout:</p>
+
+
+
+<p><code>AbortSignal</code> instances now feature a <code>timeout</code> option to time the <code>Promise</code> out after a given amount of milliseconds:</p>
+
+
+
+<pre class="js">
+async function fetchWithTimeout(url, opts = {}, timeout = 5000) {
+  // Create a signal with timeout
+  const signal = AbortSignal.timeout(timeout);
+
+  // Make the fetch request
+  const _fetchPromise = fetch(url, {
+    ...opts,
+    signal,
+  });
+
+  // Await the fetch with a catch in case it's aborted which signals an error
+  const result = await _fetchPromise;
+  return result;
+};
+
+// Usage
+try {
+  const impatientFetch = await fetchWithTimeout('/', {}, 2000);
+}
+catch(e) {
+  console.log("fetch possibly canceled!", e);
+}
+
+</pre>
+
+
+
+<p>While formerly the <code>AbortSignal</code> would come from an <code>AbortController</code>, you can now use <code>AbortSignal.timeout</code> to create the signal.</p>
+
+
+
+<p>At the moment, however, only edge browser versions support <code>AbortSignal.timeout</code>.  So much like the original function, an alternative function could use <code>setTimeout</code> to time to the cancellation but we&#8217;ll use the <code>signal</code> with the <code>fetch</code> request:</p>
+
+
+
+<pre class="js">async function fetchWithTimeout(url, opts = {}, timeout = 5000) {
+  // Create the AbortController instance, get AbortSignal
+  const abortController = new AbortController();
+  const { signal } = abortController;
+
+  // Make the fetch request
+  const _fetchPromise = fetch(url, {
+    ...opts,
+    signal,
+  });
+
+  // Start the timer
+  const timer = setTimeout(() =&gt; abortController.abort(), timeout);
+
+  // Await the fetch with a catch in case it's aborted which signals an error
+  try {
+    const result = await _fetchPromise;
+    clearTimeout(timer);
+    return result;
+  } catch (e) {
+    clearTimeout(timer);
+    throw e;
+  }
+};
+
+// Usage
+try {
+  const impatientFetch = await fetchWithTimeout('/', {}, 2000);
+}
+catch(e) {
+  console.log("fetch possibly canceled!", e);
+}
+</pre>
+
+
+
+<p>The JavaScript code above is much cleaner now that we have a proper API to cancel <code>fetch</code> Promise calls. Attaching the <code>signal</code> to the fetch request allows us to use a <code>setTimeout</code> with <code>abort</code> to cancel the request after a given amount of time.</p>
+
+
+
+<p>It&#8217;s been excellent seeing <code>AbortController</code>, <code>AbortSignal</code>, and <code>fetch</code> evolve to make <code>async</code> requests more controllable without drastically changing the API.</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fetch-with-timeout">fetch with Timeout</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/fetch-with-timeout/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Customizing HTML Form Validation</title>
+		<link>https://davidwalsh.name/html5-validation</link>
+		<comments>https://davidwalsh.name/html5-validation#respond</comments>
+		<pubDate>Mon, 09 Jan 2023 10:57:00 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27657</guid>
+		<description><![CDATA[<p>Form validation has always been my least favorite part of web development. You need to duplicate validation on both client and server sides, handle loads of events, and worry about form element styling. To aid form validation, the HTML spec added some new form attributes like required and pattern to act as very basic validation. [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/html5-validation">Customizing HTML Form Validation</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Form validation has always been my least favorite part of web development. You need to duplicate validation on both client and server sides, handle loads of events, and worry about form element styling.  To aid form validation, the HTML spec added some new form attributes like <code>required</code> and <code>pattern</code> to act as very basic validation.  Did you know, however, that you can control native form validation using JavaScript?</p>
+
+
+
+<h2><code>validity</code></h2>
+
+
+
+<p>Each form element (<code>input</code>, for example) provides a <code>validity</code> property which represents a <code>ValidityState</code>.  <code>ValidityState</code> looks something like this:</p>
+
+
+
+<pre class="js">// input.validity
+{
+  badInput: false,
+  customError: true,
+  patternMismatch: false,
+  rangeOverflow: false,
+  rangeUnderflow: false,
+  stepMismatch: false,
+  tooLong: false,
+  tooShort: false,
+  typeMismatch: false,
+  valid: false,
+  valueMissing: true
+}
+</pre>
+
+
+
+<p>Each property in the <code>ValidityState</code> can roughly match a specific validation issue: <code>valueMissing</code> would match the <code>required</code> attribute, <code>tooLong</code> and <code>tooShort</code> match <code>minLength</code> and <code>maxLength</code>, etc.</p>
+
+
+
+<h2>Checking Validity and Setting a Custom Validation Message</h2>
+
+
+
+<p>Each form field provides a default error message for each error type, but setting a more custom message per your application is likely better.  You can use the form field&#8217;s <code>setCustomValidity</code> to create your own message:</p>
+
+
+
+<pre class="js">// Check validity
+input.checkValidity();
+
+if(input.validity.valueMissing) {
+  input.setCustomValidity('This is required, bro!  How did you forget?');
+} else {
+  // Clear any previous error
+  input.setCustomValidity('');
+}
+</pre>
+
+
+
+<p>Simply setting the message by <code>setCustomValidity</code> doesn&#8217;t <em>show</em> the message, however.</p>
+
+
+
+<h2><code>reportValidity</code></h2>
+
+
+
+<p>To get the error to display to the user, use the form element&#8217;s <code>reportValidity</code> method:</p>
+
+
+
+<pre class="js">// Show the error!
+input.reportValidity();
+</pre>
+
+
+
+<p>The error tooltip will immediately display on the screen. The following example displays the error every five seconds:</p>
+
+
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="poZEGBV" data-user="darkwing" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/darkwing/pen/poZEGBV">
+  Untitled</a> by David Walsh (<a href="https://codepen.io/darkwing">@darkwing</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<p>Having hooks into the native form validation system is so valuable and I wish developers used it more.  Every website has its own client side validation styling, event handling, etc.  Let&#8217;s use what we&#8217;ve been provided!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/html5-validation">Customizing HTML Form Validation</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/html5-validation/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Determine a JavaScript Promise&#8217;s Status</title>
+		<link>https://davidwalsh.name/get-promise-status</link>
+		<comments>https://davidwalsh.name/get-promise-status#comments</comments>
+		<pubDate>Tue, 03 Jan 2023 21:43:58 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Promises]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27656</guid>
+		<description><![CDATA[<p>Promises have changed the landscape of JavaScript. Many old APIs have been reincarnated to use Promises (XHR to fetch, Battery API), while new APIs trend toward Promises. Developers can use async/await to handle promises, or then/catch/finally with callbacks, but what Promises don&#8217;t tell you is their status. Wouldn&#8217;t it be great if the Promise.prototype provided [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/get-promise-status">How to Determine a JavaScript Promise&#8217;s Status</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p><a href="https://davidwalsh.name/tutorials/promises">Promises</a> have changed the landscape of JavaScript. Many old APIs have been reincarnated to use Promises (XHR to <a href="https://davidwalsh.name/fetch">fetch</a>, <a href="https://davidwalsh.name/javascript-battery-api">Battery API</a>), while new APIs trend toward Promises. Developers can use <code>async</code>/<code>await</code> to handle promises, or <code>then</code>/<code>catch</code>/<code>finally</code> with callbacks, but what Promises don&#8217;t tell you is their status. Wouldn&#8217;t it be great if the <code>Promise.prototype</code> provided developers a <code>status</code> property to know whether a promise is rejected, resolved, or just done?</p>
+
+
+
+<p>My research led me to <a href="https://gist.github.com/tyru/29360dfa475d2fefaf6c4655a93c2cb0">this gist</a> which I found quite clever.  I took some time to modify a bit of code and add comments.  The following solution provides helper methods for determining a Promise&#8217;s status:</p>
+
+
+
+<pre class="js">// Uses setTimeout with Promise to create an arbitrary delay time
+// In these examples, a 0 millisecond delay is 
+// an instantly resolving promise that we can jude status against
+async function delay(milliseconds = 0, returnValue) {
+  return new Promise(done =&gt; setTimeout((() =&gt; done(returnValue)), milliseconds));
+}
+
+// Promise.race in all of these functions uses delay of 0 to
+// instantly resolve.  If the promise is resolved or rejected,
+// returning that value will beat the setTimeout in the race
+
+async function isResolved(promise) {
+  return await Promise.race([delay(0, false), promise.then(() =&gt; true, () =&gt; false)]);
+}
+
+async function isRejected(promise) {
+  return await Promise.race([delay(0, false), promise.then(() =&gt; false, () =&gt; true)]);
+}
+
+async function isFinished(promise) {
+  return await Promise.race([delay(0, false), promise.then(() =&gt; true, () =&gt; true)]);
+}
+</pre>
+
+
+
+<p>A few examples of usage:</p>
+
+
+
+<pre class="js">// Testing isResolved
+await isResolved(new Promise(resolve =&gt; resolve())); // true
+await isResolved(new Promise((_, reject) =&gt; reject()));  // false
+
+// Testing isRejected
+await isRejected(new Promise((_, reject) =&gt; reject())); // true
+
+// We done yet?
+await isFinished(new Promise(resolve =&gt; resolve())); // true
+await isFinished(new Promise((_, reject) =&gt; reject()));  // true
+</pre>
+
+
+
+<p>Developers can always add another <code>await</code> or <code>then</code> to a Promise to execute something but it is interesting to figure out the status of a given Promise.  Is there an easier way to know a Promise&#8217;s status?  Let me know!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/get-promise-status">How to Determine a JavaScript Promise&#8217;s Status</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/get-promise-status/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Detect XR Support with JavaScript</title>
+		<link>https://davidwalsh.name/detect-webxr</link>
+		<comments>https://davidwalsh.name/detect-webxr#respond</comments>
+		<pubDate>Mon, 02 Jan 2023 18:09:11 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Virtual Reality]]></category>
+		<category><![CDATA[VR]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27653</guid>
+		<description><![CDATA[<p>A few years ago I wrote an article about how to detect VR support with JavaScript. Since that time, a whole lot has changed. &#8220;Augmented reality&#8221; became a thing and terminology has moved to &#8220;XR&#8221;, instead of VR or AR. As such, the API has needed to evolve. The presence of navigator.xr signals that the [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-webxr">Detect XR Support with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>A few years ago I wrote an article about <a href="https://davidwalsh.name/detect-webvr">how to detect VR support with JavaScript</a>.  Since that time, a whole lot has changed.  &#8220;Augmented reality&#8221; became a thing and terminology has moved to &#8220;XR&#8221;, instead of VR or AR.  As such, the API has needed to evolve.</p>
+
+
+
+<p>The presence of <code>navigator.xr</code> signals that the browser supports the WebXR API and XR devices:</p>
+
+
+
+<pre class="js">
+const supportsXR = 'xr' in window.navigator;
+</pre>
+
+
+
+<p>I really like using <code>in</code> for feature checking rather than <code>if(navigator.xr)</code>, as simply invoking that could cause some initialization to take place.  In future posts we&#8217;ll explore identifying and connecting to different devices.</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-webxr">Detect XR Support with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/detect-webxr/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Document.elementFromPoint</title>
+		<link>https://davidwalsh.name/document-elementfrompoint</link>
+		<comments>https://davidwalsh.name/document-elementfrompoint#respond</comments>
+		<pubDate>Fri, 30 Dec 2022 22:37:00 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27651</guid>
+		<description><![CDATA[<p>Reacting to events with JavaScript is the foundation of a dynamic experiences on the web. Whether it&#8217;s a click event or another typical action, responding to that action is important. We started with assigning events to specific elements, then moved to event delegation for efficiency, but did you know you can identify elements by position [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/document-elementfrompoint">Document.elementFromPoint</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Reacting to events with JavaScript is the foundation of a dynamic experiences on the web.  Whether it&#8217;s a <code>click</code> event or another typical action, responding to that action is important.  We started with assigning events to specific elements, then moved to <a href="https://davidwalsh.name/event-delegate">event delegation</a> for efficiency, but did you know you can identify elements by position on the page?  Let&#8217;s look at <code>document.elementFromPoint</code> and <code>document.elementsFromPoint</code>.</p>
+
+
+
+<p>The <code>document.elementFromPoint</code> method accepts <code>x</code> and <code>y</code> parameters to identify the top-most element at a point:</p>
+
+
+
+<pre class="js">
+const element = document.elementFromPoint(100, 100);
+// <header>
+</pre>
+
+
+
+<p>If you want to know the entire element stack, you can use <code>document.elementsFromPoint</code>:</p>
+
+
+
+<pre class="js">
+const elements = document.elementsFromPoint(100, 100);
+// [<header>, <body>, <html>]
+</pre>
+
+
+
+<p>The <code>elementFromPoint</code> and <code>elementsFromPoint</code> are really helpful for experiences where developers don&#8217;t want to assign individual events.  Games and entertainment sites could benefit from these functions.  How would you use them?</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/document-elementfrompoint">Document.elementFromPoint</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/document-elementfrompoint/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Detect Browser Bars Visibility with JavaScript</title>
+		<link>https://davidwalsh.name/detect-browser-bars</link>
+		<comments>https://davidwalsh.name/detect-browser-bars#respond</comments>
+		<pubDate>Fri, 30 Dec 2022 01:36:35 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Browsers]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27650</guid>
+		<description><![CDATA[<p>It&#8217;s one thing to know about what&#8217;s in the browser document, it&#8217;s another to have insight as to the user&#8217;s browser itself. We&#8217;ve gotten past detecting which browser the user is using, and we&#8217;re now into knowing what pieces of the browser UI users are seeing. Browsers provide window.personalbar, window.locationbar, and window.menubar properties, with the [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-browser-bars">Detect Browser Bars Visibility with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>It&#8217;s one thing to know about what&#8217;s in the browser document, it&#8217;s another to have insight as to the user&#8217;s browser itself.  We&#8217;ve gotten past detecting which browser the user is using, and we&#8217;re now into knowing what pieces of the browser UI users are seeing.</p>
+
+
+
+<p>Browsers provide <code>window.personalbar</code>, <code>window.locationbar</code>, and <code>window.menubar</code> properties, with the shape of <code>{ visible : /*boolean*/}</code> as its value:</p>
+
+
+
+<pre class="js">
+if(window.personalbar.visible || window.locationbar.visible || window.menubar.visible) {
+  console.log("Please hide your personal, location, and menubar for maximum screen space");
+}
+</pre>
+
+
+
+<p>What would you use these properties for?  Maybe providing a warning to users when your web app required maximum browser space.  Outside of that, these properties seem invasive.  What do you think?</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-browser-bars">Detect Browser Bars Visibility with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/detect-browser-bars/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>JavaScript print Events</title>
+		<link>https://davidwalsh.name/javascript-print-events</link>
+		<comments>https://davidwalsh.name/javascript-print-events#respond</comments>
+		<pubDate>Fri, 30 Dec 2022 00:12:37 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27649</guid>
+		<description><![CDATA[<p>Media queries provide a great way to programmatically change behavior depending on viewing state. We can target styles to device, pixel ratio, screen size, and even print. That said, it&#8217;s also nice to have JavaScript events that also allow us to change behavior. Did you know you&#8217;re provided events both before and after printing? I&#8217;ve [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/javascript-print-events">JavaScript print Events</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Media queries provide a great way to programmatically change behavior depending on viewing state. We can target styles to device, pixel ratio, screen size, and even print.  That said, it&#8217;s also nice to have JavaScript events that also allow us to change behavior.  Did you know you&#8217;re provided events both before and after printing?</p>
+
+
+
+<p>I&#8217;ve always used <code>@media print</code> in stylesheets to control print display, but JavaScript provides <code>beforeprint</code> and <code>afterprint</code> events:</p>
+
+
+
+<pre class="js">
+function toggleImages(hide = false) {
+  document.querySelectorAll('img').forEach(img => {
+    img.style.display = hide ? 'none' : '';
+  });
+}
+
+// Hide images to save toner/ink during printing
+window.addEventListener('beforeprint', () => toggleImages(true))
+window.addEventListener('afterprint', () => toggleImages());
+</pre>
+
+
+
+<p>It may sound weird but considering print is very important, especially when your website is documentation-centric.  In my early days of web, I had a client who only &#8220;viewed&#8221; their website from print-offs.  Styling with <code>@media print</code> is usually the best options but these JavaScript events may help!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/javascript-print-events">JavaScript print Events</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/javascript-print-events/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Control CSS Animations with JavaScript</title>
+		<link>https://davidwalsh.name/control-css-animations-javascript</link>
+		<comments>https://davidwalsh.name/control-css-animations-javascript#respond</comments>
+		<pubDate>Tue, 27 Dec 2022 20:02:45 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Canvas & SVG]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27648</guid>
+		<description><![CDATA[<p>When it comes to animations on the web, developers need to measure the animation&#8217;s requirements with the right technology &#8212; CSS or JavaScript. Many animations are manageable with CSS but JavaScript will always provide more control. With document.getAnimations, however, you can use JavaScript to manage CSS animations! The document.getAnimations method returns an array of CSSAnimation [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/control-css-animations-javascript">How to Control CSS Animations with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>When it comes to animations on the web, developers need to measure the animation&#8217;s requirements with the right technology &#8212; CSS or JavaScript. Many animations are manageable with CSS but JavaScript will always provide more control.  With <code>document.getAnimations</code>, however, you can use JavaScript to manage CSS animations!</p>
+
+
+
+<p>The <code>document.getAnimations</code> method returns an array of <code>CSSAnimation</code> objects. <code>CSSAnimation</code> provides a host of information about the animation: <code>playState</code>, <code>timeline</code>, <code>effect</code>, and events like <code>onfinish</code>.  You can then modify those objects to adjust animations:</p>
+
+
+
+<pre class="js">
+// Make all CSS animations on the page twice as fast
+document.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 2;
+});
+
+// Stop all CSS animations on the page
+document.getAnimations().forEach((animation) => {
+  animation.cancel();
+});
+</pre>
+
+
+
+<p>How could adjusting CSS animations on the fly be useful to developers?  Maybe use the <a href="https://davidwalsh.name/javascript-battery-api">Battery API</a> to stop all animations when the device battery is low.  Possibly to stop animations when the user has scrolled past the animation itself.</p>
+
+
+
+<p>I love the way you can use JavaScript to modify CSS animations.  Developers used to need to choose between CSS and JavaScript &#8212; now we have the tools to make them work together!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/control-css-animations-javascript">How to Control CSS Animations with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/control-css-animations-javascript/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Detecting Fonts Ready</title>
+		<link>https://davidwalsh.name/fonts-ready</link>
+		<comments>https://davidwalsh.name/fonts-ready#respond</comments>
+		<pubDate>Mon, 26 Dec 2022 14:03:54 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Promises]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27647</guid>
+		<description><![CDATA[<p>Knowing when resources are loaded is a key part of building functional, elegant websites. We&#8217;re used to using the DOMContentLoaded event (commonly referred to as &#8220;domready&#8221;) but did you know there&#8217;s an event that tells you when all fonts have loaded? Let&#8217;s learn how to use document.fonts! The document.fonts object features a ready property which [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fonts-ready">Detecting Fonts Ready</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Knowing when resources are loaded is a key part of building functional, elegant websites.  We&#8217;re used to using the <code>DOMContentLoaded</code> event (commonly referred to as &#8220;domready&#8221;) but did you know there&#8217;s an event that tells you when all fonts have loaded?  Let&#8217;s learn how to use <code>document.fonts</code>!</p>
+
+
+
+<p>The <code>document.fonts</code> object features a <code>ready</code> property which is a Promise representing if fonts have been loaded:</p>
+
+
+
+<pre class="js">
+// Await all fonts being loaded
+await document.fonts.ready;
+
+// Now do something!  Maybe add a class to the body
+document.body.classList.add('fonts-loaded');
+</pre>
+
+
+
+<p>Font files can be relatively large so you can never assume they&#8217;ve loaded quickly.  One simply <code>await</code> from <code>document.fonts.ready</code> gives you the answer!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fonts-ready">Detecting Fonts Ready</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/fonts-ready/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Internationalize Numbers with JavaScript</title>
+		<link>https://davidwalsh.name/internationalize-numbers</link>
+		<comments>https://davidwalsh.name/internationalize-numbers#comments</comments>
+		<pubDate>Mon, 21 Nov 2022 12:40:22 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27643</guid>
+		<description><![CDATA[<p>Presenting numbers in a readable format takes many forms, from visual charts to simply adding punctuation. Those punctuation, however, are different based on internationalization. Some countries use , for decimal, while others use .. Worried about having to code for all this madness? Don&#8217;t &#8212; JavaScript provides a method do the hard work for you! [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/internationalize-numbers">How to Internationalize Numbers with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Presenting numbers in a readable format takes many forms, from visual charts to simply adding punctuation.  Those punctuation, however, are different based on internationalization.  Some countries use <code>,</code> for decimal, while others use <code>.</code>.  Worried about having to code for all this madness?  Don&#8217;t &#8212; JavaScript provides a method do the hard work for you!</p>
+
+
+
+<p>The <code>Number</code> primitive has a <code>toLocaleString</code> method to do the basic formatting for you:</p>
+
+
+
+<pre class="js">const price = 16601.91;
+
+// Basic decimal format, no providing locale
+// Uses locale provided by browser since none defined
+price.toLocaleString(); // "16,601.91"
+
+// Provide a specific locale
+price.toLocaleString('de-DE'); // "16.601,91"
+
+// Formatting currency is possible
+price.toLocaleString('de-DE', { 
+  style: 'currency', 
+  currency: 'EUR' 
+}); // "16.601,91 €"
+
+// You can also use Intl.NumberFormat for formatting
+new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'GBP'
+}).format(price); // £16,601.91
+</pre>
+
+
+
+<p>It&#8217;s a major relief that JavaScript provides us these type of helpers so that we don&#8217;t need to rely on bloated third-party libraries.  No excuses &#8212; the tool is there!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/internationalize-numbers">How to Internationalize Numbers with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/internationalize-numbers/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Locate Empty Directories from Command Line</title>
+		<link>https://davidwalsh.name/locate-empty-directories</link>
+		<comments>https://davidwalsh.name/locate-empty-directories#comments</comments>
+		<pubDate>Tue, 01 Nov 2022 10:26:52 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Quick Tips]]></category>
+		<category><![CDATA[Shell]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27641</guid>
+		<description><![CDATA[<p>As a software engineer that lives too much of his life on a computer, I like keeping my machine as clean as possible. I don&#8217;t keep rogue downloaded files and removes apps when I don&#8217;t need them. Part of keeping a clean, performant system is removing empty directories. To identify empty directories, I use the [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/locate-empty-directories">Locate Empty Directories from Command Line</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>As a software engineer that lives too much of his life on a computer, I like keeping my machine as clean as possible.  I don&#8217;t keep rogue downloaded files and removes apps when I don&#8217;t need them.  Part of keeping a clean, performant system is removing empty directories.</p>
+
+
+
+<p>To identify empty directories, I use the following command:</p>
+
+
+
+<pre class="shell">
+find . -type d --empty
+</pre>
+
+
+
+<p>To remove empty directories, we can add a <code>--delete</code> flag:</p>
+
+
+
+<pre class="shell">
+find . -type d --empty --delete
+</pre> 
+
+
+
+<p>Keeping a clean machine is easy when you know the tools that can help you.  <code>find</code> makes identifying and eliminating easy, so don&#8217;t be afraid to use it!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/locate-empty-directories">Locate Empty Directories from Command Line</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/locate-empty-directories/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>How to Extend Prototypes with JavaScript</title>
+		<link>https://davidwalsh.name/javascript-extend-prototype</link>
+		<comments>https://davidwalsh.name/javascript-extend-prototype#respond</comments>
+		<pubDate>Mon, 31 Oct 2022 12:13:00 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27640</guid>
+		<description><![CDATA[<p>One of the ideological sticking points of the first JavaScript framework was was extending prototypes vs. wrapping functions. Frameworks like MooTools and Prototype extended prototypes while jQuery and other smaller frameworks did not. Each had their benefits, but ultimately all these years later I still believe that the ability to extend native prototypes is a [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/javascript-extend-prototype">How to Extend Prototypes with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>One of the ideological sticking points of the first JavaScript framework was was extending prototypes vs. wrapping functions. Frameworks like MooTools and Prototype extended prototypes while jQuery and other smaller frameworks did not.  Each had their benefits, but ultimately all these years later I still believe that the ability to extend native prototypes is a massive feature of JavaScript.  Let&#8217;s check out how easy it is to empower every instance of a primitive by extending prototypes!</p>
+
+
+
+<p>Every JavaScript native, like <code>Number</code>, <code>String</code>, <code>Array</code>, <code>Object</code>, etc. has a <code>prototype</code>.  Every method on a <code>prototype</code> is inherited by every instance of that object.  For example, we can provide every `<code>Array</code> instance with a <code>unique</code> method by extending its prototype:</p>
+
+
+
+<pre class="js">
+Array.prototype.unique = function() {
+  return [...new Set(this)];
+}
+
+['1', '1', '2'].unique(); // ['1', '2']
+new Array('1', '1', '2').unique(); // ['1', '2']
+</pre>
+
+
+
+<p>Note that if you can also ensure chaining capability by returning <code>this</code>:</p>
+
+
+
+<pre class="js">
+['1', '1', '2'].unique().reverse(); // ['2', '1']
+</pre>
+
+
+
+<p>The biggest criticism of extending prototypes has always been name collision where the eventual specification implementation is different than the framework implementation. While I understand that argument, you can combat it with prefixing function names. Adding super powers to a native prototype so that every instance has it is so useful that I&#8217;d never tell someone not to extend a prototype. #MooToolsFTW.</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/javascript-extend-prototype">How to Extend Prototypes with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/javascript-extend-prototype/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Use window.crypto in Node.js</title>
+		<link>https://davidwalsh.name/window-crypto-node</link>
+		<comments>https://davidwalsh.name/window-crypto-node#respond</comments>
+		<pubDate>Thu, 27 Oct 2022 11:36:39 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Node.js]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27638</guid>
+		<description><![CDATA[<p>I&#8217;ve been writing a bunch of jest tests recently for libraries that use the underlying window.crypto methods like getRandomValues() and window.crypto.subtle key management methods. One problem I run into is that the window.crypto object isn&#8217;t available, so I need to shim it. To use the window.crypto methods, you will need Node 15+. You can set [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/window-crypto-node">How to Use window.crypto in Node.js</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>I&#8217;ve been writing a bunch of jest tests recently for libraries that use the underlying <code>window.crypto</code> methods like <code>getRandomValues()</code> and <code>window.crypto.subtle</code> key management methods.  One problem I run into is that the <code>window.crypto</code> object isn&#8217;t available, so I need to shim it.</p>
+
+
+
+<p>To use the <code>window.crypto</code> methods, you will need Node 15+. You can set the <code>window.crypto</code> by importing the <code>crypto</code> package and setting it on the global:</p>
+
+
+
+<pre class="js">
+const crypto = require('crypto').webcrypto;
+
+// Shims the crypto property onto global
+global.crypto = crypto;
+</pre>
+
+
+
+<p>I really loathe creating mock functions for missing libraries in Node because they can lead to faulty positives on tests; I really appreciate <code>webcrypto</code> being available!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/window-crypto-node">How to Use window.crypto in Node.js</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/window-crypto-node/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Convert Fahrenheit to Celsius with JavaScript</title>
+		<link>https://davidwalsh.name/fahrenheit-celsius-javascript</link>
+		<comments>https://davidwalsh.name/fahrenheit-celsius-javascript#comments</comments>
+		<pubDate>Wed, 26 Oct 2022 10:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27635</guid>
+		<description><![CDATA[<p>The United States is one of the last bodies that refuses to implement the Celsius temperature standard. Why? Because we&#8217;re arrogant and feel like we don&#8217;t need to change. With that said, if you code for users outside the US, it&#8217;s important to provide localized weather data to users. Let&#8217;s took at how you can [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fahrenheit-celsius-javascript">Convert Fahrenheit to Celsius with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>The United States is one of the last bodies that refuses to implement the Celsius temperature standard. Why? Because we&#8217;re arrogant and feel like we don&#8217;t need to change. With that said, if you code for users outside the US, it&#8217;s important to provide localized weather data to users. Let&#8217;s took at how you can convert between Fahrenheit and Celsius.</p>
+
+
+
+<h2>Fahrenheit to Celsius</h2>
+
+
+
+<p>The formula to convert Fahrenheit to Celsius is:</p>
+
+
+
+<pre class="text">°C = 5/9 x (°F - 32)
+</pre>
+
+
+
+<p>The following function converts Fahrenheit to Celsius:</p>
+
+
+
+<pre class="js">function convertFahrenheitToCelsius(degrees) {
+  return Math.floor(5 / 9 * (degrees - 32));
+}
+</pre>
+
+
+
+<h2>Celsius to Fahrenheit</h2>
+
+
+
+<p>The formula to convert Celsius to Fahrenheit is:</p>
+
+
+
+<pre class="text">°F = (°C × 9/5) + 32
+</pre>
+
+
+
+<p>The following function converts Celsius to Fahrenheit:</p>
+
+
+
+<pre class="js">function convertCelsiusToFahrenheit(degrees) {
+  return Math.floor(degrees * (9/5) + 32);
+}
+</pre>
+
+
+
+<p>Temperature conversion is one of those things that&#8217;s difficult to do in your head due to the somewhat complex formula.  If you have a site that reflects weather data, keep these handy functions nearby!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/fahrenheit-celsius-javascript">Convert Fahrenheit to Celsius with JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/fahrenheit-celsius-javascript/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Create a Thumbnail From a Video with ffmpeg</title>
+		<link>https://davidwalsh.name/create-thumbnail-ffmpeg</link>
+		<comments>https://davidwalsh.name/create-thumbnail-ffmpeg#respond</comments>
+		<pubDate>Tue, 25 Oct 2022 09:28:58 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Media]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+		<category><![CDATA[Shell]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27634</guid>
+		<description><![CDATA[<p>Creating a thumbnail to represent a video is a frequent task when presenting media on a website. I previously created a shell script to create a preview video from a larger video, much like many adult sites provide. Let&#8217;s view how we can create a preview thumbnail from a video! Developers can use `ffmpeg, an [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/create-thumbnail-ffmpeg">Create a Thumbnail From a Video with ffmpeg</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Creating a thumbnail to represent a video is a frequent task when presenting media on a website.  I previously created a shell script to create a <a href="https://davidwalsh.name/video-preview">preview video from a larger video</a>, much like many adult sites provide.  Let&#8217;s view how we can create a preview thumbnail from a video!</p>
+
+
+
+<p>Developers can use `<code>ffmpeg</code>, an incredible open source media utility, to create a thumbnail.  To create a thumbnail from the first frame of a video, execute the following command:</p>
+
+
+
+<pre class="shell">
+ffmpeg -i input.webm -vf "select=eq(n\,34)" -vframes 1 thumbnail.png
+</pre>
+
+
+
+<p>Providing a video thumbnail is a great tool convert images into video views.  You don&#8217;t need fancy software and manual labor to create thumbnails &#8212; use <code>ffmpeg</code>!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/create-thumbnail-ffmpeg">Create a Thumbnail From a Video with ffmpeg</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/create-thumbnail-ffmpeg/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Detect System Theme Preference Change Using JavaScript</title>
+		<link>https://davidwalsh.name/detect-system-theme-preference-change-using-javascript</link>
+		<comments>https://davidwalsh.name/detect-system-theme-preference-change-using-javascript#respond</comments>
+		<pubDate>Mon, 24 Oct 2022 11:16:01 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27633</guid>
+		<description><![CDATA[<p>JavaScript and CSS allow users to detect the user theme preference with CSS&#8217; prefers-color-scheme media query. It&#8217;s standard these days to use that preference to show the dark or light theme on a given website. But what if the user changes their preference while using your app? To detect a system theme preference change using [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-system-theme-preference-change-using-javascript">Detect System Theme Preference Change Using JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p><a href="https://davidwalsh.name/detect-dark-mode-preference-with-javascript">JavaScript</a> and CSS allow users to detect the user theme preference with CSS&#8217; <code>prefers-color-scheme</code> media query.  It&#8217;s standard these days to use that preference to show the dark or light theme on a given website.  But what if the user changes their preference while using your app?</p>
+
+
+
+<p>To detect a system theme preference change using JavaScript, you need to combine <code>matchMedia</code>, <code>prefers-color-scheme</code>, and an event listener:</p>
+
+
+
+<pre class="js">
+window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change',({ matches }) => {
+  if (matches) {
+    console.log("change to dark mode!")
+  } else {
+    console.log("change to light mode!")
+  }
+})
+</pre>
+
+
+
+<p>The <code>change</code> event of the <code>matchMedia</code> API notifies you when the system preference changes. You can use this event to automatically update the site&#8217;s display in real time.</p>
+
+
+
+<p>I love that this API allows detecting user preference on a system level.  Catering to user needs is an important part of creating a great web experience!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/detect-system-theme-preference-change-using-javascript">Detect System Theme Preference Change Using JavaScript</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/detect-system-theme-preference-change-using-javascript/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Use Storage in Web Extensions</title>
+		<link>https://davidwalsh.name/chrome-extension-storage</link>
+		<comments>https://davidwalsh.name/chrome-extension-storage#respond</comments>
+		<pubDate>Wed, 19 Oct 2022 22:59:18 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Promises]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27631</guid>
+		<description><![CDATA[<p>Working on a web extension is an interesting experience &#8212; you get to taste web while working with special extension APIs. One such API is storage &#8212; the web extension flavor of persistence. Let&#8217;s explore how you can use session and local storage within your Manifest V3 web extensions! Enabling Extension Storage The extension storage [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/chrome-extension-storage">How to Use Storage in Web Extensions</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Working on a web extension is an interesting experience &#8212; you get to taste web while working with special extension APIs.  One such API is <code>storage</code> &#8212; the web extension flavor of persistence.  Let&#8217;s explore how you can use <code>session</code> and <code>local</code> storage within your Manifest V3 web extensions!</p>
+
+
+
+<h2>Enabling Extension Storage</h2>
+
+
+
+<p>The extension <code>storage</code> API isn&#8217;t available by default.  To enable the <code>storage</code> API, you need to cite it in the <code>manifest.json</code> file of your extension:</p>
+
+
+
+<pre class="js">
+{
+  // more....
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "permissions": [
+    "storage",
+    // more....
+  ],
+  // more....
+}
+
+</pre>
+
+
+
+<p>Adding <code>storage</code> to the <code>permissions</code> array, which is a top level <code>manifest.json</code> key, provides <code>session</code> and <code>local</code> storage capabilities to your extension.</p>
+
+
+
+<h2>Get, Set, and Remove Storage Values</h2>
+
+
+
+<p>Much like traditional <code>localStorage</code> and <code>sessionStorage</code> APIs, extension storage provides <code>get</code>, <code>set</code>, and <code>remove</code> operations:</p>
+
+
+
+<pre class="js">
+// set
+await chrome.storage.session.set({ name: "David", color: "green" });
+
+// get 
+const { name, color } = await chrome.storage.session.get(["name", "color"]);
+
+// remove
+await chrome.storage.session.remove(["name", "color"]);
+</pre>
+
+
+
+<p>A few things to note:</p>
+
+
+
+<ul><li><code>get</code> requires an array argument, not a single value like <code>localStorage</code> and <code>sessionStorage</code></li><li><code>set</code> needs to be an object format</li><li><code>remove</code> is also an array, much like <code>get</code></li><li>You can use <code>chrome.storage.local</code> or <code>chrome.storage.session</code> depending on how </li><li>All of the extension storage API methods are promise-based, with <code>await</code> or callback formats</li></ul>
+
+
+
+<h2>Clear All Storage</h2>
+
+
+
+<p>In the event that you want to clear all data for local or session storage, there&#8217;s a <code>clear</code> method:</p>
+
+
+
+<pre class="js">
+await chrome.storage.session.clear();
+</pre>
+
+
+
+<p>Using <code>clear</code> is effective but you&#8217;ll want to be sure that you do truly want to clear everything &#8212; <code>clear</code> could become a maintenance issue.</p>
+
+
+
+<p>Storage is an essential part of most web extensions.  While the API is simple,  the async format and method names are different.</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/chrome-extension-storage">How to Use Storage in Web Extensions</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/chrome-extension-storage/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Skip or Only Run a Test with JavaScript Mocha</title>
+		<link>https://davidwalsh.name/skip-or-only-run-a-test-with-javascript-mocha</link>
+		<comments>https://davidwalsh.name/skip-or-only-run-a-test-with-javascript-mocha#respond</comments>
+		<pubDate>Mon, 10 Oct 2022 10:13:03 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Quick Tips]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27629</guid>
+		<description><![CDATA[<p>Whenever I start to feel anxiety about a big change I&#8217;m making, I start writing more unit tests. I&#8217;ll write down my fear and then write a test that attacks, and eventually relaxes, that fear. There are two actions that I&#8217;ve been frequently using with test writing: skipping all but one test or single tests. [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/skip-or-only-run-a-test-with-javascript-mocha">Skip or Only Run a Test with JavaScript Mocha</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>Whenever I start to feel anxiety about a big change I&#8217;m making, I start writing more unit tests.  I&#8217;ll write down my fear and then write a test that attacks, and eventually relaxes, that fear.  There are two actions that I&#8217;ve been frequently using with test writing: skipping all but one test or single tests.</p>
+
+
+
+<h2>Skip a Test</h2>
+
+
+
+<p>Oftentimes I will create tests with empty bodies so that I don&#8217;t forget to write them.  To skip a test which is incomplete or known to fail, you can use <code>xit</code>:</p>
+
+
+
+<pre class="js">
+xit('does the thing I want', () => {
+
+});
+</pre>
+
+
+
+<p>Once the test is complete or ready to be applied, you can change <code>xit</code> back to <code>it</code>.</p>
+
+
+
+<h2>Run a Single Test</h2>
+
+
+
+<p>To run only a single test with the Mocha test framework, use <code>it.only</code>:</p>
+
+
+
+<pre class="js">
+it.only('does the thing I want', () => {
+
+});
+</pre>
+
+
+
+<p><code>it.only</code> is especially helpful if you have a large test suite and just want the result of a work-in-progress test quickly.</p>
+
+
+
+<p>Let&#8217;s be honest:  writing tests isn&#8217;t very fun.  Like taking your cousin to the school dance or changing a diaper.  But test writing is important enough to save yourself, and more importantly, your users, from disaster.</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/skip-or-only-run-a-test-with-javascript-mocha">Skip or Only Run a Test with JavaScript Mocha</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/skip-or-only-run-a-test-with-javascript-mocha/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Determine Default App for File Type from Command Line</title>
+		<link>https://davidwalsh.name/get-default-app</link>
+		<comments>https://davidwalsh.name/get-default-app#respond</comments>
+		<pubDate>Sun, 02 Oct 2022 22:50:28 +0000</pubDate>
+		<dc:creator><![CDATA[David Walsh]]></dc:creator>
+				<category><![CDATA[Quick Tips]]></category>
+		<category><![CDATA[Shell]]></category>
+
+		<guid isPermaLink="false">https://davidwalsh.name/?p=27627</guid>
+		<description><![CDATA[<p>One quality of life improvement any developer can make for themselves is ensuring different file types open in the app they&#8217;re most proficient in. If you know me, you know I prefer accomplishing as much as possible from the command line. The duti utility allows users to determine default file type from command line. The [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/get-default-app">Determine Default App for File Type from Command Line</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></description>
+				<content:encoded><![CDATA[
+<p>One quality of life improvement any developer can make for themselves is ensuring different file types open in the app they&#8217;re most proficient in.  If you know me, you know I prefer accomplishing as much as possible from the command line.  The <code>duti</code> utility allows users to determine default file type from command line.</p>
+
+
+
+<p>The <code>duti</code> utility allows developers to query which app is the default for different file types.  You can install <code>duti</code> with <code>brew</code>:</p>
+
+
+
+<pre class="shell">
+brew install duti
+</pre>
+
+
+
+<p>Once you have <code>duti</code> available, you can check on the default app for file type with the following command:</p>
+
+
+
+<pre class="shell">
+~ duti -x md
+Xcode.app
+/Applications/Xcode.app
+com.apple.dt.Xcode
+</pre>
+
+
+
+<p>You can set the default app by using its package:</p>
+
+
+
+<pre class="shell">
+duti -s com.sublimetext.2 .js all
+</pre>
+
+
+
+<p>The <code>duti</code> utility is really great for determining and automating default app management!</p>
+<p>The post <a rel="nofollow" href="https://davidwalsh.name/get-default-app">Determine Default App for File Type from Command Line</a> appeared first on <a rel="nofollow" href="https://davidwalsh.name">David Walsh Blog</a>.</p>
+<p><a href="https://tkjs.us/dwb"><img style="margin:0 auto" alt="" src="https://davidwalsh.name/demo/tjs_block-1.svg"></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://davidwalsh.name/get-default-app/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
