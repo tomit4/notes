@@ -213,6 +213,10 @@ alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
 alias jester="jest --watchAll"
+# generate uuids using native bash
+alias uuid="uuidgen"
+alias kuuid="cat /proc/sys/kernel/random/uuid"
+alias duuid="dbus-uuidgen"
 # generate unique ids from cli, example for no special characters:
 alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
 alias nanoid="npx nanoid"
