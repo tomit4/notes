@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+full_filename=$1
+filename=$(echo "${1}" | awk -F. '{ print $1 }')
+filetype=$(echo "${1}" | awk -F. '{ print $2 }')
+
+# -gaussian-blur 0.05 \
+# -unsharp 0x0.75+0.75+0.008 \
+
+magick "${full_filename}" \
+-sampling-factor 4:2:0 \
+-interlace Plane \
+-strip \
+-quality 85 \
+-colorspace sRGB \
+"${filename}"_pressed."$filetype"
