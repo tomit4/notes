@@ -4,7 +4,9 @@ article and Unix Sheikh's Choose your Browser Carefully article):
 
 Install Ublock Origin
 Install Decentraleyes
+Install Always active Window - Always Visible
 Install Canvas Blocker (on librewolf no need)
+Install CLassic mode for Wikipedia
 Install Colorzilla
 Install Measure-it
 Install FastForward
