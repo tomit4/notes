@@ -1,0 +1,1770 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brett.is</title>
+    <link>https://brett.is/index.xml</link>
+    <description>Recent content on Brett.is</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://brett.is/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Thinking about transactional email</title>
+      <link>https://brett.is/writing/about/thinking-about-transactional-email/</link>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/thinking-about-transactional-email/</guid>
+      <description>&lt;p&gt;I have recently started working on a new project, &lt;a href=&#34;https://mailchemy.com&#34; target=&#34;_blank&#34;&gt;Mailchemy&lt;/a&gt;, for managing all of your transactional email integrations behind one easy to use API.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For awhile now I have been thinking about the complications of transactional email.
+In the past I have found myself wanting to change email service providers, either for pricing or reliability reasons, but I&amp;rsquo;ve found myself stuck.
+I had integrated my application so heavily into their product that making any kind of move away from their platform becomes difficult.
+You can&amp;rsquo;t fault me for making this choice&amp;ndash; email applications require deep integration in order to truly leverage all of the benefits of these services.&lt;/p&gt;
+
+&lt;p&gt;When integrating with an email service provider it would have been preferable to have abstracted out as much of the integration as possible, making it easier to swap out email providers.
+Since we had not abstracted away the API calls in our code, we found ourselves having to track down every use of that specific API and update for it the new provider.
+Given how tightly coupled sending transactional email is with our core application, these calls are spread throughout the code base and checking to be sure we had all usages removed and tested was both time consuming and risky. What if we missed a spot and weren’t sending an important message to our customers?&lt;/p&gt;
+
+&lt;p&gt;In addition to deep integration with an email service provider for when we send emails we were also storing a bunch of our email templates on the provider&amp;rsquo;s platform.
+This was a nice feature to ensure we didn&amp;rsquo;t have to deploy a code change to update the copy in an email, enabling non-technical team members to make changes to our emails easily.
+However, this nice feature also locked us into the provider further and made it harder for us to extract and move all of those templates to another platform.
+To have more ownership of our email templates across platforms, we started moving some of the templates into our code base, but this introduced its own set of problems: shuffling templates around between providers and code is time consuming and means there is another part of the email pipeline you have to manage yourself.
+We also lost the ability for our non-technical team members to update templates without a code change.&lt;/p&gt;
+
+&lt;p&gt;Since we were a small team, we couldn’t justify the loss of flexibility and increased effort that making these changes would incur&amp;ndash; we were bootstrapped, we had more important things to work on.
+So we were stuck with the initial email provider we picked.&lt;/p&gt;
+
+&lt;p&gt;This work problem got me thinking more about transactional email.
+It seems most people follow a similar basic process:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Generate the email body from a template&lt;/li&gt;
+&lt;li&gt;Optimize the email (inline CSS, minify HTML, etc)&lt;/li&gt;
+&lt;li&gt;Send the email&lt;/li&gt;
+&lt;li&gt;Create analytics or reports about the emails being sent&lt;/li&gt;
+&lt;li&gt;Track open/click rates for emails
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a lot of really good transactional email providers, most of which offer some form of all of these steps.
+However, they don&amp;rsquo;t all necessarily offer the same features as other platforms or the exact features or configurations that someone will want.
+As I discussed above, sometimes you find yourself in a position where you don&amp;rsquo;t want to lock yourself into any given platform because of features so you abstract and manage the features you want anyways.&lt;/p&gt;
+
+&lt;p&gt;In software we talk a lot about DRY- don&amp;rsquo;t repeat yourself.
+We use abstraction and open source to leverage the time of our community to not re-invent the wheel, so why aren&amp;rsquo;t we doing this more for transactional emails?&lt;/p&gt;
+
+&lt;p&gt;I have started working on a new project, &lt;a href=&#34;https://mailchemy.com&#34; target=&#34;_blank&#34;&gt;Mailchemy&lt;/a&gt;, which aims to help simplify transactional email.
+Configure and manage all of your favorite email integrations in one place and utilize with one simple API call.&lt;/p&gt;
+
+&lt;p&gt;Mailchemy is the product that I wish I had when I was configuring transactional email at previous companies.
+By using Mailchemy to handle all of your email integrations and calls to your email provider your initial integration along with any changes are easier to manage.
+Changing an email provider can happen in just a few clicks instead of the countless hours spent hunting down that one last usage.&lt;/p&gt;
+
+&lt;p&gt;Mailchemy allows users to define their own custom transactional email pipelines full of your favorite integrations and utilize the email provider of your choice.
+You will no longer have to make a decision on which email provider to use based on the features they offer.&lt;/p&gt;
+
+&lt;p&gt;No support for &lt;a href=&#34;https://pugjs.org&#34;&gt;Pug&lt;/a&gt;?
+No problem, if Mailchemy supports it, you can use it.&lt;/p&gt;
+
+&lt;p&gt;Want to change email providers?
+Take all of your favorite integrations with you.&lt;/p&gt;
+
+&lt;p&gt;As of the writing of this article Mailchemy is still under active development, please visit &lt;a href=&#34;https://mailchemy.com&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://mailchemy.com/&#34;&gt;https://mailchemy.com/&lt;/a&gt;&lt;/a&gt; for more information and to subscribe for product updates.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Managing Go dependencies with git-subtree</title>
+      <link>https://brett.is/writing/about/managing-go-dependencies-with-git-subtree/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/managing-go-dependencies-with-git-subtree/</guid>
+      <description>
+
+&lt;p&gt;Recently I have decided to make the switch to using &lt;code&gt;git-subtree&lt;/code&gt; for managing dependencies of my Go projects.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For a while now I have been searching for a good way to manage dependencies for my &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;
+projects. I think I have finally found a work flow that I really like that uses
+&lt;a href=&#34;http://git.kernel.org/cgit/git/git.git/plain/contrib/subtree/git-subtree.txt&#34;&gt;git-subtree&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When I began investigating different ways to manage dependencies I had a few small goals or concepts I wanted to follow.&lt;/p&gt;
+
+&lt;h3 id=&#34;keep-it-simple&#34;&gt;Keep it simple&lt;/h3&gt;
+
+&lt;p&gt;I have always been drawn to the simplicity of Go and the tools that surround it.
+I didn&amp;rsquo;t want to add a lot of overhead or complexity into my work flow when programming in Go.&lt;/p&gt;
+
+&lt;h3 id=&#34;vendor-dependencies&#34;&gt;Vendor dependencies&lt;/h3&gt;
+
+&lt;p&gt;I decided right away that I wanted to vendor my dependencies, that is, where all of my dependencies
+live under a top level &lt;code&gt;vendor/&lt;/code&gt; directory in each repository.&lt;/p&gt;
+
+&lt;p&gt;This also means that I wanted to use the &lt;code&gt;GO15VENDOREXPERIMENT=&amp;quot;1&amp;quot;&lt;/code&gt; flag.&lt;/p&gt;
+
+&lt;h3 id=&#34;maintain-the-full-source-code-of-each-dependency-in-each-repository&#34;&gt;Maintain the full source code of each dependency in each repository&lt;/h3&gt;
+
+&lt;p&gt;The idea here is that each project will maintain the source code for each of its dependencies
+instead of having a dependency manifest file, like &lt;code&gt;package.json&lt;/code&gt; or &lt;code&gt;Godeps.json&lt;/code&gt;, to manage the dependencies.&lt;/p&gt;
+
+&lt;p&gt;This was more of an acceptance than a decision. It wasn&amp;rsquo;t a hard requirement that
+each repository maintains the full source code for each of its dependencies, but
+I was willing to accept that as a by product of a good work flow.&lt;/p&gt;
+
+&lt;h2 id=&#34;in-come-git-subtree&#34;&gt;In come git-subtree&lt;/h2&gt;
+
+&lt;p&gt;When researching methods of managing dependencies with &lt;code&gt;git&lt;/code&gt;, I came across a great article
+from Atlassian, &lt;a href=&#34;https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/&#34;&gt;The power of Git subtree&lt;/a&gt;.
+Which outlined how to use &lt;code&gt;git-subtree&lt;/code&gt; for managing repository dependencies&amp;hellip; exactly what I was looking for!&lt;/p&gt;
+
+&lt;p&gt;The main idea with &lt;code&gt;git-subtree&lt;/code&gt; is that it is able to fetch a full repository and place
+it inside of your repository. However, it differs from &lt;code&gt;git-submodule&lt;/code&gt; because it does not
+create a link/reference to a remote repository, instead it will fetch all the files from that
+remote repository and place them under a directory in your repository and then treats them as
+though they are part of your repository (there is no additional &lt;code&gt;.git&lt;/code&gt; directory).&lt;/p&gt;
+
+&lt;p&gt;If you pair &lt;code&gt;git-subtree&lt;/code&gt; with its &lt;code&gt;--squash&lt;/code&gt; option, it will squash the remote repository
+down to a single commit before pulling it into your repository.&lt;/p&gt;
+
+&lt;p&gt;As well, &lt;code&gt;git-subtree&lt;/code&gt; has ability to issue a &lt;code&gt;pull&lt;/code&gt; to update a child repository.&lt;/p&gt;
+
+&lt;p&gt;Lets just take a look at how using &lt;code&gt;git-subtree&lt;/code&gt; would work.&lt;/p&gt;
+
+&lt;h3 id=&#34;adding-a-new-dependency&#34;&gt;Adding a new dependency&lt;/h3&gt;
+
+&lt;p&gt;We want to add a new dependency, &lt;a href=&#34;https://github.com/miekg/dns&#34;&gt;github.com/miekg/dns&lt;/a&gt;
+to our project.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git subtree add --prefix vendor/github.com/miekg/dns https://github.com/miekg/dns.git master --squash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will pull in the full repository for &lt;code&gt;github.com/miekg/dns&lt;/code&gt; at &lt;code&gt;master&lt;/code&gt; to &lt;code&gt;vendor/github.com/miekg/dns&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And that is it, &lt;code&gt;git-subtree&lt;/code&gt; will have created two commits for you, one for the squash of &lt;code&gt;github.com/miekg/dns&lt;/code&gt;
+and another for adding it as a child repository.&lt;/p&gt;
+
+&lt;h3 id=&#34;updating-an-existing-dependency&#34;&gt;Updating an existing dependency&lt;/h3&gt;
+
+&lt;p&gt;If you want to then update &lt;code&gt;github.com/miekg/dns&lt;/code&gt; you can just run the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git subtree pull --prefix vendor/github.com/miekg/dns https://github.com/miekg/dns.git master --squash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will again pull down the latest version of &lt;code&gt;master&lt;/code&gt; from &lt;code&gt;github.com/miekg/dns&lt;/code&gt; (assuming it has changed)
+and create two commits for you.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-tags-branches-commits&#34;&gt;Using tags/branches/commits&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git-subtree&lt;/code&gt; also works with tags, branches, or commit hashes.&lt;/p&gt;
+
+&lt;p&gt;Say we want to pull in a specific version of &lt;code&gt;github.com/brettlangdon/forge&lt;/code&gt; which uses tags to manage versions.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git subtree add --prefix vendor/github.com/brettlangdon/forge https://github.com/brettlangdon/forge.git v0.1.5 --squash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then, if we want to update to a later version, &lt;code&gt;v0.1.7&lt;/code&gt;, we can just run the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git subtree pull --prefix vendor/github.com/brettlangdon/forge https://github.com/brettlangdon/forge.git v0.1.7 --squash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;making-it-all-easier&#34;&gt;Making it all easier&lt;/h2&gt;
+
+&lt;p&gt;I really like using &lt;code&gt;git-subtree&lt;/code&gt;, a lot, but the syntax is a little cumbersome.
+The previous article I mentioned from Atlassian (&lt;a href=&#34;ttps://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/&#34;&gt;here&lt;/a&gt;)
+suggests adding in &lt;code&gt;git&lt;/code&gt; aliases to make using &lt;code&gt;git-subtree&lt;/code&gt; easier.&lt;/p&gt;
+
+&lt;p&gt;I decided to take this one step further and write a &lt;code&gt;git&lt;/code&gt; command, &lt;a href=&#34;https://github.com/brettlangdon/git-vendor&#34;&gt;git-vendor&lt;/a&gt;
+to help manage subtree dependencies.&lt;/p&gt;
+
+&lt;p&gt;I won&amp;rsquo;t go into much details here since it is outlined in the repository as well as at &lt;a href=&#34;https://brettlangdon.github.io/git-vendor/&#34;&gt;https://brettlangdon.github.io/git-vendor/&lt;/a&gt;,
+but the project&amp;rsquo;s goal was to make working with &lt;code&gt;git-subtree&lt;/code&gt; easier for managing Go dependencies.
+Mainly, to be able to add subtrees and give them a name, to be able to list all current subtrees,
+and to be able to update a subtree by name rather than repo + prefix path.&lt;/p&gt;
+
+&lt;p&gt;Here is a quick preview:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git vendor add forge https://github.com/brettlangdon/forge v0.1.5
+$ git vendor list
+forge@v0.1.5:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.5
+    commit: 4c620b835a2617f3af91474875fc7dc84a7ea820
+$ git vendor update forge v0.1.7
+$ git vendor list
+forge@v0.1.7:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.7
+    commit: 0b2bf8e484ce01c15b87bbb170b0a18f25b446d9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;why-not&#34;&gt;Why not&amp;hellip;&lt;/h2&gt;
+
+&lt;h3 id=&#34;godep-lt-package-manager-here-gt&#34;&gt;Godep/&amp;lt;package manager here&amp;gt;&lt;/h3&gt;
+
+&lt;p&gt;I decided early on that I did not want to &amp;ldquo;deal&amp;rdquo; with a package manager unless I had to.
+This is not to say that there is anything wrong with &lt;a href=&#34;https://github.com/tools/godep&#34;&gt;godep&lt;/a&gt;
+or any of the other currently available package managers out there, I just wanted to keep
+the work flow simple and as close to what Go supports with respect to vendored dependencies
+as possible.&lt;/p&gt;
+
+&lt;h3 id=&#34;git-submodule&#34;&gt;git-submodule&lt;/h3&gt;
+
+&lt;p&gt;I have been asked why not &lt;code&gt;git-submodule&lt;/code&gt;, and I think anyone that has had to work
+with &lt;code&gt;git-submodule&lt;/code&gt; will agree that it isn&amp;rsquo;t really the best option out there.
+It isn&amp;rsquo;t as though it cannot get the job done, but the extra work flow needed
+when working with them is a bit of a pain. Mostly when working on a project with
+multiple contributors, or with contributors who are either not aware that the project
+is using submodules or who has never worked with them before.&lt;/p&gt;
+
+&lt;h3 id=&#34;something-else&#34;&gt;Something else?&lt;/h3&gt;
+
+&lt;p&gt;This isn&amp;rsquo;t the end of my search, I will always be keeping a look out for new and
+different ways to manage my dependencies. However, this is by far my favorite as of yet.
+If anyone has any suggestions, please feel free to leave a comment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Write code every day</title>
+      <link>https://brett.is/writing/about/write-code-every-day/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/write-code-every-day/</guid>
+      <description>&lt;p&gt;Just like a poet or an athlete practicing code every day will only make you better.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Lately I have been trying to get into blogging more and any article I read always says, &amp;ldquo;you need to write every day&amp;rdquo;.
+It doesn&amp;rsquo;t matter if what I write down gets published, but forming the habit of trying to write something every day
+is what counts. The more I write the easier it will become, the more natural it will feel and the better I will get at it.&lt;/p&gt;
+
+&lt;p&gt;This really isn&amp;rsquo;t just true of writing or blogging, it is something that can be said of anything at all. Riding a bike,
+playing basketball, reading, cooking or absolutely anything at all. The more you do it, the easier it will become and
+the better you will get.&lt;/p&gt;
+
+&lt;p&gt;As the title of the post will allude you to, this is also true of programming. If you want to be really good at programming
+you have to write code every day. The more code you write the easier it&amp;rsquo;ll be to write and the better you will be at programming.
+Just like any other task I&amp;rsquo;ve listed in this article, trying to write code every day, even if you are used to it, can be really
+hard to do and a really hard habit to keep.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;What should I write?&amp;rdquo; The answer to this question is going to be different for everyone, but it is the hurdle which
+you must first overcome to work your way towards writing code every day. Usually people write code to solve problems
+that they have, but not everyone has problems to solve. There is usually a chicken and the egg problem. You need to
+write code to have coding problems, and you need to have coding problems to have something to write. So, where should
+you start?&lt;/p&gt;
+
+&lt;p&gt;For myself, one of the things I like doing is to rewrite things that already exist. Sometimes it can be hard to come up with a
+new and different idea or even a new approach to an existing idea. However, there are millions of existing projects out
+there to copy. The idea I go for is to try and replicate the overall goal of the project, but in my own way. That might
+mean writing it in a different language, or changing the API for it or just taking some wacky new approach to solving the same issue.&lt;/p&gt;
+
+&lt;p&gt;More times than not the above exercise leads me to a problem that I then can go off and solve. For example, a few weeks ago
+I sat down and decided I wanted to write a web server in &lt;code&gt;go&lt;/code&gt; (think &lt;code&gt;nginx&lt;/code&gt;/&lt;code&gt;apache&lt;/code&gt;). I knew going into the project I wanted
+a really nice and easy to use configuration file to define the settings. So, I did what most people do these days I and
+used &lt;code&gt;json&lt;/code&gt;, but that didn&amp;rsquo;t really feel right to me. I then tried &lt;code&gt;yaml&lt;/code&gt;, but yet again didn&amp;rsquo;t feel like what I wanted. I
+probably could have used &lt;code&gt;ini&lt;/code&gt; format and made custom rules for the keys and values, but again, this is hacky. This spawned
+a new project in order to solve the problem I was having and ended up being &lt;a href=&#34;https://github.com/brettlangdon/forge&#34;&gt;forge&lt;/a&gt;,
+which is a hand coded configuration file syntax and parser for &lt;code&gt;go&lt;/code&gt; which ended up being a neat mix between &lt;code&gt;json&lt;/code&gt; and &lt;code&gt;nginx&lt;/code&gt;
+configuration file syntax.&lt;/p&gt;
+
+&lt;p&gt;Anywho, enough of me trying to self promote projects. The main point is that by trying to replicate something that
+already exists, without really trying to do anything new, I came up with an idea which spawned another project and
+for at least a week (and continuing now) gave me a reason to write code every day. Not only did I write something
+useful that I can now use in any future project of mine, I also learned something I did not know before. I learned
+how to hand code a syntax parser in &lt;code&gt;go&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, try to take &amp;ldquo;coding every day&amp;rdquo; not as a challenge to write something useful every day, but to learn
+something new every day. Learn part of a new language, a new framework, learn how to take something apart or put
+it back together. Write code every day and learn something new every day. The more you do this, the more you will
+learn and the better you will become.&lt;/p&gt;
+
+&lt;p&gt;Go forth and happy coding. :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Forge configuration parser</title>
+      <link>https://brett.is/writing/about/forge-configuration-parser/</link>
+      <pubDate>Sat, 27 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/forge-configuration-parser/</guid>
+      <description>
+
+&lt;p&gt;An overview of how I wrote a configuration file format and parser.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Recently I have finished the initial work on a project,
+&lt;a href=&#34;https://github.com/brettlangdon/forge&#34;&gt;forge&lt;/a&gt;, which is a
+configuration file syntax and parser written in go. Recently I was working
+on a project where I was trying to determine what configuration
+language I wanted to use and whether I tested out
+&lt;a href=&#34;https://en.wikipedia.org/wiki/YAML&#34;&gt;YAML&lt;/a&gt; or
+&lt;a href=&#34;https://en.wikipedia.org/wiki/JSON&#34;&gt;JSON&lt;/a&gt; or
+&lt;a href=&#34;https://en.wikipedia.org/wiki/INI_file&#34;&gt;ini&lt;/a&gt;, nothing really felt
+right. What I really wanted was a format similar to
+&lt;a href=&#34;http://wiki.nginx.org/FullExample&#34;&gt;nginx&lt;/a&gt;
+but I couldn&amp;rsquo;t find any existing packages for go which supported this
+syntax. A-ha, I smell an opportunity.&lt;/p&gt;
+
+&lt;p&gt;I have always been interested by programming languages, by their
+design and implementation. I have always wanted to write my own
+programming language, but since I have never had any formal education
+around the subject I have always gone about it on my own. I bring it
+up because this project has some similarities. You have a defined
+syntax that gets parsed into some sort of intermediate format. The
+part that is missing is where the intermediate format is then
+translated into machine or byte code and actually executed. Since this
+is just a configuration language, that is not necessary.&lt;/p&gt;
+
+&lt;h2 id=&#34;project-overview&#34;&gt;Project overview&lt;/h2&gt;
+
+&lt;p&gt;You can see the repository for
+&lt;a href=&#34;https://github.com/brettlangdon/forge&#34;&gt;forge&lt;/a&gt; for current usage and
+documentation.&lt;/p&gt;
+
+&lt;p&gt;Forge syntax is a file which is made up of &lt;em&gt;directives&lt;/em&gt;. There are 3
+kinds of &lt;em&gt;directives&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;settings&lt;/em&gt;: Which are in the form &lt;code&gt;&amp;lt;KEY&amp;gt; = &amp;lt;VALUE&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;sections&lt;/em&gt;: Which are used to group more &lt;em&gt;directives&lt;/em&gt; &lt;code&gt;&amp;lt;SECTION-NAME&amp;gt; { &amp;lt;DIRECTIVES&amp;gt; }&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;includes&lt;/em&gt;: Used to pull in settings from other forge config files &lt;code&gt;include &amp;lt;FILENAME/GLOB&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Forge also supports various types of &lt;em&gt;setting&lt;/em&gt; values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;string&lt;/em&gt;: &lt;code&gt;key = &amp;quot;some value&amp;quot;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;bool&lt;/em&gt;: &lt;code&gt;key = true;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;integer&lt;/em&gt;: &lt;code&gt;key = 5;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;float&lt;/em&gt;: &lt;code&gt;key = 5.5;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;null&lt;/em&gt;: &lt;code&gt;key = null;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;reference&lt;/em&gt;: &lt;code&gt;key = some_section.key;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these setting types are probably fairly self explanatory
+except for &lt;em&gt;reference&lt;/em&gt;. A &lt;em&gt;reference&lt;/em&gt; in forge is a way to have the
+value of one &lt;em&gt;setting&lt;/em&gt; be a pointer to another &lt;em&gt;setting&lt;/em&gt;. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;global = &amp;quot;value&amp;quot;;
+some_section {
+  key = &amp;quot;some_section.value&amp;quot;;
+  global_ref = global;
+  local_ref = .key;
+  ref_key = ref_section.ref_key;
+}
+ref_section {
+  ref_key = &amp;quot;hello&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example we see 3 examples of &lt;em&gt;references&lt;/em&gt;. A &lt;em&gt;reference&lt;/em&gt; value
+is one which is an identifier (&lt;code&gt;global&lt;/code&gt;) possibly multiple identifiers separated
+with a period (&lt;code&gt;ref_section.ref_key&lt;/code&gt;) as well &lt;em&gt;references&lt;/em&gt; can begin
+with a perod (&lt;code&gt;.key&lt;/code&gt;). Every &lt;em&gt;reference&lt;/em&gt; which is not prefixed with a period
+is resolved from the global section (most outer level). So in this
+example a &lt;em&gt;reference&lt;/em&gt; to &lt;code&gt;global&lt;/code&gt; will point to the value of
+&lt;code&gt;&amp;quot;value&amp;quot;&lt;/code&gt; and &lt;code&gt;ref_section.ref_key&lt;/code&gt; will point to the value of
+&lt;code&gt;&amp;quot;hello&amp;quot;&lt;/code&gt;. A &lt;em&gt;local reference&lt;/em&gt; is one which is prefixed with a period,
+those are resolved starting from the current section that the
+&lt;em&gt;setting&lt;/em&gt; is defined in. So in this case, &lt;code&gt;local_ref&lt;/code&gt; will point to
+the value of &lt;code&gt;&amp;quot;some_section.value&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;That is a rough idea of how forge files are defined, so lets see a
+quick example of how you can use it from go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;github.com/brettlangdon/forge&amp;quot;
+)
+
+func main() {
+    settings, _ := forge.ParseFile(&amp;quot;example.cfg&amp;quot;)
+    if settings.Exists(&amp;quot;global&amp;quot;) {
+    	value, _ := settings.GetString(&amp;quot;global&amp;quot;);
+    	fmt.Println(value);
+    }
+    settings.SetString(&amp;quot;new_key&amp;quot;, &amp;quot;new_value&amp;quot;);
+
+    settingsMap := settings.ToMap();
+    fmt.Println(settingsMaps[&amp;quot;new_key&amp;quot;]);
+
+    jsonBytes, _ := settings.ToJSON();
+    fmt.Println(string(jsonBytes));
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;Lets dive in and take a quick look at the parts that make forge
+capable of working.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example config file:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;# Top comment
+global = &amp;quot;value&amp;quot;;
+section {
+  a_float = 50.67;
+  sub_section {
+    a_null = null;
+    a_bool = true;
+    a_reference = section.a_float;  # Gets replaced with `50.67`
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Basically what forge does is take a configuration file in defined
+format and parses it into what is essentially a &lt;code&gt;map[string]interface{}&lt;/code&gt;.
+The code itself is comprised of two main parts, the tokenizer (or scanner) and the
+parser. The tokenizer turns the raw source code (like above) into a stream of tokens. If
+you printed the token representation of the code above, it could look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(COMMENT, &amp;quot;Top comment&amp;quot;)
+(IDENTIFIER, &amp;quot;global&amp;quot;)
+(EQUAL, &amp;quot;=&amp;quot;)
+(STRING, &amp;quot;value&amp;quot;)
+(SEMICOLON, &amp;quot;;&amp;quot;
+(IDENTIFIER, &amp;quot;section&amp;quot;)
+(LBRACKET, &amp;quot;{&amp;quot;)
+(IDENTIFIER, &amp;quot;a_float&amp;quot;)
+(EQUAL, &amp;quot;=&amp;quot;)
+(FLOAT, &amp;quot;50.67&amp;quot;)
+(SEMICOLON, &amp;quot;;&amp;quot;)
+....
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then the parser takes in this stream of tokens and tries to parse them based on some known
+grammar. For example, a directive is in the form
+&lt;code&gt;&amp;lt;IDENTIFIER&amp;gt; &amp;lt;EQUAL&amp;gt; &amp;lt;VALUE&amp;gt; &amp;lt;SEMICOLON&amp;gt;&lt;/code&gt; (where &lt;code&gt;&amp;lt;VALUE&amp;gt;&lt;/code&gt; can be
+&lt;code&gt;&amp;lt;STRING&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;BOOL&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;INTEGER&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;FLOAT&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;NULL&amp;gt;&lt;/code&gt;,
+&lt;code&gt;&amp;lt;REFERENCE&amp;gt;&lt;/code&gt;). When the parser sees &lt;code&gt;&amp;lt;IDENTIFIER&amp;gt;&lt;/code&gt; it&amp;rsquo;ll look ahead
+to the next token to try and match it to this rule, if it matches then
+it knows to add this setting to the internal &lt;code&gt;map[string]interface{}&lt;/code&gt;
+for that identifier. If it doesn&amp;rsquo;t match anything then it has a syntax
+error and will throw an exception.&lt;/p&gt;
+
+&lt;p&gt;The part that I think is interesting is that I opted to just write the
+tokenizer and parser by hand rather than using a library that converts
+a language grammar into a tokenizer (like flex/bison). I have done
+this before and was inspired to do so after learning that that is how
+the go programming language is written, you can see here
+&lt;a href=&#34;https://github.com/golang/go/blob/258bf65d8b157bfe311ce70c93dd854022a25c9d/src/go/parser/parser.go&#34;&gt;parser.go&lt;/a&gt;
+(not a light read at 2500 lines). The
+&lt;a href=&#34;https://github.com/brettlangdon/forge/blob/1c8c6f315b078622b7264b702b76c6407ec0f264/scanner.go&#34;&gt;scanner.go&lt;/a&gt;
+and
+&lt;a href=&#34;https://github.com/brettlangdon/forge/blob/1c8c6f315b078622b7264b702b76c6407ec0f264/parser.go&#34;&gt;parser.go&lt;/a&gt;
+might proof to be slightly easier reads for those who are interested.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;There is just a brief overview of the project and just a slight dip
+into the inner workings of it. I am extremely interested in continuing
+to learn as much as I can about programming languages and
+parsers/compilers. I am going to put together a series of blog posts
+that walk through what I have learned so far and which might help
+guide the reader through creating something similar to forge.&lt;/p&gt;
+
+&lt;p&gt;Enjoy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What I&#39;m up to these days</title>
+      <link>https://brett.is/writing/about/what-im-up-to-these-days/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/what-im-up-to-these-days/</guid>
+      <description>&lt;p&gt;It has been awhile since I have written anything in my blog. Might as well get started
+somewhere, like a brief summary of what I have been working on lately.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;It has been far too long since I last wrote in this blog. I always have these aspirations
+of writing all the time about all the things I am working on. The problem generally comes
+back to me not feeling confident enough to write about anything I am working on. &amp;ldquo;Oh, a
+post like that probably already exists&amp;rdquo;, &amp;ldquo;There are smarter people than me out there
+writing about this, why bother&amp;rdquo;. It is an unfortunate feeling to try and get over.&lt;/p&gt;
+
+&lt;p&gt;So, here is where I am making an attempt. I will try to write more, it&amp;rsquo;ll be healthy for
+me. I always hear of people setting reminders in their calendars to block off time to
+write blog posts, even if they end up only writing a few sentences, which seems like a
+great idea that I indent to try.&lt;/p&gt;
+
+&lt;p&gt;Ok, enough with the &amp;ldquo;I haven&amp;rsquo;t been feeling confident dribble&amp;rdquo;, on to what I actually have
+been up to lately.&lt;/p&gt;
+
+&lt;p&gt;Since my last post I have a new job. I am now Senior Software Engineer at
+&lt;a href=&#34;https://underdog.io/&#34;&gt;underdog.io&lt;/a&gt;. We are a small early stage startup (4 employees, just
+over a year old) that is in the hiring space. For candidates our site basically acts like
+a common application to now over 150 venture backed startups in New York City or San
+Francisco. In the short time I have been working there, I am very impressed and glad that
+I took their offer. I work with some awesome and smart people and I am still learning a
+lot, whether it is about coding or just trying to run a business.&lt;/p&gt;
+
+&lt;p&gt;I originally started to end this post by talking about a programming project I have been
+working on, but it ended up being 4 times longer than the text above and have decided
+instead to write a separate post about it. Apparently even though I have been writing
+lately, I have a lot to say.&lt;/p&gt;
+
+&lt;p&gt;Thanks for bearing with this &amp;ldquo;I have to write something&amp;rdquo; post. I am not going to make a
+promise that I am going to write more, because it is something that could easily fall
+through, like it usually does&amp;hellip; but I shall give it my all!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Javascript Documentation Generation</title>
+      <link>https://brett.is/writing/about/javascript-documentation-generation/</link>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/javascript-documentation-generation/</guid>
+      <description>&lt;p&gt;I have always been trying to find a good Javascript documentation generator and
+I have never really been very happy with any that I have found. So I&amp;rsquo;ve decided
+to just write my own, DocAST.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The problem I have always had with any documentation generators is they are
+either hard to theme or are sometimes very strict with the way doc strings are
+suppose to be written, making them potentially difficult to switch between
+documentation generators if you had to. So for a fun exercise I&amp;rsquo;ve decided to
+just try writting one myself, &lt;a href=&#34;https://github.com/brettlangdon/docast&#34;&gt;DocAST&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What is different about DocAST? I&amp;rsquo;ve seen a few documentation parsers which use
+regular expressions to parse out the comment blocks, which works perfectly well,
+except I&amp;rsquo;ve decided to have some fun and use
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Abstract_syntax_tree&#34;&gt;AST&lt;/a&gt; parsing to grab the
+code blocks from the scripts. As well, DocAST doesn&amp;rsquo;t try to force you in to any
+specific theme or display, instead it is used simply to extract documentation
+from scripts. Lastly, DocAST, doesn&amp;rsquo;t use any specific documentation format for
+signifying parameters, returns or exceptions, it will traverse the AST of the
+code block to find them for you, so most of the time you just need to add a
+simple block comment describing the function above it.&lt;/p&gt;
+
+&lt;p&gt;Lets just get to an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// script.js
+
+/*
+ * This is my super cool function that does all sorts of cool stuff
+ **/
+function superCool(arg1, arg2){
+    if(arg1 === arg2){
+        throw new Exception(&amp;quot;arg1 and arg2 cant be the same&amp;quot;);
+    }
+
+    var sum = arg1 + arg2;
+    return sum;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ docast extract ./script.js
+$ cat out.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;[
+    {
+        &amp;quot;name&amp;quot;: &amp;quot;superCool&amp;quot;,
+        &amp;quot;params&amp;quot;: [
+            &amp;quot;arg1&amp;quot;,
+            &amp;quot;arg2&amp;quot;
+        ],
+        &amp;quot;returns&amp;quot;: [
+            &amp;quot;sum&amp;quot;
+        ],
+        &amp;quot;raises&amp;quot;: [
+            &amp;quot;Exception&amp;quot;
+        ],
+        &amp;quot;doc&amp;quot;: &amp;quot; This is my super cool function that does all sorts of cool stuff\n&amp;quot;
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more information check out the github page for
+&lt;a href=&#34;https://github.com/brettlangdon/docast&#34;&gt;DocAST&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The other benefit I have found with a documentation parser (something that just
+extracts the documentation information as opposed to trying to build it) is that
+you can get fun and creative with how you use the information parsed. For
+example, I&amp;rsquo;ve had someone suggest creating your doc strings as
+&lt;a href=&#34;http://www.yaml.org/&#34;&gt;yaml&lt;/a&gt;. When you parse out the string just parse the yaml
+to get an object which is then easy to pass on to &lt;a href=&#34;http://jade-lang.com/&#34;&gt;jade&lt;/a&gt;
+or some other templating engine to generate your documentation. If you want to
+see an example of this, just check out the documentation for DocAST
+&lt;a href=&#34;https://github.com/brettlangdon/docast/blob/master/lib/index.js#L127&#34;&gt;https://github.com/brettlangdon/docast/blob/master/lib/index.js#L127&lt;/a&gt; and the
+code used to generate the docs at &lt;a href=&#34;http://brettlangdon.github.io/docast/&#34;&gt;http://brettlangdon.github.io/docast/&lt;/a&gt;
+&lt;a href=&#34;https://github.com/brettlangdon/docast/tree/master/docs&#34;&gt;https://github.com/brettlangdon/docast/tree/master/docs&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python Redis Queue Workers</title>
+      <link>https://brett.is/writing/about/python-redis-queue-workers/</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/python-redis-queue-workers/</guid>
+      <description>
+
+&lt;p&gt;Learn an easy, distributed approach to processing jobs
+from a Redis queue in Python.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Recently I started thinking about a new project. I want to write my own Continuous Integration (CI)
+server. I know what you are thinking&amp;hellip; &amp;ldquo;Why?!&amp;rdquo; and yes I agree, there are a bunch of good ones out
+there now, I just want to do it. The first problem I came across was how to have distributed workers
+to process the incoming builds for the CI server. I wanted something that was easy to start up on
+multiple machines and that needed minimal configuration to get going.&lt;/p&gt;
+
+&lt;p&gt;The design is relatively simple, there is a main queue which jobs can be pulled from and a second queue
+that each worker process pulls jobs into to denote processing. The main queue is meant as a list of things that
+have to be processed where the processing queues is a list of pending jobs which are being processed by the
+workers. For this example we will be using &lt;a href=&#34;http://redis.io/commands#list&#34;&gt;Redis lists&lt;/a&gt; since they support
+the short feature list we require.&lt;/p&gt;
+
+&lt;h3 id=&#34;worker-py&#34;&gt;worker.py&lt;/h3&gt;
+
+&lt;p&gt;Lets start with the worker process, the job of the worker is to simply grab a job from the queue and process it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import redis
+
+
+def process(job_id, job_data):
+    print &amp;quot;Processing job id(%s) with data (%r)&amp;quot; % (job_id, job_data)
+
+
+def main(client, processing_queue, all_queue):
+    while True:
+        # try to fetch a job id from &amp;quot;&amp;lt;all_queue&amp;gt;:jobs&amp;quot;
+        # and push it to &amp;quot;&amp;lt;processing_queue&amp;gt;:jobs&amp;quot;
+        job_id = client.brpoplpush(all_queue, processing_queue)
+        if not job_id:
+            continue
+        # fetch the job data
+        job_data = client.hgetall(&amp;quot;job:%s&amp;quot; % (job_id, ))
+        # process the job
+        process(job_id, job_data)
+        # cleanup the job information from redis
+        client.delete(&amp;quot;job:%s&amp;quot; % (job_id, ))
+        client.lrem(process_queue, 1, job_id)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    import socket
+    import os
+
+    client = redis.StrictRedis()
+    try:
+        main(client, &amp;quot;processing:jobs&amp;quot;, &amp;quot;all:jobs&amp;quot;)
+    except KeyboardInterrupt:
+        pass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above script does the following:
+1. Try to fetch a job from the queue &lt;code&gt;all:jobs&lt;/code&gt; pushing it to &lt;code&gt;processing:jobs&lt;/code&gt;
+2. Fetch the job data from a &lt;a href=&#34;http://redis.io/commands#hash&#34;&gt;hash&lt;/a&gt; key with the name &lt;code&gt;job:&amp;lt;job_id&amp;gt;&lt;/code&gt;
+3. Process the job information
+4. Remove the hash key &lt;code&gt;job:&amp;lt;job_id&amp;gt;&lt;/code&gt;
+5. Remove the job id from the queue &lt;code&gt;processing:jobs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;With this design we will always be able to determine how many jobs are currently queued for process
+by looking at the list &lt;code&gt;all:jobs&lt;/code&gt; and we will also know exactly how many jobs are being processed
+by looking at the list &lt;code&gt;processing:jobs&lt;/code&gt; which contains the list of job ids that all workers are
+working on.&lt;/p&gt;
+
+&lt;p&gt;Also we are not tied down to running just 1 worker on 1 machine. With this design we can run multiple
+worker processes on as many nodes as we want. As long as they all have access to the same Redis server.
+There are a few limitations which are all seeded in Redis&amp;rsquo; &lt;a href=&#34;http://redis.io/topics/data-types&#34;&gt;limits on lists&lt;/a&gt;,
+but this should be good enough to get started.&lt;/p&gt;
+
+&lt;p&gt;There are a few other approaches that can be taken here as well. Instead of using a single processing queue
+we could use a separate queue for each worker. Then we can look at which jobs are currently being processed
+by each individual worker, this approach would also give us the opportunity to have the workers try to fetch
+from the worker specific queue first before looking at &lt;code&gt;all:jobs&lt;/code&gt; so we can either assign jobs to specific
+workers or where the worker can recover from failed processing by starting with the last job it was working
+on before failing.&lt;/p&gt;
+
+&lt;h2 id=&#34;qw&#34;&gt;qw&lt;/h2&gt;
+
+&lt;p&gt;I have developed the library &lt;a href=&#34;https://github.com/brettlangdon/qw&#34;&gt;qw&lt;/a&gt; or (QueueWorker) to implement a similar
+pattern to this, so if you are interested in playing around with this or to see a more developed implementation
+please checkout the projects &lt;a href=&#34;https://github.com/brettlangdon/qw&#34;&gt;github page&lt;/a&gt; for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lets Make a Metrics Beacon</title>
+      <link>https://brett.is/writing/about/lets-make-a-metrics-beacon/</link>
+      <pubDate>Sun, 22 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/lets-make-a-metrics-beacon/</guid>
+      <description>
+
+&lt;p&gt;Recently I wrote a simple javascript metrics beacon
+library. Let me show you what I came up with and how it works.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So, what do I mean by &amp;ldquo;javascript metrics beacon library&amp;rdquo;? Think
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Real_user_monitoring&#34;&gt;RUM (Real User Monitoring)&lt;/a&gt; or
+&lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;,
+it is a javascript library used to capture/aggregate metrics/data
+from the client side and send that data to a server either in one
+big batch or in small increments.&lt;/p&gt;
+
+&lt;p&gt;For those who do not like reading articles and just want the code you
+can find the current state of my library on github: &lt;a href=&#34;https://github.com/brettlangdon/sleuth&#34;&gt;https://github.com/brettlangdon/sleuth&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Before we get into anything technical, lets just take a quick look at an
+example usage:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;//raw.githubusercontent.com/brettlangdon/sleuth/master/sleuth.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+Sleuth.init({
+  url: &amp;quot;/track&amp;quot;,
+});
+
+// static tags to identify the browser/user
+// these are sent with each call to `url`
+Sleuth.tag(&#39;uid&#39;, userId);
+Sleuth.tag(&#39;productId&#39;, productId);
+Sleuth.tag(&#39;lang&#39;, navigator.language);
+
+// set some metrics to be sent with the next sync
+Sleuth.track(&#39;clicks&#39;, buttonClicks);
+Sleuth.track(&#39;images&#39;, imagesLoaded);
+
+// manually sync all data
+Sleuth.sendAllData();
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alright, so lets cover a few concepts from above, &lt;code&gt;tags&lt;/code&gt;, &lt;code&gt;metrics&lt;/code&gt; and &lt;code&gt;syncing&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;tags&#34;&gt;Tags&lt;/h3&gt;
+
+&lt;p&gt;Tags are meant to be a way to uniquely identify the metrics that are being sent
+to the server and are generally used to break apart metrics. For example, you might
+have a metric to track whether or not someone clicks an &amp;ldquo;add to cart&amp;rdquo; button, using tags
+you can then break out that metric to see how many times the button has been pressed
+for each &lt;code&gt;productId&lt;/code&gt; or browser or language or any other piece of data you find
+applicable to segment your metrics. Tags can also be used when tracking data for
+&lt;a href=&#34;http://en.wikipedia.org/wiki/A/B_testing&#34;&gt;A/B Tests&lt;/a&gt; where you want to segment your
+data based on which part of the test the user was included.&lt;/p&gt;
+
+&lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
+
+&lt;p&gt;Metrics are simply data points to track for a given request. Good metrics to record
+are things like load times, elements loaded on the page, time spent on the page,
+number of times buttons are clicked or other user interactions with the page.&lt;/p&gt;
+
+&lt;h3 id=&#34;syncing&#34;&gt;Syncing&lt;/h3&gt;
+
+&lt;p&gt;Syncing refers to sending the data from the client to the server. I refer to it as
+&amp;ldquo;syncing&amp;rdquo; since we want to try and aggregate as much data on the client side and send
+fewer, but larger, requests rather than having to make a request to the server for
+each metric we mean to track. We do not want to overload the Client if we mean to
+track a lot of user interactions on the site.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-do-it&#34;&gt;How To Do It&lt;/h2&gt;
+
+&lt;p&gt;Alright, enough of the simple examples/explanations, lets dig into the source a bit
+to find out how to aggregate the data on the client side and how to sync that data
+to the server.&lt;/p&gt;
+
+&lt;h3 id=&#34;aggregating-data&#34;&gt;Aggregating Data&lt;/h3&gt;
+
+&lt;p&gt;Collecting the data we want to send to the server isn&amp;rsquo;t too bad. We are just going
+to take any specific calls to &lt;code&gt;Sleuth.track(key, value)&lt;/code&gt; and store either in
+&lt;a href=&#34;http://diveintohtml5.info/storage.html&#34;&gt;LocalStorage&lt;/a&gt; or in an object until we need
+to sync. For example this is the &lt;code&gt;track&lt;/code&gt; method of &lt;code&gt;Sleuth&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Sleuth.prototype.track = function(key, value){
+  if(this.config.useLocalStorage &amp;amp;&amp;amp; window.localStorage !== undefined){
+    window.localStorage.setItem(&#39;Sleuth:&#39; + key, value);
+  } else {
+    this.data[key] = value;
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only thing of note above is that it will fall back to storing in &lt;code&gt;this.data&lt;/code&gt;
+if LocalStorage is not available as well we are namespacing all data stored in
+LocalStorage with the prefix &amp;ldquo;Sleuth:&amp;rdquo; to ensure there is no name collision with
+anyone else using LocalStorage.&lt;/p&gt;
+
+&lt;p&gt;Also &lt;code&gt;Sleuth&lt;/code&gt; will be kind enough to capture data from &lt;code&gt;window.performance&lt;/code&gt; if it
+is available and enabled (it is by default). And it simply grabs everything it can
+to sync up to the server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Sleuth.prototype.captureWindowPerformance = function(){
+  if(this.config.performance &amp;amp;&amp;amp; window.performance !== undefined){
+    if(window.performance.timing !== undefined){
+      this.data.timing = window.performance.timing;
+    }
+    if(window.performance.navigation !== undefined){
+      this.data.navigation = {
+        redirectCount: window.performance.navigation.redirectCount,
+        type: window.performance.navigation.type,
+      };
+    }
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For an idea on what is store in &lt;code&gt;window.performance.timing&lt;/code&gt; check out
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Navigation_timing&#34;&gt;Navigation Timing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;syncing-data&#34;&gt;Syncing Data&lt;/h3&gt;
+
+&lt;p&gt;Ok, so this is really the important part of this library. Collecting the data isn&amp;rsquo;t
+hard. In fact, no one probably really needs a library to do that for them, when you
+just as easily store a global object to aggregate the data. But why am I making a
+&amp;ldquo;big deal&amp;rdquo; about syncing the data either? It really isn&amp;rsquo;t too hard when you can just
+make a simple AJAX call using jQuery &lt;code&gt;$.ajax(...)&lt;/code&gt; to ship up a JSON string to some
+server side listener.&lt;/p&gt;
+
+&lt;p&gt;The approach I wanted to take was a little different, yes, by default &lt;code&gt;Sleuth&lt;/code&gt; will
+try to send the data using AJAX to a server side url &amp;ldquo;/track&amp;rdquo;, but what about when
+the server which collects the data lives on another hostname?
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Cross-origin_resource_sharing&#34;&gt;CORS&lt;/a&gt; can be less than
+fun to deal with, and rather than worrying about any domain security I just wanted
+a method that can send the data from anywhere I want back to whatever server I want
+regardless of where it lives. So, how? Simple, javascript pixels.&lt;/p&gt;
+
+&lt;p&gt;A javascript pixel is simply a &lt;code&gt;script&lt;/code&gt; tag which is written to the page with
+&lt;code&gt;document.write&lt;/code&gt; whose &lt;code&gt;src&lt;/code&gt; attribute points to the url that you want to make the
+call to. The browser will then call that url without using AJAX just like it would
+with a normal &lt;code&gt;script&lt;/code&gt; tag loading javascript. For a more in-depth look at tracking
+pixels you can read a previous article of mine:
+&lt;a href=&#34;http://brett.is/writing/about/third-party-tracking-pixels/&#34;&gt;Third Party Tracking Pixels&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The point of going with this method is that we get CORS-free GET requests from any
+client to any server. But some people are probably thinking, &amp;ldquo;wait, a GET request
+doesn&amp;rsquo;t help us send data from the client to server&amp;rdquo;? This is why we will encode
+our JSON string of data for the url and simply send in the url as a query string
+parameter. Enough talk, lets see what this looks like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var encodeObject = function(data){
+  var query = [];
+  for(var key in data){
+    query.push(encodeURIComponent(key) + &#39;=&#39; + encodeURIComponent(data[key]));
+  };
+
+  return query.join(&#39;&amp;amp;&#39;);
+};
+
+var drop = function(url, data, tags){
+  // base64 encode( stringify(data) )
+  tags.d = window.btoa(JSON.stringify(data));
+
+  // these parameters are used for cache busting
+  tags.n = new Date().getTime();
+  tags.r = Math.random() * 99999999;
+
+  // make sure we url encode all parameters
+  url += &#39;?&#39; + encodeObject(tags);
+  document.write(&#39;&amp;lt;sc&#39; + &#39;ript type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;&#39; + url + &#39;&amp;quot;&amp;gt;&amp;lt;/scri&#39; + &#39;pt&amp;gt;&#39;);
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That is basically it. We simply base64 encode a JSON string version of the data and send
+as a query string parameter. There might be a few odd things that stand out above, mainly
+url length limitations of base64 encoded JSON string, the &amp;ldquo;cache busting&amp;rdquo; and the weird
+breaking up of the tag &amp;ldquo;script&amp;rdquo;. A safe url length limit to live under is around
+&lt;a href=&#34;http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers&#34;&gt;2000&lt;/a&gt;
+to accommodate internet explorer, which from some very crude testing means each reqyest
+can hold around 50 or so separate metrics each containing a string value. Cache busting
+can be read about more in-depth in my article again about tracking pixels
+(&lt;a href=&#34;http://brett.is/writing/about/third-party-tracking-pixels/#cache-busting&#34;&gt;http://brett.is/writing/about/third-party-tracking-pixels/#cache-busting&lt;/a&gt;), but the short
+version is, we add random numbers and the current timestamp the query string to ensure that
+the browser or cdn or anyone in between doesn&amp;rsquo;t cache the request being made to the server,
+this way you will not get any missed metrics calls. Lastly, breaking up the &lt;code&gt;script&lt;/code&gt; tag
+into &amp;ldquo;sc + ript&amp;rdquo; and &amp;ldquo;scri + pt&amp;rdquo; makes it harder for anyone blocking scripts from writing
+&lt;code&gt;script&lt;/code&gt; tags to detect that a script tag is being written to the DOM (also an &lt;code&gt;img&lt;/code&gt; or
+&lt;code&gt;iframe&lt;/code&gt; tag could be used instead of a &lt;code&gt;script&lt;/code&gt; tag).&lt;/p&gt;
+
+&lt;h3 id=&#34;unload&#34;&gt;Unload&lt;/h3&gt;
+
+&lt;p&gt;How do we know when to send the data? If someone is trying to time and see how much time
+someone is spending on each page or wants to make sure they are collecting as much data
+as they want on the client side then you want to wait until the last second before
+syncing the data to the server. By using LocalStorage to store the data you can ensure
+that you will be able to access that data the next time you see that user, but who wants
+to wait? And what if the user never comes back? I want my data now dammit!&lt;/p&gt;
+
+&lt;p&gt;Simple, lets bind an event to &lt;code&gt;window.onunload&lt;/code&gt;! Woot, done&amp;hellip; wait&amp;hellip; why isn&amp;rsquo;t my data
+being sent to me? Initially I was trying to use &lt;code&gt;window.onunload&lt;/code&gt; to sync data back, but
+found that it didn&amp;rsquo;t always work with pixel dropping, AJAX requests worked most of the time.
+After some digging I found that with &lt;code&gt;window.onunload&lt;/code&gt; I was hitting a race condition on
+whether or not the DOM was still available or not, meaning I couldn&amp;rsquo;t use &lt;code&gt;document.write&lt;/code&gt;
+or even query the DOM on unload for more metrics to sync on &lt;code&gt;window.onunload&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In come &lt;code&gt;window.onbeforeunload&lt;/code&gt; to the rescue! For those who don&amp;rsquo;t know about it (I
+didn&amp;rsquo;t before this project), &lt;code&gt;window.onbeforeunload&lt;/code&gt; is exactly what it sounds like
+an event that gets called before &lt;code&gt;window.onunload&lt;/code&gt; which also happens before the DOM
+gets unloaded. So you can reliably use it to write to the DOM (like the pixels) or
+to query the DOM for any extra information you want to sync up.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So what do you think? There really isn&amp;rsquo;t too much to it is there? Especially since we
+only covered the client side of the piece and haven&amp;rsquo;t touched on how to collect and
+interpret this data on the server (maybe that&amp;rsquo;ll be a follow up post). Again this is mostly
+a simple implementation of a RUM library, but hopefully it sparks an interest to build
+one yourself or even just to give you some insight into how Google Analytics or other
+RUM libraries collect/send data from the client.&lt;/p&gt;
+
+&lt;p&gt;I think this project that I undertook was neat because I do not always do client side
+javascript and every time I do I tend to learn something pretty cool. In this case
+learning the differences between &lt;code&gt;window.onunload&lt;/code&gt; and &lt;code&gt;window.onbeforeunload&lt;/code&gt; as well
+as some of the cool things that are tracked by default in &lt;code&gt;window.performance&lt;/code&gt; I
+definitely urge people to check out the documentation on &lt;code&gt;window.performance&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;todo&#34;&gt;TODO&lt;/h3&gt;
+
+&lt;p&gt;What is next for &lt;a href=&#34;https://github.com/brettlangdon/sleuth&#34;&gt;Sleuth&lt;/a&gt;? I am not sure yet,
+I am thinking of implementing more ways of tracking data, like adding counter support,
+rate limiting, automatic incremental data syncs. I am open to ideas of how other people
+would use a library like this, so please leave a comment here or open an issue on the
+projects github page with any thoughts you have.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/brettlangdon/sleuth&#34;&gt;Sleuth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://brett.is/writing/about/third-party-tracking-pixels/&#34;&gt;Third Party Tracking Pixels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://diveintohtml5.info/storage.html&#34;&gt;LocalStorage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Navigation_timing&#34;&gt;Navigation Timing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Window.onbeforeunload&#34;&gt;window.onbeforeunload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Window.onunload&#34;&gt;window.onunload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Real_user_monitoring&#34;&gt;RUM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/A/B_testing&#34;&gt;A/B Testing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goodbye Grunt, Hello Tend</title>
+      <link>https://brett.is/writing/about/goodbye-grunt-hello-tend/</link>
+      <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/goodbye-grunt-hello-tend/</guid>
+      <description>
+
+&lt;p&gt;Recently decided to give Grunt a try, which caused me to write my
+own node.js build system.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For the longest time I had refused to move away from &lt;a href=&#34;http://mrbook.org/tutorials/make/&#34;&gt;Makefiles&lt;/a&gt;
+for &lt;a href=&#34;http://gruntjs.com/&#34;&gt;Grunt&lt;/a&gt; or some other &lt;a href=&#34;https://nodejs.org&#34;&gt;node.js&lt;/a&gt; build system.
+But I finally gave in and decided to take an afternoon to give Grunt a go.
+Initially it seemed promising, Grunt had a plugin for everything and ultimately
+it supporting watching files and directories (the one feature I really wanted
+for my &lt;code&gt;make&lt;/code&gt; build setup).&lt;/p&gt;
+
+&lt;p&gt;I tried to move over a fairly simplistic &lt;code&gt;Makefile&lt;/code&gt; that I already had written
+into a &lt;code&gt;Gruntfile&lt;/code&gt;. However, after about an hour (or more) of trying to get &lt;code&gt;grunt&lt;/code&gt;
+setup with &lt;a href=&#34;https://github.com/gruntjs/grunt-cli&#34;&gt;grunt-cli&lt;/a&gt; and all the other
+plugins installed and configured to do the right thing I realized that &lt;code&gt;Grunt&lt;/code&gt;
+wasn&amp;rsquo;t for me. I took a simple 10 (ish) line &lt;code&gt;Makefile&lt;/code&gt; and turned it into a 40+
+line &lt;code&gt;Gruntfile&lt;/code&gt; and it still didn&amp;rsquo;t seem to do exactly what I wanted. What I
+had to reflect on was why should I spend all this time trying to learn how to
+configure some convoluted plugins when I already known the correct commands to
+execute? Then I realized what I really wanted wasn&amp;rsquo;t a new build system but
+simply &lt;code&gt;watch&lt;/code&gt; for a &lt;code&gt;Makefile&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I have attempted to get some form of watch working with a &lt;code&gt;Makefile&lt;/code&gt; in the past,
+but it usually involves using inotify and I&amp;rsquo;ve never gotten it working exactly
+like how I wanted. So, I decided to start writing my own system, because, why not
+spend more time on perfecting my build system. My requirements were fairly simple,
+I wanted a way to watch a directory/files for changes and when they do simply run
+a single command (ultimately &lt;code&gt;make &amp;lt;target&amp;gt;&lt;/code&gt;), I wanted the ability to also run
+long running processing like &lt;code&gt;node server.js&lt;/code&gt; and restart them if certain files
+have changed, and lastly unlike other watch based systems I have seen I wanted
+a way to run a command as soon as I start up the watch program (so you dont have
+to start the watching, then go open/save a newline change to a file to get it to
+build for the first time).&lt;/p&gt;
+
+&lt;p&gt;What I came up with was &lt;a href=&#34;https://github.com/brettlangdon/tend&#34;&gt;tend&lt;/a&gt;. Which solves
+mostly all of my needs, which was simply &amp;ldquo;watch for make&amp;rdquo;. So how do you use it?&lt;/p&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install -g tend
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;Usage:
+  tend
+  tend &amp;lt;action&amp;gt;
+  tend [--restart] [--start] [--ignoreHidden] [--filter &amp;lt;filter&amp;gt;] [&amp;lt;dir&amp;gt; &amp;lt;command&amp;gt;]
+  tend (--help | --version)
+
+Options:
+  -h --help             Show this help text
+  -v --version          Show tend version information
+  -r --restart          If &amp;lt;command&amp;gt; is still running when there is a change, stop and re-run it
+  -i --ignoreHidden     Ignore changes to files which start with &amp;quot;.&amp;quot;
+  -f --filter &amp;lt;filter&amp;gt;  Use &amp;lt;filter&amp;gt; regular expression to filter which files trigger the command
+  -s --start            Run &amp;lt;command&amp;gt; as soon as tend executes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;example-cli-usage&#34;&gt;Example CLI Usage&lt;/h3&gt;
+
+&lt;p&gt;The following will watch for changes to any &lt;code&gt;js&lt;/code&gt; files in the directory &lt;code&gt;./src/&lt;/code&gt;
+when any of them change or are added it will run &lt;code&gt;uglifyjs&lt;/code&gt; to combine them into
+a single file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend --ignoreHidden --filter &amp;quot;*.js&amp;quot; ./src &amp;quot;uglifyjs -o ./public/main.min.js ./src/*.js&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The following will run a long running process, starting it as soon as &lt;code&gt;tend&lt;/code&gt; starts
+and restarting the program whenever files in &lt;code&gt;./routes/&lt;/code&gt; has changed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend --restart --start --filter &amp;quot;*.js&amp;quot; ./routes &amp;quot;node server.js&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;config-file&#34;&gt;Config File&lt;/h3&gt;
+
+&lt;p&gt;Instead of running &lt;code&gt;tend&lt;/code&gt; commands singly from the command line you can provide
+&lt;code&gt;tend&lt;/code&gt; with a &lt;code&gt;.tendrc&lt;/code&gt; file of multiple directories/files to watch with commands
+to run.&lt;/p&gt;
+
+&lt;p&gt;The following &lt;code&gt;.tendrc&lt;/code&gt; file are setup to run the same commands as shown above.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;; global settings
+ignoreHidden=true
+
+[js]
+filter=*.js
+directory=./src
+command=uglifyjs -o ./public/main.min.js ./src/*.js
+
+[app]
+filter=*.js
+directory=./routes
+command=node ./app/server.js
+restart=true
+start=true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can then simply run &lt;code&gt;tend&lt;/code&gt; without any arguments to have &lt;code&gt;tend&lt;/code&gt; watch for
+all changes configured in your &lt;code&gt;.tendrc&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Will basically execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend --ignoreHidden --filter &amp;quot;*.js&amp;quot; ./src &amp;quot;uglifyjs -o ./public/main.min.js ./src/*.js&amp;quot; \
+  &amp;amp; tend --restart --start --filter &amp;quot;*.js&amp;quot; ./routes &amp;quot;node server.js&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Along with running multiple targets at once, you can run specific targets from
+a &lt;code&gt;.tendrc&lt;/code&gt; file as well, &lt;code&gt;tend &amp;lt;target&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Will run the &lt;code&gt;js&lt;/code&gt; target once.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tend --ignoreHidden --filter &amp;quot;*.js&amp;quot; ./src &amp;quot;uglifyjs -o ./public/main.min.js ./src/*.js&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;with-make&#34;&gt;With Make&lt;/h3&gt;
+
+&lt;p&gt;If I haven&amp;rsquo;t beaten a dead horse enough, I am a &lt;code&gt;Makefile&lt;/code&gt; kind of person and
+that is exactly what I wanted to use this new tool with. So below is an example
+of a &lt;code&gt;Makefile&lt;/code&gt; and it&amp;rsquo;s corresponding &lt;code&gt;.tendrc&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-make&#34;&gt;js:
+    uglifyjs -o ./public/main.min.js ./src/*.js
+
+app:
+    node server.js
+
+.PHONY: js app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ini&#34;&gt;ignoreHidden=true
+
+[js]
+filter=*.js
+directory=./src
+command=make js
+
+[app]
+filter=*.js
+directory=./routes
+command=make app
+restart=true
+start=true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;So that is mostly it. Nothing overly exciting and nothing really new here, just
+another watch/build system written in node to add to the list. For the most part
+this tool does exactly what I want for now, but if anyone has any ideas on how
+to make this better or even any other better/easier tools which do similar things
+please let me know, I am more than willing to continue maintaining this tool.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing Data from PHP to JavaScript</title>
+      <link>https://brett.is/writing/about/sharing-data-from-php-to-javascript/</link>
+      <pubDate>Sun, 16 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/sharing-data-from-php-to-javascript/</guid>
+      <description>
+
+&lt;p&gt;A quick example of how I decided to share dynamic content from PHP with my JavaScript.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So the other day I was refactoring some of the client side code I was working on and
+came across something like the following:&lt;/p&gt;
+
+&lt;h3 id=&#34;page-php&#34;&gt;page.php&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;html&amp;gt;
+...
+
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+var modelTitle = &amp;quot;&amp;lt;?=$myModel-&amp;gt;getTitle()?&amp;gt;&amp;quot;;
+
+// do something with modelTitle
+&amp;lt;/script&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There isn&amp;rsquo;t really anything wrong here, in fact this seems to be a fairly common practice
+(from the little research I did). So&amp;hellip; whats the big deal? Why write an article about it?&lt;/p&gt;
+
+&lt;p&gt;My issue with the above is, what if the JavaScript gets fairly large (as mine was). The
+ideal thing to do is to move the js into it&amp;rsquo;s own file, minify/compress it and serve it
+from a CDN so it doesn&amp;rsquo;t effect page load time. But, now we have content that needs to be
+added dynamically from the PHP script in order for the js to run. How do we solve it? The
+approach that I took, which probably isn&amp;rsquo;t original at all, but I think neat enough to
+share, was to let PHP make the data available to the script through &lt;code&gt;window.data&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;page-php-1&#34;&gt;page.php&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;html&amp;gt;
+...
+&amp;lt;?php
+$pageData = array(
+    &#39;modelTitle&#39; =&amp;gt; $myModel-&amp;gt;getTitle(),
+);
+?&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+window.data = &amp;lt;?=json_encode($pageData)?&amp;gt;;
+&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;//my-cdn.com/scripts/page-script.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;page-script-js&#34;&gt;page-script.js&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// window.data.modelTitle is available for me to use
+console.log(&amp;quot;My Model Title: &amp;quot; + window.data.modelTitle);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nothing really fancy, shocking, new or different here, just passing data from PHP to js.
+Something to note is that we have to have our PHP code set &lt;code&gt;window.data&lt;/code&gt; before we load
+our external script so that &lt;code&gt;window.data&lt;/code&gt; will be available when the script loads. Which
+this shouldn&amp;rsquo;t be too much of an issue since most web developers are used to putting all
+of their &lt;code&gt;script&lt;/code&gt; tags at the end of the page.&lt;/p&gt;
+
+&lt;p&gt;Some might wonder why I decided to use &lt;code&gt;window.data&lt;/code&gt;, why not just set
+&lt;code&gt;var modelTitle = &amp;quot;&amp;lt;?=$myModel-&amp;gt;getTitle()?&amp;gt;&amp;quot;;&lt;/code&gt;? I think it is better to try and have a
+convention for where the data from the page will come from. Having to rely on a bunch of
+global variables being set isn&amp;rsquo;t really a safe way to write this. What if you overwrite
+an existing variable or if some other script overwrites your data from the PHP script?
+This is still a cause for concern with &lt;code&gt;window.data&lt;/code&gt;, but at least you only have to keep
+track of a single variable. As well, I think organizationally it is easier and more concise
+to have &lt;code&gt;window.data = &amp;lt;?=json_encode($pageData)?&amp;gt;;&lt;/code&gt; as opposed to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;var modelTitle = &amp;quot;&amp;lt;?=$myModel-&amp;gt;getTitle()?&amp;gt;&amp;quot;;
+var modelId = &amp;quot;&amp;lt;?=$myModel-&amp;gt;getId()?&amp;gt;&amp;quot;;
+var username = &amp;quot;&amp;lt;?=getCurrentUser()?&amp;gt;&amp;quot;;
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I am sure there are other ways to do this sort of thing, like with AJAX or having an
+initialization function that PHP calls with the correct variables it needs to pass, etc.
+This was just what I came up with and the approach I decided to take.&lt;/p&gt;
+
+&lt;p&gt;If anyone has other methods of sharing dynamic content between PHP and js, please leave a
+comment and let me know, I am curious as to what most other devs are doing to handle this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cookieless User Tracking</title>
+      <link>https://brett.is/writing/about/cookieless-user-tracking/</link>
+      <pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/cookieless-user-tracking/</guid>
+      <description>
+
+&lt;p&gt;A look into various methods of online user tracking without cookies.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Over the past few months, in my free time, I have been researching various
+methods for cookieless user tracking. I have a previous article that talks
+on how to write a
+&lt;a href=&#34;https://brett.is/writing/about/third-party-tracking-pixels/&#34; target=&#34;_blank&#34;&gt;tracking server&lt;/a&gt;
+which uses cookies to follow people between requests. However, recently
+browsers are beginning to disallow third party cookies by default which means
+developers have to come up with other ways of tracking users.&lt;/p&gt;
+
+&lt;h2 id=&#34;browser-fingerprinting&#34;&gt;Browser Fingerprinting&lt;/h2&gt;
+
+&lt;p&gt;You can use client side javascript to generate a
+&lt;a href=&#34;https://brett.is/writing/about/browser-fingerprinting/&#34; target=&#34;_blank&#34;&gt;browser fingerprint&lt;/a&gt;,
+or, a unique identifier for a specific users browser (since that is what cookies
+are actually tracking). Once you have the browser&amp;rsquo;s fingerprint you can then
+send that id along with any other requests you make.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var user_id = generateBrowserFingerprint();
+document.write(
+    &#39;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/track/user/&amp;quot;&#39; + user_id + &#39;&amp;gt;&amp;lt;/ sc&#39; + &#39;ript&amp;gt;&#39;
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;local-storage&#34;&gt;Local Storage&lt;/h2&gt;
+
+&lt;p&gt;Newer browsers come equipped with a feature called
+&lt;a href=&#34;http://diveintohtml5.info/storage.html&#34; target=&#34;_blank&#34;&gt;local storage&lt;/a&gt;
+, which is used as a simple key-value store accessible through javascript.
+So instead of relying on cookies as your persistent storage, you can store the
+user id in local storage instead.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var user_id = localStorage.getItem(&amp;quot;user_id&amp;quot;);
+if(user_id == null){
+    user_id = generateNewId();
+    localStorage.setItem(&amp;quot;user_id&amp;quot;, user_id);
+}
+document.write(
+    &#39;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/track/user/&amp;quot;&#39; + user_id + &#39;&amp;gt;&amp;lt;/ sc&#39; + &#39;ript&amp;gt;&#39;
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This can also be combined with a browser fingerprinting library for generating
+the new id.&lt;/p&gt;
+
+&lt;h2 id=&#34;etag-header&#34;&gt;ETag Header&lt;/h2&gt;
+
+&lt;p&gt;There is a feature of HTTP requests called an
+&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_ETag&#34; target=&#34;_blank&#34;&gt;ETag Header&lt;/a&gt;
+which can be exploited for the sake of user tracking. The way an ETag works is
+when a request is made the server will respond with an ETag header with
+a given value (usually it is an id for the requested document, or maybe a hash
+of it), whenever the bowser then makes another request for that document it will
+send an &lt;em&gt;If-None-Match&lt;/em&gt; header with the value of &lt;em&gt;ETag&lt;/em&gt; provided by the server
+last time. The server can then make a decision as to whether or not new content
+needs to be served based on the id/hash provided by the browser.&lt;/p&gt;
+
+&lt;p&gt;As you may have figured out, instead we can assign a unique user id as the ETag
+header for a response, then when the browser makes a request for that page again
+it will send us the user id.&lt;/p&gt;
+
+&lt;p&gt;This is useful, except for the fact that we can only provide a single id per
+user per endpoint. For example, if I use the urls &lt;code&gt;/track/user&lt;/code&gt; and
+&lt;code&gt;/collect/data&lt;/code&gt; there is no way for me to get the browser to send the same
+&lt;em&gt;If-None-Match&lt;/em&gt; header for both urls.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-server&#34;&gt;Example Server&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from uuid import uuid4
+from wsgiref.simple_server import make_server
+
+
+def tracking_server(environ, start_response):
+    user_id = environ.get(&amp;quot;HTTP_IF_NONE_MATCH&amp;quot;)
+    if not user_id:
+        user_id = uuid4().hex
+
+    start_response(&amp;quot;200 Ok&amp;quot;, [
+        (&amp;quot;ETag&amp;quot;, user_id),
+    ])
+    return [user_id]
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    try:
+        httpd = make_server(&amp;quot;&amp;quot;, 8000, tracking_server)
+        print &amp;quot;Tracking Server Listening on Port 8000...&amp;quot;
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print &amp;quot;Exiting...&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;redirect-caching&#34;&gt;Redirect Caching&lt;/h2&gt;
+
+&lt;p&gt;Redirect caching is similar in concept to the the ETag tracking method where
+we rely on the browser cache to store the user id for us. With redirect caching
+we have our tracking url &lt;code&gt;/track/&lt;/code&gt;, when someone goes there we perform a 301
+redirect to &lt;code&gt;/&amp;lt;user_id&amp;gt;/track&lt;/code&gt;. The users browser will then cache that 301
+redirect and the next time the user goes to &lt;code&gt;/track&lt;/code&gt; it will just go to
+&lt;code&gt;/&amp;lt;user_id&amp;gt;/track&lt;/code&gt; instead.&lt;/p&gt;
+
+&lt;p&gt;Just like the ETag method we run into an issue where this method really only
+works for a single endpoint url. We cannot use it for an end all be all for
+tracking users across a site or multiple sites.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-server-1&#34;&gt;Example Server&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from uuid import uuid4
+from wsgiref.simple_server import make_server
+
+
+def tracking_server(environ, start_response):
+    if environ[&amp;quot;PATH_INFO&amp;quot;] == &amp;quot;/track&amp;quot;:
+        start_response(&amp;quot;301 Moved Permanently&amp;quot;, [
+            (&amp;quot;Location&amp;quot;, &amp;quot;/%s/track&amp;quot; % uuid4().hex),
+        ])
+    else:
+        start_response(&amp;quot;200 Ok&amp;quot;, [])
+    return [&amp;quot;&amp;quot;]
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    try:
+        httpd = make_server(&amp;quot;&amp;quot;, 8000, tracking_server)
+        print &amp;quot;Tracking Server Listening on Port 8000...&amp;quot;
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print &amp;quot;Exiting...&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ever-cookie&#34;&gt;Ever Cookie&lt;/h2&gt;
+
+&lt;p&gt;A project worth noting is Samy Kamkar&amp;rsquo;s
+&lt;a href=&#34;http://samy.pl/evercookie/&#34; target=&#34;_blank&#34;&gt;Evercookie&lt;/a&gt;
+which uses standard cookies, flash objects, silverlight isolated storage,
+web history, etags, web cache, local storage, global storage&amp;hellip; and more
+all at the same time to track users. This library exercises every possible
+method for storing a user id which makes it a reliable method for ensuring
+that the id is stored, but at the cost of being very intrusive and persistent.&lt;/p&gt;
+
+&lt;h2 id=&#34;other-methods&#34;&gt;Other Methods&lt;/h2&gt;
+
+&lt;p&gt;I am sure there are other methods out there, these are just the few that I
+decided to focus on. If anyone has any other methods or ideas please leave a comment.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ochronus.com/tracking-without-cookies/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ochronus.com/tracking-without-cookies/&#34;&gt;http://ochronus.com/tracking-without-cookies/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ochronus.com/user-tracking-http-redirect/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ochronus.com/user-tracking-http-redirect/&#34;&gt;http://ochronus.com/user-tracking-http-redirect/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://samy.pl/evercookie/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://samy.pl/evercookie/&#34;&gt;http://samy.pl/evercookie/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My New Website</title>
+      <link>https://brett.is/writing/about/my-new-website/</link>
+      <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/my-new-website/</guid>
+      <description>&lt;p&gt;Why did I redo my website?
+What makes it any better?
+Why are there old posts that are missing?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I just wanted to write a quick post about my new site.
+Some of you who are not familiar with my site might not notice the difference,
+but trust me&amp;hellip; it is different and for the better.&lt;/p&gt;
+
+&lt;p&gt;So what has changed?
+For starters, I think the new design is a little simpler than the previous,
+but more importantly it is not longer in &lt;a href=&#34;http://www.wordpress.org&#34;&gt;Wordpress&lt;/a&gt;.
+It is now maintained with &lt;a href=&#34;https://github.com/jnordberg/wintersmith&#34;&gt;Wintersmith&lt;/a&gt;,
+which is a static site generator which is built in &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; and
+uses&lt;a href=&#34;http://jade-lang.com&#34;&gt;Jade&lt;/a&gt; templates and &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;markdown&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why is this better?
+Well for started I think writing in markdown is a lot easier than using Wordpress.
+It means I can use whatever text editor I want (emacs in this case) to write my
+articles. As well, I no longer need to have PHP and MySQL setup in order to just
+serve up silly static content like blog posts and a few images.
+This also means I can keep my blog entirely in &lt;a href=&#34;http://github.com/&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So far I am fairly happy with the move to Wintersmith, except having to move all my
+current blog posts over to markdown, but I will slowly keep porting some over until
+I have them all in markdown. So, please bear with me during the time of transition
+as there may be a few posts missing when I initially publish this new site.&lt;/p&gt;
+
+&lt;p&gt;Check out my blog in GitHub, &lt;a href=&#34;http://github.com/brettlangdon/brett.is.git&#34;&gt;brett.is&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fastest Python JSON Library</title>
+      <link>https://brett.is/writing/about/fastest-python-json-library/</link>
+      <pubDate>Sun, 22 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/fastest-python-json-library/</guid>
+      <description>&lt;p&gt;My results from benchmarking a handfull of Python JSON parsing libraries.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Most who know me well know that I am usually not one for benchmarks.
+Especially blindly posted benchmark results in blog posts (like how this one is going to be).
+So, instead of trying to say that “this library is better than that library” or to try and convince you that you are going to end up with the same results as me.
+Instead remember to take these results with a grain of salt.
+You might end up with different results than me.
+Take these results as interesting findings which help supplement your own experiments.&lt;/p&gt;
+
+&lt;p&gt;Ok, now that that diatribe is over with LETS GET TO THE COOL STUFF!
+We use JSON for a bunch of stuff at work, whether it is a third party system that uses JSON to communicate or storing JSON blobs in the database.
+We have done some naive benchmarking in the past and came to the conclusion that &lt;a href=&#34;https://pypi.python.org/pypi/jsonlib2/&#34;&gt;jsonlib2&lt;/a&gt; is the library for us.
+Well, I started a personal project that also uses JSON and I decided to revisit benchmarking Python JSON libraries to see if there are any “better” ones out there.&lt;/p&gt;
+
+&lt;p&gt;I ended up with the following libraries to test:
+&lt;a href=&#34;http://docs.python.org/2/library/json.html&#34;&gt;standard lib json&lt;/a&gt;, &lt;a href=&#34;https://pypi.python.org/pypi/jsonlib2/&#34;&gt;jsonlib2&lt;/a&gt;, &lt;a href=&#34;https://pypi.python.org/pypi/simplejson/&#34;&gt;simplejson&lt;/a&gt;, &lt;a href=&#34;https://pypi.python.org/pypi/yajl&#34;&gt;yajl&lt;/a&gt; (yet another json library) and lastly &lt;a href=&#34;https://pypi.python.org/pypi/ujson&#34;&gt;ujson&lt;/a&gt; (ultrajson).
+For the test, I wanted to test parsing and serializing a large json blob, in this case, I simply took a snapshot of data from the &lt;a href=&#34;https://dev.twitter.com/console&#34;&gt;Twitter API Console&lt;/a&gt;.
+Ok, enough with this context b.s. lets see some code and some results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import json
+import timeit
+
+# json data as a str
+json_data = open(&amp;quot;./fixture.json&amp;quot;).read()
+# json data as a list
+data = json.loads(json_data)
+
+number = 500
+repeat = 4
+print &amp;quot;Average run time over %s executions repeated %s times&amp;quot; % (number, repeat)
+
+# we still store the fastest run times here
+fastest_dumps = (None, -1)
+fastest_loads = (None, -1)
+
+for library in (&amp;quot;ujson&amp;quot;, &amp;quot;simplejson&amp;quot;, &amp;quot;jsonlib2&amp;quot;, &amp;quot;json&amp;quot;, &amp;quot;yajl&amp;quot;):
+    print &amp;quot;-&amp;quot; * 20
+    # thanks yajl for not setting __version__
+    exec(&amp;quot;&amp;quot;&amp;quot;
+try:
+    from %s import __version__
+except Exception:
+    __version__ = None
+         &amp;quot;&amp;quot;&amp;quot; % library)
+    print &amp;quot;Library: %s&amp;quot; % library
+    # for jsonlib2 this is a tuple... thanks guys
+    print &amp;quot;Version: %s&amp;quot; % (__version__, )
+
+    # time to time json.dumps
+    timer = timeit.Timer(
+        &amp;quot;json.dumps(data)&amp;quot;,
+        setup=&amp;quot;&amp;quot;&amp;quot;
+import %s as json
+data = %r
+              &amp;quot;&amp;quot;&amp;quot; % (library, data)
+    )
+
+    total = sum(timer.repeat(repeat=repeat, number=number))
+    per_call = total / (number * repeat)
+    print &amp;quot;%s.dumps(data): %s (total) %s (per call)&amp;quot; % (library, total, per_call)
+    if fastest_dumps[1] == -1 or total &amp;gt; fastest_dumps[1]:
+        fastest_dumps = (library, total)
+
+    # time to time json.loads
+    timer = timeit.Timer(
+        &amp;quot;json.loads(data)&amp;quot;,
+        setup=&amp;quot;&amp;quot;&amp;quot;
+import %s as json
+data = %r
+              &amp;quot;&amp;quot;&amp;quot; % (library, json_data)
+    )
+    total = sum(timer.repeat(repeat=repeat, number=number))
+    per_call = total / (number * repeat)
+    print &amp;quot;%s.loads(data): %s (total) %s (per call)&amp;quot; % (library, total, per_call)
+    if fastest_loads[1] == -1 or total &amp;gt; fastest_loads[1]:
+       fastest_loads = (library, total)
+
+    print &amp;quot;-&amp;quot; * 20
+    print &amp;quot;Fastest dumps: %s %s (total)&amp;quot; % fastest_dumps
+    print &amp;quot;Fastest loads: %s %s (total)&amp;quot; % fastest_loads
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ok, we need to talk about this code for a second.
+It really is not the cleanest code I have ever written.
+We start off by loading the fixture json data as both the raw json text and parse it into a python list of objects.
+Then for each of the libraries we want to test, we try to get their version information and finally we use &lt;a href=&#34;http://docs.python.org/2/library/timeit.html&#34;&gt;timeit&lt;/a&gt; to test how long it takes to serialize the parsed fixture data into a JSON string and then we test parsing the JSON string of the fixture data into a list of objects.
+And lastly, we store the name of the library with the fastest total run time for either “dumps” or “loads” and then at the end we print which was fastest.&lt;/p&gt;
+
+&lt;p&gt;Here are the results I got when running on my macbook pro:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Average run time over 500 executions repeated 4 times
+--------------------
+Library: ujson
+Version: 1.33
+ujson.dumps(data): 1.97361302376 (total) 0.000986806511879 (per call)
+ujson.loads(data): 2.05873394012 (total) 0.00102936697006 (per call)
+--------------------
+Library: simplejson
+Version: 3.3.0
+simplejson.dumps(data): 3.24183320999 (total) 0.001620916605 (per call)
+simplejson.loads(data): 2.20791387558 (total) 0.00110395693779 (per call)
+--------------------
+Library: jsonlib2
+Version: (1, 3, 10)
+jsonlib2.dumps(data): 2.211810112 (total) 0.001105905056 (per call)
+jsonlib2.loads(data): 2.55381131172 (total) 0.00127690565586 (per call)
+--------------------
+Library: json
+Version: 2.0.9
+json.dumps(data): 2.35674309731 (total) 0.00117837154865 (per call)
+json.loads(data): 5.23104810715 (total) 0.00261552405357 (per call)
+--------------------
+Library: yajl
+Version: None
+yajl.dumps(data): 2.85826969147 (total) 0.00142913484573 (per call)
+yajl.loads(data): 3.03867292404 (total) 0.00151933646202 (per call)
+--------------------
+Fastest dumps: ujson 1.97361302376 (total)
+Fastest loads: ujson 2.05873394012 (total)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So there we have it.
+My tests show that &lt;a href=&#34;https://pypi.python.org/pypi/ujson&#34;&gt;ujson&lt;/a&gt; is the fastest python json library (when running on my mbp and when parsing or serializing a “large” json dataset).&lt;/p&gt;
+
+&lt;p&gt;I have added the test scripts, fixture data and results in &lt;a href=&#34;https://gist.github.com/brettlangdon/6b007ef89fd7d2931a22&#34;&gt;this gist&lt;/a&gt; if anyone wants to run locally and post their results in the comments below.
+I would be curious to see the results of others.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Battle of the Caches</title>
+      <link>https://brett.is/writing/about/the-battle-of-the-caches/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/the-battle-of-the-caches/</guid>
+      <description>&lt;p&gt;A co-worker and I set out to each build our own http proxy cache.
+One of them was written in Go and the other as a C++ plugin for
+Kyoto Tycoon.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So, I know what most people are thinking: “Not another cache benchmark post,
+with skewed or biased results.” But luckily that is not what this post is about;
+there are no opinionated graphs showing that my favorite caching system happens
+to be better than all the other ones. Instead, this post is about why at work we
+decided to write our own API caching system rather than use &lt;a href=&#34;http://www.varnish-cache.org/&#34; target=&#34;_blank&#34;&gt;Varnish&lt;/a&gt;
+(a tested, tried and true HTTP caching system).&lt;/p&gt;
+
+&lt;p&gt;Let us discuss the problem we have to solve. The system we have is a simple
+request/response HTTP server that needs to have very low latency (a few
+milliseconds, usually 2-3 on average) and we are adding a third-party HTTP API
+call to almost every request that we see. I am sure some people see the issue
+right away, any network call is going to add at least a half to a whole millisecond
+to your processing time and that is if the two servers are in the same datacenter,
+more if they are not. That is just network traffic, now we must rely on the
+performance of the third-party API, hoping that they are able to maintain a
+consistent response time under heavy load. If, in total, this third-party API call
+is adding more than 2 milliseconds response time to each request that our system
+is processing then that greatly reduces the capacity of our system.&lt;/p&gt;
+
+&lt;p&gt;THE SOLUTION! Lets use Varnish. This is the logical solution, lets put a caching
+system in front of the API. The content we are requesting isn’t changing very often
+(every few days, if that) and it can help speed up the added latency from the API
+call. So, we tried this but had very little luck; no matter what we tried we could
+not get Varnish to respond in under 2 milliseconds per request (which is a main
+requirement of solution we were looking for). That means Varnish is out, the next
+solution is to write our own caching system.&lt;/p&gt;
+
+&lt;p&gt;Now, before people start flooding the comments calling me a troll or yelling at me
+for not trying this or that or some other thing, let me try to explain really why
+we decided to write our own cache rather than spend extra days investing time into
+Varnish or some other known HTTP cache. We have a fairly specific requirement from
+our cache, very low and consistent latency. “Consistent” is the key word that really
+matters to us. We decided fairly early on that getting no response on a cache miss
+is better for our application than blocking and waiting for a response from the
+proxy call. This is a very odd requirement and most HTTP caching systems do not
+support it since it almost defeats their purpose (be “slow” 1-2 times so you can be
+fast all the other times). As well, HTTP is not a requirement for us, that is,
+from the cache to the API server HTTP must be used, but it is not a requirement
+that our application calls to the cache using HTTP. Headers add extra bandwidth
+and processing that are not required for our application.&lt;/p&gt;
+
+&lt;p&gt;So we decided that our ideal cache would have 3 main requirements:
+1. Must have a consistent response time, returning nothing early over waiting for a proper response
+2. Support the &lt;a href=&#34;https://github.com/memcached/memcached/blob/master/doc/protocol.txt&#34; target=&#34;_blank&#34;&gt;Memcached Protocol&lt;/a&gt;
+3. Support TTLs on the cached data&lt;/p&gt;
+
+&lt;p&gt;This behavior works basically like so: Call to cache, if it is a cache miss,
+return an empty response and queue the request to a background process to make the
+call to the API server, every identical request coming in (until the proxy call
+returns a result) will receive an empty response but not add the request to the
+queue. As soon as the proxy call returns, update the cache and every identical call
+coming in will yield the proper response. After a given TTL consider the data in
+the cache to be old and re-fetch.&lt;/p&gt;
+
+&lt;p&gt;This was then seen as a challenge between a co-worker,
+&lt;a href=&#34;http://late.am/&#34; target=&#34;_blank&#34;&gt;Dan Crosta&lt;/a&gt;, and myself to see who
+can write the better/faster caching system with these requirements. His solution,
+entitled “CacheOrBust”, was a
+&lt;a href=&#34;http://fallabs.com/kyototycoon/&#34; target=&#34;_blank&#34;&gt;Kyoto Tycoon&lt;/a&gt; plugin
+written in C++ which simply used a subset of the memcached protocol as well as some
+background workers and a request queue to perform the fetching. My solution,
+&lt;a href=&#34;https://github.com/brettlangdon/ferrite&#34; target=&#34;_blank&#34;&gt;Ferrite&lt;/a&gt;, is a
+custom server written in &lt;a href=&#34;http://golang.org/&#34; target=&#34;_blank&#34;&gt;Go&lt;/a&gt;
+(originally written in C) that has the same functionality (except using
+&lt;a href=&#34;http://golang.org/doc/effective_go.html#goroutines&#34; target=&#34;_blank&#34;&gt;goroutines&lt;/a&gt;
+rather than background workers and a queue). Both servers used
+&lt;a href=&#34;http://fallabs.com/kyotocabinet/&#34; target=&#34;_blank&#34;&gt;Kyoto Cabinet&lt;/a&gt;
+as the underlying caching data structure.&lt;/p&gt;
+
+&lt;p&gt;So… results already! As with most fairly competitive competitions it is always a
+sad day when there is a tie. Thats right, two similar solutions, written in two
+different programming languages yielded similar results (we probably have
+Kyoto Cabinet to thank). Both of our caching systems were able to yield us the
+results we wanted, &lt;strong&gt;consistent&lt;/strong&gt; sub-millisecond response times, averaging about
+.5-.6 millisecond responses (different physical servers, but same datacenter),
+regardless of whether the response was a cache hit or a cache miss. Usually the
+morale of the story is: “do not re-invent the wheel, use something that already
+exists that does what you want,” but realistically sometimes this isn’t an option.
+Sometimes you have to bend the rules a little to get exactly what your application
+needs, especially when dealing with low latency systems, every millisecond counts.
+Just be smart about the decisions you make and make sure you have sound
+justification for them, especially if you decide to build it yourself.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Browser Fingerprinting</title>
+      <link>https://brett.is/writing/about/browser-fingerprinting/</link>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://brett.is/writing/about/browser-fingerprinting/</guid>
+      <description>
+
+&lt;p&gt;Ever want to know what browser fingerprinting is or how it is done?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;what-is-browser-fingerprinting&#34;&gt;What is Browser Fingerprinting?&lt;/h2&gt;
+
+&lt;p&gt;A browser or &lt;a href=&#34;http://en.wikipedia.org/wiki/Device_fingerprint&#34; target=&#34;_blank&#34;&gt;device fingerprint&lt;/a&gt;
+is a term used to describe an identifier generated from information retrieved from
+a single given device that can be used to identify that single device only.
+For example, as you will see below, browser fingerprinting can be used to generate
+an identifier for the browser you are currently viewing this website with.
+Regardless of you clearing your cookies (which is how most third party companies
+track your browser) the identifier should be the same every time it is generated
+for your specific device/browser. A browser fingerprint is usually generated from
+the browsers &lt;a href=&#34;https://en.wikipedia.org/wiki/User_agent&#34; target=&#34;_blank&#34;&gt;user agent&lt;/a&gt;,
+timezone offset, list of installed plugins, available fonts, screen resolution,
+language and more. The &lt;a href=&#34;https://www.eff.org/&#34; target&#34;_blank&#34;&gt;EFF&lt;/a&gt; did
+a &lt;a href=&#34;https://panopticlick.eff.org/browser-uniqueness.pdf&#34; target=&#34;_blank&#34;&gt;study&lt;/a&gt;
+on how unique a browser fingerprint for a given client can be and which browser
+information provides the most entropy. To see how unique your browser is please
+check out their demo application
+&lt;a href=&#34;https://panopticlick.eff.org/&#34; target=&#34;_blank&#34;&gt;Panopticlick&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-can-it-used-for&#34;&gt;What can it used for?&lt;/h2&gt;
+
+&lt;p&gt;Ok, so great, but who cares? How can browser fingerprinting be used? Right now
+the majority of &lt;a href=&#34;http://kb.mozillazine.org/User_tracking&#34; target=&#34;_blank&#34;&gt;user tracking&lt;/a&gt;
+is done by the use of cookies. For example, when you go to a website that has
+&lt;a href=&#34;http://brett.is/writing/about/third-party-tracking-pixels/&#34;&gt;tracking pixels&lt;/a&gt;
+(which are “invisible” scripts or images loaded in the background of the web page)
+the third party company receiving these tracking calls will inject a cookie into
+your browser which has a unique, usually randomly generated, identifier that is
+used to associate stored data about you like collected
+&lt;a href=&#34;http://searchengineland.com/what-is-retargeting-160407&#34; target=&#34;_blank&#34;&gt;site or search retargeting&lt;/a&gt;
+data. This way when you visit them again with the same cookie they can lookup
+previously associated data for you.&lt;/p&gt;
+
+&lt;p&gt;So, if this is how it is usually done why do we care about browser fingerprints?
+Well, the main problem with cookies is they can be volatile, if you manually delete
+your cookies then the company that put that cookie there loses all association with
+you and any data they have on your is no longer useful. As well, if a client does
+not allow third party cookies (or any cookies) on their browser then the company
+will be unable to track the client at all.&lt;/p&gt;
+
+&lt;p&gt;A browser fingerprint on the other hand is a more constant way to identify a given
+client, as long as they have javascript enabled (which seems to be a thing which
+most websites cannot properly function without), which allows the client to be
+identified even if they do not allow cookies for their browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-we-do-it&#34;&gt;How do we do it?&lt;/h2&gt;
+
+&lt;p&gt;Like I mentioned before to generate a browser fingerprint you must have javascript
+enabled as it is the easiest way to gather the most information about a browser.
+Javascript gives us access to things like your screen size, language, installed
+plugins, user agent, timezone offset, and other points of interest. This
+information is basically smooshed together in a string and then hashed to generate
+the identifier, the more information you can gather about a single browser the more
+unique of a fingerprint you can generate and the less collision you will have.&lt;/p&gt;
+
+&lt;p&gt;Collision? Yes, if you end up with two laptops each of the same make, model, year,
+os version, browser version with the exact same features and plugins enabled then
+the hashes will be the exact same and anyone relying on their fingerprint will
+treat both of those devices as the same. But, if you read the white paper by EFF
+listed above then you will see that their method for generating browser fingerprints
+is usually unique for almost 3 million different devices. There may be some cases
+for companies where that much uniqueness is more than enough to use and rely on
+fingerprints to identify devices and others where they have more than 3
+million users.&lt;/p&gt;
+
+&lt;p&gt;Where does this really come into play? Most websites usually have their users
+create and account and log in before allowing them access to portions of the site or
+to be able to lookup stored information, maybe their credit card payment
+information, home address, e-mail address, etc. Where browser fingerprints are
+useful is for trying to identify anonymous visitors to a web application. For
+example, &lt;a href=&#34;https://brett.is/writing/about/third-party-tracking-pixels/&#34;&gt;third party trackers&lt;/a&gt;
+who are collecting search or other kinds of data.&lt;/p&gt;
+
+&lt;h2 id=&#34;some-code&#34;&gt;Some Code&lt;/h2&gt;
+
+&lt;p&gt;Their is a project on &lt;a href=&#34;https://www.github.com/&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;
+by user &lt;a href=&#34;https://github.com/Valve&#34; target=&#34;_blank&#34;&gt;Valentin Vasilyev (Valve)&lt;/a&gt;
+called &lt;a href=&#34;https://github.com/Valve/fingerprintjs&#34; target=&#34;_blank&#34;&gt;fingerprintjs&lt;/a&gt;
+which is a client side javascript library for generating browser fingerprints.
+If you are interested in seeing some production worthy code of how to generate
+browser fingerprints please take a look at that project, it uses information like
+useragent, language, color depth, timezone offset, whether session or local storage
+is available, a listing of all installed plugins and it hashes everything using
+&lt;a href=&#34;https://sites.google.com/site/murmurhash/&#34; target=&#34;_blank&#34;&gt;murmurhash3&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;your-a-href-target-blank-fingerprintjs-a-fingerprint-span-id-fingerprint-could-not-generate-fingerprint-span&#34;&gt;Your &lt;a href=&#34;&#34; target=&#34;_blank&#34;&gt;fingerprintjs&lt;/a&gt; Fingerprint: &lt;em&gt;&lt;span id=&#34;fingerprint&#34;&gt;Could not generate fingerprint&lt;/span&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://brett.is/js/fingerprint.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+var fingerprint = new Fingerprint().get();
+document.getElementById(&#34;fingerprint&#34;).innerHTML = fingerprint;
+&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;
+* &lt;a href=&#34;http://panopticlick.eff.org/&#34; target=&#34;_blank&#34;&gt;panopticlick.eff.org&lt;/a&gt; - find out how rare your browser fingerprint is.
+* &lt;a href=&#34;https://github.com/Valve/fingerprintjs&#34; target=&#34;_blank&#34;&gt;github.com/Valve/fingerprintjs&lt;/a&gt; - client side browser fingerprinting library.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

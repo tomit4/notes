@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Felix Crux</title><link>https://felixcrux.com</link><description>Technology &amp; Miscellanea</description><atom:link href="https://felixcrux.com/blog/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 08 Jan 2023 19:47:21 -0500</lastBuildDate><item><title>Feeds: The Only Civilised Way to Read Online</title><link>https://felixcrux.com/blog/feeds-the-only-civilised-way-to-read-online</link><description>&lt;p&gt;How do you follow your favourite online creators and their blogs, articles,
+videos, podcasts, comics, or what have you? How do you choose what to read
+when you have a few minutes to kill on the bus, or when you want to get caught
+up in the morning with a cup of coffee?&lt;/p&gt;
+
+&lt;p&gt;Most people hand this choice over to social media, inviting along the whole
+associated host of problems like clickbait; outrage amplification; snooping
+targeted advertising; radicalising rabbit-holes; echo-chambers and filter
+bubbles; algorithms choosing what to show you based on “engagement” rather
+than what you’d want for yourself; and on and on.&lt;/p&gt;
+
+&lt;p&gt;There’s a better way — and there has been for decades! Amazingly, it seems
+underused even within tech circles, and almost completely unknown to the
+general public. It’s super easy to use, actually &lt;em&gt;more&lt;/em&gt; convenient than
+social media apps, and leaves you in complete control of what you see.&lt;/p&gt;
+
+&lt;p&gt;I’m talking, of course, about RSS/Atom web feeds, and I contend that they
+are not only a better alternative, but in fact I’d go so far as to say that a
+feed reader is the only tolerable and civilised way to read online! The system
+works really well and more in line with what (I think) most people actually
+want; it minimizes the use of harmful social media platforms; and it helps
+foster a more vibrant, independent, creative, and non-commerical Web. So drop
+your non-chronological algorithmically-obscured sponsored timeline, and let’s
+have a whirlwind overview of what feeds are and how to use them!&lt;/p&gt;
+&lt;h3&gt;What are feeds and feed readers?&lt;/h3&gt;
+
+&lt;p&gt;The core of the problem is this: You might have hundreds of people whose
+work you’re potentially interested in, but you can’t realistically regularly
+check whether each one has published something new recently. The solution
+(first cooked up around 1999!) is a &lt;em&gt;web feed&lt;/em&gt; or &lt;em&gt;news feed&lt;/em&gt;
+(sometimes &lt;em&gt;RSS feed&lt;/em&gt; or &lt;em&gt;Atom feed&lt;/em&gt;, &lt;a
+href="#appendix-names"&gt;for uninteresting technical reasons&lt;/a&gt;), combined
+with a program called a &lt;em&gt;feed reader&lt;/em&gt; (or a &lt;em&gt;news reader&lt;/em&gt; or
+&lt;em&gt;aggregator&lt;/em&gt;). I strongly suspect that the wide range of inconsistent
+names has been a big hindrance to these tools being widely adopted, but in
+practice which name you use doesn’t matter: I’m just going to call them
+&lt;em&gt;feeds&lt;/em&gt; and &lt;em&gt;feed readers&lt;/em&gt; from now on.&lt;/p&gt;
+
+&lt;p&gt;A feed is a machine-readable version of new posts on a site. For a blog, it
+might contain, say, the last 10 blog posts, much like the human-readable
+“front page” of the web version would. A feed reader is a program that
+monitors all of the feeds from all of the sites that you’re interested in, and
+aggregates new updates in one place for you to read at your leisure.&lt;/p&gt;
+
+&lt;p&gt;So, if there’s a blog or podcast or something else you’d like to follow,
+you simply subscribe to it in your feed reader, and now all new updates will
+be automagically conveyed to you as soon as they come out. Your feed reader
+keeps track of what you’ve not yet read, and displays all posts in a simple
+chronological timeline, so you never miss anything. You can catch up whenever
+you want; there are no algorithms boosting controversial or sponsored
+nonsense; and no ads.&lt;/p&gt;
+
+&lt;p&gt;Feed readers would traditionally have been desktop programs that downloaded
+all the feeds you were monitoring onto your computer. That model still works
+just fine (and in fact may already be available on your computer thanks to it
+being a built-in feature of the &lt;a
+href="https://support.mozilla.org/en-US/kb/how-subscribe-news-feeds-and-blogs"&gt;Thunderbird&lt;/a&gt;
+and &lt;a
+href="https://support.microsoft.com/en-us/office/subscribe-to-an-rss-feed-73c6e717-7815-4594-98e5-81fa369e951c"&gt;Outlook&lt;/a&gt;
+email clients), but nowadays most people prefer to use online services so that
+their read/unread status for individual posts can be synchronized between
+their desktop and their phone. Articles can then be read in the browser or in
+a smartphone app, and you’ll always be up-to-date with what you’ve already
+seen and what you’ve not yet read.&lt;/p&gt;
+
+&lt;p&gt;Which feed reader you choose doesn’t matter much. Some popular web app
+options include &lt;a href="https://newsblur.com/"&gt;NewsBlur&lt;/a&gt;, &lt;a
+href="https://feedly.com/"&gt;Feedly&lt;/a&gt;, &lt;a
+href="https://feedbin.com/"&gt;Feedbin&lt;/a&gt; and &lt;a
+href="https://www.inoreader.com/"&gt;Inoreader&lt;/a&gt;, or if you’re up for
+self-hosting, &lt;a href="https://tt-rss.org/"&gt;Tiny Tiny RSS&lt;/a&gt;. Desktop
+applications include &lt;a href="https://netnewswire.com/"&gt;NetNewsWire&lt;/a&gt;, &lt;a
+href="https://jangernert.github.io/FeedReader/"&gt;FeedReader&lt;/a&gt;, &lt;a
+href="https://newsboat.org/"&gt;Newsboat&lt;/a&gt;, and &lt;a
+href="https://hyliu.me/fluent-reader/"&gt;Fluent Reader&lt;/a&gt;. There are many more;
+these are just a sample. All of the (non self-hosted) web services are paid
+products — that’s the tradeoff for not being profiled and advertised at.
+Fortunately, most have free tiers or free trial periods, so you can try them
+all out and see which you like best. Many try to differentiate themselves by
+offering extra features such as optional filtering or even
+machine-learning-based prioritization of your feeds, but in my case that’s
+what I’m trying to get &lt;em&gt;away&lt;/em&gt; from so I just turn those features off
+and don’t use them. I personally use NewsBlur, which has worked just fine
+(along with their mobile app) for years.&lt;/p&gt;
+
+&lt;p&gt;So, you pick a feed reader to try out, and set up an account. Then, you
+find the feeds published by sites you’d like to follow, and subscribe to them
+in your feed reader. You can then check in whenever you’d like, and any new
+posts will be there waiting for you in your reader. No more random
+outrage-bait or advertising, just a chronological feed of what &lt;em&gt;you&lt;/em&gt;
+chose to follow.&lt;/p&gt;
+
+&lt;h3&gt;But does anybody actually publish feeds?&lt;/h3&gt;
+
+&lt;p&gt;Surprisingly, yes, almost every blog or publishing platform out there does
+in fact publish a feed (often automatically, without the author needing to do
+anything special to set it up). This includes publishing systems like Medium,
+Substack, Wordpress, and Blogger, as well as smaller self-hosted site
+generators. You can follow feeds from an astonishing variety of sources,
+including YouTube channels, &lt;a
+href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weatheroffice-online-services/data-services.html"&gt;Environment
+Canada weather warnings&lt;/a&gt;, &lt;a
+href="https://www.cnn.com/services/rss/"&gt;CNN&lt;/a&gt; or &lt;a
+href="https://www.bbc.co.uk/news/10628494"&gt;the BBC&lt;/a&gt;, &lt;a href="
+https://github.com/felixc/rexiv2/releases.atom"&gt;GitHub releases&lt;/a&gt;, &lt;a
+href="https://status.circleci.com/history.atom"&gt;status pages for online
+services&lt;/a&gt;, and of course, the myriad of small blogs out there on the web.
+The entire podcasting ecosystem is secretly built on top of feeds — that’s how
+new episodes get delivered to you! And, naturally, &lt;a
+type="application/rss+xml" rel="alternate"
+href="https://felixcrux.com/blog/rss.xml"&gt;my feed is right here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find a feed for a particular site, you can almost always just put in the
+address of the website into your feed reader, and it will auto-discover the
+feed. If not, first look for the ubiquitous orange and white feed icon: &lt;img
+src="/media/img/feed.png" alt=""&gt;, perhaps alongside words such as “feed”, “RSS”, or
+“Atom”. There will be a link, which you can put into your feed reader to
+subscribe. Web browsers used to highlight the existence of feeds with an icon
+in the address bar, and you can restore that functionality to Firefox with &lt;a
+href="https://addons.mozilla.org/en-US/firefox/addon/want-my-rss/"&gt;this
+addon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;What about discovering new authors?&lt;/h3&gt;
+
+&lt;p&gt;This is where some forms of social media perhaps have a defensible role to
+play. Potential sources for content discovery can be thought of as lying along
+a spectrum that at one end has high quality content but low frequency of
+discovering new sources, and at the other end has the incredible torrent of
+material that can be found online, which is usually of low value.&lt;/p&gt;
+
+&lt;p&gt;The most reliable, but slowest, way of finding new feeds to follow is to
+wait for friends, family, or coworkers to share links to things they found
+interesting. Rather than just read them and move on, take a minute to poke
+around the site and see if you think you’d like to see more from that creator.
+If so, check whether they have a feed, and subscribe to it. If it turns out
+they never post again, there’s no harm done. If it turns out their future
+posts aren’t very interesting, that’s ok: just unsubscribe.&lt;/p&gt;
+
+&lt;p&gt;A higher-volume but perhaps more inconsistent source of feeds to follow
+might be topic/community-focused public aggregator sites. These are a form of
+social media, but they center on particular subjects or communities, rather
+than whatever anyone would like to share. For example, technologists often
+follow &lt;a href="https://news.ycombinator.com/"&gt;Hacker News&lt;/a&gt;, &lt;a
+href="https://lobste.rs/"&gt;Lobsters&lt;/a&gt;, or &lt;a
+href="https://www.reddit.com/r/programming/"&gt;the Programming subreddit&lt;/a&gt;.
+Like with links shared with you directly, if you find something here you like,
+poke around the author’s homepage and consider following them for more. As a
+bonus, if you care about accruing karma/points/reputation on these social
+sites, this gives you an edge in finding new content to post to them!&lt;/p&gt;
+
+&lt;p&gt;To get a head start, here are two exported data files of the &lt;a
+href="/files/feeds-tech.opml"&gt;tech-focused&lt;/a&gt; and &lt;a
+href="/files/feeds-general.opml"&gt;general&lt;/a&gt; feeds I follow. You should be
+able to import them into your feed reader of choice — hopefully you find
+something you like! Note though that I don’t necessarily &lt;em&gt;endorse&lt;/em&gt; any
+of these sites or authors; they may just have published one good thing years
+ago and I have no idea what they’ve been up to since.&lt;/p&gt;
+
+&lt;h3&gt;Ultimately, why should I bother with this?&lt;/h3&gt;
+
+&lt;p&gt;Like I said at the start, for me it comes down to three reasons:&lt;/p&gt;
+
+&lt;p&gt;Firstly, it just works really well — better than alternative options. By
+that I simply mean that a feed reader really is the best way to keep up with
+blogs and posts! A favourite part of my day is having my morning coffee and
+catching up on feeds. I can pick them up when I have a few minutes to spare,
+and what I’ve read or not read is automatically synced between my devices.
+Easy, pleasant, simple, convenient, and I’m in control of what I read.&lt;/p&gt;
+
+&lt;p&gt;The second reason is maybe not universally accepted by everyone, but in my
+opinion, it’s a healthier alternative to social media. I feel those platforms
+should be used only lightly and warily, if at all. Their very structure
+inherently promotes controversy and pile-ons rather than discussion; and fake
+“influencer” distortions over reality. While they may be a reasonable way to
+keep up with a small group of friends and family, opening the door to
+strangers being algorithmically boosted into your timeline, and the associated
+advertising and psychological manipulation (whether intentional or merely a
+side-effect) doesn’t feel healthy to me. Following blogs directly is a way to
+minimize or outright bypass these platforms and still benefit from the wide
+range of content out there on the web.&lt;/p&gt;
+
+&lt;p&gt;And finally, the third reason is that I hope that directly following blogs
+and creators promotes the older, more independent, non-commercial version of
+what the Web could be. Rather than merely a more interactive cable TV channel
+controlled by big platforms, we can encourage anyone who has an interesting
+story to tell to share it online, and they can build up a dedicated audience
+independently, without having to pander and clickbait in the hope of
+algorithmically going viral. I want to support &lt;em&gt;that&lt;/em&gt; version of the
+Web by choosing what to read, following small blogs, and enjoying reading long
+blog posts written simply because the author had something to say.&lt;/p&gt;
+
+&lt;h3 id="appendix-names"&gt;Appendix: Why all the inconsistent names?&lt;/h3&gt;
+
+&lt;p&gt;An unfortunate complication when evangelizing or adopting feeds is the
+proliferation of opaque names that all mean essentially the same thing. Why is
+it like this?&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;concept&lt;/em&gt; of what we’re trying to publish is a “feed”. The
+original standardized &lt;em&gt;format&lt;/em&gt; for publishing feeds was “RSS”: “Really
+Simple Syndication”. Several years later there was a schism in the community
+and a separate group produced a new standard format called “Atom”. Today, the
+choice of format is largely irrelevant, and essentially all feed readers
+support both. However, the &lt;em&gt;name&lt;/em&gt; “RSS” caught on reasonably well, and
+so sometimes people will call the generic concept “RSS feeds” — confusingly
+even when the actual format in use might be Atom and not RSS!&lt;/p&gt;
+
+&lt;p&gt;However, ultimately, none of these details matter in the slightest to
+users. The only reason to know that RSS, Atom, news feed, and web feed are all
+possible names is so you can find the link to the feed to plonk it into your
+feed reader, which will happily work with any format or name.&lt;/p&gt;
+</description><pubDate>Sun, 08 Jan 2023 19:47:21 -0500</pubDate><guid isPermaLink="false">feeds-the-only-civilised-way-to-read-online</guid></item><item><title>New Recommended Reading: People and Project Management</title><link>https://felixcrux.com/blog/new-recommended-reading-people-and-project-management</link><description>&lt;p&gt;I’ve updated my &lt;a href="https://felixcrux.com/library/recommended-reading-list-for-software-professionals#people-and-project-management"&gt;
+recommended reading list for software professionals&lt;/a&gt; (&lt;a href="https://felixcrux.com/blog/introducing-recommended-reading-list-for-software-professionals"&gt;introduced
+and explained here&lt;/a&gt;) with a new section on people and project management.
+&lt;/p&gt;
+
+&lt;p&gt;Don’t think you need the word “manager” in your job title to benefit from
+learning these skills. If you want to make yourself more useful to a team,
+teach others, help your projects succeed, or guide groups to making good
+decisions, these books will help.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href="https://felixcrux.com/library/recommended-reading-list-for-software-professionals#people-and-project-management"&gt;
+new section of the list is here&lt;/a&gt;.&lt;/p&gt;
+</description><pubDate>Sat, 30 Nov 2019 11:27:59 -0500</pubDate><guid isPermaLink="false">new-recommended-reading-people-and-project-management</guid></item><item><title>More Recommended Reading: Information, Design, and UX</title><link>https://felixcrux.com/blog/more-recommended-reading-information-design-ux</link><description>&lt;p&gt;I’ve just added a new section to my &lt;a href="https://felixcrux.com/library/recommended-reading-list-for-software-professionals#presenting-information-design-and-user-experience"&gt;
+recommended reading list for software professionals&lt;/a&gt; (&lt;a href="https://felixcrux.com/blog/introducing-recommended-reading-list-for-software-professionals"&gt;introduced
+and explained here&lt;/a&gt;). This new section covers the presentation
+of information, design, and user interfaces/experiences.
+
+&lt;p&gt;I’m not a designer, and reading these books won’t make you one either. But
+every developer should know how to present information and interfaces clearly
+and comprehensibly.&lt;/p&gt;
+
+&lt;p&gt;You can find &lt;a href="https://felixcrux.com/library/recommended-reading-list-for-software-professionals#presenting-information-design-and-user-experience"&gt;
+the list itself here&lt;/a&gt;.&lt;/p&gt;
+</description><pubDate>Fri, 24 May 2019 16:25:13 -0400</pubDate><guid isPermaLink="false">more-recommended-reading-information-design-ux</guid></item><item><title>Recommended Reading List for Software Professionals</title><link>https://felixcrux.com/blog/introducing-recommended-reading-list-for-software-professionals</link><description>&lt;p&gt;I’ve started putting together a list of the “core” books I recommend for
+people interested in exploring different facets of our field. I certainly
+don’t think you need to read all of them to be a capable software
+professional; rather it is the list I would put together if asked about how to
+learn more about specific areas.&lt;p&gt;
+
+&lt;p&gt;This list came about because after compiling similar lists two or three
+times over the years in various places and formats, I’m following good
+development practice and factoring it out for reuse and sharing.&lt;/p&gt;
+
+&lt;p&gt;You can find &lt;a href="https://felixcrux.com/library/recommended-reading-list-for-software-professionals"&gt;
+the list itself here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The list is far from complete; in fact today I’m starting with just one
+area: the culture and history of our field. Over time I will add sections on
+technical system design and architecture; project and people management; data
+visualization, information presentation, and user experience design; etc. Let
+me know if there are areas you want covered, or if you have recommendations of
+your own!&lt;/p&gt;
+</description><pubDate>Sun, 19 May 2019 14:10:27 -0400</pubDate><guid isPermaLink="false">introducing-recommended-reading-list-for-software-professionals</guid></item><item><title>Favourite Firefox Feature: Keyword Search Bookmarks</title><link>https://felixcrux.com/blog/favourite-firefox-feature-keyword-search-bookmarks</link><description>&lt;p&gt;One of my favourite features of the Firefox web browser is surprisingly
+unknown and sadly underused. Keyword search bookmarks let you kick off a
+custom search of any site straight from the address bar (a.k.a. the “awesome
+bar”). For example, if you typed “&lt;code&gt;w hedgehog&lt;/code&gt;”, you could go to
+the Wikipedia page for the little critters, or “&lt;code&gt;img hedgehog&lt;/code&gt;”
+could show you a cute image search.&lt;/p&gt;
+&lt;p&gt;This is similar to search engine DuckDuckGo’s “&lt;a
+href="https://duckduckgo.com/bang_lite.html"&gt;!bang commands&lt;/a&gt;”, except you
+can define your own new ones and pick whatever keyword you like, instead of
+being limited to pre-defined ones.&lt;/p&gt;
+
+&lt;p&gt;You can set up a new search by right-clicking on any search field (try &lt;a
+href="https://en.wikipedia.org"&gt;the one in the top-right on Wikipedia&lt;/a&gt;) and
+selecting the context menu option “Add a Keyword for this Search…”. In the
+dialog that pops up, just pick the shortcut you’d like to use (for example,
+for Wikipedia I use “w”).&lt;/p&gt;
+
+&lt;video autoplay loop muted playsinline controls width="380" height="290"
+  style="margin: 0 auto; display: block; border: 1px solid #ddd; box-shadow: 1px 1px 3px #ddd;"&gt;
+  &lt;source src="/media/img/firefox-keyword-search.webm" type="video/webm"&gt;
+  &lt;source src="/media/img/firefox-keyword-search.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;/p&gt;Alternatively, you can do the same thing by creating a regular bookmark
+through the full bookmark manager (not the sidebar) and filling in the
+“Keyword” field. In the bookmark URL, put the string “&lt;code&gt;%s&lt;/code&gt;”
+wherever you want your search term to appear, and when you trigger the
+bookmark search via the keyword, it will be replaced with your query.&lt;p&gt;
+
+&lt;p&gt;Some of my keyword searches that I use frequently:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;kbd&gt;w&lt;/kbd&gt; → &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Special:Search?search=%s"&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;map&lt;/kbd&gt; → &lt;a href="http://maps.google.com/maps?q=%s"&gt;Google Maps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;img&lt;/kbd&gt; → &lt;a href="https://www.google.com/search?q=%s&amp;tbm=isch"&gt;Google Images&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;yt&lt;/kbd&gt; → &lt;a href="http://www.youtube.com/results?search_query=%s"&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;py&lt;/kbd&gt; → &lt;a href="http://docs.python.org/3/search.html?q=%s"&gt;Python docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;rs&lt;/kbd&gt; → &lt;a href="https://doc.rust-lang.org/std/index.html?=All%20crates&amp;search=%s"&gt;Rust docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;mdn&lt;/kbd&gt; → &lt;a href="https://developer.mozilla.org/en-US/search?q=%s"&gt;Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s just super handy to be able to type “&lt;code&gt;map 123 main st&lt;/code&gt;” or
+“&lt;code&gt;w echidna&lt;/code&gt;” and get to the right place — especially on a phone.
+You can also make great use of this at work by setting up search bookmarks for
+your tools; like GitHub, JIRA, internal docs, etc.&lt;/p&gt;
+
+&lt;p&gt;I believe Chrome can also do something similar, but it may involve a few
+more steps and configuring a custom search engine — I’m not sure.&lt;/p&gt;
+
+&lt;p&gt;I hope this feature will delight you as much as it does me!&lt;/p&gt;
+</description><pubDate>Thu, 28 Mar 2019 21:55:46 -0400</pubDate><guid isPermaLink="false">favourite-firefox-feature-keyword-search-bookmarks</guid></item></channel></rss>

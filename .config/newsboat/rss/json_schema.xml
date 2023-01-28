@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JSON Schema Blog RSS Feed</title>
+    <link>https://json-schema.org/blog/rss.xml</link>
+    <atom:link rel="self" href="https://json-schema.org/blog/rss.xml" type="application/rss+xml"/>
+    <description>JSON Schema Blog</description>
+    <language>en-gb</language>
+    <copyright>Made with :love: by the JSON Schema team.</copyright>
+    <pubDate>Wed, 25 Jan 2023 10:21:06 GMT</pubDate>
+    <generator>next.js</generator>
+    <item>
+      <title>Hello 2023, Hello JSON Schema Community</title>
+      <description>Since Ben Hutton joined Postman to work full-time on JSON Schema the past year, other top contributors like Jason De
+</description>
+      <link>https://json-schema.org/blog/posts/hello-2023--hello-json-schema-community?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/hello-2023--hello-json-schema-community?utm_source=rss</guid>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2023/hello-2023--hello-json-schema-community/jai.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Introducing: Bowtie</title>
+      <description>A new tool for executing JSON Schema implementations &amp; a call to help improve it</description>
+      <link>https://json-schema.org/blog/posts/bowtie-intro?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/bowtie-intro?utm_source=rss</guid>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/bowtie-intro/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>How the W3C Web of Things brings JSON Schema to the Internet of Things</title>
+      <description>Using JSON Schema at the W3C Web of Things to create an interoperability layer so that different IoT platforms, protocols and standards can operate together</description>
+      <link>https://json-schema.org/blog/posts/w3c-wot-case-study?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/w3c-wot-case-study?utm_source=rss</guid>
+      <pubDate>Tue, 01 Nov 2022 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/w3c-wot-case-study/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Towards a stable JSON Schema</title>
+      <description>About this time last year, I hosted a discussion at the API Specification
+Conference about the future of JSON Schema. The most popular topic of discussion
+was, when JSON Schema is going to be &quot;done&quot;.
+</description>
+      <link>https://json-schema.org/blog/posts/future-of-json-schema?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/future-of-json-schema?utm_source=rss</guid>
+      <pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/stability/arches.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Using Dynamic References to Support Generic Types</title>
+      <description>A step in the right direction for modelling data with JSON Schema</description>
+      <link>https://json-schema.org/blog/posts/dynamicref-and-generics?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/dynamicref-and-generics?utm_source=rss</guid>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/dynamicref-and-generics/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Fixing JSON Schema Output</title>
+      <description>I have a problem: when I read GitHub issues, they occasionally resonate with me, and I obsess about them until they&apos;re resolved.  That may not sound like a problem to some, but when that resolution c
+</description>
+      <link>https://json-schema.org/blog/posts/fixing-json-schema-output?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/fixing-json-schema-output?utm_source=rss</guid>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/fixing-json-schema-output/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>The Architectural Scope of JSON Schema</title>
+      <description>What actually is JSON Schema?!</description>
+      <link>https://json-schema.org/blog/posts/the-architectural-scope-of-json-schema?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/the-architectural-scope-of-json-schema?utm_source=rss</guid>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/the-architectural-scope-of-json-schema/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Joining Postman</title>
+      <description>In the last couple of weeks, you may have seen that Postman has been investing
+heavily in JSON Schema&apos;s future by hiring some of its top contributors giving
+them the opportunity to work full time on 
+</description>
+      <link>https://json-schema.org/blog/posts/joining-postman?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/joining-postman?utm_source=rss</guid>
+      <pubDate>Sun, 03 Jul 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/joining-postman/baldy-hs-web.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>And Then There Were Three</title>
+      <description>More full-time contributors is better, right?</description>
+      <link>https://json-schema.org/blog/posts/and-then-there-were-three?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/and-then-there-were-three?utm_source=rss</guid>
+      <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/and-then-there-were-three/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Hello World, Hello Postman</title>
+      <description>Oh hello there! A second person is now working full-time on JSON Schema.</description>
+      <link>https://json-schema.org/blog/posts/hello-world-hello-postman?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/hello-world-hello-postman?utm_source=rss</guid>
+      <pubDate>Thu, 16 Jun 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/hello-world-hello-postman/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Astonishing Serializations &amp; Schemas of Hyperborea</title>
+      <description>Using JSON Schema for validating role-playing character sheets.</description>
+      <link>https://json-schema.org/blog/posts/hyperborea?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/hyperborea?utm_source=rss</guid>
+      <pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/hyperborea/cover.jpg" length="15026" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Get started with JSON Schema in Node.js</title>
+      <description>Learn how to use JSON Schema for validation in your Node.js applications.</description>
+      <link>https://json-schema.org/blog/posts/get-started-with-json-schema-in-node-js?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/get-started-with-json-schema-in-node-js?utm_source=rss</guid>
+      <pubDate>Mon, 16 May 2022 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/get-started-with-json-schema-in-node-js/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>How Tyler Technologies reduced its client feedback loop with JSON Schema</title>
+      <description>Using JSON Schema at Tyler Technologies meant showing added value to clients could take minutes rather than days or in some cases weeks.</description>
+      <link>https://json-schema.org/blog/posts/tyler-technologies-case-study?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/tyler-technologies-case-study?utm_source=rss</guid>
+      <pubDate>Mon, 09 May 2022 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/tyler-technologies-case-study/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>It all starts with applicability - JSON Schema Fundamentals part 1</title>
+      <description>We explore the fundamental JSON Schema concepts: Applicability, Subschemas, and Assertion Boolean Logic - Everyone needs good fundamentals.</description>
+      <link>https://json-schema.org/blog/posts/applicability-json-schema-fundamentals-part-1?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/applicability-json-schema-fundamentals-part-1?utm_source=rss</guid>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/fundamentals-part-1/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>JSON Schema joins the OpenJS Foundation and 2022 updates</title>
+      <description>Find out what we&apos;ve been doing in 2021 and read about our biggest development yet... joining the OpenJS Foundation. Oh, and WE&apos;RE HIRING!</description>
+      <link>https://json-schema.org/blog/posts/json-schema-joins-the-openjsf?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/json-schema-joins-the-openjsf?utm_source=rss</guid>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/json-schema-joins-the-openjsf/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>JSON Schema in 5 minutes</title>
+      <description>Everyone needs good fundamentals, and understanding the basics of JSON Schema changes how you read, reason, and develop Schemas.</description>
+      <link>https://json-schema.org/blog/posts/json-schema-in-5-minutes?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/json-schema-in-5-minutes?utm_source=rss</guid>
+      <pubDate>Fri, 21 Jan 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2022/json-schema-in-5-minutes/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>クックパッド株式会社におけるJSON Schemaの活用事例</title>
+      <description>クックパッド株式会社ではJSON Schemaを活用することによって、クックパッドマートにおける販売者の商品登録時の正確性と体験を改善し、商品審査にかかる運営上の負担を大幅に軽減することができました。</description>
+      <link>https://json-schema.org/blog/posts/cookpad-case-study-jp?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/cookpad-case-study-jp?utm_source=rss</guid>
+      <pubDate>Mon, 17 Jan 2022 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2021/cookpad-case-study/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>JSON Schema deduplicated complex logic and validation at Cookpad</title>
+      <description>Using JSON Schema at Cookpad improved the accuracy and experience when registering products, and has greatly reduced the operational burden of product screening.</description>
+      <link>https://json-schema.org/blog/posts/cookpad-case-study-en?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/cookpad-case-study-en?utm_source=rss</guid>
+      <pubDate>Thu, 09 Dec 2021 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2021/cookpad-case-study/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Validating OpenAPI and JSON Schema</title>
+      <description>Dynamic references make it possible to validate the schemas in an OpenAPI document even though OpenAPI does not constrain which JSON Schema dialects can be used.</description>
+      <link>https://json-schema.org/blog/posts/validating-openapi-and-json-schema?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/validating-openapi-and-json-schema?utm_source=rss</guid>
+      <pubDate>Wed, 08 Dec 2021 00:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2021/validating-openapi-and-json-schema/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>Why JSON Schema needs a Code of Conduct</title>
+      <description>The community of JSON Schema is growing, and the community needs a culture for interactions to avoid past mistakes.</description>
+      <link>https://json-schema.org/blog/posts/code-of-conduct-for-json-schema?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/code-of-conduct-for-json-schema?utm_source=rss</guid>
+      <pubDate>Wed, 24 Nov 2021 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2021/code-of-conduct-for-json-schema/cover.webp" length="15026" type="image/webp"/>
+    </item>
+    <item>
+      <title>JSON Schema bundling finally formalised</title>
+      <description>Existing tooling developers have created their own approaches to bundling JSON Schema and OpenAPI documents, but that can lead to errors. Bundling is now standardised.</description>
+      <link>https://json-schema.org/blog/posts/bundling-json-schema-compound-documents?utm_source=rss</link>
+      <category>blog</category>
+      <guid isPermaLink="true">https://json-schema.org/blog/posts/bundling-json-schema-compound-documents?utm_source=rss</guid>
+      <pubDate>Wed, 04 Aug 2021 06:00:00 GMT</pubDate>
+      <enclosure url="https://json-schema.org/blog/img/posts/2021/bundling-json-schema-compound-documents/cover.webp" length="15026" type="image/webp"/>
+    </item>
+  </channel>
+</rss>
