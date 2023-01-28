@@ -35,7 +35,7 @@ log_level = INFO
 # rst, mediawiki, html, latex, latex_booktabs, textile, moinmoin, jira,
 # vertical, tsv, csv.
 # Recommended: ascii
-table_format = ascii
+table_format = vertical
 
 # Syntax coloring style. Possible values (many support the "-dark" suffix):
 # manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango, emacs,
@@ -43,7 +43,7 @@ table_format = ascii
 # fruity.
 # Screenshots at http://mycli.net/syntax
 ; syntax_style = default
-syntax_style = monokai
+syntax_style = murphy
 
 # Keybindings: Possible values: emacs, vi.
 # Emacs mode: Ctrl-A is home, Ctrl-E is end. All emacs keybindings are available in the REPL.

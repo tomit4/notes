@@ -65,8 +65,6 @@
         "§:ytimg.com",
         "https://codeberg.org",
         "https://gitlab.com",
-        "https://stackoverflow.com",
-        "https://stackexchange.com",
         "localhost",
         "https://sw.kovidgoyal.net//kitty/",
         "https://forum.artixlinux.org",
@@ -272,7 +270,25 @@
         "https://www.awwwards.com",
         "https://www.netlify.com",
         "https://www.sqlitetutorial.net",
-        "https://www.rssboard.org"
+        "https://www.rssboard.org",
+        "https://tympanus.net/codrops/",
+        "https://felixcrux.com",
+        "https://superuser.com",
+        "https://stackexchange.com",
+        "https://stackoverflow.com",
+        "https://datatracker.ietf.org",
+        "§:ietf.org",
+        "https://davidwalsh.name",
+        "https://blog.wittcode.com",
+        "https://tinypng.com",
+        "https://greatnonprofits.org/city/portland/OR",
+        "https://democracylab.org",
+        "§:odysee.com",
+        "https://jsonapi.org",
+        "§:json-schema.org",
+        "§:swapi.dev",
+        "https://extendsclass.com",
+        "https://litecli.com"
       ],
       "untrusted": [
         "hotmail.com",
@@ -292,7 +308,8 @@
         "pubmatic.com",
         "rndskittytor.com",
         "sharethis.com",
-        "facebook.com"
+        "facebook.com",
+        "googlesyndication.com"
       ],
       "custom": {
         "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {
