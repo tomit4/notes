@@ -206,3 +206,6 @@ Install openoffice-bin and xidel (minimal office suite and web scraper)
 
 paru openoffice (choose bin)
 paru xidel(1st option)
+
+Install foliate (epub book reader)
+doas pacman -S foliate
