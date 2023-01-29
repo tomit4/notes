@@ -182,6 +182,8 @@ super + m
     mousepad &
 super + n
     desktopeditors &
+super + j
+    foliate &
 super + l
     gcolor3 &
 super + u

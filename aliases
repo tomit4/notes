@@ -231,6 +231,7 @@ alias {rnb,nb-r}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/re
 alias rt="rtorrent"
 alias slink="streamlink"
 alias {office,onlyoffice}="desktopeditors"
+alias epub="foliate"
 alias scrot="scrot --count --delay"
 alias grip="grip 6969"
 alias sudoku="sku"
