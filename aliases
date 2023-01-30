@@ -1,4 +1,7 @@
-#Custom Aliases
+# TEMPORARY Aliases
+alias startup="doas fuser -k 8000/tcp ; npm run start"
+
+# Custom Aliases
 alias .="cd && ls"
 alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
 alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue' -N"
@@ -273,7 +276,7 @@ alias git-ss="git status short"
 alias git-l="git log"
 alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
-
+alias {nvim-c,cleanvim}="nvim --clean"
 
 # tmux multiplexer session aliases
 alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
