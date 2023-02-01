@@ -549,6 +549,9 @@ alias solidproject="librewolf https://solidproject.org &"
 # split keyboard to eventually buy, learn to solder first
 alias aurora-sweep="librewolf https://splitkb.com/products/aurora-sweep &"
 
+# Bootcamps
+alias alchemy="librewolf https://www.alchemycodelab.com/ &"
+
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
 # cool video on animating typing using css
