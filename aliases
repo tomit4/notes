@@ -551,6 +551,7 @@ alias aurora-sweep="librewolf https://splitkb.com/products/aurora-sweep &"
 
 # Bootcamps
 alias alchemy="librewolf https://www.alchemycodelab.com/ &"
+alias cirrorg="librewolf https://cirr.org/ &" # verify validity of bootcamp reviews
 
 # cool video on fluid animation in css:
 # https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
