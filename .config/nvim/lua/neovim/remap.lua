@@ -18,10 +18,11 @@ vim.keymap.set("n", "<C-c>", "<Plug>NERDCommenterToggle")
 
 vim.keymap.set("n", "Q", "<nop>")
 -- reformats
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+--vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- global search and replace
 vim.keymap.set("n", "<S-s>", ":%s///gI<Left><Left><Left><Left>")
+-- single line search and replace
 vim.keymap.set("n", "<S-y>", ":.,.s///g<Left><Left><Left>")
 
 -- toggle english spellcheck
@@ -34,7 +35,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
 
 vim.keymap.set("n", "<S-tab>", "<c-w>:tabprevious<CR>", {})
-vim.keymap.set("n", "<S-j>", "<c-w>:tabprevious<CR>", {})
+vim.keymap.set("n", "<A-j>", "<c-w>:tabprevious<CR>", {})
 vim.keymap.set("n", "<A-left>", "<c-w>:tabprevious<CR>", {})
 
 vim.keymap.set("n", "<A-tab>", "<c-w>:tabnext<CR>", {})
@@ -92,4 +93,3 @@ vim.cmd([[nnoremap rg :silent :Rg]])
 
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
-

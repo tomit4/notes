@@ -22,7 +22,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
---vim.opt.isfname:append("@-@")
+-- vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
@@ -57,8 +57,8 @@ vim.opt.list = true
 -- git-blame disabled by default
 vim.g.gitblame_enabled = 0
 
--- vertically center document when entering Insert mode
-vim.cmd([[autocmd InsertEnter * norm zz]])
+-- vertically center document when entering Insert mode (breaks shift+A)
+-- vim.cmd([[autocmd InsertEnter * norm zz]])
 
 -- enable clipboard
 vim.cmd([[set clipboard+=unnamedplus]])
@@ -89,7 +89,7 @@ vim.cmd([[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]])
 -- vim.cmd([[let g:fzf_layout = { 'down': '~30%' }]])
 
 --lastplace ignores fzf
-vim.cmd([[let g:lastplace_ignore_buftype = "quickfix, nofile, help, FZF"]])
+--vim.cmd([[let g:lastplace_ignore_buftype = "quickfix, nofile, help, FZF"]])
 
 -- jump to last place visited in file
 vim.api.nvim_create_autocmd('BufReadPost', {
