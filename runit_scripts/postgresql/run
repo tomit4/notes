@@ -8,11 +8,11 @@ if [ "$PGROOT" != "/var/lib/postgres" ]; then
 	ln -sf "$PGROOT" /var/lib/postgres
 fi
 
-if [ ! -d "/var/run/postgresql" ]; then
-	echo "creating directory /var/run/postgresql"
+if [ ! -d "/run/postgresql" ]; then
+	echo "creating directory /run/postgresql"
 
-	mkdir -p "/var/run/postgresql"
-	chown -R postgres:postgres "/var/run/postgresql"
+	mkdir -p "/run/postgresql"
+	chown -R postgres:postgres "/run/postgresql"
 fi
 
 if [ ! -d "$PGDATA" ]; then

@@ -1,0 +1,74 @@
+postgres on artix has caused a few headaches.
+You can indeed follow most of the archwiki guide on how to set it up, but
+certain things are not to be invoked due to misleading output.
+
+As of 15.1, this works:
+
+doas pacman -S postgresql postgresql-libs postgresql-runit (optional: postgresql-old-upgrade)
+
+doas ln -s /etc/runit/sv/postgresql /run/runit/service/
+
+sudo -iu postgres
+
+[postgres]$ initdb -D /var/lib/postgres/data
+
+You'll see the following message, do NOT invoke the pg_ctl -D command at the
+end:
+
+```
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgres/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+WARNING: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+***DO NOT INVOKE THIS***
+    pg_ctl -D /var/lib/postgres/data -l logfile start
+
+```
+
+You'll also need to update the /etc/runit/sv/postgresql/run file to ensure that
+the /run/postgresql directory is created on start up:
+
+if [ ! -d "/run/postgresql" ]; then
+	echo "creating directory /run/postgresql"
+
+	mkdir -p "/run/postgresql"
+	chown -R postgres:postgres "/run/postgresql"
+fi
+
+Using the standard sv service manager, start up postgresql (hopefully no errors
+will show, to trouble should navigate to the /etc/runit/sv/postgresql
+directory and invoke doas ./run and note the output).
+
+doas sv start postgresql
+
+Then you should be able to start it as the postgres user using psql.
+
+From psql, create a database/user using the interactive createuser command:
+
+createuser --interactive
+
+For local practice work in postgresql, name this database your name and give
+them superuser privileges.
+
+And that's it. You now from your main prompt should be able to invoke psql and
+start using the database.
