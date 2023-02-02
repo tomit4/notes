@@ -45,6 +45,10 @@ ctrl u -page up
 ctrl d - page down
 u - undoes last change (can be used with prepended numbers depending on how many steps you want to undo)
 ctrl + r - reverts changes over after unintentional undoing (undoes the last undo commands, also can be prepended by a number)
+>> - indent a single line
+<< - unindent a single line
+4>> - indent current and 3 following lines
+4<< - unindent current and 3 following lines
 
 / - forwards slash searches for the word/term you wish to jump to, just press enter once it is highlighted
 ? - question mark searches for the word/term you wish to jump to, just press enter once it is highlighted
