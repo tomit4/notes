@@ -49,6 +49,7 @@ ctrl + r - reverts changes over after unintentional undoing (undoes the last und
 << - unindent a single line
 4>> - indent current and 3 following lines
 4<< - unindent current and 3 following lines
+30gg or 30G - go to line 30
 
 / - forwards slash searches for the word/term you wish to jump to, just press enter once it is highlighted
 ? - question mark searches for the word/term you wish to jump to, just press enter once it is highlighted
