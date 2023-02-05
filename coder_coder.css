@@ -1,4 +1,4 @@
-/* LEFT OFF AT BEGINNING OF PART 2 */
+/* LEFT OFF AT PART 2 1:07 */
 
 /* This document contains boilerplate css tips/tricks
  * garnered from the youtuber, coder_coder's youtube series, "Building a
@@ -54,6 +54,11 @@ html {
 /* 0 out all margin all body to clear default margins */
 body {
   margin: 0;
+}
+
+/* removes default margins */
+h1, h2, h3, p {
+    margin-top: 0;
 }
 
 a {
@@ -160,3 +165,30 @@ a:hover {
     margin-inline-end: auto;
   }
 }
+
+/* HERO */
+.hero {}
+
+.hero__wrapper {}
+
+.hero__image {
+    position: absolute;
+    top: 0;
+    /* how to center position:absolute elems */
+    left: 50%;
+    translate: -50%;
+    display: block;
+}
+
+.hero__text {
+    position: relative;
+    /* calculated by the header height - the image height */
+    /* she realizes not to use top, but instead margin-top, because top doesn't
+     * effect the entire flow of the page, while margin-top does */
+    margin-top: 295px;
+    text-align: center;
+}
+
+/* .hero__description {} */
+
+/* .hero__contact {} */

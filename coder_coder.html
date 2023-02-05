@@ -70,7 +70,7 @@
         </header>
         <main id="main">
             <section class="hero">
-                <div class="wrapper">
+                <div class="wrapper hero__wrapper">
                     <!-- srcset allows for very responsive design, see:
                     https://cloudfour.com/thinks/responsive-images-the-simple-way/ -->
                     <!-- she calculates the sizes by comparing the width of the
@@ -79,6 +79,7 @@
                     media queries of the various sizes, it is 0.02 pixels less
                     than our media queries to ensure no overlap-->
                     <!-- the final 445px is the max width of the image-->
+                    <!--
                    <img src="/assets/images/image-profile-mobile.webp"
                    alt="picture of Adam Keyes"
                    srcset="
@@ -88,7 +89,36 @@
                    sizes="(max-width: 599.98px) 46.4vw, (max-width: 999.98px)
                    42vw, 445px"
                    />
-                    <h1>Nice to meet you! I'm Adam Keyes.</h1>
+                    -->
+
+                    <!-- She ends up deciding to use picture because the above
+                        results in the images not resizing due to the particular
+                        constraints of the images she is working with-->
+                    <picture>
+                        <source media="(min-width: 62.5em)"
+                        srcset="/assets/images/image-profile-desktop.webp"
+                        >
+                        <source media="(min-width: 37.5em)"
+                        srcset="/assets/images/image-profile-tablet.webp"
+                        >
+                        <img
+                        class="hero__image"
+                        src="/assets/images/image-profile-mobile.webp"
+                        alt="picture of Adam Keyes"
+                        width="174"
+                        height="383"
+                        >
+                    </picture>
+
+                    <div class="hero__text">
+                        <h1 class="hero__headline">Nice to meet you! I'm Adam Keyes.</h1>
+                        <p class="hero__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="" class="hero__contact">Contact me</a>
+                    </div>
+
                 </div>
             </section>
         </main>
