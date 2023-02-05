@@ -209,3 +209,6 @@ paru xidel(1st option)
 
 Install foliate (epub book reader)
 doas pacman -S foliate
+
+Install autoprefixer for css files:
+npm install -g postcss postcss-cli autoprefixer

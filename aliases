@@ -225,6 +225,10 @@ alias duuid="dbus-uuidgen"
 # generate unique ids from cli, example for no special characters:
 alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
 alias nanoid="npx nanoid"
+# autoprefixes css files
+# requires installation:
+# npm install -g postcss postcss-cli autoprefixer
+alias autoprefixer="npx postcss *.css --use autoprefixer -d build/"
 # informs on dependency updates
 alias taze="npx taze"
 alias pip_upgrade="python -m pip install --upgrade pip"
