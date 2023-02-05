@@ -3,7 +3,6 @@ vim.opt.guicursor = ""
 --
 vim.opt.nu = true
 vim.opt.relativenumber = true
-
 vim.opt.softtabstop = 0
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -57,6 +56,9 @@ vim.opt.list = true
 -- git-blame disabled by default
 vim.g.gitblame_enabled = 0
 
+-- return quotation marks to json files
+vim.cmd([[autocmd Filetype json let g:indentLine_setConceal = 0]])
+
 -- vertically center document when entering Insert mode (breaks shift+A)
 -- vim.cmd([[autocmd InsertEnter * norm zz]])
 
@@ -67,7 +69,7 @@ vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[set wrap linebreak textwidth=80]])
 
 -- max tab characters
-vim.cmd([[let g:mintabline_tab_max_chars = 10 ]])
+vim.cmd([[let g:mintabline_tab_max_chars=10]])
 
 -- Search pattern across repository files using fzf
 vim.cmd([[
