@@ -1,0 +1,160 @@
+/* LEFT OFF AT BEGINNING OF PART 2 */
+
+/* This document contains boilerplate css tips/tricks
+ * garnered from the youtuber, coder_coder's youtube series, "Building a
+ * portfolio website with HTML & CSS 4 Part Series */
+
+/* :root */
+/* custom css variables should be set in root so they do not have to redefined
+ * each time and keeps a consistent look, reference using var(--variable-name) syntax*/
+
+/* note the naming scheme is changed from generic color names to descriptions of
+ * the elements they are applied to */
+
+/* coder coder prefers hsl */
+:root {
+  --body-bg: #151515;
+  --contact-bg: #242424;
+  --accent: #4ee1a0;
+  --text1: #ffffff;
+  --text2: #d9d9d9;
+  --invalid: #ff6f5b;
+
+  /* font-sizes */
+  /* note the use of --fs-pxl-size to indicate pixel size converted from rem */
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-72: 4.5rem;
+  --fs-88: 5.5rem;
+  --fs-48: 3rem;
+
+  --container: 69.375rem;
+
+  --transition: 250ms ease-in-out;
+}
+
+/* html */
+/* Padding doesn't add to the width or height of elements */
+/* font-size is set to 100% so that fonts reference browser's font-styles */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+/* * */
+/* box-sizing is inhereted from the html element */
+*,
+*::before,
+**::after {
+  box-sizing: inherit;
+}
+/* body */
+/* 0 out all margin all body to clear default margins */
+body {
+  margin: 0;
+}
+
+a {
+  /* automatically adds an ease-in-out animation on color property whenever
+     * there's a hover event change */
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* taken from https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
+ * see notes in coder_coder.html by the nav element */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.wrapper {
+  /* width is always contained by 16px */
+  width: calc(100% - 2rem);
+  max-width: var(--container);
+  /* centers margin on a left-right orientation */
+  margin-inline: auto;
+}
+
+/* she calculates the rough difference between tablet and mobile */
+/* note that she uses ems instead of pixels for accessibility reasons
+ * simply stating that the break points happen at times when you don't want them
+ * to when using pixels*/
+@media (min-width: 37.5em) {
+  /* 600px */
+  .wrapper {
+    width: calc(100% -3.75rem);
+  }
+}
+
+/* HEADER */
+.header {
+    margin-top: 20px;
+}
+
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    /* gap: row-gap column-gap */
+    /* note the use of px here, this is intentionally keeping the gap inbetween
+     * the header__nav children at these fixed px amounts*/
+    gap: 20px 25px;
+}
+
+/* uses fluid-typography-calculator: https://royalfig.github.io/fluid-typography-calculator/ */
+/* she uses it to calculate a clamp function using dimensions retrieved from figma layout
+ * min-font-size: 24px max-font-size: 32px min-viewport: 375px max-viewport: 768px */
+.header__home {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+  line-height: 1;
+  color: var(--text1);
+  text-decoration: none;
+  /* tells flex box to place items on its own row as it takes up 100% width ,
+   * this is utilized with the parent elem(header__nav) flex-wrap*/
+  /* flex: flex-grow flex-shrink flex-basis*/
+  flex: 1 0 100%;
+}
+
+/* .header__social, */
+.header__social svg { /* she got stuck here for a while... */
+  /* display: inline-block; */
+  display: block;
+  /* outline: 2px solid red; */
+}
+
+.header__social > svg > path {
+  /* automatically adds an ease-in-out animation on fill property whenver there's
+     * a hover event change */
+  transition: fill var(--transition);
+}
+
+.header__social:hover > svg > path {
+  fill: var(--accent);
+}
+
+@media (min-width: 37.5em) {
+    /* 600px */
+    .header__nav {
+        justify-content: flex-start;
+        align-items: center; /* vertically centered */
+        text-align: left;
+        gap: 32px;
+    }
+
+    .header__home {
+        /* flex: 1 0 0%; */
+        flex: 1;
+        margin-inline-end: auto;
+    }
+}

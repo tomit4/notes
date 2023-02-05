@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./coder_coder.css" rel="stylesheet">
+    </head>
+    <!-- This html is soley meant to be used as an accompying template to
+        coder_coder.css to demonstrate some basic best practices when using css. -->
+    <body>
+        <header class="header">
+            <div class="wrapper">
+                <nav class="header__nav">
+                    <!-- from https://www.accessibility-developer-guide.com
+                        the span class="visually-hidden" is for screen readers and
+                        good practice on headers/
+                    -->
+                    <a href="/" class="header__home">
+                        adamkeys
+                        <span class="visually-hidden">(to home page)</span>
+                    </a>
+                    <!-- note the use of specific width and height aspect ratios-->
+                    <!-- she notes that this is so that the browser can accommodate
+                    space appropriately on the page-->
+
+                    <!-- so that she can change colors on hover, she uses inline
+                        svg tags instead of img tags-->
+                    <!-- svg accessibility practices (note the inline title tag):
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="24"
+                        aria-lablel="socialGithub"
+                        role="img"
+                        <title id="socialGithub">Github</title>
+                        >
+                        </svg>
+                    -->
+
+                    <a class="header__social" href="">
+                        <img
+                        src="/assets/images/icon-github.svg"
+                        alt="Github"
+                        width="24.61"
+                        height="24">
+                    </a>
+                    <a class="header__social" href="">
+                        <img
+                        src="/assets/images/icon-frontend-mentor.svg"
+                        alt="Frontend Mentor"
+                        width="24.6"
+                        height="22">
+                    </a>
+                    <a class="header__social" href="">
+                        <img
+                        src="/assets/images/icon-linkedin.svg"
+                        alt="LinkedIn"
+                        width="24"
+                        height="24">
+                    </a>
+                    <a class="header__social" href="">
+                        <img
+                        src="/assets/images/icon-twitter.svg"
+                        alt="Twitter"
+                        width="23.28"
+                        height="18.93">
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <div class="wrapper">
+                <h1>Nice to meet you! I'm Adam Keyes.</h1>
+            </div>
+        </main>
+        <footer class="footer">
+        </footer>
+    </body>
+</html>
