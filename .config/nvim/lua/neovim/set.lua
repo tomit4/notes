@@ -106,3 +106,12 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     end
   end,
 })
+
+-- set folds to be remembered on save
+vim.cmd([[
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave ?* mkview 1
+  autocmd BufWinEnter ?* silent! loadview 1
+augroup END
+]])
