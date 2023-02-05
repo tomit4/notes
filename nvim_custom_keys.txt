@@ -152,6 +152,25 @@ INTERESTING CHAINS
 :.,$d - Delete every line from the current line to the end of the file
 :%d - delete every line
 
+# https://neovim.io/doc/user/fold.html
+FOLDS (folds condense text in case its alot of text you don't need to see right
+now)
+:set foldmethod=manual
+zf - create
+zd - delete
+zD - recursive delete
+za - toggle fold under cursor
+zA - toggle all folds under cursor recursively
+zc - close fold under cursor
+zo - open fold under cursor
+zC - close all folds under cursor recursively
+zO - open all folds under cursor recursively
+zM - all collapse
+zR - all reveal
+
+IN VISUAL MODE you can select all text you wish to fold by simply highlighting
+it then invoking 'zf'.
+
 FROM NORMAL MODE, ENTERING OTHER MODES
 i - enter INSERT mode at the current cursor position
 a - enter INSERT mode at the following cursor position (appending)

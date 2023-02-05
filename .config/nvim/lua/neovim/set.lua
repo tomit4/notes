@@ -33,7 +33,7 @@ vim.opt.cindent = true
 vim.opt.tabstop = 8
 vim.opt.cursorcolumn = true
 -- Disable folds
-vim.g.nofoldenable = true
+-- vim.g.nofoldenable = true
 -- Fix Splitting
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -64,6 +64,9 @@ vim.cmd([[autocmd Filetype json let g:indentLine_setConceal = 0]])
 
 -- enable clipboard
 vim.cmd([[set clipboard+=unnamedplus]])
+
+-- enable folds
+vim.cmd([[set foldmethod=manual]])
 
 -- enable hard/soft wrap
 vim.cmd([[set wrap linebreak textwidth=80]])
