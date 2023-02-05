@@ -2,7 +2,9 @@
 
 /* This document contains boilerplate css tips/tricks
  * garnered from the youtuber, coder_coder's youtube series, "Building a
- * portfolio website with HTML & CSS 4 Part Series */
+ * portfolio website with HTML & CSS 4 Part Series
+ * https://www.youtube.com/@TheCoderCoder
+ * */
 
 /* :root */
 /* custom css variables should be set in root so they do not have to redefined
@@ -43,7 +45,7 @@ html {
   font-size: 100%;
 }
 /* * */
-/* box-sizing is inhereted from the html element */
+/* box-sizing is inherited from the html element */
 *,
 *::before,
 **::after {
@@ -97,18 +99,18 @@ a:hover {
 
 /* HEADER */
 .header {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .header__nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    /* gap: row-gap column-gap */
-    /* note the use of px here, this is intentionally keeping the gap inbetween
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  /* gap: row-gap column-gap */
+  /* note the use of px here, this is intentionally keeping the gap inbetween
      * the header__nav children at these fixed px amounts*/
-    gap: 20px 25px;
+  gap: 20px 25px;
 }
 
 /* uses fluid-typography-calculator: https://royalfig.github.io/fluid-typography-calculator/ */
@@ -127,7 +129,8 @@ a:hover {
 }
 
 /* .header__social, */
-.header__social svg { /* she got stuck here for a while... */
+.header__social svg {
+  /* she got stuck here for a while... */
   /* display: inline-block; */
   display: block;
   /* outline: 2px solid red; */
@@ -144,17 +147,17 @@ a:hover {
 }
 
 @media (min-width: 37.5em) {
-    /* 600px */
-    .header__nav {
-        justify-content: flex-start;
-        align-items: center; /* vertically centered */
-        text-align: left;
-        gap: 32px;
-    }
+  /* 600px */
+  .header__nav {
+    justify-content: flex-start;
+    align-items: center; /* vertically centered */
+    text-align: left;
+    gap: 32px;
+  }
 
-    .header__home {
-        /* flex: 1 0 0%; */
-        flex: 1;
-        margin-inline-end: auto;
-    }
+  .header__home {
+    /* flex: 1 0 0%; */
+    flex: 1;
+    margin-inline-end: auto;
+  }
 }
