@@ -37,21 +37,20 @@
   --transition: 250ms ease-in-out;
 }
 
-/* html */
 /* Padding doesn't add to the width or height of elements */
 /* font-size is set to 100% so that fonts reference browser's font-styles */
 html {
   box-sizing: border-box;
   font-size: 100%;
 }
-/* * */
+
 /* box-sizing is inherited from the html element */
 *,
 *::before,
 **::after {
   box-sizing: inherit;
 }
-/* body */
+
 /* 0 out all margin all body to clear default margins */
 body {
   margin: 0;

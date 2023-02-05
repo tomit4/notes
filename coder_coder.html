@@ -69,9 +69,28 @@
             </div>
         </header>
         <main id="main">
-            <div class="wrapper">
-                <h1>Nice to meet you! I'm Adam Keyes.</h1>
-            </div>
+            <section class="hero">
+                <div class="wrapper">
+                    <!-- srcset allows for very responsive design, see:
+                    https://cloudfour.com/thinks/responsive-images-the-simple-way/ -->
+                    <!-- she calculates the sizes by comparing the width of the
+                    image to the total viewport, the percentage is the vw-->
+                    <!-- the ---.98px value comes from a bootstrap trick regarding
+                    media queries of the various sizes, it is 0.02 pixels less
+                    than our media queries to ensure no overlap-->
+                    <!-- the final 445px is the max width of the image-->
+                   <img src="/assets/images/image-profile-mobile.webp"
+                   alt="picture of Adam Keyes"
+                   srcset="
+                   /assets/images/image-profile-mobile.webp 348w,
+                   /assets/images/image-profile-tablet.webp 646w,
+                   /assets/images/image-profile-desktop.webp 890w"
+                   sizes="(max-width: 599.98px) 46.4vw, (max-width: 999.98px)
+                   42vw, 445px"
+                   />
+                    <h1>Nice to meet you! I'm Adam Keyes.</h1>
+                </div>
+            </section>
         </main>
         <footer class="footer">
         </footer>
