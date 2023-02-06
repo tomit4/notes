@@ -288,7 +288,25 @@
         "§:json-schema.org",
         "§:swapi.dev",
         "https://extendsclass.com",
-        "https://litecli.com"
+        "https://litecli.com",
+        "https://www.sqlite.org",
+        "https://knexjs.org",
+        "https://vincit.github.io/objection.js/",
+        "§:vincit.github.io",
+        "§:corecursive.com",
+        "§:timestamp-converter.com",
+        "§:splitkb.com",
+        "§:nodejs.org",
+        "§:owasp.org",
+        "yvvas.com",
+        "§:alchemycodelab.com",
+        "§:cirr.org",
+        "§:jwpcdn.com",
+        "§:fileformat.info",
+        "schweikhardt.net",
+        "§:cloudfour.com",
+        "§:sarasoueidan.com",
+        "§:autoprefixer.github.io"
       ],
       "untrusted": [
         "hotmail.com",
@@ -313,6 +331,16 @@
       ],
       "custom": {
         "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "noscript",
+            "other",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://content.libsyn.com/p/1/1/b/11b8d06f0501fc83/085-Don-Mckay.mp3": {
           "capabilities": [
             "frame",
             "fetch",
