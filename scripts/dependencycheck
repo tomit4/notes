@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+txtbld=$(tput bold)
+txtgreen=${txtbld}$(tput setaf 2)
+txtred=${txtbld}$(tput setaf 1)
+txtwhite=${txtbld}$(tput setaf 7)
+
+dependencycheck() {
+    for dep in "$@" ; do
+        if ! command -v "$dep" &> /dev/null ; then
+            printf "%s\n" "${txtred}✗ dependency not met: ${dep}${txtwhite}"
+        else
+            printf "%s\n" "${txtgreen} dependency met: ${dep}${txtgreen}"
+        fi
+    done
+}
+
+dependencycheck "$@"
