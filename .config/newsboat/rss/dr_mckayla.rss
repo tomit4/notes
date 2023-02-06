@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+>
+
+<channel>
+	<title>Dr. McKayla</title>
+	<atom:link href="https://www.michaelagreiler.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.michaelagreiler.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 16 Jan 2023 12:29:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://i2.wp.com/www.michaelagreiler.com/wp-content/uploads/2020/09/Michaela-Greiler-Site-Identity-10.png?fit=32%2C32&#038;ssl=1</url>
+	<title>Dr. McKayla</title>
+	<link>https://www.michaelagreiler.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">158113387</site>	<item>
+		<title>Two years in Review: 2021 and 2020</title>
+		<link>https://www.michaelagreiler.com/two-years-in-review-2021/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=two-years-in-review-2021</link>
+					<comments>https://www.michaelagreiler.com/two-years-in-review-2021/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Sat, 01 Jan 2022 12:29:25 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5672</guid>
+
+					<description><![CDATA[<p>Let's reflect on the last two years where I started my on-site code review workshops business - as a mother of two little ones right at the start of a global pandemic: </p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/two-years-in-review-2021/">Two years in Review: 2021 and 2020</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/two-years-in-review-2021/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5672</post-id>	</item>
+		<item>
+		<title>Security Code Review Checklist to find Security Vulnerabilities</title>
+		<link>https://www.michaelagreiler.com/security-code-review-checklist/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=security-code-review-checklist</link>
+					<comments>https://www.michaelagreiler.com/security-code-review-checklist/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 09 Feb 2021 13:46:00 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5371</guid>
+
+					<description><![CDATA[<p>Security code review checklists can help developers focus on security vulnerability and privacy issues. A security-focused mindset is important, as</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/security-code-review-checklist/">Security Code Review Checklist to find Security Vulnerabilities</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/security-code-review-checklist/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5371</post-id>	</item>
+		<item>
+		<title>Build your own &#8220;intelligent&#8221; code review reminder</title>
+		<link>https://www.michaelagreiler.com/code-review-reminder/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=code-review-reminder</link>
+					<comments>https://www.michaelagreiler.com/code-review-reminder/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 29 Dec 2020 11:30:24 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5325</guid>
+
+					<description><![CDATA[<p>In this post, I show you how the intelligent code review reminder Microsoft Nudge works, so that you can build or enhance your own and speed up code review completion time by 60%.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/code-review-reminder/">Build your own &#8220;intelligent&#8221; code review reminder</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/code-review-reminder/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5325</post-id>	</item>
+		<item>
+		<title>Measuring Code Review Quality through PR Rejections</title>
+		<link>https://www.michaelagreiler.com/rejections-as-code-review-quality-metric/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=rejections-as-code-review-quality-metric</link>
+					<comments>https://www.michaelagreiler.com/rejections-as-code-review-quality-metric/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2020 09:46:30 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5294</guid>
+
+					<description><![CDATA[<p>Today, I watched a new YouTube video* of someone arguing that you should measure code review quality, i.e., how good</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/rejections-as-code-review-quality-metric/">Measuring Code Review Quality through PR Rejections</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/rejections-as-code-review-quality-metric/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5294</post-id>	</item>
+		<item>
+		<title>How to successfully blog as a developer in 2020</title>
+		<link>https://www.michaelagreiler.com/successfully-developer-blog/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=successfully-developer-blog</link>
+					<comments>https://www.michaelagreiler.com/successfully-developer-blog/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2020 14:38:58 +0000</pubDate>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[Speaking]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5258</guid>
+
+					<description><![CDATA[<p>In this post, I show you what I learned over the last 1,5 years about blogging. In those 1,5 years, I transitioned from a researcher and software engineering position at Microsoft to running an independent consultant and training business. </p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/successfully-developer-blog/">How to successfully blog as a developer in 2020</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/successfully-developer-blog/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5258</post-id>	</item>
+		<item>
+		<title>Stacked pull requests: make code reviews faster, easier, and more effective</title>
+		<link>https://www.michaelagreiler.com/stacked-pull-requests/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=stacked-pull-requests</link>
+					<comments>https://www.michaelagreiler.com/stacked-pull-requests/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Wed, 23 Sep 2020 13:22:11 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=5000</guid>
+
+					<description><![CDATA[<p>In this blog post, I will show you a technique, also referred to as stacked pull requests. This technique helps engineers split code changes into smaller and more coherent pieces.  In return, reviewers have an easier time understanding the code under change, and therefore give better feedback in a shorter time.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/stacked-pull-requests/">Stacked pull requests: make code reviews faster, easier, and more effective</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/stacked-pull-requests/feed/</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5000</post-id>	</item>
+		<item>
+		<title>Better code quality with effective collaboration and code review</title>
+		<link>https://www.michaelagreiler.com/gitlab-event/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=gitlab-event</link>
+					<comments>https://www.michaelagreiler.com/gitlab-event/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2020 09:22:06 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=4965</guid>
+
+					<description><![CDATA[<p>This coming Friday, I will talk at a GitLab hosted virtual events about effective collaborations through code reviews. I&#8217;m super</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/gitlab-event/">Better code quality with effective collaboration and code review</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/gitlab-event/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4965</post-id>	</item>
+		<item>
+		<title>Resolving Code Review Conflicts Using Non-Violent Communication</title>
+		<link>https://www.michaelagreiler.com/resolving-conflict-nonviolent-communication/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=resolving-conflict-nonviolent-communication</link>
+					<comments>https://www.michaelagreiler.com/resolving-conflict-nonviolent-communication/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 14 Apr 2020 09:09:34 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=4751</guid>
+
+					<description><![CDATA[<p>In this post, I show you how you can resolve conflict the by using nonviolent communication methodology. You will be able to find solutions to conflicts you thought will never be resolved. </p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/resolving-conflict-nonviolent-communication/">Resolving Code Review Conflicts Using Non-Violent Communication</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/resolving-conflict-nonviolent-communication/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4751</post-id>	</item>
+		<item>
+		<title>How much Quality should we Expect from Software?</title>
+		<link>https://www.michaelagreiler.com/expect-quality-software/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=expect-quality-software</link>
+					<comments>https://www.michaelagreiler.com/expect-quality-software/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 07 Apr 2020 11:34:51 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[Software Quality]]></category>
+		<category><![CDATA[Testing]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=4709</guid>
+
+					<description><![CDATA[<p>Earlier this week, Medtronics bragged about one of their flagship products, a ventilator. Apparently, it depends on over one million lines</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/expect-quality-software/">How much Quality should we Expect from Software?</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/expect-quality-software/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4709</post-id>	</item>
+		<item>
+		<title>Pandemic Remote Work Isn&#8217;t Remote Work</title>
+		<link>https://www.michaelagreiler.com/pandemic-remote-work/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=pandemic-remote-work</link>
+					<comments>https://www.michaelagreiler.com/pandemic-remote-work/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Wed, 18 Mar 2020 12:54:12 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=4067</guid>
+
+					<description><![CDATA[<p>Have you switched to remote work in the past couple of weeks/days?&#160;Well, chances are high you have, or you will.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/pandemic-remote-work/">Pandemic Remote Work Isn&#8217;t Remote Work</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/pandemic-remote-work/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4067</post-id>	</item>
+		<item>
+		<title>How to Give Respectful and Constructive Code Review Feedback</title>
+		<link>https://www.michaelagreiler.com/respectful-constructive-code-review-feedback/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=respectful-constructive-code-review-feedback</link>
+					<comments>https://www.michaelagreiler.com/respectful-constructive-code-review-feedback/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 10 Mar 2020 16:26:30 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3563</guid>
+
+					<description><![CDATA[<p>The basis for a fruitful and positive collaboration is respectful and constructive feedback. In this article, I show you 10 actionable tips that help get your code review feedback across in an empathic and compassionate way. </p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/respectful-constructive-code-review-feedback/">How to Give Respectful and Constructive Code Review Feedback</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/respectful-constructive-code-review-feedback/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3563</post-id>	</item>
+		<item>
+		<title>Test Suite Comprehension for Modular and Dynamic Systems</title>
+		<link>https://www.michaelagreiler.com/test-suite-comprehension-for-modular-dynamic-systems/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=test-suite-comprehension-for-modular-dynamic-systems</link>
+					<comments>https://www.michaelagreiler.com/test-suite-comprehension-for-modular-dynamic-systems/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Sat, 22 Feb 2020 14:42:32 +0000</pubDate>
+				<category><![CDATA[Testing]]></category>
+		<category><![CDATA[Research]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3835</guid>
+
+					<description><![CDATA[<p>Test suite comprehension became more difficult over the last decade as test suites have grown substantially. Especially for modular and</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/test-suite-comprehension-for-modular-dynamic-systems/">Test Suite Comprehension for Modular and Dynamic Systems</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/test-suite-comprehension-for-modular-dynamic-systems/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3835</post-id>	</item>
+		<item>
+		<title>How to Agree on a Coding Standard</title>
+		<link>https://www.michaelagreiler.com/creating-coding-standard/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=creating-coding-standard</link>
+					<comments>https://www.michaelagreiler.com/creating-coding-standard/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 18 Feb 2020 13:19:30 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3782</guid>
+
+					<description><![CDATA[<p>Agreeing on a coding standard, and on best practices isn&#8217;t easy. Still, if you manage to agree on a coding</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/creating-coding-standard/">How to Agree on a Coding Standard</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/creating-coding-standard/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3782</post-id>	</item>
+		<item>
+		<title>Developing Conflict Competence</title>
+		<link>https://www.michaelagreiler.com/developing-conflict-competence/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=developing-conflict-competence</link>
+					<comments>https://www.michaelagreiler.com/developing-conflict-competence/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 21 Jan 2020 09:09:41 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3756</guid>
+
+					<description><![CDATA[<p>Recently, I interviewed a very kind and honest person &#8211; Suz Hinton. And in this interview, she shared with me</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/developing-conflict-competence/">Developing Conflict Competence</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/developing-conflict-competence/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3756</post-id>	</item>
+		<item>
+		<title>The Code Review Quadrant</title>
+		<link>https://www.michaelagreiler.com/code-review-quadrant/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=code-review-quadrant</link>
+					<comments>https://www.michaelagreiler.com/code-review-quadrant/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 14 Jan 2020 09:48:44 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<category><![CDATA[Productivity]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3692</guid>
+
+					<description><![CDATA[<p>Learn which type of code review your team practices in order to understand which measurements are needed to get to fast and effective code reviews, so called power reviews.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/code-review-quadrant/">The Code Review Quadrant</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/code-review-quadrant/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3692</post-id>	</item>
+		<item>
+		<title>Don&#8217;t Teach during Code Reviews</title>
+		<link>https://www.michaelagreiler.com/teach-during-code-reviews/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=teach-during-code-reviews</link>
+					<comments>https://www.michaelagreiler.com/teach-during-code-reviews/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 29 Oct 2019 11:38:45 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3533</guid>
+
+					<description><![CDATA[<p>In this post, I'll show you a common pitfall you should avoid when teaching during code reviews.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/teach-during-code-reviews/">Don&#8217;t Teach during Code Reviews</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/teach-during-code-reviews/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3533</post-id>	</item>
+		<item>
+		<title>How to handle criticism during code reviews</title>
+		<link>https://www.michaelagreiler.com/accept-code-review-feedback/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accept-code-review-feedback</link>
+					<comments>https://www.michaelagreiler.com/accept-code-review-feedback/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Thu, 10 Oct 2019 09:45:24 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3397</guid>
+
+					<description><![CDATA[<p>Criticism during code reviews is difficult to listen to with an open mind. Learn how to better handle code review feedback that challenges your beliefs. </p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/accept-code-review-feedback/">How to handle criticism during code reviews</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/accept-code-review-feedback/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3397</post-id>	</item>
+		<item>
+		<title>How to build your Own Analytics Platform for Engineering Data</title>
+		<link>https://www.michaelagreiler.com/build-analytics-platform/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=build-analytics-platform</link>
+					<comments>https://www.michaelagreiler.com/build-analytics-platform/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 10 Sep 2019 10:51:44 +0000</pubDate>
+				<category><![CDATA[Data Analytics]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3271</guid>
+
+					<description><![CDATA[<p>Today, I show you how you can build an analytics platform to analyze your engineering data. Now you might wonder why you would like to even build an engineering data platform, and maybe even what that is. Let me start with an example: Automated tests.</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/build-analytics-platform/">How to build your Own Analytics Platform for Engineering Data</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/build-analytics-platform/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3271</post-id>	</item>
+		<item>
+		<title>Analyzing Software Engineering Data</title>
+		<link>https://www.michaelagreiler.com/analyzing-engineering-data/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=analyzing-engineering-data</link>
+					<comments>https://www.michaelagreiler.com/analyzing-engineering-data/#respond</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 27 Aug 2019 09:23:26 +0000</pubDate>
+				<category><![CDATA[Data Analytics]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3243</guid>
+
+					<description><![CDATA[<p>We are surrounded by data. Often, when we think about data-driven decisions, we think about analyzing data for sales or marketing purposes, or big data in the health-care field. But, have you ever thought about leveraging your engineering data?</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/analyzing-engineering-data/">Analyzing Software Engineering Data</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/analyzing-engineering-data/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3243</post-id>	</item>
+		<item>
+		<title>A Code Review Checklist &#8211; Focus on these 10 Important Topics</title>
+		<link>https://www.michaelagreiler.com/code-review-checklist-2/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=code-review-checklist-2</link>
+					<comments>https://www.michaelagreiler.com/code-review-checklist-2/#comments</comments>
+		
+		<dc:creator><![CDATA[Dr. Michaela Greiler]]></dc:creator>
+		<pubDate>Tue, 13 Aug 2019 06:13:59 +0000</pubDate>
+				<category><![CDATA[Code reviews]]></category>
+		<guid isPermaLink="false">https://www.michaelagreiler.com/?p=3151</guid>
+
+					<description><![CDATA[<p>A code review checklist, as well as clear rules and guidelines around code reviews, can make your code review practice so much more beneficial to your team and significantly speed-up code review times. So make sure you focus on the essentials with this code review checklist!</p>
+<p>The post <a rel="nofollow" href="https://www.michaelagreiler.com/code-review-checklist-2/">A Code Review Checklist &#8211; Focus on these 10 Important Topics</a> appeared first on <a rel="nofollow" href="https://www.michaelagreiler.com">Dr. McKayla</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://www.michaelagreiler.com/code-review-checklist-2/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3151</post-id>	</item>
+	</channel>
+</rss>
