@@ -30,9 +30,7 @@ vim.keymap.set("n", "<F11>", ":set spell!<cr>", { silent = true })
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- Vimium Like Keybindings
-vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
+-- Vimium Like Keybindings vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
 
 vim.keymap.set("n", "<S-tab>", "<c-w>:tabprevious<CR>", {})
 vim.keymap.set("n", "<A-j>", "<c-w>:tabprevious<CR>", {})
@@ -41,7 +39,6 @@ vim.keymap.set("n", "<A-left>", "<c-w>:tabprevious<CR>", {})
 vim.keymap.set("n", "<A-tab>", "<c-w>:tabnext<CR>", {})
 vim.keymap.set("n", "<A-k>", "<c-w>:tabnext<CR>", {})
 vim.keymap.set("n", "<A-right>", "<c-w>:tabnext<CR>", {})
-
 -- Use ctrl- [hl] to select the active split!
 vim.keymap.set("n", "<C-h>", "<c-w>:wincmd h<CR>", {})
 vim.keymap.set("n", "<C-l>", "<c-w>:wincmd l<CR>", {})
@@ -93,3 +90,10 @@ vim.cmd([[nnoremap rg :silent :Rg]])
 
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
+
+-- dap Keybindings
+vim.keymap.set("n", "<leader>dbp", ":lua require'dap'.toggle_breakpoint()")
+vim.keymap.set("n", "<leader>dco", ":lua require'dap'.continue()")
+vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_over()")
+vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
+vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")

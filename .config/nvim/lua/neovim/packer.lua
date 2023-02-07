@@ -47,7 +47,7 @@ return require("packer").startup(function(use)
 	})
 	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use({ "junegunn/fzf.vim" })
-	use("rinx/nvim-ripgrep" )
+	use({ "rinx/nvim-ripgrep" })
 	use({ "mbbill/undotree" })
 	use({
 		"debugloop/telescope-undo.nvim",
@@ -75,6 +75,25 @@ return require("packer").startup(function(use)
 			-- Snippets
 			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
+		},
+	})
+	use({
+		"mfussenegger/nvim-dap",
+		opt = true,
+		module = { "dap" },
+		requires = {
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+			"mfussenegger/nvim-dap-python",
+			"nvim-telescope/telescope-dap.nvim",
+			{ "leoluz/nvim-dap-go", module = "dap-go" },
+			{ "jbyuki/one-small-step-for-vimkind", module = "osv" },
+			{ "mxsdev/nvim-dap-vscode-js" },
+			{
+				"microsoft/vscode-js-debug",
+				opt = true,
+				run = "npm install --legacy-peer-deps && npm run compile",
+			},
 		},
 	})
 end)
