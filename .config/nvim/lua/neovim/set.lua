@@ -111,7 +111,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 vim.cmd([[
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave ?* mkview 1
-  autocmd BufWinEnter ?* silent! loadview 1
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
 augroup END
 ]])
