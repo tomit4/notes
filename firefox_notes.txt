@@ -79,6 +79,8 @@ browser.newtabpage.activity-stream.telemetry set to false
 browser.newtabpage.activity-stream.section.highlights.includePocket to false
 browser.tabs.crashReporting.sendReport to false
 browser.uidensity to 1 (makes the browser's tabs not so huge for firefox 89+)
+accessibility.force_disabled to 1 (improves performance)
+extensions.unifiedExtensions.enabled to false (broken in 109)
 devtools.onboarding.telemetry.logged to false
 toolkit.telemetry.enabled to false
 toolkit.telemetry.server Delete the URL and leave it empty
