@@ -529,6 +529,10 @@ alias egghead="librewolf https://egghead.io/ &"
 alias demo2s="librewolf https://www.demo2s.com &"
 # mothereffinghsl hsl color picker site
 alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
+# nice color picker for hex/rgb/hsl
+alias colordesigner="librewolf https://colordesigner.io/ &"
+# site for calculating clamping for responsive font sizes
+alias typography-calc="librewolf https://royalfig.github.io/fluid-typography-calculator/ &"
 # svgsprites creates sprites from dragging svg files into its
 alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
 # unsplash.com is an api site for developers to import and use photos
