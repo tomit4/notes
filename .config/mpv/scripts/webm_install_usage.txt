@@ -1,0 +1,9 @@
+The webm.lua file is a simple lua script for making simple audio/video clips from directly
+within mpv. It is already correctly nested within this directory, and no further
+configuration is necessary for use.
+
+From within mpv, simply type Shift+w which will bring up a small
+self-explanatory menu on how to create clips.
+
+For more information, see creators docs at:
+https://github.com/ekisu/mpv-webm
