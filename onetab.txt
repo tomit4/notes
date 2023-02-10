@@ -1,0 +1,29 @@
+https://knexjs.org/guide/query-builder.html#querycontext | Knex Query Builder | Knex.js
+https://vincit.github.io/objection.js/recipes/subqueries.html | Subqueries | Objection.js
+https://sebhastian.com/mysql-insert-if-not-exists/ | MySQL - How to insert a new row only if data do not exist - Nathan Sebhastian
+https://codingsight.com/sql-insert-into-select-5-easy-ways-to-handle-duplicates/ | How to Avoid Inserting Duplicate Records in SQL INSERT Query (5 Easy Ways) - {coding}Sight
+https://stackoverflow.com/questions/19823320/sql-insert-without-duplicate-no-primary-or-unique-keys | mysql - SQL INSERT without duplicate (no primary or unique keys) - Stack Overflow
+
+https://teddit.pussthecat.org/r/neovim/comments/silikv/debugging_in_neovim/ | Debugging in NeoVim : neovim
+https://scribe.rip/neovim-for-beginners-javascript-typescript-debugging-bd0fc8e16657 | Neovim for Beginners — JavaScript/TypeScript Debugging
+https://scribe.rip/modern-neovim-debugging-and-testing-8deda1da1411 | Modern Neovim— Debugging and Testing
+https://scribe.rip/neovim-debugging-application-70c525754064 | Neovim — Debugging Application
+https://github.com/mfussenegger/nvim-dap | GitHub - mfussenegger/nvim-dap: Debug Adapter Protocol client implementation for Neovim
+https://harrisoncramer.me/debugging-in-neovim/ | Debugging in Neovim
+
+https://nodejs.org/api/stream.html#stream | Stream | Node.js v19.6.0 Documentation
+https://nodejs.org/api/buffer.html#buffer | Buffer | Node.js v19.6.0 Documentation
+https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events | Server-sent events - Web APIs | MDN
+https://developer.mozilla.org/en-US/docs/Web/API/EventSource | EventSource - Web APIs | MDN
+https://www.pubnub.com/docs/chat/overview | In-app chat | PubNub Docs
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset | HTMLImageElement.srcset - Web APIs | MDN
+https://cloudfour.com/thinks/responsive-images-the-simple-way/ | Responsive Images the Simple Way – Cloud Four
+https://dev.opera.com/articles/responsive-images/ | Dev.Opera — Responsive Images: Use Cases and Documented Code Snippets to Get You Started
+https://dev.opera.com/articles/native-responsive-images/ | Dev.Opera — Native Responsive Images
+
+https://www.50states.com/abbreviations.htm | State Abbreviations – 50states
+https://nodejs.org/en/docs/guides/security/ | Node.js Security Best Practices | Node.js
+https://www.sqlitetutorial.net/sqlite-foreign-key/ | SQLite Foreign Key: Enforce Relationships Between Tables
+https://www.sqlitetutorial.net/sqlite-join/ | A Visual Explanation of SQLite Joins
+https://www.timestamp-converter.com/ | Timestamp Converter
