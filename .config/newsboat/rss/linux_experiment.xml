@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><atom:link href="https://podcast.thelinuxexp.com/@tlenewspodcast/feed.xml" rel="self" type="application/rss+xml"></atom:link><atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" type="application/rss+xml"></atom:link><atom:link href="https://pubsubhubbub.superfeedr.com/" rel="hub" type="application/rss+xml"></atom:link><atom:link href="https://websubhub.com/hub" rel="hub" type="application/rss+xml"></atom:link><atom:link href="https://switchboard.p3k.io/" rel="hub" type="application/rss+xml"></atom:link><lastBuildDate>Fri, 10 Feb 2023 06:02:51 +0000</lastBuildDate><generator>Castopod - https://castopod.org/</generator><docs>https://cyber.harvard.edu/rss/rss.html</docs><podcast:guid>e407bff5-dc32-54c1-b1a7-8edd8a885d8f</podcast:guid><title>Linux + Open Source News, by TLE</title><description><![CDATA[<p>Weekly roundup of everything new in the Linux and Open Source world! May contain gaming and privacy related topics.</p>
+<p>This is a longer counterpart to the Linux and Open Source news videos available on The Linux Experiment Youtube Channel.</p>
+]]></description><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><language>en</language><podcast:value type="webmonetization" method="ILP"><podcast:valueRecipient name="Nick" type="paymentpointer" address="https://www.paypal.com/paypalme/thelinuxexp" split="100"></podcast:valueRecipient></podcast:value><podcast:locked owner="nick@thelinuxexp.com">no</podcast:locked><podcast:id platform="apple" url="https://podcasts.apple.com/us/podcast/linux-and-open-source-news/id1663611710"></podcast:id><podcast:id platform="spotify" url="https://open.spotify.com/show/3AZjRagzOkDX55Ftk8meuZ"></podcast:id><podcast:social priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" accountUrl="https://podcast.thelinuxexp.com/@tlenewspodcast"><podcast:socialSignUp priority="1" homeUrl="https://mastodon.social/public" signUpUrl="https://mastodon.social/auth/sign_up"></podcast:socialSignUp></podcast:social><podcast:social priority="2" platform="mastodon" protocol="activitypub" accountUrl="https://mastodon.social/@thelinuxEXP"><podcast:socialSignUp priority="1" homeUrl="https://mastodon.social/public" signUpUrl="https://mastodon.social/auth/sign_up"></podcast:socialSignUp></podcast:social><podcast:social priority="2" platform="peertube" protocol="activitypub" accountUrl="https://tilvids.com/c/thelinuxexperiment_channel/videos"></podcast:social><podcast:social priority="2" platform="pixelfed" protocol="activitypub" accountUrl="https://pixelfed.social/TLENick"></podcast:social><podcast:social priority="2" platform="youtube" protocol="youtube" accountUrl="https://www.youtube.com/@TheLinuxEXP"></podcast:social><podcast:funding platform="patreon" url="https://www.patreon.com/thelinuxexperiment">Support the show on Patreon</podcast:funding><podcast:funding platform="paypal" url="https://www.paypal.com/paypalme/thelinuxexp">Donate whatever you want</podcast:funding><podcast:person img="https://podcast.thelinuxexp.com/media/persons/nick_medium.webp" href="https://mastodon.social/@thelinuxEXP" role="Audio Editor" group="Audio Post-Production">Nick</podcast:person><podcast:person img="https://podcast.thelinuxexp.com/media/persons/nick_medium.webp" href="https://mastodon.social/@thelinuxEXP" role="Host" group="Cast">Nick</podcast:person><podcast:person img="https://podcast.thelinuxexp.com/media/persons/nick_medium.webp" href="https://mastodon.social/@thelinuxEXP" role="Writer" group="Writing">Nick</podcast:person><itunes:category text="News"><itunes:category text="Tech News"></itunes:category></itunes:category><category>News</category><category>Tech News</category><itunes:explicit>false</itunes:explicit><itunes:author>The Linux Experiment</itunes:author><link>https://podcast.thelinuxexp.com/@tlenewspodcast</link><itunes:owner><itunes:name>Nick</itunes:name><itunes:email>nick@thelinuxexp.com</itunes:email></itunes:owner><itunes:type>episodic</itunes:type><copyright>The Linux Experiment</copyright><image><url>https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png</url><title>Linux + Open Source News, by TLE</title><link>https://podcast.thelinuxexp.com/@tlenewspodcast</link></image><item><title>A peek at Cosmic DE's design, Mint + Wayland, elementary OS 7 released</title><enclosure url="https://podcast.thelinuxexp.com/audio/@tlenewspodcast/a-peek-at-cosmic-des-design-mint-wayland-elementary-os-7-released.mp3" length="35004962" type="audio/mpeg"></enclosure><guid>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/a-peek-at-cosmic-des-design-mint-wayland-elementary-os-7-released</guid><pubDate>Sat, 04 Feb 2023 17:01:10 +0000</pubDate><description><![CDATA[<p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+<p>00:00 Intro</p>
+<p>01:03 System 76 shares some designs for their Cosmic DE</p>
+<p><a href="https://blog.system76.com/post/more-on-cosmic-de-to-kick-off-2023">https://blog.system76.com/post/more-on-cosmic-de-to-kick-off-2023</a></p>
+<p>07:09 Linux Mint teases Wayland support for Mint 21.2</p>
+<p><a href="https://blog.linuxmint.com/?p=4470">https://blog.linuxmint.com/?p=4470</a></p>
+<p><a href="https://9to5linux.com/xfce-4-20-desktop-environment-will-finally-bring-wayland-support">https://9to5linux.com/xfce-4-20-desktop-environment-will-finally-bring-wayland-support</a></p>
+<p>11:21 elementary OS 7 HORUS is out</p>
+<p><a href="https://www.youtube.com/watch?v=mBxtGVoYEws">https://www.youtube.com/watch?v=mBxtGVoYEws</a></p>
+<p>16:42 Budgie 10.7 brings a lot of cool updates</p>
+<p><a href="https://blog.buddiesofbudgie.org/budgie-10-7-released/">https://blog.buddiesofbudgie.org/budgie-10-7-released/</a></p>
+<p>21:42 KDE Plasma Mobile apps are moving fast</p>
+<p><a href="https://plasma-mobile.org/2023/01/30/january-blog-post/">https://plasma-mobile.org/2023/01/30/january-blog-post/</a></p>
+<p>26:25 Google expands their open source bug bounty program</p>
+<p><a href="https://www.zdnet.com/article/google-expands-open-source-bounties-will-soon-support-javascript-fuzzing-too/">https://www.zdnet.com/article/google-expands-open-source-bounties-will-soon-support-javascript-fuzzing-too/</a></p>
+<p>29:48 Microsoft and Github Copilot get a second lawsuit</p>
+<p><a href="https://www.theverge.com/2023/1/28/23575919/microsoft-openai-github-dismiss-copilot-ai-copyright-lawsuit">https://www.theverge.com/2023/1/28/23575919/microsoft-openai-github-dismiss-copilot-ai-copyright-lawsuit</a></p>
+<p>33:18 The US and the EU agree on building joint AI models</p>
+<p><a href="https://telecom.economictimes.indiatimes.com/news/us-and-eu-to-launch-first-of-its-kind-artificial-intelligence-agreement/97394092?redirect=1">https://telecom.economictimes.indiatimes.com/news/us-and-eu-to-launch-first-of-its-kind-artificial-intelligence-agreement/97394092?redirect=1</a></p>
+<p>35:13 Gaming news: less stutters and New Big Picture for everyone</p>
+<p><a href="https://www.gamingonlinux.com/2023/01/valve-fix-dead-space-steam-deck/">https://www.gamingonlinux.com/2023/01/valve-fix-dead-space-steam-deck/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/ge-proton-7-48-out-now-with-updates-to-dxvk-vkd3d-proton/">https://www.gamingonlinux.com/2023/01/ge-proton-7-48-out-now-with-updates-to-dxvk-vkd3d-proton/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/amd-gpu-driver-linux-steam-deck-big-improvement-stuttering-problems/">https://www.gamingonlinux.com/2023/01/amd-gpu-driver-linux-steam-deck-big-improvement-stuttering-problems/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/02/heroic-games-launcher-260-out-now-adding-auto-updates-new-theme/">https://www.gamingonlinux.com/2023/02/heroic-games-launcher-260-out-now-adding-auto-updates-new-theme/</a></p>
+<p><a href="https://store.steampowered.com/news/app/593110/view/3682291055854286778">https://store.steampowered.com/news/app/593110/view/3682291055854286778</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/02/ubisoft-broke-their-games-on-linux-desktop-and-steam-deck/">https://www.gamingonlinux.com/2023/02/ubisoft-broke-their-games-on-linux-desktop-and-steam-deck/</a></p>
+<footer><p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+</footer>]]></description><itunes:duration>2600</itunes:duration><link>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/a-peek-at-cosmic-des-design-mint-wayland-elementary-os-7-released</link><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><itunes:explicit>true</itunes:explicit><itunes:episode>5</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><podcast:comments uri="https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/a-peek-at-cosmic-des-design-mint-wayland-elementary-os-7-released/comments" contentType="application/podcast-activity+json"></podcast:comments><podcast:socialInteract uri="https://podcast.thelinuxexp.com/@tlenewspodcast/posts/326f36d0-b36c-417a-a733-c5b106451b13" priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" pubDate="2023-02-04T17:01:10+0000"></podcast:socialInteract><podcast:chapters url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/a-peek-at-cosmic-des-design-mint-wayland-elementary-os-7-released-chapters.csv" type="application/json+chapters"></podcast:chapters></item><item><title>New EU law hurts FOSS, GNOME 44 alpha, Chrome beats Firefox</title><enclosure url="https://podcast.thelinuxexp.com/audio/@tlenewspodcast/new-eu-law-hurts-foss-gnome-44-alpha-chrome-beats-firefox.mp3" length="38414671" type="audio/mpeg"></enclosure><guid>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/new-eu-law-hurts-foss-gnome-44-alpha-chrome-beats-firefox</guid><pubDate>Sat, 28 Jan 2023 16:43:38 +0000</pubDate><description><![CDATA[<p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+<p>00:00 Intro</p>
+<p>01:42 New EU laws might make using FOSS really difficult</p>
+<p><a href="https://devclass.com/2023/01/24/eus-proposed-ce-mark-for-software-could-have-dire-impact-on-open-source/">https://devclass.com/2023/01/24/eus-proposed-ce-mark-for-software-could-have-dire-impact-on-open-source/</a></p>
+<p>07:59 GNOME 44 alpha is out for testing</p>
+<p><a href="https://9to5linux.com/gnome-44-alpha-released-with-new-stream-deck-app-file-chooser-grid-view">https://9to5linux.com/gnome-44-alpha-released-with-new-stream-deck-app-file-chooser-grid-view</a></p>
+<p>13:01 Firefox loses to Chrome badly in benchmarks</p>
+<p><a href="https://www.phoronix.com/news/Firefox-Chrome-109-Benchmarks">https://www.phoronix.com/news/Firefox-Chrome-109-Benchmarks</a></p>
+<p>15:42 Google’s Fuchsia OS might be in trouble</p>
+<p><a href="https://arstechnica.com/gadgets/2023/01/big-layoffs-at-googles-fuchsia-os-call-the-projects-future-into-question/">https://arstechnica.com/gadgets/2023/01/big-layoffs-at-googles-fuchsia-os-call-the-projects-future-into-question/</a></p>
+<p>18:09 Ubuntu Pro is now available for free for up to 5 PCs</p>
+<p><a href="https://linuxiac.com/ubuntu-pro-subscription-what-it-means-for-users/">https://linuxiac.com/ubuntu-pro-subscription-what-it-means-for-users/</a></p>
+<p>20:15 BlendOS looks like a very interesting distro</p>
+<p><a href="https://9to5linux.com/first-look-at-blendos-a-blend-of-arch-linux-fedora-linux-and-ubuntu">https://9to5linux.com/first-look-at-blendos-a-blend-of-arch-linux-fedora-linux-and-ubuntu</a></p>
+<p>22:51 GNOME weekly updates</p>
+<p><a href="https://thisweek.gnome.org/posts/2023/01/twig-79/">https://thisweek.gnome.org/posts/2023/01/twig-79/</a></p>
+<p>25:39 KDE Weekly updates</p>
+<p><a href="https://pointieststick.com/2023/01/20/this-week-in-kde-the-best-plasma-5-version-ever/">https://pointieststick.com/2023/01/20/this-week-in-kde-the-best-plasma-5-version-ever/</a></p>
+<p><a href="https://www.volkerkrause.eu/2023/01/21/kf6-branched.html">https://www.volkerkrause.eu/2023/01/21/kf6-branched.html</a></p>
+<p>28:35 Google presents big updates to their Flutter toolkit</p>
+<p><a href="https://9to5google.com/2023/01/25/flutter-forward-teaser/">https://9to5google.com/2023/01/25/flutter-forward-teaser/</a></p>
+<p>31:48 The US might deal a big blow to user generated content</p>
+<p><a href="https://edition.cnn.com/2023/01/20/tech/meta-microsoft-google-supreme-court-tech-algorithms/">https://edition.cnn.com/2023/01/20/tech/meta-microsoft-google-supreme-court-tech-algorithms/</a></p>
+<p>37:31 Gaming news: performance improvements, Wine 8, and EA games</p>
+<p><a href="https://www.gamingonlinux.com/2023/01/ea-games-playable-on-steam-deck-sims-4-jedi-fallen-order/">https://www.gamingonlinux.com/2023/01/ea-games-playable-on-steam-deck-sims-4-jedi-fallen-order/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/more-ea-games-steam-deck-playable/">https://www.gamingonlinux.com/2023/01/more-ea-games-steam-deck-playable/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/forspoken-desktop-linux-spoof-steam-deck/">https://www.gamingonlinux.com/2023/01/forspoken-desktop-linux-spoof-steam-deck/</a></p>
+<p><a href="https://www.winehq.org/announce/8.0">https://www.winehq.org/announce/8.0</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/direct3d-to-vulkan-translation-layer-dxvk-21-adds-hdr-support-improves-shader-stutter/">https://www.gamingonlinux.com/2023/01/direct3d-to-vulkan-translation-layer-dxvk-21-adds-hdr-support-improves-shader-stutter/</a></p>
+<p>45:54 Outro</p>
+<footer><p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+</footer>]]></description><itunes:duration>2822</itunes:duration><link>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/new-eu-law-hurts-foss-gnome-44-alpha-chrome-beats-firefox</link><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><itunes:explicit>true</itunes:explicit><itunes:episode>4</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><podcast:comments uri="https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/new-eu-law-hurts-foss-gnome-44-alpha-chrome-beats-firefox/comments" contentType="application/podcast-activity+json"></podcast:comments><podcast:socialInteract uri="https://podcast.thelinuxexp.com/@tlenewspodcast/posts/b0271e5f-dad3-4249-9d2c-66922a7c21e8" priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" pubDate="2023-01-28T16:43:38+0000"></podcast:socialInteract><podcast:chapters url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/new-eu-law-hurts-foss-gnome-44-alpha-chrome-beats-firefox-chapters.csv" type="application/json+chapters"></podcast:chapters></item><item><title>Linux Foundation's metaverse, Stable Diffusion sued, KDE 5.27 Beta</title><enclosure url="https://podcast.thelinuxexp.com/audio/@tlenewspodcast/linux-foundations-metaverse-stable-diffusion-sued-kde-527-beta.mp3" length="40761603" type="audio/mpeg"></enclosure><guid>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/linux-foundations-metaverse-stable-diffusion-sued-kde-527-beta</guid><pubDate>Sat, 21 Jan 2023 17:14:53 +0000</pubDate><description><![CDATA[<p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+<p><strong>Timecodes and links:</strong></p>
+<p>00:00 Intro</p>
+<p>01:43 Linux Foundation is trying to build an open metaverse</p>
+<p><a href="https://www.linuxfoundation.org/press/open-metaverse-foundation">https://www.linuxfoundation.org/press/open-metaverse-foundation</a></p>
+<p><a href="https://www.openmv.org/on-the-path-to-an-open-metaverse/">https://www.openmv.org/on-the-path-to-an-open-metaverse/</a></p>
+<p>07:09 Getty Images sues Stable Diffusion</p>
+<p><a href="https://www.theverge.com/2023/1/17/23558516/ai-art-copyright-stable-diffusion-getty-images-lawsuit">https://www.theverge.com/2023/1/17/23558516/ai-art-copyright-stable-diffusion-getty-images-lawsuit</a></p>
+<p>12:50 Adobe clarifies their use of user data regarding AI</p>
+<p><a href="https://petapixel.com/2023/01/18/adobe-says-it-isnt-using-your-photos-to-train-ai-image-generators/">https://petapixel.com/2023/01/18/adobe-says-it-isnt-using-your-photos-to-train-ai-image-generators/</a></p>
+<p>15:53 KDE Plasma 5.27 beta is now out for testing</p>
+<p><a href="https://kde.org/announcements/plasma/5/5.26.90/">https://kde.org/announcements/plasma/5/5.26.90/</a></p>
+<p>21:27 GNOME telemetry data shows it needs a notification tray</p>
+<p><a href="https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/">https://blogs.gnome.org/aday/2023/01/18/gnome-info-collect-what-we-learned/</a></p>
+<p>27:38 India builds the Ministry of Truth</p>
+<p><a href="https://techcrunch.com/2023/01/17/india-proposes-social-media-firms-rely-on-fact-checking-by-government-agencies/">https://techcrunch.com/2023/01/17/india-proposes-social-media-firms-rely-on-fact-checking-by-government-agencies/</a></p>
+<p><a href="https://www.altnews.in/pib-fact-check-blunders-again-incorrectly-declares-up-stf-advisory-on-chinese-apps-as-fake-news/">https://www.altnews.in/pib-fact-check-blunders-again-incorrectly-declares-up-stf-advisory-on-chinese-apps-as-fake-news/</a></p>
+<p>32:11 The new Ubuntu installer looks identical to the old one</p>
+<p><a href="https://www.omgubuntu.co.uk/2023/01/ubuntu-new-flutter-installer-first-look">https://www.omgubuntu.co.uk/2023/01/ubuntu-new-flutter-installer-first-look</a></p>
+<p>35:32 Fedora wants your feedback on their new installer</p>
+<p><a href="https://fedoramagazine.org/anaconda-web-ui-storage-feedback-requested/">https://fedoramagazine.org/anaconda-web-ui-storage-feedback-requested/</a></p>
+<p>39:11 Wikipedia gets a new redesign that looks the same</p>
+<p><a href="https://slate.com/technology/2023/01/wikipedia-redesign-vector-2022-skin.html">https://slate.com/technology/2023/01/wikipedia-redesign-vector-2022-skin.html</a></p>
+<p>43:36 Gaming News: AyaneoOS is coming, and Stadia is now dead</p>
+<p><a href="https://www.gamingonlinux.com/2023/01/ayaneo-confirm-their-linux-based-ayaneo-os-arrives-this-year/">https://www.gamingonlinux.com/2023/01/ayaneo-confirm-their-linux-based-ayaneo-os-arrives-this-year/</a></p>
+<p><a href="https://www.macrumors.com/2023/01/18/googles-stadia-shuts-down-today/">https://www.macrumors.com/2023/01/18/googles-stadia-shuts-down-today/</a></p>
+<p>49:09 Outro</p>
+<footer><p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+</footer>]]></description><itunes:duration>3021</itunes:duration><link>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/linux-foundations-metaverse-stable-diffusion-sued-kde-527-beta</link><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><itunes:explicit>true</itunes:explicit><itunes:episode>3</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><podcast:comments uri="https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/linux-foundations-metaverse-stable-diffusion-sued-kde-527-beta/comments" contentType="application/podcast-activity+json"></podcast:comments><podcast:socialInteract uri="https://podcast.thelinuxexp.com/@tlenewspodcast/posts/94f61f2b-0207-4308-b9a1-62f9ec26e441" priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" pubDate="2023-01-21T17:14:53+0000"></podcast:socialInteract><podcast:chapters url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/linux-foundations-metaverse-stable-diffusion-sued-kde-527-beta-chapters.csv" type="application/json+chapters"></podcast:chapters></item><item><title>Apple isn't private, Mastodon loses users, Mozilla joins the fediverse</title><enclosure url="https://podcast.thelinuxexp.com/audio/@tlenewspodcast/apple-isnt-private-mastodon-loses-users-mozilla-joins-the-fediverse.mp3" length="38353292" type="audio/mpeg"></enclosure><guid>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/apple-isnt-private-mastodon-losing-users-mozilla-joins-the-fediverse-linux-and-open-source-news</guid><pubDate>Sat, 14 Jan 2023 17:04:55 +0000</pubDate><description><![CDATA[<p><strong>🎙️ Leave your feedback here</strong>:
+<a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  :https://the-linux-experiment.creator-spring.com/</p>
+<p><strong>📹 Watch my Linux videos:</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+<p><strong>Timestamps and links:</strong></p>
+<p>00:00 Intro</p>
+<p>01:39 Apple fined for violating their user’s privacy</p>
+<p><a href="https://gizmodo.com/apple-iphone-france-ads-fine-illegal-data-1849950163">https://gizmodo.com/apple-iphone-france-ads-fine-illegal-data-1849950163</a></p>
+<p><a href="https://www.reuters.com/technology/apple-fined-1-mln-euros-by-paris-commercial-court-over-app-store-practices-2022-12-19/">https://www.reuters.com/technology/apple-fined-1-mln-euros-by-paris-commercial-court-over-app-store-practices-2022-12-19/</a></p>
+<p><a href="https://gizmodo.com/apple-iphone-analytics-tracking-even-when-off-app-store-1849757558">https://gizmodo.com/apple-iphone-analytics-tracking-even-when-off-app-store-1849757558</a></p>
+<p>06:42 Google settles yet another privacy violation</p>
+<p><a href="https://www.androidcentral.com/apps-software/google-23-million-dollar-search-privacy-settlement">https://www.androidcentral.com/apps-software/google-23-million-dollar-search-privacy-settlement</a></p>
+<p>09:51 Newly arrived Mastodon users aren’t all sticking around</p>
+<p><a href="https://www.theguardian.com/news/datablog/2023/jan/08/elon-musk-drove-more-than-a-million-people-to-mastodon-but-many-arent-sticking-around">https://www.theguardian.com/news/datablog/2023/jan/08/elon-musk-drove-more-than-a-million-people-to-mastodon-but-many-arent-sticking-around</a></p>
+<p>14:57 Mozilla joins the fediverse</p>
+<p><a href="https://blog.mozilla.org/en/mozilla/mozilla-launch-fediverse-instance-social-media-alternative/">https://blog.mozilla.org/en/mozilla/mozilla-launch-fediverse-instance-social-media-alternative/</a></p>
+<p>18:11 New full AMD laptop being announced by System76</p>
+<p><a href="https://system76.com/laptops/pangolin-teaser">https://system76.com/laptops/pangolin-teaser</a></p>
+<p>21:40 GNOME lets you test a new UI change with an extension</p>
+<p><a href="https://www.omgubuntu.co.uk/2023/01/try-gnome-44-focus-indicator-animation">https://www.omgubuntu.co.uk/2023/01/try-gnome-44-focus-indicator-animation</a></p>
+<p>27:01 GNOME weekly updates</p>
+<p><a href="https://thisweek.gnome.org/posts/2023/01/twig-77/">https://thisweek.gnome.org/posts/2023/01/twig-77/</a></p>
+<p>30:06 UnityX brings customization to Unity DE</p>
+<p><a href="https://unityd.org/unityx-7-7-testing/">https://unityd.org/unityx-7-7-testing/</a></p>
+<p>33:59 KDE Weekly updates</p>
+<p><a href="https://pointieststick.com/2023/01/06/this-week-in-kde-big-ui-improvements/">https://pointieststick.com/2023/01/06/this-week-in-kde-big-ui-improvements/</a></p>
+<p>36:35 PopOS makes performance better for potato computers</p>
+<p><a href="https://www.omgubuntu.co.uk/2023/01/pop_os_zram-update">https://www.omgubuntu.co.uk/2023/01/pop_os_zram-update</a></p>
+<p>39:42 Chromium now scrolls correctly on Linux</p>
+<p><a href="https://linuxiac.com/chromium-109-update-brings-faster-scrolling-to-linux-users/">https://linuxiac.com/chromium-109-update-brings-faster-scrolling-to-linux-users/</a></p>
+<p>41:08 Gaming News: FOSS Nvidia driver, Dolphin emulator gets better</p>
+<p><a href="https://github.com/ValveSoftware/Proton/wiki/Changelog">https://github.com/ValveSoftware/Proton/wiki/Changelog</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/gamecube-and-wii-emulator-dolphin-got-a-big-speed-boost-for-steam-deck/">https://www.gamingonlinux.com/2023/01/gamecube-and-wii-emulator-dolphin-got-a-big-speed-boost-for-steam-deck/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/the-open-source-nvidia-vulkan-driver-nvk-begins-to-run-games/">https://www.gamingonlinux.com/2023/01/the-open-source-nvidia-vulkan-driver-nvk-begins-to-run-games/</a></p>
+<p>45:40 Outro</p>
+<footer><p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+</footer>]]></description><itunes:duration>2844</itunes:duration><link>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/apple-isnt-private-mastodon-loses-users-mozilla-joins-the-fediverse</link><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><itunes:explicit>true</itunes:explicit><itunes:episode>2</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><podcast:comments uri="https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/apple-isnt-private-mastodon-loses-users-mozilla-joins-the-fediverse/comments" contentType="application/podcast-activity+json"></podcast:comments><podcast:socialInteract uri="https://podcast.thelinuxexp.com/@tlenewspodcast/posts/1a2c328d-f2c7-4ed4-b320-75efddbe9fa5" priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" pubDate="2023-01-14T17:04:55+0000"></podcast:socialInteract><podcast:transcript url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/apple-isnt-private-mastodon-loses-users-mozilla-joins-the-fediverse-transcript.srt" type="text/srt" language="en"></podcast:transcript><podcast:chapters url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/apple-isnt-private-mastodon-losing-users-mozilla-joins-the-fediverse-linux-and-open-source-news-chapters.csv" type="application/json+chapters"></podcast:chapters></item><item><title>Arch isn't N°1, X.org dying, Meta fined €390M: Linux &amp; Open Source News</title><enclosure url="https://podcast.thelinuxexp.com/audio/@tlenewspodcast/arch-isnt-n1-xorg-dying-meta-fined-390m-linux-and-open-source-news.mp3" length="34576534" type="audio/mpeg"></enclosure><guid>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/arch-isnt-n1-xorg-is-dying-meta-fined-390-million-linux-open-source-news</guid><pubDate>Sat, 07 Jan 2023 09:15:09 +0000</pubDate><description><![CDATA[<p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>📹 Watch my Linux videos:</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+<p><strong>🕰️ Timestamps:</strong></p>
+<p>00:00 Intro (listen to it, it’s important)</p>
+<p>02:00 Is Arch Linux the most popular distribution?</p>
+<p><a href="https://linuxiac.com/most-popular-linux-distros-according-to-reddit/">https://linuxiac.com/most-popular-linux-distros-according-to-reddit/</a></p>
+<p>05:18 X.org is dead at that point</p>
+<p><a href="https://www.phoronix.com/news/XServer-2022-Development-Pace">https://www.phoronix.com/news/XServer-2022-Development-Pace</a></p>
+<p>08:35 Meta gets huge fines from the EU for breaching GDPR</p>
+<p><a href="https://techcrunch.com/2023/01/04/facebook-instagram-gdpr-forced-consent-final-decisions/">https://techcrunch.com/2023/01/04/facebook-instagram-gdpr-forced-consent-final-decisions/</a></p>
+<p>13:56 Finally a full AMD (including GPUs) Linux computer</p>
+<p><a href="https://9to5linux.com/meet-the-slimbook-kymera-ventus-amd-black-limited-edition-linux-pc">https://9to5linux.com/meet-the-slimbook-kymera-ventus-amd-black-limited-edition-linux-pc</a></p>
+<p><a href="https://slimbook.es/en/store/slimbook-kymera/kymera-ventus-amd-6-comprar">https://slimbook.es/en/store/slimbook-kymera/kymera-ventus-amd-6-comprar</a></p>
+<p>17:08 Google is working on a moderation tool for small websites</p>
+<p><a href="https://arstechnica.com/tech-policy/2023/01/google-develops-free-terrorism-moderation-tool-for-smaller-websites/">https://arstechnica.com/tech-policy/2023/01/google-develops-free-terrorism-moderation-tool-for-smaller-websites/</a></p>
+<p>21:13 Google is porting Android to RISC V</p>
+<p><a href="https://arstechnica.com/gadgets/2023/01/google-announces-official-android-support-for-risc-v/">https://arstechnica.com/gadgets/2023/01/google-announces-official-android-support-for-risc-v/</a></p>
+<p>27:07 System76 shares more details about COSMIC</p>
+<p><a href="https://blog.system76.com/post/2022-at-system76-a-year-in-review">https://blog.system76.com/post/2022-at-system76-a-year-in-review</a></p>
+<p>29:46 GNOME application updates</p>
+<p><a href="https://thisweek.gnome.org/posts/2022/12/twig-76/">https://thisweek.gnome.org/posts/2022/12/twig-76/</a></p>
+<p>32:30 KDE has quality of life improvements</p>
+<p><a href="https://pointieststick.com/2022/12/30/this-week-in-kde-end-of-year-goodies/">https://pointieststick.com/2022/12/30/this-week-in-kde-end-of-year-goodies/</a></p>
+<p>35:30 The MAUI project is very much alive</p>
+<p><a href="https://mauikit.org/blog/maui-report-20/">https://mauikit.org/blog/maui-report-20/</a></p>
+<p>37:19 Budgie and Sway get their official Fedora spins</p>
+<p><a href="https://9to5linux.com/its-official-fedora-linux-38-will-offer-fedora-budgie-and-sway-spins">https://9to5linux.com/its-official-fedora-linux-38-will-offer-fedora-budgie-and-sway-spins</a></p>
+<p>39:09 Gaming news: HDR for Linux gaming, and AMD Ray Tracing</p>
+<p><a href="https://www.gamingonlinux.com/2023/01/latest-steam-survey-sees-a-minor-dip-for-linux-steam-deck-still-trending-nicely-overall/">https://www.gamingonlinux.com/2023/01/latest-steam-survey-sees-a-minor-dip-for-linux-steam-deck-still-trending-nicely-overall/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/valve-dev-teases-hdr-support-for-linux-gaming/">https://www.gamingonlinux.com/2023/01/valve-dev-teases-hdr-support-for-linux-gaming/</a></p>
+<p><a href="https://www.gamingonlinux.com/2023/01/amd-ray-tracing-on-linux-gets-closer-with-mesa-enabling-specific-games/">https://www.gamingonlinux.com/2023/01/amd-ray-tracing-on-linux-gets-closer-with-mesa-enabling-specific-games/</a></p>
+<p>42:10 Outro</p>
+<footer><p><strong>🎙️ Leave your feedback here</strong>: <a href="https://podcast.thelinuxexp.com">https://podcast.thelinuxexp.com</a></p>
+<p><strong>👏 Support the show here</strong>: <a href="https://www.patreon.com/thelinuxexperiment">https://www.patreon.com/thelinuxexperiment</a></p>
+<p><strong>👕 Buy TLE Merch</strong>  : <a href="https://the-linux-experiment.creator-spring.com/">https://the-linux-experiment.creator-spring.com/</a></p>
+<p><strong>📹 Watch my Linux videos</strong> : <a href="https://www.youtube.com/thelinuxexperiment">https://www.youtube.com/thelinuxexperiment</a></p>
+</footer>]]></description><itunes:duration>2595</itunes:duration><link>https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/arch-isnt-n1-xorg-dying-meta-fined-390m-linux-and-open-source-news</link><itunes:image href="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/cover_feed.png"></itunes:image><itunes:explicit>true</itunes:explicit><itunes:episode>1</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><podcast:comments uri="https://podcast.thelinuxexp.com/@tlenewspodcast/episodes/arch-isnt-n1-xorg-dying-meta-fined-390m-linux-and-open-source-news/comments" contentType="application/podcast-activity+json"></podcast:comments><podcast:socialInteract uri="https://podcast.thelinuxexp.com/@tlenewspodcast/posts/e634bdc8-4a24-4873-9f45-db720f5946aa" priority="1" platform="castopod" protocol="activitypub" accountId="@tlenewspodcast@podcast.thelinuxexp.com" pubDate="2023-01-07T09:15:09+0000"></podcast:socialInteract><podcast:transcript url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/arch-isnt-n1-xorg-dying-meta-fined-390m-linux-and-open-source-news-transcript.srt" type="text/srt" language="en"></podcast:transcript><podcast:chapters url="https://podcast.thelinuxexp.com/media/podcasts/tlenewspodcast/arch-isnt-n1-xorg-dying-meta-fined-390m-linux-and-open-source-news-chapters.csv" type="application/json+chapters"></podcast:chapters></item></channel></rss>
