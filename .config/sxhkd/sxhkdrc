@@ -170,6 +170,8 @@ super + i
     inkscape &
 super + g
     gimp --no-splash &
+super + h
+    keepassxc &
 super + k
     krita --nosplash &
 super + t
