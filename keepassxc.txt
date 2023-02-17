@@ -1,0 +1,50 @@
+KeePassXC is a password generator and password database that is password
+protected.
+
+There are many tutorials on how to use the GUI version of keepassxc. These notes
+are solely to briefly document some basics of the keepassxc-cli:
+
+Navigate to the directory where you have your .kdbx file, and invoke
+keepassxc-cli with the 'open' option on it:
+
+```
+keepassxc-cli open mypasswords.kdbx
+```
+
+Once you have entered your super secret lengthy and complex password
+You will be presented with a prompt like so:
+
+```
+passwords>
+```
+
+The 'help' command does what you'd expect. If you need to know more about a
+specific option printed out by the help command you can append that option to
+the help command to get more information:
+
+```
+help show
+```
+
+You can list out the contents of the database like so:
+ls
+
+You cannot navigate into subdirectories of the database using something like
+'cd', but you can show the contents of the specific password contents by using
+the show command. If the subdirectory has spaces in it, you'll need to escape
+them using the backslash character '\'.
+
+```
+show mydir/This\ Is\ My \Entry
+```
+
+This will display the data except for the password itself. To display the
+password you can use the -s flag to show:
+
+```
+show -s mydir/This\ Is\ My \Entry
+```
+
+The cli tool is more powerful than this, and at the time of this writing, I have
+done all my interactions with keepassxc through the GUI, but will append to
+these notations as I learn more about the CLI in the future.
