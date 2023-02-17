@@ -84,6 +84,8 @@ alias btop="bst -e btop"
 alias firefox="librewolf"
 alias tor-browser="tor-browser &"
 alias leetcode="brave https://leetcode.com/accounts/login &"
+# sql basics:
+alias sqlzoo="librewolf https://sqlzoo.net/wiki/SQL_Tutorial &"
 alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias toonz="opentoonz"
