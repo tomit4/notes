@@ -96,6 +96,7 @@ alias view="devour sxiv"
 alias viewer="feh -F -Z -x"
 alias mupdf='devour mupdf -r 204'
 alias dkpdf='devour mupdf -I -r 204'
+alias keys="devour keepassxc $HOME/.kee/.data.kdbx"
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
 alias amd="article_md"
 alias kevents="xev -event keyboard"
