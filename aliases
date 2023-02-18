@@ -98,6 +98,7 @@ alias view="devour sxiv"
 alias viewer="feh -F -Z -x"
 alias mupdf='devour mupdf -r 204'
 alias dkpdf='devour mupdf -I -r 204'
+alias sign='devour xournalpp'
 alias keys="devour keepassxc $KDBX"
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
 alias amd="article_md"
@@ -218,6 +219,7 @@ alias hwclock="doas hwclock"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 alias npm_upgrade="doas npm install --location=global npm@latest"
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
+alias paclogs="bat /var/log/pacman.log"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
 alias jester="jest --watchAll"
