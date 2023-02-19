@@ -207,8 +207,8 @@ Install openoffice-bin and xidel (minimal office suite and web scraper)
 paru openoffice (choose bin)
 paru xidel(1st option)
 
-Install foliate (epub book reader) and xournalpp (pdf signer)
-doas pacman -S foliate xounralapp
+Install foliate (epub book reader) and xournalpp (pdf signer) and dash (for emergency shell)
+doas pacman -S foliate xounralapp dash
 
 Install autoprefixer for css files:
 npm install -g postcss postcss-cli autoprefixer
