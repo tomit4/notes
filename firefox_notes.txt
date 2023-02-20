@@ -11,6 +11,7 @@ Install Colorzilla
 Install Measure-it
 Install FastForward
 Install Firefox Translations
+Install Gloc (reads lines of code on github repos, requires personall access token)
 Install LocalCDN (conflicts witht Decentraleyes)
 Install ForgetMeNot
 Install FastForward
