@@ -286,6 +286,10 @@ alias git-ss="git status short"
 alias git-d="git diff"
 # for use with notes directory only
 alias git-l="git log"
+# more to just remember than to be used
+alias git-stsh="git stash"
+alias git-stsh-a="git stash apply"
+alias git-stsh-d="git stash drop"
 alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
 alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
 alias {nvim-c,cleanvim}="nvim --clean"
