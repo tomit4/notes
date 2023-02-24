@@ -1,6 +1,6 @@
 /* enable in about:config by setting true:
  * toolkit.legacyUserProfileCustomizations.stylesheets*/
-
+#urlbar-input-container>#page-action-buttons,
 .urlbarView-favicon,
 .tab-icon-image,
 .tab-close-button {
