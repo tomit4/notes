@@ -3,16 +3,24 @@
 
 #urlbar-zoom-button,
 #tracking-protection-icon-container,
+#back-button,
+#forward-button,
 #stop-button,
 #reload-button,
 #statuspanel,
 #urlbar-input-container > #page-action-buttons,
 .urlbarView-favicon,
 .tab-icon-image,
+/* .tab-label-container, */
 .tab-close-button {
   display: none !important;
 }
 
 #urlbar-input::placeholder {
   color: transparent;
+}
+
+#nav-bar toolbarspring {
+    min-width: 55px !important;
+    max-width: 65px !important;
 }
