@@ -129,6 +129,8 @@ browser.proton.doorhangers.enabled set to false
 browser.proton.contextmenus.enabled set to false
 browser.sessionstore.resum_from_crash false
 
+browser.cache.disk.enable set to true (not privacy friendly, but allows for use ddg lite without error)
+
 Copy the chrome directory into the profile ($HOME/.librewolf/*.default-release)
 This feature isn't officially supported anymore so enable it by heading to
 about:config and find/set:
