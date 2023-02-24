@@ -19,7 +19,7 @@ Install NoScript
 Install Chameleon
 Install User-Agent-Switcher and Manager
 Install OverbiteWX
-Install OneTab
+Install OneTab (set OneTab to not open up on startup)
 Install Return YouTube Dislike
 Install Alter (redirect for nitter, invidious, teddit, scribe, bibliogram, etc.)
 Install bypass-paywalls (not official, go to https://github.com/iamadamdev/bypass-paywalls-chrome)
