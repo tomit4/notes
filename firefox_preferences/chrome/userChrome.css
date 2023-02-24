@@ -1,0 +1,8 @@
+/* enable in about:config by setting true:
+ * toolkit.legacyUserProfileCustomizations.stylesheets*/
+
+.urlbarView-favicon,
+.tab-icon-image,
+.tab-close-button {
+    display: none !important;
+}
