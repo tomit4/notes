@@ -568,7 +568,8 @@ alias solidproject="librewolf https://solidproject.org &"
 
 # split keyboard to eventually buy, learn to solder first
 alias aurora-sweep="librewolf https://splitkb.com/products/aurora-sweep &"
-
+# good shop for custom keyboards
+alias beekeeb="librewolf https://shop.beekeeb.com/ &"
 # Bootcamps
 alias alchemy="librewolf https://www.alchemycodelab.com/ &"
 alias cirrorg="librewolf https://cirr.org/ &" # verify validity of bootcamp reviews

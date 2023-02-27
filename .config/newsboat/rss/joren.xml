@@ -1,0 +1,3419 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://blog.joren.ga/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.joren.ga/" rel="alternate" type="text/html" /><updated>2023-02-27T01:05:30+00:00</updated><id>https://blog.joren.ga/feed.xml</id><title type="html">Joren-&amp;gt;blog</title><author><name>Jorengarenar</name></author><entry><title type="html">GOTOphobia considered harmful (in C)</title><link href="https://blog.joren.ga/gotophobia-harmful" rel="alternate" type="text/html" title="GOTOphobia considered harmful (in C)" /><published>2023-02-26T00:00:00+00:00</published><updated>2023-02-26T00:00:00+00:00</updated><id>https://blog.joren.ga/gotophobia-harmful</id><content type="html" xml:base="https://blog.joren.ga/gotophobia-harmful">&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;gotophobia&lt;/strong&gt; – fear of &lt;code&gt;goto&lt;/code&gt; statement, usually caused by misunderstanding
+and lack of context of stories from dark ages of programming. Programmers with
+gotophobia tend to make their code less readable just to avoid using &lt;code&gt;goto&lt;/code&gt;.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;Everybody and their grandpa knows (the meme title of) Dijkstra's
+&lt;a href=&quot;https://dl.acm.org/doi/epdf/10.1145/362929.362947&quot;&gt;&lt;em&gt;Letters to the editor: go to statement considered harmful&lt;/em&gt;&lt;/a&gt;
+(submitted under the title: &lt;em&gt;A case against the goto statement&lt;/em&gt;),
+but most forget the context of the 60s in which it was written,
+things we take for granted were a novelty back then.&lt;/p&gt;
+
+&lt;p&gt;A lot programmers learnt the craft in a world where &lt;code&gt;goto&lt;/code&gt; was the main method
+of flow control; even in structured languages it was easy for them to fall back
+on the learned bad habits and techniques.
+On the other hand, today we have the very opposite situation: programmers not
+using &lt;code&gt;goto&lt;/code&gt; when it's appropriate and abusing other constructs, what ironically
+makes code only less readable. They overfocus on the &lt;em&gt;WHAT&lt;/em&gt; (&quot;remove &lt;code&gt;goto&lt;/code&gt;&quot;)
+rather than the &lt;em&gt;WHY&lt;/em&gt; (&quot;because it improves readability and maintainability&quot;).&lt;/p&gt;
+
+&lt;p&gt;Academic teachers parroting &quot;&lt;code&gt;goto&lt;/code&gt; evil&quot; while not really understanding the
+language they teach only worsens the matter [speaking from experience]. Because
+who needs to learn good practices and discipline, right? It's obviously better
+to just ignore the topic entirely and let the students later wonder why they get
+&lt;a href=&quot;https://www.explainxkcd.com/wiki/index.php/292:_goto&quot;&gt;attacked by velociraptors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A &quot;goto&quot; is not, in and of itself, dangerous – it is a language feature,
+one that directly translates to the jump instructions implemented in machine
+code. Like pointers, operator overloading, and a host of other &quot;perceived&quot;
+evils in programming, &quot;goto&quot; is widely hated by those who've been bitten by
+poor programming. Bad code is the product of bad programmers; in my
+experience, a poor programmer will write a poor program, regardless of the
+availability of &quot;goto.&quot;&lt;/p&gt;
+
+  &lt;p&gt;If you think people can't write spaghetti code in a &quot;goto-less&quot; language, I
+can send you some &lt;em&gt;lovely&lt;/em&gt; examples to disabuse you of that notion. ;)&lt;/p&gt;
+
+  &lt;p&gt;Used over short distances with well-documented labels, a &quot;goto&quot; can be more
+effective, faster, and cleaner than a series of complex flags or other
+constructs. The &quot;goto&quot; may also be safer and more intuitive than the
+alternative. A &quot;break&quot; is a goto; a &quot;continue&quot; is a &quot;goto&quot; – these are
+statements that move the point of execution explicitly.&lt;/p&gt;
+
+  &lt;p&gt;~ &lt;a href=&quot;https://lkml.org/lkml/2003/1/12/245&quot;&gt;Scott Robert Ladd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Linux kernel is one thing, but if even such restrictive coding standard
+as MISRA C (2012 edition) can downgrade the prohibition on &lt;code&gt;goto&lt;/code&gt; from
+&lt;em&gt;required&lt;/em&gt; to &lt;em&gt;advisory&lt;/em&gt;, I think in regular code we can safely use &lt;code&gt;goto&lt;/code&gt;
+in judicious manner. Thus I want to present some situations and patterns
+where &lt;code&gt;goto&lt;/code&gt; could be acceptable (perhaps the best?) choice and you could
+maybe want to &lt;em&gt;consider&lt;/em&gt; using it.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;em&gt;The C Programming Language, 2nd ed.&lt;/em&gt; by Kernighan &amp;amp; Ritchie&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Goto#Common_usage_patterns&quot;&gt;Goto # Common usage patterns - Wikipedia&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/24451/10247460&quot;&gt;Are there any legitimate use-cases for &quot;goto&quot; in a language that supports loops and functions? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://beej.us/guide/bgc/html/split/goto.html&quot;&gt;Beej's Guide to C Programming: &lt;code&gt;goto&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://hal.inria.fr/hal-02383654/file/ModernC.pdf&quot;&gt;Modern C&lt;/a&gt; by Jens Gustedt&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://eli.thegreenplace.net/2009/04/27/using-goto-for-error-handling-in-c&quot;&gt;Using goto for error handling in C&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/doi/epdf/10.1145/356635.356640&quot;&gt;Structured Programming with &lt;em&gt;go to&lt;/em&gt; Statements&lt;/a&gt; by Donald E. Knuth&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/g3juie/error_handling_using_goto/&quot;&gt;Error handling using goto : r/C_Programming&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.kernel.org/doc/html/v6.2/process/coding-style.html#centralized-exiting-of-functions&quot;&gt;Linux kernel coding style&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.cprogramming.com/tutorial/goto.html&quot;&gt;When to use Goto in C - Cprogramming.com&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://alvaro-videla.com/2015/02/programming-myths.html&quot;&gt;Harmful GOTOs, Premature Optimizations, and Programming Myths are the Root of all Evil&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/245742/10247460&quot;&gt;Examples of good gotos in C or C++ - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8bmEhtMVrhk&quot;&gt;Should you ever use a goto? - Jacob Sorber - YouTube&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://chidiwilliams.com/post/goto/&quot;&gt;GOTO Reconsidered&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://web.archive.org/web/20090320002214/http://www.ecn.purdue.edu/ParaMount/papers/rubin87goto.pdf&quot;&gt;&quot;GOTO Considered Harmful&quot; Considered Harmful&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/wimvdf/when_is_it_appropriate_to_use_goto/&quot;&gt;When is it appropriate to use GOTO? : r/C_Programming&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/800194.805859&quot;&gt;Programming With(out) the GOTO&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://geometrian.com/programming/tutorials/gotogood/index.php&quot;&gt;Ian Mallett - Tutorials: The goto Statement is Good&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://wiki.sei.cmu.edu/confluence/display/c/MEM12-C.+Consider+using+a+goto+chain+when+leaving+a+function+on+error+when+using+and+releasing+resources&quot;&gt;MEM12-C. Consider using a goto chain when leaving a function on error when using and releasing resources - SEI CERT C Coding Standard&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/788903/10247460&quot;&gt;Valid use of goto for error management in C? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://lkml.org/lkml/2003/1/12/126&quot;&gt;LKML: Rob Wilkens: Re: any chance of 2.6.0-test*?&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;https://web.archive.org/web/20130521051957/https://kerneltrap.org/node/553/2131&quot;&gt;Linux: Using goto In Kernel Code | KernelTrap&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://koblents.com/Ches/Links/Month-Mar-2013/20-Using-Goto-in-Linux-Kernel-Code/&quot;&gt;Using Goto in Linux Kernel Code | Koblents.com&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#errorexception-handling--cleanup&quot; id=&quot;markdown-toc-errorexception-handling--cleanup&quot;&gt;Error/exception handling &amp;amp; cleanup&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-1-nested-ifs&quot; id=&quot;markdown-toc-goto-less-alternative-1-nested-ifs&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: nested &lt;code&gt;if&lt;/code&gt;s&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-2-if-not-then-clean&quot; id=&quot;markdown-toc-goto-less-alternative-2-if-not-then-clean&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: if not then clean&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-3-flags&quot; id=&quot;markdown-toc-goto-less-alternative-3-flags&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3: flags&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-35-so-far-ok-flag&quot; id=&quot;markdown-toc-goto-less-alternative-35-so-far-ok-flag&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3.5: so-far-ok flag&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-4-functions&quot; id=&quot;markdown-toc-goto-less-alternative-4-functions&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 4: functions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-5-abuse-of-loops&quot; id=&quot;markdown-toc-goto-less-alternative-5-abuse-of-loops&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 5: abuse of loops&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#restartretry&quot; id=&quot;markdown-toc-restartretry&quot;&gt;Restart/retry&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-loop&quot; id=&quot;markdown-toc-goto-less-alternative-loop&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative: loop&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#less-trivial-example&quot; id=&quot;markdown-toc-less-trivial-example&quot;&gt;Less trivial example&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#goto-version&quot; id=&quot;markdown-toc-goto-version&quot;&gt;&lt;code&gt;goto&lt;/code&gt; version&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#goto-less-version&quot; id=&quot;markdown-toc-goto-less-version&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less version&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#common-code-in-switch-statement&quot; id=&quot;markdown-toc-common-code-in-switch-statement&quot;&gt;Common code in &lt;code&gt;switch&lt;/code&gt; statement&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-1-functions&quot; id=&quot;markdown-toc-goto-less-alternative-1-functions&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: functions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-2-ifs&quot; id=&quot;markdown-toc-goto-less-alternative-2-ifs&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: &lt;code&gt;if&lt;/code&gt;s&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-3-interlacing-if-0&quot; id=&quot;markdown-toc-goto-less-alternative-3-interlacing-if-0&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3: interlacing &lt;code&gt;if (0)&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-capturing-lambda&quot; id=&quot;markdown-toc-goto-less-alternative-capturing-lambda&quot;&gt;&lt;del&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative: capturing lambda&lt;/del&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#nested-break-labeled-continue&quot; id=&quot;markdown-toc-nested-break-labeled-continue&quot;&gt;Nested &lt;code&gt;break&lt;/code&gt;, labeled &lt;code&gt;continue&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#simple-state-machines&quot; id=&quot;markdown-toc-simple-state-machines&quot;&gt;Simple state machines&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jumping-into-event-loop&quot; id=&quot;markdown-toc-jumping-into-event-loop&quot;&gt;Jumping into event loop&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-1-guard-flag&quot; id=&quot;markdown-toc-goto-less-alternative-1-guard-flag&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: guard flag&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#goto-less-alternative-2-code-duplication&quot; id=&quot;markdown-toc-goto-less-alternative-2-code-duplication&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: code duplication&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#optimizations&quot; id=&quot;markdown-toc-optimizations&quot;&gt;Optimizations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#structured-programming-with-go-to-statements&quot; id=&quot;markdown-toc-structured-programming-with-go-to-statements&quot;&gt;&lt;em&gt;Structured Programming with &lt;strong&gt;go to&lt;/strong&gt; Statements&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;errorexception-handling--cleanup&quot;&gt;Error/exception handling &amp;amp; cleanup&lt;/h1&gt;
+
+&lt;p&gt;Poster child of using &lt;code&gt;goto&lt;/code&gt; – most of the times accepted, often recommended,
+sometimes even straight up mandated. This pattern results in a good quality
+code, because the operations of the algorithm are &lt;em&gt;structured&lt;/em&gt; in a clear order,
+while errors and other overhead is handled somewhere else, outside the mainline.
+The alternatives make the code less readable as it's hard to spot where the
+main code is buried among the error checks.&lt;/p&gt;
+
+&lt;p&gt;From SEI CERT C Coding Standard:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Many functions require the allocation of multiple resources. Failing and
+returning somewhere in the middle of this function without freeing all of
+the allocated resources could produce a memory leak. It is a common error
+to forget to free one (or all) of the resources in this manner, so a &lt;code&gt;goto&lt;/code&gt;
+chain is the simplest and cleanest way to organize exits while preserving
+the order of freed resources.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* foo(int bar)
+{
+    int* return_value = NULL;
+
+    if (!do_something(bar)) {
+        goto error_1;
+    }
+    if (!init_stuff(bar)) {
+        goto error_2;
+    }
+    if (!prepare_stuff(bar)) {
+        goto error_3;
+    }
+    return_value = do_the_thing(bar);
+
+error_3:
+    cleanup_3();
+error_2:
+    cleanup_2();
+error_1:
+    cleanup_1();
+
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Randomly taken real-life &lt;a href=&quot;http://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/clk/mmp/clk-audio.c#n345&quot;&gt;example from Linux kernel&lt;/a&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;// SPDX-License-Identifier: GPL-2.0-or-later
+/*
+ * MMP Audio Clock Controller driver
+ *
+ * Copyright (C) 2020 Lubomir Rintel &amp;lt;lkundrak@v3.sk&amp;gt;
+ */
+
+static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+	struct mmp2_audio_clk *priv;
+	int ret;
+
+	priv = devm_kzalloc(&amp;amp;pdev-&amp;gt;dev,
+			    struct_size(priv, clk_data.hws,
+					MMP2_CLK_AUDIO_NR_CLKS),
+			    GFP_KERNEL);
+	if (!priv)
+		return -ENOMEM;
+
+	spin_lock_init(&amp;amp;priv-&amp;gt;lock);
+	platform_set_drvdata(pdev, priv);
+
+	priv-&amp;gt;mmio_base = devm_platform_ioremap_resource(pdev, 0);
+	if (IS_ERR(priv-&amp;gt;mmio_base))
+		return PTR_ERR(priv-&amp;gt;mmio_base);
+
+	pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+	ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+	if (ret)
+		goto disable_pm_runtime;
+
+	ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+	if (ret)
+		goto destroy_pm_clk;
+
+	ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+	if (ret)
+		goto destroy_pm_clk;
+
+	return 0;
+
+destroy_pm_clk:
+	pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+disable_pm_runtime:
+	pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+
+	return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-1-nested-ifs&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: nested &lt;code&gt;if&lt;/code&gt;s&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;nesting (&lt;em&gt;arrow anti-pattern&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;potentially duplicated code (see example function from Linux)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* foo(int bar)
+{
+    int* return_value = NULL;
+
+    if (do_something(bar)) {
+        if (init_stuff(bar)) {
+            if (prepare_stuff(bar)) {
+                return_value = do_the_thing(bar);
+            }
+            cleanup_3();
+        }
+        cleanup_2();
+    }
+    cleanup_1();
+
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+    if (!ret) {
+        ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+        if (!ret) {
+            ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+            if (!ret) {
+                pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+                pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+            }
+        } else {
+            pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+            pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        }
+    } else {
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+    }
+
+    return ret; // original was returning 0 explicitly
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;And here Microsoft provides us with a &lt;a href=&quot;https://learn.microsoft.com/en-us/windows/win32/shell/common-file-dialog#basic-usage&quot;&gt;lovely example of such &quot;beautiful&quot; nesting&lt;/a&gt;
+(&lt;a href=&quot;https://web.archive.org/web/20221203064532/https://learn.microsoft.com/en-us/windows/win32/shell/common-file-dialog#basic-usage&quot;&gt;archived version&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-2-if-not-then-clean&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: if not then clean&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;duplicated code&lt;/li&gt;
+  &lt;li&gt;multiple exit points&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* foo(int bar)
+{
+    int* return_value = NULL;
+
+    if (!do_something(bar)) {
+        cleanup_1();
+        return return_value;
+    }
+    if (!init_stuff(bar)) {
+        cleanup_2();
+        cleanup_1();
+        return return_value;
+    }
+    if (!prepare_stuff(bar)) {
+        cleanup_3();
+        cleanup_2();
+        cleanup_1();
+        return return_value;
+    }
+
+    cleanup_3();
+    cleanup_2();
+    cleanup_1();
+
+    return do_the_thing(bar);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+    if (ret) {
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        return ret;
+    }
+
+    ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+    if (ret) {
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        return ret;
+    }
+
+    ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+    if (ret) {
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        return ret;
+    }
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-3-flags&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3: flags&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;additional variables&lt;/li&gt;
+  &lt;li&gt;&quot;cascading&quot; booleans&lt;/li&gt;
+  &lt;li&gt;potential nesting&lt;/li&gt;
+  &lt;li&gt;potential complicated boolean expressions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* foo(int bar)
+{
+    int* return_value = NULL;
+
+    bool flag_1 = false;
+    bool flag_2 = false;
+    bool flag_3 = false;
+
+    flag_1 = do_something(bar);
+    if (flag_1) {
+        flag_2 = init_stuff(bar);
+    }
+    if (flag_2) {
+        flag_3 = prepare_stuff(bar);
+    }
+    if (flag_3) {
+        return_value = do_the_thing(bar);
+    }
+
+    if (flag_3) {
+        cleanup_3();
+    }
+    if (flag_2) {
+        cleanup_2();
+    }
+    if (flag_1) {
+        cleanup_1();
+    }
+
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Rewrite of &lt;code&gt;mmp2_audio_clk_probe()&lt;/code&gt; function doesn't fit clearly into
+this case, thus I've put two variants under alternative 3.5 instead.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-35-so-far-ok-flag&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3.5: so-far-ok flag&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int foo(int bar)
+{
+    int return_value = 0;
+    bool something_done = false;
+    bool stuff_inited = false;
+    bool stuff_prepared = false;
+    bool oksofar = true;
+
+    if (oksofar) {  // this IF is optional (always execs) but included for consistency
+        if (do_something(bar)) {
+            something_done = true;
+        } else {
+            oksofar = false;
+        }
+    }
+
+    if (oksofar) {
+        if (init_stuff(bar)) {
+            stuff_inited = true;
+        } else {
+            oksofar = false;
+        }
+    }
+
+    if (oksofar) {
+        if (prepare_stuff(bar)) {
+            stuff_prepared = true;
+        } else {
+            oksofar = false;
+        }
+    }
+
+    // Do the thing
+    if (oksofar) {
+        return_value = do_the_thing(bar);
+    }
+
+    // Clean up
+    if (stuff_prepared) {
+        cleanup_3();
+    }
+    if (stuff_inited) {
+        cleanup_2();
+    }
+    if (something_done) {
+        cleanup_1();
+    }
+
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    bool destroy_pm_clk = false;
+
+    ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+    if (!ret) {
+        ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+        if (ret) {
+            destroy_pm_clk = true;
+        }
+    }
+    if (!ret) {
+        ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+        if (ret) {
+            destroy_pm_clk = true;
+        }
+    }
+
+    if (ret) {
+        if (destroy_pm_clk) {
+            pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+        }
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        return ret;
+    }
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    bool destroy_pm_clk = false;
+    bool disable_pm_runtime = false;
+
+    ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+    if (ret) {
+        disable_pm_runtime = true;
+    }
+    if (!ret) {
+        ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+        if (ret) {
+            destroy_pm_clk = true;
+        }
+    }
+    if (!ret) {
+        ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+        if (ret) {
+            destroy_pm_clk = true;
+        }
+    }
+
+    if (destroy_pm_clk) {
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+    }
+    if (disable_pm_runtime) {
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+    }
+
+    return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-4-functions&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 4: functions&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span title=&quot;Things should not be multiplied beyond what is required&quot;&gt;&quot;Entia non sunt multiplicanda praeter necessitatem&quot;&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;reading bottom-up instead of top-bottom&lt;/li&gt;
+  &lt;li&gt;may require passing context around&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static inline int foo_2(int bar)
+{
+    int return_value = 0;
+    if (prepare_stuff(bar)) {
+        return_value = do_the_thing(bar);
+    }
+    cleanup_3();
+    return return_value;
+}
+
+static inline int foo_1(int bar)
+{
+    int return_value = 0;
+    if (init_stuff(bar)) {
+        return_value = foo_2(bar);
+    }
+    cleanup_2();
+    return return_value;
+}
+
+int foo(int bar)
+{
+    int return_value = 0;
+    if (do_something(bar)) {
+        return_value = foo_1(bar);
+    }
+    cleanup_1();
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static inline int mmp2_audio_clk_probe_3(struct platform_device* pdev)
+{
+    int ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+    if (ret) {
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+    }
+    return ret;
+}
+
+static inline int mmp2_audio_clk_probe_2(struct platform_device* pdev)
+{
+    int ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+    if (ret) {
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+    } else {
+        ret = mmp2_audio_clk_probe_3(pdev);
+    }
+    return ret;
+}
+
+static inline int mmp2_audio_clk_probe_1(struct platform_device* pdev)
+{
+    int ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+    if (ret) {
+        pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+    } else {
+        ret = mmp2_audio_clk_probe_2(pdev);
+        if (ret) {
+            pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+        }
+    }
+    return ret;
+}
+
+static int mmp2_audio_clk_probe(struct platform_device* pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    ret = mmp2_audio_clk_probe_1(pdev);
+
+    return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-5-abuse-of-loops&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 5: abuse of loops&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;half of the drawback of &lt;code&gt;goto&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;half of the drawback of other alternatives&lt;/li&gt;
+  &lt;li&gt;none of the benefits of either of the above&lt;/li&gt;
+  &lt;li&gt;not structural anyway&lt;/li&gt;
+  &lt;li&gt;creates loop which doesn't loop&lt;/li&gt;
+  &lt;li&gt;abuse of one language construct just to avoid using the right tool for the job&lt;/li&gt;
+  &lt;li&gt;less readable&lt;/li&gt;
+  &lt;li&gt;counter intuitive, confusing&lt;/li&gt;
+  &lt;li&gt;adds unnecessary nesting&lt;/li&gt;
+  &lt;li&gt;takes more lines&lt;/li&gt;
+  &lt;li&gt;don't even think about using a legitimate loop somewhere among this mess&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* foo(int bar)
+{
+    int* return_value = NULL;
+
+    do {
+        if (!do_something(bar)) break;
+        do {
+            if (!init_stuff(bar)) break;
+            do {
+                if (!prepare_stuff(bar)) break;
+                return_value = do_the_thing(bar);
+            } while (0);
+            cleanup_3();
+        } while (0);
+        cleanup_2();
+    } while (0);
+    cleanup_1();
+
+    return return_value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Example from Linux kernel rewritten&lt;/summary&gt;
+&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;static int mmp2_audio_clk_probe(struct platform_device *pdev)
+{
+    // ...
+    pm_runtime_enable(&amp;amp;pdev-&amp;gt;dev);
+
+    do {
+        ret = pm_clk_create(&amp;amp;pdev-&amp;gt;dev);
+        if (ret) break;
+
+        do {
+            ret = pm_clk_add(&amp;amp;pdev-&amp;gt;dev, &quot;audio&quot;);
+            if (ret) break;
+
+            ret = register_clocks(priv, &amp;amp;pdev-&amp;gt;dev);
+            if (ret) break;
+        } while (0);
+        pm_clk_destroy(&amp;amp;pdev-&amp;gt;dev);
+    } while (0);
+    pm_runtime_disable(&amp;amp;pdev-&amp;gt;dev);
+
+    return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h1 id=&quot;restartretry&quot;&gt;Restart/retry&lt;/h1&gt;
+
+&lt;p&gt;Common especially on *nix systems when dealing with system calls returning
+an error after being interrupted by a signal + setting &lt;code&gt;errno&lt;/code&gt; to &lt;code&gt;EINTR&lt;/code&gt;
+to indicate the it was doing fine and was just interrupted.
+Of course, it's not limited to system calls.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;errno.h&amp;gt;
+
+int main()
+{
+retry_syscall:
+    if (some_syscall() == -1) {
+        if (errno == EINTR) {
+            goto retry_syscall;
+        }
+
+        // handle real errors
+    }
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;I think in this particular case this one level of additional nesting isn't so
+bad, but to be fair, without rewriting it I wouldn't be able to fairly present
+the &lt;code&gt;goto&lt;/code&gt;-less alternative.&lt;/p&gt;
+
+  &lt;details&gt;
+&lt;summary&gt;Version with reduced nesting&lt;/summary&gt;
+
+&lt;div&gt;
+      &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;errno.h&amp;gt;
+
+int main()
+{
+    int res;
+retry_syscall:
+    res = some_syscall();
+    if (res == -1 &amp;amp;&amp;amp; errno == EINTR) {
+        goto retry_syscall;
+    }
+
+    if (res) {
+        // handle real errors
+    }
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/details&gt;
+&lt;/aside&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-loop&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative: loop&lt;/h2&gt;
+
+&lt;p&gt;We can of course use a &lt;code&gt;do {} while&lt;/code&gt; loop with conditions in &lt;code&gt;while&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;errno.h&amp;gt;
+
+int main()
+{
+    int res;
+    do {
+        res = some_system_call();
+    } while (res == -1 &amp;amp;&amp;amp; errno == EINTR);
+
+    if (res == -1) {
+        // handle real errors
+    }
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I think both versions are comparatively readable, but &lt;code&gt;goto&lt;/code&gt; has slight advantage
+by making it immediately clear the looping is not a desirable situation, while
+&lt;code&gt;while&lt;/code&gt; loop may be misinterpreted as &lt;a href=&quot;https://en.wikipedia.org/wiki/Busy_waiting&quot;&gt;waiting loop&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;less-trivial-example&quot;&gt;Less trivial example&lt;/h2&gt;
+
+&lt;p&gt;For those, I'm willing to break the overall monochrome theme of the site and
+define colors for syntax highlights. Even with simple parsing done by kramdown
+(your code editor would certainty do a better job here), we already notice
+labels and &lt;code&gt;goto&lt;/code&gt; statements standing out a little from the rest of the code.
+Flags on the other hand get lost among other variables.&lt;/p&gt;
+
+&lt;style&gt;
+.k, .kt  { color: #66d9ef; font-weight:bold }
+.c1, .cm { color: #75715e }
+.cp { color: #75715e; font-weight: bold }
+.o  { color: #f92672; font-weight: bold }
+.mi { color: #ae81ff }
+.nf { color: #a6e22e }
+.p  { color: #f7a000 }
+.nl { color: #f4f406 }
+&lt;/style&gt;
+
+&lt;h3 id=&quot;goto-version&quot;&gt;&lt;code&gt;goto&lt;/code&gt; version&lt;/h3&gt;
+
+&lt;div&gt;
+
+  &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;string.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_THIS_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_THAT_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_PROCESS_CONDITIONALLY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_CONDITION_SKIPPED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NOT_READY_TO_SEND&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;parse_packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_error_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;_Bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_condition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// get packet etc. ...&lt;/span&gt;
+
+&lt;span class=&quot;nl&quot;&gt;REPARSE_PACKET:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_THIS_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* problem condition */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// ... handle THIS_OPERATION&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_THAT_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* problem condition */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// ... handle THAT_OPERATION&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_PROCESS_CONDITIONALLY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet_condition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;memmove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;REPARSE_PACKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_CONDITION_SKIPPED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;default:&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;PACKET_ERROR:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_error_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&quot;goto-less-version&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less version&lt;/h3&gt;
+&lt;div&gt;
+
+  &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;string.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_THIS_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_THAT_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_PROCESS_CONDITIONALLY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_CONDITION_SKIPPED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PKT_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NOT_READY_TO_SEND&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;parse_packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_error_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;_Bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_condition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// get packet etc. ...&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;_Bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;REPARSE_PACKET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;_Bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;REPARSE_PACKET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;REPARSE_PACKET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_THIS_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* problem condition */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;// ... handle THIS_OPERATION&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_THAT_OPERATION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* problem condition */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;// ... handle THAT_OPERATION&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_PROCESS_CONDITIONALLY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet_condition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;memmove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;REPARSE_PACKET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_CONDITION_SKIPPED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+            &lt;span class=&quot;nl&quot;&gt;default:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PACKET_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_error_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PKT_ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;packet_status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOT_READY_TO_SEND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&quot;common-code-in-switch-statement&quot;&gt;Common code in &lt;code&gt;switch&lt;/code&gt; statement&lt;/h1&gt;
+
+&lt;p&gt;This situation may be a good opportunity to check if the code doesn't need to
+be refactored altogether; that being said, sometimes you want to have &lt;code&gt;switch&lt;/code&gt;
+statement where cases make minor changes then run the same code.&lt;/p&gt;
+
+&lt;p&gt;Sure, you could extract the common code into function, but then you need to pass
+all the context to it, but that may be inconvenient (for you may need to pass
+a lot of parameters or making a dedicated structure, in both cases probably with
+pointers) and may increase complexity of the code; in some cases, you may wish
+there being only one call to the function instead of multiple.&lt;/p&gt;
+
+&lt;p&gt;So why not just jump to the common code?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int foo(int v)
+{
+    // ...
+    int something = 0;
+    switch (v) {
+        case FIRST_CASE:
+            something = 2;
+            goto common1;
+        case SECOND_CASE:
+            something = 7;
+            goto common1;
+        case THIRD_CASE:
+            something = 9;
+            goto common1;
+common1:
+            /* code common to FIRST, SECOND and THIRD cases */
+            break;
+
+        case FOURTH_CASE:
+            something = 10;
+            goto common2;
+        case FIFTH_CASE:
+            something = 42;
+            goto common2;
+common2:
+            /* code common to FOURTH and FIFTH cases */
+            break;
+    }
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-1-functions&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: functions&lt;/h2&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span title=&quot;Things should not be multiplied beyond what is required&quot;&gt;&quot;Entia non sunt multiplicanda praeter necessitatem&quot;&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;reading bottom-up instead of top-bottom&lt;/li&gt;
+  &lt;li&gt;may require passing context around&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct foo_context {
+    int* something;
+    // ...
+};
+
+static void common1(struct foo_context ctx)
+{
+    /* code common to FIRST, SECOND and THIRD cases */
+}
+
+static void common2(struct foo_context ctx)
+{
+    /* code common to FOURTH and FIFTH cases */
+}
+
+int foo(int v)
+{
+    struct foo_context ctx = { NULL };
+    // ...
+    int something = 0;
+    ctx.something = &amp;amp;something;
+
+    switch (v) {
+        case FIRST_CASE:
+            something = 2;
+            common1(ctx);
+            break;
+        case SECOND_CASE:
+            something = 7;
+            common1(ctx);
+            break;
+        case THIRD_CASE:
+            something = 9;
+            common1(ctx);
+            break;
+
+        case FOURTH_CASE:
+            something = 10;
+            common2(ctx);
+            break;
+        case FIFTH_CASE:
+            something = 42;
+            common2(ctx);
+            break;
+    }
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-2-ifs&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: &lt;code&gt;if&lt;/code&gt;s&lt;/h2&gt;
+
+&lt;p&gt;We can abandon elegance and replace the &lt;code&gt;switch&lt;/code&gt; statement with &lt;code&gt;if&lt;/code&gt;s&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int foo(int v)
+{
+    // ...
+    int something = 0;
+    if (v == FIRST_CASE || v == SECOND_CASE || v == THIRD_CASE) {
+        if (v == FIRST_CASE) {
+            something = 2;
+        } else if (v == SECOND_CASE) {
+            something = 7;
+        } else if (v == THIRD_CASE) { // it could be just `else`
+            something = 9;
+        }
+        /* code common to FIRST, SECOND and THIRD cases */
+    } else if (v == FOURTH_CASE || v == FIFTH_CASE) {
+        if (v == FOURTH_CASE) {
+            something = 10;
+        } else {
+            something = 42;
+        }
+        /* code common to FOURTH and FIFTH cases */
+    }
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-3-interlacing-if-0&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 3: interlacing &lt;code&gt;if (0)&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Please, don't, just don't…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int foo(int v)
+{
+    // ...
+    int something = 0;
+    switch (v) {
+        case FIRST_CASE:
+            something = 2;
+      if (0) {
+        case SECOND_CASE:
+            something = 7;
+      }
+      if (0) {
+        case THIRD_CASE:
+            something = 9;
+      }
+            /* code common to FIRST, SECOND and THIRD cases */
+            break;
+
+        case FOURTH_CASE:
+            something = 10;
+      if (0) {
+        case FIFTH_CASE:
+            something = 42;
+      }
+            /* code common to FOURTH and FIFTH cases */
+            break;
+    }
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;goto-less-alternative-capturing-lambda&quot;&gt;&lt;del&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative: capturing lambda&lt;/del&gt;&lt;/h2&gt;
+
+&lt;p&gt;Yeah, maybe some day…&lt;/p&gt;
+
+&lt;h1 id=&quot;nested-break-labeled-continue&quot;&gt;Nested &lt;code&gt;break&lt;/code&gt;, labeled &lt;code&gt;continue&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;I think this one doesn't require further explanation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main()
+{
+    for (int i = 1; i &amp;lt;= 5; ++i) {
+        printf(&quot;outer iteration (i): %d\n&quot;, i);
+
+        for (int j = 1; j &amp;lt;= 200; ++j) {
+            printf(&quot;    inner iteration (j): %d\n&quot;, j);
+            if (j &amp;gt;= 3) {
+                break; // breaks from inner loop, outer loop continues
+            }
+            if (i &amp;gt;= 2) {
+                goto outer; // breaks from outer loop, and directly to &quot;Done!&quot;
+            }
+        }
+    }
+outer:
+
+    puts(&quot;Done!&quot;);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can use &lt;a href=&quot;https://beej.us/guide/bgc/html/split/goto.html#labeled-continue&quot;&gt;analogous mechanism for &lt;code&gt;continue&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Beej's Guide to C Programming&lt;/em&gt; has nice example of using this technique alongside the cleanup one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;    for (...) {
+        for (...) {
+            while (...) {
+                do {
+                    if (some_error_condition) {
+                        goto bail;
+                    }
+                    // ...
+                } while(...);
+            }
+        }
+    }
+
+bail:
+    // Cleanup here
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;Without &lt;code&gt;goto&lt;/code&gt;, you’d have to check an error condition
+flag in all of the loops to get all the way out.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;simple-state-machines&quot;&gt;Simple state machines&lt;/h1&gt;
+
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 260 130&quot; style=&quot;font-family: Times&quot;&gt;
+  &lt;g fill=&quot;#ffffff&quot; stroke=&quot;#ffffff&quot;&gt;
+    &lt;ellipse cx=&quot;80&quot; cy=&quot;100&quot; rx=&quot;10&quot; ry=&quot;10&quot; /&gt;
+    &lt;ellipse cx=&quot;160&quot; cy=&quot;101&quot; rx=&quot;10&quot; ry=&quot;10&quot; /&gt;
+    &lt;ellipse cx=&quot;120&quot; cy=&quot;41&quot; rx=&quot;10&quot; ry=&quot;10&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;g fill=&quot;black&quot;&gt;
+    &lt;text x=&quot;73&quot; y=&quot;106&quot;&gt;A&lt;/text&gt;
+    &lt;text x=&quot;154&quot; y=&quot;107&quot;&gt;B&lt;/text&gt;
+    &lt;text x=&quot;113&quot; y=&quot;47&quot;&gt;C&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;g fill=&quot;white&quot;&gt;
+    &lt;g stroke=&quot;white&quot;&gt;
+      &lt;path d=&quot;M 80 91 L 80 51 Q 80 41 90 41 L 105.88 41&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 108.88 41 L 104.88 43 L 105.88 41 L 104.88 39 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 130 41 L 150 41 Q 160 41 160 51 L 160 86.88&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 160 89.88 L 158 85.88 L 160 86.88 L 162 85.88 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 152.93 108.07 Q 140 121 120 121 Q 100 121 89.98 110.98&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 87.86 108.86 L 92.1 110.28 L 89.98 110.98 L 89.28 113.1 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 87.07 93.93 Q 100 81 120 81 Q 140 81 150.02 91.02&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 152.14 93.14 L 147.9 91.72 L 150.02 91.02 L 150.72 88.9 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 112.93 33.93 Q 113 11 120 11 Q 127 11 127.06 29.81&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 127.00 32.81 L 125.06 28.82 L 127.06 29.81 L 129.06 28.8 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 80 111 Q 80 131 70 126 Q 60 121 70.02 110.98&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 72.14 108.86 L 70.72 113.1 L 70.02 110.98 L 67.9 110.28 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 160 111 Q 160 131 170 126 Q 180 121 169.98 110.98&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 167.86 108.86 L 172.1 110.28 L 169.98 110.98 L 169.28 113.1 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 30 91 L 66 100&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 68.92 100.73 L 64.55 101.7 L 66 100 L 65.52 97.82 Z&quot; /&gt;
+
+      &lt;path d=&quot;M 170 101 L 206 92&quot; fill=&quot;none&quot; /&gt;
+      &lt;path d=&quot;M 208.92 91.27 L 205.52 94.18 L 206 92 L 204.55 90.3 Z&quot; /&gt;
+    &lt;/g&gt;
+
+    &lt;text x=&quot;16&quot; y=&quot;90&quot;&gt;S&lt;/text&gt;
+    &lt;text x=&quot;214&quot; y=&quot;90&quot;&gt;F&lt;/text&gt;
+
+    &lt;g font-size=&quot;0.7em&quot;&gt;
+      &lt;text x=&quot;117&quot; y=&quot;7&quot;&gt;x&lt;/text&gt;
+
+      &lt;text x=&quot;70&quot; y=&quot;55&quot;&gt;y&lt;/text&gt;
+      &lt;text x=&quot;165&quot; y=&quot;55&quot;&gt;z&lt;/text&gt;
+
+      &lt;text x=&quot;117&quot; y=&quot;75&quot;&gt;x&lt;/text&gt;
+      &lt;text x=&quot;117&quot; y=&quot;115&quot;&gt;y&lt;/text&gt;
+
+      &lt;text x=&quot;55&quot; y=&quot;125&quot;&gt;z&lt;/text&gt;
+      &lt;text x=&quot;180&quot; y=&quot;125&quot;&gt;x&lt;/text&gt;
+
+      &lt;text x=&quot;180&quot; y=&quot;90&quot; font-style=&quot;italic&quot;&gt;nul&lt;/text&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+
+&lt;p&gt;The following is a 1:1, not far from &lt;strong&gt;verbatim mathematical notation&lt;/strong&gt;,
+implementation of the above state machine:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;_Bool machine(const char* c)
+{
+qA:
+    switch (*(c++)) {
+        case 'x': goto qB;
+        case 'y': goto qC;
+        case 'z': goto qA;
+        default: goto err;
+    }
+
+qB:
+    switch (*(c++)) {
+        case 'x': goto qC;
+        case 'z': goto qB;
+        case '\0': goto F;
+        default: goto err;
+    }
+
+qC:
+    switch (*(c++)) {
+        case 'x': goto qB;
+        case 'y': goto qA;
+        default: goto err;
+    }
+
+F:
+    return true;
+
+err:
+    return false;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;jumping-into-event-loop&quot;&gt;Jumping into event loop&lt;/h1&gt;
+
+&lt;p&gt;Yeah, yeah, I know jumping &lt;em&gt;into&lt;/em&gt; warrants at least a raised eyebrow.
+That being said, there are cases when you may want to do just that.&lt;/p&gt;
+
+&lt;p&gt;Here in first iteration program skips increasing variable and goes straight
+to allocation. Each following iteration executes code as written, ignoring
+completely the label relevant only for the first run; so you do too during
+analysis.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;fancy_alloc.h&amp;gt;
+
+int main()
+{
+    int* buf = NULL;
+    size_t pos = 0;
+    size_t sz = 8;
+
+    int* temp;
+
+    goto ALLOC;
+    do {
+        if (pos &amp;gt; sz) { // resize array
+            sz *= 2;
+ALLOC:      temp = arrayAllocSmart(buf, sz, pos);
+            /* check for errors */
+            buf = temp;
+        }
+
+        /* do something with buf */
+    } while (checkQuit());
+
+    return 0;
+
+    /* handle errors ... */
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;goto-less-alternative-1-guard-flag&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 1: guard flag&lt;/h3&gt;
+
+&lt;p&gt;I probably says more about the state of my sleep deprived brain than anything
+else, but I actually managed to make an honest, very dumb mistake in this
+simple snippet. I didn't notice until after examining the assembly output
+and seeing way less instructions than expected. Since it's simple, yet quite
+severe in consequences, I decided to leave it as an exercise for the reader
+to spot the bug (should be easy since you already know about its existence).&lt;/p&gt;
+
+&lt;p&gt;The drawbacks as per usual: nesting and keeping track of flags.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;fancy_alloc.h&amp;gt;
+
+int main()
+{
+    int* buf = NULL;
+    size_t pos = 0;
+    size_t sz = 8;
+
+    int ret = 0
+
+    _Bool firstIter = true;
+
+    do {
+        if (pos &amp;gt; sz || firstIter) { // resize array
+            if (!firstIter) {
+                sz *= 2;
+                firstIter = false;
+            }
+
+            int* temp = arrayAllocSmart(buf, sz, pos);
+            /* handle errors ... */
+            buf = temp;
+        }
+
+        /* do something with buf */
+    } while (checkQuit());
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;goto-less-alternative-2-code-duplication&quot;&gt;&lt;code&gt;goto&lt;/code&gt;-less alternative 2: code duplication&lt;/h3&gt;
+
+&lt;p&gt;The drawback is obvious, thus no further comment.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;fancy_alloc.h&amp;gt;
+
+int main()
+{
+    size_t pos = 0;
+    size_t sz = 8;
+
+    int* buf = arrayAllocSmart(NULL, sz, pos);
+    /* handle errors ... */
+
+    do {
+        if (pos &amp;gt; sz) { // resize array
+            sz *= 2;
+            int* temp = arrayAllocSmart(buf, sz, pos);
+            /* handle errors ... */
+            buf = temp;
+        }
+
+        /* do something with buf */
+    } while (checkQuit());
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;optimizations&quot;&gt;Optimizations&lt;/h1&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;This section is purely informative, just to appear on list as to mark the
+existence of such use-case. Giving an example for this is not so easy as
+most of them apply only in very narrow situations, not rarely bordering
+on micro-optimizing.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Often extensions like &lt;a href=&quot;https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html&quot;&gt;computed &lt;code&gt;goto&lt;/code&gt;&lt;/a&gt; are used&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Beej shows &lt;a href=&quot;https://beej.us/guide/bgc/html/split/goto.html#tail-call-optimization&quot;&gt;tail call optimization&lt;/a&gt;
+as an example in his book, unfortunately (from educational standpoint! otherwise very good) modern compilers
+easily optimize something as simple as factorial to the very same assembly which we get using the &lt;code&gt;goto&lt;/code&gt;
+optimization. On the other hand, not everybody is blessed with modern, optimizing compiler…&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h1 id=&quot;structured-programming-with-go-to-statements&quot;&gt;&lt;a href=&quot;https://dl.acm.org/doi/epdf/10.1145/356635.356640&quot;&gt;&lt;em&gt;Structured Programming with &lt;strong&gt;go to&lt;/strong&gt; Statements&lt;/em&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Read at:
+  &lt;a href=&quot;https://dl.acm.org/doi/epdf/10.1145/356635.356640&quot;&gt;[ACM Digital Library]&lt;/a&gt;
+  &lt;a href=&quot;https://pic.plover.com/knuth-GOTO.pdf&quot;&gt;[PDF]&lt;/a&gt;
+  &lt;a href=&quot;http://www.kohala.com/start/papers.others/knuth.dec74.html&quot;&gt;[HTML]&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If I started from Dijkstra, it's only natural I need to conclude with Knuth. &lt;br /&gt;
+Almost anybody who says anything positive about &lt;code&gt;goto&lt;/code&gt; refers to this paper.
+And rightfully so! To this day it's one of most comprehensive resources
+on the topic (it's a go to resource about &lt;code&gt;goto&lt;/code&gt;). Perhaps some examples
+are quite dated, some concerns less crucial today than back in the days,
+but nevertheless it's an excellent read.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One thing we haven't spelled out clearly, however, is what makes some
+&lt;strong&gt;go to&lt;/strong&gt;'s bad and others acceptable. The reason is that we've really
+been directing our attention to the wrong issue, to the objective question of
+&lt;strong&gt;go to&lt;/strong&gt; elimination instead of the important subjective question of
+program structure. In the words of John Brown, &quot;The act of focusing our
+mightiest intellectual resources on the elusive goal of &lt;strong&gt;go to&lt;/strong&gt;-less
+programs has helped us get our minds off all those really tough and possibly
+unresolvable problems and issues with which today's professional programmer
+would otherwise have to grapple.&quot; By writing this long article I don't want
+to add fuel to the controversy about go to elimination, since that topic
+has already assumed entirely too much significance; my goal is to lay that
+controversy to rest, and to help direct the discussion towards more fruitful
+channels.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Jorengarenar</name></author><summary type="html">gotophobia – fear of goto statement, usually caused by misunderstanding and lack of context of stories from dark ages of programming. Programmers with gotophobia tend to make their code less readable just to avoid using goto.</summary></entry><entry><title type="html">Few lesser known tricks, quirks and features of C</title><link href="https://blog.joren.ga/less-known-c" rel="alternate" type="text/html" title="Few lesser known tricks, quirks and features of C" /><published>2023-02-19T00:00:00+00:00</published><updated>2023-02-19T00:00:00+00:00</updated><id>https://blog.joren.ga/less-known-c</id><content type="html" xml:base="https://blog.joren.ga/less-known-c">&lt;p&gt;There are some tricks, quirks and features (some quite fundamental to the language!)
+which seems to throw even experienced developers off the track. Thus I did a sloppy
+job of gathering some of them in this post (in no particular order) with even sloppier
+short explanations and/or examples (or quote of thereof).&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/132241/10247460&quot;&gt;Hidden features of C - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://d3s.mff.cuni.cz/legacy/~holub/c_features.html&quot;&gt;Lesser known C features&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=33680239&quot;&gt;Mildly interesting quirks of C | Hacker News&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=w3_e9vZj7D8&quot;&gt;Advanced C: The UB and optimizations that trick good programmers.&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/mqk338/interesting_ways_to_use_c/&quot;&gt;Interesting ways to use C? : r/C_Programming&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf&quot;&gt;C99 with Technical corrigenda TC1, TC2, and TC3 included&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.robertgamble.net/2011/05/how-well-do-you-know-c.html&quot;&gt;Rob's Programming Blog: How Well Do You Know C?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://gist.github.com/shakna-israel/4fd31ee469274aa49f8f9793c3e71163#lets-destroy-c&quot;&gt;Let's Destroy C&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://jadlevesque.github.io/PPMP-Iceberg/&quot;&gt;The Preprocessor Iceberg Meme&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Something being listed here does &lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;&lt;em&gt;not&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; automatically mean encouragement to use it!&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#array-pointers&quot; id=&quot;markdown-toc-array-pointers&quot;&gt;Array pointers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#comma-operator&quot; id=&quot;markdown-toc-comma-operator&quot;&gt;Comma operator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#digraphs-trigraphs-and-alternative-tokens&quot; id=&quot;markdown-toc-digraphs-trigraphs-and-alternative-tokens&quot;&gt;Digraphs, trigraphs and alternative tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#designated-initializer&quot; id=&quot;markdown-toc-designated-initializer&quot;&gt;Designated initializer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#compound-literals&quot; id=&quot;markdown-toc-compound-literals&quot;&gt;Compound literals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#compound-literals-are-lvalues&quot; id=&quot;markdown-toc-compound-literals-are-lvalues&quot;&gt;Compound literals are lvalues&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#multi-character-constants&quot; id=&quot;markdown-toc-multi-character-constants&quot;&gt;Multi-character constants&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bit-fields&quot; id=&quot;markdown-toc-bit-fields&quot;&gt;Bit fields&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#0-bit-fields&quot; id=&quot;markdown-toc-0-bit-fields&quot;&gt;0 bit fields&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#volatile-type-qualifier&quot; id=&quot;markdown-toc-volatile-type-qualifier&quot;&gt;&lt;code&gt;volatile&lt;/code&gt; type qualifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#restrict-type-qualifier&quot; id=&quot;markdown-toc-restrict-type-qualifier&quot;&gt;&lt;code&gt;restrict&lt;/code&gt; type qualifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#register-type-qualifier&quot; id=&quot;markdown-toc-register-type-qualifier&quot;&gt;&lt;code&gt;register&lt;/code&gt; type qualifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#flexible-array-member&quot; id=&quot;markdown-toc-flexible-array-member&quot;&gt;Flexible array member&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#n-format-specifier&quot; id=&quot;markdown-toc-n-format-specifier&quot;&gt;&lt;code&gt;%n&lt;/code&gt; format specifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#-minimum-field-width-format-specifier&quot; id=&quot;markdown-toc--minimum-field-width-format-specifier&quot;&gt;&lt;code&gt;%.*&lt;/code&gt; (minimum field width) format specifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#other-less-known-format-specifiers&quot; id=&quot;markdown-toc-other-less-known-format-specifiers&quot;&gt;Other less known format specifiers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#interlacing-syntactic-constructs&quot; id=&quot;markdown-toc-interlacing-syntactic-constructs&quot;&gt;Interlacing syntactic constructs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#---operator&quot; id=&quot;markdown-toc----operator&quot;&gt;&lt;code&gt;--&amp;gt;&lt;/code&gt; &quot;operator&quot;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#idxarr&quot; id=&quot;markdown-toc-idxarr&quot;&gt;&lt;code&gt;idx[arr]&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#negative-array-indexes&quot; id=&quot;markdown-toc-negative-array-indexes&quot;&gt;Negative array indexes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#constant-string-concatenation&quot; id=&quot;markdown-toc-constant-string-concatenation&quot;&gt;Constant string concatenation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#using--and--as-conditionals&quot; id=&quot;markdown-toc-using--and--as-conditionals&quot;&gt;Using &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; and &lt;code&gt;||&lt;/code&gt; as conditionals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#compile-time-assumption-checking-using-enums&quot; id=&quot;markdown-toc-compile-time-assumption-checking-using-enums&quot;&gt;Compile time assumption checking using &lt;code&gt;enum&lt;/code&gt;s&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ad-hoc-struct-declaration-in-the-return-type-of-a-function&quot; id=&quot;markdown-toc-ad-hoc-struct-declaration-in-the-return-type-of-a-function&quot;&gt;Ad hoc &lt;code&gt;struct&lt;/code&gt; declaration in the return type of a function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#nested-struct-definition-is-not-kept-nested&quot; id=&quot;markdown-toc-nested-struct-definition-is-not-kept-nested&quot;&gt;&quot;Nested&quot; &lt;code&gt;struct&lt;/code&gt; definition is not kept nested&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#flat-initializer-lists&quot; id=&quot;markdown-toc-flat-initializer-lists&quot;&gt;Flat initializer lists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#static-array-indices-in-function-parameter-declarations&quot; id=&quot;markdown-toc-static-array-indices-in-function-parameter-declarations&quot;&gt;Static array indices in function parameter declarations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#macro-overloading-by-argument-list-length&quot; id=&quot;markdown-toc-macro-overloading-by-argument-list-length&quot;&gt;Macro Overloading by Argument List Length&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#function-types&quot; id=&quot;markdown-toc-function-types&quot;&gt;Function types&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#x-macros&quot; id=&quot;markdown-toc-x-macros&quot;&gt;X-Macros&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#named-function-parameters&quot; id=&quot;markdown-toc-named-function-parameters&quot;&gt;Named function parameters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#combining-default-named-and-positional-arguments&quot; id=&quot;markdown-toc-combining-default-named-and-positional-arguments&quot;&gt;Combining default, named and positional arguments&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#abusing-unions-for-grouping-things-into-namespaces&quot; id=&quot;markdown-toc-abusing-unions-for-grouping-things-into-namespaces&quot;&gt;Abusing unions for grouping things into namespaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#matching-character-classes-with-sscanf&quot; id=&quot;markdown-toc-matching-character-classes-with-sscanf&quot;&gt;Matching character classes with &lt;code&gt;sscanf()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#garbage-collector&quot; id=&quot;markdown-toc-garbage-collector&quot;&gt;Garbage collector&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cosmopolitan-libc&quot; id=&quot;markdown-toc-cosmopolitan-libc&quot;&gt;Cosmopolitan Libc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inline-assembly&quot; id=&quot;markdown-toc-inline-assembly&quot;&gt;Inline assembly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#object-oriented-programming&quot; id=&quot;markdown-toc-object-oriented-programming&quot;&gt;Object Oriented Programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#metaprogramming&quot; id=&quot;markdown-toc-metaprogramming&quot;&gt;Metaprogramming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#evaluate-sizeof-at-compile-time-by-causing-duplicate-case-error&quot; id=&quot;markdown-toc-evaluate-sizeof-at-compile-time-by-causing-duplicate-case-error&quot;&gt;Evaluate &lt;code&gt;sizeof&lt;/code&gt; at compile time by causing duplicate case error&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;array-pointers&quot;&gt;Array pointers&lt;/h2&gt;
+
+&lt;p&gt;Decay-to-pointer makes regular pointers to array usually not needed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int arr[10];
+
+int* ap0 = arr;        // array decay-to-pointer
+// ap0[2] = ...
+
+int (*ap1)[10] = &amp;amp;arr; // proper pointer to array
+// (*ap1)[2] = ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But ability to allocate a big multi-dimensional array on heap is nice:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int (*ap3)[90000][90000] = malloc(sizeof *ap3);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With pointers even VLA can find its use (&lt;a href=&quot;https://blog.joren.ga/vla-usecases&quot;&gt;more here&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int (*ap4)[n] = malloc(sizeof *ap4);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;comma-operator&quot;&gt;Comma operator&lt;/h2&gt;
+
+&lt;p&gt;The comma operator is used to separate two or more expressions that are
+included where only one expression is expected. When the set of expressions
+has to be evaluated for a value, only the right-most expression is considered.&lt;/p&gt;
+
+&lt;p&gt;For example: &lt;code&gt;b = (a=3, a+2);&lt;/code&gt; – this code would firstly assign value 3
+to &lt;code&gt;a&lt;/code&gt;, and then &lt;code&gt;a+2&lt;/code&gt; would be assigned to variable &lt;code&gt;b&lt;/code&gt;. So, at the end,
+&lt;code&gt;b&lt;/code&gt; would contain value 5 while variable &lt;code&gt;a&lt;/code&gt; would be 3.&lt;/p&gt;
+
+&lt;p&gt;On Wikipedia we can find &lt;a href=&quot;https://en.wikipedia.org/wiki/Comma_operator#Examples&quot;&gt;few more examples&lt;/a&gt;:&lt;/p&gt;
+
+&lt;h2 id=&quot;digraphs-trigraphs-and-alternative-tokens&quot;&gt;Digraphs, trigraphs and alternative tokens&lt;/h2&gt;
+
+&lt;p&gt;C code may not be portable, but the language itself is probably more portable
+than any other; there are system using e.g. EBCDIC encoding instead of ASCII,
+to support them C has digraphs and trigraphs – multi-character sequences
+treated by the compiler as other characters.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Digraph&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Trigraph&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;iso646.h&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;&amp;lt;:&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;[&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??=&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;#&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;and&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;:&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??(&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;[&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;and_eq&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;&amp;amp;=&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;&amp;lt;%&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;{&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??/&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;\&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;bitand&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;%&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;}&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??)&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;bitor&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;|&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;%:&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;#&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??'&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;compl&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;%:%:&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;##&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??&amp;lt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;{&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;not&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??!&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;|&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;not_eq&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;!=&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;}&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;or&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;||&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;??-&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;or_eq&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;|=&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;xor&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;——–&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;———–&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;xor_eq&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;^=&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Despite there being small opposition, the C Standard Committee
+decided to remove support for trigraphs from C23.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.yossarian.net/2015/04/02/Digraphs-And-Trigraphs&quot;&gt;Mini-post: Digraphs and Trigraphs | ENOSUCHBLOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/C_alternative_tokens&quot;&gt;C alternative tokens - Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/432443/10247460&quot;&gt;Why are there digraphs in C and C++? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/1234582/10247460&quot;&gt;Purpose of Trigraph sequences in C++?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;designated-initializer&quot;&gt;Designated initializer&lt;/h2&gt;
+
+&lt;p&gt;These allow you to specify which elements of an object (array, structure, union)
+are to be initialized by the values following. The order does not matter!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct Foo {
+    int x, y;
+    const char* bar;
+};
+
+void f(void)
+{
+    int arr[] = { 1, 2, [5] = 9, [9] = 5, [8] = 8 };
+
+    struct Foo f = { .y = 23, .bar = &quot;barman&quot;, .x = -38 };
+
+    struct Foo arr[] = {
+        [10] = {      8,  8,      9 },
+         [8] = {      1,  8,   bar3 },
+        [12] = { .x = 9,     .z = 8 },
+    };
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html&quot;&gt;Designated Inits (Using the GNU Compiler Collection (GCC))&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ibm.com/docs/en/zos/2.5.0?topic=initializers-designated-aggregate-types-c-only&quot;&gt;Designated initializers for aggregate types (C only) - IBM Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/47202557/10247460&quot;&gt;What is a designated initializer in C? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;compound-literals&quot;&gt;Compound literals&lt;/h2&gt;
+
+&lt;p&gt;A compound literal looks like a cast of a brace-enclosed initializer list.
+Its value is an object of the type specified in the cast, containing the
+elements specified in the initializer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct Foo { int x, y; };
+
+void bar(struct Foo p)
+{
+    printf(&quot;%d, %d&quot;, p.x, p.y);
+}
+
+int main(void)
+{
+    bar((struct Foo){2, 3});
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/gcc/Compound-Literals.html&quot;&gt;Compound Literals (Using the GNU Compiler Collection (GCC))&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;compound-literals-are-lvalues&quot;&gt;Compound literals are lvalues&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;(struct Foo){};
+((struct Foo){}).x = 4;
+&amp;amp;(struct Foo){};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;multi-character-constants&quot;&gt;Multi-character constants&lt;/h2&gt;
+
+&lt;p&gt;They are implementation dependent and even the standard itself to usually
+best avoid them. That being said, using them as self-documenting &lt;code&gt;enum&lt;/code&gt;s
+can be quite handy when you may need to deal with raw memory dumps later on.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;enum state {
+    waiting = 'WAIT',
+    running = 'RUN!',
+    stopped = 'STOP',
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example, on my machine I could localize &lt;code&gt;'WAIT'&lt;/code&gt; like here:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;00001120: c3 66 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00  .ff...........@.
+00001130: f3 0f 1e fa e9 67 ff ff ff 55 48 89 e5 48 83 ec  .....g...UH..H..
+00001140: 10 c7 45 fc &lt;mark&gt;54 49 41 57&lt;/mark&gt; 8b 45 fc 89 c6 48 8d 05  ..E.&lt;mark&gt;TIAW&lt;/mark&gt;.E...H..
+00001150: b0 0e 00 00 48 89 c7 b8 00 00 00 00 e8 cf fe ff  ....H...........
+00001160: ff b8 00 00 00 00 c9 c3 f3 0f 1e fa 48 83 ec 08  ............H...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;bit-fields&quot;&gt;Bit fields&lt;/h2&gt;
+
+&lt;p&gt;Declares a member with explicit width, in bits. Adjacent bit field members may
+be packed to share and straddle the individual bytes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct cat {
+    unsigned int legs  : 3;  // 3 bits for legs  (0-4 fit in 3 bits)
+    unsigned int lives : 4;  // 4 bits for lives (0-9 fit in 4 bits)
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/language/bit_field&quot;&gt;Bit fields - cppreference.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bit_field&quot;&gt;Bit field - Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/24933242/10247460&quot;&gt;When to use bit-fields in C - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;0-bit-fields&quot;&gt;0 bit fields&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/45916894/10247460&quot;&gt;What does an unnamed zero length bit-field mean in C? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/4297095/10247460&quot;&gt;Practical Use of Zero-Length Bitfields - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ibm.com/docs/en/xcafbg/9.0.0?topic=SS3KZ4_9.0.0/com.ibm.xlcpp9.bg.doc/proguide/calgnbit.html&quot;&gt;IBM Documentation - IBM Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/language/bit_field&quot;&gt;Bit fields - cppreference.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Description from &lt;a href=&quot;https://developer.arm.com/documentation/ka004594/latest&quot;&gt;Arm Compiler 6 docs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A zero-length bit-field can be used to make the following changes:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Creates a boundary between any bit-fields before the zero-length bit-field
+and any bit-fields after the zero-length bit-field. Any bit-fields on
+opposite sides of the boundary are treated as non-overlapping memory
+locations. This has a consequence for C and C++ programs. The C and C++
+standards require both load and store accesses to a bit-field on one side
+of the boundary to not access any bit-fields on the other side of the boundary.&lt;/li&gt;
+    &lt;li&gt;Insert padding to align any bit-fields after the zero-length bit-field to
+the next available natural boundary based on the type of the zero-length
+bit-field. For example, &lt;code&gt;char:0&lt;/code&gt; can be used to align to the next available
+byte boundary, and &lt;code&gt;int:0&lt;/code&gt; can be used to align to the next available word boundary.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An example taken from the &lt;a href=&quot;https://stackoverflow.com/a/26725041/10247460&quot;&gt;SO answer&lt;/a&gt; (with slight changes):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct bar {
+    unsigned char x : 5;
+    unsigned short  : 0;
+    unsigned char y : 7;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;The above in memory would look like this (assuming 16-bit &lt;code&gt;short&lt;/code&gt;, ignoring endian):&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code&gt;char pad pad      short boundary
+ |    |   |        |
+ v    v   v        v
+ xxxxx000 00000000 yyyyyyy0
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;The zero-length bit field causes the position to move to next &lt;code&gt;short&lt;/code&gt; boundary
+(or: be placed on the nearest natural alignment for the target platform).
+We defined &lt;code&gt;short&lt;/code&gt; to be 16-bit, so 16 minus 5 gives 11 bits of padding.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;volatile-type-qualifier&quot;&gt;&lt;code&gt;volatile&lt;/code&gt; type qualifier&lt;/h2&gt;
+
+&lt;p&gt;This qualifier tells the compiler that a variable may be accessed by other means
+than the current code (e.g. we are dealing with MMIO device), thus to not optimize
+away reads and writes to this resource.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/246127/10247460&quot;&gt;Why is volatile needed in C? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=w3_e9vZj7D8&quot;&gt;Advanced C: The UB and optimizations that trick good programmers.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/language/volatile&quot;&gt;volatile type qualifier - cppreference.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Volatile_(computer_programming)&quot;&gt;volatile (computer programming) - Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;restrict-type-qualifier&quot;&gt;&lt;code&gt;restrict&lt;/code&gt; type qualifier&lt;/h2&gt;
+
+&lt;p&gt;By adding this type qualifier, a programmer hints to the compiler that for
+the lifetime of the pointer, no other pointer will be used to access the object
+to which it points. This allows the compiler to make optimizations (for example,
+vectorization) that would not otherwise have been possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Restrict&quot;&gt;restrict - Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/language/restrict&quot;&gt;restrict type qualifier - cppreference.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ibm.com/docs/en/zos/2.5.0?topic=qualifiers-restrict-type-qualifier&quot;&gt;The restrict type qualifier - IBM Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;register-type-qualifier&quot;&gt;&lt;code&gt;register&lt;/code&gt; type qualifier&lt;/h2&gt;
+
+&lt;p&gt;It suggests that the compiler stores a declared variable in a CPU register
+(or some other faster location) instead of in random-access memory.
+The location of a variable declared with this qualifier cannot be accessed
+(but the &lt;code&gt;sizeof&lt;/code&gt; operator can be applied).&lt;/p&gt;
+
+&lt;p&gt;Nowadays &lt;code&gt;register&lt;/code&gt; is usually meaningless as modern compilers place variables
+in a register if appropriate regardless of whether the hint is given. Sometimes
+may it be useful on embedded systems, but even then compiler will probably
+provide better optimizations.&lt;/p&gt;
+
+&lt;h2 id=&quot;flexible-array-member&quot;&gt;Flexible array member&lt;/h2&gt;
+
+&lt;p&gt;From Wikipedia:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct vectord {
+    short len;    // there must be at least one other data member
+    double arr[]; // the flexible array member must be last
+
+    // The compiler may reserve extra padding space here,
+    //   like it can between struct members.
+};
+
+struct vectord *vector = malloc(...);
+vector-&amp;gt;len = ...;
+for (int i = 0; i &amp;lt; vector-&amp;gt;len; ++i) {
+     vector-&amp;gt;arr[i] = ...;  // transparently uses the right type (double)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gustedt.wordpress.com/2011/03/14/flexible-array-member/&quot;&gt;flexible array member – Jens Gustedt's Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gcc.gnu.org/onlinedocs/gcc/Zero-Length.html&quot;&gt;Zero Length (Using the GNU Compiler Collection (GCC))&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.redhat.com/articles/2022/09/29/benefits-limitations-flexible-array-members&quot;&gt;The benefits and limitations of flexible array members | Red Hat Developer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;n-format-specifier&quot;&gt;&lt;code&gt;%n&lt;/code&gt; format specifier&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/a/8930383/10247460&quot;&gt;This StackOverflow answer&lt;/a&gt; presents it reasonably well:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;%n&lt;/code&gt; returns the current position of the imaginary cursor used when &lt;code&gt;printf()&lt;/code&gt; formats its output.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int pos1, pos2;
+const char* str_of_unknown_len = &quot;we don't care about the length of this&quot;;
+
+printf(&quot;Write text of unknown %n(%s)%n length\n&quot;, &amp;amp;pos1, str_of_unknown_len, &amp;amp;pos2);
+printf(&quot;%*s\\%*s/\n&quot;, pos1, &quot; &quot;, pos2-pos1-2, &quot; &quot;);
+printf(&quot;%*s&quot;, pos1+1, &quot; &quot;);
+for (int i = pos1+1; i &amp;lt; pos2-1; ++i) {
+    putc('-', stdout);
+}
+putc('\n', stdout);
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;will have following output&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code&gt;Write text of unknown (we don't care about the length of this) length
+                      \                                      /
+                       --------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;Granted a little bit contrived but can have some uses when making pretty reports.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;-minimum-field-width-format-specifier&quot;&gt;&lt;code&gt;%.*&lt;/code&gt; (minimum field width) format specifier&lt;/h2&gt;
+
+&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;char fmt_buf[MAX_BUF];
+snprintf(fmt_buf, MAX_BUF, &quot;%%.%df&quot;, prec);
+printf(fmt_buf, num);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;do this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;printf(&quot;%.*f&quot;, prec, num);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;when you want to pad with variable number of characters.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-less-known-format-specifiers&quot;&gt;Other less known format specifiers&lt;/h2&gt;
+
+&lt;p&gt;Have a look at &lt;a href=&quot;https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf#%5B%7B%22num%22%3A703%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2C0%5D&quot;&gt;§7.21.6.1&lt;/a&gt;
+and &lt;a href=&quot;https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf#%5B%7B%22num%22%3A719%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2C0%5D&quot;&gt;§7.21.6.2&lt;/a&gt;
+of the draft of C11 standard. You'll find &lt;code&gt;%#&lt;/code&gt;, &lt;code&gt;%e&lt;/code&gt;, &lt;code&gt;%-&lt;/code&gt;, &lt;code&gt;%+&lt;/code&gt;, &lt;code&gt;%j&lt;/code&gt;, &lt;code&gt;%g&lt;/code&gt;, &lt;code&gt;%a&lt;/code&gt; and few other interesting specifiers.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;I'll update the links to C23 when it's finally done. For now: &lt;code&gt;%b&lt;/code&gt; is gonna be standardised!&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h2 id=&quot;interlacing-syntactic-constructs&quot;&gt;Interlacing syntactic constructs&lt;/h2&gt;
+
+&lt;p&gt;The following is syntactically correct C code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main()
+{
+    int n = 3;
+    int i = 0;
+
+    switch (n % 2) {
+        case 0:
+            do {
+                ++i;
+        case 1:
+                ++i;
+            } while (--n &amp;gt; 0);
+
+    }
+
+    printf(&quot;%d\n&quot;, i); // 5
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I know &lt;code&gt;goto&lt;/code&gt;phobic programmers using it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;    switch (x) {
+        case 1:
+            // 1 specific code
+
+      if (0) {
+        case 2:
+            // 2 specific code
+      }
+
+            // common for 1 and 2
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The most famous usage of this quirk/&quot;feature&quot; is &lt;a href=&quot;https://en.wikipedia.org/wiki/Duff%27s_device&quot;&gt;Duff's device&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;send(to, from, count)
+    register short *to, *from;
+    register count;
+{
+    register n = (count + 7) / 8;
+    switch (count % 8) {
+    case 0: do { *to = *from++;
+    case 7:      *to = *from++;
+    case 6:      *to = *from++;
+    case 5:      *to = *from++;
+    case 4:      *to = *from++;
+    case 3:      *to = *from++;
+    case 2:      *to = *from++;
+    case 1:      *to = *from++;
+            } while (--n &amp;gt; 0);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;---operator&quot;&gt;&lt;code&gt;--&amp;gt;&lt;/code&gt; &quot;operator&quot;&lt;/h2&gt;
+
+&lt;p&gt;The following is correct C code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;size_t n = 10;
+while (n --&amp;gt; 0) {
+    printf(&quot;%d\n&quot;, n);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may ask, since when C has such operator and the answer is: since never.
+&lt;code&gt;--&amp;gt;&lt;/code&gt; is not an operator, but two separate operators &lt;code&gt;--&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt; written
+in a way they look like one. It's possible, because C cares less than more
+about whitespace.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;n --&amp;gt; 0&lt;/code&gt; is equivalent of &lt;code&gt;(n--) &amp;gt; 0&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;idxarr&quot;&gt;&lt;code&gt;idx[arr]&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Square brace notation of accessing array elements is a syntactic sugar for pointer arithmetics:&lt;/p&gt;
+
+&lt;div style=&quot;width:100%; text-align:center&quot;&gt;
+  &lt;p&gt;&lt;code&gt;arr[5]&lt;/code&gt; ≡ &lt;code&gt;*(arr + 5)&lt;/code&gt; ≡ &lt;code&gt;*(5 + arr)&lt;/code&gt; ≡ &lt;code&gt;5[arr]&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You absolutely must never use this in actual code… but it's hella fun otherwise!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;// array[index]
+boxes[products[myorder.product].box].weight;
+
+// index[array]
+myorder.product[products].box[boxes].weight;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;negative-array-indexes&quot;&gt;Negative array indexes&lt;/h2&gt;
+
+&lt;p&gt;For quick and dirty debugging purposes I wanted to check if padding at the end
+of an array is filled with correct value, but I didn't know where the padding
+starts. Thus I did the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* end = arr + (len - 1);
+if (end[0] == VAL &amp;amp;&amp;amp; end[-1] == VAL &amp;amp;&amp;amp; end[-5] == VAL) {
+    puts(&quot;Correct padding&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;constant-string-concatenation&quot;&gt;Constant string concatenation&lt;/h2&gt;
+
+&lt;p&gt;You don't need &lt;code&gt;sprintf()&lt;/code&gt; (nor &lt;code&gt;strcat()&lt;/code&gt;!) to concatenate strings literals:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#define WORLD &quot;World!&quot;
+const char* s = &quot;Hello &quot; WORLD &quot;\n&quot;
+                &quot;It's a lovely day, &quot;
+                &quot;innit?&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;using--and--as-conditionals&quot;&gt;Using &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; and &lt;code&gt;||&lt;/code&gt; as conditionals&lt;/h2&gt;
+
+&lt;p&gt;If you write Shell scripts, you know what I mean.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdbool.h&amp;gt;
+
+int main(void)
+{
+    1 &amp;amp;&amp;amp; puts(&quot;Hello&quot;);
+    0 &amp;amp;&amp;amp; puts(&quot;I won't&quot;);
+    1 &amp;amp;&amp;amp; puts(&quot;World!&quot;);
+    0 &amp;amp;&amp;amp; puts(&quot;be printed&quot;);
+    1 || puts(&quot;I won't be printed either&quot;);
+    0 || puts(&quot;But I will!&quot;);
+
+    true &amp;amp;&amp;amp; (9 &amp;gt; 2) &amp;amp;&amp;amp; puts(&quot;9 is bigger than 2&quot;);
+
+    isdigit('9') &amp;amp;&amp;amp; puts(&quot;9 is a digit&quot;);
+    isdigit('n') &amp;amp;&amp;amp; puts(&quot;n is a digit&quot;) || puts(&quot;n is NOT a digit!&quot;);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The compiler will probably scream warnings at you
+as it's really uncommon to do this in C code.&lt;/p&gt;
+
+&lt;h2 id=&quot;compile-time-assumption-checking-using-enums&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/a/1715239/10247460&quot;&gt;Compile time assumption checking using &lt;code&gt;enum&lt;/code&gt;s&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define D 1
+#define DD 2
+
+enum CompileTimeCheck
+{
+    MAKE_SURE_DD_IS_TWICE_D = 1/(2*(D) == (DD)),
+    MAKE_SURE_DD_IS_POW2    = 1/((((DD) - 1) &amp;amp; (DD)) == 0)
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Can be useful for libraries with compile-time configurable constants.&lt;/p&gt;
+
+&lt;h2 id=&quot;ad-hoc-struct-declaration-in-the-return-type-of-a-function&quot;&gt;Ad hoc &lt;code&gt;struct&lt;/code&gt; declaration in the return type of a function&lt;/h2&gt;
+
+&lt;p&gt;You can define &lt;code&gt;struct&lt;/code&gt;s in very (at first glance) random places:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct Foo { int a, b, c; } make_foo(void) {
+    struct Foo ret = { .c = 3 };
+    ret.a = 11 + ret.c;
+    ret.b = ret.a * 3;
+    return ret;
+}
+
+int main()
+{
+    struct Foo x = make_foo();
+    printf(&quot;%d\n&quot;, x.a + x.b + x.c);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nested-struct-definition-is-not-kept-nested&quot;&gt;&quot;Nested&quot; &lt;code&gt;struct&lt;/code&gt; definition is not kept nested&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct Foo {
+    int x;
+    struct Bar {
+        int y;
+    };
+};
+
+int main()
+{
+    struct Bar s = { 34 };  // correct
+    // struct Foo.Bar s;    // wrong
+    printf(&quot;%d\n&quot;, s.y);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;flat-initializer-lists&quot;&gt;Flat initializer lists&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;int arr[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//            = { {1,2,3}, {4,5,6}, {7,8,9} };
+
+
+struct Foo {
+    const char *name;
+    int age;
+};
+
+struct Foo records[] = {
+    &quot;John&quot;,   20,
+    &quot;Bertha&quot;, 40,
+    &quot;Andrew&quot;, 30,
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;static-array-indices-in-function-parameter-declarations&quot;&gt;&lt;a href=&quot;https://www.ibm.com/docs/en/i/7.5?topic=pd-static-array-indices-in-function-parameter-declarations-c-only&quot;&gt;Static array indices in function parameter declarations&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Except in certain contexts, an unsubscripted array name (for example, &lt;code&gt;region&lt;/code&gt;
+instead of &lt;code&gt;region[4]&lt;/code&gt;) represents a pointer whose value is the address of the
+first element of the array, provided that the array has previously been declared.
+An array type in the parameter list of a function is also converted to the
+corresponding pointer type. Information about the size of the argument array
+is lost when the array is accessed from within the function body.&lt;/p&gt;
+
+  &lt;p&gt;To preserve this information, which is useful for optimization, C99 allows you
+to declare the index of the argument array using the static keyword. The constant
+expression specifies the minimum pointer size that can be used as an assumption
+for optimizations. This particular usage of the static keyword is highly prescribed.
+The keyword may only appear in the outermost array type derivation and only in
+function parameter declarations. If the caller of the function does not abide
+by these restrictions, the behavior is undefined.&lt;/p&gt;
+
+  &lt;p&gt;The following examples show how the feature can be used.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int n;
+void foo(int arr[static 10]);       // arr points to the first of at least 10 ints
+void foo(int arr[const 10]);        // arr is a const pointer
+void foo(int arr[const]);           // const pointer to int
+void foo(int arr[static const n]);  // arr points to at least n ints (VLA)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;void foo(int p[static 1]);&lt;/code&gt; is effectively a standard
+way to declare that &lt;code&gt;p&lt;/code&gt; must be non-null pointer.&lt;/p&gt;
+
+&lt;h2 id=&quot;macro-overloading-by-argument-list-length&quot;&gt;Macro Overloading by Argument List Length&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Jorengarenar/CMObALL&quot;&gt;CMObALL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.boost.org/doc/libs/master/libs/preprocessor/doc/ref/overload.html&quot;&gt;BOOST_PP_OVERLOAD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/16683146/10247460&quot;&gt;Can macros be overloaded by number of arguments? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &quot;cmoball.h&quot;
+
+#define NoA(...) CMOBALL(FOO, __VA_ARGS__)
+#define FOO_3(x,y,z) &quot;Three&quot;
+#define FOO_2(x,y)   &quot;Two&quot;
+#define FOO_1(x)     &quot;One&quot;
+#define FOO_0()      &quot;Zero&quot;
+
+
+int main()
+{
+    puts(NoA());
+    puts(NoA(1));
+    puts(NoA(1,1));
+    puts(NoA(1,1,1));
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;function-types&quot;&gt;Function types&lt;/h2&gt;
+
+&lt;p&gt;Function pointers ought to be well known, but as we know the syntax is bit awkward.
+On the other hand, less people know you can (as with most objects in C) create
+a &lt;code&gt;typedef&lt;/code&gt; for function type.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main()
+{
+    typedef double fun_t(double);
+    fun_t sin, cos, sqrt;
+    fun_t* ftpt = &amp;amp;sqrt;
+
+    printf(&quot;%lf\n&quot;, ftpt(4)); // 2.000000
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;x-macros&quot;&gt;X-Macros&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/X_Macro&quot;&gt;X Macro - Wikipedia&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/C_Programming/Preprocessor#X-Macros&quot;&gt;Wikibooks on X macros&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/C_Programming/Serialization#X-Macros&quot;&gt;C Programming/Serialization/X-Macros&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/6635851/10247460&quot;&gt;Real-world use of X-Macros - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://quuxplusone.github.io/blog/2021/02/01/x-macros/&quot;&gt;What are X-macros? – Arthur O'Dwyer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=272242&quot;&gt;X macro: most epic C trick or worst abuse of preprocessor? / Arch Linux Forums&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://philliptrudeau.com/blog/x-macro&quot;&gt;The Most Elegant Macro – Phillip Trudeau&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;named-function-parameters&quot;&gt;Named function parameters&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct _foo_args {
+    int num;
+    const char* text;
+};
+
+#define foo(...) _foo((struct _foo_args){ __VA_ARGS__ })
+int _foo(struct _foo_args args)
+{
+    puts(args.text);
+    return args.num * 2;
+}
+
+int main(void)
+{
+    int result = foo(.text = &quot;Hello!&quot;, .num = 8);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;combining-default-named-and-positional-arguments&quot;&gt;&lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/yjbe62&quot;&gt;Combining default, named and positional arguments&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Using compound literals and macros to create named arguments (…):&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;typedef struct { int a,b,c,d; } FooParam;
+#define foo(...) foo((FooParam){ __VA_ARGS__ })
+void (foo)(FooParam p);
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;adding default arguments is also quite easy:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define foo(...) foo((FooParam){ .a=1, .b=2, .c=3, .d=4, __VA_ARGS__})
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;But now positional arguments don't work anymore, and there may be situations
+where you want to support both options. But I recently realized, that you can
+make them work by adding a dummy parameter:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;typedef struct { int _; int a,b,c,d; } FooParam;
+#define foo(...) foo((FooParam){ .a=1, .b=2, .c=3, .d=4, ._=0, __VA_ARGS__})
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;Now, foo can be called in the following ways:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;foo();           // a=1, b=2, c=3, d=4
+foo(.a=4, .b=5); // a=4, b=5, c=3, d=5
+foo(4, 5);       // a=4, b=5, c=3, d=5
+foo(4, 5, .d=8); // a=4, b=5, c=3, d=8
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;The dummy parameter isn't needed when you have arguments that are required to be passed by name:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;typedef struct { int alwaysNamed; int a,b,c,d; } FooParam;
+#define foo(...) foo((FooParam){.a=1,.b=2,.c=3,.d=4, .alwaysNamed=5, __VA_ARGS__})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;abusing-unions-for-grouping-things-into-namespaces&quot;&gt;&lt;a href=&quot;https://utcc.utoronto.ca/~cks/space/blog/programming/CUnionsForNamespaces&quot;&gt;Abusing unions for grouping things into namespaces&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Suppose that you have a &lt;code&gt;struct&lt;/code&gt; with a bunch of fields, and you want to deal
+with some of them all together at once under a single name; perhaps you want
+to conveniently copy them as a block through &lt;code&gt;struct&lt;/code&gt; assignment.&lt;/p&gt;
+
+  &lt;p&gt;By using unions you can access both &lt;code&gt;a.field2&lt;/code&gt; and &lt;code&gt;a.sub&lt;/code&gt; (and &lt;code&gt;a.field2&lt;/code&gt;
+is the same as &lt;code&gt;a.sub.field2&lt;/code&gt;) without any macros.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct a {
+    int field1;
+    union {
+        struct {
+            int field2;
+            int field3;
+        };
+        struct {
+            int field2;
+            int field3;
+        } sub;
+    };
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;matching-character-classes-with-sscanf&quot;&gt;Matching character classes with &lt;code&gt;sscanf()&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;From &lt;a href=&quot;https://www.reddit.com/r/programming/comments/116iij3/few_lesser_known_tricks_quirks_and_features_of_c/j98zxu5/&quot;&gt;this comment&lt;/a&gt; on Reddit:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;sscanf()&lt;/code&gt; can be used as an ersatz &quot;regex&quot; (not really, only character classes) matcher.
+For example, one can write something like this to check if the input consists of letters of underscores:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int len = 0;
+char buf[256];
+int read_token = sscanf(input, &quot;%255[a-zA-Z_]&quot;, buf, &amp;amp;len);
+if (read_token) { /* do something */ }
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;or skip whitespace characters:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int len = 0;
+char buf[256];
+sscanf(input, &quot;%255[\r\n]%n&quot;, buf, &amp;amp;len);
+input += len;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;garbage-collector&quot;&gt;Garbage collector&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hboehm.info/gc/&quot;&gt;Boehm GC&lt;/a&gt; is a library providing garbage collector for C and C++&lt;/p&gt;
+
+&lt;h2 id=&quot;cosmopolitan-libc&quot;&gt;&lt;a href=&quot;https://justine.lol/cosmopolitan/index.html&quot;&gt;Cosmopolitan Libc&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Description from project's website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Cosmopolitan Libc makes C a build-once run-anywhere language, like Java,
+except it doesn't need an interpreter or virtual machine. Instead, it
+reconfigures stock GCC and Clang to output a POSIX-approved polyglot format
+that runs natively on Linux + Mac + Windows + FreeBSD + OpenBSD + NetBSD + BIOS
+with the best possible performance and the tiniest footprint imaginable.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;inline-assembly&quot;&gt;Inline assembly&lt;/h2&gt;
+
+&lt;p&gt;For a high-level language C communicates quite well with low-level world. You
+can write Assembly code and link it against program written in C quite easily.
+In addition to that, many compilers offer as an extension (listed as common
+in Annex J of the C Standard) a feature called &lt;em&gt;inline assembly&lt;/em&gt;, typically
+introduced to the code by the &lt;code&gt;asm&lt;/code&gt; keyword.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.osdev.org/Inline_assembly&quot;&gt;Inline Assembly - OSDev Wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/language/asm&quot;&gt;Inline assembly - cppreference.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/cpp/c-language/inline-assembler-c&quot;&gt;Inline Assembler (C) | Microsoft Learn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.arm.com/documentation/100748/0619/Using-Assembly-and-Intrinsics-in-C-or-C---Code/Writing-inline-assembly-code&quot;&gt;Writing inline assembly code - Arm Compiler for Embedded User Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.uaf.edu/courses/cs301/2014-fall/notes/inline-assembly/&quot;&gt;Inline Assembly in C/C++ - University of Alaska Fairbanks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;object-oriented-programming&quot;&gt;Object Oriented Programming&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.state-machine.com/oop&quot;&gt;Object-Oriented Programming in C - Quantum Leaps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/q/415452/10247460&quot;&gt;Object-orientation in C - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.rit.edu/%7Eats/books/ooc.pdf&quot;&gt;Object-Oriented Programming With ANSI C&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.tufts.edu/comp/40/docs/CTrapsAndPitfalls.pdf&quot;&gt;C Traps and Pitfalls&lt;/a&gt; by Andrew Koenig&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/mqk338/interesting_ways_to_use_c/guhenr5/&quot;&gt;&quot;you can have something like interfaces and virtual methods by using function pointers&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;metaprogramming&quot;&gt;Metaprogramming&lt;/h2&gt;
+
+&lt;p&gt;C11 added &lt;code&gt;_Generic&lt;/code&gt; to language, but turns out metaprogramming
+by inhumanely abusing the preporcessor is possible even in pure C99:
+meet &lt;a href=&quot;https://metalang99.readthedocs.io&quot;&gt;&lt;strong&gt;Metalang99&lt;/strong&gt;&lt;/a&gt; library.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;datatype99.h&amp;gt;
+
+datatype(
+    BinaryTree,
+    (Leaf, int),
+    (Node, BinaryTree *, int, BinaryTree *)
+);
+
+int sum(const BinaryTree *tree) {
+    match(*tree) {
+        of(Leaf, x) return *x;
+        of(Node, lhs, x, rhs) return sum(*lhs) + *x + sum(*rhs);
+    }
+
+    return -1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;evaluate-sizeof-at-compile-time-by-causing-duplicate-case-error&quot;&gt;Evaluate &lt;code&gt;sizeof&lt;/code&gt; at compile time by causing duplicate case error&lt;/h2&gt;
+
+&lt;p&gt;Assume you are working on embedded system or generally on something
+where getting a &lt;code&gt;printf()&lt;/code&gt; output may not be trivial task.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int foo(int c)
+{
+    switch (c) {
+        case sizeof (struct Foo): return c + 1;
+        case sizeof (struct Foo): return c + 2;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Adding such simple function anywhere in your code may (depending on compiler)
+produce an error message telling us the result of &lt;code&gt;sizeof&lt;/code&gt; operator.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;error: duplicate case value '16'
+        case sizeof(struct Foo): return c + 2;
+             ^
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Jorengarenar</name></author><summary type="html">There are some tricks, quirks and features (some quite fundamental to the language!) which seems to throw even experienced developers off the track. Thus I did a sloppy job of gathering some of them in this post (in no particular order) with even sloppier short explanations and/or examples (or quote of thereof).</summary></entry><entry><title type="html">When VLA in C doesn't smell of rotten eggs</title><link href="https://blog.joren.ga/vla-usecases" rel="alternate" type="text/html" title="When VLA in C doesn't smell of rotten eggs" /><published>2023-02-10T00:00:00+00:00</published><updated>2023-02-10T00:00:00+00:00</updated><id>https://blog.joren.ga/vla-usecases</id><content type="html" xml:base="https://blog.joren.ga/vla-usecases">&lt;p&gt;An earlier version of my &lt;a href=&quot;/vla-pitfalls&quot;&gt;Pitfalls of VLA in C&lt;/a&gt; article contained
+an example of useful case of VLA, which I pulled out of it as I decided the two
+– although I'd be overjoyed being presented with more – cases where VLA
+are clearly useful, deserve their dedicated, if low effort, post.&lt;/p&gt;
+
+&lt;h1 id=&quot;size-check-when-passing-to-function&quot;&gt;Size check when passing to function&lt;/h1&gt;
+
+&lt;p&gt;&quot;Only&quot; a bit over two decades after the introduction of VLA to C language,
+GCC started giving warnings about passing to functions bigger than declared
+size of arrays when we actually decide to utilize VLA syntax in parameters.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void f(const size_t size, const int buf[static size]);
+
+int main(void)
+{
+    int arr[50] = { 0 };
+    f(10, arr);  // acceptable
+    f(50, arr);  // correct
+    f(100, arr); // *WARNING*
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Added bonus:&lt;/strong&gt; explicit size annotation&lt;/p&gt;
+
+&lt;h1 id=&quot;multidimensional-arrays&quot;&gt;Multidimensional arrays&lt;/h1&gt;
+
+&lt;p&gt;Dynamically allocating multi-dimensional arrays where the inner dimensions
+are not known until runtime is really simplified using VM types.
+It isn't even as unsafe as aVLA since there's no arbitrary stack allocation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int (*arr)[n][m] = malloc(sizeof *arr); // `n` and `m` are variables with dimensions
+if (arr) {
+    // (*arr)[i][j] = ...;
+    free(arr);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The VLA-free alternatives aren't as sexy:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;piecemeal allocation with &lt;code&gt;malloc()&lt;/code&gt;&lt;/strong&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int** arr = malloc(n * (sizeof *arr));
+if (arr) {
+for (int i = 0; i &amp;lt; n; ++i) {
+    arr[i] = malloc(m * (sizeof *arr[i]));
+}
+// arr[i][j] = ...
+for (int i = 0; i &amp;lt; n; ++i) {
+    free(arr[i]);
+}
+free(arr);
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;1D array with offsets&lt;/strong&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* arr = malloc(n * m * (sizeof *arr));
+if (arr) {
+// arr[i*n + j] = ...
+free(arr);
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;big fixed array&lt;/strong&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int arr[SAFE_SIZE][SAFE_SIZE]; // SAFE_SIZE must be safe for SAFE_SIZE*SAFE_SIZE
+// arr[i][j] = ...;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorengarenar</name></author><summary type="html">An earlier version of my Pitfalls of VLA in C article contained an example of useful case of VLA, which I pulled out of it as I decided the two – although I'd be overjoyed being presented with more – cases where VLA are clearly useful, deserve their dedicated, if low effort, post.</summary></entry><entry><title type="html">A brief overview of pseudo-random number generators and testing of our own simple generator</title><link href="https://blog.joren.ga/brief-prng-paper" rel="alternate" type="text/html" title="A brief overview of pseudo-random number generators and testing of our own simple generator" /><published>2022-05-03T00:00:00+00:00</published><updated>2022-05-03T00:00:00+00:00</updated><id>https://blog.joren.ga/brief-prng-paper</id><content type="html" xml:base="https://blog.joren.ga/brief-prng-paper"></content><author><name>Jorengarenar</name></author><summary type="html"></summary></entry><entry><title type="html">Pitfalls of VLA in C</title><link href="https://blog.joren.ga/vla-pitfalls" rel="alternate" type="text/html" title="Pitfalls of VLA in C" /><published>2021-07-05T00:00:00+00:00</published><updated>2021-07-05T00:00:00+00:00</updated><id>https://blog.joren.ga/vla-pitfalls</id><content type="html" xml:base="https://blog.joren.ga/vla-pitfalls">&lt;blockquote&gt;
+  &lt;p&gt;It generates much more code, and much &lt;em&gt;slower&lt;/em&gt; code (and more fragile code),
+  than just using a fixed key size would have done ~ &lt;a href=&quot;https://lkml.org/lkml/2018/3/7/621&quot;&gt;Linus Torvalds&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;VLA (&lt;strong&gt;variable-length array&lt;/strong&gt;, an array – &lt;em&gt;array&lt;/em&gt;, not just block of memory
+acting like one – that has size determined during runtime instead of at compile
+time) is a feature introduced to C with the revision C99 of the standard.
+A very useful feature one may think, and indeed… in some cases…
+But since the world we live in is less than ideal, one needs to know well what
+are the pitfalls of using VLA in their code before doing so.&lt;/p&gt;
+
+&lt;p&gt;If you want to know the few cases when VLA may actually
+be useful you can check &lt;a href=&quot;/vla-usecases&quot;&gt;my other blogpost&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A fair share of the text here will focus on problems caused by automatic VLA,
+thus to further reflect on that an abbreviation &lt;em&gt;aVLA&lt;/em&gt; will be used when
+refferng to those cases.&lt;/p&gt;
+
+&lt;h1 id=&quot;allocation-on-stack&quot;&gt;Allocation on stack&lt;/h1&gt;
+
+&lt;p&gt;Let's address the elephant in the room: aVLA usually are allocated on stack.
+This is the source of the most of the problems, the source of discontent among
+programmers, the reason why even allowing any VLA into the codebase is usually
+a code smell.&lt;/p&gt;
+
+&lt;p&gt;Let's consider a painfully simple, very favourable to aVLA, example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;amp;n);
+    char arr[n];
+    printf(&quot;%d&quot;, arr[0]);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As we can see, it takes a number from user then makes array of that size. Compile
+and try it. Check how big values you can input before getting segfault caused
+by stack overflow. &lt;a href=&quot;https://godbolt.org/z/45arWxWo7&quot;&gt;In my case, it was around 8 MiB&lt;/a&gt;.
+How much is that? One raw image? a MP3 or two? few seconds of video? And the program
+wasn't doing anything meaningful - what if it wasn't just &lt;code&gt;main()&lt;/code&gt;? Maybe a recursive
+function? The limit shrinks tremendously.&lt;/p&gt;
+
+&lt;p&gt;And you don't have any (portable, standard) way to react after a stack
+overflow - the program already &lt;em&gt;crashed, you lost control&lt;/em&gt;. So you either need
+to make elaborate checks before declaring an array or betting that user won't
+input too large values (the outcome of such gamble ought to be obvious).&lt;/p&gt;
+
+&lt;p&gt;So the programmer &lt;strong&gt;must&lt;/strong&gt; ensure that aVLA size doesn't exceed some safe maximum,
+but in reality, if you know safe maximum, there is rarely any reason for not using
+it always.&lt;/p&gt;
+
+&lt;h2 id=&quot;worst-of-it-is&quot;&gt;Worst of it is…&lt;/h2&gt;
+
+&lt;p&gt;… that segfault is actually one of the best outcomes of improperly handled aVLA.
+The worst case is an exploitable vulnerability, where attacker may choose a value
+that causes an array to overlap with other allocations, giving them control over
+those values as well. A security nightmare.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;At the cost of further drop of efficiency, in GCC you can enable
+&lt;code&gt;-fstack-clash-protection&lt;/code&gt; option. It adds &lt;em&gt;extra&lt;/em&gt; instructions around
+variable length stack memory allocations to probe each page of memory at
+allocation time. This mitigates stack-clash attacks by ensuring all stack
+memory allocations are valid or by throwing a segfault if they are not, thus
+turning a possible code-execution attack into a denial of service.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h2 id=&quot;so-how-to-fix-this-example&quot;&gt;So how to fix this example?&lt;/h2&gt;
+
+&lt;p&gt;What if I need to let user define size and creating ridiculously large fixed
+array would be too wasteful? It's simple: use &lt;code&gt;malloc()&lt;/code&gt;!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;amp;n);
+    char* arr = malloc(n * (sizeof *arr));
+    printf(&quot;%d&quot;, arr[0]);
+    free(arr);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this case I was able to request over 4.5 GB before segfault. Almost few orders
+of magnitude more! But I still got the segfault, right? Well, the difference
+is in getting at least some* chance of checking the value returned by &lt;code&gt;malloc()&lt;/code&gt;
+and thus being able to, for example, inform the user about the error:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;    char* arr = malloc(n * (sizeof *arr));
+    if (arr == NULL) {
+        perror(&quot;malloc()&quot;); // output: &quot;malloc(): Cannot allocate memory&quot;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;aside&gt;
+  &lt;p&gt;* Only &quot;some&quot; chance because while it usually doesn't cause problems,
+operating systems may (and do) use something called &lt;a href=&quot;https://en.wikipedia.org/wiki/Memory_overcommitment&quot;&gt;memory overcommitment&lt;/a&gt;
+which rarely, but still, may be a little… &lt;a href=&quot;https://www.win.tue.nl/~aeb/linux/lk/lk-9.html#ss9.6&quot;&gt;broken sometimes&lt;/a&gt;.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h3 id=&quot;but-i-cannot-use-malloc&quot;&gt;&quot;but I cannot use &lt;code&gt;malloc()&lt;/code&gt;!&quot;&lt;/h3&gt;
+
+&lt;p&gt;I've encountered a counterargument, that as C is often used as a systems/embedded
+language, there are situations where using &lt;code&gt;malloc()&lt;/code&gt; may not even be possible.&lt;/p&gt;
+
+&lt;p&gt;I'm basically going to repeat myself here, but it is really important:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Such device rather is not going to have a lot of stack either. So instead of
+allocating dynamically, you (probably) should determine how much you need and
+just always use that fixed amount.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When using aVLA on system with small amounts of stack, it's really easy to make
+something which seems to work, but which blows your stack if your function gets
+called from a deep call stack combined with the large amount of data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you always allocate fixed amounts of stack space everywhere, and you test
+it, you know you're good. If you dynamically allocate on stack, you have to
+test all your code paths with all the largest sizes of allocated space, which
+is much harder and much easier to make a mistake. Don't make it even easier to
+shoot yourself in the foot for no real advantage.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;creation-by-accident&quot;&gt;Creation by accident&lt;/h1&gt;
+
+&lt;p&gt;Unlike most other dangerous C functionality, aVLA doesn't have the barrier
+of being not known. Many newbies learn to use them via trial and error, but
+don't learn about the pitfalls. &lt;br /&gt;
+The following is a simple mistake I observed even experienced developers making
+(especially those with C++ background); it will silently create an aVLA when
+it's clearly not necessary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;const int n = 10;
+int A[n];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thankfully, any half-decent compiler would notice and optimize aVLA away, but…
+what if it doesn't notice? Or what if, for some reason (safety?), the optimizations
+were not turned on? But it surely isn't so much worse, right? Well…&lt;/p&gt;
+
+&lt;h1 id=&quot;way-slower-than-fixed-size&quot;&gt;Way slower than fixed size&lt;/h1&gt;
+
+&lt;p&gt;Without compiler optimizations a function with &lt;a href=&quot;https://godbolt.org/z/Pe6sqEqv1&quot;&gt;aVLA from previous
+example&lt;/a&gt; will result in &lt;strong&gt;7 times&lt;/strong&gt; more Assembly
+instructions than its &lt;a href=&quot;https://godbolt.org/z/7h9zevrPq&quot;&gt;fixed size counterpart&lt;/a&gt;
+before moving past the array definition (look at the body before &lt;code&gt;jmp .L2&lt;/code&gt;).
+But it's without optimizations, with them the produced Assembly is exactly the same.&lt;/p&gt;
+
+&lt;p&gt;So &lt;a href=&quot;https://godbolt.org/z/4qeYhzTbn&quot;&gt;an example where aVLA is not used by mistake&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+void bar(int*, int);
+
+void foo(int n) {
+
+#if VLA
+    int A[n];
+#else
+    int A[1000];  // Let's make it bigger than 10! (or there won't be what to examine)
+#endif
+
+    for (int i = n; i--;) {
+        scanf(&quot;%d&quot;, &amp;amp;A[i]);
+    }
+    bar(A, n);
+}
+
+int main(void) {
+    foo(10);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For our educational purposes in this example, &lt;code&gt;-O1&lt;/code&gt; level of optimisation will
+work best (as Assembly will be clearer and &lt;code&gt;-O2&lt;/code&gt; won't help aVLA's case here
+really much).&lt;/p&gt;
+
+&lt;p&gt;When we compile aVLA version, before instructions corresponding to &lt;code&gt;for&lt;/code&gt; loop, we get:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-nasm&quot;&gt;push    rbp
+mov     rbp, rsp
+push    r14
+push    r13
+push    r12
+push    rbx
+mov     r13d, edi
+movsx   r12, edi       ; here aVLA &quot;starts&quot;...
+sal     r12, 2         ;
+lea     rax, [r12+15]  ;
+and     rax, -16       ;
+sub     rsp, rax       ;
+mov     r14, rsp       ; ... and there &quot;ends&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The aVLA-free version on the other hand generates:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-nasm&quot;&gt;push    r12
+push    rbp
+push    rbx
+sub     rsp, 4000      ; this is caused by array definition
+mov     r12d, edi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So not only fixed array spawns less code, but also way simpler code.
+Why, aVLA even causes more overhead at the beginning of the function.
+It's not so much more in the grand scheme of things, but it still isn't
+just a pointer bump.&lt;/p&gt;
+
+&lt;p&gt;But are those differences significant enough to care?
+&lt;a href=&quot;https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=02361bc77888&quot;&gt;Yes, they are&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;no-initialization&quot;&gt;No initialization&lt;/h1&gt;
+
+&lt;p&gt;To add more to the issue with inadvertent aVLA, the following isn't allowed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int n = 10;
+int A[n] = { 0 };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Even with optimizations, initialisation isn't allowed for aVLA. So despite
+wanting fixed size array and compiler being technically able to provide one,
+it's won't work (and if it does… it's breaking the specification…).&lt;/p&gt;
+
+&lt;h1 id=&quot;mess-for-compiler-writers&quot;&gt;Mess for compiler writers&lt;/h1&gt;
+
+&lt;p&gt;Few months ago I saved a &lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/jz2213/are_vlas_bad_even_if_theyre_not_allocated_on_the/gdc3hz6&quot;&gt;comment&lt;/a&gt;
+on Reddit listing problems encountered with VLA from compiler writer perspective.
+I'll allow myself to cite the listed issues:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;A VLA applies to a type, not an actual array. So you can create a &lt;code&gt;typedef&lt;/code&gt;
+of a VLA type, which &quot;freezes&quot; the value of the expression used, even if
+elements of that expression change at the time the VLA type is applied&lt;/li&gt;
+    &lt;li&gt;VLAs can occur inside blocks, and inside loops. This means allocating and
+deallocating variable-sized data on the stack, and either screwing up all
+the offsets, or needing to do things indirectly via pointers.&lt;/li&gt;
+    &lt;li&gt;You can use &lt;code&gt;goto&lt;/code&gt; into and out of blocks with active VLAs, with some things
+restricted and some not, but the compiler needs to keep track of the mess.&lt;/li&gt;
+    &lt;li&gt;VLAs can be used with multi-dimensional arrays.&lt;/li&gt;
+    &lt;li&gt;VLAs can be used as pointer targets (so no allocation is done, but it still
+needs to keep track of the variable size).&lt;/li&gt;
+    &lt;li&gt;Some compilers allow VLAs inside structure definitions (I really have no idea
+how that works, or at what point the VLA size is frozen, so that all instances
+have the same VLA(s) sizes.)&lt;/li&gt;
+    &lt;li&gt;A function can have dozens of VLAs active at any one time, with some being
+created or destroyed at different times, or conditionally, or in loops.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;sizeof&lt;/code&gt; needs to be specially implemented for VLAs, and all the necessary
+info (for actual VLAs, VLA-types, and hybrid VLA/fixed-size types and
+arrays and pointed-to VLAs).&lt;/li&gt;
+    &lt;li&gt;'VLA' is also the term used for multi-dimensional array parameters, where
+the dimensions are passed by other parameters.&lt;/li&gt;
+    &lt;li&gt;On Windows, with some compilers (GCC at least), declaring local arrays which
+make the stack frame size over 4 KiB, mean calling a special allocator
+(&lt;code&gt;__chkstk()&lt;/code&gt;), as the stack can only grow a page at a time. When a VLA is
+declared, since the compiler doesn't know the size, it needs to call
+&lt;code&gt;__chkstk&lt;/code&gt; for every such function, even if the size turns out to be small.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And believe me, if you take a stroll around some C forums (or the meeting of
+standard committee [sic!]) you will see even more different complaints.&lt;/p&gt;
+
+&lt;h1 id=&quot;reduced-portability&quot;&gt;Reduced portability&lt;/h1&gt;
+
+&lt;p&gt;Due to all previously presented problems, some compiler providers decided to
+not fully support C99. The primary example is Microsoft with its MSVC.
+The C Standard Committee also noticed the problem and with C11 revision
+all instances of VLAs were made optional; C2x is partially reverts that decision
+mandating VM types (aVLA are still optional; there is even a slight sentiment
+towards deprecating them entirely, but removing something from the, nomen omen,
+standard is way harder than putting it in).&lt;/p&gt;
+
+&lt;p&gt;That means code using a VLA won't necessarily be compiled by a C11 compiler,
+so you need, assuming you target for portability, to check whether it is
+supported with &lt;code&gt;__STDC_NO_VLA__&lt;/code&gt; macro and make version without (a)VLA as
+fallback. Wait… if you need to implement VLA-free version either way then
+what's the point of doubling the code and creating VLA in the first place?!&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;As a side note: C++ doesn't have VLA and nothing suggests
+it ever will (other than as implementation extension).&lt;br /&gt;
+Not a dealbreaker, but still point against VLA in C.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h1 id=&quot;nitpick-breaking-conventions&quot;&gt;(nitpick) Breaking conventions&lt;/h1&gt;
+
+&lt;p&gt;This one is more of a nitpick, but still another reason to dislike VLA. There
+is a widely used convention of first passing object then its parameters, what
+in terms of arrays means:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void foo(int** arr, int n, int m) { /* arr[i][j] = ... */ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;C99 specified that array sizes need to be parsed immediately when encountered
+within a function definition's parameter list, what means that when using VLA
+you cannot do an equivalent of the above:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void foo(int arr[n][m], int n, int m) { /* arr[i][j] = ... */ } // INVALID!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You need to break up with the convention and write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void foo(int n, int m, int arr[n][m]) { /* arr[i][j] = ... */ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alternatively, you could use the obsolete syntax (obsolescent even in
+ANSI C; finally removed in C2x), but that would be pointless, as
+compilers don't make parameters checks in such case, so any benefits
+from using VLA would be lost.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void foo(int[*][*], int, int);
+void foo(arr, n, n)
+    int n;
+    int m;
+    int arr[n][m]
+{
+    // arr[i][j] = ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;There is a chance a GCC extension - &lt;em&gt;forward declaration of parameters&lt;/em&gt; - will
+be standardized in C2x (assuming we reach consensus on the revision
+of &lt;a href=&quot;https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2780.pdf&quot;&gt;N2780&lt;/a&gt;).&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;In short, refrain from using VLA and &lt;strong&gt;avoid automatic VLA like devil avoids
+holy water&lt;/strong&gt;; if your compiler has it, rather compile with &lt;code&gt;-Wvla&lt;/code&gt; flag
+or similar (and definitely with &lt;code&gt;-Wvla-larger-than=0&lt;/code&gt; - this allows VM types,
+while warning about aVLA).&lt;/p&gt;
+
+&lt;p&gt;If you find yourself in one of the situations where VLA (or VM type) is a valid/good
+solution, of course, do use them, but keep in mind the limits I've outlined here.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;It's probably also worth mentioning that VLAs were partially supposed to be
+a solution to non-standard &lt;code&gt;alloca()&lt;/code&gt; function, which is even more problematic
+when it comes to stack.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;As you could have guessed by the quote at the beginning, project which used to
+rely on VLA quite extensively (209 unique locations reported in 60 directories!)
+is nothing else than Linux kernel. Maintainers spent a lot of effort to get rid
+of all VLA and as of version 4.20 (year 2018) it's completely VLA-free.&lt;/p&gt;
+&lt;/aside&gt;</content><author><name>Jorengarenar</name></author><summary type="html">It generates much more code, and much slower code (and more fragile code), than just using a fixed key size would have done ~ Linus Torvalds</summary></entry><entry><title type="html">Steps to learn Vim</title><link href="https://blog.joren.ga/vim-learning-steps" rel="alternate" type="text/html" title="Steps to learn Vim" /><published>2021-01-23T00:00:00+00:00</published><updated>2021-01-23T00:00:00+00:00</updated><id>https://blog.joren.ga/vim-learning-steps</id><content type="html" xml:base="https://blog.joren.ga/vim-learning-steps">&lt;ol start=&quot;0&quot;&gt;
+  &lt;li&gt;Learn &lt;a href=&quot;https://stackoverflow.com/help/how-to-ask&quot;&gt;how to ask a good question&lt;/a&gt; and &lt;a href=&quot;https://ddg.gg/?q=vim+start+learning&quot;&gt;to type it into search engine before asking&lt;/a&gt; on forums&lt;/li&gt;
+  &lt;li&gt;Do &lt;a href=&quot;https://vimhelp.org/usr_01.txt.html#vimtutor&quot;&gt;&lt;code&gt;vimtutor&lt;/code&gt;&lt;/a&gt; - it's a 30-minute tutorial that teaches the most basic Vim functionality hands-on&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/RTFM&quot;&gt;RTFM&lt;/a&gt;! User manual (&lt;a href=&quot;https://vimhelp.org/usr_toc.txt.html&quot;&gt;&lt;code&gt;:h user-manual&lt;/code&gt;&lt;/a&gt;) will guide you through every feature from basic to advanced&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimhelp.org/&quot;&gt;&lt;code&gt;:help&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;:helpgrep&lt;/code&gt; to find more detailed documentation of specific feature&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimhelp.org/vim_faq.txt.html&quot;&gt;&lt;code&gt;:h faq&lt;/code&gt;&lt;/a&gt; - Frequently Asked Questions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimhelp.org/quickref.txt.html&quot;&gt;&lt;code&gt;:h quickref&lt;/code&gt;&lt;/a&gt; - quick reference guide&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/romainl/idiomatic-vimrc&quot;&gt;idiomatic vimrc&lt;/a&gt; by &lt;a href=&quot;http://romainl.github.io/&quot;&gt;romainl&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;Ad 1:&lt;/em&gt;&lt;/strong&gt; Additionaly you can also:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://learnvim.irian.to&quot;&gt;Learn Vim the Smart Way&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Play free levels of &lt;a href=&quot;https://vim-adventures.com&quot;&gt;VIM Adventures&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Follow &lt;a href=&quot;https://openvim.com/&quot;&gt;OpenVim&lt;/a&gt; - an interactive Vim tutorial online&lt;/li&gt;
+    &lt;li&gt;Try yourself in online &lt;a href=&quot;https://vim.morzel.net&quot;&gt;Vim Quiz&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Further down the road:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Read humorous &lt;a href=&quot;https://blog.sanctum.geek.nz/vim-koans&quot;&gt;Vim Kōans&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/1220118/10247460&quot;&gt;Your problem with Vim is that you don't grok vi&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.vi-improved.org/vim-proverbs&quot;&gt;Proverbs&lt;/a&gt; and &lt;a href=&quot;https://www.vi-improved.org/recommendations&quot;&gt;recommendations&lt;/a&gt; from &lt;a href=&quot;https://www.vi-improved.org/&quot;&gt;#vim&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.moolenaar.net/habits.html&quot;&gt;Seven habits of effective text editing&lt;/a&gt; by Bram Moolenaar&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/26710166/10247460&quot;&gt;Why do Vim experts prefer buffers over tabs?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/vim/wiki/vimrctips&quot;&gt;vimrctips&lt;/a&gt; of &lt;a href=&quot;https://www.reddit.com/r/vim&quot;&gt;r/vim&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=XA2WjJbmmoM&quot;&gt;How to Do 90% of What Plugins Do (With Just Vim)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://learnvimscriptthehardway.stevelosh.com&quot;&gt;Learn Vimscript the Hard Way&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/vim-xdg&quot;&gt;Make Vim follow XDG Base Directory specification&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Watch some &lt;a href=&quot;http://vimcasts.org/episodes&quot;&gt;Vimcasts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Check out &lt;a href=&quot;https://vimways.org/2018&quot;&gt;Vimways&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Read configs of more experienced users (&lt;a href=&quot;https://github.com/Jorengarenar/dotfiles/tree/master/vim&quot;&gt;here's mine&lt;/a&gt;, for example)&lt;/li&gt;
+    &lt;li&gt;Check out resource lists:
+      &lt;ul&gt;
+        &lt;li&gt;My &lt;a href=&quot;https://resources.joren.ga&quot;&gt;list of resources&lt;/a&gt; on various topics (filter by &quot;&lt;em&gt;Vim&lt;/em&gt;&quot; tag)&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://learnbyexample.github.io/curated_resources/vim.html&quot;&gt;Vim - Curated learning resources&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;</content><author><name>Jorengarenar</name></author><summary type="html">Learn how to ask a good question and to type it into search engine before asking on forums Do vimtutor - it's a 30-minute tutorial that teaches the most basic Vim functionality hands-on RTFM! User manual (:h user-manual) will guide you through every feature from basic to advanced :help and :helpgrep to find more detailed documentation of specific feature :h faq - Frequently Asked Questions :h quickref - quick reference guide idiomatic vimrc by romainl</summary></entry><entry><title type="html">Make Vim follow XDG Base Directory specification</title><link href="https://blog.joren.ga/vim-xdg" rel="alternate" type="text/html" title="Make Vim follow XDG Base Directory specification" /><published>2020-12-13T00:00:00+00:00</published><updated>2020-12-13T00:00:00+00:00</updated><id>https://blog.joren.ga/vim-xdg</id><content type="html" xml:base="https://blog.joren.ga/vim-xdg">&lt;p&gt;XDG Base Directory specification, &lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; etc. Great thing - configs
+separated from user data and cache, no clutter in home directory. Unfortunately,
+many programs still don't respect it, including Vim. But what would be our favourite
+text editor if we wouldn't be able to reconfigure it!&lt;/p&gt;
+
+&lt;h1 id=&quot;tldr&quot;&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;Into shell config (e.g. in &lt;code&gt;~/.profile&lt;/code&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;export VIMINIT=&quot;set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At the top of &lt;em&gt;vimrc&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;&quot; XDG support
+
+if empty($MYVIMRC) | let $MYVIMRC = expand('&amp;lt;sfile&amp;gt;:p') | endif
+
+if empty($XDG_CACHE_HOME)  | let $XDG_CACHE_HOME  = $HOME.&quot;/.cache&quot;       | endif
+if empty($XDG_CONFIG_HOME) | let $XDG_CONFIG_HOME = $HOME.&quot;/.config&quot;      | endif
+if empty($XDG_DATA_HOME)   | let $XDG_DATA_HOME   = $HOME.&quot;/.local/share&quot; | endif
+if empty($XDG_STATE_HOME)  | let $XDG_STATE_HOME  = $HOME.&quot;/.local/state&quot; | endif
+
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+
+let g:netrw_home = $XDG_DATA_HOME.&quot;/vim&quot;
+call mkdir($XDG_DATA_HOME.&quot;/vim/spell&quot;, 'p', 0700)
+
+set backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&amp;amp;backupdir, 'p', 0700)
+set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&amp;amp;directory, 'p', 0700)
+set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&amp;amp;undodir,   'p', 0700)
+set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&amp;amp;viewdir,   'p', 0700)
+
+if !has('nvim') &quot; Neovim has its own special location
+  set viminfofile=$XDG_STATE_HOME/vim/viminfo
+endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;step-by-step&quot;&gt;Step-by-step&lt;/h1&gt;
+&lt;h2 id=&quot;relocating-vimrc&quot;&gt;Relocating &lt;em&gt;vimrc&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;To begin with, since version 7.3.1178, Vim will search for &lt;code&gt;~/.vim/vimrc&lt;/code&gt; if
+&lt;code&gt;~/.vimrc&lt;/code&gt; is not found. So let's move the file there.&lt;/p&gt;
+
+&lt;p&gt;Let's move our &lt;code&gt;~/.vim&lt;/code&gt; to &lt;code&gt;$XDG_CONFIG_HOME/vim&lt;/code&gt;. Now we need to command Vim
+to read config from this new location prior to &lt;code&gt;~/.vim&lt;/code&gt;. There are three ways
+to do it.&lt;/p&gt;
+
+&lt;h3 id=&quot;shell-alias&quot;&gt;Shell alias&lt;/h3&gt;
+
+&lt;p&gt;Pretty straightforward method. Shell will just substitute command &lt;code&gt;vim&lt;/code&gt; with the alias body&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;alias vim='vim -u ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Downside? Works only in shell&lt;/p&gt;
+
+&lt;h3 id=&quot;viminit-environmental-variable&quot;&gt;&lt;code&gt;VIMINIT&lt;/code&gt; environmental variable&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;export VIMINIT=&quot;set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cons? If you wish for Neovim and Vim configurations to still be separated, then:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;export VIMINIT=&quot;if has(&quot;nvim&quot;) | so ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim | else | set nocp | so ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc | endif&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;wrapper-script&quot;&gt;Wrapper script&lt;/h3&gt;
+
+&lt;p&gt;Save the following code as &lt;code&gt;vim&lt;/code&gt; in &lt;code&gt;$HOME/.local/bin&lt;/code&gt; *
+and make is executable with &lt;code&gt;chmod +x vim&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;#!/usr/bin/env sh
+
+for dir in $(echo &quot;$PATH&quot; | tr &quot;:&quot; &quot;\n&quot; | grep -Fxv &quot;$(dirname $0)&quot;); do
+    if [ -x &quot;$dir/vim&quot; ]; then
+        exec &quot;$dir/vim&quot; -u &quot;${XDG_CONFIG_HOME:-$HOME/.config}&quot;/vim/vimrc &quot;$@&quot;
+    fi
+done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Doesn't affect Neovim and works outside shell, but you need to carry it together
+with your config&lt;/p&gt;
+
+&lt;p&gt;* Remember to add it to the beginning of &lt;code&gt;PATH&lt;/code&gt; environment variable. &lt;br /&gt;
+   It can be also other location of your choice instead of &lt;code&gt;$HOME/.local/bin&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;now-the-code-in-our-vimrc&quot;&gt;Now the code in our &lt;em&gt;vimrc&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;First of all, although not mandatory, let's set &lt;code&gt;$MYVIMRC&lt;/code&gt; variable:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;if empty($MYVIMRC) | let $MYVIMRC = expand('&amp;lt;sfile&amp;gt;:p') | endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let's define fallback locations in case &lt;code&gt;XDG_*&lt;/code&gt; variables are not set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;if empty($XDG_CACHE_HOME)  | let $XDG_CACHE_HOME  = $HOME.&quot;/.cache&quot;       | endif
+if empty($XDG_CONFIG_HOME) | let $XDG_CONFIG_HOME = $HOME.&quot;/.config&quot;      | endif
+if empty($XDG_DATA_HOME)   | let $XDG_DATA_HOME   = $HOME.&quot;/.local/share&quot; | endif
+if empty($XDG_STATE_HOME)  | let $XDG_STATE_HOME  = $HOME.&quot;/.local/state&quot; | endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let's add entries to &lt;code&gt;runtimepath&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;$XDG_CONFIG_HOME/vim&lt;/code&gt; and &lt;code&gt;$XDG_CONFIG_HOME/vim/after&lt;/code&gt; are just equivalents of
+&lt;code&gt;~/.vim&lt;/code&gt; and &lt;code&gt;~/.vim/after&lt;/code&gt;, but &lt;code&gt;$XDG_DATA_HOME/vim&lt;/code&gt; is brand new - there we
+will keep downloadables (like plugins and spell files), Netrw bookmarks etc.&lt;/p&gt;
+
+&lt;p&gt;Let's set directory for Vim8 build-in packages:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;set packpath^=$XDG_DATA_HOME/vim
+set packpath+=$XDG_DATA_HOME/vim/after
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Netrw is just as easy:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;let g:netrw_home = $XDG_DATA_HOME.&quot;/vim&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What about spellings? Well, this one is more tricky, because it isn't controlled
+by any option. Instead it searches for &lt;code&gt;spell&lt;/code&gt; directory in whole runtime path.
+If none is found then it falls back to &lt;code&gt;~/.vim/spell&lt;/code&gt;. So let's create one at
+desired location ourselves!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;call mkdir($XDG_DATA_HOME.&quot;/vim/spell&quot;, 'p', 0700)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So far so good. We are left with state (backup, undo, swap, viminfo, view).
+Vim doesn't create directories for them (even for defaults), so we will need
+to do it ourselves - thankfully VimL has &lt;code&gt;mkdir()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;set backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&amp;amp;backupdir, 'p', 0700)
+set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&amp;amp;directory, 'p', 0700)
+set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&amp;amp;undodir,   'p', 0700)
+set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&amp;amp;viewdir,   'p', 0700)
+
+if !has('nvim') &quot; Neovim has its own location which already complies with XDG specification
+  set viminfofile=$XDG_STATE_HOME/vim/viminfo
+endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Congratulations! Now your Vim is configured with accordance to XDG Base Directory specification.&lt;/p&gt;
+
+&lt;h1 id=&quot;sources&quot;&gt;Sources&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tlvince.com/vim-respect-xdg&quot;&gt;Vim respect XDG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://specifications.freedesktop.org/basedir-spec/0.8/&quot;&gt;XDG Base Directory Specification&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vim/vim/issues/2034&quot;&gt;Issue #2034: [RFC] .config/vim(UNIX), AppData/Roaming/vim(Windows) directory structure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vim/vim/commit/6a459902592e2a4ba68&quot;&gt;Version 7.3.1178 commit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/XDG_Base_Directory&quot;&gt;XDG Base Directory - ArchWiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Jorengarenar/dotfiles/tree/master/vim&quot;&gt;Jorengarenar's Vim config&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://groups.google.com/g/vim_dev/c/ieoldm29ymM/m/-dTZ2E8A1xwJ&quot;&gt;[PATCH] XDG Base Directory Specification support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorengarenar</name></author><summary type="html">XDG Base Directory specification, $XDG_CONFIG_HOME etc. Great thing - configs separated from user data and cache, no clutter in home directory. Unfortunately, many programs still don't respect it, including Vim. But what would be our favourite text editor if we wouldn't be able to reconfigure it!</summary></entry><entry><title type="html">Best aspects of C language</title><link href="https://blog.joren.ga/best-of-c" rel="alternate" type="text/html" title="Best aspects of C language" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://blog.joren.ga/best-of-c</id><content type="html" xml:base="https://blog.joren.ga/best-of-c">&lt;p&gt;How comes that, after over half a century, C is still a relatively popular and
+widely used language when others have withered into obscurity? Why, over all this
+time, was nothing able to fully replace it? Why is it still taught in schools?&lt;/p&gt;
+
+&lt;p&gt;Let's have a look at some of the best, in my opinion, aspects of the language
+(although not all) that contributed to such a state of affairs.&lt;/p&gt;
+
+&lt;h1 id=&quot;spirit-of-c&quot;&gt;Spirit of C&lt;/h1&gt;
+
+&lt;p&gt;Let's start with a quote from document &lt;a href=&quot;http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf&quot;&gt;C99RationaleV5.10&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The C89 Committee kept as a major goal to preserve the traditional spirit of C.
+There are many facets of the spirit of C, but the essence is a community
+sentiment of the underlying principles upon which the C language is based.
+Some of the facets of the spirit of C can be summarized in phrases like:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;em&gt;Trust the programmer.&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;Don’t prevent the programmer from doing what needs to be done.&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;Keep the language small and simple.&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;Provide only one way to do an operation.&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;Make it fast, even if it is not guaranteed to be portable.&lt;/em&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;mid-level&quot;&gt;&quot;Mid-level&quot;&lt;/h1&gt;
+
+&lt;p&gt;In regards of level, there are two types of languages: low and high.&lt;/p&gt;
+
+&lt;p&gt;Low-level languages are close to the hardware, the only closer thing to CPU
+would be electricity itself. Those languages are divided into machine code and
+Assembly. The former is a stream of raw, usually binary, data. If somebody is
+required to work with it, usually does it using more &quot;readable&quot; hexadecimal form.&lt;/p&gt;
+
+&lt;p&gt;Second-generation languages - Assembly - provide one abstraction level on top
+of the machine code. Those languages are mostly only a mapping of human-readable
+symbols, including symbolic addresses, to opcodes, addresses, numeric constants,
+strings and so on. Also are different for each processor.&lt;/p&gt;
+
+&lt;p&gt;How do high-level languages, providing more abstraction, compare? Quoting Wikipedia:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In contrast to low-level programming languages, it may use natural language
+elements, be easier to use, or may automate (or even hide entirely) significant
+areas of computing systems (e.g. memory management), making the process of
+developing a program simpler and more understandable than when using a
+lower-level language. The amount of abstraction provided defines how
+&quot;high-level&quot; a programming language is.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In big oversimplification: low = more machine friendly, high = more human friendly.&lt;/p&gt;
+
+&lt;p&gt;C is high-level, but back when it was created, most of the work was still being
+done in low-level Assembly. As a result, C has lower level of abstraction than
+other (still) widely used languages and is often utilized for low-level
+programming, hence I like to call it &quot;mid-level&quot;.&lt;/p&gt;
+
+&lt;p&gt;You can also easily (with less language bloat) compile C code to Assembly and
+examine what instructions processor will execute.&lt;/p&gt;
+
+&lt;p&gt;And if it there is a need, many popular C compilers offers you the option
+to level down and use inline Assembly to squeeze everything out of CPU.
+It's a feature not really implemented with many other languages.&lt;/p&gt;
+
+&lt;h1 id=&quot;fairly-simple&quot;&gt;Fairly simple&lt;/h1&gt;
+
+&lt;p&gt;Low-level languages are harder to program in. Not because they are more
+complicated, but because they are more error prone and thus require way
+more commitment, memorizing and fiddling.&lt;/p&gt;
+
+&lt;p&gt;C is mid-level, so &quot;by definition&quot; it's easier. But there comes the surprise,
+learning it is easier compared to higher level languages! Why? Because of not
+extensive syntax it doesn't take so much to learn the basics.
+Loops, functions, structures, pointers, variables, types - the core of language.
+Intense week to get the general idea. The rest is &quot;just&quot; maths and CS theorem.&lt;/p&gt;
+
+&lt;p&gt;But, but, but, but! Don't get me wrong! &lt;br /&gt;
+Language is simple, programming not necessarily! &lt;br /&gt;
+To master anything you will need a lot more practice! &lt;br /&gt;
+&lt;strong&gt;A lot!&lt;/strong&gt; And it's truth for anything out there!&lt;/p&gt;
+
+&lt;h1 id=&quot;fast-lightweight-and-flexible&quot;&gt;Fast, lightweight and flexible&lt;/h1&gt;
+
+&lt;p&gt;Standard C library is small compared to other languages (e.g. Java). It's small
+enough for you to try to memorize all functions successfully (not that it would
+be a huge benefit). Yeah, many things should be deprecated long ago, there
+obviously is some bloat (try to maintains something without bloat for few years,
+let alone few decades), but there is not much enough of it to hinder the performance.&lt;/p&gt;
+
+&lt;p&gt;And what if libc is still too much? Nothing stands in the way of not using it
+at all! Just don't include any of its headers - not even simple &lt;code&gt;printf()&lt;/code&gt; will
+be present. Replace it with any other library of your choice.&lt;/p&gt;
+
+&lt;p&gt;Maturity, emphasis on proper memory management, inline Assembly, small abstraction
+and little bloat gives programmer really good control over the program.&lt;/p&gt;
+
+&lt;p&gt;This makes C an ideal choice for OS kernels (Linux, Windows NT or macOS's XNU to
+name a few) or other languages (e.g. Python). That's also why C is so popular
+on embedded systems, where you cannot afford to waste resources.&lt;/p&gt;
+
+&lt;h1 id=&quot;standard-no-blessed-implementation&quot;&gt;Standard, no blessed implementation&lt;/h1&gt;
+
+&lt;p&gt;This one relates to previous and next point. The C programming language is definied
+basically only by a document published by International Organization for Standardization
+every few years. Contrary to languages like Python, Rust or Java, there is no partucullar
+implementation that is &lt;strong&gt;the&lt;/strong&gt; C language.&lt;/p&gt;
+
+&lt;p&gt;Combine it with flexibility and you have a language which can easily target any platform.&lt;/p&gt;
+
+&lt;h1 id=&quot;ubiquity--portability&quot;&gt;Ubiquity = portability&lt;/h1&gt;
+
+&lt;p&gt;Does there exist any (still) significant platform with no C compiler available?
+Yes, those work exclusively on Assembly only; for all others, C is available.
+C programs are present on your high-end gaming PC, on NASA spacecrafts and
+in ticket machines. Literally everywhere. C software runs the world.&lt;/p&gt;
+
+&lt;p&gt;In accordance to previous paragraphs, C is peculiarly strong choice for
+microcontrollers and other forms of embedded systems, which surround us every day.&lt;/p&gt;
+
+&lt;p&gt;And have you heard about &lt;a href=&quot;https://en.wikipedia.org/wiki/Foreign_function_interface&quot;&gt;FFI&lt;/a&gt;?
+Turns out many other languages like to have some kind of compatibility with C.&lt;/p&gt;
+
+&lt;p&gt;You don't need to worry if you will be able to use this language somewhere as
+for 99% you can! (Although it doesn't mean you should…) It means, that while
+code may not be 100% portable, you will be a portable programmer.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-influencer&quot;&gt;The influencer&lt;/h1&gt;
+
+&lt;p&gt;C has both directly and indirectly influenced innumerous amount of languages.
+C++, Java, Go, D, Rust, Perl, even PHP and Python - those are but few examples.&lt;/p&gt;
+
+&lt;p&gt;Obviously, knowledge of C isn't needed to learn any of them and sometimes
+may even push you to use not the best practices.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, I think it's beneficial to remember the roots. And if you are
+cautious, familiarity with C might give you some foothold. It's especially the
+case with C++.&lt;/p&gt;
+
+&lt;h1 id=&quot;rich-collection-of-libraries&quot;&gt;Rich collection of libraries&lt;/h1&gt;
+
+&lt;p&gt;I suspect all this talk about fastness, lightness, mid-level, Assembly etc. might
+have give you an idea, you will need to implement everything yourself. There may
+indeed not be any &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html&quot;&gt;&lt;code&gt;LinkedHashMap&lt;/code&gt;&lt;/a&gt;
+or other functionalities like garbage collection available for C… except… not entirely.&lt;/p&gt;
+
+&lt;p&gt;C is mature and popular language, so while those features aren't build-in,
+believe me, name a thing and somebody somewhere already created library for
+it (although if think about something too obscure to find, but it does exists).&lt;/p&gt;
+
+&lt;p&gt;You want garbage collector? &lt;a href=&quot;https://www.hboehm.info/gc/&quot;&gt;Boehm GC&lt;/a&gt; has you covered.
+TUI? Nothing like timeless &lt;a href=&quot;https://invisible-island.net/ncurses/&quot;&gt;ncurses&lt;/a&gt;.
+Examples can be listed almost infinitely:
+&lt;a href=&quot;https://gtk.org/&quot;&gt;GTK&lt;/a&gt;,
+&lt;a href=&quot;https://pdcurses.org/&quot;&gt;PDCurses&lt;/a&gt;,
+&lt;a href=&quot;https://curl.haxx.se/libcurl/&quot;&gt;libcurl&lt;/a&gt;,
+&lt;a href=&quot;https://www.alsa-project.org/&quot;&gt;ALSA&lt;/a&gt;,
+&lt;a href=&quot;https://codeplea.com/genann&quot;&gt;Genann&lt;/a&gt;,
+&lt;a href=&quot;http://libsound.io/&quot;&gt;libsoundio&lt;/a&gt;,
+&lt;a href=&quot;https://libsdl.org&quot;&gt;SDL&lt;/a&gt;,
+&lt;a href=&quot;https://www.sqlite.org/index.html&quot;&gt;SQLite&lt;/a&gt;,
+&lt;a href=&quot;https://www.gnu.org/software/libc/manual/html_node/Getopt.html&quot;&gt;getopt&lt;/a&gt;,
+&lt;a href=&quot;https://www.opengl.org/&quot;&gt;OpenGL&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/benhoyt/inih&quot;&gt;inih&lt;/a&gt;,
+&lt;a href=&quot;https://gmplib.org/&quot;&gt;GMP&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/DaveGamble/cJSON&quot;&gt;cJSON&lt;/a&gt;,
+&lt;a href=&quot;https://mupdf.com/&quot;&gt;MuPDF&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/Jorengarenar/libXDGdirs&quot;&gt;libXDGdirs&lt;/a&gt;,
+&lt;a href=&quot;https://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt;…&lt;/p&gt;
+
+&lt;p&gt;It's very universal language - you can program basically anything: web server,
+video game (e.g. &lt;a href=&quot;https://github.com/id-Software&quot;&gt;classics from &lt;em&gt;id Software&lt;/em&gt;&lt;/a&gt;),
+operating system, other programming language or wrapper forcing Firefox to obey
+&lt;a href=&quot;https://wiki.archlinux.org/index.php/XDG_Base_Directory&quot;&gt;XDG Base Directory specification&lt;/a&gt;,
+because when I'm an administrator, the programs will do exactly what I told them to!
+There were madlads doing WebDev in C via CGI Scripts (and nowadays with WebAssembly).&lt;/p&gt;
+
+&lt;p&gt;However, please, remember - the fact you can, doesn't mean you should. For example,
+if you want to create a video game, you really ought to turn your eyes to C++.
+And you should know, that…&lt;/p&gt;
+
+&lt;h1 id=&quot;c-is-highly-backward-compatible&quot;&gt;C++ is highly backward compatible&lt;/h1&gt;
+
+&lt;p&gt;Why do I even make the whole point out of C++ here? Because it's one of most
+widely used languages today and you encountering it is more than certain.&lt;/p&gt;
+
+&lt;p&gt;In contrary to other languages embracing C compatibility, C++ was created as its
+direct descendant and committee goes to great lengths to keep the &quot;copy-paste&quot;
+compatibility with it - in most cases you can compile C code as C++ just fine.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;Don't be mistaken,
+&lt;a href=&quot;https://mcla.ug/blog/cpp-is-not-a-superset-of-c.html&quot;&gt;C++ isn't by any means a superset of C&lt;/a&gt; - the code
+isn't always going to work with C++ and a good C code isn't necessary good C++ code. Consider example:&lt;/p&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int* x = malloc(10 * sizeof (*x));
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;p&gt;Proper way in C, but in C++ there ought to be &lt;code&gt;(int*)&lt;/code&gt; before &lt;code&gt;malloc()&lt;/code&gt;,
+for it to work, not to mention you should use &lt;code&gt;new int[10]&lt;/code&gt; instead.&lt;/p&gt;
+
+  &lt;p&gt;Although in most cases you can use C library safely in your C++ project.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;All examples from the previous point not only &lt;strong&gt;can be&lt;/strong&gt;, but &lt;strong&gt;often are&lt;/strong&gt;
+used in such way.&lt;/p&gt;
+
+&lt;p&gt;Even libraries already compiled with C compiler can be made compatible with C++,
+thanks to &lt;a href=&quot;https://en.cppreference.com/w/cpp/language/language_linkage&quot;&gt;&lt;code&gt;extern &quot;C&quot;&lt;/code&gt;&lt;/a&gt;
+linkage specifier.&lt;/p&gt;
+
+&lt;h1 id=&quot;safety&quot;&gt;Safety&lt;/h1&gt;
+
+&lt;p&gt;In my opinion, &lt;a href=&quot;https://www.reddit.com/r/C_Programming/comments/llwg2e/what_are_common_uses_of_c_in_the_real_world/gns54z3&quot;&gt;this comment&lt;/a&gt;
+by Reddit user &lt;a href=&quot;https://www.reddit.com/user/tim36272&quot;&gt;u/tim36272&lt;/a&gt; catches this point perfectly:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You're thinking of things like type safety, garbage collection etc.&lt;/p&gt;
+
+  &lt;p&gt;I'm talking about safety in terms of people dying. Things like garbage
+collection are the opposite of life safety. What if your airplane decided it
+needed to free up memory ten seconds from touchdown so it ran the garbage
+collector? What if running the garbage collector caused a valve to respond
+0.1 seconds late to a command, which caused a chain reaction resulting in
+a hydraulic line bursting and losing control of the rudder?&lt;/p&gt;
+
+  &lt;p&gt;C can be safe because it does exactly what the programmer tells it to do,
+nothing more and nothing less. There's no magic going on behind the scenes
+which could have complex interactions with other behind the scenes magic.&lt;/p&gt;
+
+  &lt;p&gt;A common example is &lt;code&gt;std::vector&lt;/code&gt; from C++. This container expands as needed
+to accommodate as many elements as you need. But you have a limited amount of
+memory on the system, so you need to do static analysis to determine the
+maximum size of that vector. And you need to be sure that you have enough
+memory for that plus everything else in your system.&lt;/p&gt;
+
+  &lt;p&gt;Well, now you've eliminated a lot of the convenience of using &lt;code&gt;std::vector&lt;/code&gt;.
+You might as well just allocate that max size to it and avoid all the overhead
+&lt;code&gt;std::vector&lt;/code&gt; imposes by growing in size.&lt;/p&gt;
+
+  &lt;p&gt;The other main advantage of &lt;code&gt;std::vector&lt;/code&gt; are templates. If you were to use a
+template in safety critical code you'd need to prove that the code generated by
+the compiler is correct for every template. Now that you're diving down into
+all this auto-generated machine code, it would be easier to just write the
+code yourself and avoid the complexity introduced by the compiler's template
+generator.&lt;/p&gt;
+
+  &lt;p&gt;So, if we eliminate all the usefulness of &lt;code&gt;std::vector&lt;/code&gt;, why use it at all?&lt;/p&gt;
+
+  &lt;p&gt;Repeat that process for most features in most languages and voila! You're back at C&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Important note&lt;/strong&gt;: if you want such safety, you throw portability out of the window!&lt;/p&gt;
+
+&lt;h1 id=&quot;preprocessor&quot;&gt;Preprocessor&lt;/h1&gt;
+
+&lt;p&gt;C (and its direct derivatives like C++ or Object-C) is the only language
+I know of, which includes a lexical preprocessor in its specification.&lt;/p&gt;
+
+&lt;p&gt;Understandable, considering the fact that many newer languages contain mechanisms
+which make preprocessing partially obsolete.&lt;br /&gt;
+And in the need there are always fallbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;using other language (or even itself) as preprocessor (e.g. Python as preprocessor to Java)&lt;/li&gt;
+  &lt;li&gt;using external preprocessor (e.g. &lt;a href=&quot;https://www.gnu.org/software/m4/m4.html&quot;&gt;m4&lt;/a&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;…or C preprocessor (yes, there is nothing stopping you from &lt;a href=&quot;https://www.nongnu.org/espresso/js-cpp.html&quot;&gt;preprocessing JavaScript with C compiler&lt;/a&gt;!)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I will repeat the link with proper title:
+&lt;a href=&quot;https://www.nongnu.org/espresso/js-cpp.html&quot;&gt;The C Preprocessor in Javascript?&lt;/a&gt; -
+I really recommend reading this short text, as I think it's enought to understand
+why having a standarized, portable preprocessor is a good thing in C.&lt;/p&gt;
+
+&lt;h1 id=&quot;program-in-c-song&quot;&gt;&lt;em&gt;Program in C&lt;/em&gt; song&lt;/h1&gt;
+
+&lt;div class=&quot;yt-container&quot;&gt;
+  &lt;iframe class=&quot;yt-video&quot; src=&quot;https://www.youtube.com/embed/tas0O586t80&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;Lyrics&lt;/summary&gt;
+  &lt;em style=&quot;white-space: pre-line;&quot;&gt;
+    Ariel, listen to me
+    OO languages?
+    It's a mess.
+    Programming in C is better than anything they got over there.
+
+    The syntax might seem much sweeter
+    Where objects and subtypes play
+    But frills like inheritance
+    Will only get in the way!
+    Admire C's simple landscape
+    Efficiently dangerous!
+    No templates or fancy pitfalls
+    ... like Java and C++!
+
+    Program in C
+    Program in C
+
+    Pointers, assembly,
+    Manage your memory
+    With malloc() and free()!
+    Don't sink your app with runtime bloat
+    Software in C will stay afloat
+    Do what you want there
+    Close to the hardware!
+
+    Program in C!
+  &lt;/em&gt;
+&lt;/details&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Learning C is a valuable experience and may be really worth it. If not as your
+first language, then as second, third, fourth or whatever. There are
+advantages, but (as always) also some disadvantages; at least trying won't hurt.
+Give it a chance, who knows, you may truly get to like it.&lt;/p&gt;
+
+&lt;p&gt;And don't believe people saying &quot;C is dead&quot;. Love it or hate, C is still kicking
+and the amount of crucial projects will keep it relevant for few next decades too.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;… a blot on the landscape&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;C was created in year 1972 on the foundation of B language, so over the years
+it acquired some quirks (&lt;code&gt;memcpy()&lt;/code&gt; is defined in string header!), some things
+became obsolete, some useless and are kept only for compatibility with old code.&lt;/p&gt;
+
+  &lt;p&gt;A beginner is likely to burn a lot of time chasing down strange behavior caused
+by memory corruption with no idea how to reason about, what may lead actually
+big discouraged to programming in general. There is little to none mechanism
+to prevent programmer from shooting themselves in the foot.&lt;/p&gt;
+
+  &lt;p&gt;It's also important to take into account that C is not the introduction to
+Computer Science. Learning none of languages is. You need to study it properly
+to get a true understanding of this vast field. If not formal education in
+university, then online one will suffice too. The Internet is full of resources
+(you may find a few on &lt;a href=&quot;https://resources.joren.ga&quot;&gt;my list&lt;/a&gt;).&lt;/p&gt;
+&lt;/aside&gt;</content><author><name>Jorengarenar</name></author><summary type="html">How comes that, after over half a century, C is still a relatively popular and widely used language when others have withered into obscurity? Why, over all this time, was nothing able to fully replace it? Why is it still taught in schools?</summary></entry></feed>
