@@ -79,6 +79,7 @@ browser.newtabpage.activity-stream.feeds.telemetry set to false
 browser.newtabpage.activity-stream.telemetry set to false
 browser.newtabpage.activity-stream.section.highlights.includePocket to false
 browser.tabs.crashReporting.sendReport to false
+browser.tabs.tabmanager.enabled to false
 browser.uidensity to 1 (makes the browser's tabs not so huge for firefox 89+)
 browser.chrome.site_icons to false (removes favicons)
 browser.tabs.tabsmanager.enabled to false
