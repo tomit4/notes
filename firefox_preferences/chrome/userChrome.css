@@ -2,7 +2,7 @@
  * toolkit.legacyUserProfileCustomizations.stylesheets*/
 
 #urlbar-container {
-    --toolbar-field-focus-border-color: #2c77ac;
+  --toolbar-field-focus-border-color: #2c77ac;
 }
 
 #urlbar-zoom-button,
@@ -25,8 +25,26 @@
   color: transparent;
 }
 
+.titlebar-color {
+  background-color: #14161b !important;
+}
+
+menubar,
+nav-bar,
+#TabsToolbar > * {
+  background-color: #14161b !important;
+}
+
+toolbar > * {
+  background-color: #22252c !important;
+}
+
+.tab-background[selected="true"] {
+    background: #1b1d24 !important;
+}
+
 #urlbar-background {
-    background-color: #14161b !important;
+  background-color: #14161b !important;
 }
 
 #nav-bar toolbarspring {
