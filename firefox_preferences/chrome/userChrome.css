@@ -1,6 +1,10 @@
 /* enable in about:config by setting true:
  * toolkit.legacyUserProfileCustomizations.stylesheets*/
 
+#urlbar-container {
+    --toolbar-field-focus-border-color: #2c77ac;
+}
+
 #urlbar-zoom-button,
 #tracking-protection-icon-container,
 #back-button,
@@ -11,6 +15,7 @@
 #urlbar-input-container > #page-action-buttons,
 .urlbarView-favicon,
 .tab-icon-image,
+#tabs-newtab-button > .toolbarbutton-icon,
 /* .tab-label-container, */
 .tab-close-button {
   display: none !important;
