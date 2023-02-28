@@ -81,7 +81,6 @@ alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=kat
 # alias btop="kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable"
 alias tshift='doas timeshift --delete && notify-send "  Previous Backup Deleted!" && doas timeshift --create && notify-send "  New Backup Created!" && doas timeshift --list'
 alias btop="bst -e btop"
-alias firefox="librewolf"
 alias tor-browser="tor-browser &"
 alias leetcode="brave https://leetcode.com/accounts/login &"
 # sql basics:

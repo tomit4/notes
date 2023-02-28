@@ -214,3 +214,7 @@ doas pacman -S foliate xounralapp dash jpegoptim
 
 Install autoprefixer for css files:
 npm install -g postcss postcss-cli autoprefixer
+
+Install firefox (for when privacy facing browsers just can't do it...)
+
+doas pacman -S firefox
