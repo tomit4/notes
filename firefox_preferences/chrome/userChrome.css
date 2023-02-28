@@ -25,6 +25,10 @@
   color: transparent;
 }
 
+#urlbar-background {
+    background-color: #14161b !important;
+}
+
 #nav-bar toolbarspring {
     min-width: 55px !important;
     max-width: 65px !important;
