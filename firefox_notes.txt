@@ -72,6 +72,7 @@ browser.cache.offline.enable set to false
 browser.cache.insecure.enable set to false
 browser.privatebrowsing.autostart set to true
 browser.urlbar.speculativeConnect.enabled set to false
+browser.urlbar.maxRichResults set to 0
 browser.search.suggest.enabled set to false
 plugin.scan.plid.all set to false (same, couldn't find)
 browser.ping-centre.telemetry set to false
