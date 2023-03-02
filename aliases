@@ -327,6 +327,7 @@ alias docker-exec="doas docker exec -it" # use with container ID and bash
 alias nfcheatsheet='librewolf https://www.nerdfonts.com/cheat-sheet &'
 alias codeberg="librewolf https://codeberg.org/ &"
 alias mankier="links https://www.mankier.com"
+alias apnews="links https://www.apnews.com"
 alias sqlsc="links https://sqlservercentral.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
 alias gopher="lynx https://gopher.floodgap.com/gopher/gw.lite"
