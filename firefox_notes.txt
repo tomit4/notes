@@ -6,14 +6,15 @@ Install Ublock Origin
 Install Decentraleyes
 Install Always active Window - Always Visible
 Install Canvas Blocker (on librewolf no need)
-Install CLassic mode for Wikipedia
+Install Classic mode for Wikipedia
 Install Colorzilla
+Install Cookie AutoDelete
+Install I still don't care about cookies
 Install Measure-it
 Install FastForward
 Install Firefox Translations
-Install Gloc (reads lines of code on github repos, requires personall access token)
+Install Github Gloc (reads lines of code on github repos, requires personal access token)
 Install LocalCDN (conflicts witht Decentraleyes)
-Install ForgetMeNot
 Install FastForward
 Install NoScript
 Install Chameleon
@@ -23,12 +24,14 @@ Install OneTab (set OneTab to not open up on startup)
 Install Return YouTube Dislike
 Install Alter (redirect for nitter, invidious, teddit, scribe, bibliogram, etc.)
 Install bypass-paywalls (not official, go to https://github.com/iamadamdev/bypass-paywalls-chrome)
-Install DuckDuckGo Lite Search (doesn't quite work, just use DuckDuckGo)
+Install DuckDuckGo Lite Search (Librewolf has this by default)
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)
 Install ClearURLs
 Install Always active Window
 Install DarkReader (in DarkReader menu under More, set to Static)
 Install Vimium-FF
+Insall Vue.js devtools
+Install WAVE Evaluation Tool
 Install Manjaro Theme (matcha-dark-azul for blue, matcha-dark-sea for green)
 Set Default Search Engine to Duck Duck Go Lite
 Get Firefox to remember nothing through Preferences setting
