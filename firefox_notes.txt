@@ -9,7 +9,6 @@ Install Canvas Blocker (on librewolf no need)
 Install Classic mode for Wikipedia
 Install Colorzilla
 Install Cookie AutoDelete
-Install I still don't care about cookies
 Install Measure-it
 Install FastForward
 Install Firefox Translations
@@ -143,3 +142,6 @@ Custom Caret Widths for Text Cursor:
 In about:config, add these new custom properties (they don't exist by default):
 ui.caretWidth (set to number, and set to 10)
 ui.caretBlinkTime (set to number, and set to 0 to disable blink)
+
+Go into Ublock Origin, Under Filter List, open Annoyances and click all
+checkboxes (blocks annoying cookie confirmation popups amongst others).
