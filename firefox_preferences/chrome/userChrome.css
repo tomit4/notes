@@ -17,6 +17,7 @@
 .tab-icon-image,
 #tabs-newtab-button > .toolbarbutton-icon,
 /* .tab-label-container, */
+#PanelUI-menu-button,
 .tab-close-button {
   display: none !important;
 }
@@ -48,6 +49,9 @@ toolbar > * {
 }
 
 #nav-bar toolbarspring {
-    min-width: 55px !important;
-    max-width: 65px !important;
+    /* min-width: 55px !important; */
+    /* max-width: 65px !important; */
+    min-width: 25px !important;
+    max-width: 35px !important;
 }
+
