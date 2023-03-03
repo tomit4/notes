@@ -158,6 +158,10 @@ matches:
   - trigger: "!que"
     replace: "https://qr.vern.cc/search?q="
 
+  # Prepares Stack Overflow search
+  - trigger: "!sto"
+    replace: "https://stackoverflow.com/search?q="
+
   # Returns public ip address
   - trigger: ";ip"
     replace: "{{output}}"
