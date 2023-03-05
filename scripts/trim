@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# this script is meant to simply notify to fstrim
+# it also updates a .fsdate file in $HOME with the date of the last fstrim
+
+# allows to overwrite .fsdate file
+set +o noclobber
+
+doas fstrim --all --verbose --minimum 1048576 &&
+notify-send "   fstrim completed!!"
+
+date > "$HOME/.fsdate"
