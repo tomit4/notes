@@ -317,7 +317,23 @@
         "§:archlinux.org",
         "§:census.gov",
         "§:snopyta.org",
-        "§:sqlzoo.net"
+        "§:sqlzoo.net",
+        "§:suckless.org",
+        "§:nerdfonts.com",
+        "§:usgs.gov",
+        "§:joi.dev",
+        "§:keyvalues.com",
+        "§:sololearn.com",
+        "§:dudemanguy.github.io",
+        "§:joren.ga",
+        "§:beekeeb.com",
+        "§:bearblog.dev",
+        "§:podbean.com",
+        "§:eff.org",
+        "§:mullvad.net",
+        "§:browserleaks.com",
+        "§:davidspindler.online",
+        "§:cron.help"
       ],
       "untrusted": [
         "hotmail.com",
@@ -350,6 +366,16 @@
           "temp": false
         },
         "https://content.libsyn.com/p/1/1/b/11b8d06f0501fc83/085-Don-Mckay.mp3": {
+          "capabilities": [
+            "frame",
+            "fetch",
+            "noscript",
+            "other",
+            "media"
+          ],
+          "temp": false
+        },
+        "https://dcs.megaphone.fm/STA9556102266.mp3": {
           "capabilities": [
             "frame",
             "fetch",
