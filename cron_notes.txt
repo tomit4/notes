@@ -1,0 +1,41 @@
+cron is a very useful tool for the automatic running of scripts on a timed
+basis.
+
+as of this writing, I only really have one cronjob I utilize on my home desktop,
+a notification script to run fstrim on the first of every month:
+
+To create such a cronjob, invoke:
+
+crontab -e
+
+And edit the file to include the following:
+
+0 * 1 * * $HOME/scripts/fstrim_notify.sh
+
+Within $HOME/scripts/fstrim_notify.sh:
+
+
+#!/usr/bin/env bash
+# simple cron script to notify to possibly run trim script
+
+LAST_UPDATE=$(/usr/bin/cat $HOME/.fsdate)
+env DBUS_SESSION_BUS_ADDRESS="place_your_dbus_info_here" /usr/bin/notify-send "fstrim alert!, last fstrim on:
+${LAST_UPDATE}"
+
+A simple script is then run manually called $HOME/scripts/trim:
+
+#!/usr/bin/env bash
+# this script is meant to simply notify to fstrim
+# it also updates a .fsdate file in $HOME with the date of the last fstrim
+
+# allows to overwrite .fsdate file
+set +o noclobber
+
+doas fstrim --all --verbose --minimum 1048576 &&
+notify-send "   fstrim completed!!"
+
+date > "$HOME/.fsdate"
+
+OTHER RESOURCES:
+https://wiki.archlinux.org/title/Cron
+https://cron.help/
