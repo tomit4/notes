@@ -333,7 +333,12 @@
         "§:mullvad.net",
         "§:browserleaks.com",
         "§:davidspindler.online",
-        "§:cron.help"
+        "§:cron.help",
+        "§:woocommerce.com",
+        "§:pluralistic.net",
+        "§:linux-hardware.org",
+        "§:vern.cc",
+        "§:tildeverse.org"
       ],
       "untrusted": [
         "hotmail.com",

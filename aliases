@@ -417,6 +417,11 @@ alias gabmus="librewolf https://gabmus.org/ &"
 alias austingil="librewolf https://austingil.com/ &"
 # Interrupt is a shared blog that specializes in hardware/driver development articles
 alias interrupt="librewolf https://interrupt.memfault.com/ &"
+# Interesting site regarding privacy, libre, linux, and more nerd stuff:
+alias vern="librewolf https://vern.cc/ &"
+# More general nerd info regarding unix:
+alias tilde="librewolf https://tildeverse.org &"
+# interesting info : https://github.com/cwmccabe/pubnixhist
 
 # C Programming
 alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
