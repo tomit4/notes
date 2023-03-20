@@ -218,4 +218,4 @@ npm install -g postcss postcss-cli autoprefixer
 Install firefox (for when privacy facing browsers just can't do it...)
 Install uwufetch (cuz is hilarious...)
 
-doas pacman -S firefox uwufetch
+doas pacman -S firefox
