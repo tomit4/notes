@@ -162,6 +162,16 @@ matches:
   - trigger: "!sto"
     replace: "https://stackoverflow.com/search?q="
 
+      # Prepares about pages for firefox
+  - trigger: ";conf"
+    replace: "about:config"
+  - trigger: ";pref"
+    replace: "about:preferences"
+  - trigger: ";add"
+    replace: "about:addons"
+  - trigger: ";mem"
+    replace: "about:memory"
+
   # Returns public ip address
   - trigger: ";ip"
     replace: "{{output}}"
