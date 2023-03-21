@@ -22,6 +22,12 @@
   display: none !important;
 }
 
+#PanelUI-button {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
 #urlbar-input::placeholder {
   color: transparent;
 }
@@ -41,7 +47,7 @@ toolbar > * {
 }
 
 .tab-background[selected="true"] {
-    background: #1b1d24 !important;
+  background: #1b1d24 !important;
 }
 
 #urlbar-background {
@@ -49,9 +55,28 @@ toolbar > * {
 }
 
 #nav-bar toolbarspring {
-    /* min-width: 55px !important; */
-    /* max-width: 65px !important; */
-    min-width: 25px !important;
-    max-width: 35px !important;
+  /* min-width: 55px !important; */
+  /* max-width: 65px !important; */
+  min-width: 25px !important;
+  max-width: 35px !important;
 }
 
+/* cuz mozilla be stupid sometimes */
+#unified-extensions-view {
+  --uei-icon-size: 16px;
+}
+.unified-extensions-item-menu-button.subviewbutton {
+  padding: 2px !important;
+}
+.unified-extensions-item-message-deck {
+  display: none;
+}
+#unified-extensions-view > vbox > vbox > .unified-extensions-item {
+  padding-block: 0px !important;
+}
+.unified-extensions-item-menu-button {
+  margin-inline-end: 0 !important;
+}
+.unified-extensions-list .unified-extensions-item-menu-button {
+  margin-inline-end: 8px !important;
+}
