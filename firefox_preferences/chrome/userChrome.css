@@ -80,3 +80,7 @@ toolbar > * {
 .unified-extensions-list .unified-extensions-item-menu-button {
   margin-inline-end: 8px !important;
 }
+
+#unified-extensions-button .toolbarbutton-icon {
+  list-style-image: url("chrome://global/skin/icons/chevron.svg") !important;
+}
