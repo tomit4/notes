@@ -82,6 +82,5 @@ toolbar > * {
 }
 
 #unified-extensions-button .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/chevron.svg") !important;
-  /* list-style-image: url("chrome://global/skin/icons/experiments.svg") !important; */
+  list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
 }
