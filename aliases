@@ -1,6 +1,3 @@
-# TEMPORARY Aliases
-alias startup="doas fuser -k 8000/tcp ; npm run start"
-
 # Custom Aliases
 alias .="cd && ls"
 alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
