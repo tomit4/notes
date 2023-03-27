@@ -1,0 +1,49 @@
+#Guvcview 2.0.8 config file
+
+#video input width
+width=640
+#video input height
+height=480
+#video input format
+v4l2_format=1196444237
+#video input capture method
+capture=mmap
+#audio api
+audio=pulse
+#gui api
+gui=gtk3
+#render api
+render=sdl
+#video codec [raw mjpg mpeg flv1 wmv1 mpg2 mp43 dx50 h264 vp80 theo]
+video_codec=dx50
+#audio codec [pcm mp2 mp3 aac ac3 vorb]
+audio_codec=mp2
+#profile name
+profile_name=webcam_defaults.gpfl
+#profile path
+profile_path=/home/brian/.config/guvcview2
+#video name
+video_name=my_video.mkv
+#video path
+video_path=/home/brian/Videos/webcam/
+#video sufix flag
+video_sufix=1
+#photo name
+photo_name=my_photo.jpg
+#photo path
+photo_path=/home/brian/Pictures/webcam/
+#photo sufix flag
+photo_sufix=1
+#fps numerator (def. 1)
+fps_num=1
+#fps denominator (def. 25)
+fps_denom=25
+#audio device index (-1 - api default)
+audio_device=1
+#video fx mask 
+video_fx=0x0
+#audio fx mask 
+audio_fx=0x0
+#OSD mask 
+osd_mask=0x0
+crosshair_color=0xff00
