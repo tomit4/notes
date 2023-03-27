@@ -183,7 +183,8 @@ alias mpv="devour mpv --sub-font-size=40"
 alias {listen,yt-listen,mpva}='/usr/bin/mpv "${1}" --no-video'
 alias mmpv='devour mpv --fs --panscan=1.0'
 alias {muse,musik,cmu}="cmus"
-alias webcam="guvcview" # set to 50hz if you hear clicking noise
+# alias webcam="devour guvcview" # set to 50hz if you hear clicking noise
+alias webcam="devour qv4l2" # better amount of controls for webcam
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
 alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
 alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
