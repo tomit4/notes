@@ -338,7 +338,10 @@
         "§:pluralistic.net",
         "§:linux-hardware.org",
         "§:vern.cc",
-        "§:tildeverse.org"
+        "§:tildeverse.org",
+        "§:notthebe.ee",
+        "§:leanpub.com",
+        "§:yubico.com"
       ],
       "untrusted": [
         "hotmail.com",
