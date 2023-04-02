@@ -1,0 +1,3 @@
+meetups on jitsi are incredibly easy, simply put in:
+
+https://meet.jit.si/some
