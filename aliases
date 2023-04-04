@@ -112,7 +112,7 @@ alias route="traceroute"
 alias listen="ss -a -t -p"
 alias {pdf2,pdf2txt}="pdftotext"
 alias {pdfg,greppdf}="pdfgrep"
-alias tree="tree -ad -L 3 --prune -C"
+alias tree="tree -ad -L 3 --prune -C -I 'node_modules|.git'"
 alias {nv,nvi}="nvim"
 alias {cproj,mproj,myproj}="cd '$cproj' && ls"
 alias leafbytes="cd ~/Documents/Code/leafbytes_vue/ && ls"
@@ -202,9 +202,9 @@ alias {ytd,ytdownload}="ytfzf -d"
 alias lbry="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 # for smaller downloads
-alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
+# alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
 # for better resolutions
-# alias ytdl='yt-dlp -f "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
+alias ytdl='yt-dlp -f "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 alias ytdl-a="yt-dlp --sponsorblock-remove all -x --audio-format mp3"
 alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
 alias {cl,cls}="clear"
