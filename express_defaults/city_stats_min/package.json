@@ -1,0 +1,22 @@
+{
+  "name": "city_stats_min",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "/usr/bin/touch ./db/metro_stats ; /usr/bin/rm ./db/metro_stats.db ; nodemon ./server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "pino": "^8.11.0",
+    "pino-http": "^8.3.3",
+    "sqlite3": "^5.1.6"
+  }
+}
