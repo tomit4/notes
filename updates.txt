@@ -222,3 +222,6 @@ doas pacman -S firefox thunderbird
 Install cloc (counts lines of code from terminal):
 neomutt and urlscan
 doas pacman -S cloc neomutt urlscan
+
+Remove cmus (no longer use in pref of straight mpv)
+doas pacman -Rs cmus
