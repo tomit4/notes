@@ -149,6 +149,9 @@ set crypt_opportunistic_encrypt = no
 # So you can view encrypted emails automatically
 auto_view application/pgp-encrypted
 
+# While mutt is open, will send a message using dunst when new email arrives
+set new_mail_command="notify-send 'New Emails' '%n new messages, %u unread.' &"
+
 # Custom Nord theme
 # color normal		default default             # default colours
 color normal            brightblue default                # default colours
