@@ -1,0 +1,219 @@
+# Config largely taken from:
+# https://seniormars.github.io/posts/neomutt/#initial-mutt-configuration
+
+# User
+set from = "mosssap@gmail.com"
+set realname = "Brian Hayes"
+
+# Gmail
+set imap_user = "mosssap@gmail.com"
+set smtp_url = "smtps://mosssap@gmail.com@smtp.gmail.com:465/"
+set smtp_authenticators = 'gssapi:login'
+source "gpg -dq $XDG_CONFIG_HOME/mutt/passwords.gpg |"
+
+# Ensure TLS is enforced
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# My mailboxes
+set folder = "imaps://imap.gmail.com:993/[Gmail]"
+# set spoolfile = "+All Mail"
+set spoolfile = "+Important"
+set postponed = "+Drafts"
+set record = "+Sent Mail"
+set trash = "+Trash"
+
+mailboxes =Important =Starred =Drafts ="Sent Mail" =Spam =Trash
+
+# Where to put the stuff
+set header_cache = "$XDG_CONFIG_HOME/mutt/headers"
+set message_cachedir = "$XDG_CONFIG_HOME/mutt/bodies"
+set certificate_file = "$XDG_CONFIG_HOME/mutt/certificates"
+set signature = "$XDG_CONFIG_HOME/mutt/signature"
+
+# Editor
+set editor = "nvim"
+
+# settings
+set pager_index_lines = 10
+set pager_context = 3                # show 3 lines of context
+set pager_stop                       # stop at end of message
+set menu_scroll                      # scroll menu
+set tilde                            # use ~ to pad mutt
+set move=no                          # don't move messages when marking as read
+set mail_check = 30                  # check for new mail every 30 seconds
+set imap_keepalive = 900             # 15 minutes
+set sleep_time = 0                   # don't sleep when idle
+set wait_key = no		     # mutt won't ask "press key to continue"
+set envelope_from                    # which from?
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set forward_quote                    # include message in forwards
+set mime_forward                     # forward attachments as part of body
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set text_flowed=yes                  # correct indentation for plain text
+unset sig_dashes                     # no dashes before sig
+unset markers
+
+# Sort by newest conversation first.
+set charset = "utf-8"
+set uncollapse_jump
+set sort_re
+set sort = reverse-threads
+set sort_aux = last-date-received
+# How we reply and quote emails.
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set send_charset = "utf-8:iso-8859-1:us-ascii" # send in utf-8
+
+#sidebar
+set sidebar_visible # comment to disable sidebar by default
+set sidebar_width = 23
+set sidebar_short_path
+set sidebar_folder_indent
+# set sidebar_format = "%B %* [%?N?%N / ?%S]"
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+bind index,pager \CK sidebar-prev
+bind index,pager \CJ sidebar-next
+bind index,pager \CE sidebar-open
+bind index,pager B sidebar-toggle-visible
+
+# Vim keybindings
+# macro index A \
+    # "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
+    # "mark all new as read"
+
+bind index j next-entry
+bind index k previous-entry
+bind pager j next-line
+bind pager k previous-line
+
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+# link to mailcap file
+set mailcap_path = "$XDG_CONFIG_HOME/mutt/mailcap"
+# open attachments with mailcap with <return>
+bind attach <return> view-mailcap
+# save attachments to a folder
+macro attach s '<save-entry> <bol>~/Documents/attachments/<eol>' 'save attachment'
+auto_view text/html		# automatically show html (mailcap uses lynx)
+alternative_order text/plain text/enriched text/html  # save HTML for last
+
+# for use with urls (requires urlscan)
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# Use GPGME
+# Use my key for signing and encrypting
+set pgp_default_key = 49EDE10574AFE8AB90A8F6C2D5D3C6708DEBFFFB
+
+# Use GPGME
+set crypt_use_gpgme = yes
+
+# Automatically sign all out-going email
+set crypt_autosign = yes
+
+# Sign replies to signed emails
+set crypt_replysign = yes
+
+# Encrypt replies to encrypted emails
+set crypt_replyencrypt = yes
+
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+
+# Attempt to verify signatures automatically
+set crypt_verify_sig = yes
+
+# Attempt to encrypt automatically, if possible
+# I would recommend setting this to no as university often have spam filters
+# And this will cause your emails to be marked as spam
+# as they can't decrypt your emails LMAO
+set crypt_opportunistic_encrypt = no
+
+# So you can view encrypted emails automatically
+auto_view application/pgp-encrypted
+
+# Custom Nord theme
+# color normal		default default             # default colours
+color normal            brightblue default                # default colours
+color index		brightblue default ~N       # new messages
+color index		red default ~F              # flagged messages
+color index		blue default ~T             # tagged messages
+color index		brightred default ~D        # deleted messages
+color body		brightgreen default         (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+  # links
+color body		brightgreen default         [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+          # email-addresses
+color attachment	magenta default             # attachments
+color signature		brightwhite default         # sigs
+color search		brightred black             # highlight results
+
+# color indicator		black cyan                  # currently highlighted message
+color indicator	        brightyellow black          # currently highlighted message
+color error		red default                 # error messages
+# color status		white brightblack           # status line
+# color status		white cyan                  # status line
+color status		brightblue black            # status line
+# color tree		white default               # thread tree arrows
+color tree		brightblack default         # thread tree
+color tilde		cyan default                # blank line padding
+
+color hdrdefault	brightblue default          # default headers
+color header		cyan default "^From:"
+color header	 	cyan default "^Subject:"
+
+color quoted		cyan default                # quote colours
+color quoted1		brightcyan default
+color quoted2		blue default
+color quoted3		green default
+color quoted4		yellow default
+color quoted5		red default
+color message           white default
+# color	body	    green default           "^gpg: Good signature from"
+# color	body	    brightred default		"^gpg: Bad signature from"
+# color	body	    brightred default		"^gpg: BAD signature from"
+# color	body	    brightred default		"^gpg: Note: This key has expired!"
+# color	body	    brightyellow default	"^gpg: WARNING: This key is not certified with a trusted signature!"
+# color	body	    brightyellow default	"^gpg:          There is no indication that the signature belongs to the owner."
+# color	body	    brightyellow default	"^gpg: can't handle these multiple signatures"
+# color	body	    brightyellow default	"^gpg: signature verification suppressed"
+# color	body	    brightyellow default	"^gpg: invalid node with packet of type"
+
+# Copied from Luke Smith
+set date_format="%y/%m/%d %I:%M%p"
+set sort = 'reverse-date'
+set markers = no		# Disables the `+` displayed at line wraps
+set mark_old = no		# Unread mail stay unread until read
+
+# macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+# macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+# macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+# macro index,pager gd "<change-folder>=Drafts<enter>" "go to drafts"
+# macro index,pager Md ";<save-message>=Drafts<enter>" "move mail to drafts"
+# macro index,pager Cd ";<copy-message>=Drafts<enter>" "copy mail to drafts"
+# macro index,pager gj "<change-folder>=Junk<enter>" "go to junk"
+# macro index,pager Mj ";<save-message>=Junk<enter>" "move mail to junk"
+# macro index,pager Cj ";<copy-message>=Junk<enter>" "copy mail to junk"
+# macro index,pager gt "<change-folder>=Trash<enter>" "go to trash"
+# macro index,pager Mt ";<save-message>=Trash<enter>" "move mail to trash"
+# macro index,pager Ct ";<copy-message>=Trash<enter>" "copy mail to trash"
+# macro index,pager gs "<change-folder>=Sent<enter>" "go to sent"
+# macro index,pager Ms ";<save-message>=Sent<enter>" "move mail to sent"
+# macro index,pager Cs ";<copy-message>=Sent<enter>" "copy mail to sent"
+# macro index,pager ga "<change-folder>=Archive<enter>" "go to archive"
+# macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
+# macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"

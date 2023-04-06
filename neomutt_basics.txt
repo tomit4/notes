@@ -1,0 +1,22 @@
+I've set up basic vim keybindings with a few caveats in neomutt, otherwise
+either use the native keybindings, or consult where you got your config from:
+
+https://seniormars.github.io/posts/neomutt/#initial-mutt-configuration
+
+Shift + B Toggle Tree
+Ctrl + J Go UP Tree
+Ctrl + K Go DOWN Tree
+Ctrl + E Open Up Selected Mail Folder in Tree
+
+Standard Vim keybindings:
+gg Go to top of email listing
+Shift + G go to bottom of email listing
+Ctrl + D next page
+Ctrl + U previous page
+
+ENTER Open selected email
+Ctrl + B use mailcap to open up html/urls (use if you can't see anything)
+While in this mailcap menu, you can navigate links and open it up in your
+browser.
+
+You can select certain elements and also use 'm' to open them up as well.

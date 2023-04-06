@@ -220,4 +220,5 @@ And thunderbird
 doas pacman -S firefox thunderbird
 
 Install cloc (counts lines of code from terminal):
-doas pacman -S cloc
+neomutt and urlscan
+doas pacman -S cloc neomutt urlscan

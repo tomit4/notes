@@ -1,0 +1,4 @@
+text/html; librewolf %s; test=test -n "$display"; needsterminal;
+text/html; links copiousoutput;
+text/plain; cat %s; copiousoutput
+application/pdf; librewolf %s; test=test -n "$display"; needsterminal;
