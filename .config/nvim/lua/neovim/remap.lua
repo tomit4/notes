@@ -30,7 +30,8 @@ vim.keymap.set("n", "<F11>", ":set spell!<cr>", { silent = true })
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
--- Vimium Like Keybindings vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
+-- Vimium Like Keybindings
+vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
 
 vim.keymap.set("n", "<S-tab>", "<c-w>:tabprevious<CR>", {})
 vim.keymap.set("n", "<A-j>", "<c-w>:tabprevious<CR>", {})
@@ -90,6 +91,9 @@ vim.cmd([[nnoremap rg :silent :Rg]])
 
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
+
+-- runs npm tests without having to leave vim
+vim.keymap.set("n", "<leader>t", ":w|!npm test<cr>")
 
 -- dap Keybindings
 vim.keymap.set("n", "<leader>dbp", ":lua require'dap'.toggle_breakpoint()")
