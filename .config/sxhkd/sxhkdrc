@@ -175,7 +175,7 @@ super + h
 super + k
     krita --nosplash &
 super + t
-    tootle &
+    thunderbird &
 super + p
     pcmanfm &
 super + b

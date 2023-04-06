@@ -59,6 +59,7 @@ bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
+bspc rule -a thunderbird center=on rectangle=1555x960+1440+810 &
 bspc rule -a Gimp center=on rectangle=1555x960+1440+810 &
 bspc rule -a Inkscape center=on rectangle=1555x960+1440+810 &
 bspc rule -a Desktopeditors center=on rectangle=1555x960+1440+810 &
