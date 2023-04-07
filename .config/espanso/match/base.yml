@@ -120,7 +120,7 @@ matches:
     replace: "pub fn () {}"
 
   - trigger: ";cll"
-    replace: "console.log()"
+    replace: "console.log(' >>: ', )"
 
   - trigger: ";clc"
     replace: "console.clear()"
@@ -129,7 +129,7 @@ matches:
     replace: "console.assert()"
 
   - trigger: ";cle"
-    replace: "console.error()"
+    replace: "console.error('ERROR >>: ', )"
 
   - trigger: ";clt"
     replace: "console.table()"
