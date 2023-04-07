@@ -43,7 +43,7 @@ vim.cmd([[function TrimWhiteSpace()
 %s/\s*$//
 ''
 endfunction]])
---Removes trailing spaces on save
+-- Removes trailing spaces on save
 vim.cmd([[autocmd FileWritePre * call TrimWhiteSpace()]])
 vim.cmd([[autocmd FileAppendPre * call TrimWhiteSpace()]])
 vim.cmd([[autocmd FilterWritePre * call TrimWhiteSpace()]])
@@ -89,6 +89,10 @@ endif
 endfunction]])
 
 vim.cmd([[command! -nargs=* FZFExplore call FzfExplore(shellescape(<q-args>))]])
+
+-- CtrlP will ignore .git and node_modules directories
+vim.cmd([[set wildignore+=*/node_modules/*,*/.git/*]])
+vim.cmd([[let g:ctrlp_custom_ignore = '\v[\/]\.(git|node_modules)']])
 
 -- fzf is on bottom of screen
 -- vim.cmd([[let g:fzf_layout = { 'down': '~30%' }]])
