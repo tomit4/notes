@@ -46,17 +46,10 @@ return require("packer").startup(function(use)
 		end,
 	})
 	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-	use({ "junegunn/fzf.vim" })
+        use({ "junegunn/fzf.vim" })
         use({ "kien/ctrlp.vim"})
 	use({ "rinx/nvim-ripgrep" })
 	use({ "mbbill/undotree" })
-	use({
-		"debugloop/telescope-undo.nvim",
-		requires = { "nvim-telescope/telescope.nvim" },
-		config = function()
-			require("telescope").load_extension("undo")
-		end,
-	})
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
