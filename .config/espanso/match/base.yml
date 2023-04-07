@@ -143,6 +143,9 @@ matches:
   - trigger: ";sh"
     replace: "#!/usr/bin/env bash"
 
+  - trigger: ";str"
+    replace: "'use strict'"
+
   - trigger: ";loc"
     replace: "localhost:"
 
