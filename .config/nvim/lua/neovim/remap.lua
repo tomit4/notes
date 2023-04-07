@@ -84,7 +84,10 @@ vim.keymap.set("n", "cp", ":ClangFormat<cr>", { silent = true })
 
 -- open fzf with ctrl + p
 vim.cmd([[nnoremap fzf :silent :FZFExplore]])
-vim.keymap.set("n", "<C-p>", "<c-w>:FZFExplore<CR>", {})
+-- vim.keymap.set("n", "<C-p>", "<c-w>:FZFExplore<CR>", {})
+
+-- CtrlP: similar to fzf, but with a more simple interface
+vim.keymap.set("n", "<C-p>", "<c-w>:CtrlPMixed<cr>")
 
 -- open ripgrep
 vim.cmd([[nnoremap rg :silent :Rg]])
