@@ -44,8 +44,8 @@ vim.keymap.set("n", "<A-right>", "<c-w>:tabnext<CR>", {})
 vim.keymap.set("n", "<C-h>", "<c-w>:wincmd h<CR>", {})
 vim.keymap.set("n", "<C-l>", "<c-w>:wincmd l<CR>", {})
 
--- remap Nvim_Tree toggle to CTRL+B
-vim.keymap.set("n", "<C-b>", "<c-w>:NvimTreeToggle<CR>", {})
+-- remap Nvim_Tree toggle to leader+'
+vim.keymap.set("n", "<leader>'", "<c-w>:NvimTreeToggle<CR>", {})
 
 -- Use ctrl - [hl] to select the active split
 vim.keymap.set("n", "<C-h>", "<c-w>:wincmd h<CR>", {})
