@@ -221,6 +221,8 @@ alias ipaddr="curl ifconfig.me/all.json | jq"
 alias hwclock="doas hwclock"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
 alias npm_upgrade="doas npm install --location=global npm@latest"
+alias start="npm start"
+alias test="npm test"
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias paclogs="bat /var/log/pacman.log"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
