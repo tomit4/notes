@@ -96,7 +96,7 @@ vim.cmd([[nnoremap rg :silent :Rg]])
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
 
 --toggle undotree
-vim.cmd([[nnoremap uu :UndotreeToggle<CR>,]])
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<cr>")
 
 -- runs npm tests without having to leave vim
 vim.keymap.set("n", "<leader>t", ":w|!npm test<cr>")
