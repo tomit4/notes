@@ -98,7 +98,6 @@ ga - print the hex code of the character under the cursor
 gu - convert enter line to lowercase
 gU - convert enter line to uppercase
 
-
 y - beginning y keybinding, yanks or copies character or word for pasting elsewhere using the p keybinding
 (can be prepended by a number, and multiples the amount of words/lines to be copied)
 yh - copies one word back (equivalent to yb)
@@ -168,6 +167,16 @@ zO - open all folds under cursor recursively
 zM - all collapse
 zR - all reveal
 
+MACROS (recording repetitive tasks)
+qa - 'q' waits for an index key to create a new recording, in this case, index 'a'
+(perform repetitive task)
+q - 'q' again will end recording
+@a - will repeat the recorded action
+40@a - will repeat the recording 40 times
+
+INCREMENT NUMBER BENEATH cursor
+CTRL + A - while over number, hitting shift A will increment number by 1
+
 IN VISUAL MODE you can select all text you wish to fold by simply highlighting
 it then invoking 'zf'.
 
@@ -212,7 +221,8 @@ NORMAL MODE
 
 nf Simply typing this in NORMAL MODE will invoke Neoformat, simply hit enter afterwards
 
-CTRL + p or fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
+CTRL + p typing this in NORMAL MODE will invoke CtrlP, (simple search tool)
+fzf Simply typing this in NORMAL MODE will invoke FuzzyFileFinder, simply hit enter afterwards
 
 rg Simply typing this in NORMAL MODE will invoke RipGrep, simply hit enter afterwards
 
@@ -240,11 +250,15 @@ CTRL + o Return from gf (navigate to file)
 
 cp alias for using ClangFormat C/C++ Formatter
 
-CTRL + b : Open Nneovim Tree
+LEADER ; : Open Nvim Tree
 in Neovim Tree there are specific keybindings (most standard neovim keybindings work here as well):
 a - creates new file (keep adding slashes to create directories or don't for regular files)
 d - deletes file (hit y when prompted)
 r - renames file (enter new name and hit enter)
+
+LEADER u : Open Undo Tree
+Brings up simple menu with a history of all the changes made to the file opened
+in current window.
 
 / search for a word in whichever document you have Open
 
@@ -256,11 +270,10 @@ CTRL + l Navigate to one vertical window to the right
 
 CTRL + e to adjust window width (h and l will adjust width, just hit enter afterwards to adjust, opening and closing nneovim tree readjusts back to defaults)
 
-t open new tab
+SHIFT + t open new tab
 
-ALT + k goes to next tab
-
-SHIFT + j goes to previous tab
+ALT j + k goes to next/previous tab
+ALT -> <- goes to next/previous tab
 
 SHIFT + S Aliased to global search and replace
 SHIFT + Y Aliased to inline search and replace
