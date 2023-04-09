@@ -20,6 +20,7 @@ alias down="cd ~/Downloads && ls"
 alias pics="cd ~/Pictures && ls"
 alias music="cd ~/Music && ls"
 alias vids="cd ~/Videos && ls"
+alias {sand,sandbox}="cd ~/sandbox && ls"
 alias games="cd ~/.local/share/Steam/steamapps/common && ls"
 alias notes="cd ~/Documents/notes && ls"
 alias scripts="cd ~/scripts && ls"
@@ -327,6 +328,7 @@ alias docker="doas docker"
 alias docker-ls="doas docker container ls -a && docker images"
 alias docker-rm-c="doas docker container rm"
 alias docker-rm-i="doas docker image rm"
+alias {docker-k,docker-kill}="docker kill"
 alias docker-exec="doas docker exec -it" # use with container ID and bash
 
 # bookmarks
