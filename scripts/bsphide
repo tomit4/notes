@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bound to sxhkd, allows hiding of windows in bspwm
+
+hidden=$(bspc query -N -n .hidden -d focused)
+
+if [ -z "$hidden" ]; then
+    bspc node focused -g hidden=on
+else
+    bspc node "$hidden" -h hidden=off
+fi
+
+# found: https://lecorbeausvault.wordpress.com/2020/07/04/bspwm-hide-minimize-window/

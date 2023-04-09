@@ -161,7 +161,7 @@ super + alt + {h,j,k,l}
 super + a
     pavucontrol &
 super + z
-    lxappearance &
+    zoom &
 super + f
     librewolf &
 super + c
@@ -171,9 +171,10 @@ super + i
 super + g
     gimp --no-splash &
 super + h
-    keepassxc &
+    $HOME/scripts/bsphide &
 super + k
-    krita --nosplash &
+    keepassxc &
+    # krita --nosplash &
 super + t
     thunderbird &
 super + p
