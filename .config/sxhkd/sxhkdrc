@@ -169,7 +169,8 @@ super + c
 super + i
     inkscape &
 super + g
-    gimp --no-splash &
+    krita --nosplash &
+    # gimp --no-splash &
 super + h
     $HOME/scripts/bsphide &
 super + k

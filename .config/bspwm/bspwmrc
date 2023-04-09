@@ -61,7 +61,7 @@ bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
 bspc rule -a thunderbird center=on rectangle=1555x960+1440+810 &
 bspc rule -a Virt-manager center=on rectangle=1555x960+1440+810 &
-bspc rule -a Krita center=on rectangle=1555x960+1440+810 &
+bspc rule -a krita center=on rectangle=1555x960+1440+810 &
 bspc rule -a Inkscape center=on rectangle=1555x960+1440+810 &
 bspc rule -a Desktopeditors center=on rectangle=1555x960+1440+810 &
 bspc rule -a Devour center=on rectangle=1555x960+1440+810 &
