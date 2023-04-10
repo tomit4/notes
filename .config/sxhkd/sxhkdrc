@@ -209,3 +209,7 @@ super + Tab
     pamixer --increase 5
 super + BackSpace
     pamixer --decrease 5
+
+# Switch focus between the windows of the current desktop
+super + {_,shift + } Tab
+    bspc node -f {next,prev}.local
