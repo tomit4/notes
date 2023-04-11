@@ -202,7 +202,8 @@ alias {ytd,ytdownload}="ytfzf -d"
 alias lbry="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 # for smaller downloads
-alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
+# alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
+alias ytdl='yt-dlp -f mp4 "bestvideo\*+bestaudio[ext=m4a]" --sponsorblock-remove all --write-auto-sub'
 # for better resolutions
 alias ytdl-w='yt-dlp -f "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 # for audio only
@@ -624,6 +625,10 @@ alias mdn='ddgr \!mdn "${1}"'
 alias red='ddgr \!r "${1}"'
 # alias yt='ddgr \!yt "${1}"'
 
+# display related aliases
+alias brighten="xrandr --output HDMI-0 --brightness"
+unred="redshift -x"
+
 # run the following two aliases every time you update the kernels and nvidiadkms
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias regen_initramfs="doas mkinitcpio -P"
@@ -633,6 +638,7 @@ alias regen_initramfs="doas mkinitcpio -P"
 alias sd="sdir"
 alias unu="upnup"
 
+source $HOME/.linodes/.ips
 source $HOME/.n_hidden
 source $HOME/.k_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
