@@ -134,6 +134,9 @@ matches:
   - trigger: ";clt"
     replace: "console.table()"
 
+  - trigger: ";clw"
+    replace: "console.warn('WARNING :=>', )"
+
   - trigger: ";test"
     replace: "test('', () => {})"
 
