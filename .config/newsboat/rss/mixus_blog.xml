@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mixu's blog]]></title><description><![CDATA[A blog]]></description><link>http://localhost:5000/</link><generator>Ghost</generator><lastBuildDate>Mon, 06 Oct 2014 07:30:55 GMT</lastBuildDate><atom:link href="http://localhost:5000/rss/index.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Curl cheatsheet]]></title><description><![CDATA[<p>Curl is an awesome tool. I keep forgetting the switches though, so here&#39;s a cheatsheet.</p>
+<p><strong>Simple GET request</strong></p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> -k <span class="hljs-string">&quot;<a href="https://localhost/foo?bar=baz&amp;amp;abc=def">https://localhost/foo?bar=baz&amp;amp;abc=def</a>&quot;</span></code></pre><p><strong>JSON POST or PUT request</strong></p>
+<pre class="hljs"><code>curl -k -H <span class="hljs-string">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="hljs-string">&#39;{&quot;</span>accountName<span class="hljs-string">&quot;:&quot;</span>test<span class="hljs-string">&quot;,&quot;</span>value<span class="hljs-string">&quot;:&quot;</span>hello<span class="hljs-string">&quot;}&#39;</span> https:<span class="hljs-comment">//localhost/foo</span></code></pre><pre class="hljs"><code><span class="hljs-title">curl</span> -X <span class="hljs-string">&quot;PUT&quot;</span></code></pre><p>... for a PUT</p>
+<p><strong>POST a file</strong></p>
+<pre class="hljs"><code>curl <span class="hljs-keyword">...</span> --data-binary @filename</code></pre><p><strong>Fake a /etc/hosts entry and a Host: header with curl</strong></p>
+<pre class="hljs"><code>curl -vvv --resolve <span class="hljs-string">&#39;book.mixu.net:80:123.145.167.189&#39;</span> <span class="hljs-string">http:</span><span class="hljs-comment">//book.mixu.net/</span></code></pre><p><strong>Make a request with basic auth enabled</strong></p>
+<pre class="hljs"><code>curl -vvv -u name<span class="hljs-annotation">@foo</span>.<span class="hljs-string">com:</span>password <span class="hljs-string">http:</span><span class="hljs-comment">//www.example.com</span></code></pre><p>or:</p>
+<pre class="hljs"><code>curl --user <span class="hljs-string">name:</span>password <span class="hljs-string">http:</span><span class="hljs-comment">//www.example.com</span></code></pre><p><strong>Set the Referer header</strong></p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> -e <span class="hljs-url"><a href="http://curl.haxx.se">http://curl.haxx.se</a></span> daniel.haxx.se</code></pre><p><strong>Set the User Agent header</strong></p>
+<pre class="hljs"><code>curl -<span class="hljs-literal">A</span> <span class="hljs-string">&quot;Mozilla/4.73&quot;</span></code></pre><p>or</p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> --user-agent <span class="hljs-string">&quot;Mozilla&quot;</span>.</code></pre><p><strong>Set Cookies</strong></p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> -b <span class="hljs-string">&quot;name=Daniel&quot;</span></code></pre><p>or</p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> --cookie <span class="hljs-string">&quot;name=Daniel&quot;</span></code></pre><p><strong>Time a request (connect time + time to first byte + total tile)</strong></p>
+<pre class="hljs"><code>curl -o <span class="hljs-regexp">/dev/</span><span class="hljs-literal">null</span> -w <span class="hljs-string">&quot;Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n&quot;</span> <span class="hljs-string">http:</span><span class="hljs-comment">//google.com</span></code></pre><p><strong>Downloading files from Github</strong></p>
+<pre class="hljs"><code>curl -<span class="hljs-constant">O </span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/raw.github.com/username</span><span class="hljs-regexp">/reponame/master</span><span class="hljs-regexp">/filename</span></code></pre><p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></description><link>http://localhost:5000/2013/01/29/curl-cheatsheet</link><guid isPermaLink="true">http://localhost:5000/2013/01/29/curl-cheatsheet</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Tue, 29 Jan 2013 08:00:00 GMT</pubDate></item><item><title><![CDATA[Restaurants in SF]]></title><description><![CDATA[<p>I’ve been living in SF for quite a while now, so I figure I should list some of the restaurants that I like (the top ~45 to be exact). These are mostly places where you can get food quickly for lunch/dinner and that are walking distance from where I live.</p>
+<p><strong>Coffee</strong></p>
+<p><a href="http://www.yelp.com/biz/philz-coffee-san-francisco-4">Philz Coffee</a>. The best coffee in SF (in my opinion); the one closest to the center is on Van Ness (good if you go to the Tenderloin for lunch). The other Philz in the city center is at the Caltrain in SOMA (<a href="http://www.philzcoffee.com/Customer-Service/Store-Locations">all locations</a>). I always stop by when I’m close. Protip: don’t get the coffee with sugar, because they put too much and it detracts from the taste. Tantalizing Turkish, Aromatic Arabic and Soo Good (light roast) are my favorites.</p>
+<p><a href="http://www.yelp.com/biz/machine-coffee-and-deli-san-francisco">Machine Coffee</a> at 6th/Golden Gate is also quite good as are their sandwitches.</p>
+<p><a href="http://www.yelp.com/biz/blue-bottle-coffee-co-san-francisco-7">Blue Bottle</a>. I would describe the coffee as artsy (as in “this coffee thinks it’s better than me”) – good for the occasional cup but I’m not a huge fan.</p>
+<p>We have Peet’s coffee beans at the office so I haven’t really tried Peet’s at a store. In any case, these are all better than Starbucks, which is utter crap unless you get one of the specialty blends of the month rather than their regular coffees.</p>
+<p><strong>Japanese noodles</strong></p>
+<p>There are basically two good noodle places in the city center:</p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/ramen-underground-san-francisco">Ramen Underground</a> (Union Square towards Financial District). RU is a short walk from Union Square. Their specialty is the spicy miso ramen. I recommend getting that with extra noodles and BBQ pork. Open on Saturdays as well.</li>
+    <li><a href="http://www.yelp.com/biz/katana-ya-san-francisco">Katana-ya</a> (between Union Square towards Tenderloin). More choices than RU, including cold ramen and the toppings are better.</li>
+</ul>
+Expect to wait ~15 minutes. <a href="http://www.yelp.com/biz/suzu-noodle-house-san-francisco">Suzu</a> in Japantown is also good, on the other side of the walkbridge, downstairs. Once there, go to<a href="http://www.yelp.com/biz/moyos-froyo-san-francisco-2"> Moyo’s</a> for some frozen yogurt.</p>
+<p>If you have a car, drive to San Mateo, as there are some delicious noodle places there:</p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/santa-ramen-san-mateo-2">Santa Ramen</a> (in San Mateo). Two words: premium pork! Mind-blowingly delicious.</li>
+    <li><a href="http://www.yelp.com/biz/ramen-dojo-san-mateo">Ramen Dojo</a> (in San Mateo). Also very good. Prepare to wait in line though.</li>
+</ul>
+If you don’t have a car, get a Zipcar and drive. Seriously, it’s worth it.</p>
+<p><strong>Japanese curry</strong></p>
+<p><a href="http://www.yelp.com/biz/muraccis-japanese-curry-and-grill-san-francisco">Muracci’s</a> (Union Square towards Financial District) specializes in Japanese curry. I go there so often it’s ridiculous, only open till 6pm and only on weekdays though.</p>
+<p><a href="http://www.yelp.com/biz/kare-ken-san-francisco">Kare-Ken</a> (Tenderloin) is open after 5:30 till fairly late, however, their portions are smaller and the curry sauce isn’t quite as delicious as at Muracci’s.</p>
+<p><strong>Vietnamese sandwitches (banh mi)</strong></p>
+<p>These are a combination of Vietnamese -style veggies and meat in sandwitch form. Tasty and cheap.</p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/saigon-sandwich-san-francisco">Saigon Sandwitch</a> (Tenderloin). The most famous banh mi place, this is for the banh mi snob. Their sandwitches are a bit spicier than the others and a bit smaller, but also taste slightly better.</li>
+    <li>Lee’s (Tenderloin). I like Lee’s as well, it’s across from Saigon. Their sandwitches are a bit bigger and they have more varieties, but the bread is less tasty.</li>
+    <li><a href="http://www.yelp.com/biz/hoang-dat-coffee-shop-san-francisco">Hoang Dat</a> (Tenderloin). A smaller shop that’s up the street about two blocks. Nice if you don’t want to walk through the Tenderloin. Specialty is a sandine banh mi.</li>
+</ul>
+Outside Tenderloin, there are two other places I’d recommend:</p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/little-paris-san-francisco">Little Paris</a> (Chinatown) is the place to go if you want Vietnamese sandwitches in Chinatown. I love this place and I was happy to find that they reopened (they moved about six months ago).</li>
+    <li><a href="http://www.yelp.com/biz/fresh-brew-coffee-san-francisco">Fresh Brew Coffee</a> (Union Square) is a small coffee shop closer to Union Square where you can get banh mi with avocado in it. It is expensive compared to the Tenderloin or Chinatown, but bacon and avocado are a winning combination.</li>
+</ul></p>
+<p><h3>Other kinds of sandwitches</h3></p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/hrd-coffee-shop-san-francisco">HRD Coffee Shop</a> (SOMA) is awesome. They have really great sandwitches, and their specialty are the sandwitches with Korean spices. I miss living in SOMA.</li>
+    <li><a href="http://www.yelp.com/biz/king-foot-subs-san-francisco">King Foot Subs</a> (Union Square;  Bush and Powell) offers similar sandwitches, though they aren’t quite as good as HRD. They are open late, however.</li>
+    <li><a href="http://www.yelp.com/biz/molinari-delicatessen-san-francisco">Molinari’s</a> (North Beach). Prosciutto sandwitches, need I say more?</li>
+    <li><a id="bizTitleLink143" href="http://www.yelp.com/biz/mortys-delicatessen-san-francisco">Morty’s Delicatessen</a> (Tenderloin). Really delicious deli sandwitches.</li>
+    <li><a id="bizTitleLink324" href="http://www.yelp.com/biz/millers-east-coast-deli-san-francisco">Miller’s East Coast Deli</a> and <a id="bizTitleLink489" href="http://www.yelp.com/biz/freddies-sandwiches-san-francisco-2">Freddie’s Sandwiches</a> are near each other, I like Freddie’s a lot and Miller’s has a good pastrami sandwitch.</li>
+    <li><a id="bizTitleLink543" href="http://www.yelp.com/biz/cafe-venue-san-francisco-7">Cafe Venue</a>. Next to the Westfield Mall, really big salads during lunchtime, usually enough for two meals.</li>
+</ul>
+<strong>Chinese dumplings (dim sum)</strong></p>
+<p>There are hole-in-the-wall type places where you can get two meals worth of food for 6-8 bucks:</p>
+<p><ul>
+    <li><a id="bizTitleLink98" href="http://www.yelp.com/biz/good-mong-kok-bakery-san-francisco">Good Mong Kok Bakery</a>. This is where all the Chinatown locals queue up, and it is good.</li>
+    <li><a id="bizTitleLink150" href="http://www.yelp.com/biz/delicious-dim-sum-san-francisco">Delicious Dim Sum</a>. More accessible than Good Mong Kok, also good, very close by to Good Mong Kok.</li>
+</ul>
+Chinatown protip: there are small side streets that mostly avoid the crowds, use them if you don’t feel like dodging people.</p>
+<p><strong>Vietnamese</strong></p>
+<p>Pho = thin noodles with a ligher soup and veggies. The vermicelli noodle salad with spring rolls is also delicious. Check out:</p>
+<p><ul>
+    <li><a href="http://www.yelp.com/biz/pho-2000-san-francisco">Pho 2000</a> (Tenderloin): big portions, good stuff.</li>
+    <li><a href="http://www.yelp.com/biz/pho-tan-hoa-san-francisco">Pho Tan Hoa</a> (Tenderloin/Union Sq): closer to Union Square, fast service, big portions of pho.</li>
+    <li><a href="http://www.yelp.com/biz/miss-saigon-san-francisco-2">Miss Saigon</a> (~6th). Sketchy neighborhood but the food is good.</li>
+    <li>Tu Lan (~6th). Delicious, but closed down until ~2013. Tu Lan is legendary, but it was closed for <a href="http://www.sfgate.com/restaurants/article/Pest-ridden-Tu-Lan-hopes-to-reopen-in-SF-3839230.php">repeated health code violations</a> so I’m not sure I’ll go there very often when they reopen.</li>
+    <li><a href="http://www.yelp.com/biz/loving-hut-san-francisco">Loving Hut</a> (Westfield Mall but also Chinatown). One location is in the Westfield Mall and I’d guess this is healthy food. Fully vegan, but I couldn’t tell. I always get the vermicelli noodle salad with spring rolls.</li></p>
+]]></description><link>http://localhost:5000/2012/12/20/restaurants-in-sf</link><guid isPermaLink="true">http://localhost:5000/2012/12/20/restaurants-in-sf</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Thu, 20 Dec 2012 08:00:00 GMT</pubDate></item><item><title><![CDATA[My Debian installation tips]]></title><description><![CDATA[<p>So, after some time with Arch Linux, I&#39;ve moved to Debian testing. Debian testing seems to strike a nice balance between being new and not breaking things (Debian stable on the other hand has really old packages). Compared to Arch, upgrades have thus far been a lot less painful. Arch, while lovely, has a tendency to break things and I was always rather annoyed with python being python3 rather than python2 like the rest of the world expected it to be. I miss the minimal base install from Arch though.</p>
+<p><strong>First steps</strong></p>
+<p>I used the amd64 (e.g. x86-64) <a href="http://cdimage.debian.org/cdimage/weekly-builds/">weekly testing build</a> rather than the stable build, because, well it gets me on testing without needing to do a stable install first and comes with more up-to-date packages.</p>
+<p>While none of the docs make it clear, all you need is the first CD (or the netinstall build) to start the install.</p>
+<p><strong>Edit sudoers</strong></p>
+<pre class="hljs"><code><span class="hljs-title">su</span> -c <span class="hljs-string">&quot;visudo&quot;</span></code></pre><p>At the end of the file, add:</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;code&gt;</span><span class="hljs-keyword">yourusername</span> <span class="hljs-literal">ALL</span>=(<span class="hljs-literal">ALL</span>) NOPASSWD: <span class="hljs-literal">ALL</span>&lt;/code&gt;</code></pre><p><strong>Copy ssh keys over from old machine</strong></p>
+<p><strong>Update and install packages</strong></p>
+<p>Add &quot;contrib&quot; and &quot;non-free&quot; after &quot;main&quot; to /etc/apt/sources.list - this is needed for stuff like the flash plugin.</p>
+<p>If there are lines mentioning &quot;cdrom:&quot; as a source, delete or comment out those lines.</p>
+<pre class="hljs"><code>sudo apt-<span class="hljs-built_in">get</span> <span class="hljs-keyword">update</span> &amp;amp;&amp;amp; sudo apt-<span class="hljs-built_in">get</span> upgrade
+
+sudo apt-<span class="hljs-built_in">get</span> install git mlocate mercurial nitrogen wicd-gtk \
+gnome-icon-theme htop unzip openssl chromium-browser zsh \
+xterm epdfview mysql-server ruby tmux curl wget redis-server \
+xcursor-themes xarchiver gzip bzip2 zip unzip unrar p7zip \
+meld mplayer make gcc libc-<span class="hljs-built_in">dev</span> build-essential openssl \
+libssl-<span class="hljs-built_in">dev</span> libx11-<span class="hljs-built_in">dev</span> libxinerama-<span class="hljs-built_in">dev</span> guake xfce4-notifyd \
+keychain flashplugin-nonfree lxappearance tree</code></pre><p><strong>Install node</strong></p>
+<pre class="hljs"><code>mkdir other
+cd other
+wget http:<span class="hljs-comment">//nodejs.org/dist/v0.8.12/node-v0.8.12.tar.gz</span>
+tar xvvf node-v0<span class="hljs-number">.8.12</span>.tar.gz
+cd node-v0<span class="hljs-number">.8.12</span>
+./configure &amp;amp;&amp;amp; <span class="hljs-built_in">make</span> &amp;amp;&amp;amp; sudo <span class="hljs-built_in">make</span> install</code></pre><p><strong>Install nwm, my window manager</strong></p>
+<pre class="hljs"><code>git clone gi<span class="hljs-variable">t:</span>//github.<span class="hljs-keyword">com</span>/mixu/nwm.git
+<span class="hljs-keyword">cd</span> nwm
+npm install</code></pre><p>Create ~/nwm.sh and chmod +x:</p>
+<pre class="hljs"><code><span class="hljs-shebang">#!/bin/sh</span>
+/usr/local/bin/node /home/m/nwm/nwm-user-sample.js <span class="hljs-number">2</span>&amp;gt; ~/nwm.err.log <span class="hljs-number">1</span>&amp;gt; ~/nwm.log</code></pre><p>Create /usr/share/xsessions/nwm.desktop:</p>
+<pre class="hljs"><code><span class="hljs-title">[Desktop Entry]</span>
+<span class="hljs-setting">Encoding=<span class="hljs-value">UTF-<span class="hljs-number">8</span></span></span>
+<span class="hljs-setting">Name=<span class="hljs-value">nwm</span></span>
+<span class="hljs-setting">Comment=<span class="hljs-value">This session starts nwm</span></span>
+<span class="hljs-setting">Exec=<span class="hljs-value">/home/m/nwm.sh</span></span>
+<span class="hljs-setting">Type=<span class="hljs-value">Application</span></span></code></pre><p><strong>Set the user shell from bash to zsh</strong></p>
+<p>sudo chsh</p>
+<p><strong>Set the default xdg-open action for PDFs</strong></p>
+<p>In case you don&#39;t know what xdg-open is - it&#39;s the thing that decides what happens when you try to open a file (e.g. a downloaded file from Chrome).</p>
+<p>I don&#39;t want to open PDFs and PS files in Gimp, I want to open them in a document viewer</p>
+<p>xdg-mime default evince.desktop application/pdf</p>
+<p>xdg-mime default evince.desktop application/postscript</p>
+<p>To query the default app: xdg-mime query default $(xdg-mime query filetype FILENAME)</p>
+<p><strong>Configuring appearance</strong></p>
+<p>Download <a href="https://wiki.ubuntu.com/Artwork/Incoming/DustTheme">https://wiki.ubuntu.com/Artwork/Incoming/DustTheme</a> and unzip the theme to ~/.themes/</p>
+<p>I find the easiest way to configure gnome2 is to use lxappearance, since it allows you to set the gnome theme and x11 cursors in a few clicks.</p>
+<h3 id="guake-disable-smart-terminal-names">Guake: disable smart terminal names</h3>
+<pre class="hljs"><code>gconftool-<span class="hljs-number">2</span> --set <span class="hljs-regexp">/apps/g</span>uake<span class="hljs-regexp">/general/</span>use_vte_titles --type <span class="hljs-keyword">boolean</span> <span class="hljs-keyword">false</span></code></pre><h3 id="configure-git">Configure git</h3>
+<p>Edit ~/.gitconfig:</p>
+<pre class="hljs"><code><span class="hljs-list">[<span class="hljs-keyword">color</span>]
+ui = true
+<span class="hljs-list">[<span class="hljs-keyword">user</span>]
+email =
+name =
+<span class="hljs-list">[<span class="hljs-keyword">core</span>]
+editor = nano
+<span class="hljs-list">[<span class="hljs-keyword">alias</span>]
+lg = log --graph --pretty=format:<span class="hljs-variable">&#39;%Cred%h%Creset-%C</span><span class="hljs-list">(<span class="hljs-keyword">yellow</span>)</span>%d%Creset %s %Cgreen<span class="hljs-list">(<span class="hljs-keyword">%cr</span>)</span>%C<span class="hljs-list">(<span class="hljs-keyword">bold</span> blue)</span>%Creset&#39; --abbrev-commit --date=relative
+<span class="hljs-list">[<span class="hljs-keyword">push</span>]
+default = current</span></span></span></span></span></code></pre><h3 id="configure-zsh">Configure zsh</h3>
+<pre class="hljs"><code><span class="hljs-comment"># Lines configured by zsh-newuser-install</span>
+HISTFILE=~/.histfile
+HISTSIZE=<span class="hljs-number">1000</span>
+SAVEHIST=<span class="hljs-number">9999</span>
+unsetopt <span class="hljs-command">beep</span>
+bindkey -e
+<span class="hljs-comment"># End of lines configured by zsh-newuser-install</span>
+<span class="hljs-comment"># The following lines were added by compinstall</span>
+zstyle :compinstall filename &#39;/home/m/.zshrc&#39;
+
+autoload -Uz compinit
+compinit
+<span class="hljs-comment"># End of lines added by compinstall</span>
+
+bindkey <span class="hljs-string">&quot;\e[1~&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-line <span class="hljs-comment"># Home</span>
+bindkey <span class="hljs-string">&quot;\e[4~&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-line <span class="hljs-comment"># End</span>
+bindkey <span class="hljs-string">&quot;\e[5~&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-history <span class="hljs-comment"># PageUp</span>
+bindkey <span class="hljs-string">&quot;\e[6~&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-history <span class="hljs-comment"># PageDown</span>
+bindkey <span class="hljs-string">&quot;\e[2~&quot;</span> quoted-insert <span class="hljs-comment"># Ins</span>
+bindkey <span class="hljs-string">&quot;\e[3~&quot;</span> delete-char <span class="hljs-comment"># Del</span>
+bindkey <span class="hljs-string">&quot;\e[5C&quot;</span> forward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\eOc&quot;</span> emacs-forward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\e[5D&quot;</span> backward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\eOd&quot;</span> emacs-backward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\e\e[C&quot;</span> forward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\e\e[D&quot;</span> backward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\e[Z&quot;</span> <span class="hljs-property">reverse</span>-menu-complete <span class="hljs-comment"># Shift+Tab</span>
+<span class="hljs-comment"># for rxvt</span>
+bindkey <span class="hljs-string">&quot;\e[7~&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-line <span class="hljs-comment"># Home</span>
+bindkey <span class="hljs-string">&quot;\e[8~&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-line <span class="hljs-comment"># End</span>
+<span class="hljs-comment"># for non RH/Debian xterm</span>
+bindkey <span class="hljs-string">&quot;\eOH&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-line
+bindkey <span class="hljs-string">&quot;\eOF&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-line
+<span class="hljs-comment"># for freebsd console</span>
+bindkey <span class="hljs-string">&quot;\e[H&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-line
+bindkey <span class="hljs-string">&quot;\e[F&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-line
+<span class="hljs-comment"># for guake</span>
+bindkey <span class="hljs-string">&quot;\eOF&quot;</span> <span class="hljs-keyword">end</span>-<span class="hljs-keyword">of</span>-line
+bindkey <span class="hljs-string">&quot;\eOH&quot;</span> <span class="hljs-keyword">beginning</span>-<span class="hljs-keyword">of</span>-line
+bindkey <span class="hljs-string">&quot;^[[1;5D&quot;</span> backward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;^[[1;5C&quot;</span> forward-<span class="hljs-property">word</span>
+bindkey <span class="hljs-string">&quot;\e[3~&quot;</span> delete-char <span class="hljs-comment"># Del</span>
+
+<span class="hljs-type">alias</span> ls=&#39;ls <span class="hljs-comment">--color=auto -F&#39;</span>
+<span class="hljs-type">alias</span> ga=&#39;git add&#39;
+<span class="hljs-type">alias</span> gp=&#39;git push&#39;
+<span class="hljs-type">alias</span> gl=&#39;git <span class="hljs-command">log</span>&#39;
+<span class="hljs-type">alias</span> gs=&#39;git status&#39;
+<span class="hljs-type">alias</span> gd=&#39;git diff&#39;
+<span class="hljs-type">alias</span> gdc=&#39;git diff <span class="hljs-comment">--cached&#39;</span>
+
+autoload -U colors &amp;amp;&amp;amp; colors
+
+PROMPT=<span class="hljs-string">&quot;%{$fg_bold[white]%}[%1~]%{$reset_color%} &quot;</span>
+
+PATH=$PATH:$HOME/.rvm/bin <span class="hljs-comment"># Add RVM to PATH for scripting</span>
+[[ -s <span class="hljs-string">&quot;$HOME/.rvm/scripts/rvm&quot;</span> ]] &amp;amp;&amp;amp; . <span class="hljs-string">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
+
+gr() {
+   <span class="hljs-keyword">local</span> cmd=<span class="hljs-string">&quot;$<em>&quot;</span>
+   <span class="hljs-keyword">for</span> dir <span class="hljs-keyword">in</span> /home/{FILL IN REPOSITORIES HERE}; do
+    (
+     print <span class="hljs-string">&quot;\nin $dir&quot;</span>
+     cd $dir
+     eval <span class="hljs-string">&quot;$cmd&quot;</span>
+    )
+   done
+}
+
+<span class="hljs-type">alias</span> grs=<span class="hljs-string">&quot;gr git --no-pager status -sb&quot;</span>
+<span class="hljs-type">alias</span> grl=<span class="hljs-string">&quot;gr git --no-pager log --decorate --graph --oneline -n 3&quot;</span>
+<span class="hljs-type">alias</span> grd=<span class="hljs-string">&quot;gr git diff&quot;</span>
+<span class="hljs-type">alias</span> grdc=<span class="hljs-string">&quot;gr git diff --cached&quot;</span>
+<span class="hljs-type">alias</span> grn=<span class="hljs-string">&quot;gr npm ls&quot;</span>
+
+eval `keychain <span class="hljs-comment">--eval --agents ssh id_rsa`</span>
+
+<span class="hljs-comment"># Stuff for git</span>
+parse_git_branch () {
+    git branch <span class="hljs-number">2</span>&amp;gt; /dev/null | grep <span class="hljs-string">&quot;</em>&quot;</span> | sed -e &#39;s/<em> (.</em>)/ @\<span class="hljs-number">1</span>/g&#39;
+}
+
+<span class="hljs-comment"># colors for prompt</span>
+BLACK=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">0</span>m&#39;
+RED=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">38</span>;<span class="hljs-number">5</span>;<span class="hljs-number">167</span>m&#39;
+GREEN=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">38</span>;<span class="hljs-number">5</span>;<span class="hljs-number">71</span>m&#39;
+BLUE=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">38</span>;<span class="hljs-number">5</span>;<span class="hljs-number">111</span>m&#39;
+YELLOW=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">38</span>;<span class="hljs-number">5</span>;<span class="hljs-number">228</span>m&#39;
+ORANGE=$&#39;\<span class="hljs-number">033</span>[<span class="hljs-number">38</span>;<span class="hljs-number">5</span>;<span class="hljs-number">173</span>m&#39;
+
+function precmd() {
+    export PROMPT=<span class="hljs-string">&quot;%{$fg_bold[white]%}[%1~%{$reset_color%}%{$YELLOW%}$(parse_git_branch)%{$fg_bold[white]%}]%{$BLACK%}%\ &quot;</span>
+}</code></pre>]]></description><link>http://localhost:5000/2012/10/24/my-debian-installation-tips</link><guid isPermaLink="true">http://localhost:5000/2012/10/24/my-debian-installation-tips</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Wed, 24 Oct 2012 07:00:00 GMT</pubDate></item><item><title><![CDATA[Writing about technical topics like it's 2012]]></title><description><![CDATA[<p>For some reason, a lot of technical writing is still done as if the reader didn&#39;t have access to the Internet. Having written two books (<a href="http://book.mixu.net/">Mixu&#39;s Node book</a> and <a href="http://singlepageappbook.com/">Single page apps in depth</a>) in the past year, I&#39;ve had some time to think about what good technical writing might be. There are several things that could be improved:</p>
+<p><strong>1.  Assume the reader has Internet and Google capabilities.</strong> Skip the parts that are covered better elsewhere or that will go out of date quickly. For example, installation tutorials are never up to date. I&#39;ll generally skip the sales pitch for the technology as well, since I&#39;m here to tell you about the tech, not sell you on using it.</p>
+<p><strong>2. Keep it short and to the point.</strong> I hate books that try to be cute or clever with me - if I want a story, I&#39;ll go read fiction. Similarly, don&#39;t surprise the reader with irrelevant sections. <em>Just because you wrote it doesn&#39;t mean it should exist</em>. I keep a crap file where all the useless text goes, and I usually have a couple of chapters worth of text that I delete. I&#39;ve written several chapters on the history of a piece of tech, and always deleted them in the end.</p>
+<p><strong>3. Use teasers, lists, tables and code blocks.</strong> Assume that the reader can get bored quickly, so throw in something interesting quick (a teaser) and support skimming readers with subheadings, lists and other structural elements.</p>
+<p><strong>4. Don&#39;t treat everything as equally important.</strong> The easiest way to write a book about a piece of tech is to take the API, and then cover each and every function in it. It&#39;s also the worst possible way to do it. Unless you are writing the API docs, you should avoid talking about everything and focus on the interesting parts.</p>
+<p>As a reader, if I want to find out more, I can always read the API or code. What is much more important is understanding what are the neat things that I can do with the new tech, what kinds of patterns are common in using it and why you as the author think they are good or bad. Talk about how the pieces fit together. If everything is equally important, then nothing stands out. I like getting the author&#39;s angle on things, even if I might disagree with their choices, I still feel like I gain insight.</p>
+<p><strong>5. Give me a choice in formats.</strong> Provide HTML, PDF, epub and mobi versions of long texts. Converting html for the Kindle just requires running <a href="https://github.com/visionmedia/masteringnode/blob/master/Makefile#L45">one command</a> with Calibre, so I wish more authors gave me the option to download their writing. For example, I wish I could get Google&#39;s tutorials for Android as a Kindle mobi book, since that&#39;s how I like to read long form writing.</p>
+<p><strong>6. Help me navigate.</strong>  Often, when I like what I read, I&#39;ll want to read more. Don&#39;t force me to go page by page through your writing. If you have a blog, have an archive that can show all the content, and let me get an idea of what else you&#39;ve written about at a glance (a most popular list always helps).</p>
+<p>More about writing:</p>
+<p><a href="http://www.paulgraham.com/writing44.html">http://www.paulgraham.com/writing44.html</a></p>
+<p><a href="http://bighow.com/news/the-art-of-great-writing-60-writing-tips-from-6-alltime-great-writers">http://bighow.com/news/the-art-of-great-writing-60-writing-tips-from-6-alltime-great-writers</a></p>
+<p><a href="http://dannystack.blogspot.com/2009/01/joss-whedons-top-10-writing-tips.html">http://dannystack.blogspot.com/2009/01/joss-whedons-top-10-writing-tips.html</a></p>
+<p>&nbsp;</p>
+]]></description><link>http://localhost:5000/2012/07/26/writing-about-technical-topics-like-its-2012</link><guid isPermaLink="true">http://localhost:5000/2012/07/26/writing-about-technical-topics-like-its-2012</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Thu, 26 Jul 2012 07:00:00 GMT</pubDate></item><item><title><![CDATA[Git tips and tricks]]></title><description><![CDATA[<p>This post is basically a collection of things I think I should remember about git: setup, commands, multiple repos, more obscure options etc.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Setting up short aliases for you git commands changes everything.</p>
+<p>Two things: enable colors, and make <code>git push</code> push the current branch to a branch of the same name (and not all the branches, which is the default). This means when you do git push, it pushes your working branch but not other branches.</p>
+<pre class="hljs"><code>git config --<span class="hljs-built_in">global</span> color.ui <span class="hljs-literal">true</span>
+git config --<span class="hljs-built_in">global</span> push.<span class="hljs-reserved">default</span> current</code></pre><p>Maybe worth it:</p>
+<pre class="hljs"><code>git config branch.autosetuprebase always
+<span class="hljs-prompt">git difftool -t &lt;tool&gt;</span>
+<span class="hljs-prompt">git mergetool -t &lt;tool&gt;</span></code></pre><h3 id="zsh-bash-aliases">Zsh/bash aliases</h3>
+<p>These are small things, but they make things so easy. I instinctively type gs after changing directory nowadays.</p>
+<pre class="hljs"><code>alias ga=<span class="hljs-string">&#39;git add&#39;</span>
+alias gp=<span class="hljs-string">&#39;git push&#39;</span>
+alias gl=<span class="hljs-string">&#39;git log&#39;</span>
+alias gs=<span class="hljs-string">&#39;git status&#39;</span>
+alias gd=<span class="hljs-string">&#39;git diff&#39;</span>
+alias gdc=<span class="hljs-string">&#39;git diff --cached&#39;</span>
+alias g=<span class="hljs-string">&#39;git&#39;</span>
+git config --global alias.lg <span class="hljs-string">&quot;log --graph 
+  --pretty=format:&#39;<span class="hljs-variable">%Cred</span><span class="hljs-variable">%h</span><span class="hljs-variable">%Creset</span>-<span class="hljs-variable">%C</span>(yellow)<span class="hljs-variable">%d</span><span class="hljs-variable">%Creset</span> <span class="hljs-variable">%s</span> <span class="hljs-variable">%Cgreen</span>(<span class="hljs-variable">%cr</span>)<span class="hljs-variable">%C</span>(bold blue)&lt;<span class="hljs-variable">%an</span>&gt;<span class="hljs-variable">%Creset</span>&#39;
+  --abbrev-commit --date=relative&quot;</span></code></pre><p>Apparently, the &quot;git lg&quot; above can be replicated fairly well with:</p>
+<pre class="hljs"><code><span class="hljs-comment">git</span> <span class="hljs-comment">log</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">decorate</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">graph</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">oneline</span></code></pre><h2 id="zsh-shell-prompt">Zsh shell prompt</h2>
+<p>This one is way simpler than those fancy ones offered elsewhere, but it works well for me:</p>
+<pre class="hljs"><code><span class="hljs-comment"># get the current branch</span>
+<span class="hljs-title">parse_git_branch</span> () {
+    <span class="hljs-title">git</span> branch <span class="hljs-number">2</span>&gt; /dev/null | grep <span class="hljs-string">&quot;<em>&quot;</span> | sed -e <span class="hljs-string">&#39;s/</em> (.*)/ @\1/g&#39;</span>
+}
+
+<span class="hljs-comment"># colors</span>
+BLACK=$<span class="hljs-string">&#39;\033[0m&#39;</span>
+RED=$<span class="hljs-string">&#39;\033[38;5;167m&#39;</span>
+GREEN=$<span class="hljs-string">&#39;\033[38;5;71m&#39;</span>
+BLUE=$<span class="hljs-string">&#39;\033[38;5;111m&#39;</span>
+YELLOW=$<span class="hljs-string">&#39;\033[38;5;228m&#39;</span>
+ORANGE=$<span class="hljs-string">&#39;\033[38;5;173m&#39;</span>
+
+function precmd() {
+    <span class="hljs-title">export</span> PROMPT=<span class="hljs-string">&quot;%{<span class="hljs-variable">$fg_bold</span>[white]%}[%1~%{<span class="hljs-variable">$reset_color</span>%}%{<span class="hljs-variable">$YELLOW</span>%}$(parse_git_branch)%{<span class="hljs-variable">$fg_bold</span>[white]%}]%{<span class="hljs-variable">$BLACK</span>%}%\ &quot;</span>
+}</code></pre><h2 id="managing-multiple-git-repositories">Managing multiple git repositories</h2>
+<p>A fairly simple way of doing this is to add a function that you can use to run the same command in multiple directories. This one is for zsh:</p>
+<pre class="hljs"><code>gr() {
+  <span class="hljs-keyword">local</span> cmd=<span class="hljs-string">&quot;$*&quot;</span>
+  <span class="hljs-keyword">for</span> dir in /home/m/repos/{one,two,three}; do
+   (
+    <span class="hljs-built_in">print</span> <span class="hljs-string">&quot;nin $dir&quot;</span>
+    cd <span class="hljs-number">$d</span>ir
+    eval <span class="hljs-string">&quot;$cmd&quot;</span>
+   )
+   done
+}
+
+<span class="hljs-keyword">alias</span> <span class="hljs-title">grs</span>=<span class="hljs-string">&quot;gr git --no-pager status -sb&quot;</span>
+<span class="hljs-keyword">alias</span> <span class="hljs-title">grl</span>=<span class="hljs-string">&quot;gr git --no-pager log --decorate --graph --oneline -n 3&quot;</span>
+<span class="hljs-keyword">alias</span> <span class="hljs-title">grd</span>=<span class="hljs-string">&quot;gr git diff&quot;</span>
+<span class="hljs-keyword">alias</span> <span class="hljs-title">grdc</span>=<span class="hljs-string">&quot;gr git diff --cached&quot;</span>
+<span class="hljs-keyword">alias</span> <span class="hljs-title">grn</span>=<span class="hljs-string">&quot;gr npm ls&quot;</span></code></pre><p>In the example below, I 1) switch all working repos to master, 2) fetch the recent remote changes, 3) check the status of every repository, and 4) after going into those couple of dirs and stashing stuff (not shown in detail), pull all repos to update them</p>
+<pre class="hljs"><code>gr git checkout master
+gr git fetch
+grs
+<span class="hljs-keyword">in</span> <span class="hljs-regexp">/home/m</span>/repos/one
+<span class="hljs-comment">## master</span>
+<span class="hljs-keyword">in</span> <span class="hljs-regexp">/home/m</span>/repos/two
+<span class="hljs-comment">## master...origin/master [behind 8]</span>
+<span class="hljs-keyword">in</span> <span class="hljs-regexp">/home/m</span>/repos/three
+<span class="hljs-comment">## master...origin/master [behind 4]</span>
+ M Makefile
+gr git pull</code></pre><h3 id="add-all-changes-or-all-changes-to-existing-files">Add all changes or all changes to existing files</h3>
+<pre class="hljs"><code>$ git add -<span class="hljs-literal">A</span></code></pre><p>Adds all files and file deletes, so you don&#39;t need to enter them manually.</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git add -u</code></pre><p>Same, but doesn&#39;t add files that didn&#39;t exist before.</p>
+<h2 id="log-fu">Log-fu</h2>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> -p</code></pre><p>.. to show the patches alongside the log</p>
+<pre class="hljs"><code>git log --author=&quot;<span class="hljs-smartquote"><code>git config --get user.name</code>&quot; --pretty=format:&#39;</span>%h %an %Cred%ar %Cgreen%s&#39; v1.0.1..master</code></pre><p>git supports friendly dates specs:</p>
+<pre class="hljs"><code>git <span class="hljs-built_in">log</span> HEAD@{<span class="hljs-constant">one</span>.day.ago}</code></pre><p>Shows the commits that you&#39;ve made between &quot;refactor&quot; and &quot;master&quot;, e.g. for emailing a changelog with your commits:</p>
+<pre class="hljs"><code><span class="hljs-number">6591466</span> Mikito Takada <span class="hljs-number">7</span> months ago Port over more code
+<span class="hljs-number">1</span>f464fb Mikito Takada <span class="hljs-number">7</span> months ago Refactor <span class="hljs-built_in">window</span>
+<span class="hljs-number">41</span>a3ec9 Mikito Takada <span class="hljs-number">9</span> months ago Handle switching from <span class="hljs-built_in">window</span> to root <span class="hljs-built_in">window</span></code></pre><pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> staging -<span class="hljs-number">1</span> -p <span class="hljs-comment">-- my/subdir</span></code></pre><p>Show the latest commit that affects the my/subdir path on the branch &quot;staging&quot; with the patch.</p>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--stat</span></code></pre><p>Show the changed files only.</p>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--author=foo</span></code></pre><p>Only commits by author foo.</p>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--stat -- subdirectory</span></code></pre><p>Show the commits affecting only &quot;./subdirectory&quot;, with a summary of the files (--stat).</p>
+<p>For example:</p>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--stat -- .</span></code></pre><p>Shows the summary of commits affecting the current directory.</p>
+<pre class="hljs"><code>$ git <span class="hljs-built_in">log</span> --<span class="hljs-keyword">grep</span>=<span class="hljs-string">&#39;.<em>foo.</em>&#39;</span></code></pre><p>Grep for a specific log message.</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git log --since=<span class="hljs-string">&quot;1 week ago&quot;</span> --<span class="hljs-keyword">until</span>=<span class="hljs-string">&quot;2 weeks ago&quot;</span></code></pre><p>Filter commits by date.</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git shortlog -sn</code></pre><p>Shows a &quot;top contributors list&quot; by commits.</p>
+<h2 id="selecting-things">Selecting things</h2>
+<ul>
+<li>Full SHA1</li>
+<li>Partial SHA1 - at least 4 characters and unique</li>
+<li><code>branch^</code> first parent</li>
+<li><code>branch^2</code> merge parent</li>
+<li><code>branch~5</code> five first-parents back</li>
+<li><code>branch:path/to/file</code> directly get a blob</li>
+<li><code>branch@{yesterday}</code> local date based reference</li>
+<li><code>branch@{5}</code> the 5th last value of branch (locally)</li>
+</ul>
+<h2 id="diff-fu">Diff-fu</h2>
+<p>Differences between the staged files and the last commit:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git diff --cached</code></pre><p>I use that a lot just before committing the changes to check what my commit changed.</p>
+<p>So git diff is for the files that are unstaged, while git diff --cached is for staged files.</p>
+<p>What&#39;s different between my branch and some other branch, e.g. master?</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git diff my_branch..master</code></pre><p>What changed in the last three commits?</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git diff <span class="hljs-constant">HEAD^</span><span class="hljs-number">3</span></code></pre><p>Ignore whitespace?</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git diff <span class="hljs-constant">HEAD^</span> --word-diff</code></pre><p>What&#39;s different between my branch and some other branch in subdirectory (or file)?</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git diff my_branch..master subdirectory</code></pre><p>Remember, git diff outputs an applicable patch:</p>
+<pre class="hljs"><code><span class="hljs-prompt">$ git diff &gt;</span> my.patch
+<span class="hljs-variable">$ </span>git apply &lt; my.patch</code></pre><p>For example, I once used git diff to generate a patch for a folder that was missing it&#39;s .git directory, and then applied that patch to a live environment (patching a test VM):</p>
+<pre class="hljs"><code>git diff --<span class="hljs-keyword">no</span>-<span class="hljs-built_in">index</span> --diff-<span class="hljs-built_in">filter</span>=MRC -- ./lib ../myapp/lib &gt; my.patch
+<span class="hljs-keyword">cd</span> ../myapp/
+git apply ../myapp-git/my.patch</code></pre><h2 id="grep-fu">Grep-fu</h2>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git grep -e foo --<span class="hljs-keyword">or</span> -e bar --<span class="hljs-keyword">not</span> -e baz</code></pre><p>Grep for foo or bar, but exclude the expression baz.</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git grep --untracked foo</code></pre><p>Include untracked files in grep.</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git grep --cached foo</code></pre><p>Include cached (staged) files in grep.</p>
+<pre class="hljs"><code>$ git <span class="hljs-keyword">grep</span> --<span class="hljs-keyword">no</span>-<span class="hljs-built_in">index</span> foo /var/bar</code></pre><p>Use &quot;git grep&quot; instead of regular grep, grep for foo in /var/bar. Compared to regular grep, git grep is nicer due to the colors and paging defaults.</p>
+<p>List all require(&#39;foo&#39;) statements content (sed to filter out just the string).</p>
+<p>git grep -h -e &quot;require[(]&#39;[a-zA-Z]&quot; | sed -E &quot;s/.<em>require(.([a-zA-Z][^&#39;]+).).</em>/\1/&quot; | sort | uniq</p>
+<h3 id="creating-a-feature-branch-and-merging-it-back">Creating a feature branch and merging it back</h3>
+<p>Checkout the branch you want to base your work on:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout master</code></pre><p>Then create a branch and check it out:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout -b local_name</code></pre><p>Push the branch to the remote</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git push -u origin local_name</code></pre><p>Later on, merge it:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout master</code></pre><pre class="hljs"><code><span class="hljs-variable">$ </span>git merge local_name</code></pre><p>Look at the unmerged branches:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git branch --no-merged</code></pre><p>Look at branches that contain a particular commit (e.g. when cherrypicking):</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git branch --contains <span class="hljs-number">1234</span>abcd</code></pre><h2 id="git-hooks">Git hooks</h2>
+<p>Installing:</p>
+<pre class="hljs"><code><span class="hljs-keyword">cp</span> <span class="hljs-keyword">pre</span>-commit.<span class="hljs-keyword">sh</span> .git/hooks/<span class="hljs-keyword">pre</span>-commit
+chmod <span class="hljs-keyword">a</span>+<span class="hljs-keyword">x</span> .git/hooks/<span class="hljs-keyword">pre</span>-commit</code></pre><p>Examples:</p>
+<ul>
+<li>deploying a static website</li>
+<li>checking commits and doing cleanup</li>
+<li>integration with external systems</li>
+<li>email notifications</li>
+</ul>
+<h3 id="deploying-over-git-with-a-post-update-checkout-hook">Deploying over git, with a post-update checkout hook</h3>
+<h2 id="git-works-over-ssh">Git works over ssh</h2>
+<p>If all you need is a place for storage, you just need <code>sshd</code> and disk space.</p>
+<p>Setting up a remote repository </p>
+<ol>
+<li>Make local repo, commit stuff, etc. </li>
+<li>ssh to the server: GIT_DIR=/path/to/repo git init --shared </li>
+<li>Next, tell the local repo about the server: git remote add origin git+ssh://hostname/path/to/repo </li>
+<li>Push to the server from the local repo: git push origin master </li>
+<li>Clean up the local repo so that you can pull from the remote server: git config branch.master.remote origin git config branch.master.merge refs/heads/master</li>
+</ol>
+<h2 id="excluding-files">Excluding files</h2>
+<p><code>~/.gitignore</code> for globally excluded files:</p>
+<pre class="hljs"><code>npm-debug.log
+<span class="hljs-title">.DS_Store</span>
+<span class="hljs-title">.DS_Store?</span>
+<span class="hljs-title">.Spotlight-V100</span>
+<span class="hljs-title">.Trashes</span>
+Icon?
+ehthumbs.db
+Thumbs.db</code></pre><p><code>.git/info/exclude</code> for files you want to exclude without changing the gitignore file:</p>
+<pre class="hljs"><code>conf/<span class="hljs-keyword">*</span></code></pre><p><code>.gitignore</code> for a checked in list of excluded paths:</p>
+<pre class="hljs"><code>node_modules/</code></pre><p>Whitelisting a directory (note: needs the rest of the path):</p>
+<pre class="hljs"><code>static<span class="hljs-regexp">/mixu.net/blog/</span>*
+!static<span class="hljs-regexp">/mixu.net/blog/assets/</span></code></pre><h2 id="stashing-changes">Stashing changes</h2>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git stash
+<span class="hljs-variable">$ </span>git stash list
+<span class="hljs-variable">$ </span>git stash apply</code></pre><p>You can specify a specific stash item from the <code>git stash list</code> output to apply or remove:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git stash apply stash@{<span class="hljs-number">0</span>}
+<span class="hljs-variable">$ </span>git stash drop stash@{<span class="hljs-number">0</span>}</code></pre><h2 id="blaming">Blaming</h2>
+<pre class="hljs"><code>$ git blame path/<span class="hljs-keyword">to</span>/<span class="hljs-keyword">file</span></code></pre><p>See who changed what.</p>
+<pre class="hljs"><code>$ git blame abce1234^ path/<span class="hljs-keyword">to</span>/<span class="hljs-keyword">file</span></code></pre><p>See the blame, starting one commit before abce1234. E.g. when you need to trace back a particular line of code in history.</p>
+<h2 id="working-with-remotes">Working with remotes</h2>
+<p>Changing from Github to Bitbucket</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git remote -v <span class="hljs-comment"># look at remotes</span></code></pre><pre class="hljs"><code><span class="hljs-variable">$ </span>git remove rm origin <span class="hljs-comment"># delete</span></code></pre><pre class="hljs"><code>$ git remote <span class="hljs-built_in">add</span> origin gi<span class="hljs-variable">t:</span>//addr/<span class="hljs-keyword">to</span>/repo # <span class="hljs-built_in">add</span> <span class="hljs-keyword">new</span> remote</code></pre><pre class="hljs"><code>$ git <span class="hljs-keyword">push</span> -u origin master # <span class="hljs-keyword">push</span> to <span class="hljs-keyword">new</span> remote</code></pre><p>Adding a upstream repo to pull in new changes from a forked project</p>
+<pre class="hljs"><code>$ git remote <span class="hljs-built_in">add</span> upstream gi<span class="hljs-variable">t:</span>//addr/<span class="hljs-keyword">to</span>/repo</code></pre><pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout master &amp;amp;&amp;amp; git pull upstream master</code></pre><h2 id="keeping-the-number-of-merges-lower-on-small-commits">Keeping the number of merges lower on small commits</h2>
+<p>For small commits made on top of a frequently changing branch like master, you might want to rebase your local changes on top of the current remote before you merge a feature branch (<a href="http://gitready.com/advanced/2009/02/11/pull-with-rebase.html">more in depth</a>):</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git pull --rebase</code></pre><pre class="hljs"><code><span class="hljs-variable">$ </span>git push</code></pre><h2 id="branching">Branching</h2>
+<p>List all branches:</p>
+<pre class="hljs"><code>$ git branch -<span class="hljs-literal">a</span></code></pre><p>Unmerged branches:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git branch --no-merged</code></pre><p>Checkout a branch (protip, zsh does git branch completion):</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout name</code></pre><p>If there is a branch called <code>origin/name</code> and you checkout <code>name</code>, then <code>name</code> will be set to track <code>origin/name</code> automatically (that means that <code>git pull</code> works, for example).</p>
+<p>Create a feature branch based on the current branch:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout -b name</code></pre><p>Create a orphan branch (no history) for storing documentation or resources:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout --orphan</code></pre><p>Merge branches:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git merge</code></pre><p>Apply a commit from another branch:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git cherry-pick sha1_of_commit</code></pre><p>Reset the branch to the current head:</p>
+<pre class="hljs"><code>$ git <span class="hljs-operator"><span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard HEAD</span></span></code></pre><p>When a branch tracking a remote has become outdated (e.g. you are on staging now but your commits have diverged):</p>
+<pre class="hljs"><code>$ git <span class="hljs-operator"><span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard origin/staging</span></span></code></pre><p>Reset a single file to HEAD:</p>
+<pre class="hljs"><code>$ git checkout -- path/<span class="hljs-keyword">to</span>/<span class="hljs-keyword">file</span></code></pre><p>Reverting (unapplying) a bad commit:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git revert sha1_of_commit</code></pre><p>Taking the current branch and creating a version that&#39;s squashed into one commit:</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git checkout -b new-branch
+<span class="hljs-variable">$ </span>git rebase -i</code></pre><p>During the rebase, only pick one commit and squash the rest.</p>
+<h3 id="total-number-of-remote-branches">Total number of remote branches</h3>
+<p>First, remove local branches that do not exist on origin (--dry-run if you want to preview):</p>
+<pre class="hljs"><code><span class="hljs-variable">$ </span>git remote prune origin</code></pre><pre class="hljs"><code><span class="hljs-variable">$ </span>git branch -r | wc -l
+ <span class="hljs-number">123</span></code></pre><p><strong>Get the latest commit of all remote branches</strong></p>
+<p>[gist id=2313880]</p>
+<p><strong>Get the latest commit of all remote branches, and summary, ordered by age</strong></p>
+<p>Use this Node script:</p>
+<p><a href="https://gist.github.com/91ba46dee32b221b3a84">https://gist.github.com/91ba46dee32b221b3a84</a></p>
+<h3 id="delete-a-local-or-remote-branch">Delete a local or remote branch</h3>
+<p>Delete a local branch:</p>
+<pre class="hljs"><code><span class="hljs-title">git</span> branch -d some_branch_name</code></pre><p>Really delete a local branch, even if git complains about it in the previous command:</p>
+<pre class="hljs"><code><span class="hljs-title">git</span> branch -D some_branch_name</code></pre><p>Delete a remote branch, e.g. in Github:</p>
+<pre class="hljs"><code>git push origin <span class="hljs-symbol">:some_branch_name</span></code></pre><p>The reason for that syntax is that you can do <code>git push origin local_branch_name:remote_branch_name</code> so what that line above is doing is essentially pushing NULL to the remote branch, thereby killing it off.</p>
+<p>In git <code>&gt;= v1.7.0</code>:</p>
+<pre class="hljs"><code>git <span class="hljs-keyword">push</span> origin --<span class="hljs-keyword">delete</span> &lt;branchName&gt;</code></pre><h2 id="things-i-should-still-try-out">Things I should still try out</h2>
+<pre class="hljs"><code><span class="hljs-title">git</span> add -i
+git reflog</code></pre>]]></description><link>http://localhost:5000/2012/04/06/git-tips-and-tricks</link><guid isPermaLink="true">http://localhost:5000/2012/04/06/git-tips-and-tricks</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Fri, 06 Apr 2012 07:00:00 GMT</pubDate></item><item><title><![CDATA[Mechanical keyboards rock!]]></title><description><![CDATA[<p>I&#39;m a big believer in having the best tools possible for the job. I&#39;ve gone through at least 3 <a href="http://programmers.stackexchange.com/questions/2254/what-are-good-keyboards-for-programming">Microsoft Ergonomic Keyboard 4000&#39;s</a>, and used to think those were the best keyboards ever (as did <a href="http://www.codinghorror.com/blog/2010/10/the-keyboard-cult.html">Jeff Atwood</a>).</p>
+<p>Well, there is <a href="http://www.overclock.net/t/491752/mechanical-keyboard-guide">whole world of keyboards that are even better</a>, namely: buckling spring keyboards (e.g. the IBM Model M), Cherry MX switch keyboards and Topre switch keyboards.</p>
+<p>I got this one for my place - Cherry MX brown switches, which are less noisy (though definitely they could be even more silent):</p>
+<p><a href="http://blog.mixu.net/files/2012/02/IMG_20120217_001846.jpg"><img title="IMG_20120217_001846" src="http://blog.mixu.net/files/2012/02/IMG_20120217_001846.jpg" alt="" width="512" height="384" /></a></p>
+<p>The major difference between a mechanical keyboard and a regular one is in the feel of the keys. Mechanical keyboards have metallic springs, while cheaper keyboards just have some flexible plastic.  After a short while typing on the MS Ergonomic keyboard started feeling like typing on a mushy piece of plastic compared to the mechanical keyboard. I do kind of miss the more ergonomic split layout, but typing is just a lot nicer overall on a mechanical keyboard.</p>
+<p>I ended up buying two keyboards, both with Cherry MX switches (~110 USD from <a href="http://elitekeyboards.com/">here</a>). I didn&#39;t get a buckling spring keyboard, because they are more noisy and there aren&#39;t any space-saving tenkeyless models available. The third alternative - keyboards with Topre switches - are more expensive (~300+ USD) and have been described as less tactile. I&#39;ll probably get a Topre keyboard eventually anyway, just so I can try it out.</p>
+<p>Here is the new keyboard I use at work, which has Cherry MX blue switches (a bit more noisy than my other keyboard, but definitely one I prefer):</p>
+<p><a href="http://blog.mixu.net/files/2012/02/IMG_20120216_183611.jpg"><img title="IMG_20120216_183611" src="http://blog.mixu.net/files/2012/02/IMG_20120216_183611.jpg" alt="" width="512" height="384" /></a></p>
+<p>Best purchase in a long time!</p>
+]]></description><link>http://localhost:5000/2012/02/17/mechanical-keyboards-rock</link><guid isPermaLink="true">http://localhost:5000/2012/02/17/mechanical-keyboards-rock</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Fri, 17 Feb 2012 08:00:00 GMT</pubDate></item><item><title><![CDATA[How to: thinkpad_acpi and fan control on Arch]]></title><description><![CDATA[<p>From the &quot;this might help some random person&quot; department - setting up manual Thinkpad fan control in Arch Linux.</p>
+<ol>
+<li><p>Edit /etc/rc.conf. Add thinkpad_acpi to MODULES=() in the hardware section.</p>
+</li>
+<li><p>Create a new file enabling fan control as /etc/modprobe.d/thinkfan.conf:</p>
+</li>
+</ol>
+<pre class="hljs"><code><span class="hljs-title">options</span> thinkpad_acpi fan_control=<span class="hljs-number">1</span></code></pre><ol>
+<li>Reload the thinkpad_acpi module:</li>
+</ol>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> modprobe -r thinkpad_acpi &amp;amp;&amp;amp; <span class="hljs-built_in">sudo</span> modprobe thinkpad_acpi</code></pre><p>To view the current fan speed:</p>
+<pre class="hljs"><code>[~]$ cat /<span class="hljs-keyword">proc</span>/acpi/ibm/fan
+status: enabled
+speed: <span class="hljs-number">2887</span>
+level: <span class="hljs-number">4</span>
+commands: level ( <span class="hljs-keyword">is</span> <span class="hljs-number">0</span>-<span class="hljs-number">7</span>, <span class="hljs-type">auto</span>, disengaged, full-speed)
+commands: enable, disable
+commands: watchdog ( <span class="hljs-keyword">is</span> <span class="hljs-number">0</span> (off), <span class="hljs-number">1</span>-<span class="hljs-number">120</span> (seconds))</code></pre><p>To control fan speed:</p>
+<pre class="hljs"><code># echo level <span class="hljs-number">0</span> | sudo tee <span class="hljs-regexp">/proc/</span>acpi<span class="hljs-regexp">/ibm/</span>fan (fan off)
+# echo level <span class="hljs-number">2</span> | sudo tee <span class="hljs-regexp">/proc/</span>acpi<span class="hljs-regexp">/ibm/</span>fan (low speed)
+# echo level <span class="hljs-number">4</span> | sudo tee <span class="hljs-regexp">/proc/</span>acpi<span class="hljs-regexp">/ibm/</span>fan (medium speed)
+# echo level <span class="hljs-number">7</span> | sudo tee <span class="hljs-regexp">/proc/</span>acpi<span class="hljs-regexp">/ibm/</span>fan (maximum speed)
+# echo level auto | sudo tee <span class="hljs-regexp">/proc/</span>acpi<span class="hljs-regexp">/ibm/</span>fan (automatic - <span class="hljs-keyword">default</span>)</code></pre><p>For easy control from the command line:</p>
+<pre class="hljs"><code>function fan() {
+  sensors
+  echo level $@ | sudo tee /<span class="hljs-keyword">proc</span>/acpi/ibm/fan
+}</code></pre><p>Now you can run <code>fan 2</code> to set the fan level to 2 and so on.</p>
+<p>To view fan speed, install lm_sensors <a href="https://wiki.archlinux.org/index.php/Lm_sensors">following the instructions on the Arch wiki</a>. Example output:</p>
+<pre class="hljs"><code>[~]$ sensors
+acpitz-virtual-<span class="hljs-number">0</span>
+Adapter: Virtual device
+temp1:        +<span class="hljs-number">37.0</span>°<span class="hljs-keyword">C</span>  (crit = +<span class="hljs-number">99.0</span>°<span class="hljs-keyword">C</span>)
+
+thinkpad-isa-<span class="hljs-number">0000</span>
+Adapter: ISA adapter
+fan1:        <span class="hljs-number">2904</span> RPM
+
+coretemp-isa-<span class="hljs-number">0000</span>
+Adapter: ISA adapter
+Physical id <span class="hljs-number">0</span>:  +<span class="hljs-number">39.0</span>°<span class="hljs-keyword">C</span>  (high = +<span class="hljs-number">86.0</span>°<span class="hljs-keyword">C</span>, crit = +<span class="hljs-number">100.0</span>°<span class="hljs-keyword">C</span>)
+Core <span class="hljs-number">0</span>:         +<span class="hljs-number">37.0</span>°<span class="hljs-keyword">C</span>  (high = +<span class="hljs-number">86.0</span>°<span class="hljs-keyword">C</span>, crit = +<span class="hljs-number">100.0</span>°<span class="hljs-keyword">C</span>)
+Core <span class="hljs-number">1</span>:         +<span class="hljs-number">37.0</span>°<span class="hljs-keyword">C</span>  (high = +<span class="hljs-number">86.0</span>°<span class="hljs-keyword">C</span>, crit = +<span class="hljs-number">100.0</span>°<span class="hljs-keyword">C</span>)
+Core <span class="hljs-number">2</span>:         +<span class="hljs-number">35.0</span>°<span class="hljs-keyword">C</span>  (high = +<span class="hljs-number">86.0</span>°<span class="hljs-keyword">C</span>, crit = +<span class="hljs-number">100.0</span>°<span class="hljs-keyword">C</span>)
+Core <span class="hljs-number">3</span>:         +<span class="hljs-number">39.0</span>°<span class="hljs-keyword">C</span>  (high = +<span class="hljs-number">86.0</span>°<span class="hljs-keyword">C</span>, crit = +<span class="hljs-number">100.0</span>°<span class="hljs-keyword">C</span>)</code></pre><h2 id="comments">Comments</h2>
+<p><strong><a href="#566" title="2012-06-08 02:34:39">Mateusz Loskot</a>:</strong> Thanks for the quick and clear how-to.
+FYI, I used it in my response to one of thinkfan questions on the Arch forum:
+<a href="https://bbs.archlinux.org/viewtopic.php?pid=1112691#p1112691">https://bbs.archlinux.org/viewtopic.php?pid=1112691#p1112691</a></p>
+]]></description><link>http://localhost:5000/2012/01/19/how-to-thinkpad_acpi-and-fan-control-on-arch</link><guid isPermaLink="true">http://localhost:5000/2012/01/19/how-to-thinkpad_acpi-and-fan-control-on-arch</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Thu, 19 Jan 2012 08:00:00 GMT</pubDate></item><item><title><![CDATA[Performance benchmarking Socket.io 0.8.7, 0.7.11 and 0.6.17 and Node's native TCP]]></title><description><![CDATA[<p>I&#39;ve been working with Socket.io quite a bit recently. It&#39;s a great library. However, after upgrading to 0.8.x, I ran into problems with increased CPU usage. Since performance is very important for high traffic pubsub implementations, I decided to investigate this further - and try to quantify the performance impact of upgrading to a newer version of Socket.io.</p>
+<p>I wrote a benchmarking suite (<a href="https://github.com/mixu/siobench">siobench</a>). The benchmark is rather simple. Clients connect one at a time, and a new client is only allowed to connect when the previous one is connected. When the server has used up 5000 milliseconds of CPU time, the benchmark is stopped. Every second, every connected client sends a single message which is echoed back by the server (<a href="https://github.com/mixu/siobench">more details</a>).</p>
+<p>This workload is geared towards a situation where Socket.io is used to notify people of things as part of a larger application: e.g. most of the load is assumed to be idling connections rather than real-time messaging like in, say, a multiplayer game.</p>
+<p>The &quot;end of test&quot; condition is 5000 ms of CPU time, because this seemed to be a easy way to give all implementations the same amount of time. CPU usage % is not accurate, since it is dependent on how much CPU time the process gets over a particular amount of wallclock time. In the graphs the CPU usage % calculated over a 100ms interval, while usertime and systime are the actual numbers reported at that particular time.</p>
+<p><h2>Summary</h2></p>
+<p><table></p>
+<p><tbody></p>
+<p><tr></p>
+<p><td>Node (0.4.12) using tcp</td></p>
+<p><td>~ 8000 connections on a single core</td>
+</tr></p>
+<p><tr></p>
+<p><td>socket.io 0.6.17 using websockets</td></p>
+<p><td>~ 2300 connections on a single core</td>
+</tr></p>
+<p><tr></p>
+<p><td>socket.io 0.7.11 using websockets</td></p>
+<p><td>~ 1800 connections on a single core</td>
+</tr></p>
+<p><tr></p>
+<p><td>socket.io 0.8.6 using websockets</td></p>
+<p><td>~ 1900 connections on a single core</td>
+</tr>
+</tbody>
+</table>
+Remember, this is just one server on one core, with 5000 ms of CPU time on that core. The rest of the cores are used to generate sufficient load. The full graphs are at the end of the post.</p>
+<p>Note that the absolute numbers are mostly unimportant - I ran this on the following 15&quot; Macbook Pro running Arch with the 3.1.04 Linux kernel in Virtualbox with 4096 Mb of RAM, a SSD and four cores (Intel(R) Core(TM) i7-2635QM CPU @ 2.00GHz GenuineIntel GNU/Linux). You can get numbers that are more representative of your system <a href="https://github.com/mixu/siobench">by getting siobench</a> and running it:</p>
+<pre class="hljs"><code><span class="hljs-string">Usage:</span> node siobench.js [env]
+A tool <span class="hljs-keyword">for</span> benchmarking your Socket.io server.
+
+Available <span class="hljs-string">environments:</span>
+    <span class="hljs-number">0.6</span><span class="hljs-number">.17</span>
+    <span class="hljs-number">0.6</span><span class="hljs-number">.17</span>_poll
+    <span class="hljs-number">0.7</span><span class="hljs-number">.11</span>
+    <span class="hljs-number">0.8</span><span class="hljs-number">.7</span>
+    <span class="hljs-number">0.8</span><span class="hljs-number">.7</span>_poll
+    tcp</code></pre><p>You can also write your own benchmarks under ./bench, by writing a new server.js (<a href="https://github.com/mixu/siobench/blob/master/bench/tcp/server_tcp.js">example #1</a>, <a href="https://github.com/mixu/siobench/blob/master/bench/sio087/server.js">#2</a>) and a new client.js (<a href="https://github.com/mixu/siobench/blob/master/bench/tcp/client_tcp.js">example #1</a>, <a href="https://github.com/mixu/siobench/blob/master/bench/sio087/client.js">#2</a>). Each benchmark has it&#39;s own set of npm dependencies installed, so that one can run benchmarks against many versions of socket.io.</p>
+<p><strong>Some notes on performance</strong></p>
+<p>The relative performance is more interesting.</p>
+<p>First, the node TCP speed represents the highest achievable performance on this benchmark, since it only uses the built-in TCP implementation. Compared to this, Socket.io is has about 1/3 of the performance (~ 2300 vs ~8000 connections) when using WebSockets.</p>
+<p>Second, it appears that 0.8.7 is about 20% slower than 0.6.17 on this benchmark. If I remember correctly, Socket.io 0.7 switched to a new protocol, and there are clearly some performance improvements over 0.7.11 in 0.8.7 (+100 connections in this bench); it&#39;s just that the overall performance is still worse in this benchmark than in the old 0.6.17 branch.</p>
+<p><strong>Working towards higher-performance</strong></p>
+<p>As this is just a simple benchmark, I don&#39;t really have solutions - only some suggestions.</p>
+<p><strong>1) A CI build that includes benchmarks and community contributed test cases</strong></p>
+<p>First, I&#39;d love to see a CI build for Socket.io that would include performance benchmarks and community contributed test cases.</p>
+<p>However, currently setting up a CI build for Socket.io is difficult because <a href="https://github.com/LearnBoost/socket.io/issues/519">the bundled test suite only works on OSX</a>. It would be a lot easier to contribute if the tests worked on other platforms.</p>
+<p>I am hoping that as <a href="https://github.com/LearnBoost/engine.io">Engine.io gets going</a>, the test suite will be fixed so that it can be run on other platforms. Otherwise, contributing improvements will be tricky/impossible since there is no way to tell whether the code works.</p>
+<p><strong>2) More realistic performance test scenarios</strong></p>
+<p>The current test scenario is rather limited in that it mostly tests performance in terms of establishing connections (without terminating them). I&#39;d love to hear more realistic scenario suggestions, particularly from people who have run into memory usage issues.</p>
+<p><a href="https://github.com/mixu/siobench">siobench</a> is only a starting point: it&#39;s way better than just looking at htop and wondering whether performance was better in the last version or not. There are still specific questions that should be formulated as replicable tests.</p>
+<p><strong>3) A polling transport that works on Node.js</strong></p>
+<p>I did write tests for the xhr-polling transport for Socket.io as well. These showed much worse performance, around:</p>
+<p><ul>
+    <li>~ 550 connections on Socket.io 0.6.17 (vs ~2300 using WS)</li>
+    <li>~ 450 connections on Socket.io 0.8.7 (vs ~ 1900 using WS)</li>
+</ul>
+However, the xhr-polling is severely broken in that it stops connecting after 4-5 connections on Node v0.4.12. So I had to force each load generating client to only make four connections and then spawn a new load generating process to work around the problem. I wouldn&#39;t vouch for the accuracy of the test with xhr-polling until the xhr-polling transport is fixed on Node when using socket.io-client (it&#39;s been broken for the last three releases, though).</p>
+<p><strong>4) Comparative benchmarks</strong></p>
+<p>Hopefully, this will help with performance testing new releases of Socket.io and other Comet libraries. Since the plan is that Engine.io will allow people to work with a lower level than Socket.io, there might be new performance oriented versions, and it would be useful to see benchmarks for those. Re: the other Node.js pubsub frameworks: I can&#39;t benchmark Faye, because it does not provide the right API out of the box, and Juggernaut uses Socket.io internally.</p>
+<p>I&#39;m going to use siobench it for internal testing to ensure that the pubsub implementation I am working on (built over Socket.io) will not have performance regressions.</p>
+<p>The full graphs are below. Please leave comments and suggestions for improvements - I am hoping that the developer community around Socket.io can help in improving the performance going forward, kind of like what Mozilla did with &quot;<a href="http://arewefastyet.com/">arewefastyet.com</a>&quot;.</p>
+<p><strong>Socket.io 0.6.17 - Websockets - CPU usage and time</strong></p>
+<p><a href="http://blog.mixu.net/files/2011/11/sio_617_cpu.png"><img class="alignnone size-full wp-image-2115" title="sio_617_cpu" src="http://blog.mixu.net/files/2011/11/sio_617_cpu.png" alt="" width="384" height="288" /></a> </p>
+<p><a href="http://blog.mixu.net/files/2011/11/sio_617_cputime.png"><img class="alignnone size-full wp-image-2116" title="sio_617_cputime" src="http://blog.mixu.net/files/2011/11/sio_617_cputime.png" alt="" width="384" height="288" /></a></p>
+<p><strong>Socket.io 0.6.17 - Websockets - resident set size</strong></p>
+<p><strong><a href="http://blog.mixu.net/files/2011/11/sio_617_mem.png"><img title="sio_617_mem" src="http://blog.mixu.net/files/2011/11/sio_617_mem.png" alt="" width="384" height="288" /></a>
+</strong></p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="#562" title="2012-01-02 19:44:45">Xananax</a>:</strong> Hey Mixu. My comment is totally unrelated to your post (which has been useful to me by the way). You don&#39;t know me, but I know you a little: I have been following your blog for a while now. But I never had a compelling reason to write something.
+So even if it messes up a bit with the rigor of coder&#39;s comment that should always be constructive, I wanted to express my thanks as your writings have been an invaluable source of information and inspiration to me. Always interesting, always well written, always well presented. Keep up the good work!
+Wish you the best for this new year.</p>
+<p><strong><a href="#563" title="2012-01-05 13:02:35">Mikito Takada</a>:</strong> Thanks! This comment made my day. 2012 will be a great year!</p>
+<p><strong><a href="#564" title="2012-01-09 14:58:37">Karen</a>:</strong> You can check with this: <a href="https://github.com/sockjs/sockjs-node">https://github.com/sockjs/sockjs-node</a> ?</p>
+<p><strong><a href="#565" title="2012-03-05 15:05:58">Luc</a>:</strong> Hi,</p>
+<p>I&#39;ve tried to fetch your project on github and when I do &quot;npm install&quot; I&#39;ve got an error fetching dependencies :</p>
+<p>npm ERR! git clone git@github.com:mixu/nodeunit-runner.git Warning: Permanently added &#39;github.com&#39; (RSA) to the list of known hosts.
+npm ERR! git clone git@github.com:mixu/nodeunit-runner.git Permission denied (publickey).
+npm ERR! git clone git@github.com:mixu/nodeunit-runner.git fatal: The remote end hung up unexpectedly
+npm ERR! Error: <code>git &quot;clone&quot; &quot;git@github.com:mixu/nodeunit-runner.git&quot; &quot;/tmp/npm-1330952664150/1330952664173-0.6050085364840925&quot;</code> failed with 128
+npm ERR!     at ChildProcess. (/usr/lib/nodejs/npm/lib/utils/exec.js:49:20)
+npm ERR!     at ChildProcess.emit (events.js:70:17)
+npm ERR!     at maybeExit (child_process.js:361:16)
+npm ERR!     at Socket. (child_process.js:466:7)
+npm ERR!     at Socket.emit (events.js:67:17)
+npm ERR!     at Array.0 (net.js:320:10)
+npm ERR!     at EventEmitter._tickCallback (node.js:192:40)</p>
+<p>Do you have any ideas ?</p>
+<p><strong><a href="#581" title="2012-09-05 13:48:11">rufinus</a>:</strong> just change the github rep url to git://github.com/sockjs/sockjs-node.git in the config file for the npm he used his personal read/write url.</p>
+<p>thanks for this article, its exactly what we have seen and couldnt believe it.</p>
+]]></description><link>http://localhost:5000/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp</link><guid isPermaLink="true">http://localhost:5000/2011/11/22/performance-benchmarking-socket-io-0-8-7-0-7-11-and-0-6-17-and-nodes-native-tcp</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Tue, 22 Nov 2011 08:00:00 GMT</pubDate></item><item><title><![CDATA[My Arch Linux setup]]></title><description><![CDATA[<p>This is mostly just a reminder for myself - but I always learn new things when I read how other people set up their system. Leave a comment if you have a tip - that&#39;s how I learned about wicd-gtk :). Oh, and install <a href="https://github.com/mixu/nwm">my window manager</a> (tiling, written in C++ and node.js, configurable using Javascript).</p>
+<p><strong>First steps</strong></p>
+<p><ul>
+    <li>do the basic arch setup first (or <a href="https://wiki.archlinux.org/index.php/Installing_Arch_Linux_in_VMware">VMware</a>, or Virtualbox)</li>
+</ul>
+<strong>Update the system (and install/setup sudo)</strong></p>
+<pre class="hljs"><code>dhcpcd eth0 #<span class="hljs-keyword">if</span> you did <span class="hljs-keyword">not</span> add <span class="hljs-string">&quot;interface=eth0&quot;</span> <span class="hljs-keyword">in</span> rc.conf during setup
+pacman -Syu</code></pre><p>Fixes:</p>
+<p><a href="http://www.archlinux.org/news/initscripts-update-manual-intervention-required/">http://www.archlinux.org/news/initscripts-update-manual-intervention-required/</a></p>
+<pre class="hljs"><code>rm /etc/<span class="hljs-keyword">profile</span>.<span class="hljs-keyword">d</span>/locale.<span class="hljs-keyword">sh</span></code></pre><p><a href="http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required/">http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required/</a></p>
+<pre class="hljs"><code>pacman -S filesystem <span class="hljs-comment">--force</span></code></pre><pre class="hljs"><code>pacman -S sudo
+<span class="hljs-keyword">vim</span> /etc/sudoers # <span class="hljs-built_in">add</span> yourself <span class="hljs-keyword">to</span> sudoers
+sudo <span class="hljs-keyword">vim</span> /etc/pacman.<span class="hljs-keyword">conf</span> # <span class="hljs-keyword">set</span> SigLevel = Never TrustAll
+sudo shutdown-<span class="hljs-keyword">r</span> now</code></pre><p>Install X11:</p>
+<pre class="hljs"><code>pacman -S xorg-<span class="hljs-built_in">server</span> xorg-xinit xorg-utils xorg-<span class="hljs-built_in">server</span>-utils xterm</code></pre><p>If virtualized in VirtualBox, make copy-paste work first:</p>
+<pre class="hljs"><code><span class="hljs-title">pacman</span> -S virtualbox-archlinux-additions</code></pre><p><a href="https://wiki.archlinux.org/index.php/Arch_Linux_VirtualBox_Guest#Arch_Linux_guests">Details</a></p>
+<p><strong> Create a new user</strong></p>
+<pre class="hljs"><code>pacman -S zsh
+useradd -m -g users -G audio,lp,optical,storage,video,games,<span class="hljs-keyword">power</span>,scanner -s <span class="hljs-regexp">/bin/</span>zsh USERNAME
+su USERNAME
+passwd</code></pre><p><strong>Add x11</strong></p>
+<pre class="hljs"><code>pacman -S xorg-<span class="hljs-built_in">server</span> xorg-xinit xorg-utils xorg-<span class="hljs-built_in">server</span>-utils</code></pre><p><strong>Copy ssh keys over from old machine</strong>
+<strong>Useful packages</strong></p>
+<pre class="hljs"><code>pacman -S base-devel sudo python2 git libev mlocate mercurial nitrogen
+sakura wicd-gtk pcmanfm gnome-icon-theme htop unzip
+openssl chromium flashplugin bash-completion xterm
+epdfview mysql <span class="hljs-keyword">ruby</span> tilda tmux wget redis xcursor-vanilla-dmz
+xarchiver gzip bzip2 zip unzip unrar p7zip
+meld ttf-ubuntu-font-family mpg123 alsa-utils redis mysql <span class="hljs-keyword">ruby</span> libxslt</code></pre><p><ul>
+    <li>base-devel and python2 for compiling node</li>
+    <li>libev for nwm</li>
+    <li>mlocate for locate command</li>
+    <li>nitrogen is better than feh for multiple screens</li>
+    <li>sakura is a nice terminal</li>
+    <li>wicd-gtk is a simple wifi network gui</li>
+    <li>pcmanfm gnome-icon-theme are for pcmanfm, a Nautilus alternative</li>
+</ul>
+Remember to visudo and remove the password requirement from wheel. And add dbus and wicd to /etc/rc.conf just like pacman tells you to.
+<strong>Configuring X11</strong></p>
+<p>Add ~/.Xresources:</p>
+<pre class="hljs"><code><span class="hljs-attribute">Xcursor.theme</span>: <span class="hljs-string">vanilla-dmz</span>
+<span class="hljs-attribute">Xcursor.size</span>: <span class="hljs-string"> 16       !  32, 48 or 64 may also be good values</span></code></pre><p><strong>Configuring git</strong></p>
+<pre class="hljs"><code>git config --<span class="hljs-built_in">global</span> color.ui <span class="hljs-literal">true</span></code></pre><p><strong>Configuring sakura</strong></p>
+<p>I want to use ctrl + Page_Up / Page_Down to switch tabs, so edit ~/.config/sakura/sakura.conf:</p>
+<pre class="hljs"><code><span class="hljs-variable">switch_tab_accelerator=</span><span class="hljs-number">4</span> <span class="hljs-comment"># since &lt;a&gt;GDK_CONTROL_MASK&lt;/a&gt; is 1 &amp;lt;&amp;lt; 2, e.g. 4.</span>
+<span class="hljs-variable">prev_tab_key=</span>Page_Down
+<span class="hljs-variable">next_tab_key=</span>Page_Up</code></pre><p><strong>Some basic niceties: whatprovides, service and chkconfig</strong></p>
+<pre class="hljs"><code><span class="hljs-title">pacman</span> -S pkgtools</code></pre><p><ul>
+    <li>pkgtools provides the pkgfile tool. It works like yum whatprovides (e.g. allows you to search for a particular command or dependency in all the pacman packages)</li>
+    <li>&quot;sudo pkgfile -u&quot; to update the db</li>
+    <li>&quot;pgkfile zipinfo&quot; to search for zipinfo</li>
+</ul>
+Arch don&#39;t have a service and chkconfig, but we can make the new things curve a bit less steep by adding some functions to .bashrc:</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">service</span>(</span>) {
+  sudo /etc/rc.d/<span class="hljs-number">$1</span> <span class="hljs-number">$2</span>
+}
+
+<span class="hljs-keyword">alias</span> <span class="hljs-title">chkconfig</span>=<span class="hljs-comment">&#39;cat /etc/rc.conf | grep DAEMONS &amp;amp;&amp;amp; echo &quot;cat + grep /etc/rc.conf&quot;&#39;</span></code></pre><p>This makes service an alias for /etc/rc.d/ and prints out the enabled services from /etc/rc.conf. While we&#39;re editing .bashrc, might as well add:</p>
+<pre class="hljs"><code>PS1=<span class="hljs-string">&quot;[W]$ &quot;</span> <span class="hljs-comment"># my preferred bash prompt (e.g. only the current dirname).</span>
+ulimit -<span class="hljs-keyword">s</span> <span class="hljs-number">16400</span> <span class="hljs-comment"># higher stack limit</span>
+<span class="hljs-comment"># ssh-agent</span>
+SSH_ENV=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.ssh/environment&quot;</span>
+function start_agent {
+     echo <span class="hljs-string">&quot;Initialising new SSH agent...&quot;</span>
+     /usr/bin/ssh-agent | sed <span class="hljs-string">&#39;s/^echo/#echo/&#39;</span> &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-string">&quot;<span class="hljs-subst">${SSH_ENV}</span>&quot;</span>
+     echo succeeded
+     <span class="hljs-keyword">chmod</span> <span class="hljs-number">600</span> <span class="hljs-string">&quot;<span class="hljs-subst">${SSH_ENV}</span>&quot;</span>
+     . <span class="hljs-string">&quot;<span class="hljs-subst">${SSH_ENV}</span>&quot;</span> &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-regexp">/dev/null</span>
+     /usr/bin/ssh-add;
+}
+<span class="hljs-comment"># Source SSH settings, if applicable</span>
+<span class="hljs-keyword">if</span> [ -f <span class="hljs-string">&quot;<span class="hljs-subst">${SSH_ENV}</span>&quot;</span> ]; then
+     . <span class="hljs-string">&quot;<span class="hljs-subst">${SSH_ENV}</span>&quot;</span> &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-regexp">/dev/null</span>
+     <span class="hljs-comment">#ps ${SSH_AGENT_PID} doesn&#39;t work under cywgin</span>
+     ps -ef | <span class="hljs-keyword">grep</span> <span class="hljs-variable">${SSH_AGENT_PID}</span> | <span class="hljs-keyword">grep</span> ssh-agent$ &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-regexp">/dev/null</span> || {
+         start_agent;
+     }
+<span class="hljs-keyword">else</span>
+     start_agent;
+fi</code></pre><p><strong>Installing Node and NPM</strong></p>
+<p>You can just do:</p>
+<pre class="hljs"><code><span class="hljs-title">pacman</span> -S nodejs</code></pre><p>If you&#39;re OK with that version, which seems to track the Node releases pretty well.</p>
+<p>Arch uses python3 as python. You need to change python to python2 (thanks <a href="http://www.robsearles.com/2011/02/11/nodejs-v0-4-0-on-arch-linux/">Rob Searles</a>!)</p>
+<pre class="hljs"><code># node.js fix <span class="hljs-keyword">for</span> arch (use python2) 
+mkdir <span class="hljs-regexp">/tmp/</span>bin
+ln -s <span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/python2 /</span>tmp<span class="hljs-regexp">/bin/</span>python
+export PATH=<span class="hljs-regexp">/tmp/</span><span class="hljs-string">bin:</span>$PATH</code></pre><p>You can then do a regular node install:</p>
+<p>git clone git://github.com/joyent/node.git</p>
+<p>git checkout v0.4.12</p>
+<p>./configure</p>
+<p>make</p>
+<p>sudo make install</p>
+<p>Remember to install npm as well:</p>
+<pre class="hljs"><code><span class="hljs-title">curl</span> <span class="hljs-url"><a href="http://npmjs.org/install.sh">http://npmjs.org/install.sh</a></span> | sudo sh</code></pre><p><strong>Installing my window manager and personal config</strong></p>
+<pre class="hljs"><code>git clone gi<span class="hljs-variable">t:</span>//github.<span class="hljs-keyword">com</span>/mixu/nwm.git
+<span class="hljs-keyword">cd</span> nwm
+node-waf clean || true &amp;amp;&amp;amp; node-waf configure build
+sudo npm link # <span class="hljs-built_in">add</span> <span class="hljs-keyword">a</span> <span class="hljs-keyword">global</span> npm symlink <span class="hljs-keyword">to</span> this repository - <span class="hljs-keyword">so</span> nwm-user can <span class="hljs-keyword">find</span> it (man npm link)
+<span class="hljs-keyword">cd</span> ..
+git clone gi<span class="hljs-variable">t:</span>//github.<span class="hljs-keyword">com</span>/mixu/nwm-user.git
+<span class="hljs-keyword">cd</span> nwm-user
+npm link nwm # now <span class="hljs-keyword">make</span> <span class="hljs-keyword">a</span> symlink <span class="hljs-keyword">to</span> the nwm installation</code></pre><p>Add it to ~/.xinitrc (change paths!!):</p>
+<pre class="hljs"><code>exec /usr/<span class="hljs-built_in">local</span>/bin/node ~/mnt/nwm<span class="hljs-attribute">-user</span>/nwm<span class="hljs-attribute">-user</span><span class="hljs-built_in">.</span>js <span class="hljs-number">2</span><span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>;~/nwm<span class="hljs-built_in">.</span>err<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span> <span class="hljs-number">1</span><span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>;~/nwm<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span></code></pre><p>And while we&#39;re at it, lets add some other stuff:</p>
+<pre class="hljs"><code>VBoxClient-all &amp;amp;
+export PATH=<span class="hljs-regexp">/tmp/</span><span class="hljs-string">bin:</span>$PATH # <span class="hljs-keyword">for</span> node-waf, too lazy to work on a better solution
+xset +fp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/fonts/</span>local
+xset fp rehash</code></pre><p>Run &quot;startx&quot; to start X11 with nwm.</p>
+<p><strong>Installing my mp3 player</strong></p>
+<p>First, we need to configure alsa (included by default):</p>
+<pre class="hljs"><code><span class="hljs-title">pacman</span> -S mpg123 alsa-utils</code></pre><p>Run:</p>
+<pre class="hljs"><code>alsamixer</code></pre><p>and turn on Master and PCM channels (by pressing m) as they are muted by default.</p>
+<pre class="hljs"><code><span class="hljs-title">sudo</span> alsactl store</code></pre><p>Then continue:</p>
+<pre class="hljs"><code>git <span class="hljs-keyword">clone</span> git:<span class="hljs-comment">//github.com/mixu/nplay.git</span></code></pre><p>Run nplay with</p>
+<pre class="hljs"><code><span class="hljs-title">node</span> nplay.js</code></pre><p>TODO: fix directory in source code and change backend from mpg321 to mpg123.</p>
+<p><strong>Switching the keyboard language in X11</strong></p>
+<p>I sometimes need to write emails in Finnish, so here is how to switch the layout:</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>setxkbmap -layout fi # revert back <span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Apple-style-span&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;font-family: monospace;&quot;</span>&gt;</span>setxkbmap -layout us<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Apple-style-span&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;font-family: monospace;&quot;</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre><p>Install yaourt</p>
+<p>Install dependencies</p>
+<p>yaourt libpng12 gtk2-theme-dust</p>
+<p>&nbsp;</p>
+<p><strong>Install Sublime Text 2</strong></p>
+<p>Sublime Text needs libpng12, which you have to install from AUR:</p>
+<pre class="hljs"><code>wget <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/aur.archlinux.org/packages</span><span class="hljs-regexp">/li/libpng</span>12/libpng12.tar.gz
+tar -xzvf libpng12.tar.gz
+cd libpng12
+makepkg
+pacman -<span class="hljs-constant">U </span>./libpng12-<span class="hljs-number">1.2</span>.<span class="hljs-number">46</span>-<span class="hljs-number">2</span>-x86_64.pkg.tar.xz</code></pre><p>Then download and run Sublime Text 2.</p>
+<p>Also, you might want to ger <a href="http://aur.archlinux.org/packages/gt/gtk2-theme-dust/gtk2-theme-dust.tar.gz">http://aur.archlinux.org/packages/gt/gtk2-theme-dust/gtk2-theme-dust.tar.gz</a>.</p>
+<p><strong>Configuring Sublime Text 2</strong></p>
+<pre class="hljs"><code>locate <span class="hljs-constant">Packages </span><span class="hljs-comment"># returns ~/.config/sublime-text-2/Packages</span>
+cd ~<span class="hljs-regexp">/.config/sublime</span>-text-<span class="hljs-number">2</span>/<span class="hljs-constant">Packages</span>
+git clone <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/buymeasoda</span><span class="hljs-regexp">/soda-theme/</span> <span class="hljs-string">&quot;Theme - Soda&quot;</span>
+cd <span class="hljs-constant">User</span>
+wget <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/blog.mixu.net/files</span><span class="hljs-regexp">/2010/</span><span class="hljs-number">05</span>/my_themes.zip <span class="hljs-comment"># Install my themes</span>
+unzip my_themes
+rm my_themes.zip</code></pre><p><strong>Base File settings</strong></p>
+<p><pre>{
+  // FONTS and COLORS
+  &quot;color_scheme&quot;: &quot;Packages/User/Mixu Espresso.tmTheme&quot;,
+  &quot;font_size&quot;: 11,
+  &quot;tab_size&quot;: 2,
+  // WHITESPACE
+    // Set to true to insert spaces when tab is pressed</p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="#557" title="2012-02-29 08:44:58">Kenneth</a>:</strong> What are the advantages of your window manager? I&#39;m currently using awesome wm on arch. The javascript configuring sounds cool.</p>
+<p><strong><a href="#558" title="2012-02-29 23:17:40">Mikito Takada</a>:</strong> Mostly: configurability and the ability to customize things like layouts in JS. And you don&#39;t need any additional tech beyond Node + npm, so if you are already doing Node dev it&#39;s a lightweight option.</p>
+<p><strong><a href="#559" title="2012-03-07 12:43:45">jiyinyiyong</a>:</strong> As I failed to install Xmonad on Ubuntu 12.04 , I tried NWM, really concise WM. I was supposing to get a WM like <code>Xmonad with Gnome</code> whose fonts and menus look more beautiful(maybe get panels as well..). I&#39;ve went through the docs on the site, but is there more detail about making NWM look better?</p>
+<p><strong><a href="#560" title="2012-03-09 06:15:41">Mikito Takada</a>:</strong> nwm works with both Gnome and KDE apps, but it&#39;s a window manager, not a desktop environment.</p>
+<p><a href="http://en.wikipedia.org/wiki/Desktop_environment">http://en.wikipedia.org/wiki/Desktop_environment</a> vs <a href="http://en.wikipedia.org/wiki/Window_manager">http://en.wikipedia.org/wiki/Window_manager</a></p>
+<p>E.g.:</p>
+<ul>
+<li>Font rendering in X11 is done by libraries (e.g. freetype2 for TTF), not the window manager.</li>
+<li>Menu rendering in X11 is done by the window toolkit that the particular app is compiled against e.g. Gnome/KDE, not the window manager.</li>
+</ul>
+<p>I&#39;d love to write all that, but I&#39;m just one dude. Writing a desktop environment is a bit too much for a for-fun project ;).</p>
+<p>For better looking fonts, I use the Ubuntu font rendering patchset for Arch; for better menus I use a Gnome theme.</p>
+<p><strong><a href="#561" title="2012-03-15 16:16:17">jiyinyiyong</a>:</strong> (I&#39;m late.. but didn&#39;t received e-mail about the reply.. )
+OK, I&#39;ll make effort to get familiar about X11 and things like that. So far I just want to try cool stuffs writtern in Node. Really thanks.</p>
+<p><strong><a href="#713" title="2013-06-15 02:38:15">jsc</a>:</strong> You probably found a way by now, but if not, I would like to mention gtk-theme-switch. It&#39;s in the default repos of 12.04 and requires no logout to take effect.</p>
+<p>It does what it says on the box: changes your gtk theme to any other one you have installed, which on 12.04 should be at least Ambiance and Radiance.</p>
+]]></description><link>http://localhost:5000/2011/11/10/my-arch-linux-setup</link><guid isPermaLink="true">http://localhost:5000/2011/11/10/my-arch-linux-setup</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Thu, 10 Nov 2011 08:00:00 GMT</pubDate></item><item><title><![CDATA[Nginx, Websockets, SSL and Socket.IO deployment]]></title><description><![CDATA[<p>I&#39;ve spent some time recently figuring out the options for deploying Websockets with SSL and load balancing - and more specifically, Socket.IO - while allowing for dual stacks (e.g. Node.js and another dev platform). Since there seems to be very little concrete guidance on this topic, here are my notes - I&#39;d love to hear from you on your implementation  (leave a comment or write about and link back)...</p>
+<p><strong>The goal here is to:</strong></p>
+<p><ol>
+    <li>Expose Socket.io and your main application from a single port -- avoiding cross-domain communication</li>
+    <li>Support HTTPS for both connections -- enabling secure messaging</li>
+    <li>Support the Websockets and Flashsockets transports from Socket.io -- for performance</li>
+    <li>Perform load balancing for both the backends somewhere -- for performance</li>
+</ol>
+<span style="font-size: 20px; font-weight: bold;">Socket.io&#39;s various transports</span></p>
+<p>Socket.io supports multiple different transports:</p>
+<ul>
+    <li>WebSockets -- which are essentially long lived HTTP 1.1 requests, which after a handshake upgrade to the Websockets protocol</li>
+    <li>Flash sockets -- which are plain TCP sockets with optional SSL support (but Flash seems to use some older SSL encryption method)</li>
+    <li>various kinds of polling -- which work over long lived HTTP 1.0 requests</li>
+</ul>
+
+<h2>Starting point: Nginx and Websockets</h2>
+
+<p>Nginx is generally the first recommendation for Node.js deployments. It&#39;s a high-performance server and even includes support for proxying requests via the <a href="http://wiki.nginx.org/NginxHttpProxyModule">HttpProxyModule</a>.</p>
+<p>However, -- and this should be made much obvious to people starting with Socket.io -- the problem is that while Nginx can talk HTTP/1.1 to the client (browser), it talks HTTP/1.0 to the server. Nginx&#39;s default HttpProxyModule does not support HTTP/1.1, which is needed for Websockets.</p>
+<p>Websockets 76 requires support for HTTP/1.1 as the handshake mechanism is not compatible with HTTP/1.0. What this means is that if Nginx is used to reverse proxy a Websockets server (like Socket.io), then the WS connections will fail. So no Websockets for you if you&#39;re behind Nginx.</p>
+<p>There is a workaround, but I don&#39;t see the benefit: use a TCP proxy (there is a <a href="https://github.com/yaoweibin/nginx_tcp_proxy_module">custom module for this by Weibin Yao</a>, <a href="http://www.letseehere.com/reverse-proxy-web-sockets">see here </a>). However, you cannot run another service on the same port (e.g. your main app and Socket.io on port 80) as the TCP proxy does not support routing based on the URL (e.g. /socket.io/ to Socket.io and the rest to the main app), only simple load balancing.</p>
+<p>So the benefit gained from doing this is quite marginal: sure, you can use Nginx for load balancing, but you will still be working with alternative ports for your main app and Socket.io.</p>
+<p><h2>Alternatives to Nginx</h2>
+Since you can&#39;t use Nginx and support Websockets,  you&#39;ll need to deal with two separate problems:</p>
+<p><ol>
+    <li>How to terminate SSL connections and</li>
+    <li>How to route HTTP traffic to the right backend based on the URL / load balance</li>
+</ol>
+If you want to run two services on the same port, then you will have to terminate SSL connections before doing anything else. There are several alternatives for SSL termination:</p>
+<p><ul>
+    <li><a href="http://www.stunnel.org/">Stunnel</a>. Supports multiple SSL certificates per process, does simple SSL termination to another port.</li>
+    <li><a href="https://github.com/bumptech/stud">Stud</a>. Only supports one SSL certificate per invocation, does simple SSL termination to another port.</li>
+    <li><a href="http://www.apsis.ch/pound/">Pound</a>. An SSL-termination-capable reverse proxy and load balancer.</li>
+    <li>Node&#39;s https. Can be made to do anything, but you&#39;ll have to write it yourself.</li>
+</ul>
+If you choose Stunnel or Stud, then you need a load balancer as well if you plan on having more than one Node instance in the backend.</p>
+<p>HAProxy is not <em>generally compatible</em> with Websockets, but Socket.IO <span style="text-decoration: underline;">contains code which works around this issue</span> and allows you to use HAProxy. This means that the alternatives are:</p>
+<p><ul>
+    <li>Stunnel for SSL termination + HAProxy for routing/load balancing</li>
+    <li>Stud for SSL termination + HAProxy for routing/load balancing</li>
+    <li>Pound (SSL and routing/load balancing)</li>
+</ul>
+I haven&#39;t looked into Pound more - mainly as I could not find info on it&#39;s TCP reverse proxying capabilities (see the section on Flash sockets below), but <a href="http://the-rig.refinery29.com/post/7263057532/pound-and-varnish">it seems to work for these guys</a>.</p>
+<p><h2>Setting up Stunnel</h2>
+The Stunnel part is quite simple:</p>
+<pre class="hljs"><code><span class="hljs-setting">cert = <span class="hljs-value">/path/to/certfile.pem</span></span>
+<span class="hljs-comment">; Service-level configuration</span>
+<span class="hljs-title">[https]</span>
+<span class="hljs-setting">accept  = <span class="hljs-value"><span class="hljs-number">443</span></span></span>
+<span class="hljs-setting">connect = <span class="hljs-value"><span class="hljs-number">8443</span></span></span></code></pre><p>If you only have one Node instance, you can skip setting up HAProxy, since you don&#39;t need load balancing.</p>
+<p><h2><strong>Setting up HAProxy</strong></h2>
+<strong>Would you like Flash Sockets with that?</strong></p>
+<p>Note that we need TCP mode in order to support Flash sockets, which do not speak HTTP.</p>
+<p>Flash sockets are just plain and simple TCP sockets, which will start by sending the following payload: &#39;&lt;policy-file-request/&gt;&#39;. They expect to receive a Flash cross domain policy as a response.</p>
+<p>Since Flash sockets don&#39;t use HTTP, we need a load balancer which is capable of detecting the protocol of the request, and of forwarding non-HTTP requests to Socket.io.</p>
+<p>HAProxy can do that, as it has two different modes of operation:</p>
+<p><ul>
+    <li>HTTP mode - which allows you to specify the backend based on the URI</li>
+    <li>TCP mode - which can be used to load balance non-HTTP transports.</li>
+</ul>
+<strong>Main frontend</strong></p>
+<p>We accept connections on two ports: 80 (HTTP) and 8443 (Stunnel-terminated HTTPS connections).</p>
+<p>By default, everything goes to the backend app at port 3000. Some HTTP paths are selectively routed to socket.io</p>
+<p>TCP mode is needed so that Flash socket connections can be passed through, and all non HTTP connections are sent to the TCP mode socket.io backend.</p>
+<pre class="hljs"><code><span class="hljs-comment"># Main frontend</span>
+frontend app
+  <span class="hljs-keyword">bind</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">80</span>
+  <span class="hljs-keyword">bind</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">8443</span>
+  <span class="hljs-comment"># Mode is TCP</span>
+  mode tcp
+  <span class="hljs-comment"># allow for many connections, with long timeout</span>
+  maxconn <span class="hljs-number">200000</span>
+  timeout client <span class="hljs-number">86400000</span>
+
+  <span class="hljs-comment"># default to webapp backend</span>
+  default_backend webapp
+
+  <span class="hljs-comment"># two URLs need to go to the node pubsub backend</span>
+  acl is_socket_io path_beg /node
+  acl is_socket_io path_beg /<span class="hljs-keyword">socket</span>.io
+     use_backend socket_io <span class="hljs-keyword">if</span> is_socket_io
+
+   tcp-request inspect-delay <span class="hljs-number">500</span>ms
+   tcp-request content <span class="hljs-keyword">accept</span> <span class="hljs-keyword">if</span> HTTP
+   use_backend sio_tcp <span class="hljs-keyword">if</span> !HTTP</code></pre><p><strong>Port 843: Flash policy</strong></p>
+<p>Flash policy should be made available on 843.</p>
+<pre class="hljs"><code><span class="hljs-comment"># Flash policy frontend</span>
+<span class="hljs-title">frontend</span> flashpolicy <span class="hljs-number">0.0.0.0:843</span>
+   mode tcp
+   default_backend sio_tcp</code></pre><p><strong>Default backend</strong></p>
+<p>This is just for your main application.</p>
+<pre class="hljs"><code>backend webapp
+   mode http
+   <span class="hljs-keyword">option</span> httplog
+   <span class="hljs-keyword">option</span> httpclose
+   <span class="hljs-built_in">server</span> nginx1s localhost:<span class="hljs-number">3000</span> check</code></pre><p><strong>Socket.io backend</strong></p>
+<p>Here, we have a bunch of settings in order to allow Websockets connections through HAProxy.</p>
+<pre class="hljs"><code>backend socket_io
+  mode http
+  option                  httplog
+  # long timeout
+  timeout server 86400000
+  # <span class="hljs-operator"><span class="hljs-keyword">check</span> frequently <span class="hljs-keyword">to</span> allow restarting
+  # the node backend
+  timeout <span class="hljs-keyword">check</span> <span class="hljs-number">1</span>s
+  # <span class="hljs-keyword">add</span> X-Forwarded-<span class="hljs-keyword">For</span>
+   <span class="hljs-keyword">option</span> forwardfor
+  # <span class="hljs-keyword">Do</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">use</span> httpclose (= client <span class="hljs-keyword">and</span> <span class="hljs-keyword">server</span>
+  # connections <span class="hljs-keyword">get</span> closed), since it will <span class="hljs-keyword">close</span>
+  # Websockets connections
+  <span class="hljs-keyword">no</span>   <span class="hljs-keyword">option</span> httpclose
+  # <span class="hljs-keyword">Use</span> <span class="hljs-string">&quot;option http-server-close&quot;</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">preserve</span>
+  # client persistent connections while handling
+  # every incoming request individually, dispatching
+  # them one <span class="hljs-keyword">after</span> another <span class="hljs-keyword">to</span> servers, <span class="hljs-keyword">in</span> HTTP <span class="hljs-keyword">close</span> <span class="hljs-keyword">mode</span>
+  <span class="hljs-keyword">option</span> http-<span class="hljs-keyword">server</span>-<span class="hljs-keyword">close</span>
+  <span class="hljs-keyword">option</span> forceclose
+  # just one node <span class="hljs-keyword">server</span> <span class="hljs-keyword">at</span> :<span class="hljs-number">8000</span>
+  <span class="hljs-keyword">server</span> node1 localhost:<span class="hljs-number">8000</span> maxconn <span class="hljs-number">2000</span> <span class="hljs-keyword">check</span></span></code></pre><p><strong>Socket.io backend in TCP mode</strong></p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="#535" title="2011-08-18 23:52:20">Tom</a>:</strong> How are you handling HTTP requests then?</p>
+<p><strong><a href="#536" title="2011-08-19 01:28:24">Mikito Takada</a>:</strong> As configured above, HAProxy listens at two ports:</p>
+<p>80 (e.g. for direct HTTP requests)
+8443 (e.g. for SSL-terminted HTTP requests)</p>
+<p>And the default HAProxy backend is the main app.</p>
+<p>HTTP comes in at port 80 to HAproxy.
+HTTPS comes in at port 443 -&gt; Stunnel terminates SSL -&gt; 8443</p>
+<p><strong><a href="#537" title="2011-08-30 15:26:23">Andrew</a>:</strong> Hi, we&#39;ve been integrating support for http/1.1 to backends for nginx lately. Would you like to test your setup with http/1.1 development code? Would be much appreciated.</p>
+<p><strong><a href="#538" title="2011-08-31 10:48:43">mikong</a>:</strong> Hi Andrew,</p>
+<p>We&#39;re working on NodeJS apps that needs Websockets, and thanks to your comment, we&#39;ll be taking a look at the development version of Nginx. We&#39;ll send you feedback for any problems.</p>
+<p><strong><a href="#539" title="2011-09-02 20:47:27">Patrick</a>:</strong> Hi there,</p>
+<p>I&#39;m trying to setup something similar. I have a rails app on port 3000, and a nodejs app on port 3001. The nodejs app doesnt only do sockets though... it also has a little http api using Express.</p>
+<p>I wanted to have a different subdomain for each app, and use haproxy to serve the right thing but I can&#39;t seem to see how to do that... seems like when I use tcp mode I can&#39;t really do anything regarding the domain that was requested.</p>
+<p><strong><a href="#540" title="2011-09-02 22:16:16">Mikito Takada</a>:</strong> Yeah, I found the tcp mode somewhat limited in Haproxy. You might want have a look at node-http-proxy...</p>
+<p><strong><a href="#541" title="2011-09-03 16:49:03">Patrick</a>:</strong> I tried that first actually, for some reason I could not get node-http-proxy to work for Chrome PC and Internet Explorer. Or at least, socket.io seems to fall back to polling transports for some browsers when behind node-http-proxy. But maybe my configuration was wrong...</p>
+<p><strong><a href="#542" title="2011-09-30 03:38:39">Joe Lindsay</a>:</strong> We need to solve this problem, how can I get the right bytes to test http/1.1 backends to nginx?</p>
+<p><strong><a href="#543" title="2011-10-04 15:59:55">theTestTube</a>:</strong> Maybe the following directive can let you deal with &quot;[...] The nodejs app doesnt only do sockets&quot;</p>
+<p>  acl websocket hdr(Upgrade)    -i WebSocket</p>
+<p>I found this at <a href="http://stackoverflow.com/questions/2419346/can-nginx-be-used-as-a-reverse-proxy-for-a-backend-websocket-server">http://stackoverflow.com/questions/2419346/can-nginx-be-used-as-a-reverse-proxy-for-a-backend-websocket-server</a></p>
+<p><strong><a href="#544" title="2011-11-23 12:07:32">Luke</a>:</strong> This configuration does not work for me. According to HAProxy docs you cannot use layer 7 filtering with TCP mode. On my setup this caused to use random backend.</p>
+<p>I managed to fix this configuration in HTTP mode. The main was flash-policy-file serving - it is not served if socket.io client manage to get the policy from the same server on port 843.</p>
+<p>If you provide policy file on that port then flash will not request policy file and use standard HTTP headers for communication.  This makes HAProxy happy.</p>
+<p>My config is here:
+<a href="http://pastebin.com/g8KQSWTW">http://pastebin.com/g8KQSWTW</a></p>
+<p>Many thanks for your post - it was the best starter to make websockets, xhr-pooling and flashsockets to work with HAProxy.</p>
+<p><strong><a href="#545" title="2011-12-08 20:10:30">Pau ramon</a>:</strong> I use substacks bouncy <a href="https://github.com/substack/bouncy">https://github.com/substack/bouncy</a></p>
+<p><strong><a href="#546" title="2011-12-31 02:24:52">Mike Lewis</a>:</strong> With newer versions of nginx you can use 1.1 for reverse proxying.</p>
+<p>This seems to work for reverse proxying websocket connections:</p>
+<pre class="hljs"><code><span class="hljs-title">location</span> / {
+    <span class="hljs-title">chunked_transfer_encoding</span> <span class="hljs-built_in">off</span>;
+    <span class="hljs-title">proxy_http_version</span> <span class="hljs-number">1</span>.<span class="hljs-number">1</span>;
+    <span class="hljs-title">proxy_pass</span>        <span class="hljs-url"><a href="http://localhost:9001">http://localhost:9001</a></span>;
+    <span class="hljs-title">proxy_buffering</span>   <span class="hljs-built_in">off</span>;
+    <span class="hljs-title">proxy_set_header</span>  X-Real-IP  <span class="hljs-variable">$remote_addr</span>;
+    <span class="hljs-title">proxy_set_header</span>  Host <span class="hljs-variable">$host</span>:<span class="hljs-number">9001</span>;
+    <span class="hljs-title">proxy_set_header</span>  Connection <span class="hljs-string">&quot;Upgrade&quot;</span>;
+    <span class="hljs-title">proxy_set_header</span>  Upgrade websocket;
+}</code></pre><p><strong><a href="#548" title="2012-01-11 22:47:36">Jimb Esser</a>:</strong> I did a bunch of experimenting and some digging, and it appears there is not currently any way to get nginx to work with websockets using a method like that.  WebSockets needs more than just forwarding a request, and the nginx developers say more work would need to be done to get it proxying websockets.  You can, however, use nginx with the tcp proxying module to blindly load-balance, and then put stunnel on each of your application servers, though that removes most of the benefit of nginx.</p>
+<p><strong><a href="#551" title="2012-04-21 11:46:25">Ximonn</a>:</strong> Why not do it simple and use two servers. Then configure dns to point socket.mydomain.com to the websocket server and mydomain.com to the nginx server.
+You use different IP&#39;s but the same domain name, sofar I havent seen any issue with that.</p>
+<p><strong><a href="#552" title="2012-04-24 20:19:18">Edgar</a>:</strong> Trying to load balance several node.js servers but can&#39;t make it work.
+When using more than one server, the browser seems to keep reconnecting.
+Everything is great when using just one node.</p>
+<p>The haproxy conf I&#39;m using is the following.
+Am I missing anything?</p>
+<p>backend socket_io
+    balance roundrobin</p>
+<pre class="hljs"><code>mode http
+option                  httplog
+
+# long timeout
+timeout queue 5000
+timeout server 86400000
+timeout connect 86400000
+
+# <span class="hljs-operator"><span class="hljs-keyword">check</span> frequently <span class="hljs-keyword">to</span> allow restarting
+# the node backend
+timeout <span class="hljs-keyword">check</span> <span class="hljs-number">1</span>s
+
+# <span class="hljs-keyword">add</span> X-Forwarded-<span class="hljs-keyword">For</span>
+<span class="hljs-keyword">option</span> forwardfor
+
+# <span class="hljs-keyword">Do</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">use</span> httpclose (= client <span class="hljs-keyword">and</span> <span class="hljs-keyword">server</span>
+# connections <span class="hljs-keyword">get</span> closed), since it will <span class="hljs-keyword">close</span>
+# Websockets connections
+<span class="hljs-keyword">no</span>   <span class="hljs-keyword">option</span> httpclose
+
+# <span class="hljs-keyword">Use</span> <span class="hljs-string">&quot;option http-server-close&quot;</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">preserve</span>
+# client persistent connections while handling
+# every incoming request individually, dispatching
+# them one <span class="hljs-keyword">after</span> another <span class="hljs-keyword">to</span> servers, <span class="hljs-keyword">in</span> HTTP <span class="hljs-keyword">close</span> <span class="hljs-keyword">mode</span>
+<span class="hljs-keyword">option</span> http-<span class="hljs-keyword">server</span>-<span class="hljs-keyword">close</span>
+<span class="hljs-keyword">option</span> forceclose
+
+
+# balance
+<span class="hljs-keyword">server</span> node1 <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">8001</span> weight <span class="hljs-number">1</span> maxconn <span class="hljs-number">2000</span> <span class="hljs-keyword">check</span>
+<span class="hljs-keyword">server</span> node2 <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">8002</span> weight <span class="hljs-number">1</span> maxconn <span class="hljs-number">2000</span> <span class="hljs-keyword">check</span></span></code></pre><p><strong><a href="#553" title="2012-04-24 21:37:09">Mikito Takada</a>:</strong> Hi Edgar,</p>
+<p>You can&#39;t round robin Socket.io - it&#39;s a protocol spec limitation.</p>
+<p>I&#39;ve written a follow up to this post on my book, just skip to the section &quot;Sample deployments: scaling&quot; at <a href="http://book.mixu.net/ch13.html">http://book.mixu.net/ch13.html</a></p>
+<p><strong><a href="#554" title="2012-04-24 22:28:55">Edgar</a>:</strong> Hi,</p>
+<p>You saved my day.
+Thanks.</p>
+<p><strong><a href="#555" title="2012-05-28 10:35:46">James</a>:</strong> I believe that would run amok of SOP restrictions</p>
+<p><strong><a href="#556" title="2012-06-26 11:16:16">Ram</a>:</strong> How about node-http-proxy  - <a href="https://github.com/nodejitsu/node-http-proxy">https://github.com/nodejitsu/node-http-proxy</a></p>
+<p><strong><a href="#577" title="2012-08-15 20:30:00">coryvirok</a>:</strong> Great post! I setup the same deployment for <a href="https://ratchet.io/">https://ratchet.io/</a> earlier this year. We are, however running into some trouble with stunnel not setting the x-forwarded-for header. Looks like stunnel supports something like this via the transparent=source config option however our server&#39;s kernel doesn&#39;t have the necessary flags enabled.</p>
+<p>Are you able to get the incoming client IP from your node.js or ruby servers?</p>
+<p><strong><a href="#586" title="2012-10-25 16:24:18">Axel</a>:</strong> Another way to deploy Socket.IO is to use Kaazing&#39;s HTML5 Gateway. Kaazing will proxy the Socket.IO traffic and it takes care of the scaling, emulation, clustering, security and even provides an SSO integration. The Gateway is basically like a network router, except it&#39;s protocol aware. Kaazing does all the emulation if WS is not available in a particular browser so you don&#39;t have to worry about getting polling and Flash-Socket to work. In fact, the polling fall back from Socket.IO is really slow, and also seriously increases the battery consumption on mobile apps. And Flash Socket is notoriously insecure. Kaazing will emulate WS all the way back to an old IE6 browser as well, and doesn&#39;t have the firewall traversal issues that Socket.IO&#39;s alternate transport layers have.</p>
+<p>All you have to do is to put Node.JS behind the Gateway and use only the WS transport. You just use the Kaazing client library below the Socket.IO client library and you make sure the client also uses the WS transport only. The Gateway will readily take care of all production needs from there on. Their Cloud solution is relatively cheap, you can just rent an EC2 instance, the cost is a tiny fraction on top of what EC2 charges, and it adds up to much less than some of the basic publish/subscribe service providers out there. And there is no lock in because the entire Kaazing stack is based on the WS standard, so you just program against the WS APIs.</p>
+<p>Now a disclaimer: I work for Kaazing, but I am not posting this on behalf of Kaazing. I happen to be a major fan and enthousiast of Node.JS, and I would like to see more Node.JS adoption in large enterprises. Kaazing unfortunately doesn&#39;t currently market this solution at all. Using Kaazing to deploy Node.JS just makes Node.JS so much more attractive to enterprise shops because it overcomes any and all objections anyone would have against using Node.JS in an enterprise.</p>
+<p><strong><a href="#600" title="2012-12-13 01:47:20">Asbestos</a>:</strong> Pound doesn&#39;t work.
+Nginx should have websocket compatibility by Jan 2012 - <a href="http://trac.nginx.org/nginx/roadmap">http://trac.nginx.org/nginx/roadmap</a></p>
+<p><strong><a href="#606" title="2012-12-27 16:10:50">suff</a>:</strong> HAProxy from version 1.5dev12 (currently 1.5dev16) supports SSL.</p>
+]]></description><link>http://localhost:5000/2011/08/13/nginx-websockets-ssl-and-socket-io-deployment</link><guid isPermaLink="true">http://localhost:5000/2011/08/13/nginx-websockets-ssl-and-socket-io-deployment</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Sat, 13 Aug 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Collaborative git reference]]></title><description><![CDATA[<p>Here is a basic reference for collaborative git commands:</p>
+<h2>Checkout a remote branch</h2>
+
+<pre class="hljs"><code><span class="hljs-preprocessor"># list branches first</span>
+git branch -a
+<span class="hljs-preprocessor"># * master</span>
+<span class="hljs-preprocessor"># remotes/origin/branch_name</span>
+git checkout -b local_name remotes/origin/branch_name</code></pre><h2>Merging</h2>
+
+<pre class="hljs"><code><span class="hljs-preprocessor"># switch to master</span>
+git checkout master
+<span class="hljs-preprocessor"># merge with experimental branch</span>
+git merge experimental</code></pre><h2>Create a tag</h2>
+
+<pre class="hljs"><code># <span class="hljs-keyword">list</span> <span class="hljs-keyword">tags</span>
+git <span class="hljs-keyword">tag</span>
+# <span class="hljs-built_in">add</span> <span class="hljs-keyword">a</span> <span class="hljs-keyword">tag</span>
+git <span class="hljs-keyword">tag</span> tagname
+# push <span class="hljs-keyword">to</span> remote
+git push origin master --<span class="hljs-keyword">tags</span></code></pre><p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></description><link>http://localhost:5000/2011/08/06/collaborative-git-reference</link><guid isPermaLink="true">http://localhost:5000/2011/08/06/collaborative-git-reference</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Sat, 06 Aug 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[dwm tips on Fedora]]></title><description><![CDATA[<p>I&#39;ve been testing out Fedora 15&#39;s Gnome 3 and Ubuntu&#39;s Unity, and didn&#39;t like either of them. They both take up too much precious screen space just to show a fancy UI, and requiring hardware acceleration is a pain for low end netbooks and virtual machines.</p>
+<p>So I decided to move to an alternative window manager. DWM (dynamic window manager, <a href="http://dwm.suckless.org/">http://dwm.suckless.org/</a>) is an extremely lightweight tiling window manager written in C which saves screen space and works pretty well as long as you don&#39;t need to connect to wireless networks.</p>
+<p>I&#39;ve been pretty happy with it. The main drawback is that connecting to wireless networks is a pain in the ass as there are no proper GUI tools to do this. Check out these tips to get started with dwm</p>
+<h2>0. Installing dwm on Fedora, keyboard shortcuts</h2>
+To install DWM, run yum install dwm. You can then choose to use dwm or Gnome or Kde in the login screen.
+
+The default keyboard shortcuts are listed at man dwm or at <a href="http://man.suckless.org/dwm/1/dwm">http://man.suckless.org/dwm/1/dwm</a>.
+<h2>1. Customizing dwm</h2>
+Customizing dwm can be done by making changes to config.h and recompiling the window manager.
+
+Fedora has a really nice package called dwm-user, which automates this process! Here is the package description:
+
+<em>dwm-start is a helper script for running and reconfiguring dwm if neccessarry. It&#39;s the preferred way of starting dwm in Fedora.</em>
+<em>Running  dwm-start starts Fedora build by default. If you wish to customize your configuration, put the dwm config header file to $HOME/.dwm/config.h and adjust it according to your needs. Every time the user configuration file has changed, dwm-start will rebuild the user dwm binary prior to its execution.</em>
+
+All you need to do is:
+
+<code>bash
+sudo yum install dwm-user</code>
+
+
+<code>bash
+mkdir ~/.dwm</code>
+
+
+<code>bash
+cp /usr/src/dwm-user-5.8.2-6.fc14/config.def.h ~/.dwm/config.h</code>
+
+E.g. install via yum, then make a ~/.dwm folder, then copy the config.h file and edit it. When you restart, you can choose dwm-user as your window manager which uses you custom version of dwm. For example, I remapped Meta (Cmd/Windows key) + h and meta + l to meta + pg up / pg down and meta + shift + q to meta + shift + end since I&#39;m currently running Fedora on an OSX host.
+
+You will probably make changes to the keyboard shortcuts. To find the keymap:
+
+<code>bash
+sudo updatedb</code>
+
+
+<code>bash
+locate keysymdef.h</code>
+
+Keysymdef.h lists the names of the keys in X11.
+<h2>2. Tip: Guake is just as awesome on dwm</h2>
+By default, dwm launches xterm. I prefer to use guake, since that allows me to get the tabbed terminal window on any workspace when I need them. Just launch guake&amp; to run it in the background.
+
+<strong>UPDATE</strong>: I moved to F15 (deciding simply to ignore Gnome 3) and noticed that guake has problems starting. To fix those:
+
+<code>bash
+sudo yum install xfce4-notifyd</code>
+
+Basically you need a notify daemon to allow Guake to print that pretty message &quot;Guake is running&quot;, and xfce4-notifyd provides an alternative notifications daemon.
+<h2>3. Launch netbeans and other Java programs with font smoothing and GTK look and feel</h2>
+You need to specify a couple of extra switches to get the GTK look and feel in Java programs, for example:
+
+/home/username/netbeans-7.0/bin/netbeans -J-Dswing.aatext=true -J-Dawt.useSystemAAFontSettings=on --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel
+<h2>4. Launch nautilus without the desktop</h2>
+
+<pre class="hljs"><code><span class="hljs-title">nautilus</span> --<span class="hljs-built_in">no</span>-desktop</code></pre><h2>5. Use dwm with a dual screen setup</h2>
+If dwm starts with mirroring output to your secondary screen, then you need to run xrandr to get the names your screens. E.g. VBOX0 and VBOX1.
+
+Then configure the screen layout:
+
+<code>bash
+xrandr --output VBOX1 --auto --right-of VBOX0</code>
+
+dwm will now let you have your own workspaces for each screen.
+<h2>6. Change your desktop background</h2>
+Use feh to change your desktop background:
+
+<code>bash
+feh --bg-tile /path/to/background/image</code>
+
+<h2>7. xterm config</h2>
+For a usable xterm, create the following ~/.Xresources and run
+
+<code>bash
+&lt;code&gt;xrdb -merge .Xresources&lt;/code&gt;</code>
+
+
+<code>bash
+xterm*faceName:           monospace:pixelsize=14
+xterm*saveLines:          9999
+xterm*scrollBar:          false
+xterm*background:  #000000
+xterm*foreground:  #dfdfdf
+xterm*color0:      #000000
+xterm*color1:      #9e1828
+xterm*color2:      #aece92
+xterm*color3:      #968a38
+xterm*color4:      #414171
+xterm*color5:      #963c59
+xterm*color6:      #418179
+xterm*color7:      #bebebe
+xterm*color8:      #666666
+xterm*color9:      #cf6171
+xterm*color10:     #c5f779
+xterm*color11:     #fff796
+xterm*color12:     #4186be
+xterm*color13:     #cf9ebe
+xterm*color14:     #71bebe
+xterm*color15:     #ffffff</code>
+
+<h2>8. Add a clock using xsetroot</h2>
+You can do something like this in a bash script to show the time in dwm on the top right corner.
+
+<code>bash
+
+&lt;pre&gt;while true; do
+   xsetroot -name &quot;$( date +&quot;%F %R&quot; )&quot;
+   sleep 1m    # Update time every minute
+done</code>
+
+<h2>9. Connect to wifi</h2>
+This is rather painful. The instructions here were collected from the mailing list, and I did get them to work, but I&#39;m too lazy to write a full tutorial on this right now.
+
+Basically, you need to scan, then do different things depending on whether the wifi uses WEP or WPA for authentication.
+
+Start by running:
+
+<code>bash
+iwlist scan</code>
+
+<h2>9.1 WEP wifi</h2>
+
+<pre class="hljs"><code>&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#wep connect to a wep wifi</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#! /bin/sh</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>;
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; key=<span class="hljs-string">&quot;<code>grep &lt;span class=&quot;hljs-variable&quot;&gt;$1&lt;/span&gt; /home/pmarin/wep | cut -d&#39; &#39; -f2</code>&quot;</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo ifconfig wlan<span class="hljs-number">0</span> up
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo iwconfig wlan<span class="hljs-number">0</span> essid <span class="hljs-variable">$1</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo iwconfig wlan<span class="hljs-number">0</span> key <span class="hljs-keyword">s</span>:<span class="hljs-variable">$key</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo dhclient wlan<span class="hljs-number">0</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#end</span></code></pre><pre class="hljs"><code><span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>; <span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>; The wep is a plain file <span class="hljs-keyword">with</span> <span class="hljs-keyword">to</span> columms
+<span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>; <span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>;
+<span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>; <span class="hljs-subst">&amp;</span><span class="hljs-literal">gt</span>; essid  key</code></pre><h2>9.2 WPA wifi</h2>
+
+<pre class="hljs"><code>&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>;
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#wpa connect to a wpa wifi</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#! /bin/sh</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>;
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo ifconfig wlan<span class="hljs-number">0</span> up
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo iwconfig wlan<span class="hljs-number">0</span> essid <span class="hljs-variable">$1</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo wpa_supplicant -iwlan<span class="hljs-number">0</span> -c/home/pmarin/wpa -B
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; sudo dhclient wlan<span class="hljs-number">0</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; <span class="hljs-comment">#end</span>
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>;
+&amp;<span class="hljs-keyword">gt</span>; &amp;<span class="hljs-keyword">gt</span>; the wpa file is similar than /etc/wpa_supplicant.conf</code></pre><p>To create the wpa file:</p>
+<p><code>wpa_passphrase your_ssid_of_network your_network_password</code></p>
+<p>Create the file:</p>
+<pre class="hljs"><code><span class="hljs-variable">ctrl_interface=</span>/var/run/wpa_supplicant
+<span class="hljs-comment">#ap_scan=2</span>
+
+<span class="hljs-variable">network=</span>{
+       <span class="hljs-variable">ssid=</span><span class="hljs-string">&quot;your_ssid&quot;</span>
+       <span class="hljs-variable">scan_ssid=</span><span class="hljs-number">1</span>
+       <span class="hljs-variable">proto=</span>WPA RSN
+       <span class="hljs-variable">key_mgmt=</span>WPA-PSK
+       <span class="hljs-variable">pairwise=</span>CCMP TKIP
+       <span class="hljs-variable">group=</span>CCMP TKIP
+       <span class="hljs-variable">psk=</span>your_psk_from_wpa_passphrase
+}
+
+sudo wpa_supplicant -Bw -Dwext -i eth0 -c/etc/wpa_supplicant.conf</code></pre><p><h2>9.3 Wifi troubleshooting:</h2>
+1) CHECK THAT YOU DON&#39;T have the NetworkManager service or wpa_supplicant running already!!!</p>
+<p>You can run wpa_supplicant with -dd flag for a detailed debug output.1) If you don&#39;t manage to connect to the AccessPoint, try to uncomment line 2 in /etc/wpa_supplicant.conf.</p>
+<p>2) If that doesn&#39;t help, try change its value to 0 or 1.</p>
+<p>3) If you get troubles while authenticating, try removing &quot;RSN&quot; and/or&quot;CCMP&quot; strings from /etc/wpa_supplicant.conf.</p>
+<p>Sources for Wifi stuff:</p>
+<p><a href="http://ubuntuforums.org/showthread.php?t=263136">http://ubuntuforums.org/showthread.php?t=263136</a></p>
+<p><a href="http://www.mail-archive.com/dwm@suckless.org/msg06800.html">http://www.mail-archive.com/dwm@suckless.org/msg06800.html</a></p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="#530" title="2011-06-14 12:01:14">vimarsh</a>:</strong> One tip for the wifi set-up: i found it easier to set up the initial config using nm-connection-editor and then start nm-applet in the dwm launcher script. It will autoconnect to your preferred wifi configuration. (Of course you need NetworkManager daemon running)</p>
+<p>Sample launcher:</p>
+<p>&quot;&quot;&quot;
+#</p>
+<h1 id="start-new-dwm-session">start new dwm session</h1>
+<p>#</p>
+<p>nm-applet --sm-disable&amp;
+exec /usr/local/bin/dwm
+&quot;&quot;&quot;</p>
+<p><strong><a href="#531" title="2011-06-15 07:30:43">Mikito Takada</a>:</strong> Thanks for the tip!</p>
+<p><strong><a href="#532" title="2011-07-11 06:40:02">Matt Freeman</a>:</strong> In my .xsession I have &#39;nm-applet &amp;&#39; (or perhaps you can spawn it from the dwm config), if this is setup correctly then it will auto connect to wifi network previous configured (i.e. the one you setup whilst in gnome). Alternatively if you have a tray program such as trayer or tint2 etc.. you can work with the network manager just as you would in Gnome.</p>
+<p>Hardcore Arch users tell me that wicd is better alternative without zero gnome attachments though. - not verified</p>
+<p><strong><a href="#533" title="2011-09-23 06:06:15">Mikito Takada</a>:</strong> Thank you, I gave wicd a try and it seems like a really nice solution for going Gnome-free...</p>
+<p>sudo yum install wicd wicd-gtk wicd-curses
+sudo service NetworkManager stop # Bad password errors if both are running...
+sudo service wicd start
+wicd-client -n</p>
+<p><strong><a href="#534" title="2011-12-18 17:44:51">Anton</a>:</strong> Hi! Big thanks for tips!
+Always wanted to try tiling managers and with releases of unity and gnome 3, the time to do it have come. now i am messing around lxde based fedora + dwm, and your article is really good point to start.</p>
+]]></description><link>http://localhost:5000/2011/06/11/dwm-tips-on-fedora</link><guid isPermaLink="true">http://localhost:5000/2011/06/11/dwm-tips-on-fedora</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Sat, 11 Jun 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Hello San Francisco!]]></title><description><![CDATA[<p>If you&#39;ve been wondering why I haven&#39;t been writing much on the blog recently, here is why: I just got my visa to the US and moved to San Francisco for an internship! I&#39;ll be here for the next 12 months on that visa. That process + wrapping up my life in Finland took a lot of my free time, the rest went to reviewing a coming-soon Kohana 3 book from Apress for which I&#39;m a technical reviewer, and my writing project related to Node.js which I am hoping to move forward soon. I also gave a talk at <a href="http://frontend.fi/">Frontend.fi</a> on Node (my first tech talk), and released a small library (node-winamp) to control Winamp over LAN from the console using Node.</p>
+<p>My new years resolution was to ship more, but I never expected to ship my own ass over to San Francisco! It&#39;ll be awesome.</p>
+<p>I flew in on June 3rd, and have been here for two days. So far, everything has been pretty awesome, though I still need to find an apartment rental and get the final paperwork done on this side!</p>
+<p>Since I&#39;ll be able to concentrate more on code instead of living the triple life of a doctoral student, individual entrepreneur and open source programmer, I hope to start building a solid streak of open source/fun coding while I&#39;m here. I read something on HN recently which I think will be good to keep in mind:</p>
+<p><em>&quot;I have a rule: I refuse to go to sleep if I haven’t read and written some code on a given day (this doesn’t include the code I write for work, of course). So far, this rule has had a positive impact on my ability to code.&quot;</em></p>
+<p>I&#39;ll try to apply that rule, perhaps using <a href="http://42goals.com/demo/">42goals.com</a> or the <a href="http://calendaraboutnothing.com/">Calendar About Nothing</a>...</p>
+<p>&nbsp;</p>
+]]></description><link>http://localhost:5000/2011/06/06/hello-san-francisco</link><guid isPermaLink="true">http://localhost:5000/2011/06/06/hello-san-francisco</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Mon, 06 Jun 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Quick tip: Fix Flash audio stutter on Fedora 14 (64bit)]]></title><description><![CDATA[<p>On my FC14 machine, I had a problem with Flash (64bit) audio playback: the sound on sites other than Youtube would stutter terribly. It appears that this a systematic problem; but luckily there is a fix!</p>
+<p>Check out <a href="http://ahabdo.wordpress.com/2011/01/03/flash-64-bit-crappy-sound-fix-for-fedora-14/">Ahmed Abdo&#39;s post on Flash audio stutter for the details</a>. Works perfectly for me!</p>
+<p>Details: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=638477">https://bugzilla.redhat.com/show_bug.cgi?id=638477</a></p>
+<p>The bug is triggered by a change in glibc. Who proposed the fix? <strong>Linus Torvalds</strong>. So I guess the following isn&#39;t quite true?</p>
+<p><img class="alignnone" title="xkcd" src="http://imgs.xkcd.com/comics/supported_features.png" alt="" width="324" height="326" /></p>
+<p>I love the pragmatism from his part:</p>
+<blockquote>
+<em>So in the kernel we have a pretty strict &quot;no regressions&quot; rule, and that if people depend on interfaces we exported having side effects that weren&#39;t intentional, we try to fix things so that they still work unless there is a major reason not to.
+
+So I&#39;m disappointed glibc just closes this as NOTABUG. There&#39;s no real reason to do the copy backwards that I can see, so doing it that way is just stupid.
+
+But whatever. You can do a LD_PRELOAD trick to get a sane memcpy(), and it does indeed fix the sound for me.
+[...]
+The fact that the glibc people don&#39;t do that, and that this hasn&#39;t been elevated despite clearly being a big usability problem (normal users SHOULD NOT HAVE TO google bugzillas and play with LD_PRELOAD to have a working system), is just sad.</em>
+</blockquote>
+
+<p>Although overall, as an end user it the conversation around this bug and its persistence makes me sad. I know it&#39;s selfish not to care about the technical superiority of a solution or about who is to blame here - but I&#39;d just like to have my smooth Flash playback...</p>
+]]></description><link>http://localhost:5000/2011/02/24/quick-tip-fix-flash-audio-stutter-on-fedora-14-64bit</link><guid isPermaLink="true">http://localhost:5000/2011/02/24/quick-tip-fix-flash-audio-stutter-on-fedora-14-64bit</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Thu, 24 Feb 2011 08:00:00 GMT</pubDate></item><item><title><![CDATA[Cascading file loading in Node.js]]></title><description><![CDATA[<p>One of my favorite features of Kohana 3 is it&#39;s cascading filesystem - so I decided to implement it for Node.js. A cascading filesystem is an elegant solution to a common problem: how to provide a mechanism for loading modules and reusing code?</p>
+<p>The following image from Kohana 3&#39;s docs shows an example:</p>
+<p><a href="http://blog.mixu.net/files/2011/02/cascading_filesystem.png"><img title="cascading_filesystem" src="http://blog.mixu.net/files/2011/02/cascading_filesystem-223x300.png" alt="" width="223" height="300" /></a></p>
+<h2>Benefits</h2>
+The key benefits are:
+<ol>
+    <li><strong>Consistency</strong>. All your application files, including views, controllers, models and other data such as translation messages are loaded using one, easy-to-understand mechanism.</li>
+    <li><strong>Easy reuse</strong>. Without a cascading file system, you&#39;ll have to copy and move files around if you want to use someone else&#39;s libraries or modules. With a cascading file system, you just place the module in your application, and enable cascading for that directory.</li>
+    <li><strong>Transparent extensibility</strong>. What if you want to override one part of a module (say, a view) but don&#39;t want to modify your copy of the module (e.g. so that you can update without manually merging changes). A cascading filesystem allows you to selectively replace files in 3rd party code simply by providing your own version of the file.</li>
+</ol>
+<h2>The code</h2>
+<ul>
+    <li><a href="https://github.com/mixu/hmvc-cfs">https://github.com/mixu/hmvc-cfs</a>/</li>
+    <li>It&#39;s only about 90 lines of code, see <a href="https://github.com/mixu/hmvc-cfs/blob/master/index.js">this file</a></li>
+</ul>
+<h2>Load order and file name resolution</h2>
+The load order for my implementation is:
+<ol>
+    <li><strong>Application path</strong> -  files under ./application/ are always checked first.</li>
+    <li><strong>Module paths</strong> - set modules([&#39;./modules/my-module&#39;]) to enable module loading. Files from modules are loaded from in the order they are added.</li>
+    <li><strong>System path</strong> - files under ./system/ are loaded if no alternative exists.</li>
+</ol>
+<strong>Assumptions about file and class names</strong>
+
+Files are assumed to be <strong><em>lowercase</em></strong>. <strong><em>Underscores in class names</em></strong> are replaced by slashes (so Controller_User becomes ./application/classes/ controller/user.js).
+
+<strong>Performance impact</strong>
+
+Requests are cached, so that additional calls to find_file() do not cause additional stat() calls in the filesystem. This is insignificant anyway, since Node.js servers are persistent so the cascading search is only done once per server instance for each file (not once per request).
+
+<strong>Loading 3rd party code</strong>
+
+The loaded files do not need to be &quot;compatible&quot; in any way other than layout in the file system. For example, while Cfs.factory(&#39;some_other_lib&#39;) loads the file from ./application/ classes/some/other/lib.js, that file does not actually need to contain a class named some_other_lib; just that it returns something via module.exports.
+<h2>Methods</h2>
+The methods are:
+<ul>
+    <li>Cfs.modules([&#39;./modules/path-to-module&#39;]) - set the modules directories to search.</li>
+    <li>Cfs.find_file(dir, file, ext) - Search each path under dir (e.g. &#39;classes&#39;, &#39;views&#39;) for file (filename) with the extension (ext, default is &quot;.js&quot;).</li>
+    <li>Cfs.factory(class_name) - Return a new instance of the given class after loading the corresponding file from the cascading file system. Note that classes should be in the classes subdirectory.</li>
+    <li>Cfs.load(class_name) - Return whatever require(file-which-contains-the-class) returns. Useful for extending classes, see below for an example</li>
+</ul>
+<h2>Example usage:</h2>
+
+<pre class="hljs"><code><span class="hljs-keyword">var</span> Cfs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#39;./cfs.js&#39;</span>);
+
+<span class="hljs-comment">// test class loading:</span>
+<span class="hljs-comment">// e.g. check ./application/classes/test.js</span>
+<span class="hljs-comment">// ./modules/modulename/classes/test.js</span>
+<span class="hljs-comment">// ./system/classes/test.js</span>
+<span class="hljs-keyword">var</span> t = Cfs.factory(<span class="hljs-string">&#39;test&#39;</span>);
+t.run();
+
+<span class="hljs-comment">// test view loading</span>
+<span class="hljs-comment">// e.g ./application/views/user/index.html</span>
+<span class="hljs-comment">// ./modules/modulename/views/user/index.html</span>
+<span class="hljs-comment">// ./system/views/user/index.html</span>
+fs.readFile(Cfs.find_file(<span class="hljs-string">&#39;views&#39;</span>, <span class="hljs-string">&#39;user/index&#39;</span>, <span class="hljs-string">&#39;.html&#39;</span>), <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, data)</span> </span>{
+  <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">throw</span> err;
+  sys.puts(data);
+});</code></pre><p>To set modules:</p>
+<pre class="hljs"><code>// <span class="hljs-operator"><span class="hljs-keyword">set</span> <span class="hljs-keyword">only</span> once, <span class="hljs-keyword">before</span> calling <span class="hljs-keyword">any</span> other functions!
+Cfs.modules([
+         <span class="hljs-string">&quot;./modules/testmodule/&quot;</span>,
+         <span class="hljs-string">&quot;./modules/testmodule2/&quot;</span>,
+         ]);</span></code></pre><h2>Extending classes:</h2>
+
+
+<pre class="hljs"><code><span class="hljs-comment">// test extending class (see code in /application/classes/controller/extend.js</span>
+<span class="hljs-comment">// to see how extension is achieved)</span>
+<span class="hljs-comment">// e.g. ./application/classes/controller/extend.js</span>
+<span class="hljs-comment">// ./modules/modulename/classes/controller/extend.js</span>
+<span class="hljs-comment">// ./system/classes/controller/extend.js</span>
+<span class="hljs-keyword">var</span> t3 = Cfs.<span class="hljs-literal">factory</span>(<span class="hljs-string">&#39;Controller_Extend&#39;</span>);
+t3.run();
+t3.run_parent();</code></pre><p>Note that if you put cfs.js in ~/node_modules/cfs.js, you don&#39;t need to specify the path to it... see Modules in node.js docs.</p>
+<pre class="hljs"><code><span class="hljs-comment">// in extend.js:</span>
+<span class="hljs-keyword">var</span> Controller<em>Extend = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+}
+<span class="hljs-comment">// extend the class</span>
+<span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#39;util&#39;</span>), Cfs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#39;../../../../cfs.js&#39;</span>);
+util.inherits(Controller_Extend, Cfs.load(<span class="hljs-string">&#39;Controller_Base&#39;</span>));
+
+Controller_Extend.prototype.run = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Controller_Extend from testmodule2.&quot;</span>);
+};
+Controller_Extend.prototype.run_parent = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-comment">// run the parent function</span>
+   Controller_Extend.super</em>.prototype.run();
+};
+
+<span class="hljs-built_in">module</span>.exports = Controller_Extend;</code></pre><h2 id="comments">Comments</h2>
+<p><strong><a href="#528" title="2012-03-02 00:17:07">shadowhand</a>:</strong> Calling this HMVC is highly misleading. The cascading filesystem has absolutely nothing to do with hierarchical model-view-controller. I strongly recommend that you rename your &quot;HMVC&quot; class to something reasonable, such as &quot;CFS&quot;.</p>
+<p><strong><a href="#529" title="2012-03-02 07:51:27">Mikito Takada</a>:</strong> @shadowhand I agree and apologize if I have misled people. I had greater ambitions for the module at the time, hence the &quot;HMVC style&quot; reference, but I ended up doing other things.  I&#39;ve removed any references to HMVC here (well, except the diagram showing the cascading file system in Kohana but that&#39;s CFS rather than HMVC); I&#39;ll do github as well next time I actually work on that repo...</p>
+<p>Edit: for clarification if someone ends up here: the title of this post used to be &quot;HMVC -style cascading...&quot;</p>
+]]></description><link>http://localhost:5000/2011/02/18/cascading-file-loading-in-node-js</link><guid isPermaLink="true">http://localhost:5000/2011/02/18/cascading-file-loading-in-node-js</guid><dc:creator><![CDATA[Mixu]]></dc:creator><pubDate>Fri, 18 Feb 2011 08:00:00 GMT</pubDate></item></channel></rss>
