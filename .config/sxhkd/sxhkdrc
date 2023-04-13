@@ -187,7 +187,7 @@ super + p
 super + b
     bst -e btop &
 super + m
-    st -e neomutt &
+    mousepad &
 super + n
     desktopeditors &
 super + j
