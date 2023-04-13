@@ -20,8 +20,11 @@ bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
 bspc config automatic_scheme alternate
 bspc config initial_polarity second_child
 bspc config pointer_modifier shift
+# hold shift + mouse left btn to move window
 bspc config pointer_action1 move
+# hold shift + mouse middle btn to resize a side of window
 bspc config pointer_action2 resize_side
+# hold shift + mouse right btn to resize a side/corner of window
 bspc config pointer_action3 resize_corner
 bspc config click_to_focus none bspc config focus_follows_pointer true
 bspc config remove_disabled_monitors true

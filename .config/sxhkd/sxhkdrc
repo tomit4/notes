@@ -28,6 +28,10 @@ super + shift + Escape
 super + shift + r
     bspc wm -r
 
+# Reload sxhkdrc
+super + shift + j
+    pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+
 # toggle floating on and off
 super + o
     bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
@@ -213,3 +217,5 @@ super + BackSpace
 # Switch focus between the windows of the current desktop
 super + {_,shift + } Tab
     bspc node -f {next,prev}.local
+
+
