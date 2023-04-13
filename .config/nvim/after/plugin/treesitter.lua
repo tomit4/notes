@@ -1,11 +1,7 @@
--- vim.treesitter.query.set("javascript", "injections", "")
--- vim.treesitter.query.set("typescript", "injections", "")
--- vim.treesitter.query.set("tsx", "injections", "")
--- vim.treesitter.query.set("lua", "injections", "")
-vim.treesitter.set_query("javascript", "injections", "")
-vim.treesitter.set_query("typescript", "injections", "")
-vim.treesitter.set_query("tsx", "injections", "")
-vim.treesitter.set_query("lua", "injections", "")
+vim.treesitter.query.set("javascript", "injections", "")
+vim.treesitter.query.set("typescript", "injections", "")
+vim.treesitter.query.set("tsx", "injections", "")
+vim.treesitter.query.set("lua", "injections", "")
 require("nvim-treesitter.configs").setup({
         -- A list of parser names, or "all"
         ensure_installed = {
