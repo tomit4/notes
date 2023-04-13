@@ -5,6 +5,7 @@
   --toolbar-field-focus-border-color: #2c77ac;
 }
 
+/* #url-go-button, */
 #urlbar-zoom-button,
 #tracking-protection-icon-container,
 #back-button,
@@ -12,6 +13,7 @@
 #stop-button,
 #reload-button,
 /* #statuspanel, */
+#urlbar-go-button,
 #urlbar-input-container > #page-action-buttons,
 .urlbarView-favicon,
 .tab-icon-image,
