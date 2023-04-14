@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[ClarityDev blog | RSS Feed]]></title>
+        <description><![CDATA[ClarityDev blog]]></description>
+        <link>https://claritydev.net</link>
+        <image>
+            <url>https://res.cloudinary.com/dliyzug4u/image/upload/v1677244773/blog/deathtostock_wviwg1.jpg</url>
+            <title>ClarityDev blog | RSS Feed</title>
+            <link>https://claritydev.net</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 13 Apr 2023 11:31:41 GMT</lastBuildDate>
+        <atom:link href="https://claritydev.net/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Thu, 13 Apr 2023 11:31:41 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2023]]></copyright>
+        <item>
+            <title><![CDATA[Display Warning for Unsaved Form Data on Page Exit]]></title>
+            <description><![CDATA[This article shows how to implement a FormPrompt component that alerts users when they attempt to leave a page with unsaved changes. It discusses handling such scenarios using pure JavaScript with the beforeunload event, as well as React-specific solutions using the Prompt component in React Router v5 and the useBeforeUnload and unstable_useBlocker hooks in React Router v6.]]></description>
+            <link>https://claritydev.net/blog/display-warning-for-unsaved-form-data-on-page-exit</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/display-warning-for-unsaved-form-data-on-page-exit</guid>
+            <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Advanced Multistep Forms with React Hook Form]]></title>
+            <description><![CDATA[In a previous post, we built a basic multistep registration form using React and React Hook Form. In this article, we'll expand upon that foundation by implementing improvements, such as enabling data saving during step navigation and enhancing the visual representation of each step's state.]]></description>
+            <link>https://claritydev.net/blog/advanced-multistep-forms-with-react</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/advanced-multistep-forms-with-react</guid>
+            <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Build a Multistep Form With React Hook Form]]></title>
+            <description><![CDATA[Multistep forms a.k.a. wizard or funnel forms have a wide range of uses. They are most common when collecting different types of information into one data structure but are also useful to break down very large forms into the less user-intimidating multistep process. In this post, we'll build a basic multistep registration form, which collects the user's info and then presents it in a confirmation view, which can be reviewed and edited before the submission.]]></description>
+            <link>https://claritydev.net/blog/build-a-multistep-form-with-react-hook-form</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/build-a-multistep-form-with-react-hook-form</guid>
+            <pubDate>Tue, 11 Apr 2023 14:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The most common mistakes when using React]]></title>
+            <description><![CDATA[Discover common React mistakes that developers make when using hooks, managing state, and rendering components. Learn how to identify and fix these mistakes to improve your application's performance and maintainability.]]></description>
+            <link>https://claritydev.net/blog/the-most-common-mistakes-when-using-react</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/the-most-common-mistakes-when-using-react</guid>
+            <pubDate>Tue, 11 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tips on becoming a self-taught developer]]></title>
+            <description><![CDATA[Lately, I have been asked increasingly often for some tips on how to become a self-taught developer, so I thought I'd write a post about it, reflecting on my experience and pointing out the things I'd do differently. In this article, I'll try to give general advice on how to improve for those considering or maybe already on the way to becoming self-taught software developers. It should be noted that the focus of the post is on front-end development since that's what I did; however, a majority of the advice can be applied to becoming a software engineer, irrespective of focus.]]></description>
+            <link>https://claritydev.net/blog/tips-on-becoming-a-self-taught-developer</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/tips-on-becoming-a-self-taught-developer</guid>
+            <pubDate>Mon, 10 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Improving React Testing Library tests]]></title>
+            <description><![CDATA[Properly written tests not only help prevent regressions and buggy code, but in the case of React Testing Library, they also improve the accessibility of components and the overall user experience. In this post, we'll explore how to get the most out of your React Testing Library tests. I'll provide a collection of what I consider to be best practices for testing, presented in no particular order of importance.]]></description>
+            <link>https://claritydev.net/blog/improving-react-testing-library-tests</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/improving-react-testing-library-tests</guid>
+            <pubDate>Wed, 05 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Add a blog to your Django website]]></title>
+            <description><![CDATA[Learn how to seamlessly integrate a fully functional and customizable blog into your existing Django website with this step-by-step tutorial, covering CRUD functionality, views, templates, and more.]]></description>
+            <link>https://claritydev.net/blog/adding-a-blog-to-your-django-website</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/adding-a-blog-to-your-django-website</guid>
+            <pubDate>Mon, 03 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Simplifying Connected Props with Redux and TypeScript]]></title>
+            <description><![CDATA[Learn how to simplify connected props with Redux and TypeScript by using the ConnectedProps helper type. In this article, we'll walk through a concrete example and show you how to automatically infer the types of connected props from mapStateToProps and mapDispatchToProps. This will help you avoid manual type declaration and improve the maintainability of your app.]]></description>
+            <link>https://claritydev.net/blog/simplifying-connected-props-with-redux-and-typescr</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/simplifying-connected-props-with-redux-and-typescr</guid>
+            <pubDate>Mon, 03 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TypeScript: Typing form events in React]]></title>
+            <description><![CDATA[Handling events in React is very close to how the events on DOM elements are handled. The biggest difference is, however, that React wraps the native DOM events into SyntheticEvent, making them behave slightly differently than the native events. Consequently, typing form events in React is not the same as native events. In this post, we'll see how to type form events in React on the example of a simple component as well as discuss the most common pitfalls.]]></description>
+            <link>https://claritydev.net/blog/typescript-typing-form-events-in-react</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/typescript-typing-form-events-in-react</guid>
+            <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TypeScript: Typing React useRef hook]]></title>
+            <description><![CDATA[Discover how to effectively type the useRef hook in TypeScript for React applications that require imperative DOM manipulation. Learn best practices, common pitfalls, and practical examples, such as controlling the focus state of an input element.]]></description>
+            <link>https://claritydev.net/blog/typescript-typing-react-useref-hook</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/typescript-typing-react-useref-hook</guid>
+            <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[React Hook Form: Working with multipart form data and file uploads]]></title>
+            <description><![CDATA[Learn how to handle file uploads and multipart form data in React applications using React Hook Form. This tutorial demonstrates adding file input fields, working with FormData API, and submitting form data.]]></description>
+            <link>https://claritydev.net/blog/react-hook-form-multipart-form-data-file-uploads</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/react-hook-form-multipart-form-data-file-uploads</guid>
+            <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Testing React Hook Form With React Testing Library]]></title>
+            <description><![CDATA[React Hook Form has emerged as a popular and efficient library for managing form state and validation in React applications. It simplifies handling form inputs, reduces boilerplate code, and provides a performant solution for form management. However, testing these forms efficiently and accurately is just as important as implementing them.]]></description>
+            <link>https://claritydev.net/blog/testing-react-hook-form-with-react-testing-library</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/testing-react-hook-form-with-react-testing-library</guid>
+            <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Managing forms with React Hook Form]]></title>
+            <description><![CDATA[Working with forms in React is notoriously difficult, particularly when there are dynamic fields involved. There exist several libraries that make the whole process easier. One such library is React Hook Form. In this post, we talk about the basics of React Hook Form and learn how to use it to simplify form management in your React applications.]]></description>
+            <link>https://claritydev.net/blog/managing-forms-with-react-hook-form</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/managing-forms-with-react-hook-form</guid>
+            <pubDate>Sun, 26 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TypeScript Template Literal Types: Practical Use-Cases for Improved Code Quality]]></title>
+            <description><![CDATA[Explore practical use-cases of TypeScript template literal types to enhance code safety and maintainability. Learn to leverage advanced type features for more expressive, robust, and easy-to-manage applications.]]></description>
+            <link>https://claritydev.net/blog/typescript-type-literals-practical-use-cases-code-quality</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/typescript-type-literals-practical-use-cases-code-quality</guid>
+            <pubDate>Sat, 25 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Removing duplicates with Map in JavaScript]]></title>
+            <description><![CDATA[Removing duplicate items from an array using Set is a common practice in JavaScript. However, what's less well-known is that the Map data structure can also be used for this purpose. The reason is that Map maintains key uniqueness, which means that there can't be more than one key-value pair with the same key.]]></description>
+            <link>https://claritydev.net/blog/removing-duplicates-with-map-in-javascript</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/removing-duplicates-with-map-in-javascript</guid>
+            <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Simplifying code with Maps in JavaScript and React]]></title>
+            <description><![CDATA[The Map data structure is a relatively lesser-known addition of ES6 to the JavaScript language. It offers several advantages over objects, particularly when it comes to storing collections of key-value pairs. One interesting use case of Map is simplifying React components that render different JSX based on frequently changing state variables.]]></description>
+            <link>https://claritydev.net/blog/simplifying-code-with-maps-in-javascript</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/simplifying-code-with-maps-in-javascript</guid>
+            <pubDate>Thu, 23 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Testing Firestore locally with Firebase emulators]]></title>
+            <description><![CDATA[Running Firestore operations on a local database is an essential aspect of efficient Firebase development. In this tutorial, we'll guide you through the process of setting up and testing Firestore operations using a Firestore local database with the help of Firebase Emulator.]]></description>
+            <link>https://claritydev.net/blog/testing-firestore-locally-with-firebase-emulators</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/testing-firestore-locally-with-firebase-emulators</guid>
+            <pubDate>Wed, 22 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What is the type of NaN?]]></title>
+            <description><![CDATA[NaN, or "Not a Number", is a special value in JavaScript and TypeScript (as well as many other programming languages) that represents an undefined or unrepresentable value resulting from an arithmetic operation. It is often used as a placeholder for a missing numerical value or as a way to signify an error. However, what is the type of NaN in JavaScript?]]></description>
+            <link>https://claritydev.net/blog/what-is-the-type-of-nan</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/what-is-the-type-of-nan</guid>
+            <pubDate>Tue, 21 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Create an interactive table of contents for a Next.js blog with Remark]]></title>
+            <description><![CDATA[A well-organized and easily navigable TOC significantly enhances the user experience, simplifying the process for readers to find the information they need. In this post, we'll go through the necessary steps to create an interactive TOC for a Next.js blog using Remark, a powerful Markdown processor.]]></description>
+            <link>https://claritydev.net/blog/nextjs-blog-remark-interactive-table-of-contents</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/nextjs-blog-remark-interactive-table-of-contents</guid>
+            <pubDate>Sun, 19 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Optimize Redux Development: Simplify Boilerplate Creation with Code Generators and Plop.js]]></title>
+            <description><![CDATA[Many developers seek ways to simplify their Redux development workflow and improve efficiency. In this article, we'll explore how to speed up your Redux development by automating the process of scaffolding boilerplate code with Plop.js code generators. We'll cover the best practices for using Plop.js in your Redux projects, how it can help you reduce boilerplate, and streamline your development process.]]></description>
+            <link>https://claritydev.net/blog/scaffolding-redux-boilerplate-with-code-generators</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/scaffolding-redux-boilerplate-with-code-generators</guid>
+            <pubDate>Fri, 17 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Speed up your React developer workflow with Plop.js code generators]]></title>
+            <description><![CDATA[As React developers, we often find ourselves setting up new components, connecting them with the existing infrastructure, or scaffolding applications. That's a lot of repetitive manual work, which even though doesn't happen that often, can be quite tedious and frankly, boring.  Fortunately, there is a solution that can help us to automate this process and save time: JavaScript code generators.]]></description>
+            <link>https://claritydev.net/blog/react-plop-js-code-generators</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/react-plop-js-code-generators</guid>
+            <pubDate>Thu, 16 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Copy to clipboard button in MDX with Next.js and Rehype Pretty Code]]></title>
+            <description><![CDATA[This tutorial will guide you on how to create a 'copy to clipboard' button for the code snippets processed with Rehype Pretty Code plugin for syntax highlighting in Next.js. We'll be using Next.js 13+ with the 'app' directory enabled. By the end of this post, you'll be able to streamline code sharing and enhance the user experience on your Next.js website. In fact, this blog uses the exact functionality we'll be creating, so you can see the end result in action.]]></description>
+            <link>https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype</guid>
+            <pubDate>Tue, 14 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Automate Your Deployment Workflow: Continuously Deploying Next.js website to DigitalOcean using GitHub Actions]]></title>
+            <description><![CDATA[In this post, we'll explore how to automate the deployment of a Next.js website to DigitalOcean using GitHub Actions. We'll discuss what GitHub Actions are and how they can be used to continuously deploy changes to a remote server, reducing the need for manual intervention and minimizing downtime. By the end of this post, you'll have a clear understanding of how to automate your deployment workflow and achieve faster, more reliable deployments with ease.]]></description>
+            <link>https://claritydev.net/blog/automate-deployment-workflow-nextjs-digitalocean-github-actions</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/automate-deployment-workflow-nextjs-digitalocean-github-actions</guid>
+            <pubDate>Sun, 12 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Add a dynamic sitemap to Next.js website using pages or app directory]]></title>
+            <description><![CDATA[In this post, we will explore how to add a dynamic sitemap to a Next.js website using the app directory. A sitemap is a file that lists all the pages of a website and helps search engines understand the structure of the site. By the end of this post, you will have a fully functional dynamic sitemap for your Next.js website.]]></description>
+            <link>https://claritydev.net/blog/nextjs-dynamic-sitemap-pages-app-directory</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/nextjs-dynamic-sitemap-pages-app-directory</guid>
+            <pubDate>Sat, 11 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Enzyme vs React Testing Library: A migration guide]]></title>
+            <description><![CDATA[This blog post provides a basic comparison of both libraries and presents a migration guide based on code samples from each library. We'll write tests for the Tic-Tac-Toe game from an earlier post using Enzyme and then transform them into React Testing Library tests.]]></description>
+            <link>https://claritydev.net/blog/enzyme-vs-react-testing-library-migration-guide</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/enzyme-vs-react-testing-library-migration-guide</guid>
+            <pubDate>Thu, 09 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Build a Tic-Tac-Toe game with TypeScript, React and Minimax]]></title>
+            <description><![CDATA[In this tutorial we will build a Tic-Tac-Toe game with TypeScript, React, React Hooks, and style it using Styled Components library. Additionally, we'll use the Minimax algorithm to power the AI moves. The final code is available on both GitHub and CodeSandbox.]]></description>
+            <link>https://claritydev.net/blog/tic-tac-toe-typescript-react-hooks</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/tic-tac-toe-typescript-react-hooks</guid>
+            <pubDate>Thu, 02 Mar 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Productivity Benefits of Integrating ChatGPT into the Front-End Development Process]]></title>
+            <description><![CDATA[ChatGPT has taken the world by storm with its impressive natural language processing capabilities, and not only as a source of entertainment. While everyone knows how versatile and useful it is, not many are aware of its potential to have a positive impact on productivity. In this blog post, we'll look at the areas where ChatGPT proved to be beneficial and show how it can be utilized to take web development productivity (with a focus on the front-end) to the next level.]]></description>
+            <link>https://claritydev.net/blog/productivity-benefits-of-integrating-chatgpt-into-</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/productivity-benefits-of-integrating-chatgpt-into-</guid>
+            <pubDate>Mon, 30 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Building component library with Docz and Lerna]]></title>
+            <description><![CDATA[Component libraries are all the rage these days, with many companies rolling out their own solutions or sticking to a bunch of open source alternatives. Leveraging a component library for UI development, particularly in large teams, has a lot of cool benefits. It allows to take full advantage of modular and reusable UI components, which brings increased speed of development and unifies styles across multiple teams and apps.]]></description>
+            <link>https://claritydev.net/blog/building-component-library-with-docz-and-lerna</link>
+            <guid isPermaLink="true">https://claritydev.net/blog/building-component-library-with-docz-and-lerna</guid>
+            <pubDate>Sun, 19 Jan 2020 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
