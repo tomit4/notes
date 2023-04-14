@@ -1,0 +1,6 @@
+/* Kevin Powell's root recommendation for '*'' */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
