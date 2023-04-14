@@ -341,7 +341,22 @@
         "§:tildeverse.org",
         "§:notthebe.ee",
         "§:leanpub.com",
-        "§:yubico.com"
+        "§:yubico.com",
+        "§:scribe.rip",
+        "§:city-data.com",
+        "§:redhat.com",
+        "§:sinonjs.org",
+        "§:sometechblog.com",
+        "§:docker.com",
+        "§:oberlehner.net",
+        "§:linode.com",
+        "§:namecheap.com",
+        "§:proxmox.com",
+        "§:svelte.dev",
+        "§:overreacted.io",
+        "§:antoniandre.github.io",
+        "§:github.com",
+        "§:peropesis.org"
       ],
       "untrusted": [
         "hotmail.com",
