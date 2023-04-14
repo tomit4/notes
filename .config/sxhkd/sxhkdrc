@@ -173,8 +173,8 @@ super + c
 super + i
     inkscape &
 super + g
-    krita --nosplash &
-    # gimp --no-splash &
+    gimp --no-splash &
+    # krita --nosplash &
 super + h
     $HOME/scripts/bsphide &
 super + k
@@ -217,5 +217,3 @@ super + BackSpace
 # Switch focus between the windows of the current desktop
 super + {_,shift + } Tab
     bspc node -f {next,prev}.local
-
-
