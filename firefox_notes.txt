@@ -24,6 +24,7 @@ Install Return YouTube Dislike
 Install Alter (redirect for nitter, invidious, teddit, scribe, bibliogram, etc.)
 Install bypass-paywalls (not official, go to https://github.com/iamadamdev/bypass-paywalls-chrome)
 Install DuckDuckGo Lite Search (Librewolf has this by default)
+Install Stack Overflow Prettifier
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)
 Install ClearURLs
 Install Always active Window
