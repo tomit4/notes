@@ -145,6 +145,12 @@ ctrl + w + r - rotate windows
 / simple search command
 : enter COMMAND mode
 
+DOT ('.') COMMAND
+Just the decimal/period character:
+.
+Will repeat whatever you last wrote from insert mode until you hit <ESC>.
+It is capable of more than this, but this is what I know now.
+
 INTERESTING CHAINS
 :1,40d - Delete line 1 to 40 included
 :2,$d - Delete every line from the second one to the end of the file
@@ -210,7 +216,6 @@ VISUAL MODE
 
 h,j,k,l,g,shift+g,0,$ all apply, it simply highlights them
 and you can use standard and custom commands here that would normally apply in NORMAL mode
-
 
 VISUAL LINE MODE
 y - yank the line (more useful than yy, will past without having to create a new line)
