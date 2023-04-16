@@ -228,3 +228,6 @@ doas pacman -Rs cmus
 
 Install tmux-resurrect (persist tmux sessions after reboot):
 paru tmux-resurrect
+
+Install wemux (pair programming in tmux, lol):
+paru wemux
