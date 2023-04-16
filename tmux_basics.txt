@@ -1,0 +1,49 @@
+Tmux basics:
+
+Enter tmux (without attach will create new session):
+tmux
+
+Config file: $HOME/.tmux.conf
+
+Ctrl + x (prefix, origianlly Ctrl + B)
+
+Hide bottom status bar:
+Ctrl + x + z
+
+Vertical split
+Ctrl + x + %
+OR (personalized)
+Ctrl + x + =
+
+Horizontal split
+Ctrl + x + "
+OR (personalized)
+Ctrl + x + -
+
+Navigate between windows (vim style):
+Ctrl + x + j (navigate one split down horizonatal)
+Ctrl + x + k (navigate one split up horizonatal)
+Ctrl + x + h (navigate one split left vertical)
+Ctrl + x + l (navigate one split right vertical)
+
+Create new window
+Ctrl + x + c
+
+Navigate between windows (emacs style):
+Ctrl + x + p (previous)
+Ctrl + x + n (next)
+
+Rename a window (for ease of recognition):
+Ctrl + x + ,
+
+Kill a window( or exit if only window):
+Ctrl + x + &
+OR (personalized)
+Ctrl + x + x
+
+You can also end a session by entering into the terminal:
+exit
+
+If you didn't kill the window this way, the session is still open and you can
+"attach" to that session like so:
+tmux attach
