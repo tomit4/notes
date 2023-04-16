@@ -83,7 +83,7 @@ alias tor-browser="tor-browser &"
 alias leetcode="brave https://leetcode.com/accounts/login &"
 # sql basics:
 alias sqlzoo="librewolf https://sqlzoo.net/wiki/SQL_Tutorial &"
-alias gimp="gimp --no-splash"
+# alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 alias toonz="opentoonz"
 alias {sqlite,sql}="sqlite3"
@@ -203,7 +203,7 @@ alias lbry="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 # for smaller downloads
 # alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
-alias ytdl='yt-dlp -f mp4 "bestvideo\*+bestaudio[ext=m4a]" --sponsorblock-remove all --write-auto-sub'
+alias ytdl='yt-dlp -f mp4 "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 # for better resolutions
 alias ytdl-w='yt-dlp -f "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 # for audio only
@@ -303,7 +303,8 @@ alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
 alias {nvim-c,cleanvim}="nvim --clean"
 
 # tmux multiplexer session aliases
-alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
+# alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
+alias tmux="tmux new-session \; set -g status off;"
 alias tls="tmux ls"
 alias ta="tmux a -t"
 alias tkill="tmux kill-ses -t"
