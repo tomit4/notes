@@ -20,11 +20,21 @@ Ctrl + x + "
 OR (personalized)
 Ctrl + x + -
 
-Navigate between windows (vim style):
+Navigate between panes (vim style):
 Ctrl + x + j (navigate one split down horizonatal)
 Ctrl + x + k (navigate one split up horizonatal)
 Ctrl + x + h (navigate one split left vertical)
 Ctrl + x + l (navigate one split right vertical)
+
+Alternating panes placement:
+Ctrl + x + {
+Ctrl + x + }
+
+Resizing panes:
+Ctrl + x + Alt + <left_arrow>
+Ctrl + x + Alt + <right_arrow>
+Ctrl + x + Alt + <up_arrow>
+Ctrl + x + Alt + <down_arrow>
 
 Create new window
 Ctrl + x + c
@@ -47,3 +57,15 @@ exit
 If you didn't kill the window this way, the session is still open and you can
 "attach" to that session like so:
 tmux attach
+
+PLUGINS
+-tmux-resurrect: saves session of tmux even after reboot
+Ctrl + x + Ctrl + s (saves session)
+Ctrl + x + Ctrl + r (resurrects last session)
+
+NOTE: saved session files are found in ~/.tmux/resurrect/
+If you wish to restore a previous resurrect "save point", go to this directory
+and:
+ln -sf <file_name>.txt last
+This will soft link the last file (resurrect looks here) to whichever point you
+wish to go to (inspect file contents to find out).
