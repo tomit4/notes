@@ -51,8 +51,14 @@ Ctrl + x + &
 OR (personalized)
 Ctrl + x + x
 
-You can also end a session by entering into the terminal:
+You can also kill a window by entering into the terminal:
 exit
+
+Of course you can just exit each window one by one (but this is cumbersome), to
+kill all windows and the session:
+Ctrl + x + s + x
+OR
+Ctrl + x + : + kill-session
 
 If you didn't kill the window this way, the session is still open and you can
 "attach" to that session like so:
