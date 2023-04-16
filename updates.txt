@@ -225,3 +225,6 @@ doas pacman -S cloc neomutt urlscan
 
 Remove cmus (no longer use in pref of straight mpv)
 doas pacman -Rs cmus
+
+Install tmux-resurrect (persist tmux sessions after reboot):
+paru tmux-resurrect
