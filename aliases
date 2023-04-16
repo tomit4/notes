@@ -303,11 +303,9 @@ alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
 alias {nvim-c,cleanvim}="nvim --clean"
 
 # tmux multiplexer session aliases
-# alias {bmux,mymux,memux,mmux}="tmux new-session \; send-keys 'nvim' C-m\; split-window -v -p 3\; split-window -h -p 50\; select-pane -t 0\;"
-alias tmux="tmux new-session \; set -g status off;"
-alias tls="tmux ls"
-alias ta="tmux a -t"
-alias tkill="tmux kill-ses -t"
+alias tmux-ls="tmux list--sessions"
+alias {tmux-attach,tmux-a}="tmux a -t"
+alias {tmux-kill, tmux-k}="tmux kill-ses -t"
 
 # zellij multiplexer sesssion
 alias zj="zellij"
