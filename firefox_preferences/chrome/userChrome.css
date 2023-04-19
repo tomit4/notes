@@ -66,6 +66,7 @@ toolbar > * {
 /* cuz mozilla be stupid sometimes */
 #unified-extensions-view {
   --uei-icon-size: 16px;
+  /* background-color: #22252c !important; */
 }
 .unified-extensions-item-menu-button.subviewbutton {
   padding: 2px !important;
