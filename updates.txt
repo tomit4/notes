@@ -232,3 +232,7 @@ paru tmux-resurrect
 Install wemux (pair programming in tmux, lol):
 paru wemux
 (follow instructions on updating /etc/wemux/wemux.conf)
+
+Uninstall gtktranslate-bin (use your own ltranslate script instead)
+
+paru -Rs gtktranslate-bin
