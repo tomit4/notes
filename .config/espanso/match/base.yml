@@ -168,6 +168,10 @@ matches:
   - trigger: "!sto"
     replace: "https://stackoverflow.com/search?q="
 
+  # Routes to text.npr.org
+  - trigger: ";npr"
+    replace: "https://text.npr.org"
+
       # Prepares about pages for firefox
   - trigger: ";conf"
     replace: "about:config"
