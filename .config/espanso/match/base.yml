@@ -191,4 +191,11 @@ matches:
         params:
           cmd: "curl ifconfig.me ; echo ''"
 
+  - trigger: ";btime"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/btime ; echo ''"
   # And much more! For more information, visit the docs: https://espanso.org/docs/
