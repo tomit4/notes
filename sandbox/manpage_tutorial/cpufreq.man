@@ -1,0 +1,40 @@
+./" this is a comment
+./" most of your manpages can be found at /usr/share/man/man1 and should be put there once completed
+./" either by install script or manually
+./" additionally, most manpages are converted to gz and in this case are appended with the 1 to the filename like so:
+./" cpufreq.1.gz
+
+.TH CPUFREQ 1 2020-02-16 GNU
+
+.SH NAME
+cpufreq \- cpu frequencies
+
+.SH SYNOPSIS
+.B cpufreq
+[\fB\-h\fR]
+[\fB\-?\fR]
+[\fB\-\-help\fR]
+[\fB\-v\fR]
+[\fB\-h\-version\fR]
+[\fB\-d\fR \fIpath\fR]
+
+.SH DESCRIPTION
+.TP
+.BR \-h ", " \-? ", " \-\-help
+displlays this help information.
+.TP
+.BR \-v ", " \-\-version
+outputs only the version datestamp
+.TP
+.BR \-d ", " \-\-dir " " \fIpath
+outputs only the version datestamp
+
+.SH FILES
+.TP
+.I /proc/cpuinfo
+
+.SH AUTHOR
+terminalforlife <terminalforlilfe@yahoo.com>
+
+.SH SEE ALSO
+\fBperl\fR(1perl)

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Simulating Vines</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      v-bind:class="{ 'search--open': searchTerm, 'index--open': showIndex }"
+    >
+      <header class="header header--hero">
+        <div class="header__navbar"> <a class="header__logo" href="/">Maissan Inc.</a>
+          <div class="header__search">
+            <input v-model="searchTerm" placeholder="search" />
+          </div>
+          <nav class="header__nav">
+            <a class="index-button" href="#index" @click.prevent="toggleIndex">
+              <span class="index-button__label">Index</span>
+              <i @click.stop="closeAll" class="close-button"></i>
+            </a>
+          </nav>
+        </div>
+        <div class="hero">
+          <canvas id="vines"></canvas>
+          <canvas id="leaves"></canvas>
+
+          <h1>Simulating Vines</h1>
+        </div>
+      </header>
+
+      <div class="search">
+        <div class="search__spinner" v-if="loading">
+          <div class="spinner"></div>
+        </div>
+        <div
+          class="search__no-results"
+          v-if="!loading && searchResults.length == 0"
+        >
+          <span>No Results</span>
+        </div>
+        <div v-for="result in searchResults" class="search__result">
+          <h2>{{ result.title }}</h2>
+          <p v-html="result.snippet"></p>
+        </div>
+      </div>
+      <div class="index">
+        <div class="index__tags">
+          <h1>Tags</h1>
+          <div class="index__columns">
+            <h2>Bluetooth</h2>
+            <ul class="index__list">
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/dash-and-dot"
+                  >Controlling Dash &amp; Dot</a
+                >
+              </li>
+            </ul>
+            <h2>Drupal</h2>
+            <ul class="index__list">
+              <li class="index__list__item">
+                <a
+                  href="https://maissan.net/articles/deploying-drupal-updates-with-gulp"
+                  >Deploying Drupal Updates with Gulp</a
+                >
+              </li>
+            </ul>
+            <h2>Graphics</h2>
+            <ul class="index__list">
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/javascript-spirograph"
+                  >JavaScript Spirograph</a
+                >
+              </li>
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/simulating-vines"
+                  >Simulating Vines</a
+                >
+              </li>
+            </ul>
+            <h2>JavaScript</h2>
+            <ul class="index__list">
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/javascript-spirograph"
+                  >JavaScript Spirograph</a
+                >
+              </li>
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/simulating-vines"
+                  >Simulating Vines</a
+                >
+              </li>
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/dash-and-dot"
+                  >Controlling Dash &amp; Dot</a
+                >
+              </li>
+            </ul>
+            <h2>PHP</h2>
+            <ul class="index__list">
+              <li class="index__list__item">
+                <a href="https://maissan.net/articles/php-profiling"
+                  >Application Profiling with PHP</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="index__keywords">
+          <h1>Keywords</h1>
+          <ul class="index__list index__columns">
+            <li class="index__list__item">
+              Await
+              <a href="https://maissan.net/articles/dash-and-dot#await">1</a>
+            </li>
+            <li class="index__list__item">
+              B-Splines
+              <a href="https://maissan.net/articles/simulating-vines#b-splines"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              Bezier
+              <a href="https://maissan.net/articles/simulating-vines#bezier"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              Binary
+              <a href="https://maissan.net/articles/dash-and-dot#binary">1</a>
+            </li>
+            <li class="index__list__item">
+              Bluetooth
+              <a href="https://maissan.net/articles/dash-and-dot#bluetooth"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              Canvas
+              <a
+                href="https://maissan.net/articles/javascript-spirograph#canvas"
+                >1</a
+              >
+              <a href="https://maissan.net/articles/simulating-vines#canvas"
+                >2</a
+              >
+            </li>
+            <li class="index__list__item">
+              Curves
+              <a href="https://maissan.net/articles/simulating-vines#curves"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              Drupal
+              <a
+                href="https://maissan.net/articles/deploying-drupal-updates-with-gulp#drupal"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              Gulp
+              <a
+                href="https://maissan.net/articles/deploying-drupal-updates-with-gulp#gulp"
+                >1</a
+              >
+            </li>
+            <li class="index__list__item">
+              JavaScript
+              <a
+                href="https://maissan.net/articles/javascript-spirograph#javascript"
+                >1</a
+              >
+              <a href="https://maissan.net/articles/simulating-vines#javascript"
+                >2</a
+              >
+              <a href="https://maissan.net/articles/dash-and-dot#javascript"
+                >3</a
+              >
+            </li>
+            <li class="index__list__item">
+              PHP
+              <a href="https://maissan.net/articles/php-profiling#php">1</a>
+            </li>
+            <li class="index__list__item">
+              Promises
+              <a href="https://maissan.net/articles/dash-and-dot#promises">1</a>
+            </li>
+            <li class="index__list__item">
+              Xdebug
+              <a href="https://maissan.net/articles/php-profiling#xdebug">1</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="app2.js"></script>
+  </body>
+</html>

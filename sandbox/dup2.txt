@@ -1,0 +1,2 @@
+I will be printed to the file dup2.txt
+I will be printed to the file dup2.txt

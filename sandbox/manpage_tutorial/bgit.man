@@ -1,0 +1,42 @@
+.TH BGIT 1L 2022-09-29 Info-BGIT
+
+.SH NAME
+bgit \- a shell script to simplify the standard git workflow
+
+.SH SYNOPSIS
+.B bgit
+[\fB\-i\fR]
+[\fB\-l\fR]
+[\fB\-r\fR]
+[\fB\-h\fR]
+
+.SH DESCRIPTION
+bgit is a git automation tool written in bash. It is designed to quickly automate away alot of the simple git commands that git beginners use every day. These include commands like git init, git add, git commit -m, and git push. It is a series of simple prompts that make the git workflow seamless and quick to use.
+
+.SH DEFAULTS
+by default, and when invoked with no flags/options, bgit will look for all files that have been added, modified, or deleted since the last commit. bgit will then present a series of prompts to add, commit, and push these changes to the remote repository/respotories. bgit will not ask for a password by default for an hour after the first commit using bgit (not applicable to ssh or gpg verification).
+
+.SH OPTIONS
+.TP
+.BR \-i
+initialize a new repository in current directory
+.TP
+.BR \-l
+display previous commit log messages
+.TP
+.BR \-r
+revert back to a previous commit
+.TP
+.BR \-h
+display a help message on basic usage
+
+.SH FILES
+.TP
+.I ~/.config/bgit
+all configuration files can be found here.
+
+.SH AUTHOR
+z3rOR0ne <z3rOR0ne@protonmail.com>
+
+.SH SEE ALSO
+\fBgit\fR

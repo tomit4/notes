@@ -1,0 +1,25 @@
+/* Taken from https://www.demo2s.com/html-css/css-flowing-circuit-animation.html */
+
+.bar {
+   position: absolute;
+   margin: 0em 0em 0em 0em;
+   background: orange;
+   bottom:0;
+   left:50%;
+   width:5px;
+   height:60%;
+   animation-name:zap2;
+   animation-delay:.2s;
+   animation-duration:2s;
+}
+
+@keyframes zap2  {
+   0% {
+      height:0;
+   }
+
+   100% {
+      height:60%;
+   }
+
+}

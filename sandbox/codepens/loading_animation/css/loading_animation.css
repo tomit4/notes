@@ -1,0 +1,110 @@
+body {
+    /* background: coral; */
+    background: white;
+}
+
+.blank {
+    background: red;
+    width: 100px;
+    height: 100px;
+    /* margin: 0em 0em 0e20em; */
+}
+.loading-box {
+    /* margin: 25em auto auto; */
+    height: 300px;
+    width: 100px;
+    /* height: 75px; */
+    /* width: 75px; */
+    border: 10px solid blue;
+    /* transform: skewY(100deg); */
+    /* transform: rotate(180deg); */
+    /* animation: roll 2s infinite ease-out; */
+}
+
+.loading-box2 {
+    position: absolute;
+    margin: 0em 5em 5em 20em;
+    height: 1px;
+    width: 10px;
+    /* border: 10px solid blue; */
+    /* border: 10px solid blue; */
+    /* transform: skewY(45deg); */
+}
+
+.loading-inner-box {
+    background: orange;
+    height: 300px;
+    animation: fill 3s ease-in;
+}
+
+.loading-inner-box2 {
+    background: orange;
+    height: 200px;
+    /* height: auto; */
+    animation: fill2 3s ease-in;
+    animation-delay: 3s;
+}
+
+/* @keyframes roll { */
+    /* 0% { */
+        /* transform: rotate(180deg); */
+    /* } */
+    /* 40% { */
+        /* transform: rotate(180deg); */
+    /* } */
+    /* 60% { */
+        /* transform: rotate(360deg); */
+    /* } */
+    /* 100% { */
+        /* transform: rotate(360deg); */
+    /* } */
+/* } */
+
+@keyframes fill {
+    from {
+        transform: translateY(100%);
+        height: -300px;
+    }
+    to {
+        transform: translateY(0%);
+        height: 300px;
+        /* height: 0px; */
+    }
+}
+
+@keyframes fill2 {
+    from {
+        transform: translateY(100%);
+        height: -1px;
+    }
+    to {
+        transform: translateY(0%);
+        height: 200px;
+        /* height: 0px; */
+    }
+}
+
+/* @keyframes fill { */
+    /* 0% { */
+        /* height: 0px; */
+    /* } */
+    /* 40% { */
+        /* height: 200px; */
+    /* } */
+    /* 60% { */
+        /* height: 200px; */
+    /* } */
+    /* 100% { */
+        /* height: 200px; */
+    /* } */
+/* } */
+
+/* this one doesn't wait for the loading animation */
+/* @keyframes roll { */
+    /* from { */
+        /* transform: rotate(0deg); */
+    /* } */
+    /* to { */
+        /* transform: rotate(359deg); */
+    /* } */
+/* } */

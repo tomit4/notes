@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Basic Email Form</title>
+  </head>
+  <body>
+    <form class="email" id="emailform">
+      <div>
+        <input type="text" placeholder="Subject" name="subject" required />
+      </div>
+      <div>
+        <textarea placeholder="Your message" name="body" required></textarea>
+      </div>
+      <div>
+        <button id="submit" >Send a message</button>
+      </div>
+    </form>
+    <script>
+        const btn = document.querySelector('#submit')
+        const form = document.querySelector('#emailform')
+        const url = '/v1/text-mail'
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            const formData = new FormData(form)
+            let object = {}
+            formData.forEach(function(value, key) {
+                object[key] = value
+            })
+            var json = JSON.stringify(object)
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: json
+            })
+        })
+    </script>
+  </body>
+</html>

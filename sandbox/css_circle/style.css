@@ -1,0 +1,77 @@
+#container {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+#halfclip {
+  width: 50%;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+   overflow: hidden;
+   transform-origin: left center;
+   animation: cliprotate 1s steps(2) infinite;
+}
+
+.halfcircle {
+  box-sizing: border-box;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 4px transparent;
+   border-top-color: blue;
+   border-left-color: blue;
+   border-radius: 50%;
+}
+
+#clipped {
+  width: 200%;
+   animation: rotate 0.5s linear infinite;
+}
+
+#fixed {
+  width: 100%;
+    transform: rotate(135deg);
+   animation: showfixed 1s steps(2) infinite;
+}
+
+@keyframes cliprotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+  0% {transform: rotate(-45deg);}
+  100% {transform: rotate(135deg);}
+}
+
+@keyframes showfixed {
+  0% {opacity: 0;}
+  49.9% {opacity: 0;}
+  50% {opacity: 1;}
+ 100% {opacity: 1;}
+}
+
+/***********************
+ * MY ADDITIONS
+************************/
+.finalcircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    visibility: hidden;
+    background-color: blue;
+}
+
+#innercircle {
+    position: absolute;
+    top: 3.5px;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 100%;
+}
