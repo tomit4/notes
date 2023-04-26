@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="https://www.linuxjournal.com/node/feed">
+  <channel>
+    <title>Linux Journal - The Original Magazine of the Linux Community</title>
+    <link>https://www.linuxjournal.com/node/feed</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>Installing and Using Yarn on Ubuntu</title>
+  <link>https://www.linuxjournal.com/content/installing-and-using-yarn-ubuntu</link>
+  <description>  &lt;div data-history-node-id="1340919" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/installing-and-using-yarn-on-ubuntu.jpg" width="850" height="500" alt="Installing and Using Yarn on Ubuntu" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p&gt;Yarn is a powerful JavaScript package manager that is compatible with npm and helps automate the process of installing, updating, configuring, and removing npm packages. Yarn provides speed and reliability by caching downloaded packages and parallelizing operations. In this tutorial, we will cover how to install both the latest version and classic version of Yarn on Ubuntu, along with an overview of basic Yarn commands and options.&lt;/p&gt;
+
+&lt;span class="h3-replacement"&gt;Installing the Latest Yarn Version&lt;/span&gt;
+
+&lt;p&gt;To install and manage the latest Yarn version, we recommend using Corepack, a binary included in newer Node.js releases that serves as a point of contact between the user and Yarn. Here are the steps to install Yarn using Corepack:&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;
+	&lt;p&gt;Ensure your Node.js version is up-to-date. Check the version with the command: &lt;code&gt;node -v&lt;/code&gt; Corepack requires Node.js 16.10 or later. If the output shows an older version, update Node.js.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Start Corepack by typing: &lt;code&gt;corepack enable&lt;/code&gt; Note: If Corepack does not exist on your system, install it by typing: &lt;code&gt;sudo npm install -g corepack&lt;/code&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Install the latest version of Yarn with the command below: &lt;code&gt;corepack prepare yarn@stable --activate&lt;/code&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Type the following command to test the installation and check the Yarn version: &lt;code&gt;yarn --version&lt;/code&gt; To update the binary to the latest version, run: &lt;code&gt;yarn set version stable&lt;/code&gt;&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;&lt;span class="h3-replacement"&gt;Installing Classic Yarn Version&lt;/span&gt;
+
+&lt;p&gt;Although the classic versions of Yarn before 2.0 are in maintenance mode, you can still install Yarn 1.x using the official Yarn repositories and npm. Here's how:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Option 1: Install Yarn Classic Via Repository&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;
+	&lt;p&gt;Add the GPG key: &lt;code&gt;curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/yarn.gpg&lt;/code&gt; The GPG key ensures that you are installing authentic software.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Add the Yarn repository: &lt;code&gt;echo "deb [signed-by=/etc/apt/trusted.gpg.d/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list&lt;/code&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Update your local repository listings: &lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Install Yarn: &lt;code&gt;sudo apt install yarn&lt;/code&gt; This command installs Yarn and, if you don’t already have Node.js installed, your package manager will install it for you.&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Option 2: Install Yarn Classic Using NPM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;
+	&lt;p&gt;Check if npm is installed: &lt;code&gt;npm --version&lt;/code&gt; If you don’t have npm, install it by running &lt;code&gt;sudo apt install npm&lt;/code&gt;.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;To install Yarn with npm, enter: &lt;code&gt;sudo npm install -g yarn&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/installing-and-using-yarn-ubuntu" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Mon, 24 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340919 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>The Art of Restarting Debian</title>
+  <link>https://www.linuxjournal.com/content/art-restarting-debian</link>
+  <description>  &lt;div data-history-node-id="1340917" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/the-art-of-restarting-debian.jpg" width="850" height="500" alt="The Art of Restarting Debian" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p&gt;As a Debian user, you may find yourself needing to restart your system from time to time. Whether it's for implementing new configurations, recovering from temporary glitches, or installing updates that require a reboot, restarting your system is an essential skill to have. While Debian provides a graphical user interface (GUI) option for rebooting, many users prefer the precision and convenience of the command line. In this article, we'll explore a comprehensive set of commands you can use to restart your Debian system from the command line.&lt;/p&gt;
+
+&lt;span class="h3-replacement"&gt;Restarting with the reboot Command&lt;/span&gt;
+
+&lt;p&gt;The &lt;code&gt;reboot&lt;/code&gt; command is a simple yet effective way to restart your Debian system. This widely-used command can be executed from the terminal and requires root privileges. To use the &lt;code&gt;reboot&lt;/code&gt; command, enter the following:&lt;/p&gt;
+
+&lt;pre&gt;
+sudo reboot&lt;/pre&gt;
+
+&lt;p&gt;Note: You will need to enter your password to proceed with the reboot.&lt;/p&gt;
+
+&lt;span class="h3-replacement"&gt;Utilizing the systemctl Command&lt;/span&gt;
+
+&lt;p&gt;The &lt;code&gt;systemctl&lt;/code&gt; command is a versatile tool that is commonly used to manage system services in Debian. In addition to its service management capabilities, &lt;code&gt;systemctl&lt;/code&gt; can also be used to reboot the system. To do so, execute the following command:&lt;/p&gt;
+
+&lt;pre&gt;
+sudo systemctl reboot&lt;/pre&gt;
+
+&lt;span class="h3-replacement"&gt;The /sbin/reboot Command&lt;/span&gt;
+
+&lt;p&gt;For situations where you want to initiate an immediate restart of your system, you can use the &lt;code&gt;/sbin/reboot&lt;/code&gt; command. This command can be executed directly from the terminal and will restart your Debian system without any delay:&lt;/p&gt;
+
+&lt;pre&gt;
+/sbin/reboot&lt;/pre&gt;
+
+&lt;span class="h3-replacement"&gt;Restarting with the shutdown Command&lt;/span&gt;
+
+&lt;p&gt;The &lt;code&gt;shutdown&lt;/code&gt; command is typically used to power off the system, but with the &lt;code&gt;-r&lt;/code&gt; argument, it can also be used to reboot. The &lt;code&gt;shutdown&lt;/code&gt; command allows you to specify when the system should restart, giving you control over the timing of the reboot. To perform an immediate reboot, use the following command:&lt;/p&gt;
+
+&lt;pre&gt;
+shutdown -r now&lt;/pre&gt;
+
+&lt;p&gt;You also have the option to schedule the reboot by specifying a delay in minutes. For instance, the following command will notify the user that the system will restart in the next five minutes:&lt;/p&gt;
+
+&lt;pre&gt;
+shutdown -r +5&lt;/pre&gt;
+
+&lt;span class="h3-replacement"&gt;Restarting with the init Command&lt;/span&gt;
+
+&lt;p&gt;Lastly, the &lt;code&gt;init&lt;/code&gt; command offers an alternative way to restart Debian. This command controls the behavior of the system by specifying different run levels. To initiate a reboot using the &lt;code&gt;init&lt;/code&gt; command, enter the following:&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/art-restarting-debian" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Fri, 21 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340917 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>How To Master the RPM Command</title>
+  <link>https://www.linuxjournal.com/content/how-master-rpm-command</link>
+  <description>  &lt;div data-history-node-id="1340915" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/how-to-master-the-rpm-command.jpg" width="850" height="500" alt="How to Master the RPM Command" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;As a Linux user, you've likely encountered RPM (Red Hat Package Manager), a powerful package management system used by various Linux distributions including Red Hat, CentOS, Fedora, OpenSUSE, and more. RPM is known for its simplicity, ease of use, and enhanced security features. In this guide, we'll explore the RPM command and its practical use cases, from installing and upgrading packages to querying and verifying them. Let's get started!&lt;/p&gt;
+
+&lt;h2&gt;What is RPM?&lt;/h2&gt;
+
+&lt;p&gt;RPM, or Red Hat Package Manager, is a free and open-source package management system that allows you to install, update, remove, verify, and query RPM packages on your Linux system. RPM packages are stored in repositories, and the RPM command-line tool provides you with easy access to a vast array of software packages. Most RPM packages are binary files with pre-compiled software that are compatible with specific Linux distributions and system architectures.&lt;/p&gt;
+
+&lt;h2&gt;The Basics: Installing, Updating, and Removing RPM Packages&lt;/h2&gt;
+
+&lt;p&gt;To manage RPM packages, you'll need to use the &lt;code&gt;rpm&lt;/code&gt; command along with specific options. Here are some fundamental commands to get you started:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;
+	&lt;p&gt;Install: To install an RPM package, use the &lt;code&gt;-i&lt;/code&gt; option followed by the package file name. For example:&lt;/p&gt;
+
+	&lt;pre&gt;
+sudo rpm -ivh package.rpm&lt;/pre&gt;
+
+	&lt;p&gt;The &lt;code&gt;-v&lt;/code&gt; option provides verbose output, while the &lt;code&gt;-h&lt;/code&gt; option shows a progress bar.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Upgrade: To upgrade an existing RPM package, use the &lt;code&gt;-U&lt;/code&gt; option. The package will be upgraded to a newer version if available:&lt;/p&gt;
+
+	&lt;p&gt;&lt;code&gt;sudo rpm -Uvh package.rpm &lt;/code&gt;&lt;/p&gt;
+
+	&lt;p&gt;If the package has any missing dependencies, RPM will list them, and you'll need to install them manually.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Remove: To remove (erase) an installed RPM package, use the &lt;code&gt;-e&lt;/code&gt; option followed by the package name:&lt;/p&gt;
+
+	&lt;p&gt;&lt;code&gt;sudo rpm -e package_name &lt;/code&gt;&lt;/p&gt;
+
+	&lt;p&gt;To remove a package without checking its dependencies, use the &lt;code&gt;--nodeps&lt;/code&gt; option.&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Querying and Verifying RPM Packages&lt;/h2&gt;
+
+&lt;p&gt;To retrieve information about RPM packages and verify their integrity, you can use the following commands:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;
+	&lt;p&gt;Query: To query whether a specific package is installed, use the &lt;code&gt;-q&lt;/code&gt; option:&lt;/p&gt;
+
+	&lt;p&gt;&lt;code&gt;sudo rpm -q package_name &lt;/code&gt;&lt;/p&gt;
+
+	&lt;p&gt;To get more detailed information, use the &lt;code&gt;-qi&lt;/code&gt; option. Additionally, you can use the &lt;code&gt;-ql&lt;/code&gt; option to list all the files in the installed package.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Verify: To verify the integrity of an installed package, use the &lt;code&gt;-V&lt;/code&gt; option:&lt;/p&gt;
+
+	&lt;p&gt;&lt;code&gt;sudo rpm -V package_name &lt;/code&gt;&lt;/p&gt;
+
+	&lt;p&gt;RPM will check file ownership, permissions, and other metadata, and report any discrepancies.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/how-master-rpm-command" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Wed, 19 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340915 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>The One-Time Task Scheduling Guide To Master the “at” Command</title>
+  <link>https://www.linuxjournal.com/content/one-time-task-scheduling-guide-master-command</link>
+  <description>  &lt;div data-history-node-id="1340913" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/the-one-time-task-scheduling-guide-to-master-the-at-command.jpg" width="850" height="500" alt="The One-Time Task Scheduling Guide To Master the “at” Command" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p&gt;When it comes to scheduling tasks in a Linux environment, system administrators and developers often use the cron command for recurring tasks. However, there is another powerful tool for scheduling one-time jobs, known as the &lt;code&gt;at&lt;/code&gt; command. This article will provide an in-depth exploration of the &lt;code&gt;at&lt;/code&gt; command, including its syntax, usage examples, and best practices.&lt;/p&gt;
+
+&lt;h2&gt;Understanding the at Command&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;at&lt;/code&gt; command is a versatile utility that allows users to schedule a command or script to be executed at a specified time in the future. It is particularly useful for running one-time jobs, such as maintenance tasks, backups, or system updates, without requiring manual intervention. The &lt;code&gt;at&lt;/code&gt; command reads the commands to be executed from standard input or from a file and schedules them accordingly.&lt;/p&gt;
+
+&lt;h2&gt;Installing the at Command&lt;/h2&gt;
+
+&lt;p&gt;Most Linux distributions come with the &lt;code&gt;at&lt;/code&gt; command pre-installed. However, if it is not present on your system, you can install it using the package manager for your distribution. For Debian-based distributions, use the following command:&lt;/p&gt;
+
+&lt;pre&gt;
+sudo apt-get install at&lt;/pre&gt;
+
+&lt;p&gt;For Red Hat-based distributions, use this command:&lt;/p&gt;
+
+&lt;pre&gt;
+sudo yum install at&lt;/pre&gt;
+
+&lt;h2&gt;Syntax and Options&lt;/h2&gt;
+
+&lt;p&gt;The basic syntax of the &lt;code&gt;at&lt;/code&gt; command is as follows:&lt;/p&gt;
+
+&lt;pre&gt;
+at [OPTIONS] TIME&lt;/pre&gt;
+
+&lt;p&gt;The available options for the &lt;code&gt;at&lt;/code&gt; command include:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;&lt;code&gt;-f&lt;/code&gt;:&lt;/strong&gt; Specifies a file containing the commands to be executed.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;&lt;code&gt;-t&lt;/code&gt;:&lt;/strong&gt; Specifies the time at which to run the commands using a Unix timestamp.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;&lt;code&gt;-m&lt;/code&gt;:&lt;/strong&gt; Sends an email to the user when the job has completed.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;&lt;code&gt;-q&lt;/code&gt;:&lt;/strong&gt; Specifies a queue in which to place the job.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Scheduling a One-Time Job&lt;/h2&gt;
+
+&lt;p&gt;To schedule a one-time job, simply provide the desired time for execution. The &lt;code&gt;at&lt;/code&gt; command supports various time formats, such as:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Relative time:&lt;/strong&gt; "now + 1 hour" or "now + 30 minutes"&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Absolute time:&lt;/strong&gt; "2:30 PM" or "15:30"&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Date and time:&lt;/strong&gt; "10:00 AM tomorrow" or "2023-04-01 18:00"&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For example, to schedule a one-time job to create a file containing "Hello, World!" in the /tmp directory after one hour, use the following command:&lt;/p&gt;
+
+&lt;pre&gt;
+echo "echo 'Hello, World!' &gt; /tmp/hello_world.txt" | at now + 1 hour&lt;/pre&gt;
+
+&lt;p&gt;Alternatively, you can schedule the command as below:&lt;/p&gt;
+
+&lt;pre&gt;
+at now + 1 hour echo 'Hello, World!' &gt; /tmp/hello_world.txt
+&lt;/pre&gt;
+
+&lt;p&gt;Press CTRL + D to exit from the &lt;code&gt;at&lt;/code&gt; command terminal.&lt;/p&gt;
+
+&lt;h2&gt;Listing and Managing Scheduled Jobs&lt;/h2&gt;
+
+&lt;p&gt;To list all scheduled jobs for the current user, use the "atq" command:&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/one-time-task-scheduling-guide-master-command" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Mon, 17 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340913 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>Mastering the journalctl Command: A Comprehensive Guide</title>
+  <link>https://www.linuxjournal.com/content/mastering-journalctl-command-comprehensive-guide</link>
+  <description>  &lt;div data-history-node-id="1340911" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/mastering-the-journalctl-command-a-comprehensive-guide.jpg" width="850" height="500" alt="Mastering the journalctl Command: A Comprehensive Guide" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p&gt;System logs are a vital resource for administrators and developers looking to monitor system performance, troubleshoot issues, and understand the events taking place within the system. On this article, we learn about how on Linux systems, the &lt;code&gt;journalctl&lt;/code&gt; command provides an effective way to access and manage these logs.&lt;/p&gt;
+
+&lt;h2&gt;Introduction to the journalctl Command&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;journalctl&lt;/code&gt; command is a utility that allows users to view and interact with systemd journal logs. These logs include information from various sources, such as the kernel, initrd, system services, applications, and systemd itself. The logs are stored in a binary format and can be queried efficiently using &lt;code&gt;journalctl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The basic syntax of the &lt;code&gt;journalctl&lt;/code&gt; command is as follows:&lt;/p&gt;
+
+&lt;pre&gt;
+journalctl [options…] [matches…]&lt;/pre&gt;
+
+&lt;h2&gt;Viewing and Filtering Logs with journalctl&lt;/h2&gt;
+
+&lt;p&gt;The most straightforward way to use &lt;code&gt;journalctl&lt;/code&gt; is without any options. This will display all logged entries in chronological order:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl&lt;/pre&gt;
+
+&lt;p&gt;However, the output can be overwhelming, especially on systems with a long runtime. To make navigation easier, the output is automatically paginated using the less command. Use the Enter key to scroll line by line, or the Space key to scroll page by page. To exit the log output, press q on your keyboard.&lt;/p&gt;
+
+&lt;p&gt;To view logs in reverse chronological order (i.e., newest entries first), use the &lt;code&gt;-r&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl -r&lt;/pre&gt;
+
+&lt;p&gt;You can limit the number of displayed log entries by using the -n option followed by the number of lines you want to display. For example, to view the last 15 entries:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl -n 15&lt;/pre&gt;
+
+&lt;p&gt;To view only kernel-related messages, use the &lt;code&gt;-k&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl -k&lt;/pre&gt;
+
+&lt;p&gt;Logs can also be filtered by priority. Log levels range from 0 (emergency) to 7 (debug), with lower numbers indicating higher priority. Use the &lt;code&gt;-p&lt;/code&gt; option to view logs of a specific level and above. For example, to view error, critical, alert, and emergency logs:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl -p 3&lt;/pre&gt;
+
+&lt;p&gt;To view logs from a specific system service, use the &lt;code&gt;-u&lt;/code&gt; flag followed by the service name. For example, to view logs for the Apache service:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl -u apache2.service&lt;/pre&gt;
+
+&lt;h2&gt;Working with Boot Logs&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;journalctl&lt;/code&gt; command allows users to view logs from specific boot sessions. Each boot is logged separately, making it easy to isolate logs related to a particular boot. To see a list of all the logs from previous boots, use the &lt;code&gt;--list-boots&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;pre&gt;
+$ journalctl --list-boots&lt;/pre&gt;
+
+&lt;p&gt;To view logs from the previous system boot, use the &lt;code&gt;-b&lt;/code&gt; option with the number &lt;code&gt;-1&lt;/code&gt;. Specify a different number to view logs from older boots:&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/mastering-journalctl-command-comprehensive-guide" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Fri, 14 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340911 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>Demystifying Kubernetes Operators: Creation, Benefits, and Use Cases</title>
+  <link>https://www.linuxjournal.com/content/demystifying-kubernetes-operators-creation-benefits-and-use-cases</link>
+  <description>  &lt;div data-history-node-id="1340909" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/demystifying-kubernetes-operators-creation-benefits-and-use-cases.jpg" width="850" height="500" alt="Demystifying Kubernetes Operators: Creation, Benefits, and Use Cases" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Kubernetes is a powerful container orchestration platform that automates the deployment, scaling, and management of containerized applications. As Kubernetes continues to evolve, one of the concepts that has gained significant traction is the Kubernetes Operator. Operators extend the functionality of Kubernetes and provide a way to automate complex tasks, allowing users to manage applications and resources more efficiently. In this article, we will delve into the world of Kubernetes Operators, explore how they can be created, and examine their benefits and use cases.&lt;/p&gt;
+
+&lt;h2&gt;Understanding Kubernetes Operators&lt;/h2&gt;
+
+&lt;span class="h3-replacement"&gt;What are Kubernetes Operators?&lt;/span&gt;
+
+&lt;p&gt;Kubernetes Operators are software extensions that enable automated management of complex applications and resources within a Kubernetes cluster. Operators encapsulate both the operational logic and domain-specific knowledge required to manage specific applications or services.&lt;/p&gt;
+
+&lt;p&gt;Operators are built using the Kubernetes custom resource definition (CRD) and custom controllers. A CRD defines a new resource type in the cluster, while the custom controller is responsible for watching and reconciling the state of the custom resource based on the desired state specified by the user. Together, these components provide a declarative way to manage applications and resources.&lt;/p&gt;
+
+&lt;span class="h3-replacement"&gt;Why Use Kubernetes Operators?&lt;/span&gt;
+
+&lt;p&gt;Kubernetes Operators offer several benefits:&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;&lt;strong&gt;Automation:&lt;/strong&gt; Operators automate complex operational tasks, such as backup, scaling, and configuration management, reducing manual intervention and human error.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Extensibility:&lt;/strong&gt; Operators extend the capabilities of Kubernetes, allowing for the management of custom resources and services.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Consistency:&lt;/strong&gt; Operators provide a consistent and standardized approach to managing applications across different environments.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Domain-Specific Knowledge:&lt;/strong&gt; Operators encapsulate expert knowledge about the application or service they manage, making it accessible to users who may not be experts in that domain.&lt;/li&gt;
+&lt;/ol&gt;&lt;h2&gt;Creating a Kubernetes Operator&lt;/h2&gt;
+
+&lt;span class="h3-replacement"&gt;Steps to Build an Operator&lt;/span&gt;
+
+&lt;p&gt;Creating a Kubernetes Operator involves the following steps:&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/demystifying-kubernetes-operators-creation-benefits-and-use-cases" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Tue, 11 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340909 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>Kubernetes vs. Docker: Exploring the Synergy in Containerization</title>
+  <link>https://www.linuxjournal.com/content/kubernetes-and-docker-exploring-synergy-containerization</link>
+  <description>  &lt;div data-history-node-id="1340907" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/kubernetes-and-docker-exploring-the-synergy-in-containerization-cc0.jpg" width="850" height="500" alt="Kubernetes vs. Docker: Exploring the Synergy in Containerization" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/george-whittaker" lang="" about="https://www.linuxjournal.com/users/george-whittaker" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;George Whittaker&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;h2&gt;Introduction to Containerization&lt;/h2&gt;
+&lt;p&gt;Containerization is a revolutionary technology that allows software to be packaged and deployed in a consistent manner across various environments. It resolves challenges such as dependency conflicts and platform discrepancies by encapsulating applications along with their dependencies in lightweight, portable containers. In this article, we will explore two prominent tools in the field of containerization: Kubernetes and Docker. We will delve into their roles, their differences, and how they work in harmony to facilitate containerized application deployments.&lt;/p&gt;
+&lt;h2&gt;Understanding Docker: Creating and Running Containers&lt;/h2&gt;
+&lt;p&gt;&lt;span class="h3-replacement"&gt;What is Docker?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Docker is an open-source platform that automates the creation, deployment, and running of containerized applications. Docker provides the capability to build and package applications along with their dependencies into standardized units called containers. Containers can be thought of as lightweight, standalone executables that are isolated from the host system, yet share the same OS kernel.&lt;/p&gt;
+&lt;p&gt;&lt;span class="h3-replacement"&gt;Key Features of Docker&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Portability:&lt;/strong&gt; Docker containers can be run on any system that supports Docker, ensuring consistent behavior across different environments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isolation:&lt;/strong&gt; Each container runs in isolation with its own filesystem, ensuring that application dependencies do not interfere with each other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; Docker containers can be rapidly started, stopped, and scaled up or down as needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Version Control:&lt;/strong&gt; Docker images can be versioned and stored in a registry, enabling easy rollback to previous versions.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Exploring Kubernetes: Orchestrating Containers at Scale&lt;/h2&gt;
+&lt;p&gt;&lt;span class="h3-replacement"&gt;What is Kubernetes?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Kubernetes provides a powerful framework for managing distributed systems by organizing containers into groups called "pods" and managing their lifecycle across a cluster of machines.&lt;/p&gt;
+&lt;p&gt;&lt;span class="h3-replacement"&gt;Key Features of Kubernetes&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cluster Management:&lt;/strong&gt; Kubernetes clusters consist of one or more master nodes and multiple worker nodes that host containers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;High Availability:&lt;/strong&gt; Kubernetes ensures that applications are highly available by automatically restarting failed containers and rescheduling them to healthy nodes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Load Balancing:&lt;/strong&gt; Kubernetes distributes network traffic among multiple pods to ensure optimal resource utilization and responsiveness.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/kubernetes-and-docker-exploring-synergy-containerization" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Fri, 07 Apr 2023 16:00:00 +0000</pubDate>
+    <dc:creator>George Whittaker</dc:creator>
+    <guid isPermaLink="false">1340907 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>SFTP Port Forwarding: Enabling Suppressed Functionality</title>
+  <link>https://www.linuxjournal.com/content/sftp-port-forwarding-enabling-suppressed-functionality</link>
+  <description>  &lt;div data-history-node-id="1340905" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/sftp-port-forwarding-enabling-suppressed-functionality.jpg" width="850" height="500" alt="SFTP Port Forwarding: Enabling Suppressed Functionality" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/charles-fisher" lang="" about="https://www.linuxjournal.com/users/charles-fisher" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;Charles Fisher&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The SSH protocol enables three major classes of remote server activities: a) command execution (including a login shell), b) network forwarding and manipulation, and c) file transfer.&lt;/p&gt;
+
+&lt;p&gt;The OpenSSH maintainers have determined that &lt;code&gt;sftp&lt;/code&gt; and &lt;code&gt;scp&lt;/code&gt; have no legitimate use for port forwarding (via the &lt;code&gt;-L&lt;/code&gt; and &lt;code&gt;-R&lt;/code&gt; options). A flag to explicitly disable these features is unconditionally passed to the child SSH executable during file transfers with these utilities.&lt;/p&gt;
+
+&lt;p&gt;There may be users with a legitimate need for these features. An obvious subset are penetration testers tasked to verify that this capability is explicitly disabled on public SFTP servers.&lt;/p&gt;
+
+&lt;p&gt;Below are two techniques to enable these suppressed features, by either modifying strings in the sftp binary itself, or by redirection through shells that are able to easily edit the command line. Depending upon the capabilities of the platform, either technique might be required to achieve this goal.&lt;/p&gt;
+
+&lt;h2&gt;Suppression Details&lt;/h2&gt;
+
+&lt;p&gt;To begin, it is important to locate running processes of interest. The shell function below will reveal PIDs that match a shell pattern (and note this is not a regex). This runs under Debian &lt;code&gt;dash&lt;/code&gt; (and most other common shells) and relies on BSD options to &lt;code&gt;ps&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;
+pps () { local a= b= c= IFS=$'\r'; ps ax | while read -r a
+    do [ "$b" ] || c=1; for b; do case "$a" in *"$b"*) c=1;;
+        esac; done; [ "$c" ] &amp;&amp; printf '%s\n' "$a" &amp;&amp; c=; done; }&lt;/pre&gt;
+
+&lt;p&gt;A conventional SFTP session is launched, in order to examine the processes associated with it:&lt;/p&gt;
+
+&lt;pre&gt;
+$ id
+uid=1001(aturing) gid=1001(aturing) groups=1001(aturing)...
+
+$ sftp &lt;a href="mailto:aturing@sftp.victimandum.com"&gt;aturing@sftp.victimandum.com&lt;/a&gt;
+&lt;a href="mailto:aturing@sftp.victimandum.com"&gt;aturing@sftp.victimandum.com&lt;/a&gt;'s password:
+Connected to &lt;a href="https://www.google.com/url?q=http://sftp.victimandum.com&amp;source=gmail-html&amp;ust=1677172453704000&amp;usg=AOvVaw1-qLXyY3uV-PUs3yE4jag3"&gt;sftp.victimandum.com&lt;/a&gt;.
+sftp&gt;&lt;/pre&gt;
+
+&lt;p&gt;We assume above that the local UNIX user has an account on the remote SFTP server of the same username.&lt;/p&gt;
+
+&lt;p&gt;Once the session is running, a local process search for the username reveals the child SSH process that is spawned by SFTP:&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/sftp-port-forwarding-enabling-suppressed-functionality" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Wed, 22 Feb 2023 17:00:00 +0000</pubDate>
+    <dc:creator>Charles Fisher</dc:creator>
+    <guid isPermaLink="false">1340905 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title> SoCal Linux Expo Back For 20th Anniversary</title>
+  <link>https://www.linuxjournal.com/content/socal-linux-expo-back-20th-anniversary</link>
+  <description>  &lt;div data-history-node-id="1340903" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/shutterstock_11032609019_0.jpg" width="850" height="500" alt=" SoCal Linux Expo Back For 20th Anniversary" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/dennis-rex" lang="" about="https://www.linuxjournal.com/users/dennis-rex" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;Dennis Rex&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p dir="ltr"&gt;Now in its 20th year of supporting and promoting the FOSS community, &lt;a href="https://socallinuxexpo.org/"&gt;SCaLE 20x – the Southern California Linux Expo&lt;/a&gt; – will be held at the Pasadena Convention Center March 9-12, 2023.&lt;/p&gt;
+
+&lt;p dir="ltr"&gt;This 4-day annual event brings together the vibrant Open Source user community, tech industry leaders, developers, users and many more.  Session track themes have included security, developer, embedded, medical and legal to name a few.  The &lt;a href="https://www.socallinuxexpo.org/scale/20x/speakers"&gt;expert speakers&lt;/a&gt; have never failed to impress and inform.  Your biggest challenge will likely be trying to pick which session to attend.  One certainty: &lt;a href="https://www.socallinuxexpo.org/blog/announcing-keynote-speaker-arun-gupta"&gt;Saturday’s keynote by Arun Gupta&lt;/a&gt; will be standing room only.&lt;/p&gt;
+
+&lt;p dir="ltr"&gt;Since my first SCaLE, &lt;a href="https://www.socallinuxexpo.org/past/2005/"&gt;way back to 3x&lt;/a&gt;, the expo floor has been my favorite hangout.  The expansive exhibit hall provides an opportunity to meet the people behind a favorite distribution or application.  There are compelling demonstrations of Open Source-based solutions, educational offerings and companies looking for top talent.  Oh, and SCaLE exhibitors always have the best swag.&lt;/p&gt;
+
+&lt;p dir="ltr"&gt;Would you like a glimpse of the future of Linux/FOSS? SCALE is a family friendly event that welcomes all ages.   &lt;a href="https://www.socallinuxexpo.org/scale/20x/events/scale-kids"&gt;SCaLE: The Next Generation&lt;/a&gt;, the track focused on kids and the work they do in OSS, is back for 20x.  All sessions are delivered by K-12 students and highlight interesting work or projects these students have been working on. It also includes hands-on activities for younger attendees.  Topics are expected to include security, video editing, big data and more.  These young folks will leave you feeling confident in the future of FOSS.&lt;/p&gt;
+
+&lt;p&gt;Other co-located events include &lt;a href="https://ceph.io/en/community/events/2023/ceph-days-socal/"&gt;Ceph Days SoCal&lt;/a&gt;, &lt;a href="https://community.cncf.io/events/details/cncf-kcd-los-angeles-presents-kcd-los-angeles-at-scale-20x/"&gt;Kubernetes Community Day&lt;/a&gt;, &lt;a href="https://devopsdays.org/events/2023-los-angeles/welcome/"&gt;DevOpsDayLA&lt;/a&gt;, &lt;a href="https://www.socallinuxexpo.org/scale/20x/events/postgres-scale"&gt;PostgreSQL @ SCaLE &lt;/a&gt;, &lt;a href="https://www.socallinuxexpo.org/scale/20x/events/scale-kids"&gt;SCaLE Kids&lt;/a&gt; and &lt;a href="https://e-ale.org/"&gt;Embedded Apprentice Linux Engineer (E-ALE)&lt;/a&gt;.  Always popular, the &lt;a href="https://www.socallinuxexpo.org/scale/20x/hands-beginner-linux-training"&gt;Hands-On Beginner Linux Training &lt;/a&gt;is here for 20x.  &lt;a href="https://register.socallinuxexpo.org/reg6/"&gt;Book your spot early&lt;/a&gt; for this one.&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/socal-linux-expo-back-20th-anniversary" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Thu, 02 Feb 2023 17:00:00 +0000</pubDate>
+    <dc:creator>Dennis Rex</dc:creator>
+    <guid isPermaLink="false">1340903 at https://www.linuxjournal.com</guid>
+    </item>
+<item>
+  <title>Monitoring Oracle Servers With Checkmk</title>
+  <link>https://www.linuxjournal.com/content/monitoring-oracle-servers-checkmk</link>
+  <description>  &lt;div data-history-node-id="1340901" class="layout layout--onecol"&gt;
+    &lt;div class="layout__region layout__region--content"&gt;
+      
+            &lt;div class="field field--name-field-node-image field--type-image field--label-hidden field--item"&gt;  &lt;img src="https://www.linuxjournal.com/sites/default/files/nodeimage/story/monitoring-oracle-servers-with-checkmk-featured.jpg" width="850" height="500" alt="Monitoring Oracle Servers With Checkmk" typeof="foaf:Image" class="img-responsive" /&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-author field--type-ds field--label-hidden field--item"&gt;by &lt;a title="View user profile." href="https://www.linuxjournal.com/users/ferdinand-kunz" lang="" about="https://www.linuxjournal.com/users/ferdinand-kunz" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;Ferdinand Kunz&lt;/a&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"&gt;&lt;p&gt;Databases are essential for many IT processes. Their performance and reliability depends on many factors and it makes sense to use a dedicated tool that helps you to stay on top of things. Monitoring your database with an external tool helps you identify performance issues proactively, but there are many factors to consider. With the wrong approach, you run the risk of missing valuable information and also can waste a lot of time configuring your database monitoring.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, I will give a quick guide on how to monitor Oracle Database with Checkmk, a universal monitoring tool for all kinds of IT assets. Oracle Database is one of the most common database management systems (DBMS) for relational databases and Checkmk comes with a great preconfigured Oracle monitoring, so it will only take you a few minutes to get started. This will not only ensure the best performance of your databases, but also give you the option to find optimization opportunities.&lt;/p&gt;
+
+&lt;h2&gt;Preconditions&lt;/h2&gt;
+
+&lt;p&gt;You need a Checkmk site up and running. For this article, I am using the &lt;a href="https://checkmk.com/download"&gt;Checkmk Free Edition&lt;/a&gt; version 2.1.0p19, which I installed on Ubuntu server (version 20.04). Checkmk runs on Linux, including RHEL, CentOS, Debian, and others, as well as in a container, or as a virtual appliance. You can download the latest Checkmk version for all platforms from the official &lt;a href="https://checkmk.com/"&gt;Checkmk website&lt;/a&gt; and follow this &lt;a href="https://checkmk.com/videos/en/ep-1-installing-checkmk-and-monitoring-your-first-host"&gt;video tutorial&lt;/a&gt; to take your first steps.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, I will use a simple Oracle server as an example. In my case, my Oracle database version 19.0 runs on a hardware server, and I use Rocky Linux version 9.0 as my operating system. I will show you how to configure and install the Checkmk agent. However, Checkmk can also monitor remote databases without the need to install an agent.&lt;/p&gt;
+
+&lt;p&gt;You don't need any previous experience with Oracle monitoring, as Checkmk takes over the collection of the most important monitoring services and also sets threshold values for warnings and critical states. However, you need access rights to create user accounts for the database you want to monitor, you will do this in the first step.&lt;/p&gt;
+
+&lt;h2&gt;Step 1: Creating an Oracle user account for the monitoring&lt;/h2&gt;
+
+&lt;p&gt;First, you need to create a user account that Checkmk will use to query the monitoring data from your database. In my case, I am using &lt;code&gt;SQL Plus&lt;/code&gt; and create the user through the terminal. The procedure differs depending on which Oracle environment and tool you are using. You can read more details about this in the &lt;a href="https://docs.oracle.com/en/"&gt;Oracle documentation&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
+      
+            &lt;div class="field field--name-node-link field--type-ds field--label-hidden field--item"&gt;  &lt;a href="https://www.linuxjournal.com/content/monitoring-oracle-servers-checkmk" hreflang="en"&gt;Go to Full Article&lt;/a&gt;
+&lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+  <pubDate>Tue, 31 Jan 2023 17:00:00 +0000</pubDate>
+    <dc:creator>Ferdinand Kunz</dc:creator>
+    <guid isPermaLink="false">1340901 at https://www.linuxjournal.com</guid>
+    </item>
+
+  </channel>
+</rss>
