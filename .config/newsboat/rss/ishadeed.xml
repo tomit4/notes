@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ahmad Shadeed Blog</title>
+    <description>I’m Ahmad, Digital Product Designer and Front-End Developer from Palestine. I enjoy working on large scale Product Design and Front End Projects which involves solving complex design problems.
+</description>
+    <link>http://ishadeed.com/</link>
+    <atom:link href="http://ishadeed.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 28 Apr 2023 17:27:33 +0200</pubDate>
+    <lastBuildDate>Fri, 28 Apr 2023 17:27:33 +0200</lastBuildDate>
+    <generator>Jekyll v3.6.0</generator>
+    
+      <item>
+        <title>Rebuilding a featured news section with modern CSS: Vox news</title>
+        <pubDate>Fri, 28 Apr 2023 14:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/rebuild-featured-news-modern-css/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/rebuild-featured-news-modern-css/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS Text balancing with text-wrap:balance</title>
+        <pubDate>Sun, 09 Apr 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/css-text-wrap-balance/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/css-text-wrap-balance/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS Masking</title>
+        <pubDate>Thu, 30 Mar 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/css-masking/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/css-masking/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>Do we need CSS flex-wrap detection?</title>
+        <pubDate>Sun, 19 Feb 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/flex-wrap-detect/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/flex-wrap-detect/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>My CSS Wishlist</title>
+        <pubDate>Thu, 09 Feb 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/css-wishlist-2023/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/css-wishlist-2023/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>The Guide To Responsive Design In 2023 and Beyond</title>
+        <pubDate>Wed, 01 Feb 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/responsive-design/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/responsive-design/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>Conditional CSS</title>
+        <pubDate>Mon, 09 Jan 2023 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/conditional-css/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/conditional-css/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>2022 Year In Review</title>
+        <pubDate>Sat, 31 Dec 2022 05:47:11 +0200</pubDate>
+        <link>http://ishadeed.com/journal/2022/</link>
+        <guid isPermaLink="true">http://ishadeed.com/journal/2022/</guid>
+        
+        
+        <category>journal</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS Style Queries</title>
+        <pubDate>Mon, 19 Dec 2022 07:00:00 +0200</pubDate>
+        <link>http://ishadeed.com/article/css-container-style-queries/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/css-container-style-queries/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>Inside the mind of a frontend developer: Article layout</title>
+        <pubDate>Fri, 09 Dec 2022 05:47:11 +0200</pubDate>
+        <link>http://ishadeed.com/article/inside-frontend-developer-mind-article-layout/</link>
+        <guid isPermaLink="true">http://ishadeed.com/article/inside-frontend-developer-mind-article-layout/</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+  </channel>
+</rss>
