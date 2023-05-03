@@ -197,7 +197,7 @@ super + l
 super + u
     galculator &
 super + y
-    krita &
+    krita --nosplash &
 super + s
     steam &
 super + v
