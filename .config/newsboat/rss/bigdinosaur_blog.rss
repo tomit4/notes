@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BigDino Blog</title>
+	<atom:link href="https://blog.bigdinosaur.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.bigdinosaur.org</link>
+	<description>Tales of hacking and stomping on things, by Lee Hutchinson</description>
+	<lastBuildDate>Wed, 31 Aug 2022 00:40:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>https://blog.bigdinosaur.org/wp-content/uploads/2021/02/cropped-bigdino200-32x32.png</url>
+	<title>BigDino Blog</title>
+	<link>https://blog.bigdinosaur.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Configuring Wordpress &#038; OpenLiteSpeed</title>
+		<link>https://blog.bigdinosaur.org/configuring-wordpress-openlitespeed/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sat, 23 Jul 2022 16:01:19 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[openlitespeed]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://blog.bigdinosaur.org/?p=602</guid>
+
+					<description><![CDATA[I described in a previous post the 2022 changes in the BigDino web stack, with the biggest change being that we&#8217;re now using OpenLiteSpeed (&#8220;OLS&#8221;) as our web server application. There are a whole buttload of &#8220;how to install Wordpress on OLS&#8221; posts on the web and I ended up reading most of them during ... <a title="Configuring Wordpress &#038; OpenLiteSpeed" class="read-more" href="https://blog.bigdinosaur.org/configuring-wordpress-openlitespeed/" aria-label="More on Configuring Wordpress &#038; OpenLiteSpeed">Read more</a>]]></description>
+										<content:encoded><![CDATA[<div class="wp-block-image">
+<figure class="alignleft size-full"><img decoding="async" width="269" height="255" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/bigdino-left-cleanbg-ols-logo2.png" alt="A dinosaur who has stolen the OLS logo and looks very proud of himself" class="wp-image-609"/></figure></div>
+
+
+<p>I described <a href="https://blog.bigdinosaur.org/farewell-to-the-old-stack-welcome-aws-and-openlitespeed/" data-type="post" data-id="547">in a previous post</a> the 2022 changes in the BigDino web stack, with the biggest change being that we&#8217;re now using OpenLiteSpeed (&#8220;OLS&#8221;) as our web server application. There are a whole buttload of &#8220;how to install Wordpress on OLS&#8221; posts on the web and I ended up reading most of them during the process of switching the server over, but most of them are outdated in some way, and none of them included everything I ended up needing to do to get everything working.</p>
+
+
+
+<p>Partially to document my configuration for the world but mainly so that I won&#8217;t ever have to look all this up from scratch again, here&#8217;s how I configured OpenLiteSpeed to serve up Wordpress quickly, safely, and securely. (I hope.)</p>
+
+
+
+<span id="more-602"></span>
+
+
+
+<h3 class="wp-block-heading">The big switch: from text files to GUI</h3>
+
+
+
+<p>In spite of how excited I was to switch over to OpenLiteSpeed, there was one aspect that I was positively dreading: giving up the convenience and quickness of directly editing configuration text files and instead switching over to using a GUI as the primary means of making server config changes. OLS <em>does</em> allow you to <a href="https://openlitespeed.org/kb/ols-configuration-examples/">edit its config files directly</a>, but I wanted to make a good-faith effort to actually do things the &#8220;right&#8221; way—or at least the way the developers intended for most people to use their application.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="637" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1024x637.jpg" alt="Screenshot of the OLS web admin console virtual host dashboard" class="wp-image-565" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1024x637.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-300x187.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-768x478.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1536x956.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-2048x1274.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>OpenLiteSpeed&#8217;s web administration console.</figcaption></figure></div>
+
+
+<p>The GUI is for the most part easy to use, though coming from Nginx some of the terminology required some googling in order to fully understand. I think I got everything figured out, but there was a bit of a learning curve to map the things I knew how to do in Nginx to the OLS way of doing things. (Much of the OLS way of doing things is based around the Apache way of doing things, including the way OLS handles rewrites and <code>.htaccess</code> files. More on that in a bit.)</p>
+
+
+
+<h3 class="wp-block-heading">Securing that GUI</h3>
+
+
+
+<p>Still, having come of age in a certain era of computing, a world-accessible configuration GUI feels like <a href="https://www.cvedetails.com/vulnerability-list/vendor_id-784/Phpmyadmin.html">a fast way to get pwn3d</a>. Several OLS setup guides recommended putting additional security in front of it, but I settled on simply firewalling the admin console via an AWS security group. The admin console listens on TCP port 7080, so I created one ruleset with that port open and listening for inbound connections from my current IP address, and one ruleset with that port closed.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="539" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-1024x539.jpg" alt="Screenshot of the AWS admin console showing network security group configuration" class="wp-image-613" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-1024x539.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-300x158.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-768x404.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-1536x808.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/aws-network-sec-group-2048x1078.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>AWS EC2 network security group configuration. This is the ruleset with the OLS admin console available—note the rule labeled &#8220;IPv4 OLS console inbound allow&#8221; that exposes TCP port 7080 and listens for traffic coming from my IP address.</figcaption></figure></div>
+
+
+<p>When I need to actively make changes, I switch the EC2 instance I&#8217;m running all of this on to the &#8220;admin port open&#8221; security group. When I&#8217;m done, I switch it to the &#8220;admin port closed&#8221; group. It&#8217;s maybe a little paranoid, but it makes me feel a lot more secure than the alternative of trying to secure the port with extra authentication or even just leaving it open. (And please don&#8217;t do that. Seriously. Why take the risk?)</p>
+
+
+
+<h3 class="wp-block-heading">WP virtual host configuration</h3>
+
+
+
+<p>Like most web server applications, OLS uses the concept of &#8220;<a href="https://httpd.apache.org/docs/2.4/vhosts/">virtual hosts</a>&#8221; so that you can run multiple sites on your server, each with its own bits of configuration. This is especially useful when you&#8217;re hosting full applications (like Wordpress!) that might need a bit of extra love out of the box to work properly and securely—rather than throwing all your applications into a pile and trying to keep everything balanced with your global server configuration, every time you need to set up a new site you simply create a new virtual host (or &#8220;vhost&#8221;). Each site lives on its own vhost, and each site can have its own configuration.</p>
+
+
+
+<p>Adding a vhost gets you this screen here, where you&#8217;ve got a number of required parameters to fill in. Odds are you know what most of these do, and odds are you can accept the default values for most of them:</p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex">
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-scaled.jpg"><img decoding="async" loading="lazy" width="1024" height="740" data-id="617"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-1024x740.jpg" alt="Screenshot showing the first setup screen when adding a virtual host" class="wp-image-617" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-1024x740.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-300x217.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-768x555.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-1536x1110.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vhost-create-2048x1480.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The OLS &#8220;add a virtual host&#8221; screen.</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="618" data-id="618"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-1024x618.jpg" alt="Screenshot of the &quot;Basic&quot; tab of the OLS web console" class="wp-image-618" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-1024x618.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-300x181.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-768x464.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-1536x927.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-basic-2048x1236.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>After you&#8217;ve added stuff, it&#8217;ll look like this.</figcaption></figure>
+</figure>
+
+
+
+<p>The image at left is the &#8220;add a vhost&#8221; screen waiting for input, and the image at right is what it looks like after some basic details are entered. At the very least, your vhost needs a name, a path for the files to actually live in, and a configuration file location. If you intend to run php applications, or anything else that requires an additional external program or interpreter, you need to set &#8220;Enable Scripts/ExtApps&#8221; to &#8220;yes.&#8221; I also toggled &#8220;Restrained&#8221; to &#8220;yes,&#8221; which is intended to prevent files outside of the web root from being accessed by anything running on the vhost.</p>
+
+
+
+<p>(There are also lots of things I&#8217;m not using that other folks might find useful, like per-vhost throttle settings. I&#8217;m not going to talk about those settings, but they are easily google-able. Same deal for all the rest of the pages—I&#8217;m only going to talk about the bits I&#8217;m actually using.)</p>
+
+
+
+<p>That takes care of the &#8220;Basic&#8221; tab. Moving on to the &#8220;General&#8221; tab:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="660" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-1024x660.jpg" alt="Screenshot of the &quot;General&quot; tab on the OLS web console." class="wp-image-620" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-1024x660.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-300x193.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-768x495.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-1536x990.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-general-2048x1320.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>OLS webadmin vhost configuration &#8220;General&#8221; tab.</figcaption></figure></div>
+
+
+<p>The first setting to specify here is the &#8220;document root,&#8221; which differs from the web root defined on the Basic page in that the web root could notionally contain log and config files for your site, while the document root contains the actual files that you&#8217;re serving out. I have mine set to a subdirectory underneath the web root.</p>
+
+
+
+<p>Then, a very important bit: you&#8217;ll need to define a name, along with any aliases, so the server knows what hostname to listen for to direct traffic to this vhost. My blog uses <code>blog.bigdinosaur.org</code> as its fully-qualified domain name, so I don&#8217;t need any aliases; if you&#8217;re serving your WP site from <code>example.com</code> without a subdomain, you might want to add <code>www.example.com</code> to your alias list so that the server is listening for that name. Otherwise, visitors who typed in <code>example.com</code> would see your site, but visitors who type <code>www.example.com</code> won&#8217;t.</p>
+
+
+
+<p>This tab lets you enable compression (which has almost no downsides and which you should almost certainly do), and it also lets you set up what your default index file is and whether directory indexing is on or not. Wordpress needs <code>index.php</code> in the list of index files, so I made sure to add it.</p>
+
+
+
+<p>This tab is also where you specify custom error pages, if you&#8217;d like. I need to do a bit more investigation about how to do this with Wordpress, as it&#8217;s not quite working. (I suspect WP is handling the errors itself at the application level rather than letting the web server do it, so fixing this might require some plugin work.)</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="660" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-1024x660.jpg" alt="Screenshot of the &quot;Rewrite&quot; tab on the OLS web console." class="wp-image-622" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-1024x660.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-300x193.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-768x495.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-1536x990.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-rewrite-2048x1320.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The &#8220;Rewrite&#8221; tab.</figcaption></figure></div>
+
+
+<p>Next is the &#8220;Rewrite&#8221; tab, where you can—surprise—control vhost-level rewrites. There are lots of places to set rewrites up with OLS, including good ol&#8217; <code>.htaccess</code> files, but this is the proper place to put rewrites that need to function for all requests across the whole vhost. This is where I&#8217;m putting my HTTP-to-HTTPS rewrite rule, so that visitors to the site that come by way of HTTP will get redirected to HTTPS.</p>
+
+
+
+<p>(This is somewhat of a superfluous redirect because BigDinosaur.org, like all responsible web sites, uses <a href="https://blog.bigdinosaur.org/https-and-hsts-with-varnish-thanks-to-haproxy/" data-type="post" data-id="98">HTTP Strict Transport Security</a>. Your browser should be more or less incapable of letting you type <code>http://blog.bigdinosaur.org</code>—it&#8217;ll automatically redirect you to the HTTPS version of the site because the site is on the big <a href="https://hstspreload.org/">HSTS preload lists</a>. If you&#8217;re hosting a site and not using HSTS, you should start, yesterday.)</p>
+
+
+
+<p>A very important setting you&#8217;ll want to make sure is enabled is the &#8220;Auto Load from .htaccess&#8221; one, which ensures that your <code>.htaccess</code> files are utilized whenever OLS comes across one.</p>
+
+
+
+<p>Next is the &#8220;Context&#8221; tab, and this one took me a bit to grok.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="660" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-1024x660.jpg" alt="Screenshot of the &quot;Context&quot; tab on the OLS web console." class="wp-image-624" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-1024x660.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-300x193.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-768x495.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-1536x990.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-top-2048x1320.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The confusing &#8220;Context&#8221; tab.</figcaption></figure></div>
+
+
+<p>The &#8220;Context&#8221; tab lets you define things that happen in certain contexts. Which sounds confusing. Here&#8217;s a better example: if you want to define some rules that only apply to image files, or that only apply to your upload directory, this is the place to do those things. First you define the context under which your settings apply, and then you set some settings. The way this tab seems to be most often used is to send customized headers, using the global &#8220;<code>/</code>&#8221; context (meaning &#8220;all requests&#8221;). I&#8217;m also using it to set specific rewrite rules on specific locations, and to change the cache expiry of some stuff. Let&#8217;s jump in.</p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-3 is-cropped wp-block-gallery-3 is-layout-flex">
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-scaled.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="660" data-id="629"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-1024x660.jpg" alt="Screenshot of the global context on the OLS web console." class="wp-image-629" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-1024x660.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-300x193.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-768x495.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-1536x990.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-slash-2048x1320.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-scaled.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="660" data-id="627"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-1024x660.jpg" alt="Screenshot of the image expiry context on the OLS web console." class="wp-image-627" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-1024x660.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-300x193.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-768x495.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-1536x990.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-expires-2048x1320.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-scaled.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="740" data-id="641"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-1024x740.jpg" alt="Screenshot of the upload directory context on the OLS web console." class="wp-image-641" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-1024x740.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-300x217.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-768x555.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-1536x1110.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-context-upload-2048x1480.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+</figure>
+
+
+
+<p>The three contexts I constructed and am using for Wordpress. From left to right, we have the global (&#8220;<code>/</code>&#8220;) context, a context for images and other files I want a long cache expiry on, and the uploads directory context.</p>
+
+
+
+<p>First, the global context, denoted by a single forward slash. I&#8217;m using this context to set all my custom headers, including <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> (see the &#8220;Header Operations&#8221; field in the first image). Further, this is also where I&#8217;m emplacing some specific rewrite rules to help prevent certain security issues—mainly restricting client access to certain locations and files.</p>
+
+
+
+<p>I have reproduced the header operations and rewrite rule code blocks below for copying and pasting. However, don&#8217;t just copy and paste what I&#8217;ve got and assume it will work for you. The CSP header in particular requires a lot of work to get right (there are sites and tools that can help, but it&#8217;s largely a manual process of trial and error, especially if you use Jetpack).</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>Header operations:
+
+set X-Are-Dinosaurs-Awesome HELL YES
+set Server clever girl
+set Referrer-Policy strict-origin-when-cross-origin
+set Strict-Transport-Security max-age=31536000;includeSubDomains;preload;
+set X-Content-Type-Options nosniff
+set X-XSS-Protection 1; mode=block
+set X-Frame-Options SAMEORIGIN
+set Expect-CT Expect-CT: max-age=0; report-uri='https://bigdino.report-uri.io/r/default/ct/reportOnly'
+set Content-Security-Policy default-src https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src 'self' data: https://fonts.gstatic.com; upgrade-insecure-requests; frame-ancestors https://blog.bigdinosaur.org
+
+--
+
+Rewrite rules:
+
+RewriteRule ^wp-admin/includes/ - &#91;F,L]
+RewriteRule !^wp-includes/ - &#91;S=3]
+RewriteRule ^wp-includes/&#91;^/]+\.php$ - &#91;F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - &#91;F,L]
+RewriteRule ^wp-includes/theme-compat/ - &#91;F,L]
+
+# BEGIN Block Sensitive Files
+RewriteCond %{REQUEST_URI} error_log|wp-config-sample.php|readme.html|readme.txt|license.txt|wp-config.php|php.ini &#91;NC]
+RewriteRule .* - &#91;F,L]
+# END Block Sensitive Files
+</code></pre>
+
+
+
+<p>And then, the last image shows the rewrite rule I have set on the <code>/wp-content/uploads</code> directory (note URI and location). This is a simple Apache-style rewrite that blocks accessing files in <code>uploads</code> that might be put there to do bad things and/or execute code.</p>
+
+
+
+<p>Then there&#8217;s the SSL tab, and that&#8217;s the last tab I had to mess with:</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/?attachment_id=642#main" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="740" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-1024x740.jpg" alt="Screenshot of the &quot;SSL&quot; tab on the OLS web console." class="wp-image-642" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-1024x740.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-300x217.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-768x555.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-1536x1110.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/vh-ssl-2048x1480.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The SSL tab.</figcaption></figure>
+
+
+
+<p>OLS lets you configure a default server-wide SSL configuration, and you can override things at the vhost level as required with the &#8220;SSL&#8221; tab in your vhost config. I&#8217;ve got my SSL certificate and key (LetsEncrypt via <a href="https://github.com/acmesh-official/acme.sh">acme.sh</a>), my preferred cipher suite (adapted from <a href="https://ssl-config.mozilla.org/#server=apache&amp;version=2.4.41&amp;config=intermediate&amp;openssl=1.1.1k&amp;guideline=5.6">Mozilla&#8217;s recommended intermediate TLS 1.2-compatible config</a>), my preferred key exchange options and the location of my DH param file, and whatever other SSL options you want. For me, I wanted to make sure all the ALPN options are enabled to let modern browsers use as many speedy page-loading tricks as possible.</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-large is-resized"><img decoding="async" loading="lazy" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache-595x1024.jpg" alt="Screenshot of the &quot;Cache&quot; page in the Litespeed Cache Wordpress plugin." class="wp-image-644" width="298" height="512" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache-595x1024.jpg 595w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache-174x300.jpg 174w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache-768x1322.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache-892x1536.jpg 892w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/lscache.jpg 1100w" sizes="(max-width: 298px) 100vw, 298px" /></figure></div>
+
+
+<h3 class="wp-block-heading">Configuring Wordpress itself</h3>
+
+
+
+<p>Turning away from OLS, the last thing to look at is the stuff you have to do to Wordpress itself, and that, fortunately, isn&#8217;t a huge amount. The main thing is to get WP up and running and then install the <a href="https://wordpress.org/plugins/litespeed-cache/">LiteSpeed Cache WP plugin</a> so that OLS can do its thing.</p>
+
+
+
+<p>At right are the OLS cache settings I&#8217;ve found work best for me with Wordpress. One particular deviation from standard that I&#8217;ve had to make is changing the &#8220;Cache Login Page&#8221; setting to &#8220;off,&#8221; because having the login page served from cache was causing some downright weird behavior with <a href="https://duo.com/docs/wordpress">Duo</a>, my preferred <a href="https://wordpress.org/plugins/duo-wordpress/">two-factor authentication solution</a>. </p>
+
+
+
+<p>In general, it&#8217;s advisable to keep as many of these turned on as you can without actually screwing anything up. If you have a lot of logged-in visitors to your site, &#8220;Cache Logged-in Users&#8221; can be a critical setting for you; if you don&#8217;t, best to leave it off. I also am not really certain I&#8217;d ever want to cache REST API responses, but the option is there if you think you need it.</p>
+
+
+
+<p>There&#8217;s one more thing in the LS Cache plugin I had to screw with that I want to point out—the Object Cache. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="725" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-1024x725.jpg" alt="Screenshot of the &quot;Object Cache Settings&quot; page in the Litespeed Cache Wordpress plugin." class="wp-image-646" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-1024x725.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-300x212.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-768x544.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-1536x1088.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/07/olsoc-2048x1450.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The Object Cache settings page in the Litespeed Cache Wordpress plugin.</figcaption></figure></div>
+
+
+<p>The object cache hangs on to database query results, greatly decreasing the load on your WP database. Using it requires you (or your web host) to set up an external application on your server for cache storage—either <a href="https://memcached.org/">Memcached</a>, <a href="https://redis.io/">Redis</a>, or LiteSpeed&#8217;s modified version of Memcached, <a href="https://www.litespeedtech.com/open-source/litespeed-memcached">Litespeed Memcached</a> (along with the appropriate php extension). Once the cache application is up and running and its extension is installed, the &#8220;Status&#8221; area of the page should show a green &#8220;Enabled.&#8221;</p>
+
+
+
+<p>You&#8217;ll then need to enter the appropriate host and port details into the fields so that Wordpress can begin using the database. (You can also use Unix sockets, but I haven&#8217;t bothered yet. I should probably switch that on soon, though.)</p>
+
+
+
+<p>Now, here&#8217;s the tricky part. If you&#8217;re only hosting a single Wordpress blog, then it doesn&#8217;t much matter whether you pick Memecached or Redis. (Litespeed Memcached&#8217;s main distinguishing feature is that it&#8217;s built to work distributed, so that&#8217;s not really a useful feature for small WP installs.) However, if you&#8217;re going to host more than one Wordpress site, Redis is the choice you want to make. The reason is because Redis can use multiple databases, while Memcached has a single store—so you can put one WP site on database 0, and the second WP site on database 1. Or, if you really, really love Memcached, you can just spin up multiple Memcached instances locally, each on different ports or sockets, and keep track of things that way.</p>
+
+
+
+<p>And that&#8217;s it! That&#8217;s all it took to make Wordpress work right on OLS. There are probably some more small config tweaks scattered around that I did and that I&#8217;ve forgotten about, but this ought to cover everything important. Enjoy!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Fixing my Valve Index&#8217;s extreme tilt</title>
+		<link>https://blog.bigdinosaur.org/fixing-my-valve-indexs-extreme-tilt/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Mon, 27 Jun 2022 14:36:20 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[valve index]]></category>
+		<category><![CDATA[VR]]></category>
+		<guid isPermaLink="false">https://blog.bigdinosaur.org/?p=589</guid>
+
+					<description><![CDATA[Over the past month or so, my Valve Index has been registering an annoying amount of tilt—when I put it on and start up SteamVR, the floor in VR-land is about five degrees out-of-whack with the actual floor. No amount of room setup re-running or view re-centering would touch the issue. The only fix I ... <a title="Fixing my Valve Index&#8217;s extreme tilt" class="read-more" href="https://blog.bigdinosaur.org/fixing-my-valve-indexs-extreme-tilt/" aria-label="More on Fixing my Valve Index&#8217;s extreme tilt">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap">Over the past month or so, my Valve Index has been registering an annoying amount of tilt—when I put it on and start up SteamVR, the floor in VR-land is about five degrees out-of-whack with the actual floor. No amount of room setup re-running or view re-centering would touch the issue. The only fix I could find was to break tracking on the headset by covering it with a towel, then variously aiming the headset straight up or straight down and restoring tracking. Sometimes, this would straighten out the horizon, but often not.</p>
+
+
+
+<p>You&#8217;d think there&#8217;d be an easy way to fix the headset&#8217;s tilt, too—like, why isn&#8217;t there a SteamVR option to adjust the angle of the horizon? Why is this such a massive issue?</p>
+
+
+
+<p>Turns out there <em>is</em> a way to address the problem with SteamVR—but it requires screwing around with some jank-ass command line tools. Because of course it does.</p>
+
+
+
+<span id="more-589"></span>
+
+
+
+<p>To make things quick, the fix that worked for me is the one outlined <a href="https://old.reddit.com/r/Vive/comments/6tzthx/fix_for_slanted_floor_issue_imu_recalibration/">in this here reddit post</a>. You&#8217;ll need to register with Valve as a developer in order to get access to the <a href="https://partner.steamgames.com/newpartner/?signup_type=3">SteamVR tracking HDK</a>, and then you&#8217;ll need to use one of the utilities in the HDK to gather some sensor samples from your Index&#8217;s inertial measurement unit (IMU). The utility has you rotate the Index to six different orientations, sampling at each, and then distills those measurements into a set of numbers indicating your accelerometer scale, your accelerometer bias, and your gyro bias.</p>
+
+
+
+<p>You take those numbers and stuff them into a JSON file, and then you upload that JSON file to your headset with another CLI utility. And then you reboot your headset.</p>
+
+
+
+<p>And then—well, hopefully, there is no &#8220;and then,&#8221; because that&#8217;s what fixed the issue for me. I can once again fly my spaceship without feeling like I&#8217;m sliding sideways across the deck.</p>
+
+
+
+<p>Any chance we can get a built-in option to adjust this without having to bust out the command line, Valve?</p>
+
+
+
+<h3 class="wp-block-heading">Update, two days later: still broken <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f641.png" alt="🙁" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h3>
+
+
+
+<p>Sadly, the fix doesn&#8217;t seem to have done the trick. The tilt is back, as bad as before. I fear I&#8217;m going to have to RMA the headset. This is already my second Index—maybe the third time will be the charm.</p>
+
+
+
+<p>Assuming I can successfully navigate the dark despairing caverns of Steam support. Wish me luck.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Farewell to the old stack, welcome AWS and OpenLiteSpeed</title>
+		<link>https://blog.bigdinosaur.org/farewell-to-the-old-stack-welcome-aws-and-openlitespeed/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Thu, 09 Jun 2022 11:43:46 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[openlitespeed]]></category>
+		<category><![CDATA[varnish]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://blog.bigdinosaur.org/?p=547</guid>
+
+					<description><![CDATA[Nginx and I have a long history. BigDinosaur.org first went online some time in 2010 with a little Apache-powered homepage, and it didn&#8217;t take long for me to switch over to Nginx—probably to be contrary, more than anything else, because Nginx was a fascinating underdog that was steadily winning web server market share with its ... <a title="Farewell to the old stack, welcome AWS and OpenLiteSpeed" class="read-more" href="https://blog.bigdinosaur.org/farewell-to-the-old-stack-welcome-aws-and-openlitespeed/" aria-label="More on Farewell to the old stack, welcome AWS and OpenLiteSpeed">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap">Nginx and I have a long history. BigDinosaur.org first went online some time in 2010 with a little Apache-powered homepage, and it didn&#8217;t take long for me to switch over to Nginx—probably to be contrary, more than anything else, because Nginx was a fascinating underdog that was steadily winning web server market share with its speed and flexibility. I liked it. I <a href="https://blog.bigdinosaur.org/octopress-and-nginx/">blogged </a>about it. <a href="https://blog.bigdinosaur.org/nginx-stable-or-dev/">A lot.</a> I thought I&#8217;d found a piece of software I could live with forever.</p>
+
+
+
+<figure class="wp-block-gallery aligncenter has-nested-images columns-default is-cropped wp-block-gallery-5 is-layout-flex">
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="718" data-id="552"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-1024x718.jpg" alt="" class="wp-image-552" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-1024x718.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-300x210.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-768x538.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-1536x1077.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.47.02-PM-2048x1436.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>HAproxy, for SSL termination</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="718" data-id="551"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-1024x718.jpg" alt="" class="wp-image-551" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-1024x718.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-300x210.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-768x538.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-1536x1077.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.46.45-PM-2048x1436.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>Varnish, for cache</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM.jpg" target="_blank" rel="noopener"><img decoding="async" loading="lazy" width="1024" height="718" data-id="553"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-1024x718.jpg" alt="" class="wp-image-553" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-1024x718.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-300x210.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-768x538.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-1536x1077.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-08-at-7.45.57-PM-2048x1436.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>Nginx, for static assets and reverse proxy</figcaption></figure>
+</figure>
+
+
+
+<p>And don&#8217;t get me wrong—Nginx is great. But in the decade since 2010, my web hosting ambitions have grown and I&#8217;ve incurred a lot of technical debt. Nginx gave way to <a href="https://blog.bigdinosaur.org/adventures-in-varnish/">Nginx and Varnish</a>, and then after the HTTPS revolution happened, <a href="https://blog.bigdinosaur.org/an-updated-look-at-the-bigdino-web-stack/">Nginx and Varnish and HAProxy</a>. For a time, things were good—Varnish is maybe a little heavy-duty for my needs, but I appreciated the crazy stuff it let me do with very fast redirects and screwing around with cookies. It made hosting Wordpress a little nutty, but my hosting strategies were working out well where I was applying them under real load over <a href="https://spacecityweather.com">Space City Weather</a>, which weathered a peak load of <a href="https://spacecityweather.com/how-space-city-weather-weathered-hurricane-laura/">1.5 million pageviews in a single day</a> during Hurricane Laura&#8217;s near-miss of the Houston area in 2020.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura.png" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="500" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura-1024x500.png" alt="" class="wp-image-558" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura-1024x500.png 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura-300x146.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura-768x375.png 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/garak-stats-laura.png 1164w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>Traffic on Space City Weather during Hurricane Laura. The BigDino web stack (plus a hefty helping of Cloudflare magic) carried the day.</figcaption></figure></div>
+
+
+<p>But as bulletproof as the Haproxy-Varnish-Nginx stack was, as the years wore on and things evolved, it grew to be kind of a pain in the butt to maintain—especially when mixed with Cloudflare on a few of the sites I maintain. Troubleshooting issues while dealing with both a caching CDN (Cloudflare) and a local cache layer (Varnish) sometimes caused me to pull my hair out. And after a decade on the same hosting stack, I was growing curious about some of the newer options out there. Was there something I could use to host my stuff that might give around the same level of performance, but without the complexity? Could I ditch my triple application stack sandwich for something simpler?</p>
+
+
+
+<span id="more-547"></span>
+
+
+
+<h3 class="wp-block-heading">Looking to OpenLiteSpeed</h3>
+
+
+
+<p>OpenLiteSpeed is the libre version of LiteSpeed Enterprise, a fancy web server with a whole bucketload of features—including native HTTP/3 support. It&#8217;s got a reputation for being very quick, especially at WordPress hosting, and part of that quickness comes from its built-in cache functionality. There are lots of benchmarks claiming that OLS&#8217; native cache is more performant than either Varnish or Nginx&#8217;s FastCGI cache, and there&#8217;s a <a href="https://wordpress.org/plugins/litespeed-cache/">Wordpress plugin</a> that automates a lot of the cache management tasks.</p>
+
+
+
+<p>Those things were enough to get me interested, and I&#8217;ll be the first to admit that I make tech decisions mostly based on whims, so I started thinking about making the jump. Moving my personal sites would be easy—<a href="https://www.bigdinosaur.org">BigDinosaur.org</a>, <a href="https://fangs.ink">Fangs</a>, and the <a href="https://www.chroniclesofgeorge.com">Chronicles of George</a> are all static sites, so they&#8217;d be easy. This blog and <a href="https://dwightsilverman.com">Dwight&#8217;s blog</a> would provide good practice with configuring Wordpress and PHP on OpenLiteSpeed.</p>
+
+
+
+<p>The two bits I was worried about were the BigDino/CoG Discourse forums, and Eric Berger&#8217;s <a href="https://spacecityweather.com">Space City Weather</a>—the former because Discourse can be a cantankerous beast, and the latter because SCW is an important site that hundreds of thousands of people in the Houston area rely on every day for weather information (especially during hurricane season). I could screw up migrating my own stuff, but SCW had to be done properly and with minimal downtime.</p>
+
+
+
+<h3 class="wp-block-heading">Cloud time</h3>
+
+
+
+<p>On top of that, I was looking to save myself some hosting money. Since late 2017, I&#8217;ve been paying for a dedicated server at Liquid Web for my own use, and while it&#8217;s been incredibly freeing to have as many web resources as I could ever need, it was also costing about $2,000 a year. Looking at my actual requirements in terms of RAM, CPU, storage, and bandwidth, it became pretty clear that in spite of Liquid Web&#8217;s extremely reasonable dedicated server pricing, keeping the box was like lighting money on fire.</p>
+
+
+
+<p>AWS beckoned. I was already using an AWS EC2 t3a.medium instance to run the BigDinosaur.org e-mail server; I&#8217;d picked AWS for that because, perhaps surprisingly, the cost proved pretty reasonable. You can prepay for what Amazon calls a &#8220;<a href="https://aws.amazon.com/ec2/pricing/reserved-instances/">reserved instance</a>,&#8221; and a three-year prepayment for the t3a.medium-sized mail server was only $350 or so. I&#8217;d need to step up to a t3a.large instance to get 8GB of RAM—definitely necessary in a cache-heavy configuration like I wanted to run—but the pricing stayed pretty reasonable.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-scaled.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="549" src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-1024x549.jpg" alt="" class="wp-image-564" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-1024x549.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-300x161.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-768x412.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-1536x823.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.24.13-AM-2048x1098.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>BigDino EC2 console, with mail and web servers.</figcaption></figure></div>
+
+
+<p>I think EC2 gets somewhat of a bad rap among non-business hosters, in terms of both complexity and costs, but I quite like it. It <em>is</em> overly complex, but you can ignore most of it and just focus on the parts that you need. With reserved instance pricing being so downright reasonable, it seemed like the time to make the switch from physical to cloud hosting.</p>
+
+
+
+<h3 class="wp-block-heading">Moving day</h3>
+
+
+
+<p>I ended up doing the migrations spread over a full weekend. The biggest issue for me was getting my brain out of Nginx mode and forcing it into Apache mode, since OpenLiteSpeed uses Apache-style <code>.htaccess</code> files and Apache-style rewrites. Nginx ignores <code>.htaccess</code> and uses config files with a vastly different syntax and options, so it took quite a bit of googling for examples before I figured out all of the steps necessary to recreate equivalent hosting setups for each of the sites.</p>
+
+
+
+<p>An aspect of OLS that I initially intensely disliked is its web configuration console. You <em>can</em> configure OLS by manually editing config files, but the preferred way to do OLS admin tasks is through the GUI. This is a pretty substantial change.</p>
+
+
+
+<figure class="wp-block-gallery aligncenter has-nested-images columns-default is-cropped wp-block-gallery-7 is-layout-flex">
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="567" data-id="566"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-1024x567.jpg" alt="" class="wp-image-566" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-1024x567.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-300x166.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-768x425.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-1536x850.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.06-AM-2048x1134.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>Editing a site config in Nginx</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM.jpg" target="_blank" rel="noreferrer noopener"><img decoding="async" loading="lazy" width="1024" height="637" data-id="565"  src="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1024x637.jpg" alt="" class="wp-image-565" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1024x637.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-300x187.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-768x478.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-1536x956.jpg 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-09-at-6.37.47-AM-2048x1274.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>Editing a site config in OLS</figcaption></figure>
+</figure>
+
+
+
+<p>I&#8217;m still not a hundred percent on board with the GUI configuration, and I wish there was an easier way to clone an existing vhost as a template, but it&#8217;s also a testament to OLS&#8217; functionality that I was able to get almost everything migrated over in a weekend.</p>
+
+
+
+<p>Space City Weather took a little longer, but it too is now running on OLS. The only thing that didn&#8217;t quite make the jump was the BigDino Discourse instance, which I shoved onto a spare EC2 reserved instance and fronted with good ol&#8217; Nginx as a reverse proxy, because that&#8217;s pretty easy and at that point I was tired of difficult things.</p>
+
+
+
+<p>And so here we are, with our new OLS-based stack. It&#8217;s been a few days and nothing&#8217;s caught on fire yet, so that&#8217;s pretty good. In a lot of ways I&#8217;m going to miss HAProxy and Varnish and Nginx; in the ten-plus years I&#8217;ve been using that stack, I&#8217;ve gotten very familiar with wandering through those applications&#8217; config files. I&#8217;ve lived with those programs and found out some neat tricks. Letting go of that makes me feel surprisingly wistful—it&#8217;s a good stack, though the complexity of managing new things was just getting out of hand.</p>
+
+
+
+<p>Hopefully OLS will keep me busy for another ten years.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Fixing Wordpress annoyances: welcome box, lowercase &#8220;p,&#8221; please, &#038; syntax highlighting</title>
+		<link>https://blog.bigdinosaur.org/fixing-wordpress-annoyances/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sat, 13 Feb 2021 23:44:34 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://blog.bigdinosaur.org/?p=370</guid>
+
+					<description><![CDATA[So, hey, it turns out that while the grass is indeed a little bit greener over here on this side of the blogging fence, Wordpress still does a couple of things I don&#8217;t like and that need correcting. This gives me an opportunity to do that most overdone of blog posts—the &#8220;here&#8217;s how to add ... <a title="Fixing Wordpress annoyances: welcome box, lowercase &#8220;p,&#8221; please, &#038; syntax highlighting" class="read-more" href="https://blog.bigdinosaur.org/fixing-wordpress-annoyances/" aria-label="More on Fixing Wordpress annoyances: welcome box, lowercase &#8220;p,&#8221; please, &#038; syntax highlighting">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large is-resized"><img decoding="async" loading="lazy" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/bigdino-wordpress-login-notext.png" alt="" class="wp-image-513" width="200" height="200"/></figure></div>
+
+
+
+<p>So, hey, it turns out that while the grass is indeed a little bit greener over here on this side of the blogging fence, Wordpress still does a couple of things I don&#8217;t like and that need correcting. This gives me an opportunity to do that most overdone of blog posts—the &#8220;here&#8217;s how to add $THING to Wordpress!&#8221; post.</p>
+
+
+
+<p>There are two problems we&#8217;re going to fix: the first is Automattic&#8217;s decision to make &#8220;Wordpress&#8221; (without camel-case) always render as &#8220;WordPress&#8221; (with camel-case) no matter how the author writes the word. We&#8217;re going to undo this unwanted trademark enforcement via a must-use plugin.</p>
+
+
+
+<p>The second problem we&#8217;re going to fix is the block editor&#8217;s &#8220;Welcome Guide&#8221; popover, and its insistence at re-appearing even after being dismissed. The damn thing comes back every time I create a new post in a new browser window—I assume because for whatever reason its dismissal is recorded not in an actual site preference, but in a cookie or something. So we&#8217;re going to banish it permanently via another must-use plugin.</p>
+
+
+
+<p>And then, since we&#8217;re already going to make a couple of must-use plugins, we&#8217;ll make one more—this one will add <a href="https://prismjs.com/">PrismJS-based syntax highlighting</a> to Wordpress. Which I will be typing with a lowercase &#8220;p.&#8221;</p>
+
+
+
+<span id="more-370"></span>
+
+
+
+<h3 class="wp-block-heading">Plugins, not functions.php modifications</h3>
+
+
+
+<p>We&#8217;re going to be adding our three bits of functionality as plugins—more specifically, as special plugins called &#8220;must-use plugins.&#8221; A must-use plugin is automatically loaded by Wordpress before normal plugins and cannot be disabled; must-use plugins are also displayed on their own page, rather than cluttering up the main plugin list. There are some downsides to must-use plugins, which you can read about on the <a href="https://wordpress.org/support/article/must-use-plugins/">must-use plugin documentation page</a>, but none of those downsides apply to what we&#8217;re going to be doing.</p>
+
+
+
+<p>Ah, but, you might ask, why use plugins at all? Can&#8217;t we just append whatever we want into <a href="https://codex.wordpress.org/Functions_File_Explained">our theme&#8217;s <code>functions.php</code> file</a>? Well, we could—but there are some very good reasons not to. I&#8217;ll quote <a href="https://premium.wpmudev.org/blog/why-you-shouldnt-use-functions-php/">the good folks over at wpmudev</a>:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>At the core of WordPress lies a simple&nbsp;principle: design and functionality should (whenever possible) be clearly separated.</p><p>That is why we have themes&nbsp;and plugins; ostensibly, themes are solely responsible for design and plugins are solely responsible for functionality. One should be able to switch themes without affecting functionality, and one should be able to deactivate plugins without affecting the design.<br><br>&#8230;<br><br>If you understand what <em>functions.php</em> is for (functionality strictly related to a particular theme), you should be able to figure out what it&nbsp;<em>isn’t </em>for.</p><cite><br>Alex Stine &amp;&nbsp; Martin Aranovitch</cite></blockquote>
+
+
+
+<p>Since we&#8217;re going to be altering core functionality—specifically, neutering the Wordpress camel-case override and killing the block editor welcome box—plugins are the way to go. And while syntax highlighting is arguably something that should indeed vary from theme to theme, we&#8217;re <em>already</em> going to be making two plugins, so doing a third one is a matter of convenience.</p>
+
+
+
+<h3 class="wp-block-heading">I&#8217;ll say &#8220;Wordpress&#8221; if I want &amp; you can&#8217;t stop me</h3>
+
+
+
+<p>The first thing to do is to get Automattic&#8217;s branding decisions out of my blog. Wordpress began automatically applying camel-case to its name with this WP core change <a href="https://core.trac.wordpress.org/changeset/14996">all the way back in 2010</a>. Fortunately, unwinding this unwanted feature just requires a bit of php.</p>
+
+
+
+<p>I&#8217;m going to use Tom Lany&#8217;s &#8220;<a href="https://wordpress.org/plugins/remove-wordpress-to-wordpress-filter/">Remove WordPress to Wordpress filter</a>&#8221; plugin, except instead of installing it as a normal plugin via the WP interface, I&#8217;m going to install it as a must-use plugin via the command line.</p>
+
+
+
+<p>Must-use plugins live in a different directory from regular plugins—instead of <code>wp-content/plugins</code>, they go in <code>wp-content/mu-plugins</code>. If you don&#8217;t have a <code>mu-plugins</code> directory, now&#8217;s the time to create it.</p>
+
+
+
+<p>Then, create a php file inside of <code>mu-plugins</code>. I called my php file <code>lowercasepress.php</code>, but you can call yours whatever you&#8217;d like.</p>
+
+
+
+<p>Inside it, paste the contents of the php file inside Tom Lany&#8217;s plugin package:</p>
+
+
+
+<pre class="wp-block-code lang-php"><code>&lt;?php
+/*
+Plugin Name: Remove Wordpress to WordPress filter
+Plugin URI: https://tomlany.net/code/
+Description: This turns off the default filter that changes all instances of "Wordpress" to "WordPress".
+Version: 1.3
+Author: Tom Lany
+Author URI: https://tomlany.net/
+License: GPLv2 or later
+*/
+
+/* For more information about this plugin, see the readme.txt file included with the download package. */
+
+foreach ( array( 'the_content', 'the_title', 'wp_title', 'comment_text' ) as $filter ) {
+	$priority = has_filter( $filter, 'capital_P_dangit' );
+	if ( $priority !== FALSE ) {
+		remove_filter( $filter, 'capital_P_dangit', $priority );
+	}
+}
+
+?&gt;</code></pre>
+
+
+
+<p>Save the file, and either reload Wordpress to have it take effect immediately, or continue on with our second plugin.</p>
+
+
+
+<h3 class="wp-block-heading">Begone forever, block editor welcome box</h3>
+
+
+
+<p>The &#8220;Welcome to the block editor!&#8221; popover was informative the very first time I saw it, but its insistence on appearing every time I logged in from a different browser or in incognito mode quickly turned it into a nuisance. Wordpress enthusiast Andrew Duthie felt the same way, since he wrote <a href="https://github.com/aduth/wp-disable-nux">an excellent simple plugin</a> to prevent the popover from ever showing up ever again.</p>
+
+
+
+<p>We&#8217;re going to do the exact same thing with Andrew&#8217;s plugin as we did with Tom&#8217;s: stick its php file directly into our <code>wp-content/mu-plugins</code> directory. Here&#8217;s the code:</p>
+
+
+
+<pre class="wp-block-code lang-php"><code>&lt;?php
+
+/**
+ * Plugin Name: Disable NUX
+ * Plugin URI:  https://github.com/aduth/wp-disable-nux/
+ * Description: Disables "New User Experience" guides.
+ * Version:     1.1.0
+ * Author:      Andrew Duthie
+ * Author URI:  https://andrewduthie.com
+ * License:     GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+function dn_enqueue_scripts() {
+    wp_add_inline_script(
+        'wp-edit-post',
+        'wp.data.select( "core/edit-post" ).isFeatureActive( "welcomeGuide" ) &amp;&amp; wp.data.dispatch( "core/edit-post" ).toggleFeature( "welcomeGuide" );'
+    );
+}
+add_action( 'admin_enqueue_scripts', 'dn_enqueue_scripts' );</code></pre>
+
+
+
+<p>Save the file and reload Wordpress to have it start working.</p>
+
+
+
+<h3 class="wp-block-heading">Syntax highlighting with PrismJS</h3>
+
+
+
+<p>Syntax highlighting makes me happy, so let&#8217;s get that set up. There are a few different syntax highlighter choices and a whole mess of different installation options, but we&#8217;re going to stick PrismJS (because I&#8217;m comfy with it and have used it before).</p>
+
+
+
+<p>There&#8217;s an argument to be made that because syntax highlighting is probably something you want to vary with your theme, that any code to enable syntax highlighting should be added via editing a child theme&#8217;s <code>functions.php</code>. But, hey, we&#8217;re already making mu-plugins. Let&#8217;s make one more.</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><a href="https://prismjs.com/"><img decoding="async" loading="lazy" width="1024" height="443" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-1024x443.png" alt="" class="wp-image-390" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-1024x443.png 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-300x130.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-768x332.png 768w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-1536x664.png 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.31.12-PM-2048x885.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption>The PrismJS download page</figcaption></figure>
+
+
+
+<p>The first thing to do is to grab a copy of PrismJS with the color scheme you want and the languages that you think you&#8217;ll need highlighted. You can start that process directly on the PrismJS homepage, and it&#8217;ll take you to a long list of different lexers. Pick what you want, and then download both the resulting Javascript and CSS files and place them on your server somewhere that Wordpress can see. (I created a <code>prism</code> directory immediately off of the Wordpress webroot, but you can put them wherever you feel is appropriate if that doesn&#8217;t work for you.)</p>
+
+
+
+<p>Once the two files are in place, it&#8217;s time to actually create the plugin. I&#8217;ve cribbed from Jake Pfohl&#8217;s <a href="https://startblogging101.com/how-to-add-prism-js-syntax-highlighting-wordpress/">excellent (and much more comprehensive) post</a> over at Start Blogging 101—using his method, PrismJS highlighting will be applied to any post with the tag &#8220;code&#8221; applied to it. This will save some bandwidth by not loading any of the highlighting CSS or JS for posts that don&#8217;t have any code blocks in them. Just make sure to remember to tag your code posts with &#8220;code&#8221; so they <em>do</em> get highlighted!</p>
+
+
+
+<p>If you&#8217;re still following along with this implementation, create a file named <code>prism-syntax-highlighting.php</code> and paste the following inside of it:</p>
+
+
+
+<pre class="wp-block-code lang-php"><code>&lt;?php
+
+/**
+* Plugin Name: Quick Prism.JS plugin
+* Description: Adds Prism.JS-based syntax highlighting to any post with the "code" tag. Adapted from this &lt;a href="https://startblogging101.com/how-to-add-prism-js-syntax-highlighting-wordpress/"&gt;Start Blogging 101 post&lt;/a&gt;.
+* Author: Jake Pfohl
+* Version: 0.1
+*/
+
+/* Your code goes below here. */
+function add_prism() {
+
+    if ( is_single() &amp;&amp; has_tag( 'code' ) ) {
+        
+        // Register prism.css file
+        wp_register_style(
+            'prismCSS', // handle name for the style 
+            '/prism/prism.css' // location of the prism.css file
+        );
+
+        // Register prism.js file
+        wp_register_script(
+            'prismJS', // handle name for the script 
+            '/prism/prism.js' // location of the prism.js file
+        );
+
+        // Enqueue the registered style and script files
+        wp_enqueue_style('prismCSS');
+        wp_enqueue_script('prismJS');
+
+    }
+}
+add_action('wp_enqueue_scripts', 'add_prism');
+
+/* Your code goes above here. */
+
+?&gt;</code></pre>
+
+
+
+<p>Once you&#8217;re actually creating posts with code blocks in them, you specify the highlighting language by selecting the code block, going to its &#8220;Advanced&#8221; settings, and filling in the desired language in the &#8220;Additional CSS class(es)&#8221; box, prefaced by &#8220;<code>lang-</code>&#8220;. (The block above has <code>lang-php</code> specified.) For a complete list of language identifiers used by PrismJS, <a href="https://prismjs.com/#supported-languages">see this page</a>.</p>
+
+
+
+<p>And that&#8217;s it! Refresh your Wordpress dashboard and check the plug-ins menu. You should see your normal plugins listed first, and then a new page showing the must-use plugins separately:</p>
+
+
+
+<figure class="wp-block-gallery columns-2 is-cropped wp-block-gallery-9 is-layout-flex"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM.png"><img decoding="async" loading="lazy" width="2210" height="1558" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM.png" alt="" data-id="386" data-link="https://blog.bigdinosaur.org/?attachment_id=386#main" class="wp-image-386" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM.png 2210w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM-300x211.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM-1024x722.png 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM-768x541.png 768w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM-1536x1083.png 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.26.49-PM-2048x1444.png 2048w" sizes="(max-width: 2210px) 100vw, 2210px" /></a><figcaption class="blocks-gallery-item__caption">These are the normal plugins&#8230;</figcaption></figure></li><li class="blocks-gallery-item"><figure><a href="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM.png"><img decoding="async" loading="lazy" width="2210" height="1558" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM.png" alt="" data-id="387" data-full-url="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM.png" data-link="https://blog.bigdinosaur.org/?attachment_id=387#main" class="wp-image-387" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM.png 2210w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM-300x211.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM-1024x722.png 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM-768x541.png 768w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM-1536x1083.png 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-13-at-5.28.57-PM-2048x1444.png 2048w" sizes="(max-width: 2210px) 100vw, 2210px" /></a><figcaption class="blocks-gallery-item__caption">&#8230;and these are the must-use plugins.</figcaption></figure></li></ul></figure>
+
+
+
+<p>And keeping things organized like this makes me happy.</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/fixing-wordpress-annoyances-welcome-box-lowercase-p-please-syntax-highlighting/1843"><em>Discuss this post on the BigDinosaur forums</em> <span class="dashicons dashicons-format-chat"></span></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Ah, Wordpress, we meet again</title>
+		<link>https://blog.bigdinosaur.org/ah-wordpress-we-meet-again/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Thu, 11 Feb 2021 02:00:26 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://blog.bigdinosaur.org/?p=353</guid>
+
+					<description><![CDATA[For all my bitching about Wordpress as my personal blogging platform, I don&#8217;t think I ever actually ended up using it. I went from Grey Matter to Octopress to Ghost to a pure static site, and I thought I&#8217;d stay that way. I thought we were done with change. And yet, here we are. On ... <a title="Ah, Wordpress, we meet again" class="read-more" href="https://blog.bigdinosaur.org/ah-wordpress-we-meet-again/" aria-label="More on Ah, Wordpress, we meet again">Read more</a>]]></description>
+										<content:encoded><![CDATA[<div class="wp-block-image">
+<figure class="alignleft size-large"><img decoding="async" loading="lazy" width="200" height="199" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Gutenberg-logo.png" alt="" class="wp-image-355" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Gutenberg-logo.png 200w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Gutenberg-logo-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px" /></figure></div>
+
+
+<p>For all my bitching about Wordpress as my personal blogging platform, I don&#8217;t think I ever actually ended up using it. I went from Grey Matter to Octopress to Ghost to a pure static site, and I thought I&#8217;d stay that way. I thought we were done with change.</p>
+
+
+
+<p>And yet, here we are. On Wordpress.</p>
+
+
+
+<p>How the hell did we get here?</p>
+
+
+
+<span id="more-353"></span>
+
+
+
+<p>I stayed away from Wordpress because I use Wordpress at work. I know its flaws and its grossness. I know the evil dark php heart lurking within. And I know how complex it is—Wordpress is more or less the Microsoft Word of blogging platforms. Odds are you&#8217;re never going to use a tenth of what Microsoft Word has to offer—odds are you just need to write a report or a letter or something. It always felt like overkill.</p>
+
+
+
+<p>Other blogging platforms were so <em>neat</em> and <em>cool</em>. Octopress was all shiny and Ruby and fast and rewardingly complex—but ultimately it was just a theme and some automation on top of Jekyll, and it didn&#8217;t do what I really wanted.</p>
+
+
+
+<p>Ghost, I thought, would be the coolest thing—it was made of node.js and therefore self-hosting it automatically carried a lot of geek cred, but Ghost never quite became what I wanted. There were always a couple of things that it just didn&#8217;t quite do. Variable length excerpts with formatting was a huge one. Non-hacky image layout was another. And then, when some neat new features I was interested in began to finally appear, the theme I was using stopped working with the new versions of Ghost that had the features I wanted.</p>
+
+
+
+<p>And through it all, Wordpress was like, &#8220;Hey, I can do all this stuff already.&#8221;</p>
+
+
+
+<p>Then along came the block editor—the editor formerly known as Gutenberg—and I knew it was time.</p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-11 is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="733" height="551" data-id="356"  src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/gutenberg.png" alt="" class="wp-image-356" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/gutenberg.png 733w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/gutenberg-300x226.png 300w" sizes="(max-width: 733px) 100vw, 733px" /></figure>
+</figure>
+
+
+
+<p>It&#8217;s clean. It&#8217;s fast. I dig how blocks work. Creating reusable blocks is fast and easy. The text entry experience is very WSYWIG and adding images and pullquotes and other cool stuff is super easy.</p>
+
+
+
+<p>The other thing that brought me back to Wordpress was <a href="https://generatepress.com/">Generatepress</a>, a lightweight theme that can be customized in more or less infinite ways. A reader over on <a href="https://spacecityweather.com/">Space City Weather</a> suggested it, and I had such a positive experience adapting it for use over there that I decided to put it on my personal blog. It made recreating my old comfortable Ghost theme super-easy.</p>
+
+
+
+<p>Wordpress gets a bad rap—it gets called out (incorrectly) for being super insecure, or slow, or overly complicated. It can be all of those things—if you run wild with plugins, and if your hosting situation is sub-par, or if you over-complicate things. But Wordpress is not inherently insecure (no more than any other application, anyway), or inherently slow, or inherently complicated.</p>
+
+
+
+<p>In fact, after a couple of decades of blogging on other platforms, it feels just right.</p>
+
+
+
+<p><em><a href="https://discourse.bigdinosaur.org/t/ah-wordpress-we-meet-again/1841">Discuss this post on the BigDinosaur forums</a></em> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>An updated look at the BigDino web stack</title>
+		<link>https://blog.bigdinosaur.org/an-updated-look-at-the-bigdino-web-stack/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sun, 06 Jan 2019 13:00:00 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[haproxy]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[varnish]]></category>
+		<guid isPermaLink="false">https://wpblog.bigdinosaur.org/?p=6</guid>
+
+					<description><![CDATA[It&#8217;s been some time since I&#8217;ve done a good ol&#8217; infrastructure post, and the Bigdinosaur.org web stack has evolved a bit over the course of 2018. We&#8217;re still using HAProxy, Varnish, and Nginx, but the way these applications connect and how they communicate is very different from my 2017-era config. Let&#8217;s dive in! The front ... <a title="An updated look at the BigDino web stack" class="read-more" href="https://blog.bigdinosaur.org/an-updated-look-at-the-bigdino-web-stack/" aria-label="More on An updated look at the BigDino web stack">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large"><img decoding="async" loading="lazy" width="200" height="134" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/webbbbb-2.jpg" alt="" class="wp-image-301"/></figure></div>
+
+
+
+<p>It&#8217;s been some time since I&#8217;ve done a good ol&#8217; infrastructure post, and the Bigdinosaur.org web stack has evolved a bit over the course of 2018. We&#8217;re still using HAProxy, Varnish, and Nginx, but the way these applications connect and how they communicate is very different from my 2017-era config. Let&#8217;s dive in!</p>
+
+
+
+<span id="more-6"></span>
+
+
+
+<h3 class="wp-block-heading">The front line: HAProxy</h3>
+
+
+
+<p><a href="http://www.haproxy.org/">HAProxy</a>&nbsp;is a layer 7-aware reverse proxy and load balancer. It sits at the very top of the web stack and it&#8217;s the thing you as a visitor first interact with. I&#8217;m using HAProxy primarily for SSL termination for all of the sites hosted on the BigDino web server—in other words, whether you&#8217;re connecting to&nbsp;<a href="https://fangs.ink/">Fangs</a>,&nbsp;<a href="https://www.chroniclesofgeorge.com/">the Chronicles of George</a>, this blog, or whatever else I host, you&#8217;re talking to HAProxy first.</p>
+
+
+
+<p>The HAProxy configuration I&#8217;m using is as follows:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>global
+	log /dev/log	local0
+	log /dev/log	local1 notice
+	chroot /var/lib/haproxy
+	stats timeout 30s
+	user haproxy
+	group haproxy
+	daemon
+	nbthread 4
+	tune.ssl.cachesize 1000000
+
+	ca-base &#91;redacted]
+	crt-base &#91;redacted]
+
+	ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
+	ssl-default-bind-options no-sslv3 no-tlsv10 no-tlsv11
+	ssl-dh-param-file &#91;redacted]/dhparam.pem
+
+defaults
+	log	global
+	mode    http
+	option  tcpka
+	option  dontlognull
+	option  httplog
+	option  tcp-smart-connect
+	option  splice-auto
+	timeout connect 5000
+	timeout client  50000
+	timeout server  50000
+	errorfile 400 /etc/haproxy/errors/400.http
+	errorfile 403 /etc/haproxy/errors/403.http
+	errorfile 408 /etc/haproxy/errors/408.http
+	errorfile 500 /etc/haproxy/errors/500.http
+	errorfile 502 /etc/haproxy/errors/502.http
+	errorfile 503 /etc/haproxy/errors/503.http
+	errorfile 504 /etc/haproxy/errors/504.http
+
+frontend unifiedfront
+	bind *:80,:::80 v6only tfo
+	## HTTP to HTTPS redirect
+	acl plain ssl_fc,not
+	http-request redirect scheme https if plain
+	bind *:443,:::443 v6only tfo ssl crt &#91;several certificates redacted] ecdhe secp384r1 alpn h2,http/1.1
+	default_backend tovarnish
+
+backend tovarnish
+	## Set real IP if cloudflare
+	acl cloudy src 103.21.244.0/22 103.22.200.0/22 103.31.4.0/22 104.16.0.0/12 108.162.192.0/18 131.0.72.0/22 141.101.64.0/18 162.158.0.0/15 172.64.0.0/13 173.245.48.0/20 188.114.96.0/20 190.93.240.0/20 197.234.240.0/22 198.41.128.0/17 2400:cb00::/32 2405:b500::/32 2606:4700::/32 2803:f800::/32 2c0f:f248::/32 2a06:98c0::/29	
+	http-request set-header X-Client-IP %&#91;req.hdr(CF-Connecting-IP)] if cloudy
+	http-request set-header X-Client-IP %&#91;src] if !cloudy
+	http-request add-header X-Forwarded-Proto https
+	server varnish /dev/varnish-listen.sock check</code></pre>
+
+
+
+<p>(If you&#8217;re curious about any of the specific config options, you can look them up in the&nbsp;<a href="https://cbonte.github.io/haproxy-dconv/1.9/configuration.html">HAProxy documentation</a>.)</p>
+
+
+
+<p>Beyond SSL termination, HAProxy is also listening on TCP port 80 for regular HTTP requests, and redirecting them to HTTPS bef0re they get down to the web server.</p>
+
+
+
+<p>As of version 1.9, HAProxy support downstream communication via unix domain sockets, and one of my goals with the latest configuration was to go UDS end-to-end for the entire stack. This presents some configuration challenges, since going UDS means that you have to be particularly observant about keeping track of client IP addresses.</p>
+
+
+
+<p>Along those lines, observant readers might notice that the&nbsp;<code>backend</code>&nbsp;configuration section has an extra ACL and does some header voodoo. I want to specifically capture the client&#8217;s real IP address so that the lower layers of the stack can see it (and, where appropriate, log it). Rather than trusting a provided&nbsp;<code>X-Forwarded-For</code>&nbsp;header, I&#8217;m setting my own.</p>
+
+
+
+<p>Because BigDino uses Cloudflare as a CDN for a couple of sites, I&#8217;m extracting the contents of the Cloudflare-provided&nbsp;<code>CF-Connecting-IP</code>&nbsp;header on traffic that originates from Cloudflare&#8217;s IP addresses; for traffic originating everywhere else, I&#8217;m setting the IP address to what HAProxy sees as the client&#8217;s source. The reason for doing this will be explained more thoroughly in the next section, but the quick explanation is that Varnish has changed its&nbsp;<code>X-Forwarded-For</code>&nbsp;behavior and I&#8217;m working around that change.</p>
+
+
+
+<p>But why have a distinct layer for SSL termination? Why not let this happen at the web server layer like most howtos recommend?</p>
+
+
+
+<p>Ahhh, that is indeed a good question. The answer is that by sticking an SSL terminator at the very top of the stack, I can&nbsp;<em>also</em>&nbsp;use a caching layer.</p>
+
+
+
+<h3 class="wp-block-heading">Gimme the cache: Varnish</h3>
+
+
+
+<p>HAProxy sends traffic down the stack to&nbsp;<a href="https://varnish-cache.org/intro/index.html#intro">Varnish</a>, a fast caching reverse proxy. Varnish holds objects in RAM and serves them up much faster than the actual web servers and applications running at lower layers in the stack, and makes a huge overall contribution to site performance.</p>
+
+
+
+<p>But Varnish can&#8217;t (easily) cache encrypted traffic, because encrypted traffic looks like random garbage. Traditionally, if you wanted to use cache, you had to either forego encryption or get creative; I chose to get creative and simply break the web stack into layers so that I could have SSL for everything and also cache for everything.</p>
+
+
+
+<p>Varnish&#8217;s configuration looks like this:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code># Combined VCL for all hosts on this server
+###########################################
+
+# We're using unix sockets, so we need to declare that we're using VCL 4.1
+vcl 4.1;
+
+# Backend definition
+backend default {
+	.path = "/var/run/nginx-default.sock";
+	.connect_timeout = 600s;
+	.first_byte_timeout = 600s;
+	.between_bytes_timeout = 600s;
+	.max_connections = 800;
+}
+
+# HTTP/2 backend
+backend h2 {
+	.path = "/var/run/nginx-h2.sock";
+	.connect_timeout = 600s;
+	.first_byte_timeout = 600s;
+	.between_bytes_timeout = 600s;
+	.max_connections = 800;
+}
+
+# Import Varnish Standard Module so I can serve custom error pages
+import std;
+
+sub vcl_recv {
+
+	# Because we're using unix domain sockets for basically everything, we  
+	# need to work around Varnish's default behavior of appending "client.ip" 
+	# (which will always be 0.0.0.0 with UDS) to X-Forwarded-For. Since 
+	# HAProxy is sending us the real IP in X-Client-IP and it's vetted against
+	# Cloudflare's IP list, we can just toss whatever's in X-Forwaded-For
+	# and re-set it from the known-good X-Client-IP. Whew.
+  
+	unset req.http.X-Forwarded-For;
+	set req.http.X-Forwarded-For = req.http.X-Client-IP;
+
+	if (req.method == "POST") {
+		return (pass);
+	}
+
+	if (req.http.upgrade ~ "(?i)websocket") {
+		return (pipe);
+	}
+
+	# Send HTTP/2 requests to the proper backend
+	if (req.http.protocol ~ "HTTP/2") {
+		set req.backend_hint = h2;
+	}
+	else {
+		set req.backend_hint = default;
+	}
+
+	# No PHP for Bigdino, Fangs, and CoG
+	if (req.http.host ~"(chroniclesofgeorge.com|bigdinosaur.org|fangs.ink)") {
+		if (req.url ~ "\.php(\?.*)?$") {
+			return (synth(700));
+		}
+	}
+
+	# Cache only static assets in Discourse assets dir &amp; pass everything else
+	if (req.http.host ~"discourse.bigdinosaur.org") {
+		if (!(req.url ~ "(^/uploads/|^/assets/|^/user_avatar/)" )) {							  
+			return (pass);
+		}
+	}
+
+	# Ignore traffic to Ghost blog amin stuff
+	if (req.http.host ~"blog.bigdinosaur.org") {
+		if (req.url ~ "^/(api|signout)") {
+			return (pass);
+		}
+		elseif (req.url ~ "^/ghost" &amp;&amp; (req.url !~ "^/ghost/(img|css|fonts)")) {
+			return (pass);
+		}
+	}
+
+	# Remove cookies from things that should be static, if any are set
+	if (req.url ~ "\.(png|gif|jpg|swf|css|js|ico|css|js|woff|ttf|eot|svg)(\?.*|)$") {
+		unset req.http.Cookie;
+		return (hash);
+	}
+	if (req.url ~ "^/images") {
+		unset req.http.cookie;
+		return (hash);
+	}
+
+	# Remove Google Analytics and Piwik cookies so pages can be cached
+	if (req.http.Cookie) {
+		set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(__&#91;a-z]+|has_js)=&#91;^;]*", "");
+		set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(_pk_(ses|id)&#91;\.a-z0-9]*)=&#91;^;]*", "");
+	}
+	if (req.http.Cookie == "") {
+		unset req.http.Cookie;
+	}
+}
+
+sub vcl_pass {
+	set req.http.connection = "close";
+}
+
+sub vcl_pipe {
+	if (req.http.upgrade) {
+		set bereq.http.upgrade = req.http.upgrade;
+	}
+}
+
+sub vcl_backend_response {
+	set beresp.http.x-url = bereq.url;
+	set beresp.http.X-Host = bereq.http.host;
+
+	# Strip cookies before static items are inserted into cache.
+	if (bereq.url ~ "\.(png|gif|jpg|swf|css|js|ico|html|htm|woff|eof|ttf|svg)$") {
+		unset beresp.http.set-cookie;
+	}
+	if (bereq.http.host ~ "www.chroniclesofgeorge.com") {
+		set beresp.ttl = 1008h;
+	}
+	else {
+		if (beresp.ttl &lt; 24h) {
+			if (beresp.http.Cache-Control ~ "(private|no-cache|no-store)") {
+				set beresp.ttl = 60s;
+			}
+			else {
+				set beresp.ttl = 24h;
+			}
+		}
+	}
+}
+
+sub vcl_deliver {
+
+	# Display hit/miss info
+	if (obj.hits &gt; 0) {
+		set resp.http.X-Cache = "HIT";
+	}
+	else {
+		set resp.http.X-Cache = "MISS";
+	}
+	# Remove the Varnish header
+	unset resp.http.X-Varnish;
+	unset resp.http.Via;
+	unset resp.http.X-Powered-By;
+	unset resp.http.Server;
+
+	# HTTP headers for all sites
+	set resp.http.X-Are-Dinosaurs-Awesome = "HELL YES";
+	set resp.http.Server = "on fire";
+	set resp.http.X-Hack = "don't hack me bro";
+	set resp.http.Referrer-Policy = "strict-origin-when-cross-origin";
+	set resp.http.Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload;";
+	set resp.http.X-Content-Type-Options = "nosniff";
+	set resp.http.X-XSS-Protection = "1; mode=block";
+	set resp.http.X-Frame-Options = "DENY";
+	set resp.http.Expect-CT = {"Expect-CT: max-age=0; report-uri="https://bigdino.report-uri.io/r/default/ct/reportOnly""};
+
+	# Site-specific HTTP headers
+	if (req.http.host ~ "fangs.ink" ) {
+		set resp.http.Content-Security-Policy = "default-src https:; img-src 'self' https: data:; object-src 'none'; script-src 'self' https://analytics.bigdinosaur.net https://ajax.googleapis.com 'unsafe-inline'; font-src 'self'; upgrade-insecure-requests; frame-ancestors 'none'";
+	}
+
+	if (req.http.host ~ "www.bigdinosaur.org" ) {
+		set resp.http.Content-Security-Policy = "default-src https:; img-src 'self' https: data:; object-src 'none'; script-src 'self' https://analytics.bigdinosaur.net https://ajax.googleapis.com 'unsafe-inline'; font-src 'self'; upgrade-insecure-requests; frame-ancestors 'none'";
+	}
+
+	if (req.http.host ~ "blog.bigdinosaur.org" ) {
+		set resp.http.Content-Security-Policy = "default-src https:; style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com/; img-src 'self' https: data:; object-src 'none'; script-src 'self' https://analytics.bigdinosaur.net https://code.jquery.com/ 'unsafe-inline' 'unsafe-eval' ; font-src 'self' https://maxcdn.bootstrapcdn.com/; upgrade-insecure-requests; frame-ancestors 'none'";
+	}
+
+	if (req.http.host ~ "www.chroniclesofgeorge.com" ) {
+		set resp.http.Content-Security-Policy = "default-src https:; style-src 'self'; img-src 'self' https: data:; object-src 'none'; script-src 'self' https://analytics.bigdinosaur.net https://ajax.googleapis.com 'unsafe-inline'; font-src 'self'; upgrade-insecure-requests; frame-ancestors 'none'";
+	}
+
+	# Remove custom error header
+	unset resp.http.MyError;
+	return (deliver);
+}
+
+sub vcl_synth {
+
+	if (resp.status == 700) {
+		set resp.status = 404;
+		set resp.reason = "Not Found";
+		synthetic ( {"Ain't no PHP on this server so fuck off with that"});
+		return(deliver);
+	}
+
+	if (resp.status == 405) {
+		set resp.http.Content-Type = "text/html; charset=utf-8";
+		set resp.http.MyError = std.fileread("/var/www/error/varnisherr.html");
+		synthetic(resp.http.MyError);
+		return(deliver);
+	}
+}</code></pre>
+
+
+
+<p>Before we break that down, though, I&#8217;ve also modified Varnish&#8217;s startup options so that it listens on a unix socket rather than a TCP port. Since I&#8217;m on Ubuntu 16.04 server, that means setting a&nbsp;<code>systemctl</code>&nbsp;override, which you can do with the following command:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>$ sudo systemctl edit varnish.service</code></pre>
+
+
+
+<p>This brings up an empty&nbsp;<code>nano</code>&nbsp;edit window. I&#8217;ve added the following three lines, which unset the Varnish service&#8217;s&nbsp;<code>ExecStart</code>&nbsp;parameter and replace it with a new line specifying a listen socket and enabling HTTP/2:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>&#91;Service]
+ExecStart=
+ExecStart=/usr/sbin/varnishd -a /var/lib/haproxy/dev/varnish-listen.sock,group=haproxy,mode=660 -T localhost:6082 -f /etc/varnish/default.vcl -S &#91;redacted] -s malloc,1G -p feature=+http2</code></pre>
+
+
+
+<p>The one wrinkle here is that HAProxy starts itself in a chroot jail, and in order to use UDS, I have to have Varnish create its listen socket inside of HAProxy&#8217;s chroot jail and also make sure the socket is created with appropriate permissions. (Figuring out this specific issue took me a lot longer than it should have.)</p>
+
+
+
+<p>Now, looking at the Varnish VCL, you&#8217;ll notice it starts off with two back-ends—this is how I&#8217;m supporting HTTP/2 down through the stack. The first backend is for non-HTTP/2 traffic and the second is for HTTP/2. Varnish makes the call on what traffic to send where with this bit of code in my&nbsp;<code>vcl_recv</code>&nbsp;sub:</p>
+
+
+
+<pre class="wp-block-code lang-c"><code># Send HTTP/2 requests to the proper backend
+	if (req.http.protocol ~ "HTTP/2") {
+		set req.backend_hint = h2;
+	}
+	else {
+		set req.backend_hint = default;
+	} </code></pre>
+
+
+
+<p>The rest of the config is mostly unremarkable. I&#8217;ve elected to use Varnish rather than HAProxy to set global and site-specific HTTP headers, since it&#8217;s just a hell of a lot easier to do it at the Varnish level. For the&nbsp;<code>Expect-CT</code>&nbsp;<a href="https://scotthelme.co.uk/ct-is-coming/">certificate transparency header</a>, I&#8217;m leaning on Scott Helme&#8217;s invaluable&nbsp;<a href="https://report-uri.com/">Report URI</a>&nbsp;service.</p>
+
+
+
+<p>Since I&#8217;m also (finally) not running PHP applications on the BigDino server (with the exception of&nbsp;<a href="https://matomo.org/">Matomo</a>, which has its own analytics-specific domain, I&#8217;m also capturing any requests for PHP files and serving up a fast Varnish-synthesized 404 message. This shifts the load of answering skr1pt k1dd13s&#8217; incessant PHP bot requests into the cache layer, where there&#8217;s effectively no penalty to synthesizing up a fast error message.</p>
+
+
+
+<h3 class="wp-block-heading" id="nginx-under-all">Nginx under all</h3>
+
+
+
+<p>Below Varnish sits the actual web server: Nginx. The Nginx main configuration is mostly unremarkable:</p>
+
+
+
+<pre class="wp-block-code lang-nginx"><code>user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 1024;
+	use epoll;
+	multi_accept on;
+}
+
+http {
+	# Basic Settings
+	sendfile on;
+	tcp_nopush on;
+	tcp_nodelay on;
+	types_hash_max_size 2048;
+	server_tokens off;
+	port_in_redirect off;
+	server_name_in_redirect off;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	## Legacy SSL settings
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+	ssl_session_cache shared:SSL:10m;
+	ssl_buffer_size 4k;
+
+	# Logging Settings
+	log_format show_hosts '&#91;$time_local] $http_x_forwarded_for - $server_name: $request $status Referrer: "$http_referer" UA: "$http_user_agent"';
+	access_log /var/log/nginx/access.log show_hosts;
+	error_log /var/log/nginx/error.log error;
+
+	# Gzip Settings
+	gzip on;
+	gzip_disable "msie6";
+	gzip_min_length 1100;
+	gzip_vary on;
+	gzip_proxied any;
+	gzip_buffers 16 8k;
+	gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/rss+xml text/javascript image/  svg+xml application/x-font-ttf font/opentype application/vnd.ms-fontobject application/javascript; 
+
+	# Security stuff for size limits and buffer overflows
+	client_max_body_size  0; 
+	client_body_timeout   10;
+	client_header_timeout 10;
+	keepalive_timeout     10 10;
+	send_timeout          10;
+
+	# Websocket compatibility
+	map $http_upgrade $connection_upgrade {
+		default Upgrade;
+		''      close;
+	}
+	map $http_x_forwarded_proto $thescheme {
+		default $scheme;
+		https https;
+	}
+
+	# GeoIP stuff
+	geoip_country /usr/local/share/GeoIP/GeoIP.dat;
+	geoip_city /usr/local/share/GeoIP/GeoLiteCity.dat;
+
+	# Virtual Host Configs
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+
+	server_names_hash_bucket_size 128;
+}</code></pre>
+
+
+
+<p>The only thing I have in the&nbsp;<code>conf.d</code>&nbsp;directory is a variable definition for&nbsp;<code>php-fpm</code>&nbsp;to make vhost PHP configurations a little easier to read:</p>
+
+
+
+<pre class="wp-block-code lang-nginx"><code>upstream php7-fpm-sock {
+	server unix:/var/run/php/php7.3-fpm.sock;
+}</code></pre>
+
+
+
+<p>There are a bunch of vhosts running on the server, all of which share similar configurations. The vhost file for this blog, for example, looks like this:</p>
+
+
+
+<p>There are a bunch of vhosts running on the server, all of which share similar configurations. The vhost file for this blog, for example, looks like this:</p>
+
+
+
+<pre class="wp-block-code lang-nginx"><code>server {
+	server_name  blog.bigdinosaur.org;
+	listen unix:/var/run/nginx-default.sock;
+	listen unix:/var/run/nginx-h2.sock http2;
+	root /var/www-10ghost/;
+	index index.js index.html;
+	autoindex off; 
+
+	location = /.well-known/security.txt { allow all; }
+	location = /.well-known/security.txt.sig { allow all; }
+
+	location / {
+		proxy_pass http://localhost:2368/;
+		proxy_set_header Host $host;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "Upgrade";
+	}
+}</code></pre>
+
+
+
+<p>The important bits here are the two listen sockets; the second one, with HTTP/2 enabled, is the one that gets used for pretty much everything. Nginx fortunately doesn&#8217;t need to be in charge of SSL/TLS in order for it to speak HTTP/2 to clients, which is how this blog shows up as fully HTTP/2.</p>
+
+
+
+<p>Annoyingly,&nbsp;<a href="https://ghost.org/">Ghost&#8217;s</a>&nbsp;support for UDS is&nbsp;<a href="https://forum.ghost.org/t/ghost-cli-add-unix-socket-support-for-speed-and-performance/758">a little fiddly</a>, so I still have to use a TCP port to proxy blog requests. I hope at some point in the future that the Ghost devs will implement proper UDS support, but I understand it&#8217;s not a huge priority.</p>
+
+
+
+<p>And that&#8217;s the BigDino web stack, as of the beginning of 2019!</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/an-updated-look-at-the-bigdino-web-stack/1603"><em>Discuss this post on the BigDinosaur forums</em></a> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Pronunciation of names and places in C.J. Cherryh’s “Foreigner” books</title>
+		<link>https://blog.bigdinosaur.org/pronunciation-of-names-and-places-in-c-j-cherryhs-foreigner-books/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Mon, 09 Jul 2018 12:00:00 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">https://wpblog.bigdinosaur.org/?p=15</guid>
+
+					<description><![CDATA[Author&#160;C. J. Cherryh&#160;is one of the last great living masters of science fiction, easily on a par with&#160;Clarke,&#160;Herbert, or&#160;Wolfe. Her strength is in building worlds populated with believable humans and non-humans, and then writing those characters in such a way that the reader ends up deeply empathizing with them—even the most alien of aliens. Her ... <a title="Pronunciation of names and places in C.J. Cherryh’s “Foreigner” books" class="read-more" href="https://blog.bigdinosaur.org/pronunciation-of-names-and-places-in-c-j-cherryhs-foreigner-books/" aria-label="More on Pronunciation of names and places in C.J. Cherryh’s “Foreigner” books">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large"><img decoding="async" loading="lazy" width="300" height="201" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/foreigner.jpg" alt="" class="wp-image-299"/></figure></div>
+
+
+
+<p>Author&nbsp;<a href="https://en.wikipedia.org/wiki/C._J._Cherryh">C. J. Cherryh</a>&nbsp;is one of the last great living masters of science fiction, easily on a par with&nbsp;<a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Clarke</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Frank_Herbert">Herbert</a>, or&nbsp;<a href="https://en.wikipedia.org/wiki/Gene_Wolfe">Wolfe</a>. Her strength is in building worlds populated with believable humans and non-humans, and then writing those characters in such a way that the reader ends up deeply empathizing with them—even the most alien of aliens.</p>
+
+
+
+<p>Her best-known works are the long-running&nbsp;<a href="https://en.wikipedia.org/wiki/Alliance%E2%80%93Union_universe">Alliance-Union</a>&nbsp;novels, which taken together describe a war-filled future history epic of the expansion of humankind off of Earth and into the rest of the galaxy. However, for the past couple of decades Cherryh has been focusing on a different series altogether: the&nbsp;<a href="https://en.wikipedia.org/wiki/Foreigner_universe"><em>Foreigner</em></a>&nbsp;books.</p>
+
+
+
+<p>The series (starting with&nbsp;<em>Foreigner</em>) tells the tale of a lost human colony ship forced to take permanent refuge at far-off world populated by heretofore undiscovered aliens: the three-meter tall black-skinned atevi. Atevi don&#8217;t experience the same emotions as humans and have an innate perception of numbers that&#8217;s described as roughly analogous to the human perception of color. Humanity and atevi are similar enough that they quickly establish cordial relations, and different enough that war is inevitable.</p>
+
+
+
+<p>But I&#8217;m not going to do a whole series recap—we&#8217;d be here forever, since the series at this point consists of 19 books with at least two more to come. Instead, I want to focus on a very touchy subject, and one about which readers of the books will no doubt have very spiky feelings: pronunciation of names and places.</p>
+
+
+
+<p><strong><em>N.B.</em>&nbsp;Folks who haven&#8217;t read at least one&nbsp;<em>Foreigner</em>&nbsp;book should probably bail on this entry, because this post probably isn&#8217;t going to be super-interesting unless you&#8217;ve already got some Ragi words bouncing around in your head.</strong></p>
+
+
+
+<span id="more-15"></span>
+
+
+
+<h2 class="wp-block-heading" id="look-who-s-talking">Look who&#8217;s talking</h2>
+
+
+
+<p>Cherryh includes a pronunciation guide and limited glossary in the end of some of the books, but the primary sources of canonical pronunciation are the narrators of the two different sets of audiobooks.</p>
+
+
+
+<p>The one most familiar to readers (well, listeners) will likely be Daniel Thomas May, who narrates the&nbsp;<a href="https://www.audible.com/series?asin=B00992TEFC">Audible</a>&nbsp;versions of the audiobooks. May is outstanding with his characterizations and performance, and he&#8217;s also extraordinarily consistent in his pronunciations of a whole mess of alien words—but I&#8217;m not convinced he&#8217;s&nbsp;<em>correct</em>&nbsp;in many of his pronunciation choices.</p>
+
+
+
+<p>The narrator who gets it&nbsp;<em>right</em>, I believe, is&nbsp;<a href="https://www.loc.gov/nls/about/nls-narrators/narrator-kimberly-schraf/">Kimberly Schraf</a>. Schraf narrates the&nbsp;<a href="https://w1ww.loc.gov/nls/">National Library Service</a>&nbsp;talking book versions of the first ten titles in the series. However, the only legitimate way to listen to Schraf&#8217;s versions is to be sight-impaired, as NLS talking books are only available to sight-impaired individuals. (You can also get them by, ahem,&nbsp;<em>sailing the high seas</em>, as it were, but you&#8217;re on your own for that.)</p>
+
+
+
+<h2 class="wp-block-heading" id="specific-examples-names-and-accents">Specific examples: names and accents</h2>
+
+
+
+<p>May&#8217;s&nbsp;<strong>Banichi</strong>&nbsp;is&nbsp;<code>buh-nee'-che</code>, while Schraf&#8217;s is&nbsp;<code>bah'-nih-chee</code>. Schraf&#8217;s pronunciation mirrors the phonetic spelling given in the&nbsp;<em>Foreigner</em>&nbsp;glossary and also follows Cherry&#8217;s rules for which syllable to accent depending on vowel length. Schraf is objectively correct here, since Cherryh&#8217;s glossary is by definition canonical.</p>
+
+
+
+<p>(The differences in pronunciation on this particular one might arise from the fact that May treats the middle syllable in Banichi&#8217;s name the same as the middle syllable in Algini&#8217;s name—both long&nbsp;<code>e</code>&nbsp;sounds. On one hand, this seems like a valid alternate pronunciation, like &#8220;dayta&#8221; and &#8220;dahta,&#8221; perhaps. On the other hand, how do you pronounce the name of the nine foot tall assassin? It&#8217;s kind of like the joke with the 800 lb gorilla—&#8221;any way he wants&#8221;&#8230;)</p>
+
+
+
+<p>May&#8217;s&nbsp;<strong>Illisidi</strong>&nbsp;is&nbsp;<code>ih-lee'-sih-dee</code>, while Schraf&#8217;s is&nbsp;<code>ill-uh-see'-tee</code>. Again, at least as near as I can parse the rules, Schraf is &#8220;correct&#8221; (though correctness appears mutable, based on the glossary&#8217;s many caveats). And, again, the difference here potentially comes from the choice of vowel pronunciation—long&nbsp;<code>e</code>&nbsp;for May, short&nbsp;<code>e</code>&nbsp;for Schraf.</p>
+
+
+
+<p>May&#8217;s&nbsp;<strong>Cajeiri</strong>&nbsp;is&nbsp;<code>kah-zher-ee'</code>, while Schraf almost over-humanizes it to&nbsp;<code>kuh-jer'-ee</code>&nbsp;(cuh-Jerry!). Though May&#8217;s choice gives the name a more alien gravitas, Schraf&#8217;s much better choice follows from the canonical &#8220;Jeri-Ji&#8221; diminutive. (And here I must guess at the spelling of &#8220;Jeri-Ji,&#8221; because the only books I have with him in them are of the audio variety!) However, while I believe Schraf&#8217;s pronunciation is closer to the truth, she also makes the&nbsp;<code>j</code>&nbsp;sound overly J-like, defying the glossary&#8217;s notes that&nbsp;<code>j</code>&nbsp;is more like a midway between&nbsp;<code>ch</code>&nbsp;and&nbsp;<code>zh</code>&nbsp;(Schraf does this with&nbsp;<strong>Jago</strong>as well, giving it almost a hard&nbsp;<code>j</code>&nbsp;instead of May&#8217;s soft&nbsp;<code>zh</code>).</p>
+
+
+
+<p>The word&nbsp;<strong>paidhi</strong>&nbsp;is one of the most important words in the entire series, and May and Schraf differ fundamentally in their approaches to it. May gives it a spectacular flub, rendering it&nbsp;<code>pie-dee'</code>, with a long&nbsp;<code>i</code>&nbsp;and long&nbsp;<code>e</code>&nbsp;and a heavy accent on the second syllable. This ignores explicit guidance given in the glossary on how to pronounce the word with a palatal&nbsp;<code>h</code>. Schraf, on the other hand, follows the glossary religiously with&nbsp;<code>pite'-hee</code>—still two long vowels, but with the accent in the right place and with almost a hiss on the last syllable.</p>
+
+
+
+<p>There are many others, including vastly different takes on&nbsp;<strong>aishidi&#8217;tat</strong>&nbsp;(May:&nbsp;<code>aye-shade'-ee-taht</code>&nbsp;, Schraf:&nbsp;<code>eye'-shu-tee dad</code>),&nbsp;<strong>mecheiti</strong>&nbsp;(May:&nbsp;<code>meh-cheh-tee'</code>, Schraf&nbsp;<code>meh-chay'-tee</code>), and&nbsp;<strong>Bu&#8217;Javid</strong>&nbsp;(May:&nbsp;<code>boo-zha-veed'</code>, Schraf:&nbsp;<code>boo-jay'-vit</code>), but the thing that continually resurfaces in May v. Schraff is May&#8217;s insistence on stressing the accent on the final syllables of many words, especially if they end in an&nbsp;<code>i</code>&nbsp;sound, or if they trail a&nbsp;<code>-ma</code>&nbsp;or&nbsp;<code>-ji</code>&nbsp;suffix behind. May&#8217;s&nbsp;<strong>Atevi</strong>&nbsp;is&nbsp;<code>ah-teh-vee'</code>, while Schraf&#8217;s take is the dictionary-strict&nbsp;<code>ah'-teh-vee</code>.&nbsp;<strong>Cenedi</strong>&nbsp;is a doozy—May plays fast and loose with&nbsp;<code>sen-eh-dee'</code>, presumably choosing to interpret the opening&nbsp;<code>c</code>&nbsp;as soft in order to avoid saying the name as &#8220;Kennedy.&#8221; Shraf on the other hand goes all-in with&nbsp;<code>ken'-eh-tee</code>, basically just saying &#8220;Kennedy&#8221; with a&nbsp;<code>t</code>&nbsp;instead of a&nbsp;<code>d</code>.</p>
+
+
+
+<p>I&#8217;d guess that May&#8217;s insistence on stressing trailing&nbsp;<code>-i</code>&nbsp;sounds is a stylistic choice in order to add some recognizable &#8220;foreignness&#8221; to Ragi words. It works very well and he&#8217;s extraordinarily consistent in his adherence to the practice, but in many cases he&#8217;s elected to say a word in a demonstrably incorrect way in order to stick with it.</p>
+
+
+
+<h2 class="wp-block-heading" id="d-t-or-something-in-between">D, T, or something in between?</h2>
+
+
+
+<p>Which brings me to the second huge difference, and what might be Schraf&#8217;s only real misstep: she clings so religiously to the note in the glossary about making&nbsp;<code>d</code>&nbsp;indistinguishable from&nbsp;<code>t</code>&nbsp;that to the listener it often sounds as if she&#8217;s purposefully swapping&nbsp;<code>d</code>&nbsp;for&nbsp;<code>t</code>&nbsp;and vice versa.</p>
+
+
+
+<p>After listening to so many Schraf books, that D/T thing was the hardest adjustment to make when I got to May instead. It impacts so many important words—words that after hearing so often one way, I have a difficult time spelling correctly. To me,&nbsp;<strong>Tabini</strong>&nbsp;should always sound like it&#8217;s almost got a D in front, but May gives it a hard&nbsp;<code>T</code>.&nbsp;<strong>Damiri</strong>&nbsp;in my head should sound more like Schraf&#8217;s take, &#8220;Tamiri.&#8221; Tano, Illisidi, Tatiseigi, Bindanda, on and on and on—Schraf renders them &#8220;Dano,&#8221; &#8220;Illisiti,&#8221; &#8220;Dadiseigi,&#8221; and &#8220;Bintanta.&#8221;</p>
+
+
+
+<h2 class="wp-block-heading" id="the-human-island">The human island</h2>
+
+
+
+<p>The third is puzzling and difficult to figure out: is &#8220;Mospheira&#8221; a human word, or a Ragi one? Because May speaks it as I did when I first picked up the print version of&nbsp;<em>Foreigner</em>&nbsp;so many years ago, and the way that Schraf pronounces it in the audiobook version of&nbsp;<em>Foreigner</em>:&nbsp;<code>mos-fay'-rah</code>, with the &#8220;ph&#8221; treated as the human phoneme. But starting in&nbsp;<em>Invader</em>, Schraf switches to a very strict Ragi reading of the pronunciation (again, going by Cherryh&#8217;s glossary notes as ultimately canonical)—she says&nbsp;<code>mos-pay'-rah</code>, treating the &#8220;ph&#8221; as a separate &#8220;p&#8221; and &#8220;h&#8221; (and also treating the &#8216;h&#8217; as palatal, exactly per the dictionary, so it comes out almost with a hiss). This continues to the name of the spoken human language—May says&nbsp;<code>mos-fay-ee'</code>, cramming a whole third syllable in there, while Schraf goes with&nbsp;<code>mos'-pay</code>, two syllables and palatal.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-grab-bag-of-other-words">A grab bag of other words</h2>
+
+
+
+<p>Without opining any further, here are some additional words and their differing pronunciations between the two narrators. I&#8217;ll indicate which one I believe is correct—though, spoiler alert, I&#8217;m going to pick Schraf for most things.</p>
+
+
+
+<p><strong>Aiji</strong><br>May:&nbsp;<code>aye-zhee'</code><br>Schraf:&nbsp;<code>aye'-jee</code>&nbsp;(preferred, other than the&nbsp;<code>j</code>)</p>
+
+
+
+<p><strong>Ajuri</strong><br>May:&nbsp;<code>ah-zhur-ee'</code><br>Schraf:&nbsp;<code>ah-jur'-ee</code>&nbsp;(preferred, other than the&nbsp;<code>j</code>)</p>
+
+
+
+<p><strong>Antaro</strong><br>May:&nbsp;<code>on'-tar-oh</code><br>Schraf:&nbsp;<code>on-dar'-oh'</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>‌‌Baji-Naji</strong><br>May:&nbsp;<code>bah-zhee' nah-zhee'</code>&nbsp;(<code>j</code>&nbsp;correct)<br>Schraf:&nbsp;<code>bah'-jee nah'-jee</code>&nbsp;(accents correct)</p>
+
+
+
+<p><strong>Bindanda‌<br></strong>May:&nbsp;<code>bin-dahn'-dah</code><br>Schraf:&nbsp;<code>bin-tahn'-tah</code><strong><br><br>Hasdrawad</strong><br>May:&nbsp;<code>has'-drah-wad</code><br>Schraf:&nbsp;<code>has'-trah-wat</code></p>
+
+
+
+<p><strong>Jegari</strong><br>May:&nbsp;<code>zheh-gar-ee'</code><br>Schraf:&nbsp;<code>jeh-gar'-ee</code>&nbsp;(preferred, other than the&nbsp;<code>j</code>)</p>
+
+
+
+<p><strong>‌Lucasi</strong><br>May:&nbsp;<code>loo-cah-see'</code><br>Schraf:&nbsp;<code>loo'-cah-see</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>Machigi‌</strong><br>May:&nbsp;<code>mah-chig-ee'</code><br>Schraf:&nbsp;<code>mah'-chig-ee</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>Machimi</strong><br>May:&nbsp;<code>mah-shee-mee'</code><br>Schraf:&nbsp;<code>mah-chee'-mee</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>Man&#8217;chi</strong><br>May:&nbsp;<code>man-chee'</code><br>Schraf:&nbsp;<code>man'-chee</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>Nadi</strong><br>May:&nbsp;<code>nah-dee'</code><br>Schraf:&nbsp;<code>nah'-dee</code>&nbsp;(This one&#8217;s tricky, because per the glossary the accent changes, but Schraf&#8217;s choice is generally more correct.)</p>
+
+
+
+<p><strong>Najida</strong><br>May:&nbsp;<code>nah-zhee-dah'</code><br>Schraf:&nbsp;<code>nah-jee'-tah</code>&nbsp;(preferred, other than the&nbsp;<code>j</code>)</p>
+
+
+
+<p><strong>(Madam) Saidin</strong><br>May:&nbsp;<code>sy-deen'</code>&nbsp;(long&nbsp;<code>i</code>&nbsp;in first syllable)<br>Schraf:&nbsp;<code>sy'-teen</code>&nbsp;(long&nbsp;<code>i</code>&nbsp;in first syllable—more correct than May, I believe)</p>
+
+
+
+<p><strong>Shejidan</strong><br>May:&nbsp;<code>shay-zhee-dahn'</code><br>Schraf:&nbsp;<code>shay'-jee-tahn</code>&nbsp;(more correct, I think)</p>
+
+
+
+<p><strong>‌‌Tabini</strong><br>May:&nbsp;<code>tuh-bee'-nee</code><br>Schraf:&nbsp;<code>duh-bee'-nee</code></p>
+
+
+
+<p><strong>‌‌‌‌Tano</strong><br>May:&nbsp;<code>tah'-no</code><br>Schraf:&nbsp;<code>dah'-no</code></p>
+
+
+
+<p><strong>Tatiseigi</strong><br>May:&nbsp;<code>tah-teh-say'-gee</code><br>Schraf:&nbsp;<code>dah-deh-say'-gee</code></p>
+
+
+
+<p><strong>Tashrid</strong><br>May:&nbsp;<code>tash-reed'</code><br>Schraf:&nbsp;<code>dash'-rit</code>&nbsp;(believed correct)</p>
+
+
+
+<p><strong>Vejico</strong><br>May:&nbsp;<code>vay-zhee-ko'</code><br>Schraf:&nbsp;<code>veh-jee'-ko</code>&nbsp;(preferred, other than the&nbsp;<code>j</code>)</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/pronunciation-of-names-and-places-in-c-j-cherryhs-foreigner-books/1506"><em>Discuss this post on the BigDinosaur forums</em></a> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Farewell to HPKP, hello to DNS-01 and ECDSA</title>
+		<link>https://blog.bigdinosaur.org/farewell-to-hpkp-hello-to-dns-01-and-ecdsa/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sun, 18 Feb 2018 13:00:00 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[acme.sh]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[haproxy]]></category>
+		<category><![CDATA[letsencrypt]]></category>
+		<guid isPermaLink="false">https://wpblog.bigdinosaur.org/?p=18</guid>
+
+					<description><![CDATA[A few months back I switched on&#160;HTTP public key pinning, a security scheme designed to make it more difficult for attackers to do nefarious things with the BigDino web server. HPKP is difficult to implement and comes with a long list of configuration pitfalls—and, as of today, I&#8217;m done with it. Sixty-one days ago I ... <a title="Farewell to HPKP, hello to DNS-01 and ECDSA" class="read-more" href="https://blog.bigdinosaur.org/farewell-to-hpkp-hello-to-dns-01-and-ecdsa/" aria-label="More on Farewell to HPKP, hello to DNS-01 and ECDSA">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large"><img decoding="async" loading="lazy" width="200" height="201" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/image02_1.png" alt="" class="wp-image-297" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/image02_1.png 200w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/image02_1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px" /></figure></div>
+
+
+
+<p>A few months back I switched on&nbsp;<a href="https://blog.bigdinosaur.org/making-letsencrypt-work-with-hpkp-and-leaf-pinning/">HTTP public key pinning</a>, a security scheme designed to make it more difficult for attackers to do nefarious things with the BigDino web server. HPKP is difficult to implement and comes with a long list of configuration pitfalls—and, as of today, I&#8217;m done with it.</p>
+
+
+
+<p>Sixty-one days ago I stopped sending out HPKP headers, which I&#8217;d set to a sixty day duration. This morning, I ripped out the scaffolding of Certbot scripts and cron jobs that kept LetsEncrypt running properly with HPKP, and replaced them all with the blissful simplicity of Neilpang&#8217;s&nbsp;<a href="https://github.com/Neilpang/acme.sh">acme.sh</a>&nbsp;coupled with DNS-based validation.</p>
+
+
+
+<span id="more-18"></span>
+
+
+
+<h2 class="wp-block-heading" id="hpkpisdead">HPKP is dead</h2>
+
+
+
+<p>The primary reason I wanted to drop HPKP is because I&#8217;m terribly interested in taking advantage of LetsEncrypt&#8217;s almost-here&nbsp;<a href="https://letsencrypt.org/2017/07/06/wildcard-certificates-coming-jan-2018.html">wildcard certificates</a>, and LE will only allow wildcard certs with DNS validation. In trying to figure out DNS validation, I quickly realized that it would further complicate my already over-complicated LetsEncrypt setup, and that I should probably be looking at ways to simplify things, rather than complexificating them.</p>
+
+
+
+<p>My decision was made a lot easier by the fact that as of May 2018,&nbsp;<a href="https://scotthelme.co.uk/the-death-knell-for-hpkp/">Chrome will no longer support HPKP</a>, leaving Firefox as the only important browser with HPKP support. About 50% of visitors to all of this server&#8217;s web sites are running Chrome, and putting time and effort into supporting something that Chrome doesn&#8217;t do anymore is a waste of time.</p>
+
+
+
+<p>HPKP is like a loaded gun—if you don&#8217;t take care with your implementation, you could wind up killing your site. If you don&#8217;t take care with your maintenance, you could end up killing your site. And, if you put too much confidence in its ability to protect you from malicious actors and not enough time on an overall defense-in-depth strategy&#8230;you could end up killing your site.</p>
+
+
+
+<p>So goodbye, HPKP. I won&#8217;t miss how much you complicated my life.</p>
+
+
+
+<h2 class="wp-block-heading" id="acmedns01validationitssogood">Acme DNS-01 validation: it&#8217;s so good</h2>
+
+
+
+<p>At the same time, I&#8217;ve dropped Certbot and HTTP-01 validation both from my LetsEncrypt setup. Anyone dealing with LE on a server with more than the most basic configuration knows that the default LE client (good old Certbot) can be a bitch to work with once you go off the beaten path. Fortunately, there are&nbsp;<em>excellent</em>&nbsp;Certbot alternatives out there, and my favorite by a mile is&nbsp;<code>acme.sh</code>, which you can grab&nbsp;<a href="https://github.com/Neilpang/acme.sh">via Github</a>.</p>
+
+
+
+<p>In addition to coming with its own built-in automation, the&nbsp;<code>acme.sh</code>&nbsp;script features outstanding support for DNS-01 validation, which allows LetsEncrypt to check your ownership of a domain name by programatically setting and then checking a TXT record in your DNS zone file. The script supports a wide variety of DNS providers, including Cloudflare, which is my current preferred DNS solution.</p>
+
+
+
+<p>After running the script&#8217;s installation process and getting it set up, issuing my first certificate and automating its renewal requires only a single command:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>$ acme.sh --issue --keylength ec-384 --dns dns_cf \
+-d bigdinosaur.org -d www.bigdinosaur.org --post-hook \
+/usr/local/bin/acme-bigdino-post.sh</code></pre>
+
+
+
+<p>SANs are supplied with multiple instances of the&nbsp;<code>-d</code>&nbsp;parameter—here, for example, I&#8217;m issuing the certificate for both&nbsp;<code>bigdinosaur.org</code>&nbsp;and&nbsp;<code>www.bigdinosaur.org</code>. I&#8217;m also using a 384-bit elliptical curve public/private key pair, which I&#8217;ll talk about in a moment.</p>
+
+
+
+<p>The&nbsp;<code>--post-hook</code>&nbsp;script concatenates the issued certificate with its key (which I need to do because I use HAProxy for SSL termination and HAProxy prefers its certificates and keys bundled together) and then reloads HAProxy so it picks up the new certificate. The script is very short:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code><strong>#!/bin/bash</strong>
+
+cat /home/me/.acme.sh/bigdinosaur.org_ecc/\
+{fullchain.cer,bigdinosaur.org.key} \
+&gt; /etc/haproxy/ssl-dns/bigdinosaur.org.pem
+
+systemctl reload haproxy</code></pre>
+
+
+
+<p>Once you&#8217;ve successfully issued a certificate with&nbsp;<code>acme.sh</code>, the script handles renewal all on its own. It&#8217;s pretty awesome and I&#8217;m a fan.</p>
+
+
+
+<h2 class="wp-block-heading" id="benditlikekoblitzmiller">Bend it like Koblitz &amp; Miller</h2>
+
+
+
+<p>Finally, I&#8217;ve switched 100% over to elliptical curve-based keys. It seemed to be a good time to make the switch away from RSA, since I was already screwing around with stuff under the hood anyway.</p>
+
+
+
+<p>Elliptical curve cryptography—&#8221;ECC,&#8221; or also potentially &#8220;ECDSA&#8221; for &#8220;elliptical curve digital signature algorithm&#8221;—differs from RSA in that the math is simultaneously simpler (primarily because it offers equivalent security with much smaller numbers) and (at least for now) harder to break. It uses iterative math involving the addition of points on a specific kind of curve (the eponymous &#8220;elliptical curve&#8221;), which tends to look something like this:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="409" height="410" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/elliptic-curve-crypt-image00.png" alt="" class="wp-image-19" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/elliptic-curve-crypt-image00.png 409w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/elliptic-curve-crypt-image00-300x300.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/elliptic-curve-crypt-image00-150x150.png 150w" sizes="(max-width: 409px) 100vw, 409px" /></figure></div>
+
+
+
+<p>Rather than bloat this entry with the how and why, I&#8217;ll simply embed Computerphile&#8217;s excellent (and short!) explainer video below:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Elliptic Curves - Computerphile" width="1000" height="563" src="https://www.youtube.com/embed/NF1pwjL9-DE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>The tl;dw is that ECC depends on math that&#8217;s easy to do one way (find the point that results from performing N iterations of this function) and damn near impossible to do the other way (given a specific point, find how many iterations of this function were performed to get there).</p>
+
+
+
+<p>Currently, LetsEncrypt allows users to generate certificates using ECDSA keypairs, but its certificate authority still signs those certificates with an RSA key. This will be changing midway through this year (at least according to LE&#8217;s&nbsp;<a href="https://letsencrypt.org/upcoming-features/">current timeline</a>) when LE rolls out ECDSA root and intermediate certificate authorities.</p>
+
+
+
+<p>The future is here, and it looks curvey.</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/farewell-to-hpkp-hello-to-dns-01-and-ecdsa/1432"><em>Discuss this post on the BigDinosaur forums</em></a> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Grieving over the death of StartSSL</title>
+		<link>https://blog.bigdinosaur.org/grieving-over-the-death-of-startssl/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sun, 03 Dec 2017 13:00:00 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[letsencrypt]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[startcom]]></category>
+		<guid isPermaLink="false">https://wpblog.bigdinosaur.org/?p=26</guid>
+
+					<description><![CDATA[What was once the web&#8217;s best source for free SSL/TLS certificates and affordable-by-normal-humans wildcard certs is dead, killed by shitty unethical behavior by a shitty company called WoSign. So thanks, WoSign—thanks for wrecking StartCom and their StartSSL service. You destroyed something wonderful and useful to millions of people. Hope it was worth it, dicks. If ... <a title="Grieving over the death of StartSSL" class="read-more" href="https://blog.bigdinosaur.org/grieving-over-the-death-of-startssl/" aria-label="More on Grieving over the death of StartSSL">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large"><img decoding="async" loading="lazy" width="362" height="250" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/20fdg8.jpg" alt="" class="wp-image-295" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/20fdg8.jpg 362w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/20fdg8-300x207.jpg 300w" sizes="(max-width: 362px) 100vw, 362px" /></figure></div>
+
+
+
+<p>What was once the web&#8217;s best source for free SSL/TLS certificates and affordable-by-normal-humans wildcard certs is dead, killed by shitty unethical behavior by a shitty company called WoSign. So thanks, WoSign—thanks for wrecking StartCom and their StartSSL service. You destroyed something wonderful and useful to millions of people. Hope it was worth it, dicks.</p>
+
+
+
+<p>If there&#8217;s an upside to this mess, it&#8217;s that&nbsp;<a href="https://letsencrypt.org/">Let&#8217;s Encrypt</a>&nbsp;has mostly made StartSSL redundant. Where StartSSL was once the only place to go if you wanted free certificates, LE now fills that gap—<a href="https://scotthelme.co.uk/alexa-top-1-million-analysis-aug-2017/">very successfully</a>, too. And LE will begin offering free wildcard certificates&nbsp;<a href="https://arstechnica.com/information-technology/2017/07/lets-encrypt-to-start-offering-free-wildcard-certificates-for-https/">starting in 2018</a>, so that&#8217;s another need fulfilled.</p>
+
+
+
+<p>But man, I am going to miss the hell out of StartCom and StartSSL.</p>
+
+
+
+<span id="more-26"></span>
+
+
+
+<h2 class="wp-block-heading" id="theonewhowas">The one who was</h2>
+
+
+
+<p>I&#8217;ve been a happy paying StartCom customer since 2010, when I set up the first version of&nbsp;<a href="https://www.bigdinosaur.org/">my dumb homepage</a>. An article on Ars Technica by Glenn Fleishman on&nbsp;<a href="https://arstechnica.com/information-technology/2009/12/how-to-get-set-with-a-secure-sertificate-for-free/">how to get free certificates</a>&nbsp;piqued my interest, and StartCom proved to be everything the article promised—fast, friendly, and extremely affordable if you wanted to move off the free option and into class 2 validation-dependent certificates (like wildcards). They also offered a code signing certificate for a ludicrously cheap rate.</p>
+
+
+
+<p>Things were great for&nbsp;<em>years</em>. I&nbsp;<a href="https://blog.bigdinosaur.org/openfire-and-ssl-slash-tls-certificates/">unequivocally recommended StartCom</a>&nbsp;to anyone and everyone because there were basically no downsides. A single $60 identity validation got you&nbsp;<em>unlimited</em>&nbsp;wildcard certs for as many domains as you wanted.</p>
+
+
+
+<p>There&#8217;s a line in&nbsp;<em>Fight Club,</em>&nbsp;when Jack is talking to Tyler, that really sort of captures this situation very well:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Fight Club: Consumers #TGA2ARH" width="1000" height="563" src="https://www.youtube.com/embed/vBot8SOLWBQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>For folks unable or unwilling to watch the scene, here&#8217;s the quote:</p>
+
+
+
+<blockquote class="wp-block-quote"><p><em>When you buy furniture, you tell yourself, &#8220;That&#8217;s it—that&#8217;s the last sofa I&#8217;m ever gonna need. Whatever else happens, I&#8217;ve got that sofa problem handled.&#8221;</em></p></blockquote>
+
+
+
+<p>StartSSL was that good—it felt like I had my SSL/TLS problem definitively handled with an endgame solution, and I&#8217;d never need to deal with shopping for certs or paying&nbsp;<a href="https://www.godaddy.com/web-security/ssl-certificate">gross and usurious rates</a>&nbsp;for the things.</p>
+
+
+
+<p>Enter WoSign.</p>
+
+
+
+<h2 class="wp-block-heading" id="fuckingitupforthepeopleinthestreets">Fucking it up for the people in the streets</h2>
+
+
+
+<p>Through a complicated set of hidden backroom dealings, Startcom was purchased (<a href="https://docs.google.com/document/d/1C6BlmbeQfn4a9zydVi2UvjBGv6szuSB4sMYUcVrR8vQ/edit#">apparently in secret</a>) by shady Chinese certificate authority WoSign. According to a detailed investigation by Mozilla, WoSign had been backdating the issue dates of some SSL/TLS certificates in order to skirt around the then-looming deadline for&nbsp;<a href="https://arstechnica.com/security/2016/05/microsoft-to-retire-support-for-sha1-certificates-in-the-next-4-months/">SHA-1 certificate deprecation</a>.</p>
+
+
+
+<p>In response to these shenanigans, Mozilla announced it was responding with the almost-nuclear option: Mozilla browsers would cease trusting WoSign (and StartSSL) SSL/TLS certificates&nbsp;<a href="https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/">issued after a certain date</a>&nbsp;(the full nuclear option would have been to simply stop trusting&nbsp;<em>all</em>&nbsp;WoSign and StartCom certificates).&nbsp;<a href="https://security.googleblog.com/2016/10/distrusting-wosign-and-startcom.html">Google</a>,&nbsp;<a href="https://blogs.technet.microsoft.com/mmpc/2017/08/08/microsoft-to-remove-wosign-and-startcom-certificates-in-windows-10/">Microsoft</a>, and&nbsp;<a href="https://support.apple.com/en-us/HT204132">Apple</a>&nbsp;quickly followed.</p>
+
+
+
+<p>Mozilla further outlined a proposed remediation plan they would accept from WoSign/StartCom; failure to follow the plan and demonstrate improvement would lead to a removal of WoSign and StartCom from the trusted root certificate authority store of every major browser on every major operating system. Perhaps unsurprisingly, WoSign was unable to demonstrate sufficient remediation and reform, and&nbsp;<a href="https://arstechnica.com/information-technology/2017/07/google-drops-the-boom-on-wosign-startcom-certs-for-good/">the deadlines were set</a>. The full nuclear option had been deployed.</p>
+
+
+
+<h2 class="wp-block-heading" id="youcantalwaysgetwhatyouwant">You can&#8217;t always get what you want</h2>
+
+
+
+<p>The effect has been total. StartCom struggled to come up with some alternatives, but the company&#8217;s death was inevitable—what good is a root certificate authority that no one can trust?</p>
+
+
+
+<p>The following email showed up in my inbox this morning, marking the end of an era.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="907" height="507" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2017-12-03-at-11.28.18-AM.png" alt="" class="wp-image-27" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2017-12-03-at-11.28.18-AM.png 907w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2017-12-03-at-11.28.18-AM-300x168.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/Screen-Shot-2017-12-03-at-11.28.18-AM-768x429.png 768w" sizes="(max-width: 907px) 100vw, 907px" /></figure></div>
+
+
+
+<p>The last service I had still using my old StartSSL wildcard certificate was BigDinosaur.org&#8217;s email, and immediately prior to penning this blog post I cut that over to Let&#8217;s Encrypt, too.</p>
+
+
+
+<p>It&#8217;s depressing, watching so wonderful a service being brought down by a few greedy assholes. Thanks, assholes.</p>
+
+
+
+<p>But don&#8217;t judge StartCom by the actions of the rambling zombie corpse the company became after it was bought by WoSign. Recent bad behavior doesn&#8217;t erase the good of so many years of excellence, even if it does mean that the company has to take a bullet to the head.</p>
+
+
+
+<p>Farewell, StartCom and StartSSL. You were well-loved, and you will be well-missed. The Internet is less without you.</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/grieving-over-the-death-of-startssl/1389"><em>Discuss this post on the BigDinosaur forums</em></a> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Ghost hits 1.0: Reflections on three years of Ghost blogging</title>
+		<link>https://blog.bigdinosaur.org/ghost-hits-1-0-reflections-on-three-years-of-ghost-blogging/</link>
+		
+		<dc:creator><![CDATA[Lee]]></dc:creator>
+		<pubDate>Sat, 29 Jul 2017 12:00:00 +0000</pubDate>
+				<category><![CDATA[Web stuff]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[ghost]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">https://wpblog.bigdinosaur.org/?p=30</guid>
+
+					<description><![CDATA[In September 2013, after years of light blogging with&#160;Jekyll via Octopress, I switched to a very sexy-looking&#160;new blogging platform&#160;called Ghost. Ghost was written with Node.JS and promised to be fast and efficient, with a minimalist writing interface and a slick looking dashboard. I wrote up the platform in&#160;a quick article for Ars&#160;shortly after the public ... <a title="Ghost hits 1.0: Reflections on three years of Ghost blogging" class="read-more" href="https://blog.bigdinosaur.org/ghost-hits-1-0-reflections-on-three-years-of-ghost-blogging/" aria-label="More on Ghost hits 1.0: Reflections on three years of Ghost blogging">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-image"><figure class="alignleft size-large"><img decoding="async" loading="lazy" width="300" height="180" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghost_logo_sm2.png" alt="" class="wp-image-292"/></figure></div>
+
+
+
+<p>In September 2013, after years of light blogging with&nbsp;<a href="https://github.com/octopress/octopress">Jekyll via Octopress</a>, I switched to a very sexy-looking&nbsp;<a href="https://blog.bigdinosaur.org/a-blogging-platform-for-the-future/">new blogging platform</a>&nbsp;called Ghost. Ghost was written with Node.JS and promised to be fast and efficient, with a minimalist writing interface and a slick looking dashboard.</p>
+
+
+
+<p>I wrote up the platform in&nbsp;<a href="https://arstechnica.com/information-technology/2013/10/node-js-based-ghost-blogging-platform-opens-to-the-public/">a quick article for Ars</a>&nbsp;shortly after the public beta became available. The new and shiny had won me over, and I ditched Octopress and converted everything to Ghost.</p>
+
+
+
+<p>But development took far longer than anyone anticipated. Essential blog features like post scheduling lagged; others, like customizable excerpts or the ability to center images without resorting to manual HTML and CSS entry still haven&#8217;t shown up. And that slick dashboard?&nbsp;<a href="https://blog.ghost.org/year-2/">Canceled</a>.</p>
+
+
+
+<span id="more-30"></span>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="625" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghostblog1-1024x625.jpg" alt="" class="wp-image-31" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghostblog1-1024x625.jpg 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghostblog1-300x183.jpg 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghostblog1-768x469.jpg 768w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/ghostblog1.jpg 1440w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>The Ghost dashboard that was promised but never happened.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading" id="lifewithpre10ghost">Life with pre-1.0 Ghost</h2>
+
+
+
+<p>Coming from a static site generator made even the early Ghost betas feel luxurious—there were actual settings that weren&#8217;t in a config file! But after the honeymoon period wore off, I found myself looking enviably at WordPress (which I&#8217;m in 10+ hours a day because we use it at Ars). Ghost was nice, but decidedly barebones—and the total lack of image formatting options made it hugely problematic for me to try to shift my wife&#8217;s blog over onto Ghost, since she wants WYSIWYG image layout tools.</p>
+
+
+
+<p>Then there was Ghost&#8217;s update procedure—an involved procedure requiring you to download a tarball and then manually copy files from it into your live site&#8217;s working directories. Ghost is also completely stupid when it comes to working intelligently with any kind of caching layer—creating or updating posts requires screwing around with Varnish bans (and Cloudflare purges, if you&#8217;re using Cloudflare).</p>
+
+
+
+<p>But moving blogging software again would be a pain in the ass, and in spite of the annoyances, there was some cachet with having your blog on self-hosted Ghost. It stuck out in a way that self-hosted WordPress didn&#8217;t, and it was sometimes a point of pride to be different. The much-ballyhooed dashboard&#8217;s failure to launch didn&#8217;t bother me overmuch as I still had&nbsp;<a href="https://piwik.org/">Piwik</a>&nbsp;to fall back on, and for almost three years I made do with Ghost. If I&#8217;d been blogging more, perhaps I would have switched over to WordPress, but I wasn&#8217;t, and I didn&#8217;t.</p>
+
+
+
+<h2 class="wp-block-heading" id="lifewithpost10ghost">Life with post-1.0 Ghost</h2>
+
+
+
+<p>Ghost soft-launched 1.0 last Friday, holding their release post until&nbsp;<a href="https://blog.ghost.org/1-0/">almost a full week had passed</a>. From a user&#8217;s perspective things are still pretty similar—the editor has a lot of visual improvements and there&#8217;s now a night mode, which I like very much:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="597" src="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-1024x597.png" alt="" class="wp-image-32" srcset="https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-1024x597.png 1024w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-300x175.png 300w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-768x448.png 768w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-1536x896.png 1536w, https://blog.bigdinosaur.org/wp-content/uploads/2021/02/editor-night-mode-2048x1195.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Writing this post in Ghost</figcaption></figure>
+
+
+
+<p>But the backend is drastically changed. Gone is the clunky manual process for updating and the need to screw around with&nbsp;<code>npm</code>. In its place is a lovely command line tool called&nbsp;<a href="https://docs.ghost.org/docs/cli-knowledge-base">Ghost-CLI</a>&nbsp;that handles all of that for you. Updating Ghost now requires just a single command:</p>
+
+
+
+<pre class="wp-block-code lang-bash"><code>$ sudo ghost update
+&#x2714; Checking for latest Ghost version
+&#x2714; Downloading and updating Ghost to v1.1.0
+Running sudo command: systemctl stop ghost-bigdinosaur-org
+&#x2714; Stopping Ghost
+&#x2714; Linking latest Ghost and recording versions
+Running sudo command: -E -u ghost /usr/local/lib/node_modules/ghost-cli/node_modules/.bin/knex-migrator-migrate --init --mgpath /var/www-ghost/current
+&#91;2017-07-29 10:42:28] INFO Finished database migration! 
+&#x2714; Running database migrations
+&#x2714; Validating config
+Running sudo command: systemctl start ghost-bigdinosaur-org
+&#x2714; Restarting Ghost</code></pre>
+
+
+
+<p>The majority of the changes appear minor unless you read the development blog; at that point, it becomes obvious how much of a change Ghost has undergone.</p>
+
+
+
+<p>Living with Ghost now for the past week has been a very different experience, since the application now behaves as a proper&nbsp;<code>systemd</code>&nbsp;citizen on Ubuntu server and can update itself. From this admin&#8217;s perspective, Ghost is finally the blogging app that I wanted it to be three years ago.</p>
+
+
+
+<h2 class="wp-block-heading" id="butisitbetterthanwordpressorjekyll">But is it better than WordPress or Jekyll?</h2>
+
+
+
+<p>That&#8217;s impossible to say, since &#8220;better&#8221; means something different to everyone. But I&#8217;ll list Ghost 1.0&#8217;s downsides first:</p>
+
+
+
+<ul><li>Ghost still remains blissfully unaware of—and unable to interact with—any caching layer, either on- or off-box</li><li>Ghost has no two-factor authentication option</li><li>Ghost has no image layout tools at all—your image is going to show up left-aligned unless you manually define some classes in CSS and manually enter some HTML into the edit window for&nbsp;<em>each picture.</em></li><li>Ghost&nbsp;<em>still</em>&nbsp;lacks any kind of support for many basic necessities required for professional writing, including:<ul><li>Image captioning (though you can DIY this with more custom CSS and HTML)</li><li>Pullquotes (again, DIY-able with custom CSS and HTML)</li><li>Variable-length excerpts</li><li>Pagination &amp; multi-page posts</li></ul></li></ul>
+
+
+
+<p>Additionally—at least for now—Ghost has no usable plugin system and no plugin library. You can download a bunch of&nbsp;<a href="http://marketplace.ghost.org/">similar-looking themes</a>&nbsp;all day long, but there&#8217;s&nbsp;<em>nothing</em>&nbsp;like WordPress&#8217;s extensive plugin library; extending Ghost&#8217;s functionality requires&nbsp;<a href="https://ghost.org/developers/">coding stuff yourself</a>.</p>
+
+
+
+<p>The lack of plugins isn&#8217;t necessarily a bad thing, since that same enormous library of plugins is most of what gives WordPress a reputation for being about as secure as a broken sieve. Ghost doens&#8217;t have&nbsp;<em>that</em>&nbsp;problem—not yet, at least.</p>
+
+
+
+<p>Where Ghost wins, though, is in simplicity and focus. It&#8217;s not as cut-down as Jekyll and it will never be as fast, since Jekyll blogs are purely static assets with no dynamic generation, but Jekyll also has no real interface—you do your blogging with an external composer of your choice. Ghost&#8217;s 1.0 editor is just a joy to work with—it&#8217;s almost as sexy as&nbsp;<a href="http://dillinger.io/">Dillinger</a>, and Dillinger is mighty fine.</p>
+
+
+
+<p>Comparing Ghost to WordPress is like comparing Sublime or Notepad++ to Microsoft Word—or perhaps like comparing vim to emacs. WordPress is dripping with features and has extensibility out the wazoo—but unless you&#8217;re a huge business using WP as a CMS, you&#8217;ll never use the majority of WP&#8217;s features and you&#8217;ll never have to touch its extensibility beyond maybe installing a 2FA plugin. Ghost, on the other hand, has (most of) what normal writers and code-bloggers need (well, with the exception of syntax highlighting, but that&#8217;s&nbsp;<a href="http://blog.toast38coza.me/adding-syntax-highlighting-to-your-ghost-blog-the-easy-way/">easily added</a>).</p>
+
+
+
+<p>Recall also that WordPress has moved a large number of vital functions into its pervasive&nbsp;<a href="https://wordpress.org/plugins/jetpack/">Jetpack</a>&nbsp;plugin; if you&#8217;re self-hosting WordPress and want basics like being able to edit your posts in Markdown, you&#8217;ll have to install and connect Jetpack, which ties your site in to WordPress.com and opts you in to data collection and other WP-provided services you may not want. Ghost&#8217;s ties back to its creators are somewhat more minimal.</p>
+
+
+
+<h2 class="wp-block-heading" id="fornowimstaying">For now, I&#8217;m staying</h2>
+
+
+
+<p>I like Ghost. I&#8217;m used to Ghost. I work with WordPress every day for work, and I&#8217;m also self-hosting a&nbsp;<a href="https://spacecityweather.com/">WordPress-based site</a>&nbsp;on this web server, so I&#8217;m very familiar with what WordPress offers at all levels, from the casual author&#8217;s perspective all the way to the system administrator&#8217;s perspective. WordPress is perfectly fine, but I prefer Ghost for my own use—even if I wish it had some more writer-friendly features. If I were blogging more regularly and with more contributors, I&#8217;d likely consider switching to WordPress, but I&#8217;m not, so I&#8217;m not.</p>
+
+
+
+<p>And more to the point, I&#8217;m already&nbsp;<em>here.</em>&nbsp;Migrations are a pain in the ass.</p>
+
+
+
+<p><a href="https://discourse.bigdinosaur.org/t/ghost-hits-1-0-reflections-on-three-years-of-ghost-blogging/1339"><em>Discuss this post on the BigDinosaur forums</em></a> <span class="dashicons dashicons-format-chat"></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
