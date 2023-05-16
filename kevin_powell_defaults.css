@@ -1,6 +1,33 @@
-/* Kevin Powell's root recommendation for '*'' */
+/* Kevin Powell's root recommendation for '*'' 
+ * and also some bare bones defaults*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/* kevin uses html here, 
+ * but mdn recommends root */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* main container within body, 
+ * sometimes called .container, etc. */
+main {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
 }
