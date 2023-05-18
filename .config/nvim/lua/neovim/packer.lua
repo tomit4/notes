@@ -6,14 +6,14 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use({ "nvim-treesitter/playground" })
-	use({
-		"shaunsingh/nord.nvim",
-		config = function()
-			vim.cmd("colorscheme nord")
-		end,
-	})
+        use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+        use({ "nvim-treesitter/playground" })
+        use({
+                "shaunsingh/nord.nvim",
+                config = function()
+                        vim.cmd("colorscheme nord")
+                end,
+        })
 	use({ "preservim/nerdcommenter" })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use({ "kyazdani42/nvim-web-devicons" })
@@ -24,7 +24,7 @@ return require("packer").startup(function(use)
 	use({ "lewis6991/impatient.nvim" })
 	use({ "airblade/vim-gitgutter" })
 	use({ "f-person/git-blame.nvim" })
-	use({ "norcalli/nvim-colorizer.lua" })
+	-- use({ "norcalli/nvim-colorizer.lua" })
 	use({ "mattn/emmet-vim" })
 	use({ "windwp/nvim-autopairs" })
 	use({ "simeji/winresizer" })
@@ -71,6 +71,8 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+        use('jose-elias-alvarez/null-ls.nvim')
+        use('MunifTanjim/prettier.nvim')
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use({
 		"mfussenegger/nvim-dap",
