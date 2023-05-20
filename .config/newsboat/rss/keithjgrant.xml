@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://notes.keithjgrant.com/">
+  <title>Keith J. Grant: Notes</title>
+  <link href="https://notes.keithjgrant.com/index.xml" rel="self"/>
+  <link href="https://notes.keithjgrant.com/"/>
+  <updated>2023-05-10T15:33:00Z</updated>
+  <id>https://notes.keithjgrant.com/</id>
+  <author>
+    <name>Keith J. Grant</name>
+    <email>barkeep@keithjgrant.com</email>
+    <uri>https://notes.keithjgrant.com/</uri>
+  </author>
+  <icon>http://notes.keithjgrant.com/favicon.ico</icon>
+  <logo>http://notes.keithjgrant.com/images/favicon-96.png</logo>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2023/05/sass-nesting/"/>
+    <published>2023-05-10T15:33:00Z</published>
+    <updated>2023-05-10T15:33:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2023/05/sass-nesting/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“Sass will simply not support plain CSS nesting unless we can do so in a
+way that’s fully compatible with existing Sass behavior.”&lt;/p&gt;
+&lt;p&gt;I think this is the end of the Sass road for me.
+In fact, as soon as I read this, I immediately regretting using Sass in my
+recent website redesign at all.&lt;/p&gt;
+&lt;p&gt;I mean, I get it. This is kind of the path Sass needs to take to maintain
+code compatability for existing projects, but I’ve been down this road before.
+Once upon a time, I wrote the CSS for nyse.com,
+and I did it all using PostCSS plugins to mimic “future” CSS.&lt;/p&gt;
+&lt;p&gt;The problem was, those future specs changed before they shipped in browsers,
+and I was stuck with a ton of legacy code that only worked because of my tooling.
+There was no easy path toward turning off the transipiling other than a
+painful rewrite of a lot of code.
+And that meant I couldn’t actually use the new feature, purely because I was too
+eager to fake it before it was ready.&lt;/p&gt;
+&lt;p&gt;I’m going to want to use CSS nesting as early as possible, and I don’t want
+to be stuck waiting on tooling to make that a reality.&lt;/p&gt;
+<a href="https://brid.gy/publish/mastodon"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2023/05/why-im-giving-up-on-arc/"/>
+    <published>2023-05-08T23:30:00Z</published>
+    <updated>2023-05-08T23:30:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2023/05/why-im-giving-up-on-arc/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I tried &lt;a href=&quot;https://arc.net/&quot;&gt;Arc Browser&lt;/a&gt; as my default browser for several months.
+I even tried to talk a few co-workers into doing the same.
+I &lt;em&gt;absolutely love&lt;/em&gt; the way it manages Spaces, and no other browser comes
+close to this kind of reasonable, real-world tab management, not by light years.&lt;/p&gt;
+&lt;p&gt;Unfortunately, I’ve had to give up. I’m switching back to Firefox.
+A few issues were starting to feel like death by a thousand papercuts.
+Here are my reasons for giving up on Arc:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Multi-window behavior is just too strange; and I always have two windows
+open side-by-side on my ultrawide monitor.
+The way Arc works, all tabs for the active workspace are listed on the left.
+With you have two windows open to the same workspace, each window lists all
+the tabs for that workspace;
+it looks like you can click that tab in either window, which you sometimes
+can, but not for more app-like sites or heavier interfaces. In short, I
+found I consistently had to keep mental track of which window &lt;em&gt;actually&lt;/em&gt;
+had any given tab open. This became too much as I moved windows around
+(which I often do during video calls/screenshares).&lt;/li&gt;
+&lt;li&gt;I miss the URL bar. I get what they’re going for with the ultra-minimalism,
+but this is just a bit too far. “Developer mode” seemed like a promising
+compromise, but I wasn’t about to take the three clicks needed to activate
+it for each and every website where I might manually edit the url.&lt;/li&gt;
+&lt;li&gt;Even with careful folder management, I just have too many boorkmarks in my
+Space for “work”. Because in Arc, your tabs &lt;em&gt;are&lt;/em&gt; your bookmarks.
+My permanent tabs filled the left sidebar much of the time, even with only
+a couple temporary tabs open.&lt;/li&gt;
+&lt;li&gt;I really, really want my browser history to sync with my phone. After
+the disappointing launch of their mobile app that was... well, not even a
+browser, I couldn’t do it any longer.&lt;/li&gt;
+&lt;/ol&gt;
+<a href="https://brid.gy/publish/mastodon"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2023/05/the-silly-low-chance-thing-id-really/"/>
+    <published>2023-05-05T15:22:26Z</published>
+    <updated>2023-05-05T15:22:26Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2023/05/the-silly-low-chance-thing-id-really/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The silly low-chance thing I&#39;d really like to see in Tears of the Kingdom
+is a revamped version of the Gerudu Valley music from Ocarina of Time.
+And the Forest Temple song.&lt;/p&gt;
+&lt;p&gt;That game had some killer music.
+I feel like Nintendo has been sitting on some wasted opportunity for quite a
+while to revive those.&lt;/p&gt;
+<a href="https://brid.gy/publish/mastodon"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2023/05/okay-its-time-for-me-to/"/>
+    <published>2023-05-03T17:26:15Z</published>
+    <updated>2023-05-03T17:26:15Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2023/05/okay-its-time-for-me-to/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Okay, it&#39;s time for me to start experimenting with posting short
+notes to my own website again.&lt;/p&gt;
+&lt;p&gt;I probably have some fiddling to do to get webmentions working on the new
+subdomain.&lt;/p&gt;
+<a href="https://brid.gy/publish/mastodon"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/10/web-whiskey-weekend-here-i-come/"/>
+    <published>2019-10-03T13:04:51Z</published>
+    <updated>2019-10-03T13:04:51Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/10/web-whiskey-weekend-here-i-come/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Web Whiskey Weekend, here I come... 🥃&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/09/that-episode-of-the-great-british/"/>
+    <published>2019-09-11T20:25:17Z</published>
+    <updated>2019-09-11T20:25:17Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/09/that-episode-of-the-great-british/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;That episode of the Great British Baking show where they make “American pies” but Paul makes it abundantly clear a) he doesn’t like American pies, and b) he doesn’t have a clue what constitutes an American pie.&lt;/p&gt;
+&lt;p&gt;Then most of the contestants proceed to make tarts that are decidedly neither American nor pies. Though one guy makes a rocking proper American key lime pie, and Paul says he loves it even though it wasn&#39;t what he asked for.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/07/dear-online-merchants-your-package-has/"/>
+    <published>2019-07-22T20:06:04Z</published>
+    <updated>2019-07-22T20:06:04Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/07/dear-online-merchants-your-package-has/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Dear online merchants: “Your package has been shipped” does NOT mean “We have obtained a shipping number from the post office and will actually deliver your package to USPS in five days.”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/06/for-fathers-day-this-year-my/"/>
+    <published>2019-06-17T22:02:45Z</published>
+    <updated>2019-06-17T22:02:45Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/06/for-fathers-day-this-year-my/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;For Father&#39;s day this year, my family got me gift cards to all the artisan coffee shops in Spokane, so I can test them all out.&lt;/p&gt;
+&lt;p&gt;Up this afternoon: First Avenue Coffee ☕️&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/05/something-that-will-always-bug-me/"/>
+    <published>2019-05-09T14:11:32Z</published>
+    <updated>2019-05-09T14:11:32Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/05/something-that-will-always-bug-me/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Something that will always bug me:&lt;/p&gt;
+&lt;p&gt;I still think &lt;code&gt;const&lt;/code&gt; should be used for constants (like ALL_CAPS_CONSTANTS) and &lt;code&gt;var&lt;/code&gt; should be the default. Use &lt;code&gt;let&lt;/code&gt; when you really want block-level scoping.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/04/i-love-what-svelte-is-going/"/>
+    <published>2019-04-23T13:39:27Z</published>
+    <updated>2019-04-23T13:39:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/04/i-love-what-svelte-is-going/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I love what Svelte is going for, putting the framework in the compiler. But I see “template logic” in the HTML and alarm bells ring.&lt;/p&gt;
+&lt;p&gt;Unless I’m missing something, you&#39;ll always be limited by  what the template language supports :(&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/04/i-tried-to-read-game-of/"/>
+    <published>2019-04-15T12:10:17Z</published>
+    <updated>2019-04-15T12:10:17Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/04/i-tried-to-read-game-of/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I tried to read game of thrones once. After 150 pages, nothing had happened, so I stopped.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/04/insane-idea-dont-flog-me-npm/"/>
+    <published>2019-04-11T15:33:52Z</published>
+    <updated>2019-04-11T15:33:52Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/04/insane-idea-dont-flog-me-npm/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Insane idea (don&#39;t flog me): NPM browser extension. Once a site uses a dependency, it gets stored locally &amp;amp; doesn&#39;t need to be downloaded again.&lt;/p&gt;
+&lt;p&gt;Like CDNs, but with more strongly enforced SST, because CDNs don’t actually gain the caching benefits they initially hoped.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/03/i-will-henceforth-be-referring-to/"/>
+    <published>2019-03-29T12:33:40Z</published>
+    <updated>2019-03-29T12:33:40Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/03/i-will-henceforth-be-referring-to/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I will henceforth be referring to RSS as “the future from the past”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/03/a-young-naive-me-when-im/"/>
+    <published>2019-03-27T15:19:27Z</published>
+    <updated>2019-03-27T15:19:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/03/a-young-naive-me-when-im/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;A young, naive me: “When I’m grown up, I’m going to have a set of set of matching coffee mugs, not some random assortment”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/03/dont-forget-kids-always-bet-on/"/>
+    <published>2019-03-21T13:36:26Z</published>
+    <updated>2019-03-21T13:36:26Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/03/dont-forget-kids-always-bet-on/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Don’t forget, kids: “Always bet on JavaScript” is and always has always been shorthand for “Always bet on the Open Web Platform”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/03/i-get-frustrated-with-debugging-breakpoints/"/>
+    <published>2019-03-18T12:46:55Z</published>
+    <updated>2019-03-18T12:46:55Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/03/i-get-frustrated-with-debugging-breakpoints/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I get frustrated with debugging &amp;amp; breakpoints in Firefox. It seems like they often just don’t work—but I suspect it’s that they don’t work &lt;em&gt;exactly like Chrome&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Are there any write-ups that walk through the differences between the two?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/02/a-search-on-the-online-store/"/>
+    <published>2019-02-26T19:23:17Z</published>
+    <updated>2019-02-26T19:23:17Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/02/a-search-on-the-online-store/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;A search on the online store for computer mice, but with a filter that only shows me big, full-size mice that won&#39;t cramp my hand&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/02/yeah-so-i-realize-i-still/"/>
+    <published>2019-02-26T14:58:23Z</published>
+    <updated>2019-02-26T14:58:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/02/yeah-so-i-realize-i-still/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Yeah, so I realize I still need to finish writing that final installment in my IndieWeb series. Hoping I can get to it this week.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/02/everyone-likes-to-make-a-fuss/"/>
+    <published>2019-02-26T14:15:16Z</published>
+    <updated>2019-02-26T14:15:16Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/02/everyone-likes-to-make-a-fuss/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Everyone likes to make a fuss over Celsius vs. Fahrenheit and gallons vs. liters.&lt;/p&gt;
+&lt;p&gt;But can we talk for a minute about the UK placement of punctuation outside of quotes makes far more sense than the ridiculous U.S. style?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/02/amazing-how-theres-a-tendency-in/"/>
+    <published>2019-02-17T14:41:54Z</published>
+    <updated>2019-02-17T14:41:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/02/amazing-how-theres-a-tendency-in/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Amazing how there&#39;s a tendency (in myself &amp;amp; others) to think it would be easier to build your own tool than to simply learn one that already exists.&lt;/p&gt;
+&lt;p&gt;Subtweet: You don&#39;t need a new flexbox-based grid system. Learn CSS Grid.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/02/rule-of-thumb-if-a-method/"/>
+    <published>2019-02-04T15:58:55Z</published>
+    <updated>2019-02-04T15:58:55Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/02/rule-of-thumb-if-a-method/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Rule of thumb: if a method in a React class doesn’t reference &lt;code&gt;this&lt;/code&gt; (or only references one or two values on &lt;code&gt;this&lt;/code&gt;), extract it out into a standalone util and pass those values in as params.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/01/deleting-code-to-improve-test-coverage/"/>
+    <published>2019-01-29T15:34:58Z</published>
+    <updated>2019-01-29T15:34:58Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/01/deleting-code-to-improve-test-coverage/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Deleting code to improve test coverage 💪🏻&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/01/im-not-one-who-typically-has/"/>
+    <published>2019-01-23T15:34:23Z</published>
+    <updated>2019-01-23T15:34:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/01/im-not-one-who-typically-has/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’m not one who typically has the problem of too many browser tabs open at once. My code editor on the other hand…&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/01/nothing-against-react-suspense-here-but/"/>
+    <published>2019-01-11T16:45:23Z</published>
+    <updated>2019-01-11T16:45:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/01/nothing-against-react-suspense-here-but/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Nothing against React Suspense here, but… y’all realize that waiting a set delay before showing a loader is do-able with just a few lines of CSS, right?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/01/i-wish-everybody-arguing-about-the/"/>
+    <published>2019-01-10T21:07:52Z</published>
+    <updated>2019-01-10T21:07:52Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/01/i-wish-everybody-arguing-about-the/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I wish everybody arguing about the cascade (on both sides) understood the difference between cascade &amp;amp; inheritance, and was more explicit which one they mean when.&lt;/p&gt;
+&lt;p&gt;The lack of clarity is certainly not helping the discussion.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2019/01/i-have-made-a-cocktail-with/"/>
+    <published>2019-01-04T01:48:38Z</published>
+    <updated>2019-01-04T01:48:38Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2019/01/i-have-made-a-cocktail-with/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I have made a cocktail with London dry gin, lemon juice, and habanero cucumber syrup. And it is one of the best drinks I&#39;ve ever created.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/currently-chewing-on-this-idea-many/"/>
+    <published>2018-12-17T14:27:16Z</published>
+    <updated>2018-12-17T14:27:16Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/currently-chewing-on-this-idea-many/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Currently chewing on this idea:&lt;/p&gt;
+&lt;p&gt;Many frustrations with CSS come from unexpected behavior when we ask it to do conflicting things. Part of this stems from not fully understanding the default behavior, and how our code might fight against that.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/building-a-react-spa-with-a/"/>
+    <published>2018-12-14T17:24:48Z</published>
+    <updated>2018-12-14T17:24:48Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/building-a-react-spa-with-a/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Building a React SPA with a top-level App component, routing, centralized application state, &amp;amp; API data fetching.&lt;/p&gt;
+&lt;p&gt;And it renders to static HTML and works without JavaScript.&lt;/p&gt;
+&lt;p&gt;The whole “docs vs. apps” thing is nonsense&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/giving-nextjs-a-try/"/>
+    <published>2018-12-13T17:43:17Z</published>
+    <updated>2018-12-13T17:43:17Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/giving-nextjs-a-try/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Giving next.js a try&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/typed-up-several-new-drinks-added/"/>
+    <published>2018-12-10T18:50:05Z</published>
+    <updated>2018-12-10T18:50:05Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/typed-up-several-new-drinks-added/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Typed up several new drinks &amp;amp; added them to Sidecar over lunch. Check out the lemon bomb!&lt;/p&gt;
+&lt;p&gt;https://sidecar.us/drinks/lemon-bomb/&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/when-one-browser-dominates-the-market/"/>
+    <published>2018-12-06T17:32:52Z</published>
+    <updated>2018-12-06T17:32:52Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/when-one-browser-dominates-the-market/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;When one browser dominates the market, bugs become features and open standards take a back seat. When IE6 became the dominant browser, we had to live with the consequences for a decade.&lt;/p&gt;
+&lt;p&gt;It is certainly plausible that Microsoft just doomed us to another decade of fallout.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/12/we-finished-a-re-watch-of/"/>
+    <published>2018-12-03T13:50:34Z</published>
+    <updated>2018-12-03T13:50:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/12/we-finished-a-re-watch-of/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;We finished a re-watch of all six seasons of Community last night (though it was our first time seeing season 6, since it originally only appeared on a weird Yahoo streaming service). Such a phenomenal show. And the final episode was the perfect way to end it.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/11/i-still-say-theres-something-fundamentally/"/>
+    <published>2018-11-20T20:57:02Z</published>
+    <updated>2018-11-20T20:57:02Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/11/i-still-say-theres-something-fundamentally/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I still say there’s something fundamentally wrong with our food distribution practices when one outbreak/incident means the entire country has to beware an entire product.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/11/a-fire-in-the-fireplace-and/"/>
+    <published>2018-11-17T21:27:33Z</published>
+    <updated>2018-11-17T21:27:33Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/11/a-fire-in-the-fireplace-and/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;A fire in the fireplace and a dram of Talisker Storm 🥃&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/11/chrome-is-simply-better-at-debugging/"/>
+    <published>2018-11-01T17:08:25Z</published>
+    <updated>2018-11-01T17:08:25Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/11/chrome-is-simply-better-at-debugging/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Chrome is simply better at debugging JavaScript. And Firefox is simply better with CSS.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/has-anyone-done-a-good-exploration/"/>
+    <published>2018-10-26T14:13:09Z</published>
+    <updated>2018-10-26T14:13:09Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/has-anyone-done-a-good-exploration/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Has anyone done a good exploration yet of good ways to integrate &lt;code&gt;useReducer()&lt;/code&gt; and context?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/so-connecttech-is-this-week-im/"/>
+    <published>2018-10-17T14:14:18Z</published>
+    <updated>2018-10-17T14:14:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/so-connecttech-is-this-week-im/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;So Connect.Tech is this week. I’m not there because I apparently cannot read a calendar correctly, and thought it was during my Scotland trip last month.  😕&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/today-i-made-scramled-eggs-with/"/>
+    <published>2018-10-14T22:41:12Z</published>
+    <updated>2018-10-14T22:41:12Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/today-i-made-scramled-eggs-with/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Today I made:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scramled eggs with Scottish smoked salmon, shallots, &amp;amp; tarragon&lt;/li&gt;
+&lt;li&gt;Almond biscotti from scratch&lt;/li&gt;
+&lt;li&gt;My famous burgers (the 5 y/o says they&#39;re the best anywhere)&lt;/li&gt;
+&lt;/ul&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/the-perfect-use-case-for-web/"/>
+    <published>2018-10-12T13:17:53Z</published>
+    <updated>2018-10-12T13:17:53Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/the-perfect-use-case-for-web/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The perfect use case for Web Components as they are currently defined: libraries like Bootstrap. Then provide thin adapters over the top to tie them into various frameworks.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/developers-please-make-sure-your-library/"/>
+    <published>2018-10-10T13:59:09Z</published>
+    <updated>2018-10-10T13:59:09Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/developers-please-make-sure-your-library/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Developers: Please make sure your library can be imported in both Node and browser environments. Please handle &lt;code&gt;typeof window === &amp;amp;#39;undefined&amp;amp;#39;&lt;/code&gt; gracefully, even if it “should only ever be run in browser.”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/observation-about-coffee-in-the-uk/"/>
+    <published>2018-10-02T13:07:23Z</published>
+    <updated>2018-10-02T13:07:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/observation-about-coffee-in-the-uk/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Observation about coffee in the UK:&lt;/p&gt;
+&lt;p&gt;Most espresso drinks I had there were decent but not outstanding. Meanwhile, none of the drip coffee was remotely as bad as the swill that’s so common in the States. (I did see a few Starbucks, but I avoided them there just as I do here because their coffee is unpalatable.)&lt;/p&gt;
+&lt;p&gt;In the States, I usually have a bit of trepidation when I order coffee from a new place, but everywhere I went in the UK was “safe.”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/oh-hai-i-have-like-30/"/>
+    <published>2018-10-01T15:45:06Z</published>
+    <updated>2018-10-01T15:45:06Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/oh-hai-i-have-like-30/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Oh hai I have like 30 unread newsletters from my time (mostly) away from the screen. I’m probably gonna skim through them really fast so let me ask this:&lt;/p&gt;
+&lt;p&gt;Were there any really cool/essential/notable things to read in the past two weeks in webdev?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/10/yes-hi-i-have-a-very/"/>
+    <published>2018-10-01T14:34:08Z</published>
+    <updated>2018-10-01T14:34:08Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/10/yes-hi-i-have-a-very/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“Yes hi I have a very important question. So instead of asking it in this email, I have saved it as a Word document and attached to waste your time. Please get back to me ASAP”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/well-look-what-came-home/"/>
+    <published>2018-09-30T23:09:15Z</published>
+    <updated>2018-09-30T23:09:15Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/well-look-what-came-home/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Well look what came home with me…&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/goodbye-scotland/"/>
+    <published>2018-09-28T10:00:40Z</published>
+    <updated>2018-09-28T10:00:40Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/goodbye-scotland/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Goodbye, Scotland&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/the-edinburgh-airport-is-like-an/"/>
+    <published>2018-09-28T07:54:05Z</published>
+    <updated>2018-09-28T07:54:05Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/the-edinburgh-airport-is-like-an/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The Edinburgh airport is like an IKEA. A slightly strange yet highly efficient system shuffling you through security, and a long winding path taking you through the sections of duty free shopping.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/in-the-last-week-ive-had/"/>
+    <published>2018-09-23T21:23:14Z</published>
+    <updated>2018-09-23T21:23:14Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/in-the-last-week-ive-had/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;In the last week I&#39;ve had: dim sum, tapas, Israeli, tea at Fortnum’s, French-Moroccan, German shnitzel, Scottish salmon, wood pigeon, Nepalese, and several breakfasts at French patisseries.&lt;/p&gt;
+&lt;p&gt;I&#39;m so full. Tomorrow we&#39;re talking about bread and jam for dinner 😆&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/town-of-uig/"/>
+    <published>2018-09-23T15:51:53Z</published>
+    <updated>2018-09-23T15:51:53Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/town-of-uig/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Town of Uig, Isle of Skye&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/theres-almost-certainly-a-korok-seed/"/>
+    <published>2018-09-23T15:31:25Z</published>
+    <updated>2018-09-23T15:31:25Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/theres-almost-certainly-a-korok-seed/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;There&#39;s almost certainly a Korok seed near here...&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/view-from-the-room/"/>
+    <published>2018-09-22T20:34:29Z</published>
+    <updated>2018-09-22T20:34:29Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/view-from-the-room/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;View from the room, Isle of Skye&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/286-steps/"/>
+    <published>2018-09-21T14:21:34Z</published>
+    <updated>2018-09-21T14:21:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/286-steps/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;286 steps? Conquered.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/furby-over-edinburgh/"/>
+    <published>2018-09-21T14:07:16Z</published>
+    <updated>2018-09-21T14:07:16Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/furby-over-edinburgh/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Furby over Edinburgh&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/st-giles-cathedral/"/>
+    <published>2018-09-20T19:46:37Z</published>
+    <updated>2018-09-20T19:46:37Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/st-giles-cathedral/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;St. Giles’ Cathedral, Edinburgh&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/the-two-edinburgh-trains-before-ours/"/>
+    <published>2018-09-20T09:56:48Z</published>
+    <updated>2018-09-20T09:56:48Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/the-two-edinburgh-trains-before-ours/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The two Edinburgh trains before ours were cancelled and now the whole world wants into this one. One woman here has a ticket for a seat that doesn&#39;t exist.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/dear-us-get-your-head-out/"/>
+    <published>2018-09-20T07:43:29Z</published>
+    <updated>2018-09-20T07:43:29Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/dear-us-get-your-head-out/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Dear U.S.: get your head out of your ass and learn to value proper bread. Thanks.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/just-had-probably-one-of-best/"/>
+    <published>2018-09-19T18:05:09Z</published>
+    <updated>2018-09-19T18:05:09Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/just-had-probably-one-of-best/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Just had probably one of best meals I&#39;ve ever had at The Palomar and The Cursed Child (part I) was fantastic (OMG effects that I&#39;m totally not going to spoil). Now for Part II!&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/nerrrrrds/"/>
+    <published>2018-09-19T09:20:48Z</published>
+    <updated>2018-09-19T09:20:48Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/nerrrrrds/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Nerrrrrds!&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/st-pauls-cathedral/"/>
+    <published>2018-09-18T23:13:23Z</published>
+    <updated>2018-09-18T23:13:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/st-pauls-cathedral/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;St Paul’s Cathedral and the Millennium Bridge&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/thing-i-found-myself-saying-today/"/>
+    <published>2018-09-18T20:15:14Z</published>
+    <updated>2018-09-18T20:15:14Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/thing-i-found-myself-saying-today/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Thing I found myself saying today: “we went there for tea, but ended up with schnitzel.”&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/man-i-love-the-tube/"/>
+    <published>2018-09-18T17:20:26Z</published>
+    <updated>2018-09-18T17:20:26Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/man-i-love-the-tube/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Man, I love the Tube&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/pit-stop/"/>
+    <published>2018-09-18T15:44:49Z</published>
+    <updated>2018-09-18T15:44:49Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/pit-stop/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Pit stop&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/birds/"/>
+    <published>2018-09-18T12:55:14Z</published>
+    <updated>2018-09-18T12:55:14Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/birds/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Birds&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/married-ten-years-and-change/"/>
+    <published>2018-09-17T16:40:49Z</published>
+    <updated>2018-09-17T16:40:49Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/married-ten-years-and-change/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Married ten years (and change). And now we will frolick about the UK!&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/you-guys-will-never-believe/"/>
+    <published>2018-09-17T14:29:27Z</published>
+    <updated>2018-09-17T14:29:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/you-guys-will-never-believe/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;You guys will never believe this photo of London I took!&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/brb-going-to-london/"/>
+    <published>2018-09-17T02:33:15Z</published>
+    <updated>2018-09-17T02:33:15Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/brb-going-to-london/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;brb going to London&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/flying-out-in-the-late-evening/"/>
+    <published>2018-09-16T19:30:16Z</published>
+    <updated>2018-09-16T19:30:16Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/flying-out-in-the-late-evening/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Flying out in the late evening makes for a strange combination of running around all day taking care of little details while also having more time on my hands than I know what to do with.&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/seeing-a-wierd-bug-in-firefox/"/>
+    <published>2018-09-16T12:40:58Z</published>
+    <updated>2018-09-16T12:40:58Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/seeing-a-wierd-bug-in-firefox/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Seeing a wierd bug in Firefox Android: when i use a PWA, then later go open a different PWA, it opens the first one back up and not the second. Seems to happen pretty consistently&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/well-yellow-jackets-you-may/"/>
+    <published>2018-09-15T13:53:43Z</published>
+    <updated>2018-09-15T13:53:43Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/well-yellow-jackets-you-may/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Well, yellow jackets. You may have won a battle, but I have won the war&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/i-think-my-macbook-just-died/"/>
+    <published>2018-09-14T19:42:41Z</published>
+    <updated>2018-09-14T19:42:41Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/i-think-my-macbook-just-died/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I think my MacBook just died 😵&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/just-a-test-posting-photos/"/>
+    <published>2018-09-14T15:49:22Z</published>
+    <updated>2018-09-14T15:49:22Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/just-a-test-posting-photos/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Just a test posting photos to my site from my phone.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/i-finally-got-my-site/"/>
+    <published>2018-09-14T01:20:18Z</published>
+    <updated>2018-09-14T01:20:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/i-finally-got-my-site/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;🎉 I finally got my site automatically sending webmentions. 🎉&lt;/p&gt;
+&lt;p&gt;Which means my notes will now all automatically post to Twitter&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/theres-something-really-wonderful-about/"/>
+    <published>2018-09-09T15:33:44Z</published>
+    <updated>2018-09-09T15:33:44Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/theres-something-really-wonderful-about/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;There&#39;s something really wonderful about sitting around in a bit of a daze after a good run, still in your running gear, sipping on ice cold water&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/wait-so-cmdv-doesnt-paste-into/"/>
+    <published>2018-09-07T17:24:23Z</published>
+    <updated>2018-09-07T17:24:23Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/wait-so-cmdv-doesnt-paste-into/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Wait, so Cmd+V doesn’t paste into the new Chrome address bar anymore 😕&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/im-cleaning-up-updating-my-feed/"/>
+    <published>2018-09-04T15:45:29Z</published>
+    <updated>2018-09-04T15:45:29Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/im-cleaning-up-updating-my-feed/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’m cleaning up &amp;amp; updating my feed subscriptions. Who’s posting their notes via RSS?&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/09/logosvgpng/"/>
+    <published>2018-09-04T13:21:00Z</published>
+    <updated>2018-09-04T13:21:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/09/logosvgpng/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“logo.svg.png” 🤔&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/08/dns-ing-on-a-friday-night/"/>
+    <published>2018-08-31T22:59:21Z</published>
+    <updated>2018-08-31T22:59:21Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/08/dns-ing-on-a-friday-night/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;DNS-ing on a Friday night&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/08/the-re-vamped-omnibear-ui-is/"/>
+    <published>2018-08-28T17:43:49Z</published>
+    <updated>2018-08-28T17:43:49Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/08/the-re-vamped-omnibear-ui-is/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The re-vamped Omnibear UI is coming along nicely. Also: bookmarks support!&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/08/ive-been-working-mobx-into-omnibear/"/>
+    <published>2018-08-27T16:18:30Z</published>
+    <updated>2018-08-27T16:18:30Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/08/ive-been-working-mobx-into-omnibear/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’ve been working MobX into Omnibear, and I am SOLD. This is so beyond superior to Redux.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/08/64774/"/>
+    <published>2018-08-23T17:59:34Z</published>
+    <updated>2018-08-23T17:59:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/08/64774/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;At my first web-related job, one of the early designs for the site had a background of #336699. To this day, that’s still my go-to placeholder color&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/08/til-if-youre-sending/"/>
+    <published>2018-08-18T00:00:24Z</published>
+    <updated>2018-08-18T00:00:24Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/08/til-if-youre-sending/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;TIL: if you&#39;re sending a request using &lt;code&gt;fetch()&lt;/code&gt; it does not send cookies by default UNLESS you&#39;re coding a browser extension.&lt;/p&gt;
+&lt;p&gt;Both FF &amp;amp; Chrome extensions will send the cookies anyway unless you specify &lt;code&gt;credentials: &amp;amp;#39;omit&amp;amp;#39;&lt;/code&gt; because 🤨&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/07/47831/"/>
+    <published>2018-07-25T13:17:11Z</published>
+    <updated>2018-07-25T13:17:11Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/07/47831/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/07/might-i-recommend-switching-to-proton/"/>
+    <published>2018-07-03T12:46:56Z</published>
+    <updated>2018-07-03T12:46:56Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/07/might-i-recommend-switching-to-proton/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Might I recommend switching to Proton Mail?&lt;/p&gt;
+&lt;p&gt;http://www.businessinsider.com/google-allows-app-developers-to-read-peoples-gmails-report-2018-7&lt;/p&gt;
+<a href="https://brid.gy/publish/twitter"></a></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/05/relatable-http-nymagcom-selectall-2018-05/"/>
+    <published>2018-05-21T12:32:27Z</published>
+    <updated>2018-05-21T12:32:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/05/relatable-http-nymagcom-selectall-2018-05/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Relatable&lt;/p&gt;
+&lt;p&gt;http://nymag.com/selectall/2018/05/i-dont-know-how-to-waste-time-on-the-internet-anymore.html&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/05/the-incredible-power-of-svg-is/"/>
+    <published>2018-05-16T16:40:21Z</published>
+    <updated>2018-05-16T16:40:21Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/05/the-incredible-power-of-svg-is/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The incredible power of SVG is freeing, but also leads to decision paralysis. Should I use a sprite sheet? Embed them in the CSS? Inline everything in HTML? Which is most performant? And is that option practical in my given circumstance?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/04/getting-an-immunization-isnt-just-about/"/>
+    <published>2018-04-27T14:29:54Z</published>
+    <updated>2018-04-27T14:29:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/04/getting-an-immunization-isnt-just-about/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Getting an immunization isn’t just about protecting you, but also the people around you. It’s beginning to look like protecting your privacy online works the same way.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/04/the-american-choppers-meme-is-truly/"/>
+    <published>2018-04-06T18:37:37Z</published>
+    <updated>2018-04-06T18:37:37Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/04/the-american-choppers-meme-is-truly/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The American Choppers meme is truly one of the best to roll around in a while.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/03/software-patents-taking-something-thats-not/"/>
+    <published>2018-03-02T13:56:12Z</published>
+    <updated>2018-03-02T13:56:12Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/03/software-patents-taking-something-thats-not/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Software patents: Taking something that’s not patentable, and “doing it with software” to make it patentable&lt;/p&gt;
+&lt;p&gt;Silicon Valley “disruption”: taking illegal labor practices and re-framing the terms used to make them legal&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/02/so-i-guess-at-some-point/"/>
+    <published>2018-02-08T20:59:29Z</published>
+    <updated>2018-02-08T20:59:29Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/02/so-i-guess-at-some-point/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;So I guess at some point Chrome fixed that inputs-as-grid-item-collapse-to-zero-width bug. How long has that been working?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/02/devtools-feature-request-the-ability-to/"/>
+    <published>2018-02-08T18:04:14Z</published>
+    <updated>2018-02-08T18:04:14Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/02/devtools-feature-request-the-ability-to/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;DevTools feature request: the ability to hide/suppress all errors in the console that came from browser extensions.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/02/some-random-thoughts-on-the-solo/"/>
+    <published>2018-02-05T18:19:34Z</published>
+    <updated>2018-02-05T18:19:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/02/some-random-thoughts-on-the-solo/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Some random thoughts on the Solo trailer:&lt;/p&gt;
+&lt;p&gt;A lot of exciting stuff (Donald Glover!), but perhaps the least exciting part is Han Solo himself. He doesn’t &lt;em&gt;seem&lt;/em&gt; like the Han Solo we know.&lt;/p&gt;
+&lt;p&gt;Then again, the Han Solo we know—at the beginning of New Hope—isn’t all that great a guy. If these movies are to have any character development, it will have to be more a character &lt;em&gt;devolvement&lt;/em&gt;. Han Solo may start out a decent guy, and this backstory will turn him into the Looking-Out-For-Number-One scoundrel we know.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/02/sometimes-its-faster-and-easier-to/"/>
+    <published>2018-02-01T13:25:47Z</published>
+    <updated>2018-02-01T13:25:47Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/02/sometimes-its-faster-and-easier-to/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Sometimes, it’s faster and easier to just add a &amp;lt;script&amp;gt; tag to the page and do the thing without your big framework.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/omnibear-v1-is-rolling-out/"/>
+    <published>2018-01-31T18:04:37Z</published>
+    <updated>2018-01-31T18:04:37Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/omnibear-v1-is-rolling-out/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Omnibear v1.0.0 is rolling out to Chrome and Firefox stores now!&lt;/p&gt;
+&lt;p&gt;https://omnibear.com/releases/1.0.0/&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/the-eu-has-passed-the-gdpr/"/>
+    <published>2018-01-30T13:56:33Z</published>
+    <updated>2018-01-30T13:56:33Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/the-eu-has-passed-the-gdpr/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The EU has passed the GDPR, prohibiting companies from harvesting customer’s personal information without specific a business need.&lt;/p&gt;
+&lt;p&gt;https://www.cennydd.com/writing/a-techies-rough-guide-to-gdpr&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/legalized-gambling-reporting-troll-twitter-accounts/"/>
+    <published>2018-01-30T13:33:24Z</published>
+    <updated>2018-01-30T13:33:24Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/legalized-gambling-reporting-troll-twitter-accounts/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Legalized gambling: reporting troll Twitter accounts and waiting to see which ones actually get their accounts suspended.&lt;/p&gt;
+&lt;p&gt;(Today, I won 💪🏻)&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/54984/"/>
+    <published>2018-01-18T15:16:24Z</published>
+    <updated>2018-01-18T15:16:24Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/54984/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;strong&gt;Coding from Home on a Snowy Morning&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Whose code this is I think I know.&lt;br /&gt;
+Written before Prettier, though;&lt;br /&gt;
+He will not see me stopping here&lt;br /&gt;
+To watch parenthesis reflow.&lt;/p&gt;
+&lt;p&gt;My editor must think it queer&lt;br /&gt;
+To save without a commit near.&lt;br /&gt;
+My MacBook Pro will keep me warm&lt;br /&gt;
+The coldest morning of the year.&lt;/p&gt;
+&lt;p&gt;A yellow line highlights to warn&lt;br /&gt;
+Of declaration with bad form.&lt;br /&gt;
+The only other sound’s the beep&lt;br /&gt;
+From webpack build that did perform.&lt;/p&gt;
+&lt;p&gt;JS is lovely, dark and deep,&lt;br /&gt;
+But I have Promises to keep,&lt;br /&gt;
+And JIRAs to go before I sleep,&lt;br /&gt;
+And JIRAs to go before I sleep.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/56400/"/>
+    <published>2018-01-06T15:40:00Z</published>
+    <updated>2018-01-06T15:40:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/56400/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Steps to get on the IndieWeb:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get a blog and post to it&lt;/li&gt;
+&lt;li&gt;You’re on the IndieWeb!&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/53815/"/>
+    <published>2018-01-06T14:56:55Z</published>
+    <updated>2018-01-06T14:56:55Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/53815/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“I’m Harvesting Credit Card Numbers and Passwords from Your Site. Here&#39;s How.”&lt;/p&gt;
+&lt;p&gt;tldr: Use a CSP.&lt;/p&gt;
+&lt;p&gt;https://medium.com/@david.gilbertson/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/74371/"/>
+    <published>2018-01-05T20:39:31Z</published>
+    <updated>2018-01-05T20:39:31Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/74371/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;An article titled “Frontend in 2017: the Important Parts” but doesn’t mention &lt;em&gt;any&lt;/em&gt; of the amazing leaps forward in CSS that happened perfectly sums up our industry. 😩&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/71852/"/>
+    <published>2018-01-05T19:57:32Z</published>
+    <updated>2018-01-05T19:57:32Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/71852/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Blogging advice for 2018: just hit publish&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2018/01/77855/"/>
+    <published>2018-01-04T21:37:35Z</published>
+    <updated>2018-01-04T21:37:35Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2018/01/77855/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;HTML needs a “preferred breaking space” character.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/72425/"/>
+    <published>2017-11-28T20:07:05Z</published>
+    <updated>2017-11-28T20:07:05Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/72425/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“So, implementors: build stuff which kills your own FB usage before trying to kill facebook.” 👏🏻&lt;/p&gt;
+&lt;p&gt;https://waterpigs.co.uk/notes/1480/&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/14118/"/>
+    <published>2017-11-20T03:55:18Z</published>
+    <updated>2017-11-20T03:55:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/14118/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;It&#39;s bug report weekend!&lt;/p&gt;
+&lt;p&gt;Reported a Prettier bug; saw a fix PR within 8 hours.
+Reported a FF bug; had it confirmed and a workaround provided.&lt;/p&gt;
+&lt;p&gt;Thanks to everyone working on these!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/56310/"/>
+    <published>2017-11-15T15:38:30Z</published>
+    <updated>2017-11-15T15:38:30Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/56310/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Microsoft has figured out that winning over the developers &amp;amp; designers will eventually win over the masses. And Apple has forgotten it.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/75761/"/>
+    <published>2017-11-14T21:02:41Z</published>
+    <updated>2017-11-14T21:02:41Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/75761/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I think these are going to be &lt;em&gt;big&lt;/em&gt; topics at conferences in the coming year&lt;/p&gt;
+&lt;p&gt;https://twitter.com/fox/status/930232428790087680&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/50385/"/>
+    <published>2017-11-14T13:59:45Z</published>
+    <updated>2017-11-14T13:59:45Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/50385/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Some interesting findings here, and the current WCAG 2.1 recommendation: text should resize up to 200%.
+https://alastairc.ac/2017/11/is-text-sizing-dead/&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/67498/"/>
+    <published>2017-11-13T18:44:58Z</published>
+    <updated>2017-11-13T18:44:58Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/67498/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;&amp;lt;input type=&amp;quot;country&amp;quot;&amp;gt; probably won’t happen. I’m okay with that.&lt;/p&gt;
+&lt;p&gt;But can we have an &amp;lt;input type=&amp;quot;typeahead&amp;quot;&amp;gt;?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/57216/"/>
+    <published>2017-11-13T15:53:36Z</published>
+    <updated>2017-11-13T15:53:36Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/57216/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Is it just me, or does FF Nightly ask to be restarted twice each morning?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/57194/"/>
+    <published>2017-11-13T15:53:14Z</published>
+    <updated>2017-11-13T15:53:14Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/57194/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Last year, I felt uneasy about the moral implications of using an ad-blocker. Now I feel it&#39;s a moral imperative to use one.&lt;/p&gt;
+&lt;p&gt;Ad-based/spy-based revenue model needs to be broken.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/11/71334/"/>
+    <published>2017-11-11T19:48:54Z</published>
+    <updated>2017-11-11T19:48:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/11/71334/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Considering releasing a stripped-down copy of my blog setup as a Hugo-based IndieWeb starter kit… 🤔&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/69458/"/>
+    <published>2017-10-26T19:17:38Z</published>
+    <updated>2017-10-26T19:17:38Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/69458/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/55240/"/>
+    <published>2017-10-19T15:20:40Z</published>
+    <updated>2017-10-19T15:20:40Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/55240/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Potential CSS specs/concepts I most want to see made reality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Color functions&lt;/li&gt;
+&lt;li&gt;Regions&lt;/li&gt;
+&lt;li&gt;Container queries&lt;/li&gt;
+&lt;li&gt;Subgrid&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/44920/"/>
+    <published>2017-10-17T12:28:40Z</published>
+    <updated>2017-10-17T12:28:40Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/44920/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Trying to decide whether DateTimes in Go are better or worse than DateTimes in JavaScript&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/46226/"/>
+    <published>2017-10-16T12:50:26Z</published>
+    <updated>2017-10-16T12:50:26Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/46226/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;In retrospect, maybe we should have had another WiFi security protocol queued up&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/68422/"/>
+    <published>2017-10-13T19:00:22Z</published>
+    <updated>2017-10-13T19:00:22Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/68422/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Video from my Connect Tech talk is up! The Decentralized Social Web:&lt;/p&gt;
+&lt;p&gt;https://www.recallact.com/presentation/decentralized-social-web&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/82187/"/>
+    <published>2017-10-10T22:49:47Z</published>
+    <updated>2017-10-10T22:49:47Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/82187/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;.@davatron preaching the importance of your own blog instead of vomiting into the Twitter sewer&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/63884/"/>
+    <published>2017-10-06T17:44:44Z</published>
+    <updated>2017-10-06T17:44:44Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/63884/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;As soon as this storm clears NOLA, it’s gonna be over ATL. Cannot figure out how I’m gonna get down there without missing at least the entire first day of @CSSDevConf 😣&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/10/63466/"/>
+    <published>2017-10-02T17:37:46Z</published>
+    <updated>2017-10-02T17:37:46Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/10/63466/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I got in the habit of using &lt;code&gt;flex: 1&lt;/code&gt; as shorthand for &lt;code&gt;flex-grow: 1&lt;/code&gt; and somehow keep forgetting that it breaks in IE 😖&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/65124/"/>
+    <published>2017-09-29T18:05:24Z</published>
+    <updated>2017-09-29T18:05:24Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/65124/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Things learned when building a browser extension: Chrome will let you publish any old thing. Everyone else vets your extension before putting it in their store.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/79134/"/>
+    <published>2017-09-26T21:58:54Z</published>
+    <updated>2017-09-26T21:58:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/79134/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I already have the ability to tweet out more than 140 characters ¯&#92;_(ツ)_/¯. 280 characters. 10,000 characters. Whatever.&lt;/p&gt;
+&lt;p&gt;Not really sure what the big deal is here… 🙃&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/70135/"/>
+    <published>2017-09-22T19:28:55Z</published>
+    <updated>2017-09-22T19:28:55Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/70135/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Posting live from on stage at @connect_js!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/48260/"/>
+    <published>2017-09-19T13:24:20Z</published>
+    <updated>2017-09-19T13:24:20Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/48260/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Interesting thread here on how Firefox rasterizes SVGs &amp;amp; the performance implications&lt;/p&gt;
+&lt;p&gt;https://twitter.com/Gankro/status/909795286201065472&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/71404/"/>
+    <published>2017-09-06T19:50:04Z</published>
+    <updated>2017-09-06T19:50:04Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/71404/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Universities: Let’s create WWW using HTML so information readily available&lt;/p&gt;
+&lt;p&gt;Also universities: Let’s make research papers available only as PDFs&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/09/52680/"/>
+    <published>2017-09-01T14:38:00Z</published>
+    <updated>2017-09-01T14:38:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/09/52680/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I believe 100% in “Clean Code” and also believe repetition is much better than the wrong abstraction. Why do I keep seeing folks arguing between the two as if they somehow contradict?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/72390/"/>
+    <published>2017-08-31T20:06:30Z</published>
+    <updated>2017-08-31T20:06:30Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/72390/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’m reversing my previous position: Twitter should drop the 140 char limit.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/68549/"/>
+    <published>2017-08-30T19:02:29Z</published>
+    <updated>2017-08-30T19:02:29Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/68549/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Test post from Omnibear in Firefox!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/51877/"/>
+    <published>2017-08-30T14:24:37Z</published>
+    <updated>2017-08-30T14:24:37Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/51877/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/65435/"/>
+    <published>2017-08-15T18:10:35Z</published>
+    <updated>2017-08-15T18:10:35Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/65435/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/50907/"/>
+    <published>2017-08-11T14:08:27Z</published>
+    <updated>2017-08-11T14:08:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/50907/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/08/51858/"/>
+    <published>2017-08-07T14:24:18Z</published>
+    <updated>2017-08-07T14:24:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/08/51858/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/07/64290/"/>
+    <published>2017-07-20T17:51:30Z</published>
+    <updated>2017-07-20T17:51:30Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/07/64290/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/56279/"/>
+    <published>2017-06-28T15:37:59Z</published>
+    <updated>2017-06-28T15:37:59Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/56279/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/56272/"/>
+    <published>2017-06-28T15:37:52Z</published>
+    <updated>2017-06-28T15:37:52Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/56272/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/56261/"/>
+    <published>2017-06-28T15:37:41Z</published>
+    <updated>2017-06-28T15:37:41Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/56261/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/56254/"/>
+    <published>2017-06-28T15:37:34Z</published>
+    <updated>2017-06-28T15:37:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/56254/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/60952/"/>
+    <published>2017-06-23T16:55:52Z</published>
+    <updated>2017-06-23T16:55:52Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/60952/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/51798/"/>
+    <published>2017-06-16T14:23:18Z</published>
+    <updated>2017-06-16T14:23:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/51798/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/06/51160/"/>
+    <published>2017-06-09T14:12:40Z</published>
+    <updated>2017-06-09T14:12:40Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/06/51160/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/05/47656/"/>
+    <published>2017-05-25T13:14:16Z</published>
+    <updated>2017-05-25T13:14:16Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/05/47656/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/55095/"/>
+    <published>2017-04-20T15:18:15Z</published>
+    <updated>2017-04-20T15:18:15Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/55095/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/64656/"/>
+    <published>2017-04-19T17:57:36Z</published>
+    <updated>2017-04-19T17:57:36Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/64656/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/52662/"/>
+    <published>2017-04-13T14:37:42Z</published>
+    <updated>2017-04-13T14:37:42Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/52662/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/51720/"/>
+    <published>2017-04-12T14:22:00Z</published>
+    <updated>2017-04-12T14:22:00Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/51720/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;“When it comes to CSS, isolation is more important than reuse”&lt;/p&gt;
+&lt;p&gt;I disagree with this &lt;em&gt;so hard&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/50250/"/>
+    <published>2017-04-07T13:57:30Z</published>
+    <updated>2017-04-07T13:57:30Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/50250/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/6806/"/>
+    <published>2017-04-06T01:53:26Z</published>
+    <updated>2017-04-06T01:53:26Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/6806/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/1160/"/>
+    <published>2017-04-06T00:19:20Z</published>
+    <updated>2017-04-06T00:19:20Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/1160/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Well, I’m on https://mastodon.social/@keithjgrant for those who are into that sort of thing&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/04/51200/"/>
+    <published>2017-04-03T14:13:20Z</published>
+    <updated>2017-04-03T14:13:20Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/04/51200/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;There’s a forgotten element to Separation of Concerns: keeping things in separate files allows developers w/ different specialties to edit &amp;amp; control contents of the stuff they understand. To date, the JavaScript community at large hasn’t really shown it can be responsible for semantic and accessible markup and sane CSS. 🤔&lt;/p&gt;
+&lt;p&gt;https://hackernoon.com/professional-pride-7b84287ae747&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/65012/"/>
+    <published>2017-03-29T18:03:32Z</published>
+    <updated>2017-03-29T18:03:32Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/65012/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I get that &lt;a href=&quot;https://medium.com/@isaaclyman/8-css-gotchas-to-start-your-morning-off-right-c5daade0731d&quot;&gt;this is satire&lt;/a&gt;. I’m fine with satire, in general. But the fact that this particular satire resonates with so many people indicates to me that one of the following is true:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We have royally screwed up the teaching of CSS.&lt;/li&gt;
+&lt;li&gt;Web devs are terrible at taking the time to learn how CSS works.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It’s probably both. And yes, some of the earlier stuff is not immediately intuitive: floats, vertical-align, etc. But it is understandable. You can make sense of this stuff.&lt;/p&gt;
+&lt;p&gt;It’s hard to see devs throwing their hands up in the air… If this stuff is discouraging to you, please take some time to read up on it. Stop trying to hack through the brush alone. There are great resources available (p.s. I’m writing one!)&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/61587/"/>
+    <published>2017-03-28T17:06:27Z</published>
+    <updated>2017-03-28T17:06:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/61587/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’m ready to stop yelling about this crap and start having productive discussions. This is a good starting place 👍&lt;/p&gt;
+&lt;p&gt;https://twitter.com/jdan/status/846755231325151232&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/73954/"/>
+    <published>2017-03-20T20:32:34Z</published>
+    <updated>2017-03-20T20:32:34Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/73954/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/48158/"/>
+    <published>2017-03-17T13:22:38Z</published>
+    <updated>2017-03-17T13:22:38Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/48158/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Developers somehow acquired the idea that CSS should be easy. Like, learn in a weekend easy.&lt;/p&gt;
+&lt;p&gt;CSS isn’t like that. Nobody &lt;em&gt;in the world&lt;/em&gt; knows all of CSS. You need to commit to learning it just as you do conventional programming.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/68059/"/>
+    <published>2017-03-13T18:54:19Z</published>
+    <updated>2017-03-13T18:54:19Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/68059/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’m still fascinated that JavaScript—which only runs on one thread—is the language that popularized functional, async programming, which is needed for multi-threaded programming.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/66211/"/>
+    <published>2017-03-13T18:23:31Z</published>
+    <updated>2017-03-13T18:23:31Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/66211/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/65135/"/>
+    <published>2017-03-10T18:05:35Z</published>
+    <updated>2017-03-10T18:05:35Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/65135/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Design, Accessibility, Performance, UX, Frameworks… you can’t master them all. Focus on one &amp;amp; find folks who are good at each.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/71694/"/>
+    <published>2017-03-08T19:54:54Z</published>
+    <updated>2017-03-08T19:54:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/71694/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I really wish flexbox &amp;amp; grid didn’t break margin collapsing 😕&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/77585/"/>
+    <published>2017-03-07T21:33:05Z</published>
+    <updated>2017-03-07T21:33:05Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/77585/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/53802/"/>
+    <published>2017-03-07T14:56:42Z</published>
+    <updated>2017-03-07T14:56:42Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/53802/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Very rarely should you rewrite the code from the ground up. This probably also applies to law.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/73047/"/>
+    <published>2017-03-06T20:17:27Z</published>
+    <updated>2017-03-06T20:17:27Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/73047/</id>
+    <content xml:lang="en" type="html"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/71143/"/>
+    <published>2017-03-03T19:45:43Z</published>
+    <updated>2017-03-03T19:45:43Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/71143/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;This is why software is never done. The old days of boxed packaging must have been a nightmare.&lt;/p&gt;
+&lt;p&gt;https://twitter.com/mathowie/status/837735473745289218&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/03/73187/"/>
+    <published>2017-03-02T20:19:47Z</published>
+    <updated>2017-03-02T20:19:47Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/03/73187/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Always amazed to realize how little CSS actually needs prefixes anymore&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/55002/"/>
+    <published>2017-02-16T15:16:42Z</published>
+    <updated>2017-02-16T15:16:42Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/55002/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;1 2 3 I’ve finally learned to touch-type the number keys&lt;/p&gt;
+&lt;p&gt;4 5 6 What will be my next amazing trick?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/65242/"/>
+    <published>2017-02-15T18:07:22Z</published>
+    <updated>2017-02-15T18:07:22Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/65242/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;My editor doesn’t do so great working in a file with a 50,000-character line of text 😣&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/49315/"/>
+    <published>2017-02-15T13:41:55Z</published>
+    <updated>2017-02-15T13:41:55Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/49315/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;This is the natural end result of moving your styles into JS&lt;/p&gt;
+&lt;p&gt;https://twitter.com/itsmisscs/status/831640807706857472&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/86308/"/>
+    <published>2017-02-14T23:58:28Z</published>
+    <updated>2017-02-14T23:58:28Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/86308/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Google AMP is like nutrition supplements... Michael Pollan says, “Be the kind of person who takes supplements — then skip the supplements,” because supplements have been proven not to help you, but people who take them are healthier.&lt;/p&gt;
+&lt;p&gt;Maybe Google AMP is like that: Follow the rules of AMP pages, then skip the AMP cache.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/74634/"/>
+    <published>2017-02-14T20:43:54Z</published>
+    <updated>2017-02-14T20:43:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/74634/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Test post from phone&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/65298/"/>
+    <published>2017-02-13T18:08:18Z</published>
+    <updated>2017-02-13T18:08:18Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/65298/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;This was a solid episode. I learned a few things about AMP. I’m... slightly less hostile to it now&lt;/p&gt;
+&lt;p&gt;http://shoptalkshow.com/episodes/248-amp/&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/91624/"/>
+    <published>2017-02-09T14:16:25Z</published>
+    <updated>2017-02-09T14:16:25Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/91624/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Would it be totally annoying if my tweets linked back to my blog? It probably would, wouldn&#39;t it?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/84236/"/>
+    <published>2017-02-09T13:42:36Z</published>
+    <updated>2017-02-09T13:42:36Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/84236/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Current status https://www.youtube.com/watch?v=g0MLscghcN4&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/02/105953/"/>
+    <published>2017-02-03T15:59:54Z</published>
+    <updated>2017-02-03T15:59:54Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/02/105953/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Are there any codemods to convert LESS to PostCSS/cssnext syntax? Doesn&#39;t need to be too fancy, just cut down on the busywork.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title></title>
+    <link href="https://notes.keithjgrant.com/notes/2017/01/145158/"/>
+    <published>2017-01-27T19:51:58Z</published>
+    <updated>2017-01-27T19:51:58Z</updated>
+    <id>https://notes.keithjgrant.com/notes/2017/01/145158/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Progressive enhancement and rule of least power MATTER https://twitter.com/ArielleDRoss/status/825043489016705024&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+
