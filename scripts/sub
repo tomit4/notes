@@ -1,2 +1,3 @@
 #!/bin/bash
-links "https://teddit.pussthecat.org/r/${1}"
+# links "https://teddit.pussthecat.org/r/${1}"
+tuir -s "${1}"
