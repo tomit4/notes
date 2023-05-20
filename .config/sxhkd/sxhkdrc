@@ -165,7 +165,7 @@ super + alt + {h,j,k,l}
 super + a
     pavucontrol &
 super + z
-    zoom &
+    tootle &
 super + f
     librewolf &
 super + c
@@ -199,7 +199,9 @@ super + u
 super + y
     krita --nosplash &
 super + s
-    steam &
+    steam
+    # steam steam://open/console &
+    # steam %U -console "+@AllowSkipGameUpdate 1" &
 super + v
     virt-manager &
 super + r
