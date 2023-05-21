@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+filename=$1
+touch "$filename"
+chmod +x "$filename"
+echo "#!/usr/bin/env bash" >> "$filename"

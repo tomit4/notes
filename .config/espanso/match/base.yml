@@ -152,6 +152,9 @@ matches:
   - trigger: ";<h5"
     replace: "<h5> </h5>"
 
+  - trigger: ";href"
+    replace: '<a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>'
+
   - trigger: ";<d"
     replace: '<div class=""> </div>'
 
@@ -222,6 +225,7 @@ matches:
         params:
           cmd: "curl ifconfig.me ; echo ''"
 
+  # returns current time in US format
   - trigger: ";btime"
     replace: "{{output}}"
     vars:
