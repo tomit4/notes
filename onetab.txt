@@ -1,3 +1,86 @@
+https://security.stackexchange.com/questions/130548/should-jwt-token-be-stored-in-a-cookie-header-or-body | tls - Should JWT token be stored in a cookie, header or body - Information Security Stack Exchange
+https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorage-or-cookie | security - Should JWT be stored in localStorage or cookie? - Stack Overflow
+https://hapi.dev/tutorials/auth/?lang=en_US | Authentication - hapi.dev
+https://hapi.dev/api/?v=21.3.2#-routeoptionsresponse | 21.3.2 API Reference - hapi.dev
+https://scribe.rip/@thedon/auth-in-hapi-with-jwt-780ce4d072c7 | Auth in Hapi with JWT
+https://hapi.dev/module/jwt/api/?v=3.2.0#verify-1 | jwt v3.2.0 - hapi.dev
+
+https://github.com/folke/trouble.nvim | GitHub - folke/trouble.nvim: 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+
+https://www.brevo.com/ | Brevo (formerly Sendinblue) | CRM Suite
+
+https://leekahung.github.io/web-dev/ | Ka Hung's Web Developer Portfolio
+https://www.scottxbrown.com/#projects | Portfolio of Scott Brown || frontend web developer
+
+https://www.easyrdf.org/docs/rdf-formats-json#:~:text=RDF%2FJSON%20represents%20a%20set,%2C%20dictionary%20or%20hash%20table | EasyRdf - Documentation - RDF/JSON Specification
+https://www.ldf.fi/service/rdf-grapher | RDF Grapher
+https://docs.google.com/spreadsheets/d/1d8V87nxlQWnExJ1IIcZOJfGlMyyqBohjFxiTNuak_7Y/edit#gid=0 | PASS terminology - Google Sheets
+https://schema.org/Thing | Thing - Schema.org Type
+https://schema.org/Person | Person - Schema.org Type
+https://github.com/ksoftllc/license-parser | GitHub - ksoftllc/license-parser: American Driver's License PDF-417 Barcode Parser
+https://schema.org/dateIssued | dateIssued - Schema.org Property
+
+https://docs.inrupt.com/developer-tools/javascript/client-libraries/reference/solid-client/ | solid-client — Inrupt JavaScript Client Libraries
+https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/read-write-data/ | Read/Write Structured Data — Inrupt JavaScript Client Libraries
+https://www.w3.org/TeamSubmission/turtle/#sec-grammar | Turtle - Terse RDF Triple Language
+
+https://react.dev/learn/extracting-state-logic-into-a-reducer | Extracting State Logic into a Reducer – React
+https://react.dev/reference/react/useMemo | useMemo – React
+
+https://docs.inrupt.com/developer-tools/api/javascript/solid-client-authn-browser/classes/Session.html | Class: Session — Inrupt solid-client-authn-browser API Documentation
+https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started/ | Getting Started — Inrupt JavaScript Client Libraries
+https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started-explanation/#getting-started-code-details | Examination of the Code — Inrupt JavaScript Client Libraries
+https://docs.inrupt.com/pod-spaces/ | PodSpaces — Inrupt PodSpaces
+https://github.com/inrupt/solid-ui-react | GitHub - inrupt/solid-ui-react: React SDK using @inrupt/solid-client
+https://docs.inrupt.com/developer-tools/javascript/react-sdk/ | Solid React SDK — Inrupt Solid React SDK
+
+https://ishadeed.com/article/rebuild-featured-news-modern-css/ | Rebuilding a featured news section with modern CSS: Vox news - Ahmad Shadeed
+https://ishadeed.com/about/ | About - Ahmad Shadeed
+https://ishadeed.com/article/grid-layout-flexbox-components/ | Grid for layout, Flexbox for components - Ahmad Shadeed
+https://ishadeed.com/article/say-hello-to-css-container-queries/ | Say Hello To CSS Container Queries - Ahmad Shadeed
+https://ishadeed.com/article/css-container-style-queries/ | CSS Style Queries - Ahmad Shadeed
+
+https://github.com/0xERR0R/blocky | GitHub - 0xERR0R/blocky: Fast and lightweight DNS proxy as ad-blocker for local network with many features
+https://github.com/sorin-ionescu/prezto/tree/master/modules | prezto/modules at master · sorin-ionescu/prezto · GitHub
+
+https://graybox.co/about | About Us | GRAYBOX
+https://www.techoregon.org/ | Technology Association of Oregon – Empowering businesses and entrepreneurs
+https://opencommons.net/ | opencommons.net/
+https://joinpdx.org/ | JOIN - Connecting the street to a home - Portland, Oregon
+https://github.com/codeforpdx/website | GitHub - codeforpdx/website: Official Code for PDX website
+
+https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
+https://lite.duckduckgo.com/lite/?q=docker+start+with+node+or+ubuntu+or+debian%3F | docker start with node or ubuntu or debian? at DuckDuckGo
+https://www.techtarget.com/searchitoperations/tip/Choose-the-best-Docker-image-for-the-job-at-hand | Choose the best Docker image for the job at hand | TechTarget
+https://www.baeldung.com/ops/dockerfile-git-strategies | Dockerfile Strategies for Git | Baeldung
+
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp | Dockerizing a Node.js web app | Node.js
+https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
+https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing `npm ci` for faster, more reliable builds
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
+https://teddit.pussthecat.org/r/webdev/comments/a285o4/why_and_when_to_use_docker/ | Why, and when to use Docker ? : webdev
+
+https://12factor.net/ | The Twelve-Factor App
+https://docs.docker.com/engine/reference/builder/ | Dockerfile reference
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
+https://docs.docker.com/get-started/02_our_app/ | Containerize an application
+
+https://content.techgig.com/upskilling-at-techgig/11-coding-algorithms-that-every-aspiring-programmer-should-know/articleshow/95119570.cms | 11 Coding algorithms that every aspiring programmer should know | TechGig
+https://en.wikipedia.org/wiki/Depth-first_search?useskin=vector | Depth-first search - Wikipedia
+https://en.wikipedia.org/wiki/Breadth-first_search?useskin=vector | Breadth-first search - Wikipedia
+https://en.wikipedia.org/wiki/Hash_map?useskin=vector | Hash table - Wikipedia
+https://en.wikipedia.org/wiki/Space-time_tradeoff?useskin=vector | Space–time tradeoff - Wikipedia
+https://en.wikipedia.org/wiki/Hash_function?useskin=vector | Hash function - Wikipedia
+https://en.wikipedia.org/wiki/Set_(abstract_data_type)?useskin=vector | Set (abstract data type) - Wikipedia
+https://en.wikipedia.org/wiki/Collection_(abstract_data_type)?useskin=vector | Collection (abstract data type) - Wikipedia
+https://en.wikipedia.org/wiki/Heap_(data_structure)?useskin=vector | Heap (data structure) - Wikipedia
+https://en.wikipedia.org/wiki/Combinatorics?useskin=vector | Combinatorics - Wikipedia
+https://en.wikipedia.org/wiki/Binary_tree?useskin=vector#Types_of_binary_trees | Binary tree - Wikipedia
+
+https://cron.help/#@yearly_*_*_*_* | Crontab syntax for us humands -- Cron Helper
+https://cron.help/examples | Common Cron Job Schedules -- Cron Helper
+https://www.hostinger.com/tutorials/crontab-syntax | Crontab Syntax on Linux + Useful Examples
+
 https://knexjs.org/guide/query-builder.html#querycontext | Knex Query Builder | Knex.js
 https://vincit.github.io/objection.js/recipes/subqueries.html | Subqueries | Objection.js
 https://sebhastian.com/mysql-insert-if-not-exists/ | MySQL - How to insert a new row only if data do not exist - Nathan Sebhastian
