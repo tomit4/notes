@@ -236,3 +236,8 @@ paru wemux
 Uninstall gtktranslate-bin (use your own ltranslate script instead)
 
 paru -Rs gtktranslate-bin
+
+06/02/2023
+Install svgo (cli svg optimization tool)
+
+paru svgo
