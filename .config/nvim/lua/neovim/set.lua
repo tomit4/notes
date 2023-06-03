@@ -5,6 +5,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.softtabstop = 0
 vim.opt.shiftwidth = 4
+-- vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -39,15 +40,20 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 --  Removes trailing spaces
-vim.cmd([[function TrimWhiteSpace()
-%s/\s*$//
-''
-endfunction]])
+-- vim.cmd([[function TrimWhiteSpace()
+-- %s/\s*$//
+-- ''
+-- endfunction]])
 -- Removes trailing spaces on save
-vim.cmd([[autocmd FileWritePre * call TrimWhiteSpace()]])
-vim.cmd([[autocmd FileAppendPre * call TrimWhiteSpace()]])
-vim.cmd([[autocmd FilterWritePre * call TrimWhiteSpace()]])
-vim.cmd([[autocmd BufWritePre * call TrimWhiteSpace()]])
+-- vim.cmd([[autocmd FileWritePre * call TrimWhiteSpace()]])
+-- vim.cmd([[autocmd FileAppendPre * call TrimWhiteSpace()]])
+-- vim.cmd([[autocmd FilterWritePre * call TrimWhiteSpace()]])
+-- vim.cmd([[autocmd BufWritePre * call TrimWhiteSpace()]])
+
+-- formats on save
+vim.cmd([[autocmd BufWritePre * silent! :Neoformat]])
+
+--Saves vim session on save
 
 -- Marks end of line, space, and trailing space characters
 vim.opt.listchars:append({ eol = "↵", trail = "·", space = "·" })
@@ -69,7 +75,11 @@ vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[set foldmethod=manual]])
 
 -- enable hard/soft wrap
-vim.cmd([[set wrap linebreak textwidth=80]])
+-- vim.cmd([[set wrap linebreak textwidth=80]])
+vim.opt.textwidth = 80
+vim.opt.wrap = true
+vim.opt.linebreak = true
+-- vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
 
 -- max tab characters
 vim.cmd([[let g:mintabline_tab_max_chars=10]])
