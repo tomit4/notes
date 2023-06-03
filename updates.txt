@@ -241,3 +241,8 @@ paru -Rs gtktranslate-bin
 Install svgo (cli svg optimization tool)
 
 paru svgo
+
+06/02/2023
+Install Marksman (code assister for markdown) And
+Install httpie (more simple cli than curl for http requests):
+doas pacman -S marksman httpie
