@@ -226,6 +226,15 @@ matches:
         params:
           cmd: "curl ifconfig.me ; echo ''"
 
+  # returns default html5 layout
+  - trigger: ";html5"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/html5 ; echo ''"
+
   # returns default html5 layout in pug
   - trigger: ";pug5"
     replace: "{{output}}"
