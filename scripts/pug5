@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Utilize in conjunction with espanso, call ;pug5
+cat <<EOM
+doctype html
+html(lang = "en")
+    head
+        title html page
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel="icon" type="image/x-icon" href="favicon.png")
+        link(rel='stylesheet' type='text/css' href='css/style.css')
+    body
+        script(src="./index.js" default)
+EOM
