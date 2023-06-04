@@ -395,7 +395,10 @@
         "§:catbox.moe",
         "§:beautiful-soup-4.readthedocs.io",
         "§:linkedin.com",
-        "§:hapi.dev"
+        "§:hapi.dev",
+        "§:gutenberg.org",
+        "§:tiangolo.com",
+        "§:gunicorn.org"
       ],
       "untrusted": [
         "hotmail.com",
