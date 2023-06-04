@@ -245,5 +245,6 @@ paru svgo
 06/02/2023
 Install Marksman (code assister for markdown) AND
 Install httpie (more simple cli than curl for http requests) AND
-Install mypy (typechecker for python):
-doas pacman -S marksman httpie mypy
+Install mypy (typechecker for python) And
+Install sqlitebrowser(sqlite from browser?):
+doas pacman -S marksman httpie mypy sqlitebrowser
