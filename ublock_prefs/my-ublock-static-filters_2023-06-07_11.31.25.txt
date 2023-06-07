@@ -1,0 +1,6 @@
+discord.com/api/v9/science
+discord.com/api/v9/track
+discord.com/api/applications/detectable
+discord.com/api/v9/friend-suggestions
+duckduckgo.com##^meta[name=darkreader-lock]
+
