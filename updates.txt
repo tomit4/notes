@@ -248,3 +248,11 @@ Install httpie (more simple cli than curl for http requests) AND
 Install mypy (typechecker for python) And
 Install sqlitebrowser(sqlite from browser?):
 doas pacman -S marksman httpie mypy sqlitebrowser
+
+06/15/2023
+You took up typescript apparently...
+Install typescript
+doas npm i -g typescript
+Install rome in nvim to get proper linting
+:Mason
+select rome
