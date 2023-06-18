@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+full_filename=$(basename "${1}")
+extension="${full_filename##*.}"
+filename="${full_filename%.*}"
+
+magick "${full_filename}" -resize 700 "${filename}_desktop.${extension}"
+magick "${full_filename}" -resize 500 "${filename}_tablet.${extension}"
+magick "${full_filename}" -resize 300 "${filename}_mobile.${extension}"
+rm -i "${full_filename}"

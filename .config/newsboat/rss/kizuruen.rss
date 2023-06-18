@@ -1,0 +1,453 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles &amp; Experiments by Roman Komarov</title>
+    <link>https://kizu.dev/</link>
+    <description>Recent content in Articles &amp; Experiments by Roman Komarov </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://kizu.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cyclic Dependency Space Toggles</title>
+      <link>https://kizu.dev/cyclic-toggles/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/cyclic-toggles/</guid><description>
+        Over the past few years, I wanted to be able to select a value from a list in CSS by toggling a single custom property. We have the “space toggle” for booleans, and hopefully, one day, we’ll get style queries, but what about today? In this article, I present you with the technique I recently discovered.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/cyclic-toggles/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Future CSS: Wishes Granted by Scroll-driven Animations</title>
+      <link>https://kizu.dev/scroll-driven-animations/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/scroll-driven-animations/</guid><description>
+        Stuck state for sticky headers? “Proper” solution for scrolling shadows? Highlighting the currently shown sections in a Table of Contents? All these things could become possible with the new scroll-driven animations spec. Today, I gather and explain some of my experiments with this new CSS feature.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/scroll-driven-animations/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>React Hook Component</title>
+      <link>https://kizu.dev/hook-component/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/hook-component/</guid><description>
+        After 16+ years of experimenting with CSS &amp; HTML, I am a bit tired. Time flies, and new technologies emerge. What would you say if, from now on, I will start doing my wild experiments with, let’s say, React and Typescript instead? In my new article, I’ll show you how easy it is to have conditional hooks in React — and more!&lt;p&gt;&lt;a href=&#34;https://kizu.dev/hook-component/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Future CSS: Anchor Positioning</title>
+      <link>https://kizu.dev/anchor-positioning-experiments/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/anchor-positioning-experiments/</guid><description>
+        Anchor positioning might be one of the most exciting features coming to CSS. It is currently available under an experimental flag in Chrome Canary, and after playing with it for a bit, I couldn’t stop myself from sharing what I found. In this article, I will show you some of my experiments.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/anchor-positioning-experiments/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Obscure CSS: Restoring Visibility</title>
+      <link>https://kizu.dev/restoring-visibility/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/restoring-visibility/</guid><description>
+        One of the things I love about CSS is how some of the properties hide a lot of depth inside. For that reason, `visibility` was always one of my favorites. In this article, I will talk about one of its interesting aspects and will propose an idea: what if we would never use `visibility: visible`?&lt;p&gt;&lt;a href=&#34;https://kizu.dev/restoring-visibility/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Obscure CSS: Implicit List-Item Counter</title>
+      <link>https://kizu.dev/list-item-counter/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/list-item-counter/</guid><description>
+        A few years ago I wanted to share one little-known CSS feature — a built-in `list-item` counter for ordered lists. But then there were a few browser issues preventing us from using it fully. Now, given that most of those bugs are fixed, we can try starting using them for our lists.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/list-item-counter/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>A Bit of Performance</title>
+      <link>https://kizu.dev/a-bit-of-performance/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/a-bit-of-performance/</guid><description>
+        I was digging into some of the performance issues during my work for a few weeks, and I thought that it can be interesting to see how those could be applied to my site. I was already quite happy with how it performed (being just a small static site) but managed to find a few areas to improve.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/a-bit-of-performance/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>My Grid Layout</title>
+      <link>https://kizu.dev/my-grid-layout/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/my-grid-layout/</guid><description>
+        My site’s design came through a lot of iterations, including the latest complete rewrite and a partial redesign, but its layout is something I used for a while. In this article, I’ll describe what I tried to achieve with it and how it was re-implemented using CSS Grids.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/my-grid-layout/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Implementing Algolia Search</title>
+      <link>https://kizu.dev/algolia-search/</link>
+      <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/algolia-search/</guid><description>
+        For a new site update I have implemented a site-wide search, and in this article, I would write about the solution I have used for this, as well as would talk about what had to be done and what issues are left.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/algolia-search/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Grid Projection Naming</title>
+      <link>https://kizu.dev/grid-projection-naming/</link>
+      <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/grid-projection-naming/</guid><description>
+        CSS Grids specification contains a lot of different things. And, for some of them, there exist multiple ways of how you can achieve them. In this article, I’ll write about one trick with `grid-template-areas` that could help you name your intersecting columns or rows.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/grid-projection-naming/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>My Site, Version 14.0</title>
+      <link>https://kizu.dev/v-14-0/</link>
+      <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/v-14-0/</guid><description>
+        A New version, new tools, new techniques, new everything — I had a lot of fun in rewriting and re-coding my site, and I think there could be some interesting stuff inside. In this post, you’ll find some words about it alongside a not-so-precise changelog.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/v-14-0/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Variable Order</title>
+      <link>https://kizu.dev/variable-order/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/variable-order/</guid><description>
+        Is it possible to sort some data using only HTML and CSS? The answer is “Yes”, and in this article you would see one experimental way to achieve this with CSS variables and an `order` property. Even if it is not practical and bad for accessibility, it is still fun.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/variable-order/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Counters and Stones</title>
+      <link>https://kizu.dev/counters-and-stones/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/counters-and-stones/</guid><description>
+        HTML&amp;CSS-only gomoku game? Binary logic in CSS via counters? So many combinators, Edge stops to understand what is even going on? All of this and a bunch of other weird CSS stuff in the experiment that I started back in 2013.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/counters-and-stones/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Flexible Overflow</title>
+      <link>https://kizu.dev/flexible-overflow/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/flexible-overflow/</guid><description>
+        Flex display mode allows us to create a lot of interesting interactions. In this article I’ll show how to use it to implement a responsive block which could substitute one content with another, all based on which one would fit inside the container.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/flexible-overflow/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Bemto-Components</title>
+      <link>https://kizu.dev/bemto-components/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/bemto-components/</guid><description>
+        Working within a React stack and using Styled Components, I found out that I still miss a lot of aspects of BEM. This lead to me starting a new side-project which not only allows to use BEM-style elements and modifiers, but also enhances the overall developer experience.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/bemto-components/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Keyboard-Only Focus</title>
+      <link>https://kizu.dev/keyboard-only-focus/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/keyboard-only-focus/</guid><description>
+        After playing a lot with HTML &amp; CSS, I present you with a very robust and practical solution to one of the most annoying problems: keyboard-only focus on interactive elements. All thanks to `tabindex` in HTML and almost to no CSS.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/keyboard-only-focus/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Label-to-Input States</title>
+      <link>https://kizu.dev/label-to-input/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/label-to-input/</guid><description>
+        Sometimes there are very unusual mechanics hidden deep in the interactions of HTML and CSS. In this article I show one of those — the nuances of how HTML labels interact with inputs and CSS applied to them.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/label-to-input/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Controlling the Specificity</title>
+      <link>https://kizu.dev/controlling-the-specificity/</link>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/controlling-the-specificity/</guid><description>
+        Specificity is one of the most unique and complex aspects of CSS. And right now, the only way to control it are to add stuff to it. But what if we could have a way to reduce the specificity? I’ll look into the coming-up features of `: not ()` and how they could help us to achieve this.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/controlling-the-specificity/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Conditions for CSS Variables</title>
+      <link>https://kizu.dev/conditions-for-css-variables/</link>
+      <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/conditions-for-css-variables/</guid><description>
+        CSS variables are very powerful, and they allow to do a lot of interesting things. But there are no native conditionals that we could use in CSS with them. In this article I’ll talk about one of the ways we can fake such conditions with calculations.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/conditions-for-css-variables/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Styling inline code</title>
+      <link>https://kizu.dev/styling-inline-code/</link>
+      <pubDate>Thu, 08 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/styling-inline-code/</guid><description>
+        When I was working on my site&amp;rsquo;s new version, I tried to think more about how everything should look and read typography-wise. And one of the things I always had problems with was how to style inline code blocks. Most of the time we can see small colorful rectangles in place of them. And the more you put those things inside your text, the worse the reading experience becomes.
+This example is taken from a Wikipedia article on CSS.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/styling-inline-code/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>The New Version of This Site</title>
+      <link>https://kizu.dev/the-new-version-of-this-site/</link>
+      <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/the-new-version-of-this-site/</guid><description>
+        Around one and a half month ago, on June, 23rd, I published a new version of my site. Once again. It is rather hard to remember which version number it should be now. If we&amp;rsquo;d count it from the very start, from the times when I didn&amp;rsquo;t know how to markup pages properly, this would be the thirteenth version. Or something around that. Of course, that is if we won&amp;rsquo;t count all the unfinished and trashed versions.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/the-new-version-of-this-site/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Nested Links</title>
+      <link>https://kizu.dev/nested-links/</link>
+      <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/nested-links/</guid><description>
+        The problem HTML specification has a lot of different restrictions. And I have my doubts about the feasibility of many of those. One example which I stumble upon rather often — nested links.
+Spec straightly forbids such nesting:
+ The a element
+[…]
+Content model: transparent, but there must be no interactive content descendant.
+ And if you’d do this, browser’s parser won’t understand you and, as soon as it’d see the opening tag for the nested link, it would close the first one right there:&lt;p&gt;&lt;a href=&#34;https://kizu.dev/nested-links/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Battle for Baseline</title>
+      <link>https://kizu.dev/flex-baseline/</link>
+      <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/flex-baseline/</guid><description>
+        The best solution for inline blocks were, well, inline-blocks. I used to like them because you could solve a lot of tasks with them. But they&amp;rsquo;re not ideal. They&amp;rsquo;re not capable of doing baseline vertical aligning right. And the problems come straight from the specs, just read the last two paragraphs to see the problems:
+  “The baseline of an inline-block is the baseline of its last line box in the normal flow.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/flex-baseline/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>New Stylus Features</title>
+      <link>https://kizu.dev/new-stylus-features/</link>
+      <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/new-stylus-features/</guid><description>
+        Not so long ago I became a maintainer for Stylus CSS preprocessor. At the end of the last week, we released a new version — 0.41.0 — where we added some new features. And in the two earlier releases we added support for the hashes and polished it, so after all this work it is now possible to do a lot of interesting new things. In this article, I&amp;rsquo;ll explain one new tech that is now possible in the new Stylus, but I&amp;rsquo;ll describe the new features for a start.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/new-stylus-features/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Updated Jekyll</title>
+      <link>https://kizu.dev/updated-jekyll/</link>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/updated-jekyll/</guid><description>
+        Not that long ago Jekyll become that big — version “1.0” was released.
+There are a lot of stuff in the changelog: there are new features, there are a lot of fixes. You can read what&amp;rsquo;s the most important in this article.
+I moved my site to this version. Well, not actually moved — everything worked anyway, but there were some stuff in a new version that I could use to make things in a better way.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/updated-jekyll/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Application shortcuts</title>
+      <link>https://kizu.dev/application-shortcuts/</link>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/application-shortcuts/</guid><description>
+        Here is one workflow thing I use all the time and I want to share — using keyboard shortcuts to switch between applications.
+I’m talking not about those system shortcuts — cmd+tab/alt+tab. They are awful — because they are modal. You can’t tell at any given time what would be the result of using such shortcut: those shortcuts switch focus between the recent used apps, so you need to remember which applications you used and in which order.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/application-shortcuts/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Blog</title>
+      <link>https://kizu.dev/hello-blog/</link>
+      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/hello-blog/</guid><description>
+        Hello! As I wrote in a post on the relaunch of my site, the main goal for the new version was to ease the process of adding new entries. However, beyond the technical side I completely forgot about what exactly I wanted to write in that easy and simple way.
+Until today everything I published on my site could be divided to two categories: “issues” and “experiments”. In “issues” I tried to publish mostly objective things with all the proper arguments and thoughts went through a lot of thinking.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/hello-blog/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Rotated text</title>
+      <link>https://kizu.dev/rotated-text/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/rotated-text/</guid><description>
+        Once I already shared this solution on twitter, but this time I’m going to write a bit more on it.
+The task is to get the text rotated by 90 degrees.
+The problem: it’s widely known that when you use transform, the block behaves similar to the position:relative — its place in the flow is not changed after the transformation, so the change is only visual.
+However, rather often you’ll need to rotate the block in a way the flow would change either.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/rotated-text/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Markdowning YAML for Jekyll</title>
+      <link>https://kizu.dev/markdowning-yaml/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/markdowning-yaml/</guid><description>
+        While I’m struggling to write a lengthy article, here is a small one, on a little Jekyll trick I use.
+In Jekyll you need to use YAML front matter to add any metadata to the post or page. Actually, Jekyll “sees” only those files that have the YAML front matter, so it is a somewhat important thing.
+Most of the time this front matter would look like this:
+--- layout: docs title: Resources prev_section: sites ---  It could seem to be ok.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/markdowning-yaml/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Jekyll</title>
+      <link>https://kizu.dev/going-jekyll/</link>
+      <pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/going-jekyll/</guid><description>
+        In a post on site relaunch I told I’ll write a lot of articles on Jekyll. That’s the first post in the series, an introduction.
+I won’t write on how to install Jekyll, how the files are structured there, and so on — there are already a lot of articles on that (look for some at the “links”). To describe Jekyll briefly, it’s a blog-aware static site generator. An awesome one.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/going-jekyll/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Correct Cursor on Active Elements</title>
+      <link>https://kizu.dev/cursor-pointer/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/cursor-pointer/</guid><description>
+        Every active element must have a set cursor on hover. And it should be cursor:pointer in most cases.
+By active elements I mean links, buttons, selects, labels with checkboxes and radio buttons, and other similar elements.
+Those elements should be treated as “active” when clicking on such element results in any action. Thereby a menu item for the current page, checked radio button or disabled buttons or links are not active elements, so they shouldn’t have any change on hover.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/cursor-pointer/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Restarting kizu.ru</title>
+      <link>https://kizu.dev/restart/</link>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/restart/</guid><description>
+        Hi there! That was a long way and I think I’m somewhere near the end — I’m relaunching my site. I can’t remember how many versions of it were there when it was entirely in Russian, but that would be the second version of my site in English.
+Oh, did I say I’m near the end? I lied. You know what is the main feature of this version? It’s rough. It’s terribly, awfully draft, it&amp;rsquo;s broken and smelling.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/restart/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>bemto</title>
+      <link>https://kizu.dev/bemto/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/bemto/</guid><description>
+        Oh hi. I created this thing — bemto — some mixins for Jade that makes it easy and fun to write the code in BEM notation.
+I really love writing code in bem style and really like Jade, so I though that adding some bem to Jade would be a great little thing that at least I would use a lot. And I hope that it would be helpful to someone else too.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/bemto/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Legends and Headings</title>
+      <link>https://kizu.dev/legends-and-headings/</link>
+      <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/legends-and-headings/</guid><description>
+        One day in the last december I tried to find out what we can do with the legend element. I wanted to move it in the fieldset’s frame, and didn’t want to style it out ’cause the fieldsets with legend have this special behavior: the fieldset’s border gets the gap for the legend to fit in.
+So, I made some tricks to emulate different behaviors: move the legend to the right, center or even make visually two legends in one fieldset.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/legends-and-headings/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Scrolling shadows</title>
+      <link>https://kizu.dev/shadowscroll/</link>
+      <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/shadowscroll/</guid><description>
+        Here’s an old idea, but recreated with pure CSS.
+Originally, I had an extra wrapper and two extra pseudo-elements on it. Later I decided to rewrite the code and to use just a single element (by using radial gradients).
+While this method is simple, there are some limitations:
+ the background must be solid there are some positioning issues   However, if you&amp;rsquo;d try background-attachment: fixed…  But in most regards this method is rather bulletproof.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/shadowscroll/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Multi-directional hover</title>
+      <link>https://kizu.dev/multi-directional-hover/</link>
+      <pubDate>Mon, 19 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/multi-directional-hover/</guid><description>
+        Try to hover this block from different directions
+ /* Multi-directional hover by @kizmarh */ .b-block { position: relative; display: inline-block; overflow: hidden; width: 10em; height: 10em; vertical-align: middle; -webkit-transform: translateZ(0); } /* The blocks that would be hovered */ .b-block__hoverer { position: absolute; z-index: 1; width: 71%; height: 71%; transform: rotate(45deg); } /* Positioning for hoverers */ .b-block__hoverer:nth-child(1) { top: 0; right: 0; transform-origin: 100% 0; } .b-block__hoverer:nth-child(2) { bottom: 0; right: 0; transform-origin: 100% 100%; } .&lt;p&gt;&lt;a href=&#34;https://kizu.dev/multi-directional-hover/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>CSS3 convex polygons</title>
+      <link>https://kizu.dev/polygons/</link>
+      <pubDate>Sun, 18 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/polygons/</guid><description>
+        Using, overflow:hidden and visibility:hidden for wrappers with visibility:visible on a last shild, we could do almost any convex masks which would be clickable and hoverable on their areas.
+ &lt;p&gt;&lt;a href=&#34;https://kizu.dev/polygons/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Text-overflow emulation and gradient overflow</title>
+      <link>https://kizu.dev/overflower/</link>
+      <pubDate>Tue, 08 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/overflower/</guid><description>
+        The «overflow» effect is visible only if there is something to hide (so, there wouldn’t be a case when there is an overlayed gradient that hides a part of text, that would be visible whole anyway). Also, you can add a title attribute to a block, that would appear only when something is hidden. You can use this method starting from the IE7 (however, I hadn’t optimise it for this experiment, so barely only title would be visible)  Resize the browser’s window to see the switching of overflow effect.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/overflower/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Filtering elements without JS</title>
+      <link>https://kizu.dev/filters/</link>
+      <pubDate>Sun, 06 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/filters/</guid><description>
+        Colors are just checkboxes. Shapes — radiobuttons with an upgrade: you can uncheck once it&amp;rsquo;s checked.  Just CSS, no JS, enjoy!
+ Only modern browsers supported, can be emulated in IE via expressions, but I&amp;rsquo;m lazy enough not to do it here.&lt;p&gt;&lt;a href=&#34;https://kizu.dev/filters/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Popups and dropdowns only by CSS</title>
+      <link>https://kizu.dev/popups/</link>
+      <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/popups/</guid><description>
+        /*_*/ /* Dropdowns -----------------------------*/ .b-dropdown { position: relative; display: inline-block; } .b-dropdown-handle { border-bottom: 1px dotted; text-decoration: none; cursor: pointer; white-space: nowrap; position: relative; z-index: 9; color: blue; } .b-dropdown-helper:checked+.b-dropdown .b-dropdown-handle { z-index: auto; } .b-dropdown-handle:hover { color: #F00; } .b-dropdown-popup { position: absolute; top: 100%; right: 50%; z-index: 9; visibility: hidden; opacity: 0; margin: 10px 0 0; font-size: .8571em; -webkit-transition: opacity .2s, visibility .2s; -moz-transition: opacity .2s, visibility .&lt;p&gt;&lt;a href=&#34;https://kizu.dev/popups/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+    <item>
+      <title>Custom CSS3 controls</title>
+      <link>https://kizu.dev/controls/</link>
+      <pubDate>Thu, 03 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kizu.dev/controls/</guid><description>
+        /*_*/ .b-radio-label { cursor: pointer; } .b-radio-input:checked+.b-radio-wrap.b-radio-label { cursor: default; } /* Slider --------------------------*/ .b-radio_slider { position: relative; width: 401px; padding-left: 0; margin-left: 0; overflow: hidden; border: 1px solid #666688; white-space: nowrap; text-indent: 0; font-family: &#34;Helvetica Neue&#34;, Helvetica, Arial, sans-serif; background: #a1dbff; /* old browsers */ background: -moz-linear-gradient(top, #a1dbff 0%, #cbebff 47%, #f0f9ff 100%); /* firefox */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a1dbff), color-stop(47%,#cbebff), color-stop(100%,#f0f9ff)); /* webkit */ -webkit-border-radius: .&lt;p&gt;&lt;a href=&#34;https://kizu.dev/controls/&#34;&gt;Read the full article on kizu.dev&lt;/a&gt;&lt;/p&gt;
+      </description>
+    </item>
+      
+  </channel>
+</rss>
