@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -d "dist_bak" ]]; then
+    sudo rm -r dist
+    mv dist_bak dist
+else
+    echo "no dist_bak directory"
+fi

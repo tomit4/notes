@@ -1,0 +1,20 @@
+# Allows all:
+User-agent: *
+Disallow:
+
+# Disallow all (you don't want ANY site traffic here...):
+User-agent: *
+Disallow: /
+
+# Disallow specific files and folders
+User-agent: *
+Disallow: /topsy/
+Disallow: /crets/
+Disallow: /hidden/file.html
+
+# Disallow Specific Bots
+User-agent: Bingbot
+Disallow: /
+
+User-agent: *
+Disallow:

@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# Function to minify HTML files
+minify_html() {
+    html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true "$1" -o "$1"
+}
+
+# Function to minify CSS files
+minify_css() {
+    uglifycss "$1" >"$1.tmp" && mv "$1.tmp" "$1"
+}
+
+# Function to minify JS files
+minify_js() {
+    uglifyjs --no-annotations "$1" -o "$1" -c -m
+}
+
+# Backup dist directory
+if [[ -d "dist_bak" ]]; then
+    sudo rm -r dist_bak
+fi
+
+cp -r ./dist dist_bak
+
+# Store HTML file paths in an array
+mapfile -t html_files < <(find ./dist -type f -name "*.html")
+mapfile -t css_files < <(find ./dist -type f -name "*.css")
+mapfile -t js_files < <(find ./dist -type f -name "*.js")
+
+# Loop over HTML files and minify them
+for file in "${html_files[@]}"; do
+    minify_html "$file"
+done
+# Loop over CSS files and minify them
+for file in "${css_files[@]}"; do
+    minify_html "$file"
+done
+# Loop over JS files and minify them
+for file in "${js_files[@]}"; do
+    minify_html "$file"
+done

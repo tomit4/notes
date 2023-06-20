@@ -241,6 +241,7 @@ alias duuid="dbus-uuidgen"
 # generate unique ids from cli, example for no special characters:
 alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
 alias nanoid="npx nanoid"
+alias uglifyhtml="html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true"
 # autoprefixes css files
 # requires installation:
 # npm install -g postcss postcss-cli autoprefixer

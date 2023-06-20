@@ -256,3 +256,9 @@ doas npm i -g typescript
 Install rome in nvim to get proper linting
 :Mason
 select rome
+
+06/19/2023
+Install nginx and html-minifier (and uglifycss and uglifyjs if not already)
+doas pacman -S nginx nginx-runit
+doas sv ln -s /etc/runit/sv/nginx /run/runit/service/
+doas npm install -g html-minifier uglifyjs uglifycss
