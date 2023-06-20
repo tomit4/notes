@@ -7,11 +7,13 @@ cat <<EOM
         <title>html page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+        <meta>name="description" content="">
         <link rel="icon" type="image/x-icon" href="favicon.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-    
+
     </body>
     <script src="./index.js" default></script>
 </html>
