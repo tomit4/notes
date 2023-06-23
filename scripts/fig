@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Utilize in conjunction with espanso, call ;fig
+cat <<EOM
+                figure
+                    img.img-image(src="../assets/images/screenshots/default.webp" alt="" title="" cite="" loading="lazy")
+                figcaption An Screenshot Image Caption
+EOM

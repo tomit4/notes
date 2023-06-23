@@ -68,9 +68,6 @@ matches:
         params:
           cmd: "uname -r"
 
-  - trigger: ";lorem"
-    replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
   - trigger: ";cmm"
     replace: "/* *********************\n\n*********************/"
 
@@ -162,7 +159,7 @@ matches:
     replace: '<span class=""> </span>'
 
   - trigger: ";<p"
-    replace: '<p> </p>'
+    replace: "<p> </p>"
 
   - trigger: ";<a"
     replace: '<a href=""> </a>'
@@ -243,6 +240,24 @@ matches:
         type: shell
         params:
           cmd: "~/scripts/pug5 ; echo ''"
+
+  # returns default figure and img tags for pug blog
+  - trigger: ";fig"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/fig ; echo ''"
+
+  # returns single lorem ipsum text paragraph
+  - trigger: ";lorem"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/lorem ; echo ''"
 
   # returns current time in US format
   - trigger: ";btime"
