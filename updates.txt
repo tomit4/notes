@@ -262,3 +262,7 @@ Install nginx and html-minifier (and uglifycss and uglifyjs if not already)
 doas pacman -S nginx nginx-runit
 doas sv ln -s /etc/runit/sv/nginx /run/runit/service/
 doas npm install -g html-minifier uglifyjs uglifycss
+
+06/23/2023
+Install rsspls (cli tool to generate rss feeds)
+paru rsspls

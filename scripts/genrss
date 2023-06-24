@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Get the path to the feed.rss file
+feed_file="feed.rss"
+
+# Remove .toml files in the cache directory
+find ~/.cache/rsspls -type f -name "*.toml" -delete
+
+# Remove .rss files in the current directory
+find . -maxdepth 1 -type f -name "*.rss" -delete
+
+# Call rsspls to generate the RSS feeds
+rsspls
+
+# Format the feed.rss file using xmlstarlet
+xmlstarlet fo -t "$feed_file" >formatted_feed_file.xml
+mv formatted_feed_file.xml "$feed_file"
+
+# Iterate over all .rss files in the directory
+for rss_file in *.rss; do
+    # Skip the feed.rss file itself
+    if [ "$rss_file" == "$feed_file" ]; then
+        continue
+    fi
+
+    # Format the RSS file using xmlstarlet
+    xmlstarlet fo -t "$rss_file" >formatted_rss_file.xml
+    mv formatted_rss_file.xml "$rss_file"
+
+    # Get the channel link from the RSS file
+    channel_link=$(xmlstarlet sel -t -v "rss/channel/link" "$rss_file")
+
+    # Update the second link tag
+    sed -i "s#<link>.*<\/link>#<link>$channel_link<\/link>#" "$rss_file"
+
+    # Get the item tag's info from the current .rss file
+    item_info=$(xmlstarlet sel -t -c "rss/channel/item" "$rss_file")
+
+    # Find the position of the last </item> in feed.rss
+    last_item_position=$(grep -n "</item>" "$feed_file" | tail -n1 | cut -d: -f1)
+
+    # Splice the item tag's info into feed.rss after the last </item>
+    sed -i "${last_item_position}r /dev/stdin" "$feed_file" <<<"$item_info"
+done
+
+# Remove all .rss files except for feed.rss
+find . -maxdepth 1 -type f -name "*.rss" ! -name "$feed_file" -exec rm {} +
+
+# replace old feed.rss with new feed
+mv ./feed.rss ../dist/assets/

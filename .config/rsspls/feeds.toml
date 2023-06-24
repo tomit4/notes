@@ -1,0 +1,83 @@
+[rsspls]
+output = "/home/brian/Documents/Code/blog/rss"
+[[feed]]
+title = "brianhayes.dev"
+filename = "feed.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/the_readme"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "git_basics.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/git_basics"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "espanso.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/espanso"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "ortholinear_keyboards.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/ortholinear_keyboards"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "command_line.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/command_line"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "the_keys_that_bind.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/the_keys_that_bind"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "musings_on_vim.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/musings_on_vim"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "why_use_linux.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/why_use_linux"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+[[feed]]
+title = "brianhayes.dev"
+filename = "one_with_the_keyboard.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/one_with_the_keyboard"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
