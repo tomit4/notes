@@ -398,7 +398,13 @@
         "§:hapi.dev",
         "§:gutenberg.org",
         "§:tiangolo.com",
-        "§:gunicorn.org"
+        "§:gunicorn.org",
+        "§:kysely.dev",
+        "§:climatechangeandhappiness.com",
+        "§:prismjs.com",
+        "§:unsplash.com",
+        "§:wikimedia.org",
+        "§:kizu.dev"
       ],
       "untrusted": [
         "hotmail.com",
@@ -416,7 +422,10 @@
         "rndskittytor.com",
         "sharethis.com",
         "facebook.com",
-        "googlesyndication.com"
+        "googlesyndication.com",
+        "tiktok.com",
+        "facebook.net",
+        "bing.com"
       ],
       "custom": {
         "https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg": {

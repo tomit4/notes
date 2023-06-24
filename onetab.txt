@@ -1,9 +1,31 @@
-https://security.stackexchange.com/questions/130548/should-jwt-token-be-stored-in-a-cookie-header-or-body | tls - Should JWT token be stored in a cookie, header or body - Information Security Stack Exchange
+https://www.manuelkruisz.com/blog/posts/nginx-multiple-domains-one-server | Using nginx to serve multiple nodejs applications on different domains | Manuel Kruisz
+https://stackoverflow.com/questions/30449313/how-do-i-make-a-docker-container-start-automatically-on-system-boot | How do I make a Docker container start automatically on system boot? - Stack Overflow
+https://stackoverflow.com/questions/66955731/how-to-serve-multiple-web-servers-using-nginx | How to serve multiple web servers using nginx? - Stack Overflow
+
+https://www.amazon.com/Camco-20-5-Inches-24-Inches-Dishwasher-Drain/dp/B09BBMN93G/ref=sr_1_1?keywords=camco+dishwasher+drain | Amazon.com: Camco 20.5-Inches x 24-Inches Dishwasher Drain Pan, Black - Protects Your Floor, Cabinets and Walls from Leaking Dishwashers - Directs Water to The Front for Easy Leak Identification (20602) : Appliances
+
+https://agenty.com/docs/browser | Agenty Browser API | Agenty
+
+https://www.tecmint.com/create-custom-nginx-error-page/ | How to Create Custom 404 Error Page in NGINX
+https://www.howtogeek.com/devops/how-to-run-nginx-inside-docker-for-easy-auto-scaling/ | How to Run NGINX Inside Docker (for Easy Auto-Scaling)
+https://github.com/staticfloat/docker-nginx-certbot-old | GitHub - staticfloat/docker-nginx-certbot-old: Create and renew website certificates using the Letsencrypt free certificate authority.
+https://www.plesk.com/blog/guides/secure-nginx-against-bots/ | How to Secure Nginx Against Malicious Bots - Plesk
+
+https://stackoverflow.com/questions/50851594/how-to-make-an-email-with-submit-button-which-triggers-a-post-request | html - How to make an email with submit button, which triggers a post request - Stack Overflow
+https://github.com/hapijs/hapi/issues/2970 | request.state is empty when server rendering · Issue #2970 · hapijs/hapi · GitHub
+https://hapi.dev/tutorials/cookies/?lang=en_US | Cookies - hapi.dev
+
+https://www.npmjs.com/package/secure-password | secure-password - npm
+
+https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/use-vocabularies/ | Vocabulary — Inrupt JavaScript Client Libraries
+https://www.w3.org/wiki/Foaf+ssl/FAQ#Why_SSL.3F | Foaf+ssl/FAQ - W3C Wiki
+
 https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorage-or-cookie | security - Should JWT be stored in localStorage or cookie? - Stack Overflow
+https://security.stackexchange.com/questions/130548/should-jwt-token-be-stored-in-a-cookie-header-or-body | tls - Should JWT token be stored in a cookie, header or body - Information Security Stack Exchange
+https://stackoverflow.com/questions/70060722/how-do-i-handle-jwt-token-expiration | spring boot - How do I handle JWT token expiration? - Stack Overflow
+
 https://hapi.dev/tutorials/auth/?lang=en_US | Authentication - hapi.dev
 https://hapi.dev/api/?v=21.3.2#-routeoptionsresponse | 21.3.2 API Reference - hapi.dev
-https://scribe.rip/@thedon/auth-in-hapi-with-jwt-780ce4d072c7 | Auth in Hapi with JWT
-https://hapi.dev/module/jwt/api/?v=3.2.0#verify-1 | jwt v3.2.0 - hapi.dev
 
 https://github.com/folke/trouble.nvim | GitHub - folke/trouble.nvim: 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 
@@ -11,14 +33,6 @@ https://www.brevo.com/ | Brevo (formerly Sendinblue) | CRM Suite
 
 https://leekahung.github.io/web-dev/ | Ka Hung's Web Developer Portfolio
 https://www.scottxbrown.com/#projects | Portfolio of Scott Brown || frontend web developer
-
-https://www.easyrdf.org/docs/rdf-formats-json#:~:text=RDF%2FJSON%20represents%20a%20set,%2C%20dictionary%20or%20hash%20table | EasyRdf - Documentation - RDF/JSON Specification
-https://www.ldf.fi/service/rdf-grapher | RDF Grapher
-https://docs.google.com/spreadsheets/d/1d8V87nxlQWnExJ1IIcZOJfGlMyyqBohjFxiTNuak_7Y/edit#gid=0 | PASS terminology - Google Sheets
-https://schema.org/Thing | Thing - Schema.org Type
-https://schema.org/Person | Person - Schema.org Type
-https://github.com/ksoftllc/license-parser | GitHub - ksoftllc/license-parser: American Driver's License PDF-417 Barcode Parser
-https://schema.org/dateIssued | dateIssued - Schema.org Property
 
 https://docs.inrupt.com/developer-tools/javascript/client-libraries/reference/solid-client/ | solid-client — Inrupt JavaScript Client Libraries
 https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/read-write-data/ | Read/Write Structured Data — Inrupt JavaScript Client Libraries
@@ -56,7 +70,7 @@ https://www.baeldung.com/ops/dockerfile-git-strategies | Dockerfile Strategies f
 
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp | Dockerizing a Node.js web app | Node.js
 https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
-https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing `npm ci` for faster, more reliable builds
+https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing  for faster, more reliable builds
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
 https://teddit.pussthecat.org/r/webdev/comments/a285o4/why_and_when_to_use_docker/ | Why, and when to use Docker ? : webdev
 
@@ -81,32 +95,3 @@ https://cron.help/#@yearly_*_*_*_* | Crontab syntax for us humands -- Cron Helpe
 https://cron.help/examples | Common Cron Job Schedules -- Cron Helper
 https://www.hostinger.com/tutorials/crontab-syntax | Crontab Syntax on Linux + Useful Examples
 
-https://knexjs.org/guide/query-builder.html#querycontext | Knex Query Builder | Knex.js
-https://vincit.github.io/objection.js/recipes/subqueries.html | Subqueries | Objection.js
-https://sebhastian.com/mysql-insert-if-not-exists/ | MySQL - How to insert a new row only if data do not exist - Nathan Sebhastian
-https://codingsight.com/sql-insert-into-select-5-easy-ways-to-handle-duplicates/ | How to Avoid Inserting Duplicate Records in SQL INSERT Query (5 Easy Ways) - {coding}Sight
-https://stackoverflow.com/questions/19823320/sql-insert-without-duplicate-no-primary-or-unique-keys | mysql - SQL INSERT without duplicate (no primary or unique keys) - Stack Overflow
-
-https://teddit.pussthecat.org/r/neovim/comments/silikv/debugging_in_neovim/ | Debugging in NeoVim : neovim
-https://scribe.rip/neovim-for-beginners-javascript-typescript-debugging-bd0fc8e16657 | Neovim for Beginners — JavaScript/TypeScript Debugging
-https://scribe.rip/modern-neovim-debugging-and-testing-8deda1da1411 | Modern Neovim— Debugging and Testing
-https://scribe.rip/neovim-debugging-application-70c525754064 | Neovim — Debugging Application
-https://github.com/mfussenegger/nvim-dap | GitHub - mfussenegger/nvim-dap: Debug Adapter Protocol client implementation for Neovim
-https://harrisoncramer.me/debugging-in-neovim/ | Debugging in Neovim
-
-https://nodejs.org/api/stream.html#stream | Stream | Node.js v19.6.0 Documentation
-https://nodejs.org/api/buffer.html#buffer | Buffer | Node.js v19.6.0 Documentation
-https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events | Server-sent events - Web APIs | MDN
-https://developer.mozilla.org/en-US/docs/Web/API/EventSource | EventSource - Web APIs | MDN
-https://www.pubnub.com/docs/chat/overview | In-app chat | PubNub Docs
-
-https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset | HTMLImageElement.srcset - Web APIs | MDN
-https://cloudfour.com/thinks/responsive-images-the-simple-way/ | Responsive Images the Simple Way – Cloud Four
-https://dev.opera.com/articles/responsive-images/ | Dev.Opera — Responsive Images: Use Cases and Documented Code Snippets to Get You Started
-https://dev.opera.com/articles/native-responsive-images/ | Dev.Opera — Native Responsive Images
-
-https://www.50states.com/abbreviations.htm | State Abbreviations – 50states
-https://nodejs.org/en/docs/guides/security/ | Node.js Security Best Practices | Node.js
-https://www.sqlitetutorial.net/sqlite-foreign-key/ | SQLite Foreign Key: Enforce Relationships Between Tables
-https://www.sqlitetutorial.net/sqlite-join/ | A Visual Explanation of SQLite Joins
-https://www.timestamp-converter.com/ | Timestamp Converter
