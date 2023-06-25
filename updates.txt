@@ -266,3 +266,7 @@ doas npm install -g html-minifier uglifyjs uglifycss
 06/23/2023
 Install rsspls (cli tool to generate rss feeds)
 paru rsspls
+
+06/25/2023
+Install html2pug (it is what it sounds like)
+doas npm install -g html2pug
