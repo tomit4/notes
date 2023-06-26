@@ -11,6 +11,9 @@ html(lang = "en")
         meta(name="description" content="")
         link(rel="icon" type="image/x-icon" href="favicon.png")
         link(rel="stylesheet" type="text/css" href="css/style.css")
+        link(rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+        noscript
+            link(rel="stylesheet" href="css/style.css")
     body
         script(src="./index.js" default)
 EOM
