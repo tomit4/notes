@@ -17,6 +17,6 @@ cat <<EOM
     <body>
 
     </body>
-    <script src="./index.js" default></script>
+    <script src="./index.js" default defer></script>
 </html>
 EOM

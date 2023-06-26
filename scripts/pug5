@@ -15,5 +15,5 @@ html(lang = "en")
         noscript
             link(rel="stylesheet" href="css/style.css")
     body
-        script(src="./index.js" default)
+        script(src="./index.js" default defer)
 EOM
