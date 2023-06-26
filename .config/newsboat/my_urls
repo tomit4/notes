@@ -1,6 +1,5 @@
 https://feeds.feedburner.com/tom-preston-werner
 https://unixsheikh.com/feed.rss
-https://www.alexblackie.com/feed.xml
 https://jvns.ca/atom.xml
 https://gabmus.org/index.xml
 https://www.wilfred.me.uk/rss.xml
@@ -15,7 +14,6 @@ file://./rss/sarasoueidan.rss
 file://./rss/dr_mckayla.rss
 file://./rss/VYPJXZwH.rss
 file://./rss/ewontfix.rss
-file://./rss/feed.rss
 file://./rss/0pointer.rss
 file://./rss/lkml.php
 file://./rss/artix.php
@@ -59,3 +57,5 @@ file://./rss/torrent_freak.rss
 file://./rss/climatechangeandhappiness.rss
 file://./rss/kizuruen.rss
 file://./rss/tech_wont_save_us.rss
+file://./rss/feed.rss
+file://./rss/ploum.xml
