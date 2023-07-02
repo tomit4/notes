@@ -270,3 +270,7 @@ paru rsspls
 06/25/2023
 Install html2pug (it is what it sounds like)
 doas npm install -g html2pug
+
+07/02/2023
+Install gfeeds (minimal rss reader)
+doas pacman -S gfeeds
