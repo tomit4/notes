@@ -274,3 +274,6 @@ doas npm install -g html2pug
 07/02/2023
 Install gfeeds (minimal rss reader)
 doas pacman -S gfeeds
+
+07/03/2023
+doas pacman -S wine-mono
