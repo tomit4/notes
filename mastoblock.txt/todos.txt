@@ -1,0 +1,44 @@
+A far more feature filled version of this idea is here (kinda bloated):
+https://addons.mozilla.org/en-US/firefox/addon/libredirect/
+
+https://textplain.net/blog/2015/problems-with-systemd-and-why-i-like-bsd-init/
+http://www.paritybit.ca/garden/plots/issues-with-systemd.html
+http://www.paritybit.ca/links
+
+take a look at sbs from https://www.paritybit.ca,
+wrapper for automatically generating html
+blogposts from markdown using lowdown
+https://git.sr.ht/~jbauer/sbs
+
+Also man lowdown (already downloaded), and see website:
+https://kristaps.bsd.lv/lowdown/
+
+Also of interest:
+https://kristaps.bsd.lv/sblg/
+
+register https://www.develementb.com at https://www.namecheap.com
+
+check out tympanus.net for cool ideas for css effects.
+
+to watch:
+station 11 (like the last of us)
+the leftovers (like the last of us)
+
+Buy this soldering iron (get the pack of extra Rosin and Pate, etc. (total should be around $140))
+https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M/ref=sr_1_1?keywords=Hakko+888#customerReviews
+
+Mom's laptop's wifi issues are discussed here:
+https://teddit.pussthecat.org/r/Hewlett_Packard/comments/jpbnuh/wifi_connectivity_problems_with_hp_envy_x360/
+
+Create a bash script that mimics the behavior of https://cron.help/
+
+Very interesting info regarding privacy, libre, linux, etc:
+https://vern.cc/
+
+Consider writing a blog post about the benefits of ddg lite.
+
+05/16/2023
+Read this article on making simple transitions in pure css (much better way of doing your original leafbytes transitions and might still be useful in making your blog menu)
+https://keithjgrant.com/posts/2023/04/transitioning-to-height-auto/
+I also saved Kevin powell's video in the usual spot for this titled some thing like:
+The simple trick to transition from ...

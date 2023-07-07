@@ -1,0 +1,13 @@
+You have already started learning a bit of REACTJS in prep for this (and jobs...).
+
+Look into the solidproject as it seems they are using this architecture to develop their application. The learning curve MAY be steep on this, but look at:
+
+https://solidproject.org
+
+They have some basic starting tutorials.
+
+There appears to be very little about the solid project on youtube, but check out what you can to familiarize yoruself.
+
+Flo has sent you onboarding documentation via Google Docs, you've already read over them but familiarize yourself again before the meeting at 7pm on Tuesday (will be emailed link).
+
+Continue to familiarize yourself with the current code base as much as you can and see where it hooks up to solid.
