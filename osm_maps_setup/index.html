@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>OsmAnd(Navigation) Voice Directions Set up &#8211; BoringPhone</title>
+<meta name='robots' content='max-image-preview:large' />
+<script>window._wca = window._wca || [];</script>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="BoringPhone &raquo; Feed" href="https://boringphone.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BoringPhone &raquo; Comments Feed" href="https://boringphone.com/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.12.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.12.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-127405307-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-127405307-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/boringphone.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.7"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='plugin_name-admin-ui-css-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css?ver=4.6.1' type='text/css' media='' />
+<link rel='stylesheet' id='tooltipster-css-css'  href='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/tooltipster/tooltipster.bundle.min.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='tooltipster-css-theme-css'  href='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/tooltipster/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='material-design-css-css'  href='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/themes/jquery.material.form.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.8.7/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wc-block-vendors-style-css'  href='https://c0.wp.com/p/woocommerce/4.4.4/packages/woocommerce-blocks/build/vendors-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='https://c0.wp.com/p/woocommerce/4.4.4/packages/woocommerce-blocks/build/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://boringphone.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='epkb-public-styles-css'  href='https://boringphone.com/wp-content/plugins/echo-knowledge-base/css/public-styles.min.css?ver=6.8.0' type='text/css' media='all' />
+<link rel='stylesheet' id='vskb_style-css'  href='https://boringphone.com/wp-content/plugins/very-simple-knowledge-base/css/vskb-style.min.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='https://c0.wp.com/p/woocommerce/4.4.4/assets/css/woocommerce-layout.css' type='text/css' media='all' />
+<style id='woocommerce-layout-inline-css' type='text/css'>
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://c0.wp.com/p/woocommerce/4.4.4/assets/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='https://c0.wp.com/p/woocommerce/4.4.4/assets/css/woocommerce.css' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='mc4wp-form-themes-css'  href='https://boringphone.com/wp-content/plugins/mailchimp-for-wp/assets/css/form-themes.min.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-gateway-ppec-frontend-css'  href='https://boringphone.com/wp-content/plugins/woocommerce-gateway-paypal-express-checkout/assets/css/wc-gateway-ppec-frontend.css?ver=2.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-fonts-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A400%2C500%2C600%2C700%2C300%2C100%2C800%2C900%7COpen+Sans%3A400%2C300%2C300italic%2C400italic%2C600%2C600italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=2.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-animate-css'  href='https://boringphone.com/wp-content/themes/onepress/assets/css/animate.min.css?ver=2.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-fa-css'  href='https://boringphone.com/wp-content/themes/onepress/assets/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-bootstrap-css'  href='https://boringphone.com/wp-content/themes/onepress/assets/css/bootstrap.min.css?ver=2.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-style-css'  href='https://boringphone.com/wp-content/themes/onepress/style.css?ver=5.8.7' type='text/css' media='all' />
+<style id='onepress-style-inline-css' type='text/css'>
+.site-logo-div img{height:50px;width:auto}#main .video-section section.hero-slideshow-wrapper{background:transparent}.hero-slideshow-wrapper:after{position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:rgba(0,0,0,0.3);display:block;content:""}.body-desktop .parallax-hero .hero-slideshow-wrapper:after{display:none!important}#parallax-hero>.parallax-bg::before{background-color:rgba(0,0,0,0.3);opacity:1}.body-desktop .parallax-hero .hero-slideshow-wrapper:after{display:none!important}a,.screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus,.header-social a,.onepress-menu a:hover,.onepress-menu ul li a:hover,.onepress-menu li.onepress-current-item>a,.onepress-menu ul li.current-menu-item>a,.onepress-menu>li a.menu-actived,.onepress-menu.onepress-menu-mobile li.onepress-current-item>a,.site-footer a,.site-footer .footer-social a:hover,.site-footer .btt a:hover,.highlight,#comments .comment .comment-wrapper .comment-meta .comment-time:hover,#comments .comment .comment-wrapper .comment-meta .comment-reply-link:hover,#comments .comment .comment-wrapper .comment-meta .comment-edit-link:hover,.btn-theme-primary-outline,.sidebar .widget a:hover,.section-services .service-item .service-image i,.counter_item .counter__number,.team-member .member-thumb .member-profile a:hover,.icon-background-default{color:#0288ef}input[type="reset"],input[type="submit"],input[type="submit"],input[type="reset"]:hover,input[type="submit"]:hover,input[type="submit"]:hover .nav-links a:hover,.btn-theme-primary,.btn-theme-primary-outline:hover,.section-testimonials .card-theme-primary,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce button.button.alt,.pirate-forms-submit-button,.pirate-forms-submit-button:hover,input[type="reset"],input[type="submit"],input[type="submit"],.pirate-forms-submit-button,.contact-form div.wpforms-container-full .wpforms-form .wpforms-submit,.contact-form div.wpforms-container-full .wpforms-form .wpforms-submit:hover,.nav-links a:hover,.nav-links a.current,.nav-links .page-numbers:hover,.nav-links .page-numbers.current{background:#0288ef}.btn-theme-primary-outline,.btn-theme-primary-outline:hover,.pricing__item:hover,.section-testimonials .card-theme-primary,.entry-content blockquote{border-color:#0288ef}.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt{background-color:#0288ef}.woocommerce #respond input#submit.alt:hover,.woocommerce a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce input.button.alt:hover{background-color:#0288ef}.site-header,.is-transparent .site-header.header-fixed{background:#ffffff;border-bottom:0px none}#footer-widgets{}.gallery-carousel .g-item{padding:0px 1px}.gallery-carousel{margin-left:-1px;margin-right:-1px}.gallery-grid .g-item,.gallery-masonry .g-item .inner{padding:1px}.gallery-grid,.gallery-masonry{margin:-1px}
+</style>
+<link rel='stylesheet' id='onepress-gallery-lightgallery-css'  href='https://boringphone.com/wp-content/themes/onepress/assets/css/lightgallery.css?ver=5.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='onepress-plus-style-css'  href='https://boringphone.com/wp-content/plugins/onepress-plus/onepress-plus.css?ver=2.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://c0.wp.com/p/jetpack/8.9.3/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' id='jquery-core-js-extra'>
+/* <![CDATA[ */
+var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_sticky_header":"0","onepress_vertical_align_menu":"1","hero_animation":"flipInX","hero_speed":"5000","hero_fade":"750","hero_duration":"5000","hero_disable_preload":"","is_home":"","gallery_enable":"1","is_rtl":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.8.7/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.8.7/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/boringphone.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.12.2' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' id='epkb-public-scripts-js-extra'>
+/* <![CDATA[ */
+var epkb_vars = {"msg_try_again":"Please try again later.","error_occurred":"Error occurred (16)","not_saved":"Error occurred - configuration NOT saved (6).","unknown_error":"unknown error (17)","reload_try_again":"Please reload the page and try again.","save_config":"Saving configuration","input_required":"Input is required","reduce_name_size":"Warning: Please reduce your name size. Tab will only show first 25 characters","load_template":"Loading Template..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/echo-knowledge-base/js/public-scripts.min.js?ver=6.8.0' id='epkb-public-scripts-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/echo-knowledge-base/js/vendor/materialize.min.js?ver=6.8.0' id='epkb-materialize-js'></script>
+<script type='text/javascript' id='pirate-forms-custom-spam-js-extra'>
+/* <![CDATA[ */
+var pf = {"spam":{"label":"I'm human!","value":"0112777763"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/pirate-forms/public/js/custom-spam.js?ver=5.8.7' id='pirate-forms-custom-spam-js'></script>
+<script async defer type='text/javascript' src='https://stats.wp.com/s-202328.js' id='woocommerce-analytics-js'></script>
+<link rel="https://api.w.org/" href="https://boringphone.com/wp-json/" /><link rel="alternate" type="application/json" href="https://boringphone.com/wp-json/wp/v2/epkb_post_type_1/2248" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://boringphone.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://boringphone.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.7" />
+<meta name="generator" content="WooCommerce 4.4.4" />
+<link rel="canonical" href="https://boringphone.com/knowledge-base/osmandnavigation-voice-directions-set-up/" />
+<link rel="alternate" type="application/json+oembed" href="https://boringphone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fboringphone.com%2Fknowledge-base%2Fosmandnavigation-voice-directions-set-up%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://boringphone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fboringphone.com%2Fknowledge-base%2Fosmandnavigation-voice-directions-set-up%2F&#038;format=xml" />
+<style type="text/css" id="epkb-advanced-style">
+		/* KB Core 
+		-----------------------------------------------------------------------*/
+		#epkb-content-container .epkb-nav-tabs .active:after {
+			border-top-color: #FFFFFF!important
+		}
+		#epkb-content-container .epkb-nav-tabs .active {
+			background-color: #FFFFFF!important
+		}
+		#epkb-content-container .epkb-nav-tabs .active .epkb-category-level-1,
+		#epkb-content-container .epkb-nav-tabs .active p {
+			color: #686868!important
+		}
+		#epkb-content-container .epkb-nav-tabs .active:before {
+			border-top-color: #686868!important
+		}		
+	</style><!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '435101583698039');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=435101583698039&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->		<!-- HappyForms global container -->
+		<script type="text/javascript">HappyForms = {};</script>
+		<!-- End of HappyForms global container -->
+		<style type='text/css'>img#wpstats{display:none}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="OsmAnd(Navigation) Voice Directions Set up" />
+<meta property="og:url" content="https://boringphone.com/knowledge-base/osmandnavigation-voice-directions-set-up/" />
+<meta property="og:description" content="OsmAnd and defaults to text-to-speech (TTS) directions. BoringPhone does not support this because it requires Google services. However, OsmAnd does have pre-recorded voice commands that will give d…" />
+<meta property="article:published_time" content="2019-11-16T21:27:46+00:00" />
+<meta property="article:modified_time" content="2019-11-16T21:27:48+00:00" />
+<meta property="og:site_name" content="BoringPhone" />
+<meta property="og:image" content="https://lh5.googleusercontent.com/kEgGlmGcWeHL8H-RoPg_g1qy4DOUVBw-BnZV9p_Hx6_VHGCVGOxadh3voHwF_H2U9lPxUuLJsF_5X0OIhHi938KmNsrVYBnQJSZMeNCYUuIVwtaElQtnpA8JmR5pE0SxAnv4DggC" />
+<meta property="og:image:width" content="214" />
+<meta property="og:image:height" content="400" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="OsmAnd(Navigation) Voice Directions Set up" />
+<meta name="twitter:image" content="https://lh4.googleusercontent.com/2jm92_wVizPxm268L-ZJ4o2sX6RYRGiLbyjhoeztwiIpsoGt19DAa3d5JmrELmY9ZAZ5KV9FQb4L03HhBGc1HAzH_fmUc7OVyFBlOyKjGtX4Y5MI8HtG3wMqfqdQeFpvhywoqFyY?w=144" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://boringphone.com/wp-content/uploads/2018/10/cropped-sitelogo2-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://boringphone.com/wp-content/uploads/2018/10/cropped-sitelogo2-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://boringphone.com/wp-content/uploads/2018/10/cropped-sitelogo2-180x180.png" />
+<meta name="msapplication-TileImage" content="https://boringphone.com/wp-content/uploads/2018/10/cropped-sitelogo2-270x270.png" />
+			<style type="text/css" id="wp-custom-css">
+				.grecaptcha-badge { visibility: hidden; }			</style>
+		</head>
+
+<body class="epkb_post_type_1-template-default single single-epkb_post_type_1 postid-2248 wp-custom-logo theme-onepress woocommerce-no-js group-blog site-header-sticky elementor-default">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <div id="header-section" class="h-on-top no-transparent">		<header id="masthead" class="site-header header-full-width is-sticky no-scroll no-t h-on-top" role="banner">
+			<div class="container">
+				<div class="site-branding">
+				<div class="site-brand-inner has-logo-img no-desc"><div class="site-logo-div"><a href="https://boringphone.com/" class="custom-logo-link  no-t-logo" rel="home" itemprop="url"><img width="444" height="100" src="https://boringphone.com/wp-content/uploads/2019/04/cropped-bphand-logo.png" class="custom-logo" alt="BoringPhone" loading="lazy" itemprop="logo" srcset="https://boringphone.com/wp-content/uploads/2019/04/bphand-logo.png 2x" /></a></div></div>				</div>
+				<div class="header-right-wrapper">
+					<a href="#0" id="nav-toggle">Menu<span></span></a>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<ul class="onepress-menu">
+							<li id="menu-item-1821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="https://boringphone.com/shop/">Shop</a></li>
+<li id="menu-item-1507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1507"><a href="https://boringphone.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-1506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1506"><a href="https://boringphone.com/sign-up/">Sign Up</a></li>
+<li id="menu-item-1544" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1544"><a href="https://boringphone.com/blog/">Blog</a></li>
+<li id="menu-item-1630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1630"><a href="https://boringphone.com/business/">Business</a></li>
+<li id="menu-item-2185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2185"><a href="https://boringphone.com/help/">Help</a></li>
+						</ul>
+					</nav>
+					<!-- #site-navigation -->
+				</div>
+			</div>
+		</header><!-- #masthead -->
+		</div>
+	<div class="eckb-kb-template " style="padding-top: 30px; padding-bottom: 50px; padding-left: 4px; padding-right: 4px; margin-top: 4px; margin-bottom: 50px; margin-left: 4px; margin-right: 4px;">	      
+        <div id="eckb-article-page-container" class="" >    <div id="eckb-article-header"></div>
+            <div id="eckb-article-body">  <div id="eckb-article-left-sidebar"></div>
+                <div id="eckb-article-content">                        <div id="eckb-article-content-header"><h1 class="eckb-article-title kb-article-id" id="2248">OsmAnd(Navigation) Voice Directions Set up</h1><div class="eckb-article-content-header__article-meta"><div class="eckb-ach__article-meta__date-created"><span class="eckb-ach__article-meta__date-created__date-icon epkbfa epkbfa-calendar"></span><span class="eckb-ach__article-meta__date-created__text">Created On</span><span class="eckb-ach__article-meta__date-created__date"><time class="entry-date" datetime="2019-11-16T21:27:46+00:00">November 16, 2019</time></span></div><div class="eckb-ach__article-meta__author"><span class="eckb-ach__article-meta__author__author-icon epkbfa epkbfa-user"></span><span class="eckb-ach__article-meta__author__text">by</span><span class="eckb-ach__article-meta__author__name">BPA</span></div></div>
+<div class="eckb-breadcrumb" style="padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; font-size: 16px;">
+	<div class="eckb-breadcrumb-label">You are here:</div>
+	<ul class="eckb-breadcrumb-nav">       <li>	<span class="eckb-breadcrumb-link"><a tabindex="0" href="https://boringphone.com/knowledge-base/"><span style="color: #f7941d;" >Main</span></a><span class="eckb-breadcrumb-link-icon ep_font_icon_arrow_carrot_right"></span>	</span></li><li>	<span class="eckb-breadcrumb-link"><a tabindex="0" href="https://boringphone.com/knowledge-base/category/apps/"><span style="color: #f7941d;" >Applications</span></a><span class="eckb-breadcrumb-link-icon ep_font_icon_arrow_carrot_right"></span>	</span></li><li>	<span class="eckb-breadcrumb-link"><span aria-current="page"style="color: #f7941d;" >OsmAnd(Navigation) Voice Directions Set up</span>	</span></li>
+	</ul>
+</div>          <div class="eckb-navigation-back  " style="margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;"><div tabindex="0" class="eckb-navigation-button" style="padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; color: #f7941d; background-color: #ffffff; font-size: 16px; border-radius: 3px; border-style: none; border-width: 1px; border-color: #ffffff;" onclick="history.go(-1);" >← All Topics</div></div></div><div id="eckb-article-content-body">
+<p>OsmAnd and defaults to text-to-speech (TTS) directions. BoringPhone does not support this because it requires Google services. </p>
+
+
+
+<p>However, OsmAnd does have pre-recorded voice commands that will give directions. Follow these instructions to enable it:<br></p>
+
+
+
+<ul><li>Open OsmAnd press the menu button on the bottom left:</li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/2jm92_wVizPxm268L-ZJ4o2sX6RYRGiLbyjhoeztwiIpsoGt19DAa3d5JmrELmY9ZAZ5KV9FQb4L03HhBGc1HAzH_fmUc7OVyFBlOyKjGtX4Y5MI8HtG3wMqfqdQeFpvhywoqFyY" alt="" width="225" height="400"/></figure>
+
+
+
+<ul><li>Press ‘<strong>Download Maps</strong>’:</li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh5.googleusercontent.com/ktnQ3p3CiiowRCEGX-mzZyDfWKOzyMVucckzbd3P0MmTRBn5nJKhvbb6piJw-y5X_amnJOZW44Ym9Cp9us8TOHW819Wb7nK2t1mqcvAblfLBpQxqZnYExC_YGgkIdz6-35_6bJd3" alt="" width="209" height="177"/></figure>
+
+
+
+<ul><li>Scroll down and choose ‘<strong>Voice prompts (recorded, limited features)</strong>’: </li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh3.googleusercontent.com/sUBDhvUv4HuRXpwCi_q6Oz5GEP8h8QpYYMOGoeeVr2nfCbHvr4pvFt3Z_dIlkeKWC85kIgfN8YXH3tb39_JioURhJ892G0QknDUbTICnO3-70HQamQUbMFv73Pp-XVRDTKdMaBqZ" alt="" width="270" height="189"/></figure>
+
+
+
+<ul><li></li></ul>
+
+
+
+<ul><li>Choose your preferred language and press the download button next to it: </li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/vaWYa2HLUDW83xbpiRIF-vYR1GbGmGrdAvT39xzWKk3daQEOAypMyxkGNAjKSbRg6i7iKQ4zChaFmwyP3D9hS2hVpeP7NRxBqkTTVCwZlUv9zVly12O5ELnvNFhFMzTbfRL6OqXz" alt="" width="270" height="385"/></figure>
+
+
+
+<ul><li>Go back to the main menu,scroll down and select settings:</li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/AJKI_kqB9EVJrVQJB7R4_Yu_Ds_NycZD-7_wTEW_lAWX_mKHJAsAQw1jpUsRkXC5rd24QExwAvyQY1VpoSCc-RUi6wzAS1y-OzqdBn99zsckspOalLca2l_-OobVCehpP5SdwYE5" alt="" width="209" height="185"/></figure>
+
+
+
+<ul><li>Select ‘<strong>Navigation Settings</strong>’: </li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/akKsY4D-p6N0StcKijhdj20ZAU0NxhLVupkAJitiZlVvtfzBkfM2oJDC-f-SjTtzKvNxhxBo5FS7_5SuhPt2LF4lUt1Aj7cXNc4SMJ9ThM3lB_72WX_LwaKpDaiLUKB1NrmZQiVc" alt="" width="270" height="372"/></figure>
+
+
+
+<ul><li>Then select ‘<strong>Driving</strong>’:</li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/JZizqDoPP-Br5yTuc78-4hN6uTMCk-urEho5GElwOZoRGUYOiHEWL8GX-N3rFf3T5wKXT_ujMIHzgdFJhHIK-Ukq_Cb3ek_XqsVQHnm8WjuMfI7bzjrZaY0QZcD_7SJB3OHjfMkT" alt="" width="275" height="284"/></figure>
+
+
+
+<ul><li>Select  ‘<strong>Voice Guidance</strong>’: </li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh5.googleusercontent.com/MLrfoukGvplxvJI7J2gN1Az7QZxtD7pbVyVB6NJPa6kBPAxuRFepJapityvWosQcdv3vuGwYQuxJhZKR4l3IzAL7nX_MZduFLr5MmU2Oiti8J8O9iRBBfaGjotoIEb1SLGy9ZcEP" alt="" width="272" height="391"/></figure>
+
+
+
+<ul><li>Select the language that you downloaded (It should be the one <em>without</em> TTS in the name):</li></ul>
+
+
+
+<figure class="wp-block-image is-resized"><img loading="lazy" src="https://lh5.googleusercontent.com/kEgGlmGcWeHL8H-RoPg_g1qy4DOUVBw-BnZV9p_Hx6_VHGCVGOxadh3voHwF_H2U9lPxUuLJsF_5X0OIhHi938KmNsrVYBnQJSZMeNCYUuIVwtaElQtnpA8JmR5pE0SxAnv4DggC" alt="" width="214" height="400"/></figure>
+
+
+
+<ul><li></li></ul>
+
+
+
+<p>That’s it! You should now get turn directions, etc when navigating. Because OsmAnd uses GPS for location, it will often take a moment before it recognises your current location and starts navigating.&nbsp;<br></p>
+</div><div id="eckb-article-content-footer"></div>
+                </div><!-- /#eckb-article-content -->     <div id="eckb-article-right-sidebar"></div>
+            </div><!-- /#eckb-article-body -->              <div id="eckb-article-footer"></div>
+        </div><!-- /#eckb-article-page-container -->        
+	</div>     <footer id="colophon" class="site-footer" role="contentinfo">
+        		
+        <div class="site-info">
+            <div class="container">
+                                    <div class="btt">
+                        <a class="back-to-top" href="#page" title="Back To Top"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
+                    </div>
+                                Copyright © 2019 Brittan Terrace Ltd - <a href="https://boringphone.com/privacy-policy/" rel="noopener" target="_blank">Privacy Policy</a>            </div>
+        </div>
+        <!-- .site-info -->
+
+    </footer><!-- #colophon -->
+    </div><!-- #page -->
+
+
+	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript' src='https://c0.wp.com/c/5.8.7/wp-includes/js/jquery/ui/core.min.js' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.8.7/wp-includes/js/jquery/ui/datepicker.min.js' id='jquery-ui-datepicker-js'></script>
+<script type='text/javascript' id='jquery-ui-datepicker-js-after'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/js/cookie.js?ver=5.8.7' id='js-cookie-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/js/tooltipster.bundle.min.js?ver=5.8.7' id='jquery-np-tooltipster-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/js/jquery.material.form.min.js?ver=5.8.7' id='material-design-js-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/js/dialog_trigger.js?ver=5.8.7' id='js-dialog_trigger-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/arscode-ninja-popups/js/ninjapopups.min.js?ver=5.8.7' id='js-ninjapopups-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/boringphone.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2.2' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.4.4/assets/js/jquery-blockui/jquery.blockUI.min.js' id='jquery-blockui-js'></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/boringphone.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.4.4/assets/js/frontend/add-to-cart.min.js' id='wc-add-to-cart-js'></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.4.4/assets/js/frontend/woocommerce.min.js' id='woocommerce-js'></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_bd0652e577b3acc43d276a3b33030126","fragment_name":"wc_fragments_bd0652e577b3acc43d276a3b33030126","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.4.4/assets/js/frontend/cart-fragments.min.js' id='wc-cart-fragments-js'></script>
+<script type='text/javascript' id='wc-cart-fragments-js-after'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			var jetpackLazyImagesLoadEvent;
+			try {
+				jetpackLazyImagesLoadEvent = new Event( 'jetpack-lazy-images-load', {
+					bubbles: true,
+					cancelable: true
+				} );
+			} catch ( e ) {
+				jetpackLazyImagesLoadEvent = document.createEvent( 'Event' )
+				jetpackLazyImagesLoadEvent.initEvent( 'jetpack-lazy-images-load', true, true );
+			}
+			jQuery( 'body' ).get( 0 ).dispatchEvent( jetpackLazyImagesLoadEvent );
+		} );
+	
+</script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?hl=en_US&#038;ver=5.8.7' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Leq1pEUAAAAAAvNFkWt2LuXUPhdgpM5LXtyKCid","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=5.2.2' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' id='mailchimp-woocommerce-js-extra'>
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https:\/\/boringphone.com","ajax_url":"https:\/\/boringphone.com\/wp-admin\/admin-ajax.php","language":"en"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js?ver=2.4.5' id='mailchimp-woocommerce-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/themes/onepress/assets/js/plugins.js?ver=2.2.4' id='onepress-js-plugins-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/themes/onepress/assets/js/bootstrap.min.js?ver=2.2.4' id='onepress-js-bootstrap-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/themes/onepress/assets/js/isotope.pkgd.min.js?ver=2.2.4' id='onepress-gallery-masonry-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/themes/onepress/assets/js/theme.js?ver=2.2.4' id='onepress-theme-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.9.3/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js' id='eu-cookie-law-script-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/themes/onepress/assets/js/owl.carousel.min.js?ver=5.8.7' id='onepress-gallery-carousel-js'></script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/onepress-plus/assets/js/slider.js?ver=5.8.7' id='onepress-plus-slider-js'></script>
+<script type='text/javascript' id='onepress-plus-js-extra'>
+/* <![CDATA[ */
+var OnePress_Plus = {"ajax_url":"https:\/\/boringphone.com\/wp-admin\/admin-ajax.php","browser_warning":" Your browser does not support the video tag. I suggest you upgrade your browser."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://boringphone.com/wp-content/plugins/onepress-plus/assets/js/onepress-plus.js?ver=2.2.4' id='onepress-plus-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.8.7/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202328.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9.3',blog:'154214362',post:'2248',tz:'0',srv:'boringphone.com'} ]);
+	_stq.push([ 'clickTrackerInit', '154214362', '2248' ]);
+</script>
+
+</body>
+</html>
