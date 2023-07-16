@@ -146,3 +146,9 @@ ui.caretBlinkTime (set to number, and set to 0 to disable blink)
 
 Go into Ublock Origin, Under Filter List, open Annoyances and click all
 checkboxes (blocks annoying cookie confirmation popups amongst others).
+
+Disable JavaScript JIT Compiler:
+javascript.options.baselinejit false
+javascript.options.ion false
+javascript.options.wasm false
+javascript.options.asmjs false
