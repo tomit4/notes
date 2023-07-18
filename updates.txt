@@ -277,3 +277,8 @@ doas pacman -S gfeeds
 
 07/03/2023
 doas pacman -S wine-mono
+
+07/17/2023
+Install gpm and gpm-runit (allows use of mouse in tty)
+doas pacman -S gpm gpm-runit
+ln -s /etc/runit/sv/gpm/ /run/runit/service/
