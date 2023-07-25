@@ -423,7 +423,12 @@
         "§:fontpair.co",
         "§:realtimecolors.com",
         "§:utopia.fyi",
-        "§:typekit.net"
+        "§:typekit.net",
+        "§:opensubtitles.com",
+        "§:element.io",
+        "§:matrix.org",
+        "§:vector.im",
+        "§:crxextractor.com"
       ],
       "untrusted": [
         "hotmail.com",
