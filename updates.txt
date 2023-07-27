@@ -282,3 +282,11 @@ doas pacman -S wine-mono
 Install gpm and gpm-runit (allows use of mouse in tty)
 doas pacman -S gpm gpm-runit
 ln -s /etc/runit/sv/gpm/ /run/runit/service/
+
+07/27/2023
+Install metalog and metalog-runit
+doas pacman -S metalog metalog-runit
+do the whole ln -s thing
+Remove syslog-ng and syslog-ng-runit
+doas pacman -Rs syslog-ng syslog-ng-runit
+Remove service files and soft link
