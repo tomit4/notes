@@ -1,3 +1,37 @@
+https://www.destroyallsoftware.com/talks/boundaries | Boundaries
+https://www.destroyallsoftware.com/screencasts | Destroy All Software
+https://speakerdeck.com/spreeconf/the-magic-tricks-of-testing-sandi-metz | The Magic Tricks of Testing - Sandi Metz - Speaker Deck
+https://lite.duckduckgo.com/lite/?q=sandi+metz+code+smells | sandi metz code smells at DuckDuckGo
+https://pypi.org/project/celery/ | celery · PyPI
+https://duckduckgo.com/?q=celery+python+data+pipeline&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*oFhIm8YCwN80XcCx0alD5w.png | celery python data pipeline at DuckDuckGo
+https://github.com/breejs/bree | GitHub - breejs/bree: Bree is a Node.js and JavaScript job task scheduler with worker threads, cron, Date, and human syntax. Built for @ladjs, @forwardemail, @spamscanner, @cabinjs.
+
+https://www.freecodecamp.org/news/how-to-use-the-json-module-in-python/ | How to Use the JSON Module in Python – A Beginner's Guide
+https://www.w3schools.com/python/python_for_loops.asp | Python For Loops
+https://www.abilenetx.gov/526/City-Council | City Council | Abilene, TX
+https://realpython.com/python-requests/ | Python’s Requests Library (Guide) – Real Python
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html | pandas.read_html — pandas 2.0.3 documentation
+
+https://github.com/rchipka/node-osmosis | GitHub - rchipka/node-osmosis: Web scraper for NodeJS
+
+https://joinmatrix.org/guide/matrix-vs-discord/ | Matrix vs. Discord | Join Matrix!
+https://austinhuang.me/discord-issues.html | My view on the Issues of Discord | Austin Huang
+https://austinhuang.me/guides.html | The Guides I offer! | Austin Huang
+https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord | Why you shouldn't trust Discord - cadence's weblog (personal blog)
+https://link.springer.com/article/10.1007/s13347-021-00459-2 | The Distinct Wrong of Deepfakes | SpringerLink
+
+https://www.amazon.com/Monoprice-Mini-B-Ferrite-Plated-105448/dp/B002KLCWH6/ | Amazon.com: Monoprice 6-Feet USB 2.0 A Male to Mini-B 5 Pin Male 28/24AWG Cable with Ferrite Core and Gold Plated (105448), Black : Everything Else
+
+https://github.com/dwyl/hapi-auth-jwt2 | GitHub - dwyl/hapi-auth-jwt2: :lock: Secure Hapi.js authentication plugin using JSON Web Tokens (JWT) in Headers, URL or Cookies
+https://www.npmjs.com/package/hapi-auth-jwt2 | hapi-auth-jwt2 - npm
+https://github.com/auth0/node-jsonwebtoken#readme | GitHub - auth0/node-jsonwebtoken: JsonWebToken implementation for node.js http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
+
+https://www.howtogeek.com/devops/why-processes-in-docker-containers-shouldnt-run-as-root/ | Why Processes In Docker Containers Shouldn’t Run as Root
+
+https://en.wikipedia.org/wiki/Html?useskin=vector | HTML - Wikipedia
+https://en.wikipedia.org/wiki/Css?useskin=vector | CSS - Wikipedia
+https://en.wikipedia.org/wiki/Javascript?useskin=vector | JavaScript - Wikipedia
+
 https://www.manuelkruisz.com/blog/posts/nginx-multiple-domains-one-server | Using nginx to serve multiple nodejs applications on different domains | Manuel Kruisz
 https://stackoverflow.com/questions/30449313/how-do-i-make-a-docker-container-start-automatically-on-system-boot | How do I make a Docker container start automatically on system boot? - Stack Overflow
 https://stackoverflow.com/questions/66955731/how-to-serve-multiple-web-servers-using-nginx | How to serve multiple web servers using nginx? - Stack Overflow
@@ -70,7 +104,7 @@ https://www.baeldung.com/ops/dockerfile-git-strategies | Dockerfile Strategies f
 
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp | Dockerizing a Node.js web app | Node.js
 https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
-https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing  for faster, more reliable builds
+https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing `npm ci` for faster, more reliable builds
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
 https://teddit.pussthecat.org/r/webdev/comments/a285o4/why_and_when_to_use_docker/ | Why, and when to use Docker ? : webdev
 
@@ -94,4 +128,3 @@ https://en.wikipedia.org/wiki/Binary_tree?useskin=vector#Types_of_binary_trees |
 https://cron.help/#@yearly_*_*_*_* | Crontab syntax for us humands -- Cron Helper
 https://cron.help/examples | Common Cron Job Schedules -- Cron Helper
 https://www.hostinger.com/tutorials/crontab-syntax | Crontab Syntax on Linux + Useful Examples
-
