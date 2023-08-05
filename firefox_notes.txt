@@ -152,3 +152,7 @@ javascript.options.baselinejit false
 javascript.options.ion false
 javascript.options.wasm false
 javascript.options.asmjs false
+
+In about:preferences#privacy:
+
+Enable secure DNS using Default protection.
