@@ -237,11 +237,13 @@ Uninstall gtktranslate-bin (use your own ltranslate script instead)
 
 paru -Rs gtktranslate-bin
 
+DONE AS OF 08/05/2023
 06/02/2023
 Install svgo (cli svg optimization tool)
 
 paru svgo
 
+DONE AS OF 08/05/2023
 06/02/2023
 Install Marksman (code assister for markdown) AND
 Install httpie (more simple cli than curl for http requests) AND
@@ -249,6 +251,7 @@ Install mypy (typechecker for python) And
 Install sqlitebrowser(sqlite from browser?):
 doas pacman -S marksman httpie mypy sqlitebrowser
 
+DONE AS OF 08/05/2023
 06/15/2023
 You took up typescript apparently...
 Install typescript
@@ -257,32 +260,39 @@ Install rome in nvim to get proper linting
 :Mason
 select rome
 
+DONE AS OF 08/05/2023
 06/19/2023
 Install nginx and html-minifier (and uglifycss and uglifyjs if not already)
 doas pacman -S nginx nginx-runit
 doas sv ln -s /etc/runit/sv/nginx /run/runit/service/
 doas npm install -g html-minifier uglifyjs uglifycss
 
+DONE AS OF 08/05/2023
 06/23/2023
 Install rsspls (cli tool to generate rss feeds)
 paru rsspls
 
+DONE AS OF 08/05/2023
 06/25/2023
 Install html2pug (it is what it sounds like)
 doas npm install -g html2pug
 
+DONE AS OF 08/05/2023
 07/02/2023
 Install gfeeds (minimal rss reader)
 doas pacman -S gfeeds
 
+DONE AS OF 08/05/2023
 07/03/2023
 doas pacman -S wine-mono
 
+DONE AS OF 08/05/2023
 07/17/2023
 Install gpm and gpm-runit (allows use of mouse in tty)
 doas pacman -S gpm gpm-runit
 ln -s /etc/runit/sv/gpm/ /run/runit/service/
 
+DONE AS OF 08/05/2023
 07/27/2023
 Install metalog and metalog-runit
 doas pacman -S metalog metalog-runit
@@ -290,3 +300,9 @@ do the whole ln -s thing
 Remove syslog-ng and syslog-ng-runit
 doas pacman -Rs syslog-ng syslog-ng-runit
 Remove service files and soft link
+
+08/05/2023
+Install python-pipx (easy way to set up python virtual environments)
+doas pacman -S python-pipx
+Install nvtop-nosystemd-git (nvtop started needing systemd):
+paru nvtop (select 2)
