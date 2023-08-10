@@ -306,3 +306,11 @@ Install python-pipx (easy way to set up python virtual environments)
 doas pacman -S python-pipx
 Install nvtop-nosystemd-git (nvtop started needing systemd):
 paru nvtop (select 2)
+
+08/10/2023
+Install android-file-transfer:
+doas pacman -S android-file-transfer
+Make a mount point:
+mkdir /mnt/media/pixel
+Change ownership of directory:
+doas chown USER:USER /mnt/media/pixel
