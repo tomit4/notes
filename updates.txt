@@ -314,3 +314,5 @@ Make a mount point:
 mkdir /mnt/media/pixel
 Change ownership of directory:
 doas chown USER:USER /mnt/media/pixel
+
+test
