@@ -1,0 +1,6 @@
+2023-08-12 02:49:51.689 [info] Uninstalling extension from the profile: ms-azuretools.vscode-docker@1.25.2 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 02:49:51.733 [info] Marked extension as uninstalled ms-azuretools.vscode-docker-1.25.2-universal
+2023-08-12 02:49:52.201 [info] Successfully uninstalled extension from the profile ms-azuretools.vscode-docker@1.25.2 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 02:50:23.041 [info] Uninstalling extension from the profile: octref.vetur@0.37.3 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 02:50:23.065 [info] Marked extension as uninstalled octref.vetur-0.37.3-universal
+2023-08-12 02:50:23.350 [info] Successfully uninstalled extension from the profile octref.vetur@0.37.3 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json

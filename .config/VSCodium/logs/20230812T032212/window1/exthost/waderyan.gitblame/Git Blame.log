@@ -1,0 +1,4 @@
+2023-08-12 03:22:15.573 [info] git rev-parse --git-dir
+2023-08-12 03:22:15.573 [info] git rev-parse --git-dir
+2023-08-12 03:22:15.573 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/App.vue
+2023-08-12 03:22:15.695 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/App.vue"

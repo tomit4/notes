@@ -1,0 +1,21 @@
+2023-08-12 03:18:04.556 [info] Log level: Info
+2023-08-12 03:18:04.556 [info] Validating found git in: "git"
+2023-08-12 03:18:04.556 [info] Using git "2.41.0" from "git"
+2023-08-12 03:18:04.556 [info] > git rev-parse --show-toplevel [22ms]
+2023-08-12 03:18:04.556 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2023-08-12 03:18:04.556 [info] Open repository: /home/brian/Documents/Code/siimee
+2023-08-12 03:18:04.556 [info] > git config --get commit.template [8ms]
+2023-08-12 03:18:04.557 [info] > git rev-parse --show-toplevel [2ms]
+2023-08-12 03:18:04.564 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [2ms]
+2023-08-12 03:18:04.660 [info] > git status -z -uall [89ms]
+2023-08-12 03:18:04.903 [info] > git config --get commit.template [82ms]
+2023-08-12 03:18:04.903 [info] > git rev-parse --show-toplevel [90ms]
+2023-08-12 03:18:04.925 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [9ms]
+2023-08-12 03:18:04.950 [info] > git status -z -uall [15ms]
+2023-08-12 03:18:04.951 [info] > git rev-parse --show-toplevel [7ms]
+2023-08-12 03:18:05.009 [info] > git rev-parse --show-toplevel [23ms]
+2023-08-12 03:18:05.061 [info] > git rev-parse --show-toplevel [23ms]
+2023-08-12 03:18:05.146 [info] > git show --textconv :frontend/src/App.vue [12ms]
+2023-08-12 03:18:05.147 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/App.vue [2ms]
+2023-08-12 03:18:05.169 [info] > git cat-file -s acbcd9a225034bf10f459ae7128dd7a0a9fbb09a [13ms]
+2023-08-12 03:18:05.172 [info] > git check-ignore -v -z --stdin [3ms]

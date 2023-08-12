@@ -1,0 +1,3 @@
+2023-08-12 03:24:55.661 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.vscode-pull-request-github' wants API proposal 'quickPickItemIcon' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-08-12 03:24:56.078 [warning] [Vue.volar]: Cannot register 'typescript.tsdk'. This property is already registered.
+2023-08-12 03:24:59.231 [info] [perf] Render performance baseline is 28ms

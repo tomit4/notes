@@ -1,0 +1,3 @@
+[2023-08-12 10:03:00.967] ClientRequest.<anonymous>
+FetchError: request to https://gitea.yvvas.com:4000/fyindr/siimee failed, reason: write EPROTO 19138377473224:error:100000f7:SSL routines:OPENSSL_internal:WRONG_VERSION_NUMBER:../../third_party/boringssl/src/ssl/tls_record.cc:231:
+

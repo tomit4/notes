@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "git.openRepositoryInParentFolders": "always",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.fontSize": 16
+}

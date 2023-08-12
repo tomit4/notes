@@ -1,0 +1,8 @@
+2023-08-12 03:47:47.583 [info] git rev-parse --git-dir
+2023-08-12 03:47:47.583 [info] git rev-parse --git-dir
+2023-08-12 03:47:47.583 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/views/VerifyView.vue
+2023-08-12 03:47:47.616 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/views/VerifyView.vue"
+2023-08-12 03:47:48.162 [info] git rev-parse --git-dir
+2023-08-12 03:47:48.177 [info] git rev-parse --git-dir
+2023-08-12 03:47:48.190 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/App.vue
+2023-08-12 03:47:48.229 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/App.vue"

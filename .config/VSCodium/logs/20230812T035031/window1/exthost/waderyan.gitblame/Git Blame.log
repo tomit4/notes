@@ -1,0 +1,24 @@
+2023-08-12 03:50:33.883 [info] git rev-parse --git-dir
+2023-08-12 03:50:33.883 [info] git rev-parse --git-dir
+2023-08-12 03:50:33.883 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/App.vue
+2023-08-12 03:50:34.033 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/App.vue"
+2023-08-12 03:50:50.260 [info] git rev-parse --git-dir
+2023-08-12 03:50:50.272 [info] git rev-parse --git-dir
+2023-08-12 03:50:50.284 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js
+2023-08-12 03:50:50.293 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js"
+2023-08-12 03:51:59.204 [info] git rev-parse --git-dir
+2023-08-12 03:51:59.216 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js
+2023-08-12 03:51:59.227 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js"
+2023-08-12 03:52:10.675 [info] git rev-parse --git-dir
+2023-08-12 03:52:10.683 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js
+2023-08-12 03:52:10.695 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js"
+2023-08-12 03:52:16.096 [info] git rev-parse --git-dir
+2023-08-12 03:52:16.105 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js
+2023-08-12 03:52:16.114 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/services/auth.service.js"
+2023-08-12 03:52:40.489 [info] git rev-parse --git-dir
+2023-08-12 03:52:40.511 [info] git rev-parse --git-dir
+2023-08-12 03:52:40.522 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/views/OnboardingView.vue
+2023-08-12 03:52:40.545 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/views/OnboardingView.vue"
+2023-08-12 03:52:46.032 [info] git rev-parse --git-dir
+2023-08-12 03:52:46.044 [info] git blame -C --incremental -- /home/brian/Documents/Code/siimee/frontend/src/views/OnboardingView.vue
+2023-08-12 03:52:46.073 [info] Blamed "/home/brian/Documents/Code/siimee/frontend/src/views/OnboardingView.vue"

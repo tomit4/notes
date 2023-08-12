@@ -1,0 +1,38 @@
+import:
+  - ~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.yaml
+
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 1.0
+  padding:
+    x: 6
+    y: 6
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+scrolling:
+  history: 5000
+font:
+  normal:
+    family: Mononoki Nerd Font
+    style: Regular
+  bold:
+    family: Mononoki Nerd Font
+    style: Bold
+  italic:
+    family: Mononoki Nerd Font
+    style: Italic
+  bold_italic:
+    family: Mononoki Nerd Font
+    style: Bold Italic
+  size: 13.0
+  offset:
+    x: 1
+    y: 1
+style: Block
+unfocused_hollow: false
+# shell:
+# program: /bin/zsh

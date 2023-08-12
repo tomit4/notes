@@ -1,0 +1,29 @@
+2023-08-12 02:43:21.728 [info] Telemetry level is off
+2023-08-12 02:43:21.728 [info] Experiments are disabled, only manually opted experiments are active.
+2023-08-12 02:43:21.728 [info] Test server listening.
+2023-08-12 02:43:21.728 [info] > conda info --json
+2023-08-12 02:43:21.730 [info] Found: /bin/python --> /bin/python3.11
+2023-08-12 02:43:21.731 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-08-12 02:43:21.731 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-08-12 02:43:21.731 [info] Found: /bin/python3 --> /bin/python3.11
+2023-08-12 02:43:21.731 [info] Found: /bin/python3.11 --> /bin/python3.11
+2023-08-12 02:43:21.731 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-08-12 02:43:21.731 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-08-12 02:43:21.731 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-08-12 02:43:21.733 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2023-08-12 02:43:21.733 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2023-08-12 02:43:21.764 [info] Found: /sbin/python --> /sbin/python3.11
+2023-08-12 02:43:21.764 [info] Found: /sbin/python3 --> /sbin/python3.11
+2023-08-12 02:43:21.764 [info] Found: /sbin/python3.11 --> /sbin/python3.11
+2023-08-12 02:43:21.774 [info] Found: /usr/bin/python --> /usr/bin/python3.11
+2023-08-12 02:43:21.774 [info] Found: /usr/bin/python3 --> /usr/bin/python3.11
+2023-08-12 02:43:21.774 [info] Found: /usr/bin/python3.11 --> /usr/bin/python3.11
+2023-08-12 02:43:21.816 [info] Found: /usr/sbin/python --> /usr/sbin/python3.11
+2023-08-12 02:43:21.817 [info] Found: /usr/sbin/python3 --> /usr/sbin/python3.11
+2023-08-12 02:43:21.817 [info] Found: /usr/sbin/python3.11 --> /usr/sbin/python3.11
+2023-08-12 02:43:21.837 [info] > /bin/python -I ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/interpreterInfo.py
+2023-08-12 02:43:21.847 [info] > /sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/interpreterInfo.py
+2023-08-12 02:43:21.888 [info] > /usr/bin/python -I ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/interpreterInfo.py
+2023-08-12 02:43:21.894 [info] > /usr/sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2023.12.0-universal/pythonFiles/interpreterInfo.py
+2023-08-12 02:43:21.928 [info] Python interpreter path: /bin/python
+2023-08-12 02:43:22.753 [info] Starting Jedi language server for default.

@@ -1,0 +1,108 @@
+2023-08-12 02:41:48.596 [info] Started initializing default profile extensions in extensions installation folder. file:///home/brian/.vscode-oss/extensions
+2023-08-12 02:41:48.710 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/brian/.vscode-oss/extensions Unable to create file 'vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json' that already exists when overwrite flag is not set
+2023-08-12 02:41:48.710 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/brian/.vscode-oss/extensions
+2023-08-12 02:42:45.822 [info] Getting Manifest... dbaeumer.vscode-eslint
+2023-08-12 02:42:46.115 [info] Installing extension: dbaeumer.vscode-eslint
+2023-08-12 02:42:47.041 [info] Getting Manifest... ms-azuretools.vscode-docker
+2023-08-12 02:42:47.147 [info] Installing extension: ms-azuretools.vscode-docker
+2023-08-12 02:42:48.276 [info] Getting Manifest... redhat.vscode-yaml
+2023-08-12 02:42:48.377 [info] Installing extension: redhat.vscode-yaml
+2023-08-12 02:42:48.672 [info] Extension signature verification is not done: dbaeumer.vscode-eslint
+2023-08-12 02:42:48.707 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/dbaeumer.vscode-eslint-2.4.2-universal: dbaeumer.vscode-eslint
+2023-08-12 02:42:48.710 [info] Renamed to /home/brian/.vscode-oss/extensions/dbaeumer.vscode-eslint-2.4.2-universal
+2023-08-12 02:42:48.711 [info] Extracting extension completed. dbaeumer.vscode-eslint
+2023-08-12 02:42:48.718 [info] Extension installed successfully: dbaeumer.vscode-eslint
+2023-08-12 02:42:50.036 [info] Extension signature verification is not done: redhat.vscode-yaml
+2023-08-12 02:42:50.114 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/redhat.vscode-yaml-1.14.0-universal: redhat.vscode-yaml
+2023-08-12 02:42:50.117 [info] Renamed to /home/brian/.vscode-oss/extensions/redhat.vscode-yaml-1.14.0-universal
+2023-08-12 02:42:50.119 [info] Extracting extension completed. redhat.vscode-yaml
+2023-08-12 02:42:50.124 [info] Extension installed successfully: redhat.vscode-yaml
+2023-08-12 02:42:51.036 [info] Getting Manifest... esbenp.prettier-vscode
+2023-08-12 02:42:51.152 [info] Installing extension: esbenp.prettier-vscode
+2023-08-12 02:42:54.655 [info] Extension signature verification is not done: esbenp.prettier-vscode
+2023-08-12 02:42:54.758 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/esbenp.prettier-vscode-10.1.0-universal: esbenp.prettier-vscode
+2023-08-12 02:42:54.766 [info] Renamed to /home/brian/.vscode-oss/extensions/esbenp.prettier-vscode-10.1.0-universal
+2023-08-12 02:42:54.767 [info] Extracting extension completed. esbenp.prettier-vscode
+2023-08-12 02:42:54.772 [info] Extension installed successfully: esbenp.prettier-vscode
+2023-08-12 02:42:54.866 [info] Extension signature verification is not done: ms-azuretools.vscode-docker
+2023-08-12 02:42:54.947 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/ms-azuretools.vscode-docker-1.25.2-universal: ms-azuretools.vscode-docker
+2023-08-12 02:42:54.950 [info] Renamed to /home/brian/.vscode-oss/extensions/ms-azuretools.vscode-docker-1.25.2-universal
+2023-08-12 02:42:54.956 [info] Extracting extension completed. ms-azuretools.vscode-docker
+2023-08-12 02:42:54.962 [info] Extension installed successfully: ms-azuretools.vscode-docker
+2023-08-12 02:42:55.096 [info] Getting Manifest... ms-python.python
+2023-08-12 02:42:55.492 [info] Installing extension: ms-python.python
+2023-08-12 02:43:00.803 [info] Getting Manifest... golang.go
+2023-08-12 02:43:00.899 [info] Installing extension: golang.go
+2023-08-12 02:43:05.508 [info] Getting Manifest... ritwickdey.liveserver
+2023-08-12 02:43:05.819 [info] Installing extension: ritwickdey.liveserver
+2023-08-12 02:43:08.559 [info] Extension signature verification is not done: golang.go
+2023-08-12 02:43:08.617 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/golang.go-0.39.0-universal: golang.go
+2023-08-12 02:43:08.620 [info] Renamed to /home/brian/.vscode-oss/extensions/golang.go-0.39.0-universal
+2023-08-12 02:43:08.622 [info] Extracting extension completed. golang.go
+2023-08-12 02:43:08.627 [info] Extension installed successfully: golang.go
+2023-08-12 02:43:19.147 [info] Getting Manifest... octref.vetur
+2023-08-12 02:43:19.247 [info] Installing extension: octref.vetur
+2023-08-12 02:43:19.751 [info] Extension signature verification is not done: ms-python.python
+2023-08-12 02:43:21.290 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/ms-python.python-2023.12.0-universal: ms-python.python
+2023-08-12 02:43:21.301 [info] Renamed to /home/brian/.vscode-oss/extensions/ms-python.python-2023.12.0-universal
+2023-08-12 02:43:21.304 [info] Extracting extension completed. ms-python.python
+2023-08-12 02:43:21.310 [info] Extension installed successfully: ms-python.python
+2023-08-12 02:43:22.560 [info] Extension signature verification is not done: ritwickdey.liveserver
+2023-08-12 02:43:24.307 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/ritwickdey.liveserver-5.7.9-universal: ritwickdey.liveserver
+2023-08-12 02:43:24.329 [info] Renamed to /home/brian/.vscode-oss/extensions/ritwickdey.liveserver-5.7.9-universal
+2023-08-12 02:43:24.331 [info] Extracting extension completed. ritwickdey.liveserver
+2023-08-12 02:43:24.348 [info] Extension installed successfully: ritwickdey.liveserver
+2023-08-12 02:43:33.239 [info] Getting Manifest... vscodevim.vim
+2023-08-12 02:43:33.341 [info] Installing extension: vscodevim.vim
+2023-08-12 02:43:34.664 [info] Extension signature verification is not done: vscodevim.vim
+2023-08-12 02:43:34.697 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/vscodevim.vim-1.25.2-universal: vscodevim.vim
+2023-08-12 02:43:34.702 [info] Renamed to /home/brian/.vscode-oss/extensions/vscodevim.vim-1.25.2-universal
+2023-08-12 02:43:34.705 [info] Extracting extension completed. vscodevim.vim
+2023-08-12 02:43:34.711 [info] Extension installed successfully: vscodevim.vim
+2023-08-12 02:43:35.720 [info] Getting Manifest... svelte.svelte-vscode
+2023-08-12 02:43:35.814 [info] Installing extension: svelte.svelte-vscode
+2023-08-12 02:43:38.726 [info] Getting Manifest... vue.volar
+2023-08-12 02:43:38.830 [info] Installing extension: vue.volar
+2023-08-12 02:43:40.307 [info] Extension signature verification is not done: vue.volar
+2023-08-12 02:43:40.358 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/vue.volar-1.8.8-universal: vue.volar
+2023-08-12 02:43:40.361 [info] Renamed to /home/brian/.vscode-oss/extensions/vue.volar-1.8.8-universal
+2023-08-12 02:43:40.362 [info] Extracting extension completed. vue.volar
+2023-08-12 02:43:40.368 [info] Extension installed successfully: vue.volar
+2023-08-12 02:43:56.093 [info] Extension signature verification is not done: svelte.svelte-vscode
+2023-08-12 02:43:56.714 [info] Getting Manifest... timonwong.shellcheck
+2023-08-12 02:43:56.809 [info] Installing extension: timonwong.shellcheck
+2023-08-12 02:43:57.901 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/svelte.svelte-vscode-107.10.0-universal: svelte.svelte-vscode
+2023-08-12 02:43:57.917 [info] Renamed to /home/brian/.vscode-oss/extensions/svelte.svelte-vscode-107.10.0-universal
+2023-08-12 02:43:57.919 [info] Extracting extension completed. svelte.svelte-vscode
+2023-08-12 02:43:57.926 [info] Extension installed successfully: svelte.svelte-vscode
+2023-08-12 02:43:59.839 [info] Extension signature verification is not done: octref.vetur
+2023-08-12 02:44:01.673 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/octref.vetur-0.37.3-universal: octref.vetur
+2023-08-12 02:44:01.683 [info] Renamed to /home/brian/.vscode-oss/extensions/octref.vetur-0.37.3-universal
+2023-08-12 02:44:01.685 [info] Extracting extension completed. octref.vetur
+2023-08-12 02:44:01.692 [info] Extension installed successfully: octref.vetur
+2023-08-12 02:44:03.593 [info] Getting Manifest... ecmel.vscode-html-css
+2023-08-12 02:44:03.711 [info] Installing extension: ecmel.vscode-html-css
+2023-08-12 02:44:04.946 [info] Extension signature verification is not done: ecmel.vscode-html-css
+2023-08-12 02:44:04.958 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/ecmel.vscode-html-css-1.13.1-universal: ecmel.vscode-html-css
+2023-08-12 02:44:04.961 [info] Renamed to /home/brian/.vscode-oss/extensions/ecmel.vscode-html-css-1.13.1-universal
+2023-08-12 02:44:04.962 [info] Extracting extension completed. ecmel.vscode-html-css
+2023-08-12 02:44:04.967 [info] Extension installed successfully: ecmel.vscode-html-css
+2023-08-12 02:44:06.133 [info] Extension signature verification is not done: timonwong.shellcheck
+2023-08-12 02:44:06.269 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/timonwong.shellcheck-0.33.1-linux-x64: timonwong.shellcheck
+2023-08-12 02:44:06.276 [info] Renamed to /home/brian/.vscode-oss/extensions/timonwong.shellcheck-0.33.1-linux-x64
+2023-08-12 02:44:06.277 [info] Extracting extension completed. timonwong.shellcheck
+2023-08-12 02:44:06.283 [info] Extension installed successfully: timonwong.shellcheck
+2023-08-12 02:44:14.462 [info] Getting Manifest... yzhang.markdown-all-in-one
+2023-08-12 02:44:14.742 [info] Installing extension: yzhang.markdown-all-in-one
+2023-08-12 02:44:19.592 [info] Extension signature verification is not done: yzhang.markdown-all-in-one
+2023-08-12 02:44:19.634 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/yzhang.markdown-all-in-one-3.5.1-universal: yzhang.markdown-all-in-one
+2023-08-12 02:44:19.637 [info] Renamed to /home/brian/.vscode-oss/extensions/yzhang.markdown-all-in-one-3.5.1-universal
+2023-08-12 02:44:19.638 [info] Extracting extension completed. yzhang.markdown-all-in-one
+2023-08-12 02:44:19.643 [info] Extension installed successfully: yzhang.markdown-all-in-one
+2023-08-12 02:44:39.918 [info] Getting Manifest... tomi.xasnippets
+2023-08-12 02:44:40.209 [info] Installing extension: tomi.xasnippets
+2023-08-12 02:44:40.969 [info] Extension signature verification is not done: tomi.xasnippets
+2023-08-12 02:44:40.977 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/tomi.xasnippets-2.13.1-universal: tomi.xasnippets
+2023-08-12 02:44:40.979 [info] Renamed to /home/brian/.vscode-oss/extensions/tomi.xasnippets-2.13.1-universal
+2023-08-12 02:44:40.980 [info] Extracting extension completed. tomi.xasnippets
+2023-08-12 02:44:40.987 [info] Extension installed successfully: tomi.xasnippets

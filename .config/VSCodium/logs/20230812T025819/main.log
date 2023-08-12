@@ -1,0 +1,7 @@
+2023-08-12 02:58:19.849 [info] update#setState disabled
+2023-08-12 02:58:19.850 [info] update#ctor - updates are disabled as there is no update URL
+2023-08-12 03:12:47.220 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 28193]: crashed with code 15 and reason 'killed'
+2023-08-12 03:12:47.260 [info] Extension host with pid 28180 exited with code: 0, signal: unknown.
+2023-08-12 03:17:50.723 [error] [UtilityProcessWorker]: terminated unexpectedly with code 15, signal: unknown
+2023-08-12 03:17:50.723 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 32676]: crashed with code 15 and reason 'killed'
+2023-08-12 03:17:50.732 [info] Extension host with pid 32666 exited with code: 0, signal: unknown.

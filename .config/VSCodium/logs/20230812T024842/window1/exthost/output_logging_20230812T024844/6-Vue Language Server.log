@@ -1,0 +1,14 @@
+Vetur initialized
+[INFO ] Loaded bundled typescript@4.9.5.
+[INFO ] Loaded bundled prettier.
+[INFO ] Loaded bundled @starptech/prettyhtml.
+[INFO ] Loaded bundled prettier-eslint.
+[INFO ] Loaded bundled prettier-tslint.
+[INFO ] Loaded bundled stylus-supremacy.
+[INFO ] Loaded bundled @prettier/plugin-pug.
+DeprecationWarning: 'createIdentifier' has been deprecated since v4.0.0. Use the appropriate method on 'ts.factory' or the 'factory' supplied by your transformation context instead.
+DeprecationWarning: 'createImportClause' has been deprecated since v4.0.0. Use the appropriate method on 'ts.factory' or the 'factory' supplied by your transformation context instead.
+DeprecationWarning: 'createLiteral' has been deprecated since v4.0.0. Use `factory.createStringLiteral`, `factory.createStringLiteralFromNode`, `factory.createNumericLiteral`, `factory.createBigIntLiteral`, `factory.createTrue`, `factory.createFalse`, or the factory supplied by your transformation context instead.
+DeprecationWarning: 'createImportDeclaration' has been deprecated since v4.8.0. Decorators are no longer supported for this function. Callers should switch to an overload that does not accept a 'decorators' parameter.
+DeprecationWarning: 'createCallExpression' has been deprecated since v4.0.0. Use the appropriate method on 'ts.factory' or the 'factory' supplied by your transformation context instead.
+DeprecationWarning: 'createObjectLiteralExpression' has been deprecated since v4.0.0. Use the appropriate method on 'ts.factory' or the 'factory' supplied by your transformation context instead.

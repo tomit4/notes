@@ -1,0 +1,25 @@
+2023-08-12 03:47:47.336 [info] Log level: Info
+2023-08-12 03:47:47.336 [info] Validating found git in: "git"
+2023-08-12 03:47:47.336 [info] Using git "2.41.0" from "git"
+2023-08-12 03:47:47.336 [info] > git rev-parse --show-toplevel [8ms]
+2023-08-12 03:47:47.336 [info] > git rev-parse --git-dir --git-common-dir [10ms]
+2023-08-12 03:47:47.336 [info] Open repository: /home/brian/Documents/Code/siimee
+2023-08-12 03:47:47.336 [info] > git config --get commit.template [9ms]
+2023-08-12 03:47:47.336 [info] > git rev-parse --show-toplevel [6ms]
+2023-08-12 03:47:47.488 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [147ms]
+2023-08-12 03:47:47.528 [info] > git status -z -uall [33ms]
+2023-08-12 03:47:47.556 [info] > git config --get commit.template [3ms]
+2023-08-12 03:47:47.557 [info] > git rev-parse --show-toplevel [16ms]
+2023-08-12 03:47:47.566 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [2ms]
+2023-08-12 03:47:47.586 [info] > git status -z -uall [15ms]
+2023-08-12 03:47:47.587 [info] > git rev-parse --show-toplevel [4ms]
+2023-08-12 03:47:47.620 [info] > git rev-parse --show-toplevel [4ms]
+2023-08-12 03:47:47.643 [info] > git rev-parse --show-toplevel [1ms]
+2023-08-12 03:47:47.659 [info] > git rev-parse --show-toplevel [8ms]
+2023-08-12 03:47:47.748 [info] > git check-ignore -v -z --stdin [1ms]
+2023-08-12 03:47:48.015 [info] > git show --textconv :frontend/src/App.vue [6ms]
+2023-08-12 03:47:48.033 [info] > git show --textconv :frontend/src/views/VerifyView.vue [9ms]
+2023-08-12 03:47:48.034 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/App.vue [19ms]
+2023-08-12 03:47:48.046 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/views/VerifyView.vue [13ms]
+2023-08-12 03:47:48.057 [info] > git cat-file -s f79b0f93b8d33931be0d75e854377083b4f20cc1 [4ms]
+2023-08-12 03:47:48.058 [info] > git cat-file -s acbcd9a225034bf10f459ae7128dd7a0a9fbb09a [16ms]

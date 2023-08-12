@@ -1,0 +1,28 @@
+2023-08-12 03:24:57.245 [info] Log level: Info
+2023-08-12 03:24:57.245 [info] Validating found git in: "git"
+2023-08-12 03:24:57.245 [info] Using git "2.41.0" from "git"
+2023-08-12 03:24:57.245 [info] > git rev-parse --show-toplevel [13ms]
+2023-08-12 03:24:57.245 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2023-08-12 03:24:57.245 [info] Open repository: /home/brian/Documents/Code/siimee
+2023-08-12 03:24:57.245 [info] > git config --get commit.template [12ms]
+2023-08-12 03:24:57.246 [info] > git rev-parse --show-toplevel [6ms]
+2023-08-12 03:24:57.516 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [170ms]
+2023-08-12 03:24:57.564 [info] > git status -z -uall [38ms]
+2023-08-12 03:24:57.595 [info] > git config --get commit.template [9ms]
+2023-08-12 03:24:57.595 [info] > git rev-parse --show-toplevel [17ms]
+2023-08-12 03:24:57.622 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/brian_dev_incorp_login refs/remotes/brian_dev_incorp_login [20ms]
+2023-08-12 03:24:57.630 [info] > git rev-parse --show-toplevel [9ms]
+2023-08-12 03:24:57.632 [info] > git status -z -uall [4ms]
+2023-08-12 03:24:57.691 [info] > git rev-parse --show-toplevel [29ms]
+2023-08-12 03:24:57.711 [info] > git rev-parse --show-toplevel [2ms]
+2023-08-12 03:24:57.770 [info] > git check-ignore -v -z --stdin [1ms]
+2023-08-12 03:24:57.820 [info] > git show --textconv :frontend/src/App.vue [8ms]
+2023-08-12 03:24:57.821 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/App.vue [2ms]
+2023-08-12 03:24:57.829 [info] > git cat-file -s acbcd9a225034bf10f459ae7128dd7a0a9fbb09a [1ms]
+2023-08-12 03:25:18.978 [info] > git show --textconv :frontend/src/views/OnboardingView.vue [6ms]
+2023-08-12 03:25:18.979 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/views/OnboardingView.vue [1ms]
+2023-08-12 03:25:18.985 [info] > git cat-file -s cd25168fb2365557e7526707eb65874e1b053151 [1ms]
+2023-08-12 03:25:19.334 [info] > git check-ignore -v -z --stdin [2ms]
+2023-08-12 03:25:53.801 [info] > git show --textconv :frontend/src/views/VerifyView.vue [6ms]
+2023-08-12 03:25:53.802 [info] > git ls-files --stage -- /home/brian/Documents/Code/siimee/frontend/src/views/VerifyView.vue [1ms]
+2023-08-12 03:25:53.809 [info] > git cat-file -s f79b0f93b8d33931be0d75e854377083b4f20cc1 [1ms]

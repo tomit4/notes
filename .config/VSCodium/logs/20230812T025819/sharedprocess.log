@@ -1,0 +1,99 @@
+2023-08-12 02:58:21.141 [info] Deleted uninstalled extension from disk ms-azuretools.vscode-docker /home/brian/.vscode-oss/extensions/ms-azuretools.vscode-docker-1.25.2-universal
+2023-08-12 02:58:21.142 [info] Deleted uninstalled extension from disk octref.vetur /home/brian/.vscode-oss/extensions/octref.vetur-0.37.3-universal
+2023-08-12 03:01:30.406 [info] Getting Manifest... asvetliakov.vscode-neovim
+2023-08-12 03:01:30.705 [info] Installing extension: asvetliakov.vscode-neovim
+2023-08-12 03:01:39.096 [info] Extension signature verification is not done: asvetliakov.vscode-neovim
+2023-08-12 03:01:39.160 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.4.1-universal: asvetliakov.vscode-neovim
+2023-08-12 03:01:39.163 [info] Renamed to /home/brian/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.4.1-universal
+2023-08-12 03:01:39.164 [info] Extracting extension completed. asvetliakov.vscode-neovim
+2023-08-12 03:01:39.175 [info] Extension installed successfully: asvetliakov.vscode-neovim
+2023-08-12 03:01:49.929 [info] Uninstalling extension from the profile: asvetliakov.vscode-neovim@0.4.1 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 03:01:49.964 [info] Marked extension as uninstalled asvetliakov.vscode-neovim-0.4.1-universal
+2023-08-12 03:01:50.253 [info] Successfully uninstalled extension from the profile asvetliakov.vscode-neovim@0.4.1 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 03:02:39.786 [info] Getting Manifest... sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:39.894 [info] Installing extension: sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:40.100 [info] Getting Manifest... vivaxy.vscode-conventional-commits
+2023-08-12 03:02:40.388 [info] Getting Manifest... mhutchie.git-graph
+2023-08-12 03:02:40.723 [info] Getting Manifest... donjayamanne.githistory
+2023-08-12 03:02:41.003 [info] Getting Manifest... codezombiech.gitignore
+2023-08-12 03:02:41.282 [info] Getting Manifest... adam-bender.commit-message-editor
+2023-08-12 03:02:41.958 [info] Getting Manifest... eamodio.gitlens
+2023-08-12 03:02:42.944 [info] Getting Manifest... waderyan.gitblame
+2023-08-12 03:02:43.151 [info] Getting Manifest... github.github-vscode-theme
+2023-08-12 03:02:43.482 [info] Installing extension: vivaxy.vscode-conventional-commits sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.482 [info] Installing extension: mhutchie.git-graph sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.483 [info] Installing extension: donjayamanne.githistory sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.483 [info] Installing extension: codezombiech.gitignore sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.483 [info] Installing extension: adam-bender.commit-message-editor sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.483 [info] Installing extension: eamodio.gitlens sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.484 [info] Installing extension: waderyan.gitblame sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:43.484 [info] Installing extension: github.github-vscode-theme sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:45.149 [info] Extension signature verification is not done: vivaxy.vscode-conventional-commits
+2023-08-12 03:02:45.167 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/vivaxy.vscode-conventional-commits-1.25.0-universal: vivaxy.vscode-conventional-commits
+2023-08-12 03:02:45.169 [info] Renamed to /home/brian/.vscode-oss/extensions/vivaxy.vscode-conventional-commits-1.25.0-universal
+2023-08-12 03:02:45.171 [info] Extracting extension completed. vivaxy.vscode-conventional-commits
+2023-08-12 03:02:45.399 [info] Extension signature verification is not done: github.github-vscode-theme
+2023-08-12 03:02:45.401 [info] Extension signature verification is not done: codezombiech.gitignore
+2023-08-12 03:02:45.416 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/codezombiech.gitignore-0.9.0-universal: codezombiech.gitignore
+2023-08-12 03:02:45.419 [info] Renamed to /home/brian/.vscode-oss/extensions/codezombiech.gitignore-0.9.0-universal
+2023-08-12 03:02:45.420 [info] Extracting extension completed. codezombiech.gitignore
+2023-08-12 03:02:45.429 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/github.github-vscode-theme-6.3.4-universal: github.github-vscode-theme
+2023-08-12 03:02:45.432 [info] Renamed to /home/brian/.vscode-oss/extensions/github.github-vscode-theme-6.3.4-universal
+2023-08-12 03:02:45.433 [info] Extracting extension completed. github.github-vscode-theme
+2023-08-12 03:02:45.695 [info] Extension signature verification is not done: waderyan.gitblame
+2023-08-12 03:02:45.703 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/waderyan.gitblame-10.4.0-universal: waderyan.gitblame
+2023-08-12 03:02:45.705 [info] Renamed to /home/brian/.vscode-oss/extensions/waderyan.gitblame-10.4.0-universal
+2023-08-12 03:02:45.706 [info] Extracting extension completed. waderyan.gitblame
+2023-08-12 03:02:47.623 [info] Extension signature verification is not done: adam-bender.commit-message-editor
+2023-08-12 03:02:47.639 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/adam-bender.commit-message-editor-0.25.0-universal: adam-bender.commit-message-editor
+2023-08-12 03:02:47.641 [info] Renamed to /home/brian/.vscode-oss/extensions/adam-bender.commit-message-editor-0.25.0-universal
+2023-08-12 03:02:47.642 [info] Extracting extension completed. adam-bender.commit-message-editor
+2023-08-12 03:02:47.868 [info] Extension signature verification is not done: mhutchie.git-graph
+2023-08-12 03:02:47.917 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/mhutchie.git-graph-1.30.0-universal: mhutchie.git-graph
+2023-08-12 03:02:47.919 [info] Renamed to /home/brian/.vscode-oss/extensions/mhutchie.git-graph-1.30.0-universal
+2023-08-12 03:02:47.921 [info] Extracting extension completed. mhutchie.git-graph
+2023-08-12 03:02:49.137 [info] Extension signature verification is not done: eamodio.gitlens
+2023-08-12 03:02:49.417 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/eamodio.gitlens-14.2.1-universal: eamodio.gitlens
+2023-08-12 03:02:49.429 [info] Renamed to /home/brian/.vscode-oss/extensions/eamodio.gitlens-14.2.1-universal
+2023-08-12 03:02:49.433 [info] Extracting extension completed. eamodio.gitlens
+2023-08-12 03:02:51.614 [info] Extension signature verification is not done: donjayamanne.githistory
+2023-08-12 03:02:51.657 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/donjayamanne.githistory-0.6.20-universal: donjayamanne.githistory
+2023-08-12 03:02:51.659 [info] Renamed to /home/brian/.vscode-oss/extensions/donjayamanne.githistory-0.6.20-universal
+2023-08-12 03:02:51.661 [info] Extracting extension completed. donjayamanne.githistory
+2023-08-12 03:02:54.584 [info] Extension signature verification is not done: sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:54.593 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/sugatoray.vscode-git-extension-pack-1.1.1-universal: sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:54.596 [info] Renamed to /home/brian/.vscode-oss/extensions/sugatoray.vscode-git-extension-pack-1.1.1-universal
+2023-08-12 03:02:54.601 [info] Extracting extension completed. sugatoray.vscode-git-extension-pack
+2023-08-12 03:02:54.615 [info] Extension installed successfully: vivaxy.vscode-conventional-commits
+2023-08-12 03:02:54.615 [info] Extension installed successfully: codezombiech.gitignore
+2023-08-12 03:02:54.615 [info] Extension installed successfully: github.github-vscode-theme
+2023-08-12 03:02:54.615 [info] Extension installed successfully: waderyan.gitblame
+2023-08-12 03:02:54.615 [info] Extension installed successfully: adam-bender.commit-message-editor
+2023-08-12 03:02:54.616 [info] Extension installed successfully: mhutchie.git-graph
+2023-08-12 03:02:54.616 [info] Extension installed successfully: eamodio.gitlens
+2023-08-12 03:02:54.616 [info] Extension installed successfully: donjayamanne.githistory
+2023-08-12 03:02:54.616 [info] Extension installed successfully: sugatoray.vscode-git-extension-pack
+2023-08-12 03:11:47.269 [info] Getting Manifest... arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:47.538 [info] Installing extension: arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:49.107 [info] Extension signature verification is not done: arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:49.119 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/arcticicestudio.nord-visual-studio-code-0.19.0-universal: arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:49.121 [info] Renamed to /home/brian/.vscode-oss/extensions/arcticicestudio.nord-visual-studio-code-0.19.0-universal
+2023-08-12 03:11:49.122 [info] Extracting extension completed. arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:49.128 [info] Extension installed successfully: arcticicestudio.nord-visual-studio-code
+2023-08-12 03:11:56.360 [info] Getting Manifest... asapdotid.manjaro-dark
+2023-08-12 03:11:56.638 [info] Installing extension: asapdotid.manjaro-dark
+2023-08-12 03:11:58.159 [info] Extension signature verification is not done: asapdotid.manjaro-dark
+2023-08-12 03:11:58.170 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/asapdotid.manjaro-dark-0.0.10-universal: asapdotid.manjaro-dark
+2023-08-12 03:11:58.172 [info] Renamed to /home/brian/.vscode-oss/extensions/asapdotid.manjaro-dark-0.0.10-universal
+2023-08-12 03:11:58.173 [info] Extracting extension completed. asapdotid.manjaro-dark
+2023-08-12 03:11:58.179 [info] Extension installed successfully: asapdotid.manjaro-dark
+2023-08-12 03:12:13.803 [info] Getting Manifest... s-nlf-fh.glassit
+2023-08-12 03:12:13.895 [info] Installing extension: s-nlf-fh.glassit
+2023-08-12 03:12:15.172 [info] Extension signature verification is not done: s-nlf-fh.glassit
+2023-08-12 03:12:15.229 [info] Extracted extension to file:///home/brian/.vscode-oss/extensions/s-nlf-fh.glassit-0.2.3-universal: s-nlf-fh.glassit
+2023-08-12 03:12:15.231 [info] Renamed to /home/brian/.vscode-oss/extensions/s-nlf-fh.glassit-0.2.3-universal
+2023-08-12 03:12:15.232 [info] Extracting extension completed. s-nlf-fh.glassit
+2023-08-12 03:12:15.242 [info] Extension installed successfully: s-nlf-fh.glassit
+2023-08-12 03:13:19.850 [info] Uninstalling extension from the profile: asapdotid.manjaro-dark@0.0.10 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
+2023-08-12 03:13:19.892 [info] Marked extension as uninstalled asapdotid.manjaro-dark-0.0.10-universal
+2023-08-12 03:13:20.184 [info] Successfully uninstalled extension from the profile asapdotid.manjaro-dark@0.0.10 vscode-userdata:/home/brian/.vscode-oss/extensions/extensions.json
