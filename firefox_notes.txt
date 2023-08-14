@@ -156,3 +156,5 @@ javascript.options.asmjs false
 In about:preferences#privacy:
 
 Enable secure DNS using Default protection.
+Use custom secure DNS, under Max Protection, input mullvad's DNS server:
+https://base.dns.mullvad.net/dns-query

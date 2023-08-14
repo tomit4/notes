@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Wizard Zines]]></title>
+  <link href="https://wizardzines.com/index.xml" rel="self"/>
+  <link href="https://wizardzines.com"/>
+  <updated>2018-09-27T00:00:00+00:00</updated>
+  <id>http://wizardzines.com</id>
+  <author>
+    <name><![CDATA[]]></name>
+  </author>
+  <generator uri="http://gohugo.io/">Hugo</generator>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[32 bits is small]]></title>
+    <link href="https://wizardzines.com/comics/32-bit-small/"/>
+    <updated>2023-06-05T16:07:54+00:00</updated>
+    <id>https://wizardzines.com/comics/32-bit-small/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/32-bit-small.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[bitwise operations]]></title>
+    <link href="https://wizardzines.com/comics/bitwise-operations/"/>
+    <updated>2023-04-18T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/bitwise-operations/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/bitwise-operations.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[the DNS hierarchy]]></title>
+    <link href="https://wizardzines.com/comics/dns-hierarchy/"/>
+    <updated>2022-03-22T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/dns-hierarchy/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/dns-hierarchy.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[negative caching]]></title>
+    <link href="https://wizardzines.com/comics/negative-caching/"/>
+    <updated>2022-03-01T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/negative-caching/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/negative-caching.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[resolvers vs authoritative nameservers]]></title>
+    <link href="https://wizardzines.com/comics/resolver-vs-authoritative/"/>
+    <updated>2022-02-15T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/resolver-vs-authoritative/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/resolver-vs-authoritative.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[DNS cache levels]]></title>
+    <link href="https://wizardzines.com/comics/caching-levels/"/>
+    <updated>2022-02-09T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/caching-levels/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/caching-levels.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[the root nameservers]]></title>
+    <link href="https://wizardzines.com/comics/root-nameservers/"/>
+    <updated>2022-02-08T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/root-nameservers/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/root-nameservers.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[things that can break your DNS]]></title>
+    <link href="https://wizardzines.com/comics/how-dns-breaks/"/>
+    <updated>2022-02-07T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/how-dns-breaks/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/how-dns-breaks.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[a tiny DNS resolver]]></title>
+    <link href="https://wizardzines.com/comics/tiny-dns-resolver/"/>
+    <updated>2022-02-05T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/tiny-dns-resolver/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/tiny-dns-resolver.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[SPF & DKIM records]]></title>
+    <link href="https://wizardzines.com/comics/spf-dkim/"/>
+    <updated>2022-02-04T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/spf-dkim/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/spf-dkim.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title type="html"><![CDATA[DNS is distributed]]></title>
+    <link href="https://wizardzines.com/comics/dns-distributed/"/>
+    <updated>2022-02-02T00:00:00+00:00</updated>
+    <id>https://wizardzines.com/comics/dns-distributed/</id>
+    <content type="html"><![CDATA[
+            <img src='https://wizardzines.com/images/uploads/dns-distributed.png'>
+            
+        ]]></content>
+  </entry>
+  
+  
+  
+</feed>
