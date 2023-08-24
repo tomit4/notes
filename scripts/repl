@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Search and replace instances of first arg within current directory
+# Ignores node_modules and dot directories
+
+tobereplaced=$1
+replacestring=$2
+
+# Ignore dot directories
+find . \( ! -regex '.*/\..*' \) -type f -not -path "./node_modules/*" -print0 | xargs -0 sed -i "s/${tobereplaced}/${replacestring}/gI"
