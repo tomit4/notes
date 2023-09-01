@@ -4,6 +4,6 @@
 cat <<EOM
 try {
 
-catch (err) {
+} catch (err)
 
 EOM
