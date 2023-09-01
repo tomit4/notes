@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# use in conjunction with espanso to automatically print a javascript
+# try/catch statement
+cat <<EOM
+try {
+
+catch (err) {
+
+EOM

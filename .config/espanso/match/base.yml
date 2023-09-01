@@ -108,7 +108,12 @@ matches:
     replace: "() => {}"
 
   - trigger: ";try"
-    replace: "try {} catch(error) {}"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/trycatch ; echo ''"
 
   - trigger: ";def"
     replace: "def():"
