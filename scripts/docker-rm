@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+container=$1
+image=$2
+docker container stop "$container" && docker container rm "$container" && docker image rm "$image"
