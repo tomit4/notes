@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Matthew Manela</title>
+	<atom:link href="https://matthewmanela.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://matthewmanela.com/</link>
+	<description>Building high quality software and teams</description>
+	<lastBuildDate>Mon, 27 Feb 2023 17:11:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3.1</generator>
+	<item>
+		<title>Solving the hard problem of opinions and feedback</title>
+		<link>https://matthewmanela.com/blog/solving-the-hard-problem-of-opinions-and-feedback/</link>
+		
+		<dc:creator><![CDATA[Matthew Manela]]></dc:creator>
+		<pubDate>Mon, 27 Feb 2023 17:00:04 +0000</pubDate>
+				<category><![CDATA[Engineering Management]]></category>
+		<category><![CDATA[Feedback]]></category>
+		<category><![CDATA[Software Teams]]></category>
+		<guid isPermaLink="false">https://matthewmanela.com/?p=2182</guid>
+
+					<description><![CDATA[<p>A software team’s ability to communicate openly and honestly is critical to its productivity and growth. Communication can create a bottleneck if you have not fostered an environment where people feel comfortable sharing. This is an area that I have explored with my teams for a long time. It started when I learned about&#160;psychological safety.&#160;Building <a class="read-more" href="https://matthewmanela.com/blog/solving-the-hard-problem-of-opinions-and-feedback/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/solving-the-hard-problem-of-opinions-and-feedback/">Solving the hard problem of opinions and feedback</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>A software team’s ability to communicate openly and honestly is critical to its productivity and growth. Communication can create a bottleneck if you have not fostered an environment where people feel comfortable sharing. This is an area that I have explored with my teams for a long time. It started when I learned about&nbsp;<a href="https://matthewmanela.com/blog/psychological-safety/" target="_blank" rel="noreferrer noopener">psychological safety</a>.&nbsp;Building an environment where people can speak up and share without fear is a requirement for creating a team environment where collaboration leads to better results.</p>
+
+
+
+<p>Over the last year, I have begun thinking more about the receiving end of that communication. What is needed to ensure people can receive the communication, understand it, internalize it, disagree with it (if needed) and build on it? Having a safe environment helps but one additional step is required; the receiver must believe and trust where the speaker is coming from. This is especially true when providing opinions and giving feedback.</p>
+
+
+
+<h2 class="wp-block-heading">Strong Opinions</h2>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280.png"><img decoding="async" fetchpriority="high" width="1024" height="542" src="https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280-1024x542.png" alt="" class="wp-image-2248" srcset="https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280-1024x542.png 1024w, https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280-300x159.png 300w, https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280-768x407.png 768w, https://matthewmanela.com/wp-content/uploads/2023/02/im-right-1458410_1280.png 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+
+
+<p>A high functioning team is a hotbed of ideas, discussion, iteration, disagreement and eventually great decisions. Everyone on the team must know their ideas are worthwhile and feel comfortable confidently sharing them. This is where the expression “strong opinions held weakly” comes into play. The concept is to propose your idea with confidence (since it helps people to seriously consider it) but be readily willing to give up and go with someone else’s idea.</p>
+
+
+
+<p>This expression has the right intent but misses the&nbsp;<em>hard</em>&nbsp;problem. Saying that you hold an opinion weakly and are willing to change is a great first step, but how do you ensure everyone on your team believes it? I have seen strong confident engineers extol the virtues of their idea and, in the same breath, express their willingness to move from that idea. But reading the room it was clear that no one believed them, and thus the debate ended with no dissent.</p>
+
+
+
+<p>Strong opinions are important, but the team needs to trust that you are not too proud to be wrong. In the book <a href="https://adamgrant.net/book/think-again/" target="_blank" rel="noreferrer noopener">Think Again</a>, the author Adam Grant dives into this idea and presents a phrase which more adequately captures the hard problem. Instead of strong opinions held weakly, you must demonstrate&nbsp;<strong>confident humility.&nbsp;</strong>Present your ideas with confidence to ensure they are taken seriously, but make sure you have established humility with your team. This is not simply done by telling your team “I am so humble,” since that has the opposite effect. Humility is a character trait that you must exhibit over time by graciously accepting being wrong and praising dissent of your ideas. Your team must learn you are not just saying that you are fine to be wrong, but that you really mean it.</p>
+
+
+
+<p>This takes time and effort to achieve. In any team discussion, be careful how forcefully you push your ideas until you have established the trust of your humility. When there is dissent, make sure to acknowledge it. Dissent is the lifeblood of good ideas; it should be rewarded as much as the eventually chosen idea.</p>
+
+
+
+<h2 class="wp-block-heading">Direct Feedback</h2>
+
+
+
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile half-mobile" style="grid-template-columns:auto 17%"><div class="wp-block-media-text__content">
+<p>As a member of any team, and especially as an engineering manager, giving direct feedback is one of the best ways to ensure growth. Providing guidance on which behaviors to reinforce and which ones to redirect is how we learn to improve and increase impact. But for most people this is hard to do. Telling someone directly they need to change something can lead to a lot of feelings and emotions that cause enough discomfort that people avoid it.</p>
+</div><figure class="wp-block-media-text__media"><img decoding="async" width="563" height="1024" src="https://matthewmanela.com/wp-content/uploads/2023/02/sign-2792576_1280-563x1024.png" alt="" class="wp-image-2251 size-large" srcset="https://matthewmanela.com/wp-content/uploads/2023/02/sign-2792576_1280-563x1024.png 563w, https://matthewmanela.com/wp-content/uploads/2023/02/sign-2792576_1280-165x300.png 165w, https://matthewmanela.com/wp-content/uploads/2023/02/sign-2792576_1280.png 704w" sizes="(max-width: 563px) 100vw, 563px" /></figure></div>
+
+
+
+<p>This is an area where I have had to grow as a manager. I do not like making people upset (I have a people-pleasing tendency). I have read plenty of articles over the years that encouraged accepting uncomfortable emotions and being as direct as possible. Compared to the alternative of not giving any feedback, this is good advice. Concretely discussing areas to develop or change is key to helping people grow; without that how will they know what to focus on?</p>
+
+
+
+<p>In the same way that “strong opinions held weakly” avoids the&nbsp;hard&nbsp;problem, being as direct as possible with feedback does too. It is a great first step, but communicating feedback is only half the battle. Feedback is only effective if the person receives it, understands it and agrees with it. You can tell someone what you believe is the truth, but if it does not match their reality or perception, you need to align and find a place to agree. Someone needs to truly trust the person giving them feedback to consider shifting their perception of reality, even a little. Sometimes this must happen for someone to grow. So how do you do it?</p>
+
+
+
+<p>The likelihood of someone accepting direct feedback that challenges them is proportional to the level of trust in you and your motivations. They must believe strongly that you care about them as a person and want them to grow. Without this, <a href="https://idiomatically.net/idioms/you-can-lead-a-horse-to-water-but-you-can-t-make-it-drink" target="_blank" rel="noreferrer noopener">you will be leading a horse to water and trying to make it drink</a>. However, just like declaring your humility, you can’t just tell someone they should trust you.</p>
+
+
+
+<p>Kim Scott explores this concept in her book,&nbsp;<a href="https://www.radicalcandor.com/the-book/" target="_blank" rel="noreferrer noopener">Radical Candor</a>. She defines the eponymous radical candor as feedback given to someone who trusts that you truly care about them and their growth. If you have not established this trust, she calls that obnoxious aggression. These are not binary states, the amount someone believes you care about them is a spectrum. With time you can build and increase this trust which means they will be more apt to accept more direct and impactful feedback.</p>
+
+
+
+<p>This trust is built through your actions. Asking questions and listening to learn about the person and their motivations are good first steps. Start by giving small feedback and build the trust over time. Fostering this relationship ensures the most impactful feedback will be heard and acted on.</p>
+
+
+
+<h2 class="wp-block-heading">Hard Problem, Big Results</h2>
+
+
+
+<p>Building a collaborative environment of open debate and direct feedback requires solving the hard problem of establishing trust. Trust in someone’s humility and care is built bit by bit. There is not a quick fix here; it requires diligent work, lots of inquiry, even more listening and time. Putting in this effort will lead to a stronger team that has a higher&nbsp;<a href="https://en.wikipedia.org/wiki/Emotional_intelligence" target="_blank" rel="noreferrer noopener">emotional intelligence</a>&nbsp;and better results.</p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/solving-the-hard-problem-of-opinions-and-feedback/">Solving the hard problem of opinions and feedback</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A culture of experimentation</title>
+		<link>https://matthewmanela.com/blog/a-culture-of-experimentation/</link>
+		
+		<dc:creator><![CDATA[Matthew Manela]]></dc:creator>
+		<pubDate>Sun, 19 Feb 2023 15:46:18 +0000</pubDate>
+				<category><![CDATA[Engineering Management]]></category>
+		<category><![CDATA[Software Teams]]></category>
+		<category><![CDATA[culture]]></category>
+		<category><![CDATA[experimentation]]></category>
+		<category><![CDATA[metallurgy]]></category>
+		<category><![CDATA[process]]></category>
+		<guid isPermaLink="false">https://matthewmanela.com/?p=2074</guid>
+
+					<description><![CDATA[<p>In metal working there is a process called annealing where cycles of heating and cooling are used to modify the chemical structure of the metal to achieve desired properties. This process was the inspiration for a type of software algorithm called simulated annealing. Simulated annealing is a probabilistic technique for finding a global optimum to <a class="read-more" href="https://matthewmanela.com/blog/a-culture-of-experimentation/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/a-culture-of-experimentation/">A culture of experimentation</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>In metal working there is a process called <a href="https://en.wikipedia.org/wiki/Annealing_(materials_science)">annealing</a> where cycles of heating and cooling are used to modify the chemical structure of the metal to achieve desired properties. This process was the inspiration for a type of software algorithm called <a href="https://en.wikipedia.org/wiki/Simulated_annealing">simulated annealing</a>. </p>
+
+
+
+<p>Simulated annealing is a probabilistic technique for finding a global optimum to a function.  The idea is if you are trying to find a maximum value, a natural way to proceed is to follow a gradient to higher values. In the chart below, imagine you are at the peak at x=3.3 (blue dot). If you look left values get lower, if you look right values get lower, so things are great so you can stop searching, hurray!! </p>
+
+
+
+<p>However, if you were able to see far enough right you would see a much higher peak (at around x=7.2)! </p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><a href="https://matthewmanela.com/wp-content/uploads/2022/11/image-1.png"><img decoding="async" src="https://matthewmanela.com/wp-content/uploads/2022/11/image-1.png" alt="" class="wp-image-2087" width="629" height="228" srcset="https://matthewmanela.com/wp-content/uploads/2022/11/image-1.png 629w, https://matthewmanela.com/wp-content/uploads/2022/11/image-1-300x109.png 300w" sizes="(max-width: 629px) 100vw, 629px" /></a></figure>
+
+
+
+<p>The simulated annealing algorithm injects randomness by making the search jump random distances to the left or right to force it out of a local optimum. Initially, these are large jumps but over time they get smaller.  The key insight is that early in the search it is unlikely you are anywhere near the global optimum so big jumps are needed to see if it can find a taller peak. But overtime smaller jumps are better since it likely has found one of the best peaks already and does not want to jump away from it.</p>
+
+
+
+<h2 class="wp-block-heading">Software teams and local optimums</h2>
+
+
+
+<p>What does this exploration of annealing have to do with running a software team? The connection is that a software team may be stuck in a local optimum. </p>
+
+
+
+<p>A software team is a combination of people, process, and culture. Most teams eventually find a set of processes and ceremonies that work well enough. This includes the routine meetings, the project management methodology, and customs the team follows. Finding stability is great since it lets the team focus on the work. But it is important to periodically question these processes (akin to a probabilistic shift like in simulated annealing). </p>
+
+
+
+<p> </p>
+
+
+
+<h2 class="wp-block-heading">If it ain&#8217;t broke, <s>don&#8217;t fix it</s> could it be better?</h2>
+
+
+
+<p>Why change if your team is working well? Why not just let things continue to operate smoothly? </p>
+
+
+
+<p>I&#8217;ve had this feeling many times. My team is operating well, we are getting stuff done and things are fine. But are we growing? It is difficult to grow doing the same thing you have always done. Even if we are working well, is there a way we could be even better?  </p>
+
+
+
+<p>Therefore, it is useful to routinely try to find a way to spur a shift or jump, try something new, experiment with a new process or a new way of working. These do not have to be monumental jumps. If your team is operating efficiently, look to find smallish shifts to how you work. If that goes well, repeat and do it again. You may end up far from where you started. However, if there is an area your team is struggling in, larger shifts may be useful. As things improve, decrease the size of changes (but don&#8217;t stop). </p>
+
+
+
+<p>I have been through this process many times, both in the large jumps and the small ones. Years ago, my team was overall struggling. We had a ton of knowledge silos where multiple people on the team were the only ones who could work in certain areas. If they were out sick or busy and that area needed work, we ground to a halt. Our quality was low and team cohesiveness was poor.  This was time for a big shift. We had a team discussion and proposed a 3 week &#8220;experiment&#8221; to switch our methodology which included adopting pair programming. After the 3 weeks we held a retrospective meeting to discuss the results.  We reviewed what was working and what wasn&#8217;t and continued this process for the next few months, making increasingly smaller jumps until the team landed on a process that was productive and sustainable. </p>
+
+
+
+<p>At other times when the team is operating well, we still routinely look for small jumps, to see if we can find incremental improvement: changing how we handle bugs and live site work, changing documentation strategies, or changing meeting cadence and ownership.</p>
+
+
+
+<p>It may be in some areas you are efficient and productive, and those areas warrant smaller jumps but in other areas you may need larger jumps. </p>
+
+
+
+<p>The size of the jumps are dependent on the teams&#8217; efficiency and productivity in the area being considered for change. </p>
+
+
+
+<h2 class="wp-block-heading">Culture of experimentation</h2>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<div class="wp-block-columns is-layout-flex wp-container-3 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:75%">
+<p>The easiest way to implement small or large shifts on your team is by building a culture of experimentation. No change should be thrown down as an edict. &#8220;Thou shalt work this way now&#8221; does not work. The manager of a team does not own its process and culture, the team collectively owns it, and the team must collectively decide to try a change. </p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:25%"><div class="wp-block-image is-style-default">
+<figure class="aligncenter size-full is-resized"><a href="https://matthewmanela.com/wp-content/uploads/2023/02/beakers2.webp"><img decoding="async" loading="lazy" src="https://matthewmanela.com/wp-content/uploads/2023/02/beakers2.webp" alt="" class="wp-image-2160" width="559" height="640" srcset="https://matthewmanela.com/wp-content/uploads/2023/02/beakers2.webp 559w, https://matthewmanela.com/wp-content/uploads/2023/02/beakers2-262x300.webp 262w" sizes="(max-width: 559px) 100vw, 559px" /></a></figure></div></div>
+</div>
+
+
+
+<p>Some larger changes may take more than 3 weeks to bear fruit, but after trying something for a couple of weeks, people will often have a greater appetite for iterating further on it. If people hate it, then scrap it and try a new experiment. </p>
+
+
+
+<p>A successful experimentation culture hinges on the manager allowing changes from the entire team even if they may not personally love the idea. I have had the team decide to try changing how we work in ways that were not my preference. But the team owns its process and honoring that is key. These changes were small, and they ended up working out and leading to the team operating better. Even more than that, it builds trust in and instills the experimentation culture and reinforces that the team owns their process.</p>
+</div></div>
+
+
+
+<h2 class="wp-block-heading">In search of a global optimum</h2>
+
+
+
+<p>Just like in simulated annealing, these large and small jumps are all in search of a global optimum value, or in this case the optimal team configuration. In reality, there is no absolute optimum for a team. But the process of change is how we can continually find incremental improvement. The team proposes a change, time-boxes it, discusses its results and hopefully things get a little bit better (or if they do not that is fine since it demonstrates willingness to try and move on). Then do it all over again.</p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/a-culture-of-experimentation/">A culture of experimentation</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Technical Debt and your Sock Drawer</title>
+		<link>https://matthewmanela.com/blog/technical-debt-and-your-sock-drawer/</link>
+		
+		<dc:creator><![CDATA[Matthew Manela]]></dc:creator>
+		<pubDate>Tue, 22 Nov 2022 19:48:23 +0000</pubDate>
+				<category><![CDATA[Engineering Management]]></category>
+		<category><![CDATA[Software Teams]]></category>
+		<category><![CDATA[technical debt]]></category>
+		<guid isPermaLink="false">https://matthewmanela.com/?p=2028</guid>
+
+					<description><![CDATA[<p>How do you organize your sock drawer? Are they neatly folded and set in rows? Are they balled up in pairs (potentially destroying the elastic!)? Or are they thrown in with reckless abandon, sometimes preventing the drawer from even closing properly? This is a personal choice, but each represents a trade-off. Spending more time up <a class="read-more" href="https://matthewmanela.com/blog/technical-debt-and-your-sock-drawer/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/technical-debt-and-your-sock-drawer/">Technical Debt and your Sock Drawer</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="is-style-default has-black-color has-text-color">How do you organize your sock drawer? Are they neatly folded and set in rows? Are they balled up in pairs (potentially destroying the elastic!)? Or are they thrown in with reckless abandon, sometimes preventing the drawer from even closing properly? </p>
+
+
+
+<p class="is-style-default has-black-color has-text-color">This is a personal choice, but each represents a trade-off. Spending more time up front putting socks away versus spending more time struggling to find a matching pair and then turning on your dog and blaming him for eating everything you love.  These kinds of trade-offs present themselves every day and we all perform an internal calculus weighing immediate vs differed cost. For some tasks this <a href="https://idiomatically.net/idioms/six-of-one-half-a-dozen-of-the-other" target="_blank" rel="noreferrer noopener">decision doesn&#8217;t matter</a> but for others delaying can end up costing much more than it would have initially.</p>
+
+
+
+<p class="is-style-default has-black-color has-text-color">There isn&#8217;t an absolute right choice, and this is also true of technical debt in software. Technical debt is throwing a handful of socks in a draw in order to put them away faster. </p>
+
+
+
+<blockquote class="wp-block-quote">
+<p><strong>Technical debt</strong>&nbsp;(also known as&nbsp;<strong>design debt</strong>&nbsp;or&nbsp;<strong>code debt</strong>) is the implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better approach that would take longer.</p>
+<cite><a href="https://en.wikipedia.org/wiki/Technical_debt">Wikipedia</a></cite></blockquote>
+
+
+
+<p>This sock analogy starts falling apart at the seams (pun very much intended) since software can continually accumulate technical debt to the point where a project fails due to inability ship quickly or with good quality. While for socks, I have never met someone who quit wearing socks due to lack of sock organization of their sock drawer (if you are out there, let me know).</p>
+
+
+
+<h2 class="wp-block-heading">Don&#8217;t hide your <s> sock drawer</s> technical debt</h2>
+
+
+
+<p>There is no perfect solution to any problem. All solutions fall on a spectrum of technical debt even if we are not aware of it. We are always balancing constraints of cost, time, complexity and feedback. Sometimes the technical debt is obvious (putting a temporary workaround for a complex issue) and sometimes it&#8217;s more subtle (confusing code). </p>
+
+
+
+<p>The first step to wrangling technical debt is awareness and acceptance. Foster a culture of transparency around technical debt; since technical debt is an inevitability there is no reason to hide it. Make explicit the technical debt is being accrued and discuss if the team accepts it.</p>
+
+
+
+<p>On my team we talk about technical debt during our sprint planning, inside of pull requests and during roadmap discussions; routinely asking the following questions:</p>
+
+
+
+<ol>
+<li>What technical debt are we taking on with this change?</li>
+
+
+
+<li>How much does taking this debt save us now? (Since we are getting a change/feature quicker into customer hands).</li>
+
+
+
+<li>How much will carrying this debt hurt us over its lifetime? (Time/Money/Performance/User Experience)</li>
+
+
+
+<li>How much will it cost us to correct/fix later?</li>
+</ol>
+
+
+
+<p>Asking these questions can have surprising outcomes. Sometimes we realize that the technical debt is not so bad, and we probably are ok <strong>never</strong> fixing it &#8211;  since its negatives are minor, or the actual cost to fix properly won&#8217;t outweigh the savings.</p>
+
+
+
+<p>Other times these questions prompt us to re-think the design/change we are making. Taking the technical debt can help us get a feature out faster but sometimes it clear that we will quickly have a bug farm (or to keep with the tortured analogy, only mismatched socks?!?). </p>
+
+
+
+<p>Most of the time though it&#8217;s not a cut and dry decision. That is why having this discussion in the open with your team is <strong>critical</strong>. The team needs own the decision: Are we ok taking on this debt? And if so, what is our plan to fix it if we need to? Having the team agree to take it on helps everyone know of the trade-offs and be empowered to fix later. There have been times where I did not want to take the debt, but the team convinced me (and vice versa). </p>
+
+
+
+<p>Depending on the results of the conversation, your team may:</p>
+
+
+
+<ol>
+<li>Not take the debt and rethink the design</li>
+
+
+
+<li>Take the debt and immediately file an issue for the next sprint to remedy</li>
+
+
+
+<li>Take the debt and file an issue on the backlog for future prioritization.</li>
+
+
+
+<li>Take the debt, record it, and wait since we anticipate not needing to fix it anytime soon.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">Mending the debt</h2>
+
+
+
+<p>Making technical debt visible and soliciting group decisions is a simple step towards a healthier culture around it. A harder problem is how to reliably fix important debt and knowing which debt is important to fix. </p>
+
+
+
+<p>As mentioned above, sometimes you know right away and can fund it immediately. Often though, you do not know the impact of a piece of debt until time passes. This may manifest as production bugs, high CPU or an incrementally more hostile codebase to develop in. Each of these can get severe enough to require action. </p>
+
+
+
+<p>Monitoring and measuring are the answer. For debt that wasn&#8217;t obviously horrendous, how do you quantify the cost over time? There isn&#8217;t a one size fits all answer here but keeping a record of what the debt your team agreed to take helps. Periodically reviewing the debt and seeing how much of an impact it has had over the last N months can help guide some clear next steps.</p>
+
+
+
+<h2 class="wp-block-heading">Stitching it all together</h2>
+
+
+
+<p>Every decision is a trade-off and acknowledging them explicitly is a huge step towards awareness, analysis and correction when/if the decision turns out costly. Building this into your team process will lead to better outcomes and a healthier culture around debt.</p>
+
+
+
+<p><strong> Don&#8217;t be afraid to show your sock drawer for all to see.</strong> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f9e6.png" alt="🧦" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f9e6.png" alt="🧦" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/technical-debt-and-your-sock-drawer/">Technical Debt and your Sock Drawer</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Engineer Habituation</title>
+		<link>https://matthewmanela.com/blog/engineer-habituation/</link>
+		
+		<dc:creator><![CDATA[Matthew Manela]]></dc:creator>
+		<pubDate>Tue, 25 May 2021 21:55:48 +0000</pubDate>
+				<category><![CDATA[Engineering Management]]></category>
+		<guid isPermaLink="false">https://matthewmanela.com/?p=1988</guid>
+
+					<description><![CDATA[<p>Don’t accept the status quo Ever been on a project where the build takes way too long? Or the tests are flakey? Or getting your environment setup is a long, laborious and error prone process? Most engineers have experienced this at some point in their careers. Interestingly, engineers get used to it. Over time, these <a class="read-more" href="https://matthewmanela.com/blog/engineer-habituation/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/engineer-habituation/">Engineer Habituation</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<article class="h-entry medium-post">
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h4 id="2a5a" class="graf graf--h4 graf-after--h3 graf--subtitle">Don’t accept the status quo</h4>
+</div>
+<div class="section-inner sectionLayout--insetColumn">
+<p id="8355" class="graf graf--p graf-after--figure">Ever been on a project where the build takes way too long? Or the tests are flakey? Or getting your environment setup is a long, laborious and error prone process? Most engineers have experienced this at some point in their careers. Interestingly, engineers get used to it. Over time, these initially irksome and grating issues become part of what it means to work on this project and they dissolve into background noise. However, this background noise has a persistent tax on productivity and job satisfaction.</p>
+<p id="494a" class="graf graf--p graf-after--p">This is a well-known process called habituation. Humans are really good at taking stimuli that are noticeable at first turning them invisible. It is like when you walk into a new room and you notice that it smells different. If you then spend 30 minutes in that room, the smell seems to vanish. Your body acclimated and habituated to your environment and set it as a new baseline. That is what happens on software projects. The build is slow but you get used to it. Deploying a local test environment is annoying but you get used to it. There are problems and inefficiencies but you learn to live with them.</p>
+<h3 id="e179" class="graf graf--h3 graf-after--p">What’s at stake?</h3>
+<p id="6134" class="graf graf--p graf-after--h3">Unlike getting used to a smelly room, there are some large costs to becoming too habituated on a software project. First is “death by a thousand needles”. A number of small annoyances compound and can greatly decrease developer productivity. It may seem small at first but over time the team’s ability to deliver new customer value can grind to a halt.</p>
+<p id="69f5" class="graf graf--p graf-after--p">Secondly, habitually poor engineering systems can drive engineers off of teams. I have seen several engineers become frustrated with the time it takes to build, deploy, test (the developer inner loop) and decide to leave the group. Making sure the development experience is enjoyable and smooth is a table-stakes item for retaining talent.</p>
+<p id="7bf8" class="graf graf--p graf-after--p">There are ways to fight against this habituation and improve the developer inner loop and the quality of the engineering system.</p>
+<h4 id="cac2" class="graf graf--h4 graf-after--p">Empower New Hires</h4>
+<p id="f4bd" class="graf graf--p graf-after--h4">One of the best methods for improvement is to empower people who are not yet habituated. When a new engineer joins the team they see all the warts, pains and issues fresh. This is an invaluable resource and it’s imperative to ensure they feel safe questioning the current system and advocate for how to make it better. It is common for a new engineer to feel worried about not “rocking the boat” but it’s important for them to know <a class="markup--anchor markup--p-anchor" href="https://matthewmanela.com/blog/psychological-safety/" target="_blank" rel="noopener" data-href="https://matthewmanela.com/blog/psychological-safety/">their feedback and thoughts are important</a> in order for the system to evolve and improve. In fact, I often ask new engineers to help fill any missing documentation that can make the the onboarding process smoother and to point out the parts of the engineering process that are confusing or annoying to them. Listening to their experience can lead the team towards self reflection and realizations like “I am so used to that, I didn’t even realize it was that bad!”. This insight can drive improved experiences across the team.</p>
+<h4 id="9690" class="graf graf--h4 graf-after--p">Surveys/Retrospectives</h4>
+<p id="b362" class="graf graf--p graf-after--h4">It is critical to routinely ask engineers to share what is bothering them in order to unearth habituation that may be negatively impacting your team. General questions like, &#8220;What could be better?&#8221; may not lead to much revelation, so ask more targeted questions:</p>
+<ul class="postList">
+<li id="707f" class="graf graf--li graf--startsWithDoubleQuote graf-after--p">“What are your biggest gripes in our build system?”</li>
+<li id="4f38" class="graf graf--li graf--startsWithDoubleQuote graf-after--li">“What most gets in your way of solving live site issues?”</li>
+<li id="42e0" class="graf graf--li graf--startsWithDoubleQuote graf-after--li">“What part of the development process forces you to sit idle the longest?”</li>
+</ul>
+<p id="d047" class="graf graf--p graf-after--li">Those types of questions will lead to more specific and honest responses, and get you a better pulse on where to improve.</p>
+<p id="3288" class="graf graf--p graf-after--p">Incorporate these into a periodic survey sent to all engineers, or even better, discuss in retrospective meetings specifically focused on engineers’ work experience. Creating a forum for this open conversation can spur a snow ball effect where one engineer points something out and it “shakes” others out of their habituation and they realize “Oh yea, that bothers me too!”.</p>
+<h4 id="78c5" class="graf graf--h4 graf-after--p">Dedicated Time/Resources</h4>
+<p id="c6b8" class="graf graf--p graf-after--h4">Set time and resources aside to focus on the developer experience in your group. Depending on the size of your group the look of this will vary. You may assign one developer every few weeks to dig into areas for de-habitualizing, or you might create an “engineering improvement” week. Some teams will build this lens into their normal workflow, ensuring they are always focused on improving systems and habits.</p>
+<p id="90b3" class="graf graf--p graf-after--p">Often, engineering system improvements provide a good amount of low hanging fruit that provide quick results and a large sense of reward, encouraging continued work towards this end.</p>
+<h3 id="d5fd" class="graf graf--h3 graf-after--p">Do Something</h3>
+<p id="4aae" class="graf graf--p graf-after--h3 graf--trailing">We all get used to things that are less than ideal. Ensure you take advantage of ways to see past habituation and find what drains team productivity. Dedicating the time and funds to this reflection and growth will quickly become a vital and rewarding habit that your team will want to hold onto.</p>
+</div>
+</div>
+</article>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/engineer-habituation/">Engineer Habituation</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Finding focus when working from home</title>
+		<link>https://matthewmanela.com/blog/finding-focus-when-working-from-home/</link>
+		
+		<dc:creator><![CDATA[Matthew Manela]]></dc:creator>
+		<pubDate>Fri, 21 May 2021 16:56:33 +0000</pubDate>
+				<category><![CDATA[Personal]]></category>
+		<guid isPermaLink="false">https://matthewmanela.com/?p=1979</guid>
+
+					<description><![CDATA[<p>Since becoming a remote-worker (first due to Covid and now working for a remote company) I have struggled with focus during meetings. When working in an office I am very diligent about leaving my laptop at my desk and giving meetings my full focus. However, working from home makes that much harder. As I sit <a class="read-more" href="https://matthewmanela.com/blog/finding-focus-when-working-from-home/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a></p>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/finding-focus-when-working-from-home/">Finding focus when working from home</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<article class="h-entry medium-post">
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h4 name="6974" id="6974" class="graf graf--h4 graf-after--h3 graf--subtitle"></h4>
+</div>
+<div class="section-inner sectionLayout--outsetColumn">
+<figure name="5c5a" id="5c5a" class="graf graf--figure graf--layoutOutsetCenter graf-after--h3"><img decoding="async" class="graf-image" data-image-id="1*kb-7auwFgkHkgvcy4Lxicg.png" data-width="1920" data-height="1275" data-is-featured="true" src="https://matthewmanela.com/wp-content/uploads/2021/05/coverFocusPost.png"></figure>
+</div>
+<div class="section-inner sectionLayout--insetColumn">
+<p name="f830" id="f830" class="graf graf--p graf-after--figure">Since becoming a remote-worker (first due to Covid and now working for a <a href="https://palmetto.com/" data-href="https://palmetto.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">remote company</a>) I have struggled with focus during meetings. When working in an office I am very diligent about leaving my laptop at my desk and giving meetings my full focus. However, working from home makes that much harder.</p>
+<p name="e631" id="e631" class="graf graf--p graf-after--p">As I sit at my desk with monitors surrounding me, it is really hard to not check Slack or email while in meetings. I say to myself in the moment: “Look how productive you are being Matt! You are doing 3 things at once”. But in reality, I end the meeting confused and my contributions and presence in those meetings are greatly diminished.</p>
+<figure style="display:flex; flex-direction:column" name="71d1" id="71d1" class="graf graf--figure graf--layoutOutsetLeft graf-after--p"><img decoding="async" class="graf-image" data-image-id="0*zb16xPvacB7wsDgp.jpg" data-width="754" data-height="471" src="https://matthewmanela.com/wp-content/uploads/2021/05/hazeOverImage.jpeg"><figcaption style="text-align: center;" class="imageCaption">HazeOver</figcaption></figure>
+<p name="6af5" id="6af5" class="graf graf--p graf-after--figure">I have tried several techniques to regain my lost focus. Most recently, I have adopted a new program called <a href="https://hazeover.com/" data-href="https://hazeover.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">HazeOver.</a> This application is for Mac and it shades or blacks out all other windows on your computer besides the one with active focus. This means that when I am in a meeting all other screens/windows are blacked out and not begging for my attention. You can quickly enable and disable this mode with a keyboard shortcut.</p>
+<p name="371f" id="371f" class="graf graf--p graf-after--p">When a meeting starts, I hit the keyboard shortcut and give the call my full attention. Early results have been promising and I have felt that I am more engaged and alert in the meetings.</p>
+<h4 name="cb71" id="cb71" class="graf graf--h4 graf-after--p">But won’t you just turn it&nbsp;off?</h4>
+<p name="f21e" id="f21e" class="graf graf--p graf-after--h4">As easy as you can turn it on, you can turn it off. But having that one extra step provides an extra moment to edit the impulse to multi-task. It is similar to when I have a box of cookies at home. If I leave that box on the kitchen counter I am much more likely to grab one when I walk by compared to when the box is in the cupboard. Even though I know the cookies are in the cupboard, the one extra step (opening the cupboard) provides enough time to catch the impulse and decide against it.</p>
+<p name="35ce" id="35ce" class="graf graf--p graf-after--p graf--trailing">This one program is not a magic fix, but I find it a useful tool in my own personal journey to have better focus and productivity. Hopefully, if you face the same problem I do, it will help.</p>
+</div>
+</div>
+</article>
+<p>The post <a rel="nofollow" href="https://matthewmanela.com/blog/finding-focus-when-working-from-home/">Finding focus when working from home</a> appeared first on <a rel="nofollow" href="https://matthewmanela.com">Matthew Manela</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
