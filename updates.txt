@@ -315,4 +315,6 @@ mkdir /mnt/media/pixel
 Change ownership of directory:
 doas chown USER:USER /mnt/media/pixel
 
-test
+09/05/2023
+Install words (for us dictionary):
+doas pacman -S words
