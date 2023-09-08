@@ -455,7 +455,22 @@
         "§:themoviedb.org",
         "§:practical-accessibility.today",
         "§:wizardzines.com",
-        "§:resgen.app"
+        "§:resgen.app",
+        "§:rosecityantifa.org",
+        "§:archive.org",
+        "§:zerowater.com",
+        "§:coderpad.io",
+        "§:coachmatt.io",
+        "§:nextcloud.com",
+        "§:pramp.com",
+        "§:resend.com",
+        "§:fastify.dev",
+        "§:swagger.io",
+        "§:nearform.com",
+        "§:nginx.com",
+        "§:node-tap.org",
+        "§:matthewmanela.com",
+        "§:gitolite.com"
       ],
       "untrusted": [
         "hotmail.com",
