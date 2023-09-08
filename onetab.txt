@@ -1,3 +1,26 @@
+https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/ | How to build a CI/CD pipeline with GitHub Actions in four simple steps - The GitHub Blog
+https://stackoverflow.com/questions/15569581/do-an-automatic-pull-request-after-pushing-to-server | git - Do an automatic pull request after pushing to server - Stack Overflow
+https://stackoverflow.com/questions/15407350/deploying-a-website-webapp-via-git-gitolite-permissions-error/15411542#15411542 | unix - deploying a website/webapp via git/gitolite permissions error - Stack Overflow
+https://gitolite.com/gitolite/ | Gitolite
+
+https://realpython.com/python-send-email/ | Sending Emails With Python – Real Python
+https://www.baeldung.com/ops/docker-cron-job | How to Run a Cron Job Inside a Docker Container? | Baeldung
+https://stackoverflow.com/questions/43889481/docker-how-to-use-syslog-to-record-logs-on-host-machine | logging - Docker- How to use syslog to record logs on host machine? - Stack Overflow
+
+https://fastify.dev/docs/latest/Guides/Ecosystem/ | Ecosystem | Fastify
+https://github.com/fastify/fastify-cors | GitHub - fastify/fastify-cors: Fastify CORS
+https://nginx.org/en/#basic_http_features | nginx
+https://www.freecodecamp.org/news/nginx-rate-limiting-in-a-nutshell-128fe9e0126c/ | NGINX rate-limiting in a nutshell
+https://enable-cors.org/server_nginx.html | enable cross-origin resource sharing
+https://socket.dev/npm/package/fastify-openapi-glue | fastify-openapi-glue - npm Package Security Analysis - Socket
+
+https://fastify.dev/docs/latest/Reference/Validation-and-Serialization/ | Validation-and-Serialization | Fastify
+https://www.nearform.com/blog/validate-the-fastify-input-with-joi/ | Validate the Fastify Input with Joi - NearForm
+https://github.com/Eomm/joi-compiler | GitHub - Eomm/joi-compiler: Build and manage the JOI instances for the fastify framework
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol | Symbol - JavaScript | MDN
+https://stackoverflow.com/questions/12866494/how-do-you-reinstall-an-apps-dependencies-using-npm | node.js - How do you reinstall an app's dependencies using npm? - Stack Overflow
+https://joi.dev/api/?v=17.9.1#extensions | joi.dev - 17.9.1 API Reference
+
 https://stackoverflow.com/questions/65277329/how-to-use-helmet | node.js - How to use helmet? - Stack Overflow
 https://teddit.zaggy.nl/r/node/comments/4u28af/using_helmet_enough_to_protect_an_app_written_in/ | Using "helmet" enough to protect an app written in ExpressJS? : node
 https://stackoverflow.com/questions/49665023/does-knex-js-prevent-sql-injection | mysql - Does Knex.js prevent sql injection? - Stack Overflow
@@ -6,12 +29,6 @@ https://fastify.dev/docs/latest/Guides/Database | Database | Fastify
 https://knexjs.org/guide/ | Installation | Knex.js
 https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md#tablename-definition---this | better-sqlite3/docs/api.md at master · WiseLibs/better-sqlite3 · GitHub
 https://dev.to/itachiuchiha/building-and-running-sql-queries-with-knex-js-55d4 | Building and Running SQL Queries with Knex.js - DEV Community
-
-https://hapi.dev/tutorials/validation/?lang=en_US | Validation - hapi.dev
-https://hapi.dev/tutorials/routing/?lang=en_US | Routing - hapi.dev
-
-https://sinonjs.org/releases/latest/stubs/ | Stubs - Sinon.JS
-https://github.com/avajs/ava/blob/main/docs/03-assertions.md | ava/docs/03-assertions.md at main · avajs/ava · GitHub
 
 https://speakerdeck.com/spreeconf/the-magic-tricks-of-testing-sandi-metz | The Magic Tricks of Testing - Sandi Metz - Speaker Deck
 https://pypi.org/project/celery/ | celery · PyPI
@@ -23,10 +40,6 @@ https://www.w3schools.com/python/python_for_loops.asp | Python For Loops
 https://www.abilenetx.gov/526/City-Council | City Council | Abilene, TX
 https://realpython.com/python-requests/ | Python’s Requests Library (Guide) – Real Python
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html | pandas.read_html — pandas 2.0.3 documentation
-
-https://github.com/dwyl/hapi-auth-jwt2 | GitHub - dwyl/hapi-auth-jwt2: :lock: Secure Hapi.js authentication plugin using JSON Web Tokens (JWT) in Headers, URL or Cookies
-https://www.npmjs.com/package/hapi-auth-jwt2 | hapi-auth-jwt2 - npm
-https://github.com/auth0/node-jsonwebtoken#readme | GitHub - auth0/node-jsonwebtoken: JsonWebToken implementation for node.js http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
 
 https://en.wikipedia.org/wiki/Html?useskin=vector | HTML - Wikipedia
 https://en.wikipedia.org/wiki/Css?useskin=vector | CSS - Wikipedia
@@ -45,9 +58,6 @@ https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorag
 https://security.stackexchange.com/questions/130548/should-jwt-token-be-stored-in-a-cookie-header-or-body | tls - Should JWT token be stored in a cookie, header or body - Information Security Stack Exchange
 https://stackoverflow.com/questions/70060722/how-do-i-handle-jwt-token-expiration | spring boot - How do I handle JWT token expiration? - Stack Overflow
 
-https://hapi.dev/tutorials/auth/?lang=en_US | Authentication - hapi.dev
-https://hapi.dev/api/?v=21.3.2#-routeoptionsresponse | 21.3.2 API Reference - hapi.dev
-
 https://leekahung.github.io/web-dev/ | Ka Hung's Web Developer Portfolio
 https://www.scottxbrown.com/#projects | Portfolio of Scott Brown || frontend web developer
 
@@ -62,22 +72,6 @@ https://www.techoregon.org/ | Technology Association of Oregon – Empowering bu
 https://opencommons.net/ | opencommons.net/
 https://joinpdx.org/ | JOIN - Connecting the street to a home - Portland, Oregon
 https://github.com/codeforpdx/website | GitHub - codeforpdx/website: Official Code for PDX website
-
-https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
-https://lite.duckduckgo.com/lite/?q=docker+start+with+node+or+ubuntu+or+debian%3F | docker start with node or ubuntu or debian? at DuckDuckGo
-https://www.techtarget.com/searchitoperations/tip/Choose-the-best-Docker-image-for-the-job-at-hand | Choose the best Docker image for the job at hand | TechTarget
-https://www.baeldung.com/ops/dockerfile-git-strategies | Dockerfile Strategies for Git | Baeldung
-
-https://nodejs.org/en/docs/guides/nodejs-docker-webapp | Dockerizing a Node.js web app | Node.js
-https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/ | Building Efficient Dockerfiles - Node.js - bitJudo
-https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable | npm Blog Archive: Introducing `npm ci` for faster, more reliable builds
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
-https://teddit.pussthecat.org/r/webdev/comments/a285o4/why_and_when_to_use_docker/ | Why, and when to use Docker ? : webdev
-
-https://12factor.net/ | The Twelve-Factor App
-https://docs.docker.com/engine/reference/builder/ | Dockerfile reference
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ | Best practices for writing Dockerfiles
-https://docs.docker.com/get-started/02_our_app/ | Containerize an application
 
 https://content.techgig.com/upskilling-at-techgig/11-coding-algorithms-that-every-aspiring-programmer-should-know/articleshow/95119570.cms | 11 Coding algorithms that every aspiring programmer should know | TechGig
 https://en.wikipedia.org/wiki/Depth-first_search?useskin=vector | Depth-first search - Wikipedia
