@@ -470,7 +470,11 @@
         "§:nginx.com",
         "§:node-tap.org",
         "§:matthewmanela.com",
-        "§:gitolite.com"
+        "§:gitolite.com",
+        "§:nestjs.com",
+        "§:requests.readthedocs.io",
+        "§:readthedocs.org",
+        "§:million.dev"
       ],
       "untrusted": [
         "hotmail.com",
