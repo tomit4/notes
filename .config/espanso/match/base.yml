@@ -178,6 +178,9 @@ matches:
   - trigger: ";inc"
     replace: "#include"
 
+  - trigger: ";pri"
+    replace: "print(' :=>', )"
+
   - trigger: ";sh"
     replace: "#!/usr/bin/env bash"
 
