@@ -1,0 +1,9 @@
+Sometimes you'll accidentally not use your password correctly the amount of times set in /etc/security/faillock.conf (defaults to 3 failed attempts)
+
+Should you need to quickly reset and not wait the default allotted 10 minutes, simply invoke 'su'. Enter your root password, and run:
+
+```
+faillock --user $USER --reset
+```
+
+Where $USER is your username. Keep in mind this will NOT work on a TTY, as there is NO way to log in as root, without severely compromising security (and is thusly not recommended). So if you want to increase the failed attempts allowed, edit /etc/faillock.conf under the config field that allows you to do so.
