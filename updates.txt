@@ -318,3 +318,19 @@ doas chown USER:USER /mnt/media/pixel
 09/05/2023
 Install words (for us dictionary):
 doas pacman -S words
+
+09/11/2023
+Uninstall librewolf as artix no longer supports it
+doas pacman -Rs librewolf
+And reinstall from AUR:
+paru librewolf-bin
+Should work out of the box with old configs and bookmarks
+
+Install python-requests-html library (for web scraping)
+paru requests-html (or python-requests-html)
+
+Apply new pacman.conf to /etc/pacman.conf
+
+See if you can get your NVIDIA gpu to be recognized, this possibly has to do with the way GRUB is loading kernel modules:
+https://bbs.archlinux.org/viewtopic.php?id=277640
+Research and pray it works...keep a good iso handy for chrooting...
