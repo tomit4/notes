@@ -334,3 +334,7 @@ Apply new pacman.conf to /etc/pacman.conf
 See if you can get your NVIDIA gpu to be recognized, this possibly has to do with the way GRUB is loading kernel modules:
 https://bbs.archlinux.org/viewtopic.php?id=277640
 Research and pray it works...keep a good iso handy for chrooting...
+
+10/06/2023
+Install arch-install-scripts
+doas pacman -S arch-install-scripts
