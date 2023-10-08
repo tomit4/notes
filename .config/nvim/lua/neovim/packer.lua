@@ -40,6 +40,7 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({ "tpope/vim-fugitive" })
+	use({ "tpope/vim-surround" })
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()

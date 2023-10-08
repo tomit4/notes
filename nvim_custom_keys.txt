@@ -291,6 +291,32 @@ Custom shortcut: nv (opens up new vertical pane)
 # deprecated when OKLB acquired...
 ii - equivaent to <ESC> key (return to normal mode from insert mode)
 
+-- Vim-Surround
+Tpope has some amazing plugins, one of which is vim-surround(https://github.com/tpope/vim-surround).
+This allows you to quickly surround a block of text with delimiting characters like ''""{}(), etc.
+You can even use it to quickly edit XML/HTML markup. The following are some basic commands you can utilize within normal mode:
+Let's simply encapsulate Hello with some quotes:
+```
+Hello
+```
+Now Enter: ysiw' while the cursor is over Hello (only works on single word):
+```
+'Hello'
+```
+We Can quickly change existing delimiters using the cs'] command like so:
+```
+[Hello]
+```
+If you have more than one word encapsulated with delimiters and wish to change them, you can do so with the cs command again like so:
+```
+"Hello World!"
+```
+Now with the cs"' command, we'll change it to single quote:
+```
+'Hello World!'
+```
+NOTE: This is powerful when chained with mult-cursor!
+
 -- THE PRIMEAGEN AND HARPOON PLUGIN
 note: my configuration is based off of the primeagens, with a lot more added
 on, and a tiny bit taken out. The following is how I've set up his harpoon
