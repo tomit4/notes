@@ -338,3 +338,6 @@ Research and pray it works...keep a good iso handy for chrooting...
 10/06/2023
 Install arch-install-scripts
 doas pacman -S arch-install-scripts
+
+10/09/2023
+In neovim, install emmet-ls for use in javascriptreact files
