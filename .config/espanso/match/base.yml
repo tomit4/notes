@@ -10,6 +10,7 @@
 matches:
   # Simple text replacement
   - trigger: ":espanso"
+    force_clipboard: true
     replace: "Hi there!"
 
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
@@ -18,6 +19,7 @@ matches:
 
   # Print the current date
   - trigger: ":date"
+    force_clipboard: true
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -36,6 +38,7 @@ matches:
 
   # Print the $USER
   - trigger: ":user"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -45,6 +48,7 @@ matches:
 
   # Print the $HOST
   - trigger: ":term"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -53,6 +57,7 @@ matches:
           cmd: "echo $TERM" # returns "linux"...
 
   - trigger: ":shell"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -61,6 +66,7 @@ matches:
           cmd: "echo $SHELL"
 
   - trigger: ":kernel"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -69,45 +75,59 @@ matches:
           cmd: "uname -r"
 
   - trigger: ";cmm"
+    force_clipboard: true
     replace: "/* *********************\n\n*********************/"
 
   - trigger: ";cmh"
+    force_clipboard: true
     replace: "########################\n\n#######################"
 
   - trigger: ";rr"
+    force_clipboard: true
     replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
 
   - trigger: ";rd"
+    force_clipboard: true
     replace: "source $HOME/.sdrc && cd $sdir && ls"
 
   - trigger: ";for"
+    force_clipboard: true
     replace: "for (;;) {}"
 
   - trigger: ";while"
+    force_clipboard: true
     replace: "while () {}"
 
   - trigger: ";if"
+    force_clipboard: true
     replace: "if () {}"
 
   - trigger: ";elif"
+    force_clipboard: true
     replace: "else if () {}"
 
   - trigger: ";else"
+    force_clipboard: true
     replace: "else {}"
 
   - trigger: ";$"
+    force_clipboard: true
     replace: "`${}`"
 
   - trigger: ";do"
+    force_clipboard: true
     replace: "do {} while ()"
 
   - trigger: ";func"
+    force_clipboard: true
     replace: "function () {}"
 
   - trigger: ";=>"
+    force_clipboard: true
     replace: "() => {}"
 
   - trigger: ";try"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -116,117 +136,153 @@ matches:
           cmd: "~/scripts/trycatch ; echo ''"
 
   - trigger: ";def"
+    force_clipboard: true
     replace: "def():"
 
   - trigger: ";fn"
+    force_clipboard: true
     replace: "pub fn () {}"
 
   - trigger: ";cll"
+    force_clipboard: true
     replace: "console.log(' :=>', )"
 
   - trigger: ";clc"
+    force_clipboard: true
     replace: "console.clear()"
 
   - trigger: ";cla"
+    force_clipboard: true
     replace: "console.assert()"
 
   - trigger: ";cle"
+    force_clipboard: true
     replace: "console.error('ERROR :=>', )"
 
   - trigger: ";clt"
+    force_clipboard: true
     replace: "console.table()"
 
   - trigger: ";clw"
+    force_clipboard: true
     replace: "console.warn('WARNING :=>', )"
 
   - trigger: ";<h1"
+    force_clipboard: true
     replace: "<h1> </h1>"
 
   - trigger: ";<h2"
+    force_clipboard: true
     replace: "<h2> </h2>"
 
   - trigger: ";<h3"
+    force_clipboard: true
     replace: "<h3> </h3>"
 
   - trigger: ";<h4"
+    force_clipboard: true
     replace: "<h4> </h4>"
 
   - trigger: ";<h5"
+    force_clipboard: true
     replace: "<h5> </h5>"
 
   - trigger: ";href"
+    force_clipboard: true
     replace: '<a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>'
 
   - trigger: ";<d"
+    force_clipboard: true
     replace: '<div class=""> </div>'
 
   - trigger: ";<s"
+    force_clipboard: true
     replace: '<span class=""> </span>'
 
   - trigger: ";<p"
+    force_clipboard: true
     replace: "<p> </p>"
 
   - trigger: ";<a"
+    force_clipboard: true
     replace: '<a href=""> </a>'
 
   - trigger: ";<i"
+    force_clipboard: true
     replace: '<img src="" alt="" />'
 
   - trigger: ";test"
+    force_clipboard: true
     replace: "test('', () => {})"
 
   - trigger: ";inc"
+    force_clipboard: true
     replace: "#include"
 
   - trigger: ";pri"
+    force_clipboard: true
     replace: "print(' :=>', )"
 
   - trigger: ";sh"
+    force_clipboard: true
     replace: "#!/usr/bin/env bash"
 
   - trigger: ";str"
+    force_clipboard: true
     replace: "'use strict'"
 
   - trigger: ";loc"
+    force_clipboard: true
     replace: "localhost:"
 
   - trigger: ";000"
+    force_clipboard: true
     replace: "0.0.0.0:"
 
   # Pings google dns server
   - trigger: ";ping"
+    force_clipboard: true
     replace: "ping 8.8.8.8"
 
   # Prepares Odysee search
   - trigger: "!ody"
+    force_clipboard: true
     replace: "https://odysee.com/$/search?q="
 
   # Prepares Quetre search
   - trigger: "!que"
+    force_clipboard: true
     replace: "https://qr.vern.cc/search?q="
 
   # Prepares Stack Overflow search
   - trigger: "!sto"
+    force_clipboard: true
     replace: "https://stackoverflow.com/search?q="
 
   # Routes to text.npr.org
   - trigger: ";npr"
+    force_clipboard: true
     replace:
       "https://text.npr.org"
 
       # Prepares about pages for firefox
   - trigger: ";conf"
+    force_clipboard: true
     replace: "about:config"
   - trigger: ";pref"
+    force_clipboard: true
     replace: "about:preferences"
   - trigger: ";add"
+    force_clipboard: true
     replace: "about:addons"
   - trigger: ";mem"
+    force_clipboard: true
     replace: "about:memory"
 
   # Calling Bash Scripts
   # Returns public ip address
   - trigger: ";ip"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -236,6 +292,7 @@ matches:
 
   # returns default html5 layout
   - trigger: ";html5"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -245,6 +302,7 @@ matches:
 
   # returns default html5 layout in pug
   - trigger: ";pug5"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -254,6 +312,7 @@ matches:
 
   # returns default figure and img tags for pug blog
   - trigger: ";fig"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -263,6 +322,7 @@ matches:
 
   # returns single lorem ipsum text paragraph
   - trigger: ";lorem"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
@@ -272,6 +332,7 @@ matches:
 
   # returns current time in US format
   - trigger: ";btime"
+    force_clipboard: true
     replace: "{{output}}"
     vars:
       - name: output
