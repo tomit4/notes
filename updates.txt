@@ -341,3 +341,8 @@ doas pacman -S arch-install-scripts
 
 10/09/2023
 In neovim, install emmet-ls for use in javascriptreact files
+
+10/17/2023
+Install thorium and uninstall ungoogled-chromium
+paru -S thorium (choose thorium-browser-bin)
+doas pacman -Rs ungoogled-chromium

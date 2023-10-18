@@ -169,7 +169,7 @@ super + z
 super + f
     librewolf &
 super + c
-    brave &
+    thorium-browser &
 super + i
     inkscape &
 super + g
@@ -199,7 +199,7 @@ super + u
 super + y
     krita --nosplash &
 super + s
-    steam
+    steam &
     # steam steam://open/console &
     # steam %U -console "+@AllowSkipGameUpdate 1" &
 super + v

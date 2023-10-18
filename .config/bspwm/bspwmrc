@@ -60,8 +60,10 @@ bspc rule -a Galculator state=floating &
 bspc rule -a Pavucontrol state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
-bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
-bspc rule -a Chromium center=on rectangle=1555x960+1440+810 &
+# bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
+bspc rule -a Alacritty center=on rectangle=1555x960+1440+810 &
+bspc rule -a Codium center=on rectangle=1555x960+1440+810 &
+bspc rule -a Thorium-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
 bspc rule -a librewolf center=on rectangle=1555x960+1440+810 &
 bspc rule -a thunderbird center=on rectangle=1555x960+1440+810 &
@@ -73,7 +75,7 @@ bspc rule -a Desktopeditors center=on rectangle=1555x960+1440+810 &
 bspc rule -a Devour center=on rectangle=1555x960+1440+810 &
 bspc rule -a Pcmanfm center=on rectangle=1555x960+1440+810 &
 bspc rule -a Postman center=on rectangle=1555x960+1440+810 &
-bspc rule -a Steam center=on rectangle=1555x960+1440+810 &
+# bspc rule -a Steam center=on rectangle=1555x960+1440+810 &
 bspc rule -a Foliate center=on rectangle=1555x960+1440+810 &
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
