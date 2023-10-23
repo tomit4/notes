@@ -241,6 +241,7 @@ alias npm-t="npm test"
 alias npm-o="npm outdated"
 alias npm-u="npm updated"
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
+alias find-empty='find . -depth -empty'
 alias paclogs="bat /var/log/pacman.log"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
