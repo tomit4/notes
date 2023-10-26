@@ -51,16 +51,16 @@ vim.opt.splitright = true
 -- vim.cmd([[autocmd BufWritePre * call TrimWhiteSpace()]])
 
 -- formats on save
-vim.cmd([[autocmd BufWritePre * silent! :Neoformat]])
-
+-- vim.cmd([[autocmd BufWritePre * silent! :Neoformat]])
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	pattern = { "*", "silent!" },
+	command = ":Neoformat",
+})
 --Saves vim session on save
 
 -- Marks end of line, space, and trailing space characters
 vim.opt.listchars:append({ eol = "↵", trail = "·", space = "·" })
 vim.opt.list = true
-
--- git-blame disabled by default
-vim.g.gitblame_enabled = 0
 
 -- return quotation marks to json files
 vim.cmd([[autocmd Filetype json let g:indentLine_setConceal = 0]])
@@ -76,9 +76,9 @@ vim.cmd([[set foldmethod=manual]])
 
 -- enable hard/soft wrap
 -- vim.cmd([[set wrap linebreak textwidth=80]])
-vim.opt.textwidth = 80
-vim.opt.wrap = true
-vim.opt.linebreak = true
+-- vim.opt.textwidth = 80
+-- vim.opt.wrap = true
+-- vim.opt.linebreak = true
 -- vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
 
 -- max tab characters
