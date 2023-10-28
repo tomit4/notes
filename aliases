@@ -15,6 +15,7 @@ alias dmesg="doas dmesg -H"
 alias blkid="doas blkid"
 alias kernel="uname -r"
 alias mkcd='{ IFS= read -r d && mkdir "$d" && cd "$d"; } <<<' 
+alias cpwd='pwd | xclip -sel clip'
 alias docs="cd ~/Documents && ls"
 alias desk="cd ~/Desktop && ls"
 alias down="cd ~/Downloads && ls"
