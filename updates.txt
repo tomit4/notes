@@ -346,3 +346,8 @@ In neovim, install emmet-ls for use in javascriptreact files
 Install thorium and uninstall ungoogled-chromium
 paru -S thorium (choose thorium-browser-bin)
 doas pacman -Rs ungoogled-chromium
+
+11/01/2023
+Reinstall ungoogled-chromium and uninstall thorium (chromium more private and up to date):
+doas pacman -S ungoogled-chromium
+paru -Rs thorium-browser-bin

@@ -169,7 +169,7 @@ super + z
 super + f
     librewolf &
 super + c
-    thorium-browser &
+    chromium &
 super + i
     inkscape &
 super + g
