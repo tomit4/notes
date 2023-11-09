@@ -103,6 +103,32 @@ vim.keymap.set("n", "<leader>u", ":UndotreeToggle<cr>")
 -- runs npm tests without having to leave vim
 vim.keymap.set("n", "<leader>t", ":w|!npm test<cr>")
 
+-- opens go to definition in new tab if not in current file
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+
+vim.keymap.set("n", "gD", function()
+	local org_path = vim.api.nvim_buf_get_name(0)
+
+	-- Go to definition:
+	vim.api.nvim_command("normal gd")
+
+	-- Wait LSP server response
+	vim.wait(100, function() end)
+
+	local new_path = vim.api.nvim_buf_get_name(0)
+	if not (org_path == new_path) then
+		-- Create a new tab for the original file
+		vim.api.nvim_command("0tabnew %")
+
+		-- Restore the cursor position
+		vim.api.nvim_command("b " .. org_path)
+		vim.api.nvim_command('normal! `"')
+
+		-- Switch to the original tab
+		vim.api.nvim_command("normal! gt")
+	end
+end, bufopts)
+
 -- dap Keybindings
 vim.keymap.set("n", "<leader>dbp", ":lua require'dap'.toggle_breakpoint()")
 vim.keymap.set("n", "<leader>dco", ":lua require'dap'.continue()")
