@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+main {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility Classes */
+
+/* simple wrapper around flex with gap */
+.flex {
+  display: flex;
+  gap: var(--gap, 1em);
+}
+
+/*  https://kittygiraudel.com/snippets/sr-only-class/
+ *  https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
+ *  sr-only special class designed to hide 
+ *  from sighted users, but not from screen readers */
+.sr-only:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* Stop Animations During Window Resizing Trick
+ * https://css-tricks.com/stop-animations-during-window-resizing/
+ * Used in conjunction with defaults.js*/
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
