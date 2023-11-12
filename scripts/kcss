@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Utilize in conjunction with espanso, call ;kcss
+cat <<EOM
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+main {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+EOM

@@ -309,6 +309,15 @@ matches:
         type: shell
         params:
           cmd: "~/scripts/pug5 ; echo ''"
+  # returns default html5 layout
+  - trigger: ";kcss"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/kcss ; echo ''"
 
   # returns default figure and img tags for pug blog
   - trigger: ";fig"
