@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -f .prettierrc ]]; then
+    echo '.prettierrc already exists'
+    exit 0
+else
+    echo -e 'trailingComma: "all"\ntabWidth: 4\nsemi: false\nsingleQuote: true\nbracketSpacing: true\narrowParens: "avoid"' >.prettierrc
+fi
