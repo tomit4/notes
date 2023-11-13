@@ -351,3 +351,7 @@ doas pacman -Rs ungoogled-chromium
 Reinstall ungoogled-chromium and uninstall thorium (chromium more private and up to date):
 doas pacman -S ungoogled-chromium
 paru -Rs thorium-browser-bin
+
+11/13/2023
+Install pnpm (more efficient version of npm):
+doas pacman -S pnpm
