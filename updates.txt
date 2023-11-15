@@ -355,3 +355,7 @@ paru -Rs thorium-browser-bin
 11/13/2023
 Install pnpm (more efficient version of npm):
 doas pacman -S pnpm
+
+11/14/2023
+Install php (i guess i'll be getting into this a bit...):
+doas pacman -S php
