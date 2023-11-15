@@ -359,3 +359,10 @@ doas pacman -S pnpm
 11/14/2023
 Install php (i guess i'll be getting into this a bit...):
 doas pacman -S php
+And additional packages:
+doas pacman -S php-sqlite php-fpm php-fpm-runit php-cgi
+And adjust /etc/php/php.ini according to arch wiki docs:
+https://wiki.archlinux.org/title/PHP
+
+For the basics on how to get a local web server running via nginx, see this article from Linode/Akamai:
+https://www.linode.com/docs/guides/install-php-8-for-apache-and-nginx-on-ubuntu/
