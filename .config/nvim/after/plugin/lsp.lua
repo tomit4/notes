@@ -1,26 +1,15 @@
 local lsp = require("lsp-zero")
-
+local lspconfig = require("lspconfig")
+local cmp = require("cmp")
 lsp.preset("recommended")
+require("mason").setup()
 
 lsp.ensure_installed({
 	"tsserver",
 	"eslint",
-	"sumneko_lua",
 	"rust_analyzer",
+	"volar",
 })
-
--- Fix Undefined global 'vim'
-lsp.configure("sumneko_lua", {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
-		},
-	},
-})
-
-local cmp = require("cmp")
 
 cmp.setup({
 	window = {
@@ -58,9 +47,29 @@ function SetAutoCmp(mode)
 		Mode = require("cmp.types").cmp.TriggerEvent.TextChanged
 	end
 end
+
 SetAutoCmp(Mode)
-lsp.setup()
 
 vim.diagnostic.config({
 	virtual_text = true,
 })
+
+-- LSP Specific Settings
+-- Volar TypeScript Config (turn off for Vue with Vanilla JS)
+-- require("mason-lspconfig").setup_handlers({
+-- function(server_name)
+-- local server_config = {}
+-- if server_name == "volar" then
+-- server_config.filetypes = { "vue", "typescript", "javascript" }
+-- lspconfig.tsserver.setup({
+-- ["disabled"] = true,
+-- })
+-- lspconfig.volar.setup({
+-- settings = {
+-- ["volar.takeOverMode.enabled"] = true,
+-- },
+-- })
+-- end
+-- lspconfig[server_name].setup(server_config)
+-- end,
+-- })
