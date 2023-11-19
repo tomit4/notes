@@ -334,6 +334,10 @@ project):
 <leader>k - Go to your 3rd saved page.
 <leader>l - Go to your 4th saved page.
 
+LSP Specs:
+Custom command 'cmp' invoked in NORMAL mode will turn off lsp autocomplete.
+Shift + K will bring up lsp of word under corsor (navigate left or right to remove).
+
 -- ESPANSO BASED commands
 NOTE: Espanso can be used in conjunction for some powerful aliases in neovim (as well as other applications)
 FURTHER NOTATION: Please note that espanso is capabale of a lot more than is featured here and I highly recommend coming up with further expamples as it has the potential to greatly increase workflow speed
