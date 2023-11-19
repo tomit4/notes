@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Quickly sets up a very basic TypeScript project
+
+tsc --init
+
+sed -i'' -e 's/"outDir": "\.\/",/"outDir": "\.\/dist",/' -e 's/"rootDir": "\.\/",/"rootDir": "\.\/src",/' -e 's#//\s*"outDir"# "outDir"#' -e 's#//\s*"rootDir"# "rootDir"#' tsconfig.json
+
+mkdir src dist
+touch src/index.ts
