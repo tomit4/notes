@@ -49,6 +49,7 @@ function SetAutoCmp(mode)
 end
 
 SetAutoCmp(Mode)
+lsp.setup()
 
 vim.diagnostic.config({
 	virtual_text = true,
