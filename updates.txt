@@ -366,3 +366,7 @@ https://wiki.archlinux.org/title/PHP
 
 For the basics on how to get a local web server running via nginx, see this article from Linode/Akamai:
 https://www.linode.com/docs/guides/install-php-8-for-apache-and-nginx-on-ubuntu/
+
+11/19/2023
+Install csvkit (for csvparsing from terminal):
+doas pacman -S csvkit

@@ -100,6 +100,7 @@ alias sqlite-cli="litecli"
 alias sq-cli="litecli" # doesn't work with sqlcipher
 # alias view="kitty +kitten icat"
 alias view="devour sxiv"
+alias csview="csvlook"
 alias viewer="feh -F -Z -x"
 alias mupdf='devour mupdf -r 204'
 alias dkpdf='devour mupdf -I -r 204'
