@@ -300,6 +300,16 @@ matches:
         params:
           cmd: "~/scripts/html5 ; echo ''"
 
+  # returns default html5 layout
+  - trigger: ";php"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/php8 ; echo ''"
+
   # returns default html5 layout in pug
   - trigger: ";pug5"
     force_clipboard: true
