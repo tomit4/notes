@@ -370,3 +370,7 @@ https://www.linode.com/docs/guides/install-php-8-for-apache-and-nginx-on-ubuntu/
 11/19/2023
 Install csvkit (for csvparsing from terminal):
 doas pacman -S csvkit
+
+11/21/2023
+Install php-composer (depenedency manager):
+doas pacman -S composer
