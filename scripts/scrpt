@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 filename=$1
+
+if [[ -f "$filename" ]]; then
+    echo "File: $filename already exists."
+    exit 1
+fi
+
 touch "$filename"
 chmod +x "$filename"
-echo "#!/usr/bin/env bash" >> "$filename"
+echo "#!/usr/bin/env bash" >>"$filename"
