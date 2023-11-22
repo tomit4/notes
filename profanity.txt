@@ -1,0 +1,53 @@
+profanity is an XMPP TUI client inspired by irssi.
+
+Using it is pretty simple, just invoke it from the command line:
+
+profanity
+
+You will be dropped into an irssi like environment. You can log in using your JID:
+
+/connect username@federated_server.org
+
+It will then prompt you for your password.
+
+You can make this more straight forward by setting up an account:
+
+/help account
+
+To message someone specifically use:
+
+/msg their_name
+
+To join a room, type:
+
+/join chatroom
+
+To leave a room, type:
+
+/close
+
+To navigate rooms/screens, type:
+
+/win 2 (or any number for rooms)
+
+To chat, simply type into the prompt. If you have a long msg to write, use the editor:
+
+/editor
+
+To bookmark a room, add it, if you want to join upon login immediately:
+
+/bookmark add room@example.com nick YOURNICK
+/bookmark join room@example.com
+
+You can scroll up the chat using pgUp and pgDown keys.
+
+There's a lot more to this client, but that's the basics, for more, visit the official page or simply type:
+
+/help
+
+Official client website: https://profanity-im.github.io
+Place to find chatrooms: https://search.jabber.network
+
+And to quit there's:
+
+/quit
