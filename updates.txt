@@ -374,3 +374,7 @@ doas pacman -S csvkit
 11/21/2023
 Install php-composer (depenedency manager):
 doas pacman -S composer
+
+11/22/2023
+Install profanity (terminal xmpp client similar to irssi):
+doas pacman -S profanity
