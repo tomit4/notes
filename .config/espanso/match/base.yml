@@ -262,8 +262,13 @@ matches:
   # Routes to text.npr.org
   - trigger: ";npr"
     force_clipboard: true
+    replace: "https://text.npr.org"
+
+  # Routes to ChatGPT
+  - trigger: "!gpt"
+    force_clipboard: true
     replace:
-      "https://text.npr.org"
+      "https://openai.com/chatgpt"
 
       # Prepares about pages for firefox
   - trigger: ";conf"
