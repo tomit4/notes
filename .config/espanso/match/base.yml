@@ -265,7 +265,7 @@ matches:
     replace: "https://text.npr.org"
 
   # Routes to ChatGPT
-  - trigger: "!gpt"
+  - trigger: ";gpt"
     force_clipboard: true
     replace:
       "https://openai.com/chatgpt"
