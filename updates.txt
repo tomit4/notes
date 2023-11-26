@@ -378,3 +378,7 @@ doas pacman -S composer
 11/22/2023
 Install profanity (terminal xmpp client similar to irssi):
 doas pacman -S profanity
+
+11/25/2023
+Install python-virtualenvwrapper (for easily creating python venvs on Arch)
+python-virtualenvwrapper
