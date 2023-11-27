@@ -382,3 +382,8 @@ doas pacman -S profanity
 11/25/2023
 Install python-virtualenvwrapper (for easily creating python venvs on Arch)
 python-virtualenvwrapper
+
+11/26/2023
+Uninstall pug-cli from npm and use paru instead:
+doas npm -g uninstall pug-cli
+paru pug-cli
