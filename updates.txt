@@ -387,3 +387,7 @@ python-virtualenvwrapper
 Uninstall pug-cli from npm and use paru instead:
 doas npm -g uninstall pug-cli
 paru pug-cli
+
+11/28/2023
+Install ack (command line tool along the lines of grep):
+doas pacman -S ack
