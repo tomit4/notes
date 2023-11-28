@@ -1,3 +1,69 @@
+https://lite.duckduckgo.com/lite/?q=self+taught+technical+interviews+reddit | self taught technical interviews reddit at DuckDuckGo
+https://libreddit.kylrth.com/r/cscareerquestions/comments/xnll35/is_getting_a_job_as_a_self_taught_really_possible/ | is getting a job as a self taught really possible? any success stories from self taughts? - r/cscareerquestions
+https://libreddit.kylrth.com/r/learnprogramming/comments/qsz7nm/had_my_first_proper_technical_interview_and/ | Had my first proper technical interview and absolutely bombed it! - r/learnprogramming
+https://libreddit.kylrth.com/r/learnprogramming/comments/v47qfk/i_selftaught_had_my_firstever_interview_for_a_web/ | I (self-taught) had my first-ever interview for a web dev job yesterday. Here is what the interview was like and the questions I was asked. [Long] - r/learnprogramming
+https://github.com/DopplerHQ/awesome-interview-questions | GitHub - DopplerHQ/awesome-interview-questions: :octocat: A curated awesome list of lists of interview questions. Feel free to contribute!
+https://github.com/sudheerj/javascript-interview-questions | GitHub - sudheerj/javascript-interview-questions: List of 1000 JavaScript Interview Questions
+https://github.com/sudheerj/reactjs-interview-questions | GitHub - sudheerj/reactjs-interview-questions: List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!
+https://arc.dev/developer-blog/reactjs-interview-questions/ | 55+ Top React Interview Questions and Answers to Prepare For
+
+https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/ | How to Create a Subdomain for my Domain - Domains - Namecheap.com
+https://www.namecheap.com/support/knowledgebase/article.aspx/9190/29/how-to-create-a-subdomain-in-cpanel/ | How to create a subdomain in cPanel - Hosting - Namecheap.com
+
+https://stackoverflow.com/questions/65248985/is-there-any-method-of-importing-css-files-conditionally-in-react-js | reactjs - Is there any method of importing .css files conditionally in React.JS? - Stack Overflow
+https://scribe.rip/@prawira/react-conditional-import-conditional-css-import-110cc58e0da6 | React Conditional Import / Conditional CSS Import
+
+https://www.jeffgeerling.com/blog/2022/rate-limiting-requests-ip-address-nginx | Rate limiting requests per IP address in Nginx | Jeff Geerling
+
+https://htmx.org/docs/ | </> htmx ~ Documentation
+https://alpinejs.dev/start-here | Start Here — Alpine.js
+
+https://reddit.invak.id/r/neovim/comments/17t51ox/develop_php_in_neovim_your_experience/ | Develop PHP in Neovim. Your experience - r/neovim
+https://getcomposer.org/ | Composer
+https://packagist.org/ | Packagist
+https://www.php.net/manual/en/features.commandline.webserver.php | PHP: Built-in web server - Manual
+
+https://fastify.dev/docs/latest/Reference/TypeScript/ | TypeScript | Fastify
+https://fastify-nuxt.vercel.app/usage | Usage - Fastify Nuxt.js
+https://nuxt.com/ | Nuxt: The Intuitive Vue Framework · Nuxt
+
+https://scribe.rip/@JSotoPrograming/react-usecontext-3dae1de4beb4 | React useContext
+https://react.dev/learn/thinking-in-react | Thinking in React – React
+https://usehooks.com/ | useHooks – The React Hooks Library
+https://react-hook-form.com/ | React Hook Form - performant, flexible and extensible form library
+https://scribe.rip/@JSotoPrograming/react-information-flow-4563bb113bad | React Information Flow
+https://missing.csail.mit.edu/ | The Missing Semester of Your CS Education
+https://www.techinterviewhandbook.org/software-engineering-interview-guide/ | Software Engineer interviews: Everything you need to prepare | Tech Interview Handbook
+
+https://teddit.zaggy.nl/r/webdev/comments/z6dsoh/can_someone_explain_to_me_what_the_public_folder/ | Can someone explain to me what the ‘public’ folder is used for in Vite? : webdev
+https://vitejs.dev/guide/assets.html | Static Asset Handling | Vite
+https://vitejs.dev/guide/env-and-mode.html | Env Variables and Modes | Vite
+https://vitejs.dev/config/shared-options.html#envdir | Shared Options | Vite
+https://vitejs.dev/config/ | Configuring Vite | Vite
+
+https://react.dev/learn/state-a-components-memory | State: A Component's Memory – React
+https://react.dev/reference/react/useState | useState – React
+https://react.dev/reference/react/useEffect | useEffect – React
+https://react.dev/reference/react/useMemo#my-calculation-runs-twice-on-every-re-render | useMemo – React
+https://react.dev/reference/react/useDeferredValue | useDeferredValue – React
+
+https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell | Functional Core, Imperative Shell
+
+https://www.thestrangeloop.com/2023/ectype---bringing-type-safety-and-more-to-vanilla-javascript.html | Ectype - bringing type safety (and more!) to vanilla JavaScript - Strange Loop
+
+https://teddit.zaggy.nl/r/node/comments/8t4dtb/generating_and_storing_api_keys/ | Generating and Storing API Keys : node
+
+https://stackoverflow.com/questions/3663895/ssh-the-authenticity-of-host-hostname-cant-be-established | ssh keys - ssh: The authenticity of host 'hostname' can't be established - Stack Overflow
+https://www.howtouselinux.com/post/ssh-stricthostkeychecking-option | Understanding SSH StrictHostKeyChecking Option - howtouselinux
+https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh | How to disable strict host key checking in ssh? - Ask Ubuntu
+https://www.howtouselinux.com/post/ssh-permission-denied-publickey | 3 ways to fix SSH Permission denied (publickey) - howtouselinux
+https://askubuntu.com/questions/30788/does-ssh-key-need-to-be-named-id-rsa | openssh - Does ssh key need to be named id_rsa? - Ask Ubuntu
+
+https://loafylilu.github.io/ | Charissa Day - Portfolio
+https://joncruz.netlify.app/ | Jonathan Cruz - Software Engineer
+https://www.crunchbase.com/ | Crunchbase: Discover innovative companies and the people behind them
+https://www.guidestar.org/ | Nonprofit data for donors, grantmakers, and businesses | GuideStar | Candid
+
 https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/ | How to build a CI/CD pipeline with GitHub Actions in four simple steps - The GitHub Blog
 https://stackoverflow.com/questions/15569581/do-an-automatic-pull-request-after-pushing-to-server | git - Do an automatic pull request after pushing to server - Stack Overflow
 https://stackoverflow.com/questions/15407350/deploying-a-website-webapp-via-git-gitolite-permissions-error/15411542#15411542 | unix - deploying a website/webapp via git/gitolite permissions error - Stack Overflow
@@ -40,10 +106,6 @@ https://www.w3schools.com/python/python_for_loops.asp | Python For Loops
 https://www.abilenetx.gov/526/City-Council | City Council | Abilene, TX
 https://realpython.com/python-requests/ | Python’s Requests Library (Guide) – Real Python
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html | pandas.read_html — pandas 2.0.3 documentation
-
-https://en.wikipedia.org/wiki/Html?useskin=vector | HTML - Wikipedia
-https://en.wikipedia.org/wiki/Css?useskin=vector | CSS - Wikipedia
-https://en.wikipedia.org/wiki/Javascript?useskin=vector | JavaScript - Wikipedia
 
 https://www.manuelkruisz.com/blog/posts/nginx-multiple-domains-one-server | Using nginx to serve multiple nodejs applications on different domains | Manuel Kruisz
 https://stackoverflow.com/questions/30449313/how-do-i-make-a-docker-container-start-automatically-on-system-boot | How do I make a Docker container start automatically on system boot? - Stack Overflow
