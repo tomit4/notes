@@ -391,3 +391,10 @@ paru pug-cli
 11/28/2023
 Install ack (command line tool along the lines of grep):
 doas pacman -S ack
+
+11/30/2023
+Reinstall paru (updated to v2):
+doas rm /usr/bin/paru
+git clone "https://aur.archlinux.org/paru.git"
+cd paru
+makepkg -si
