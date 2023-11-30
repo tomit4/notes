@@ -10,7 +10,7 @@ term="st"
 
 main() {
     choice=$(printf '%s\n' "${wikidocs[@]}" | \
-        dmenu -l 20 -p 'Arch Wiki Docs: ') || exit 1
+        dmenu -fn "12" -l 20 -p 'Arch Wiki Docs: ') || exit 1
 
     if [ "$choice" ]; then
         $term -e $browser "$choice"
