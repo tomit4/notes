@@ -398,3 +398,7 @@ doas rm /usr/bin/paru
 git clone "https://aur.archlinux.org/paru.git"
 cd paru
 makepkg -si
+
+12/02/2023
+Install huggingface-cli from AUR:
+paru huggingface-cli (1st choice, not -git)
