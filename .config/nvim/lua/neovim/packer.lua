@@ -93,4 +93,6 @@ return require("packer").startup(function(use)
 			},
 		},
 	})
+	-- codeium AI
+	use("Exafunction/codeium.vim")
 end)

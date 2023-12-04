@@ -33,12 +33,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Vimium Like Keybindings
 vim.keymap.set("n", "<S-t>", "<c-w>:tabnew<CR>", {})
 
-vim.keymap.set("n", "<S-tab>", "<c-w>:tabprevious<CR>", {})
-vim.keymap.set("n", "<A-j>", "<c-w>:tabprevious<CR>", {})
+-- tab keybindings
 vim.keymap.set("n", "<A-left>", "<c-w>:tabprevious<CR>", {})
-
-vim.keymap.set("n", "<A-tab>", "<c-w>:tabnext<CR>", {})
-vim.keymap.set("n", "<A-k>", "<c-w>:tabnext<CR>", {})
 vim.keymap.set("n", "<A-right>", "<c-w>:tabnext<CR>", {})
 -- Use ctrl- [hl] to select the active split!
 vim.keymap.set("n", "<C-h>", "<c-w>:wincmd h<CR>", {})
@@ -137,3 +133,23 @@ vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()")
 vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
 vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")
 -- vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
+--
+-- codeium remappings
+vim.keymap.set("i", "<A-tab>", function()
+	return vim.fn["codeium#Accept"]()
+end, { expr = true })
+vim.keymap.set("i", "<C-right>", function()
+	return vim.fn["codeium#CycleCompletions"](1)
+end, { expr = true })
+vim.keymap.set("i", "<C-left>", function()
+	return vim.fn["codeium#CycleCompletions"](-2)
+end, { expr = true })
+vim.keymap.set("i", "<C-x>", function()
+	return vim.fn["codeium#Clear"]()
+end, { expr = true })
+
+--toggle codeium on/off
+function Toggle_codeium()
+	vim.g.codeium_enabled = not vim.g.codeium_enabled
+end
+vim.keymap.set("n", "<leader>c", ":lua Toggle_codeium()<cr>", { noremap = true, silent = true })

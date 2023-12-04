@@ -79,7 +79,7 @@ vim.cmd([[set foldmethod=manual]])
 -- vim.opt.textwidth = 80
 -- vim.opt.wrap = true
 -- vim.opt.linebreak = true
--- vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
+vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
 
 -- max tab characters
 vim.cmd([[let g:mintabline_tab_max_chars=10]])
@@ -137,3 +137,6 @@ augroup remember_folds
   autocmd BufWinEnter *.* silent! loadview
 augroup END
 ]])
+
+-- codeium disable default keybindings
+vim.g.codeium_disable_bindings = 1

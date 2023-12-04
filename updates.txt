@@ -402,3 +402,8 @@ makepkg -si
 12/02/2023
 Install huggingface-cli from AUR:
 paru huggingface-cli (1st choice, not -git)
+
+12/03/2023
+Config already set up for it, but install new packages and set up Codeium(code completion AI similar to Github Copilot)
+You already have an api key set up, just log in using your details (see keepassxc)
+https://github.com/Exafunction/codeium.vim#-installation-options
