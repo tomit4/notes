@@ -310,6 +310,16 @@ matches:
         params:
           cmd: "~/scripts/html5 ; echo ''"
 
+  # returns default vue layout
+  - trigger: ";vue"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/vue ; echo ''"
+
   # returns default html5 layout
   - trigger: ";php"
     force_clipboard: true
