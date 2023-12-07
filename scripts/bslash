@@ -5,8 +5,7 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-input=$(cat "$1")
-
-output="${input//$/$\\}"
-
-echo "$output" | xclip -sel clip
+# Read the file line by line and append a backslash to each line
+while IFS= read -r line; do
+    echo "$line\\"
+done <"$1" | xclip -sel clip
