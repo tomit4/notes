@@ -1,3 +1,19 @@
+https://vue-community.org/guide/ecosystem/mobile-apps.html | Mobile Apps | Vue Community
+https://nativescript-vue.org/en/docs/introduction/ | Introduction - NativeScript-Vue
+https://docs.nativescript.org/ | Introduction | NativeScript
+https://lite.duckduckgo.com/lite/?q=nativescript-vue+vs+react+native+reddit | nativescript-vue vs react native reddit at DuckDuckGo
+https://libreddit.kylrth.com/r/vuejs/comments/fyh8ic/nativescript_vue_seems_too_good_to_be_true_what/ | NativeScript + Vue seems too good to be true. What am I missing? - r/vuejs
+
+https://www.techaddressed.com/tutorials/add-verify-ssh-keys-gitea/ | How To Add & Verify SSH Keys Inside Gitea - Tech Addressed
+
+https://scribe.rip/basecs/taking-hash-tables-off-the-shelf-139cbf4752f0 | Taking Hash Tables Off The Shelf
+https://scribe.rip/basecs/hashing-out-hash-functions-ea5dd8beb4dd | Hashing Out Hash Functions
+https://schani.wordpress.com/2010/04/30/linear-vs-binary-search/ | Linear vs Binary Search | Mostly Software
+https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/HashFuncExamp.html | 13.3. Sample Hash Functions — RHS Comp Sci III
+https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/ | Chapter 0 Preface — RHS Comp Sci III
+
+https://postcss.org/ | PostCSS - a tool for transforming CSS with JavaScript
+
 https://lite.duckduckgo.com/lite/?q=self+taught+technical+interviews+reddit | self taught technical interviews reddit at DuckDuckGo
 https://libreddit.kylrth.com/r/cscareerquestions/comments/xnll35/is_getting_a_job_as_a_self_taught_really_possible/ | is getting a job as a self taught really possible? any success stories from self taughts? - r/cscareerquestions
 https://libreddit.kylrth.com/r/learnprogramming/comments/qsz7nm/had_my_first_proper_technical_interview_and/ | Had my first proper technical interview and absolutely bombed it! - r/learnprogramming
