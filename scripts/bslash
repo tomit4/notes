@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "Usage: bslash <file>"
+    exit 1
+fi
+
+input=$(cat "$1")
+
+output="${input//$/$\\}"
+
+echo "$output" | xclip -sel clip
