@@ -55,7 +55,8 @@ echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r
 # Configure thefuck
 eval "$(thefuck --alias)"
 # Change with care:
-export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
+export PATH="$PATH:$GOPATH/bin:/usr/local/cuda/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib:$PATH"
 # Configure grep output colors
 export GREP_COLORS='ms=01;34'
 
