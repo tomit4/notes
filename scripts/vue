@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Utilize in conjunction with espanso, call ;vue
 cat <<EOM
-<script setup></script>
+<script setup lang="ts"></script>
 
 <template>
     <div></div>
