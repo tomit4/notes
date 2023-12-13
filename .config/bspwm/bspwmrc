@@ -66,6 +66,7 @@ bspc rule -a Codium center=on rectangle=1555x960+1440+810 &
 bspc rule -a Thorium-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
 bspc rule -a librewolf center=on rectangle=1555x960+1440+810 &
+bspc rule -a lm-studio center=on rectangle=1555x960+1440+810 &
 bspc rule -a thunderbird center=on rectangle=1555x960+1440+810 &
 bspc rule -a Virt-manager center=on rectangle=1555x960+1440+810 &
 bspc rule -a Gimp center=on rectangle=1555x960+1440+810 &
