@@ -93,6 +93,11 @@ vim.keymap.set("n", "<leader>r", ":silent :Rg")
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
 
+-- appends backslash to end of specified number of lines (min 2)
+-- usage: 4<leader>b will append a backslash to the end of 4 lines
+-- note: useful for grabbing code snippets for chatting with codellama in terminal
+vim.cmd([[nnoremap <leader>b :.,+<C-R>=v:count1<CR>norm A\<Esc>]])
+
 --toggle undotree
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<cr>")
 
