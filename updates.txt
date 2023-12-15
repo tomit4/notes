@@ -411,3 +411,8 @@ https://github.com/Exafunction/codeium.vim#-installation-options
 12/12/2023
 Install redis
 doas pacman -S redis redis-runit
+
+12/15/2023
+Recently there were memory issues installing redis server within docker. After researching, I found that editing our /etc/rc.local file holds the answer. Append the following and reboot:
+sysctl vm.overcommit_memory=1
+sysctl fs.file-max=100000
