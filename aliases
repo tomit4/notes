@@ -240,6 +240,7 @@ alias has="dependencycheck"
 alias ipaddr="curl ifconfig.me/all.json | jq"
 alias hwclock="doas hwclock"
 alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
+alias ports="netstat -tunlp"
 # alias npm_upgrade="doas npm install --location=global npm@latest"
 alias npm-l="npm list --global"
 alias npm-s="npm start"
