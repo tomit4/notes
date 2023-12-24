@@ -1,3 +1,90 @@
+https://stackoverflow.com/questions/18263796/http-status-for-already-logged-in | rest - HTTP Status for "already logged in" - Stack Overflow
+https://scribe.rip/@adesinabolaji/how-to-avoid-concurrent-login-by-same-user-in-your-application-using-jwt-7c2ea3dc706c | How To Avoid Concurrent Login By Same User In your Application using JWT.
+https://stackoverflow.com/questions/59656775/force-logout-of-user-on-multiple-devices-using-jwt | rest - Force Logout of user on multiple devices using JWT - Stack Overflow
+https://stackoverflow.com/questions/73593691/how-to-prevent-detect-login-from-multiple-devices-from-a-single-user-node-js | authentication - How to prevent/detect login from multiple devices from a single user? (Node.js | oAuth 2.0) - Stack Overflow
+
+https://stackoverflow.com/questions/36930065/what-are-the-ways-to-implement-logout-from-all-devices-feature-with-jwt-token-me | node.js - What are the ways to implement logout from all devices feature with JWT token mechanism? - Stack Overflow
+https://github.com/fastify/fastify-jwt | GitHub - fastify/fastify-jwt: JWT utils for Fastify
+https://dev.to/lek890/authentication-strategy-application-fastify-typescript-jwt-52nb | Authentication Strategy - Fastify + Typescript + JWT - DEV Community
+https://bobbyhadz.com/blog/typescript-extend-type | How to extend a Type in TypeScript | bobbyhadz
+https://router.vuejs.org/guide/advanced/navigation-guards.html | Navigation Guards | Vue Router
+https://chrismroberts.com/2019/01/03/authentication-and-protected-routes-in-vuejs/ | Authentication and Protected Routes in VueJS - Chris Roberts
+https://stackoverflow.com/questions/71074351/vue-router-protecting-private-routes-with-authentication-the-right-way | vue.js - Vue-Router: Protecting private routes with authentication the right way - Stack Overflow
+https://www.kevincunningham.co.uk/posts/protect-fastify-routes-with-authorization/ | Protect Fastify routes with Authorization
+https://scribe.rip/@atatijr/token-based-authentication-with-fastify-jwt-and-typescript-1fa5cccc63c5 | Token based authentication with Fastify, JWT, and Typescript
+https://stackoverflow.com/questions/68403905/how-to-add-additional-properties-to-jwtpayload-type-from-types-jsonwebtoken | typescript - How to add additional properties to JwtPayload type from @types/jsonwebtoken - Stack Overflow
+https://stackoverflow.com/questions/73504388/property-email-does-not-exist-on-type-string | javascript - Property 'email' does not exist on type 'string' - Stack Overflow
+
+https://security.stackexchange.com/questions/239531/how-to-properly-invalidate-jwt-tokens-and-sessions-in-this-use-case | authentication - How to properly invalidate JWT tokens and sessions in this use case? - Information Security Stack Exchange
+https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/ | What Are Refresh Tokens and How to Use Them Securely
+https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/ | Critical vulnerabilities in JSON Web Token libraries
+
+https://stackoverflow.com/questions/44890564/should-i-store-jwt-tokens-in-redis | node.js - Should I store JWT tokens in redis? - Stack Overflow
+https://security.stackexchange.com/questions/119371/is-refreshing-an-expired-jwt-token-a-good-strategy | Is refreshing an expired JWT token a good strategy? - Information Security Stack Exchange
+https://stackoverflow.com/questions/27726066/jwt-refresh-token-flow | security - JWT refresh token flow - Stack Overflow
+https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/ | The Ultimate Guide to handling JWTs on frontend clients (GraphQL)
+https://blog.logrocket.com/how-to-implement-jwt-authentication-vue-nodejs/#jwt-structure | How to implement JWT authentication with Vue and Node.js - LogRocket Blog
+https://stackoverflow.com/questions/46379410/how-to-handle-jwt-token-on-the-client-site-in-node-js-application | How to handle JWT token on the client site in Node.js application? - Stack Overflow
+
+https://router.vuejs.org/guide/advanced/navigation-guards.html | Navigation Guards | Vue Router
+https://pinia.vuejs.org/ | Pinia | The intuitive store for Vue.js
+https://router.vuejs.org/guide/advanced/meta | Route Meta Fields | Vue Router
+
+https://github.com/fastify/fastify-redis/tree/master/types | fastify-redis/types at master · fastify/fastify-redis · GitHub
+https://libreddit.kylrth.com/r/node/comments/15gbjpm/fastify_typescript_boilerplate/ | Fastify Typescript Boilerplate - r/node
+https://github.com/goldbergyoni/nodebestpractices#1-project-architecture-practices | GitHub - goldbergyoni/nodebestpractices: :white_check_mark: The Node.js best practices list (December 2023)
+https://github.com/TheB1gFatPanda/fastify-typescript-starter | GitHub - TheB1gFatPanda/fastify-typescript-starter: fastify + typescript starter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing | Nullish coalescing operator (??) - JavaScript | MDN
+
+https://github.com/beliven-it/fastify-bcrypt | GitHub - beliven-it/fastify-bcrypt: A Bcrypt hash generator & checker
+https://github.com/redis/ioredis | GitHub - redis/ioredis: 🚀 A robust, performance-focused, and full-featured Redis client for Node.js.
+https://www.npmjs.com/package/argon2id | argon2id - npm
+https://www.rfc-editor.org/rfc/rfc9106.html#name-parameter-choice | RFC 9106: Argon2 Memory-Hard Function for Password Hashing and Proof-of-Work Applications
+
+https://docs.docker.com/guides/walkthroughs/multi-container-apps/ | Run multi-container applications | Docker Docs
+https://geshan.com.np/blog/2022/01/redis-docker/ | Using Redis with docker and docker-compose for local development a step-by-step tutorial
+
+https://redis.io/docs/connect/cli/ | Redis CLI | Redis
+https://fastify.dev/docs/latest/Guides/Ecosystem/ | Ecosystem | Fastify
+https://github.com/beliven-it/fastify-bcrypt | GitHub - beliven-it/fastify-bcrypt: A Bcrypt hash generator & checker
+https://www.npmjs.com/package/bcryptjs | bcryptjs - npm
+
+https://fastify.dev/docs/latest/Guides/Ecosystem | Ecosystem | Fastify
+https://github.com/fastify/fastify-jwt | GitHub - fastify/fastify-jwt: JWT utils for Fastify
+https://github.com/nbalduzzi/fastify-knexjs | GitHub - nbalduzzi/fastify-knexjs: Fastify KnexJS Plugin
+
+https://libreddit.kylrth.com/r/reactjs/comments/udiwx0/dynamic_meta_tags_on_a_reactjs_spa/ | Dynamic meta tags on a ReactJS SPA - r/reactjs
+
+https://neon.tech/ | Neon — Serverless, Fault-Tolerant, Branchable Postgres
+
+https://www.screamingfrog.co.uk/seo-spider/ | Screaming Frog SEO Spider Website Crawler
+https://moz.com/ | Moz - SEO Software for Smarter Marketing
+https://ahrefs.com/keyword-generator | Free Keyword Generator Tool: Find 100+ Keyword Ideas in Seconds
+
+https://libreddit.kylrth.com/r/node/comments/15gbjpm/fastify_typescript_boilerplate/ | Fastify Typescript Boilerplate - r/node
+https://fastify.dev/docs/latest/Guides/Ecosystem | Ecosystem | Fastify
+https://libreddit.kylrth.com/r/node/comments/vgpoks/raw_sql_vs_knexjs_vs_prisma_vs_mikroorm/ | Raw SQL vs Knex.js vs Prisma vs MikroORM - r/node
+https://www.basedash.com/blog/how-to-configure-knex-js-with-typescript | How to Configure Knex.js with TypeScript | Basedash
+
+https://libreddit.kylrth.com/r/reactjs/comments/11qcfk7/use_same_validation_in_both_frontend_and_backend/ | USE SAME VALIDATION IN BOTH FRONT-END AND BACK-END - r/reactjs
+https://blog.logrocket.com/when-to-use-never-unknown-typescript/#typescript-never-type | When to use never and unknown in TypeScript - LogRocket Blog
+https://stackoverflow.com/questions/68823887/type-unknown-is-not-assignable-to-type-string | angular - Type 'unknown' is not assignable to type 'string' - Stack Overflow
+https://bobbyhadz.com/blog/typescript-function-return-type-object | Declare functions returning Object or Array in TypeScript | bobbyhadz
+https://bobbyhadz.com/blog/typescript-no-overload-matches-this-call | No overload matches this call error in TypeScript [Solved] | bobbyhadz
+https://fastify.dev/docs/latest/Reference/TypeScript/ | TypeScript | Fastify
+https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript | Interfaces vs Types in TypeScript - Stack Overflow
+https://stackoverflow.com/questions/62254729/how-to-declare-object-with-optional-keys | typescript - How to declare object with optional keys? - Stack Overflow
+https://lite.duckduckgo.com/lite/?q=typescript+when+you+don%27t+know+what+will+be+returned+from+api%2C+or+is+too+extensive | typescript when you don't know what will be returned from api, or is too extensive at DuckDuckGo
+https://stackoverflow.com/questions/65815269/how-to-use-typescript-types-on-api-response-data | javascript - How to use TypeScript types on API response data - Stack Overflow
+
+https://invidious.slipfox.xyz/search?q=make+simple+pong+game+in+javascript | make simple pong game in javas… - Invidious
+https://modernweb.com/building-multiplayer-games-node-js-socket-io/ | Building Multiplayer Games With Node.js And Socket.IO | Modern Web - Web3, Business & Technology
+https://www.pubnub.com/blog/javascript-multiplayer-game/ | How to Make an Online Multiplayer Game in JavaScript | PubNub
+
+https://fastify.dev/docs/latest/Guides/Getting-Started/ | Getting-Started | Fastify
+https://vuejs.org/guide/introduction.html | Introduction | Vue.js
+https://router.vuejs.org/guide/ | Getting Started | Vue Router
+
 https://vue-community.org/guide/ecosystem/mobile-apps.html | Mobile Apps | Vue Community
 https://nativescript-vue.org/en/docs/introduction/ | Introduction - NativeScript-Vue
 https://docs.nativescript.org/ | Introduction | NativeScript
