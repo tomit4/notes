@@ -311,6 +311,7 @@ alias {say,speak,espeak}="espeak -v female5"
 alias git-a="git add"
 alias git-c="git commit -m"
 alias git-p="git push"
+alias {git-\#,git\#}="git rev-list --count --all"
 # taken from Luke Smith, pushes to all remotes
 alias gua="git remote | xargs -L1 git push --all"
 # undo local file changes and keep your last commit
