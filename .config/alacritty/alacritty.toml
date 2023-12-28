@@ -1,0 +1,42 @@
+import = ["/home/brian/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Mononoki Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Mononoki Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Mononoki Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Mononoki Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 1
+
+[scrolling]
+history = 5000
+
+[window]
+opacity = 1.0
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 6
+y = 6
