@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#
 # This is the example configuration file for river.
 #
 # If you wish to edit this, you will probably want to copy it to
@@ -19,6 +19,8 @@ riverctl map normal Super D spawn dmenu-wl_run -i
 
 # Super+F to start librewolf
 riverctl map normal Super F spawn librewolf
+# Super+B to start btop
+riverctl map normal Super B spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop"
 
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
@@ -175,3 +177,6 @@ rivertile -view-padding 6 -outer-padding 6 &
 swaybg --image /home/brian/Pictures/leaves.jpg --mode fill &
 # Start espanso (requires wayland version)
 # espanso start --unmanaged &
+# Start btop from foot terminal
+# NOTE: currently troubleshooting
+riverctl spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop"
