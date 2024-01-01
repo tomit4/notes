@@ -19,14 +19,15 @@ riverctl map normal Super D spawn dmenu-wl_run -i
 
 # Super+F to start librewolf
 riverctl map normal Super F spawn librewolf
+
 # Super+B to start btop
 riverctl map normal Super B spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop"
 
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
 
-# Super+Shift+E to exit river
-riverctl map normal Super+Shift E exit
+# Super+Shift+Escape to exit river
+riverctl map normal Super+Shift Escape exit
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -106,7 +107,7 @@ riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # Super+Space to toggle float
-riverctl map normal Super Space toggle-float
+riverctl map normal Super O toggle-float
 
 # Super+Shift+F to toggle fullscreen
 riverctl map normal Super+Shift F toggle-fullscreen
@@ -150,9 +151,18 @@ for mode in normal locked; do
 done
 
 # Set background and border color
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+# riverctl background-color 0x002b36
+# riverctl border-color-focused 0x93a1a1
+riverctl border-color-focused 0x2c77ac
+# riverctl border-color-unfocused 0x586e75
+riverctl border-color-unfocused 0x444444
+riverctl border-width 1
+
+# Customize cursor
+# NOTE: Still troubleshooting
+# riverctl hide-cursor when-typing enabled
+riverctl xcursor-theme Adwaita
+gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -166,17 +176,16 @@ riverctl rule-add -app-id "bar" csd
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
 
 # Custom apps
-# Start pipewire
-/usr/bin/pipewire &
-/usr/bin/pipewire-pulse &
-/usr/bin/wireplumber &
-# Set Background Image
+## Set Background Image
 swaybg --image /home/brian/Pictures/leaves.jpg --mode fill &
 # Start espanso (requires wayland version)
 # espanso start --unmanaged &
 # Start btop from foot terminal
-# NOTE: currently troubleshooting
-riverctl spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop"
+riverctl spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop" &
+# Start pipewire
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
