@@ -143,6 +143,33 @@ And add this to the config file:
 options nvidia_drm modeset=1 fbdev=1
 ```
 
+**FLAMESHOT**
+Getting flameshot working was a bit of a pain. Ensure you have installed the
+following:
+
+```
+flameshot
+grim
+xdg-desktop-portal-wlr
+```
+
+You'll also need to appen these environment variables to you /etc/profile file:
+
+```
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+```
+
+In order to invoke, open up either a terminal (or better yet, dmenu, and
+invoke):
+
+```
+flameshot gui
+```
+
+You'll then receive a prompt on how to utilize flameshot. Select the region you
+wish to capture, and then hit Ctrl+S to save.
+
 **CONCLUSION**
 
 Once all set up, simply switch to a separate tty (ctrl + alt + F<your_choice>).
