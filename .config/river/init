@@ -14,8 +14,7 @@
 riverctl map normal Super Return spawn foot
 
 # Super+D starts dmenu-wl (wayland dmenu)
-# NOTE: Currently troubleshooting
-riverctl map normal Super D spawn dmenu-wl_run -i
+riverctl map normal Super D spawn "dmenu-wl_run -i"
 
 # Super+F to start librewolf
 riverctl map normal Super F spawn librewolf
@@ -26,7 +25,7 @@ riverctl map normal Super B spawn "foot --config='/home/brian/.config/foot/bfoot
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
 
-# Super+Shift+Escape to exit river
+# Super+Shift+Escape to exit river with prompt
 riverctl map normal Super+Shift Escape exit
 
 # Super+J and Super+K to focus the next/previous view in the layout stack

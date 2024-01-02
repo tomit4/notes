@@ -22,7 +22,7 @@ super + Escape
 # bspwm hotkeys
 # quit bspwm
 super + shift + Escape
-    /home/brian/scripts/prompt "Are you sure you would like to quite this Xsession?" "bspc quit"
+    /home/brian/scripts/prompt "Are you sure you would like to quit this Xsession?" "bspc quit"
 
 # restart bspwm
 super + shift + r
