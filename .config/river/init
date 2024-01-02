@@ -163,6 +163,8 @@ riverctl border-width 1
 # riverctl hide-cursor when-typing enabled
 riverctl xcursor-theme Adwaita
 gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+riverctl hide-cursor when-typing enabled
+riverctl hide-cursor timeout 2000
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -181,8 +183,10 @@ rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
 # Custom apps
 ## Set Background Image
 swaybg --image /home/brian/Pictures/leaves.jpg --mode fill &
-# Start espanso (requires wayland version)
-# espanso start --unmanaged &
+gammastep -b 0.95 -O 5500K &
+# Start espanso
+# (requires wayland version... doesn't work with river, possibly with wayland)
+# espanso-wl service start --unmanaged &
 # Start btop from foot terminal
 riverctl spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop" &
 # Start pipewire
