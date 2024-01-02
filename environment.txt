@@ -1,0 +1,9 @@
+QT_QPA_PLATFORMTHEME=gtk2
+QT_STYLE_OVERRIDE=gtk
+QTWEBENGINE_CHROMIUM_FLAGS="-blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter"
+RADV_PERFTEST=aco
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+WLR_NO_HARDWARE_CURSORS=1
+ENABLE_VKBASALT=1
+LIBVA_DRIVER_NAME=nvidia
