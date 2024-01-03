@@ -175,6 +175,15 @@ wish to capture, and then hit Ctrl+S to save.
 Replacing xclip for simple clipboard copying from terminal, you can install
 wl-copy and essentially use it for the same.
 
+**VIEWING IMAGES IN FOOT USING LIBSIXEL**
+
+You can indeed view images in the foot terminal, install ligsixel from official
+repos. Once installed, you can view these images from foot by typing in:
+
+```
+img2sixel image.png
+```
+
 **CONCLUSION**
 
 Once all set up, simply switch to a separate tty (ctrl + alt + F<your_choice>).
