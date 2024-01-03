@@ -1,0 +1,51 @@
+For the longest time, I could not for the life of me figure out how to configure Arch/Artix to connect to my family's wifi unless I had a Desktop Environment (XFCE) to easily facilitate connecting. This prevented me from being a Terminal Using Chad (lol). I recently decided to document how to do so from a bare bones installation medium of Artix.
+
+I won't go into the documentation on how to write an ISO usb, see the rpi4_image_notes.txt here in the notes that cover the basics using fdisk, mkfs, and dd.
+
+This short guide is simply to document how to connect to wifi for easier installation of initial pacman packages.
+
+Note that connecting to wifi isn't the first thing the installation guide has you do (that would be partitioning your disks).
+
+Nor does this guide cover how to boot from a usb via the BIOS (although I've written extensively on that as well).
+
+Simply put, this guide covers the essentials of what has worked for me without all the hunting and searching through the Arch Wiki for the right answer on my particular machine.
+
+Firstly, boot from the usb. Once the interactive shell prompt has shown, login as root (not the artix user):
+
+username: root
+password: artix
+
+From here you'll be in an interactive shell. We're going to use wpa_supplicant via the cli to connect to the internet, but first we have to remove the soft blocks on the wifi card. Simply input:
+
+rfkill unblock all
+
+Note that this will also unblock the bluetooth (no worries).
+
+Now enter the wpa_cli:
+
+wpa_cli
+
+Here you'll be inside a cli tool that will help you connect to your local wifi, input the following(note the outputs, OK, and 0).
+
+scan
+OK
+scan_results
+OK
+add_network
+0
+set_network 0 ssid "MYSSID"
+OK
+set_network 0 psk "passphrase"
+OK
+enable_network 0
+OK
+save_config (may return FAIL, but still actually work...?)
+quit
+
+Finally test the internet connection using ping:
+
+ping 8.8.8.8
+
+To sync pacman with the mirros, simply pacman -Sy first before pacman -Syu.
+
+Note that this will be if you ever need to start over, and this notation is just in prep so you don't have to go digging through the Arch Wiki Docs trying to learn all this again.
