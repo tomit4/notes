@@ -184,6 +184,15 @@ repos. Once installed, you can view these images from foot by typing in:
 img2sixel image.png
 ```
 
+**AUTO STARTING IN TTY2 VIA ZPROFILE**
+
+To start river automatically when logging into tty2, add the following to your
+zprofile:
+
+```
+[[ -z $WAYLAND_DISPLAY && $XDG_VTNR -eq 2 ]] && exec river
+```
+
 **CONCLUSION**
 
 Once all set up, simply switch to a separate tty (ctrl + alt + F<your_choice>).
