@@ -175,6 +175,8 @@ alias lxapp="lxappearance"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
+# wayland has an equivalent as well:
+alias {wsel,catw}="wl-copy" # useful with | redirection, i.e. echo "hi there" | catw
 # alias printdoc="lp -d Brother"
 alias printdoc="lp -d MFCJ615W"
 alias catp="xclip -out -selection clipboard; echo"

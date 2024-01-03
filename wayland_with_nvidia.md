@@ -170,6 +170,11 @@ flameshot gui
 You'll then receive a prompt on how to utilize flameshot. Select the region you
 wish to capture, and then hit Ctrl+S to save.
 
+**REPLACING XCLIP WITH WL_COPY**
+
+Replacing xclip for simple clipboard copying from terminal, you can install
+wl-copy and essentially use it for the same.
+
 **CONCLUSION**
 
 Once all set up, simply switch to a separate tty (ctrl + alt + F<your_choice>).
