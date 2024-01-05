@@ -418,6 +418,6 @@ sysctl vm.overcommit_memory=1
 sysctl fs.file-max=100000
 
 01/04/2024
-Install gobble to replace devour (works on both X and wayland):
+Install gobble to replace devour (doesn't work on wayland, but is supposedly better than devour):
 paru -S gobble
 paru -Rs devour
