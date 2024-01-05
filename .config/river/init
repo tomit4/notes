@@ -14,13 +14,34 @@
 riverctl map normal Super Return spawn foot
 
 # Super+D starts dmenu-wl (wayland dmenu)
-riverctl map normal Super D spawn "dmenu-wl_run -i"
-
+riverctl map normal Super D spawn "dmenu-wl_run -nb '#323b4d' -sf '#323b4d' -sb '#87afd7' -nf '#87afd7' -fn '12'"
 # Super+F to start librewolf
 riverctl map normal Super F spawn librewolf
 
 # Super+B to start btop
 riverctl map normal Super B spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop"
+
+riverctl map normal Super A spawn "pavucontrol"
+riverctl map normal Super Z spawn "tootle"
+riverctl map normal Super C spawn "chromium"
+riverctl map normal Super G spawn "gimp --no-splash"
+# NOTE: currently troubleshooting
+riverctl map normal Super L spawn "gcolor3"
+riverctl map normal Super U spawn "galculator"
+riverctl map normal Super K spawn "keepassxc"
+riverctl map normal Super T spawn "thunderbird"
+riverctl map normal Super P spawn "pcmanfm"
+riverctl map normal Super M spawn "mousepad"
+# Doesn't work in wayland
+# riverctl map normal Super N spawn "desktopeditors"
+riverctl map normal Super J spawn "foliate"
+riverctl map normal Super S spawn "steam"
+riverctl map normal Super V spawn "virt-manager"
+# NOTE: will start, but is in experimental stage, recommended to use X11
+# riverctl map normal Super R spawn "rustdesk"
+# NOTE: will start, but currently cannot be used in wayland, wait for xfce4 to come out for wayland
+# xriverctl map normal Super Q spawn "xfce4-screenshooter"
+riverctl map normal Super X spawn "cpu-x"
 
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
@@ -33,13 +54,15 @@ riverctl map normal Super Tab spawn 'pamixer --increase 5'
 riverctl map normal Super BackSpace spawn 'pamixer --decrease 5'
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
-riverctl map normal Super J focus-view next
-riverctl map normal Super K focus-view previous
+riverctl map normal Super Right focus-view next
+riverctl map normal Super Left focus-view previous
 
 # Super+Shift+J and Super+Shift+K to swap the focused view with the next/previous
 # view in the layout stack
-riverctl map normal Super+Shift J swap next
-riverctl map normal Super+Shift K swap previous
+# riverctl map normal Super+Shift J swap next
+# riverctl map normal Super+Shift K swap previous
+riverctl map normal Super+Shift Right swap next
+riverctl map normal Super+Shift Left swap previous
 
 # Super+Period and Super+Comma to focus the next/previous output
 riverctl map normal Super Period focus-output next
@@ -53,8 +76,8 @@ riverctl map normal Super+Shift Comma send-to-output previous
 riverctl map normal Super+Shift Return zoom
 
 # Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Alt+Shift Left send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Alt+Shift Right send-layout-cmd rivertile "main-ratio +0.05"
 
 # Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile(1)
 riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
@@ -116,10 +139,10 @@ riverctl map normal Super O toggle-float
 riverctl map normal Super+Shift F toggle-fullscreen
 
 # Super+{Up,Right,Down,Left} to change layout orientation
-riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
-riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
-riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
+# riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
+# riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
+# riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
+# riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
 
 # Declare a passthrough mode. This mode has only a single mapping to return to
 # normal mode. This makes it useful for testing a nested wayland compositor
