@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # This is the example configuration file for river.
-#
+
 # If you wish to edit this, you will probably want to copy it to
 # $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
 #
@@ -27,6 +27,10 @@ riverctl map normal Super+Shift Q close
 
 # Super+Shift+Escape to exit river with prompt
 riverctl map normal Super+Shift Escape exit
+
+# pamixer controls
+riverctl map normal Super Tab spawn 'pamixer --increase 5'
+riverctl map normal Super BackSpace spawn 'pamixer --decrease 5'
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -178,6 +182,9 @@ riverctl rule-add -app-id "bar" csd
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
+# Nice, but too much like i3... requires installing river-bsp-layout (from AUR)
+# riverctl default-layout bsp-layout
+# river-bsp-layout --inner-gap 3 --outer-gap 3 &
 
 # Custom apps
 ## Set Background Image
@@ -188,6 +195,7 @@ gammastep -b 0.95 -O 5500K &
 # espanso-wl service start --unmanaged &
 # Start btop from foot terminal
 riverctl spawn "foot --config='/home/brian/.config/foot/bfoot.ini' btop" &
+export XDG_CURRENT_DESKTOP=river &
 # Start pipewire
 /usr/bin/pipewire &
 /usr/bin/pipewire-pulse &
