@@ -187,10 +187,11 @@ img2sixel image.png
 **AUTO STARTING IN TTY2 VIA ZPROFILE**
 
 To start river automatically when logging into tty2, add the following to your
-zprofile:
+zprofile ( note the addition of dbus-launch, this is necessary for certain
+programs like keepassxc):
 
 ```
-[[ -z $WAYLAND_DISPLAY && $XDG_VTNR -eq 2 ]] && exec river
+[[ -z $WAYLAND_DISPLAY && $XDG_VTNR -eq 2 ]] && exec dbus-launch --exit-with-session
 ```
 
 **CONCLUSION**
@@ -202,3 +203,7 @@ I can use X11 until Nvidia catches up with Wayland (solve that artifcating issue
 NVIDIA, come on!!), and in the meanwhile, I can start to get ready for this
 eventual migration. Lastly, I'll have to look into how to get river to start up
 in TTY1, as .xinitrc obviously won't work for that...
+
+```
+
+```
