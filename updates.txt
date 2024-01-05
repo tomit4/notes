@@ -416,3 +416,8 @@ doas pacman -S redis redis-runit
 Recently there were memory issues installing redis server within docker. After researching, I found that editing our /etc/rc.local file holds the answer. Append the following and reboot:
 sysctl vm.overcommit_memory=1
 sysctl fs.file-max=100000
+
+01/04/2024
+Install gobble to replace devour (works on both X and wayland):
+paru -S gobble
+paru -Rs devour
