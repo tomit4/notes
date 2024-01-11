@@ -3,7 +3,9 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  /* From Theo's channel */
+  min-width: 0;
 }
 
 /* kevin uses html here, 
