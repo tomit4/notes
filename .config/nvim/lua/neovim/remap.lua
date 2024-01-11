@@ -137,7 +137,7 @@ vim.keymap.set("n", "<leader>dov", ":lua require'dap'.step_over()")
 vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()")
 vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
 vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")
--- vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
+vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
 --
 -- codeium remappings
 vim.keymap.set("i", "<A-tab>", function()

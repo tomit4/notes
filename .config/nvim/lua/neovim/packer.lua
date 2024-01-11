@@ -90,6 +90,9 @@ return require("packer").startup(function(use)
 			{
 				"microsoft/vscode-js-debug",
 				opt = true,
+				-- NOTE: didn't compile on install for some reason,
+				-- navigate to ~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug
+				-- and npm run compile by hand...
 				run = "npm install --legacy-peer-deps && npm run compile",
 			},
 		},
