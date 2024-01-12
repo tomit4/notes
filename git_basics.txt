@@ -126,5 +126,22 @@ Once within your local repository directory you can view what repositories you h
 git remote -v
 
 
+################### REVERTING BACK TO PREVIOUS COMMIT #####################
+
+NOTE: this is kinda dangerous, be careful, especially when working in production or with others
+
+git log
+
+- Find log hash of the commit you want to revert to
+
+git revert --no-commit 0d1d7fc3..HEAD
+
+NOTE: the '..HEAD' syntax is necessary
+
+git commit
+
+git push origin main
+
+This will revert it back to the previous commit
 
 
