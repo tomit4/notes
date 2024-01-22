@@ -421,3 +421,12 @@ sysctl fs.file-max=100000
 Install gobble to replace devour (doesn't work on wayland, but is supposedly better than devour):
 paru -S gobble
 paru -Rs devour
+
+01/21/2024
+Reset omniverse repo mirror list in /etc/pacman.conf:
+https://wiki.artixlinux.org/Main/Repositories#Omniverse
+Once done, paru -Rs librewolf-bin ungoogled-chromium
+And reinstall using pacman:
+doas pacman -S librewolf ungoogled-chromium
+Also, install ctop (top for seeing running docker containers)
+doas pacman -S ctop

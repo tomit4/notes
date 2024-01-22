@@ -41,7 +41,7 @@ alias py="cd ~/Documents/Code/python && ls"
 alias phpd="cd ~/Documents/Code/php && ls"
 alias logs="cd /var/log && ls"
 alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
-alias lmstudio="devour firejail --net=none --noprofile /opt/lmstudio-appimage/lmstudio-appimage.AppImage"
+alias lmstudio="gobble firejail --net=none --noprofile /opt/lmstudio-appimage/lmstudio-appimage.AppImage"
 alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
 alias btuts="cd ~/Documents/Code/book_tutorials && ls"
 alias fonts="fc-list"
@@ -102,14 +102,14 @@ alias {sqcipher,sqc}="sqlcipher"
 alias sqlite-cli="litecli"
 alias sq-cli="litecli" # doesn't work with sqlcipher
 # alias view="kitty +kitten icat"
-alias view="devour sxiv"
+alias view="gobble sxiv"
 alias view-w="img2sixel"
 alias csview="csvlook"
 alias viewer="feh -F -Z -x"
-alias mupdf='devour mupdf -r 204'
-alias dkpdf='devour mupdf -I -r 204'
-alias sign='devour xournalpp'
-alias keys="devour keepassxc $KDBX"
+alias mupdf='gobble mupdf -r 204'
+alias dkpdf='gobble mupdf -I -r 204'
+alias sign='gobble xournalpp'
+alias keys="gobble keepassxc $KDBX"
 alias {json,jscrl,jsoncurl,jcrl}="jscurl"
 alias amd="article_md"
 alias kevents="xev -event keyboard"
@@ -199,13 +199,13 @@ alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 # interfaces with asciinema.org for creating simple video tutorials on cli programs
 alias ascii="asciinema"
 
-alias mpv="devour mpv --sub-font-size=40"
+alias mpv="gobble mpv --sub-font-size=40"
 alias {listen,yt-listen,mpva}='/usr/bin/mpv "${1}" --no-video'
-alias mmpv='devour mpv --fs --panscan=1.0'
-alias {qvid,qv4}="devour qv4l2" # better amount of controls for webcam
-alias {gvid,gv4}="devour guvcview" # set to 50hz
+alias mmpv='gobble mpv --fs --panscan=1.0'
+alias {qvid,qv4}="gobble qv4l2" # better amount of controls for webcam
+alias {gvid,gv4}="gobble guvcview" # set to 50hz
 # bare bones, just views webcam:
-alias {wcam,webcam}="devour mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency"
+alias {wcam,webcam}="gobble mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency"
 # use: record /path/to/file.mp3
 alias record="arecord -vv --format=cd --file-type raw | lame -r - "
 alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
@@ -599,8 +599,8 @@ alias unsplash="librewolf https://unsplash.com/developers &"
 # wikimedia commons provides public domain images
 alias wikimedia="librewolf https://commons.wikimedia.org/wiki/Main_Page/ &"
 # wesbos tutorials/articles/etc
-alias wesbos="brave https://courses.wesbos.com &"
-alias frontendmasters="librewolf https://frontendmasters.com/ &"
+# alias wesbos="brave https://courses.wesbos.com &"
+# alias frontendmasters="librewolf https://frontendmasters.com/ &"
 # send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
 alias textbelt="librewolf https://textbelt.com/ &"
 # create an email server backend using nodejs (& express...)
