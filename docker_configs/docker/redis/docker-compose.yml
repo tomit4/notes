@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  cache:
+    image: redis:7.2-alpine
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass redis
+    networks:
+      - postgres_app_backend
+    volumes:
+      - cache:/data
+networks:
+  postgres_app_backend:
+    name: postgres_app_backend
+    external: true
+volumes:
+  cache:
+    driver: local

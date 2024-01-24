@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:16.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgros
+      - POSTGRES_PASSWORD=postgros
+    networks:
+      - app_backend
+networks:
+  app_backend: {}
