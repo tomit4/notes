@@ -282,6 +282,9 @@ matches:
   - trigger: ";pref"
     force_clipboard: true
     replace: "about:preferences"
+  - trigger: ";prof"
+    force_clipboard: true
+    replace: "about:profiles"
   - trigger: ";add"
     force_clipboard: true
     replace: "about:addons"
