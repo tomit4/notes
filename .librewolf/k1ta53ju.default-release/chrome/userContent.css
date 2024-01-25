@@ -1,0 +1,8 @@
+:root {
+  scrollbar-color: #2c77ac #2c77ac;
+}
+
+#viewerContainer > #viewer .page > .canvasWrapper > canvas {
+    filter: grayscale(100%);
+    filter: invert(100%);
+}
