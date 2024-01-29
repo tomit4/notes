@@ -1,16 +1,47 @@
 [rsspls]
 output = "/home/brian/Documents/Code/blog/rss"
 [[feed]]
-title = "brianhayes.dev"
+title = "CSS: The Web's Makeup"
 filename = "feed.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/javascript_the_webs_muscles"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "CSS: The Web's Makeup"
+filename = "css_the_webs_makeup.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/css_the_webs_makeup"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "HTML: The Web's Skeleton"
+filename = "html_the_webs_skeleton.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/html_the_webs_skeleton"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "The ReadMe"
+filename = "the_readme.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/the_readme"
 item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Git Basics"
 filename = "git_basics.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/git_basics"
@@ -18,8 +49,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Espanso"
 filename = "espanso.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/espanso"
@@ -27,8 +59,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Ortholinear Keyboards"
 filename = "ortholinear_keyboards.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/ortholinear_keyboards"
@@ -36,8 +69,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Command Line"
 filename = "command_line.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/command_line"
@@ -45,8 +79,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "The Keys That Bind"
 filename = "the_keys_that_bind.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/the_keys_that_bind"
@@ -54,8 +89,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Musings On Vim"
 filename = "musings_on_vim.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/musings_on_vim"
@@ -63,8 +99,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "Why Use Linux"
 filename = "why_use_linux.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/why_use_linux"
@@ -72,8 +109,9 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
 [[feed]]
-title = "brianhayes.dev"
+title = "One With The Keyboard"
 filename = "one_with_the_keyboard.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/one_with_the_keyboard"
@@ -81,3 +119,4 @@ item = ".container"
 heading = "header"
 link = "a"
 summary = ".demo-button"
+date = "time"
