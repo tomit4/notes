@@ -77,11 +77,11 @@ Let's first deal with getting NVIDIA working. In /etc/environment, paste the
 following:
 
 ```
-
-QT_QPA_PLATFORMTHEME="gtk2;wayland;xcb"
-QT_STYLE_OVERRIDE=gtk
-QTWEBENGINE_CHROMIUM_FLAGS="-blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter"
-RADV_PERFTEST=aco
+# commented out is not needed
+QT_QPA_PLATFORMTHEME="wayland;xcb"
+# QT_STYLE_OVERRIDE=gtk
+# QTWEBENGINE_CHROMIUM_FLAGS="-blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter"
+# RADV_PERFTEST=aco
 GBM_BACKEND=nvidia-drm
 __GLX_VENDOR_LIBRARY_NAME=nvidia
 WLR_NO_HARDWARE_CURSORS=1
