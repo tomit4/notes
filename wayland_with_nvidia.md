@@ -131,7 +131,8 @@ doas grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 4. Probably overkill, but also set it in the kernel modules as well (don't
-   bother with this):
+   bother with this!! Caused xorg to have bad race condition when utilized with
+   other options, currently conferring with Artix team):
 
 ```
 doas touch /etc/modprobe.d/nvidia_drm.conf && \
