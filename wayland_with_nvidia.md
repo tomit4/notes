@@ -130,7 +130,8 @@ nvidia-drm.modeset=1
 doas grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-4. Probably overkill, but also set it in the kernel modules as well:
+4. Probably overkill, but also set it in the kernel modules as well (don't
+   bother with this):
 
 ```
 doas touch /etc/modprobe.d/nvidia_drm.conf && \
