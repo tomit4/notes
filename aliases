@@ -364,6 +364,7 @@ alias docker-rm-c="doas docker container rm"
 alias docker-rm-i="doas docker image rm"
 alias {docker-k,docker-kill}="docker kill"
 alias docker-exec="doas docker exec -it" # use with container ID and bash
+alias ctop="doas ctop"
 
 # bookmarks
 # nerdfonts cheat sheet for terminal icons
