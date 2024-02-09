@@ -4,8 +4,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* From Theo's channel */
-  min-width: 0;
 }
 
 /* kevin uses html here, 
@@ -32,4 +30,11 @@ svg,
 video {
   max-width: 100%;
   display: block;
+}
+
+/* TheoGG recommends this under '*', 
+ * but kevin says differently */
+input,
+textarea {
+  min-width: 0;
 }
