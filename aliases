@@ -235,7 +235,7 @@ alias shutdown="shutdown.sh"
 alias reboot="reboot.sh"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
 source ~/.zip_code
-alias inxi-w="inxi --weather-location "${ZIPCODE}""
+alias inxi-w="inxi --weather "${ZIPCODE}""
 alias inxi-i="doas inxi -Fxzm"
 alias forecast="curl -s 'http://wttr.in/losangeles'"
 alias pf="pfetch"
