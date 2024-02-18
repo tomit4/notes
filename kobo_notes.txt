@@ -31,3 +31,13 @@ And then navigate to your home directory and unmount the kobo:
 doas umount /mnt/media/kobo
 
 Now you should be able to access the Kobo interface without having to register your Kobo.
+
+## Converting to Kepub format
+
+Many of the books you'll find around are in .epub format, but some books have a hard time loading 
+and/or freeze the kobo device in this format. Best practice is to convert it to kobo's proprietary format .kepub.
+This can be accomplished using the [calibre software](https://calibre-ebook.com/download), which you can download 
+from your Artix's repos in the extra mirrors. You'll need to also get some plugins to automatically convert it.
+See [this github repo](https://github.com/jgoguen/calibre-kobo-driver) on how to install plugins. Once done, ALWAYS
+mount your kobo device using calibre and copy the .epub files to the kobo directly, this will automatically convert 
+it if you use the KoboTouchExtended plugin specifically (though all kobo and kepub plugins are encouraged to be installed.)
