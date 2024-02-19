@@ -1,590 +1,438 @@
-! Title: Bypass Paywalls Clean filter
-! Expires: 1 day (update frequency)
-! Description: Filters for news sites (supports less sites than the extension/add-on)
-! Homepage: https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
-! License: MIT; https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters/-/blob/main/LICENSE
-! Last modified: 
-! Version: 3.3.1.6
 
-! General
 
-||axate.io$script,third-party
-||loader-cdn.azureedge.net^$third-party
-||blueconic.net^$third-party
-||cdn.cxense.com^$script,third-party
-@@cdn.cxense.com^$script,domain=bizjournals.com
-||ensighten.com/*/Bootstrap.js$script,third-party
-||evolok.net^$third-party
-||paywall.fewcents.co/static/js/paywall.js
-||hadrianpaywall.com^$third-party
-||ippen.space^$third-party
-||js.matheranalytics.com^$script,third-party
-||newsmemory.com?meter$third-party
-||olytics.omeda.com^$third-party
-||onecount.net^$third-party
-||js.pelcro.com^$script,third-party
-||piano.io/xbuilder/experience/execute$xmlhttprequest,third-party
-@@||piano.io^$domain=asia.nikkei.com|hbr.org|japantimes.co.jp|kurier.at|onet.pl
-||api.pico.tools/client/query/*$xmlhttprequest,~third-party
-||api.pico.tools/popup/null/*$xmlhttprequest,~third-party
-gadget.pico.tools##+js(json-prune, locked)
-||poool.fr^$third-party
-||qiota.com^$xmlhttprequest,third-party
-||steadyhq.com^$script,third-party
-||tribdss.com^$third-party
-||wallkit.net/js/$script,third-party
-||weborama.fr/js/$script,third-party
-||zephr.com/zephr-browser/$third-party
-/c/assets/pigeon.js$script,~third-party
-/evolok/*/ev-widgets.min.js$script,~third-party
-/shared-content/art/tncms/api/access.js$script,~third-party
-/wp-content/*/ev-em.min.js$script,~third-party
-/zephr/feature$xmlhttprequest,~third-party
-@@/zephr/feature$xmlhttprequest,domain=nationalreview.com
 
-@@/wp-content/plugins/leaky-paywall/js/$script,~third-party
-@@/wp-content/plugins/leaky-paywall-$script,~third-party
 
-||abqjournal.com/*/abq-pw-manager.js$script,~third-party
-||abril.com.br/*/*-*-*-*$inline-script
-adweek.com##+js(cookie-remover, /blaize_session/)
-||ajc.com/prod/ajc/loader.min.js$script,~third-party
-.com/prod/ajc/loader.min.js$script,domain=dayton.com|daytondailynews.com|journal-news.com|springfieldnewssun.com
-alternatives-economiques.fr###temp-paywall
-alternatives-economiques.fr##+js(ra, style, div[data-ae-poool], stay)
-ambito.com##+js(cookie-remover, TDNotesRead)
-||americanaffairsjournal.org/wp-content/mu-plugins/app/src/paywall/paywall.js$script,~third-party
-artforum.com##+js(cookie-remover, /^/)
-||artnet.com/paywall-ajax.php$xmlhttprequest,~third-party
-magazine.atavist.com##+js(aopr, localStorage)
-||auto-motor-und-sport.de/thenewsbar/static/pw.js$script,~third-party
-||axios.com/api/v1/licenses
-axios.com##[data-vars-experiment="pro-paywall"],[class^="Modal_paywallContainer"],.apexAd
-axios.com##+js(ra, style, html[style], stay)
-||cdn.cxense.com/cx.js$script,domain=bizjournals.com,important
-||automobilwoche.de/sites/camw/files/js/js_9G4*.js$script,~third-party
-||cm.bloomberg.com^$xmlhttprequest,~third-party
-||assets.bwbx.io/s3/javelin/public/javelin/js/foundation/transporter/foundation_transporter-*.js$script,domain=bloomberg.com
-bloomberg.com##div[id^="fortress-"]
-bloomberg.com##+js(set-local-storage-item, history, $remove$)
-||bloombergadria.com/*/news/$inline-script
-bloombergadria.com##+js(ra, style, article[style])
-||meter.bostonglobe.com/js/meter.js$script,~third-party
-cen.acs.org##+js(cookie-remover, paywall-cookie)
-cen.acs.org##.meteredBar
-challenges.fr##div.amorce.manual
-challenges.fr##+js(ra, class|hidden, .user-paying-content)
-charliehebdo.fr##+js(ra, style, div.ch-paywalled-content)
-charliehebdo.fr##div#poool-widget
-||clicrbs.com.br/paywall-api/count/$xmlhttprequest,~third-party
-cnbc.com##div.ArticleGate-proGate
-cnbc.com##+js(ra, class|hidden, span[hidden])
-||chronicle.com/script.js$script,~third-party
-||philanthropy.com/script.js$script,~third-party
-chronicle.com,philanthropy.com##div[data-content-summary]
-chronicle.com,philanthropy.com##+js(ra, hidden|ppajfrg86rdhoubtirllb2bf1xsaknzus, div.contentBody)
-! cicero.de: url+?amp
-cicero.de##+js(rc, teasered-content, .teasered-content)
-cicero.de##.teasered-content-fader
-citywire.com##+js(rc, article-locked, .article-locked)
-citywire.com##+js(rc, m-article--locked, .m-article--locked)
-citywire.com##+js(rc, m-media-container--locked, .m-media-container--locked)
-citywire.com##+js(rc, m-article__body--locked, .m-article__body--locked)
-citywire.com##registration-widget,div.alert--locked
-||clarin.com/detail/auth0.js$script,~third-party
-||codesports.com.au/*/news-story/$inline-script
-||commentary.org/*/js/dg-locker-public.js$script,~third-party
-||connaissancedesarts.com/wp-content/cache/*.js$script,~third-party
-connaissancedesarts.com##div.ad-container
-||corriereobjects.it/*/js/_paywall.sjs$script,domain=corriere.it
-corrieredellosport.it##+js(cookie-remover, /paywall_articles/)
-||cdn.wyleex.com/elcronista/pw.min.js$script,domain=cronista.com
-||crusoe.com.br/assets/js/swg-wallcontent-crusoe.js$script,~third-party
-crusoe.com.br##div#gpt-leaderboard,div.ads_desktop,div.catchment-box
-csmonitor.com##+js(aopr, localStorage)
-csmonitor.com##.paywall
-dailywire.com###post-body-text > div > div:style(height: auto !important;)
-defector.com##+js(cookie-remover, lede_defector_user)
-defector.com##div[class^="ContentGate_wrapper__"]
-||dn.se/check-paywall-v2.js,~third-party
-||ndcmediagroep.nl/js/evolok/$script,third-party
-eastwest.eu##+js(ra, style, .paywall)
-eastwest.eu##+js(rc, paywall, .paywall)
-eastwest.eu###testo_articolo > p, #testo_articolo > h3
-eastwest.eu##.offerta_abbonamenti
-economist.com##div.paywall,svelte-scroller-outer
-economist.com##html:style(overflow: auto !important;)
-||editorialedomani.it/pelcro.js$script,~third-party
-elespanol.com##div.full-suscriptor-container
-elconfidencial.com##+js(rc, newsType__content--closed, div.newsType__content--closed)
-||elobservador.com.uy/shares$xmlhttprequest,~third-party
-||elpais.com.uy/user/authStatus$script,~third-party
-||elpais.com/arc/subs/p.min.js$script,~third-party
-eltiempo.com##+js(rc, modulos, div.modulos)
-||eltribuno.com/scripts/Bellhop/dist/bellhop.min.js$script,~third-party
-em.com.br##+js(rc, compress-text, .div.compress-text)
-enotes.com##section.c-cta-section
-enotes.com##+js(ra, class, div[class^="_"])
-||acesso.estadao.com.br/paywall/$script,~third-party
-etc.se##+js(ra, class, div.paywalled, stay)
-etc.se##+js(ra, class, div.bg-gradient-white, stay)
-etc.se##div[class$="-ad"]
-euobserver.com##+js(rc, show, div.membership-upsell.show)
-||exame.com/*/js/pywll-dyn.js$script,~third-party
-fieldandstream.com##div[class^="mailmunch-"]
-fieldandstream.com##+js(ra, class, html[class])
-||financialexpress.com/*/min/premiumStoryContent.js$script,~third-party
-financialexpress.com##+js(rc, paywall, .paywall)
-financialexpress.com##div.pcl-wrap
-||folha.uol.com.br/paywall/js/$script,~third-party
-||paywall.folha.uol.com.br^$script,~third-party
-forbes.com##+js(ra, class, body[class], stay)
-||foreignaffairs.com/modules/custom/fa_paywall_js/js/paywall.js$script,~third-party
-foreignaffairs.com##.article-dropcap:style(height: auto !important;)
-foreignaffairs.com##.paywall,.loading-indicator,.messages--container--bottom
-foreignpolicy.com##div.content-ungated
-foreignpolicy.com##+js(rc, content-gated, div.content-gated.content-gated--main-article)
-fortune.com##+js(ra, class, div.paywallActive)
-||ftm.eu/js/routing$script,~third-party
-||ftm.nl/js/routing$script,~third-party
-ftm.eu,ftm.nl##div.banner-pp,a.readmore
-groene.nl##+js(cookie-remover, rlist)
-harpers.org##+js(cookie-remover, hr_session)
-||harpers.org/wp-content/themes/timber/static/js/modal*.js
-hbrchina.org##+js(ra, style, div#the_content)
-hbrtaiwan.com##+js(cookie-remover, guest)
-||hilltimes.com/*/js/loadingoverlay/loadingoverlay.min.js$script,~third-party
-hindustantimes.com##.freemium-card,.closeStory
-hindustantimes.com##+js(rc, freemiumText, .freemiumText)
-hindustantimes.com##+js(rc, open-popup, body.open-popup)
-||indianexpress.com/*/indianexpress/js/evolok/*.js$script,~third-party
-||indianexpress.com/*/indianexpress/min/premiumContent.js$script,~third-party
-indianexpress.com##+js(ra, style, div#pcl-rest-content[style])
-inkl.com##+js(ra, class, div.paywall)
-inkl.com##div.gradient-container
-japantimes.co.jp##+js(cookie-remover, /xbc/)
-journaldunet.com##.reg_wall
-journaldunet.com##+js(ra, style, .entry_reg_wall)
-||jpost.com/js/js_article.min.js$script,~third-party
-||internazionale.it/templates_js_ajax.inc.php$xmlhttprequest,~third-party
-krautreporter.de##.js-article-paywall,.js-paywall-divider,#steady-checkout
-krautreporter.de##+js(rc, blurred, .blurred)
-krautreporter.de##+js(rc, json-ld-paywall-marker, .json-ld-paywall-marker, stay)
-||zephr.com/zephr/decide$xmlhttprequest,domain=ksta.de|rundschau-online.de
-kurier.at##+js(rc, plusContent, .plusContent, stay)
-||la-croix.com/build/*/paywall*.js$script,~third-party
-||glanacion.com/*/metering/*.js$script,domain=lanacion.com.ar
-lanacion.com.ar##+js(cookie-remover, /^metering_arc/)
-lanacion.com.ar##+js(aopr, localStorage)
-||lasegunda.com/assets/js/merPramV2.js$script,~third-party
-||lasegunda.com/assets/js/vendor/modal.js$script,~third-party
-||emol.cl/assets/js/merPramV2.js$script,domain=lasegunda.com
-||emol.cl/assets/js/vendor/modal.js$script,domain=lasegunda.com
-digital.lasegunda.com##+js(rc, lessreadmore, article.lessreadmore, stay)
-digital.lasegunda.com##div[id*="bt_readmore_"]
-||lastampa.it$inline-script
-lastampa.it##+js(cookie-remover, blaize_session)
-lastampa.it##aside#widgetDP,div[id^="adv"]
-||latercera.com/arc/subs/p.min.js$script,~third-party
-||californiatimes.com/meteringjs/$script,domain=latimes.com|sandiegouniontribune.com
-||ev.lavanguardia.com$xmlhttprequest,~third-party
-lavanguardia.com,mundodeportivo.com##span.content-ad,span.hidden-ad,span.ad-unit,div.ad-div
-ledevoir.com##+js(cookie-remover, pw6)
-legrandcontinent.eu##+js(rc, paywall|pw|softwall, body)
-lejdd.fr,parismatch.com,public.fr###poool-container,#poool-widget-content,#poool-widget,.forbidden
-lejdd.fr,parismatch.com,public.fr##+js(ra, data-poool-mode, .cnt[data-poool-mode="hide"])
-||scripts.repubblica.it/pw/pw.js$script,domain=lescienze.it|italian.tech
-lescienze.it##.paywall-adagio,#detail-body-paywall,.shade
-lescienze.it##+js(ra, hidden|style, .detail_body[hidden])
-livelaw.in##+js(rc, hide, div.paywall-content.hide)
-livelaw.in##+js(rc, restricted_message, div.restricted_message)
-livelaw.in##div#subscription_paid_message,div.subscribeNow
-||livemint.com/__js/lm_subscription_$script,~third-party
-livemint.com##+js(rc, paywall, div.paywall)
-labusinessjournal.com##+js(cookie-remover, /^/)
-labusinessjournal.com###css-only-modals
-||cdn.wyleex.com/lavoz/pw.min.js$script,domain=lavoz.com.ar
-lavoz.com.ar##.wrapperblock
-||lavoz.com.ar/sites/*/paywall/losandes/pw.js$script,domain=losandes.com.ar
-letelegramme.fr##+js(rc, tlg-paywalled, div.tlg-paywalled)
-loebclassics.com##+js(cookie-remover, /^/)
-||cdn.loeildelaphotographie.com/wp-content/*/hague-child/js/script-$script,~third-party
-loeildelaphotographie.com##+js(ra, class, .paywall)
-loeildelaphotographie.com##.premium-pic-box,.membership-promo-container,.login_form_litle
-loeildelaphotographie.com##+js(ra, style, img[style*="blur"])
-||medscapestatic.com/*/medscape-library.js$script,domain=medscape.com
-medscape.com##.AdUnit,div[id^="ads-"]
-mv-voice.com##+js(cookie-remover, /^/)
-nautil.us##+js(cookie-remover, /^(arc|sfa)$/)
-newsday.com##+js(ra, class, html[class])
-newrepublic.com##div.article-scheduled-modal
-||blink.net/*/blink-sdk.js$script,domain=newrepublic.com
-||newstatesman.com/*/nsmg-evolok-paywall/*.js$script,~third-party
-||nola.com/script.js$script,~third-party
-nrc.nl##+js(cookie-remover, counter)
-||nrc.nl/paywall-api/api/zephr$xmlhttprequest,~third-party
-nrc.nl##div[id$="modal__overlay"],div.header__subscribe-bar,div.banner
-||nybooks.com/wp-admin/admin-ajax.php$xmlhttprequest,~third-party
-nybooks.com##+js(rc, paywall-article, .paywall-article)
-nybooks.com##div.toast-cta
-||nyteknik.se/*/static/js/site.min.js$script,~third-party
-nyteknik.se##+js(rc, locked-article, div.locked-article)
-||meter-svc.nytimes.com/meter.js$xmlhttprequest,~third-party
-nytimes.com##+js(json-prune, data.user)
-!#if adguard_app_ios
-||nytimes.com/graphql/v2$xmlhttprequest,~third-party
-!#endif
-||mwcm.nyt.com/$script,domain=nytimes.com
-nytimes.com##div[data-testid="inline-message"],div[id^="ad-"],div.expanded-dock
-||cooking.nytimes.com/api/*/access$xmlhttprequest,~third-party
-nzherald.co.nz##+js(set, Fusion.globalContent.isPremium, false)
-paloaltoonline.com##+js(cookie-remover, /^/)
-philosophynow.org##+js(cookie-remover, /^/)
-||kinja-static.com/assets/*/regwalled-content.*.js$script,domain=qz.com
-||reuters.com/pf/resources/dist/reuters/js/index.js$script,~third-party
-||reuters.com/arc/subs/p.min.js$script,~third-party
-||revistaoeste.com/wp-content/*/js/app.*.js$script,~third-party
-revistaoeste.com##+js(rc, hidden, div.hidden[data-url])
-revistaoeste.com##+js(rc, expandable, div.expandable)
-revistaoeste.com##div.is-locked,div.subscribe-panel
-||rugbypass.com/plus/$inline-script
-rugbypass.com##.plus-article-offer
-rugbypass.com##+js(rc, premium-fold-bottom, .premium-fold-bottom)
-rugbypass.com##+js(rc, fade, .fade)
-schwaebische.de##+js(ra, style, body[style], stay)
-science.org##div.alert-read-limit
-science.org##+js(rc, alert-read-limit__overlay, body.alert-read-limit__overlay, stay)
-sciencesetavenir.fr##div.amorce.manual
-sciencesetavenir.fr##+js(ra, class|hidden, .user-paying-content)
-||scientificamerican.com/api/tinypass.min.js$script,~third-party
-scmp.com##+js(ra, amp-access-hide, div.article-body[amp-access][amp-access-hide])
-scmp.com##div.default-meter,div#archive-article-meter
-scmp.com##amp-ad,div.ad-banner,div.advert-fly-carpet-container,div.inline-advert
-scotsman.com##+js(ra, class, div.premium)
-||seattletimes.com/wp-content/*/st-advertising-bundle.js$script,~third-party
-||seattletimes.com/wp-content/*/st-user-messaging-main-bundle.js$script,~third-party
-slideshare.net##+js(rc, limit-overlay, .limit-overlay)
-slideshare.net##+js(aopr, localStorage)
-sofrep.com##+js(cookie-remover, sofrep_news_ids)
-sofrep.com##+js(ra, class, div.paywall)
-sofrep.com##+js(rc, fader, div.fader)
-sofrep.com##div.non-paywall,div#paywall_wrap
-spectator.co.uk##+js(cookie-remover, /blaize_session/)
-spectator.co.uk###subscribe-ribbon
-spglobal.com##.article__overlay
-spglobal.com##+js(ra, class, html, stay)
-staradvertiser.com##div#hsa-paywall-overlay
-staradvertiser.com##+js(ra, style, div#hsa-paywall-content[style])
-startribune.com##div.modal-backdrop
-startribune.com##body[class]:style(overflow: auto !important; position: static !important;)
-studocu.com##.page-content:style(filter: none !important; user-select: unset !important)
-studocu.com##button[data-test-selector^="preview-banner-"]:upward(#document-wrapper>div)
-studocu.com##.pf>:not(.page-content)
-||suomensotilas.fi/wp-content/plugins/epflpw/js/pw.js$script,~third-party
-suomensotilas.fi##+js(rc, epfl-pw-obscured, div.epfl-pw-obscured)
-swarajyamag.com##+js(cookie-remover, /^/)
-swarajyamag.com##+js(ra, id|class, div#non-subscriber-text, stay)
-swarajyamag.com##+js(ra, class, div.subscriber-text, stay)
-||telegraph.co.uk/martech/js/$script,~third-party
-tes.com##+js(cookie-remover, /tg_paywall/)
-tes.com##+js(ra, class, div.tg-paywall-body-overlay)
-tes.com##div.js-paywall-info,div.tg-paywall-message
-||theadvocate.com/script.js$script,~third-party
-||theartnewspaper.com/_next/static/chunks/pages/access-allowed-*\.js$script,~third-party
-theathletic.com##div[id^="slideup-"],div[id*="overlay"],div:empty:not([data-rjs]),#paywall,div.ad-container
-theathletic.com##body[class]:style(overflow:visible !important; position:relative !important)
-||theatlantic.com/_next/static/chunks/pages/*/archive/$script,~third-party
-theatlantic.com##+js(cookie-remover, articleViews)
-theatlantic.com##+js(rc, Image_lazy__tutlP, img.Image_lazy__tutlP)
-theatlantic.com##.c-nudge__container,.c-non-metered-nudge,div[class^="ArticleInjector_"]
-||thediplomat.com/*/js/angular-cookies.min.js$script,~third-party
-thediplomat.com##+js(cookie-remover, dpl-pw)
-theglobeandmail.com##+js(set, Fusion.globalContent._id, '')
-!#if adguard_app_ios
-||theglobeandmail.com/pf/dist/engine/react.js$script,~third-party
-!#endif
-||smartwall.theglobeandmail.com^$xmlhttprequest,~third-party
-theglobeandmail.com##+js(ra, class, .c-article-body--subscribed)
-thehindu.com##+js(set, window.Adblock, false)
-thehindu.com##+js(set, window.isNonSubcribed, false)
-thehindubusinessline.com##+js(set, window.Adblock, false)
-thehindubusinessline.com##+js(set, window.isNonSubcribed, false)
-||theintercept.com/api/tinypass.min.js$script,~third-party
-||thenewatlantis.com/*/thenewatlantis/js/gate.js$script,~third-party
-||thenewatlantis.com/*/thenewatlantis/js/donate.js$script,~third-party
-theneweuropean.co.uk##div[data-show-fade-on-noaccess],div[data-show-subs-blocked]
-theneweuropean.co.uk##+js(ra, data-show-has-access, div[data-show-has-access])
-thepointmag.com##+js(cookie-remover, monthly_history)
-thepointmag.com##div.overlay,div#tpopup-
-thequint.com##div.zsqcu
-thequint.com##+js(ra, class, div#story-body-wrapper, stay)
-||thesaturdaypaper.com.au/sites/all/modules/custom/node_meter/pw.js$script,~third-party
-thesaturdaypaper.com.au##+js(cookie-remover, /^/)
-thesaturdaypaper.com.au##div.paywall-hard-always-show
-thetimes.co.uk##+js(ra, style, body[style], stay)
-thetimes.co.uk##+js(ra, style, html[style], stay)
-||timeshighereducation.com/sites/default/files/*/js__*.js$script,~third-party
-||tuttosport.com/_next/static/chunks/pages/news/%5B*.js$script,~third-party
-tuttosport.com##div[class^="AdUnit_"]
-||washingtonpost.com/tetro/metering/evaluate$xmlhttprequest,~third-party
-||account.winnipegfreepress.com/api/v*/auth/identify$xmlhttprequest,~third-party
-winnipegfreepress.com##.billboard-ad-space,.ad,.article-ad,.fixed-sky
-yorkshirepost.co.uk##+js(ra, class, div.premium)
 
-! Australian Community Media
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(rc, subscribe-truncate, .subscribe-truncate)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(rc, subscriber-hider, .subscriber-hider)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(rc, hidden, div.flex-col div.hidden, stay)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(ra, style, html[style], stay)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(ra, style, body[style], stay)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(ra, class, div[class^="gradient-mask-"], stay)
-bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##div.blocker,.story-generic__iframe,div.transition-all,div[id^="headlessui-dialog"]
+<!DOCTYPE html>
+<html class="ui-light-gray with-header with-top-bar " lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>bpc-paywall-filter.txt · main · magnolia1234 / Bypass Paywalls Clean filters · GitLab</title>
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+window.gon={};gon.math_rendering_limits_enabled=true;gon.features={"explainCodeChat":false,"encodingLogsTree":true};gon.licensed_features={"remoteDevelopment":true};
+//]]>
+</script>
 
-! Arizent
-accountingtoday.com,americanbanker.com,benefitnews.com,bondbuyer.com,dig-in.com,financial-planning.com,nationalmortgagenews.com##+js(set, contentGating.ungate, true)
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+var gl = window.gl || {};
+gl.startup_calls = null;
+gl.startup_graphql_calls = [{"query":"query getBlobInfo(\n  $projectPath: ID!\n  $filePath: String!\n  $ref: String!\n  $refType: RefType\n  $shouldFetchRawText: Boolean!\n) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      empty\n      blobs(paths: [$filePath], ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          id\n          webPath\n          name\n          size\n          rawSize\n          rawTextBlob @include(if: $shouldFetchRawText)\n          fileType\n          language\n          path\n          blamePath\n          editBlobPath\n          gitpodBlobUrl\n          ideEditPath\n          forkAndEditPath\n          ideForkAndEditPath\n          codeNavigationPath\n          projectBlobPathRoot\n          forkAndViewPath\n          environmentFormattedExternalUrl\n          environmentExternalUrlForRouteMap\n          canModifyBlob\n          canCurrentUserPushToBranch\n          archived\n          storedExternally\n          externalStorage\n          externalStorageUrl\n          rawPath\n          replacePath\n          pipelineEditorPath\n          simpleViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n          richViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"magnolia1234/bypass-paywalls-clean-filters","ref":"main","refType":"","filePath":"bpc-paywall-filter.txt","shouldFetchRawText":true}}];
 
-! Condé Nast
-.com/journey/compiler/build-*.js$script,domain=architecturaldigest.com|bonappetit.com|epicurious.com|gq.com|newyorker.com|vanityfair.com|vogue.com|wired.com
-architecturaldigest.com,bonappetit.com,epicurious.com,gq.com,newyorker.com,vanityfair.com,vogue.com,wired.com##+js(cookie-remover, /pay_ent_/)
-architecturaldigest.com,bonappetit.com,epicurious.com,gq.com,newyorker.com,vanityfair.com,vogue.com,wired.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
-architecturaldigest.com,bonappetit.com,epicurious.com,gq.com,newyorker.com,vanityfair.com,vogue.com,wired.com##[subscriptions-section="content-not-granted"]
+if (gl.startup_calls && window.fetch) {
+  Object.keys(gl.startup_calls).forEach(apiCall => {
+   gl.startup_calls[apiCall] = {
+      fetchCall: fetch(apiCall, {
+        // Emulate XHR for Rails AJAX request checks
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        // fetch won’t send cookies in older browsers, unless you set the credentials init option.
+        // We set to `same-origin` which is default value in modern browsers.
+        // See https://github.com/whatwg/fetch/pull/585 for more information.
+        credentials: 'same-origin'
+      })
+    };
+  });
+}
+if (gl.startup_graphql_calls && window.fetch) {
+  const headers = {"X-CSRF-Token":"AmYocz9JMA9EWvLzDz0MTK28_CAtW8-DsE9mJws5vOp8oGknO1RSC-bfgLgXFb0KJ8jdIrjUR1clcImI1bFDyg","x-gitlab-feature-category":"source_code_management"};
+  const url = `https://gitlab.com/api/graphql`
 
-! Crain Communications
-.com/*/js_$script,domain=360dx.com|adage.com|autonews.com|chicagobusiness.com|crainscleveland.com|crainsdetroit.com|crainsnewyork.com|genomeweb.com|modernhealthcare.com|precisionmedicineonline.com
-360dx.com,adage.com,autonews.com,chicagobusiness.com,crainscleveland.com,crainsdetroit.com,crainsnewyork.com,genomeweb.com,modernhealthcare.com,precisionmedicineonline.com##+js(ra, class, body[class])
-modernhealthcare.com##+js(rc, sponsored-article, div.sponsored-article)
+  const opts = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    }
+  };
 
-! Groupe SudOuest.fr
-sudouest.fr,charentelibre.fr,larepubliquedespyrenees.fr##div.article-premium-footer,div.footer-premium,div.article-body-wrapper.visible-not-premium,div.pub,div.ph-easy-subscription
-sudouest.fr##+js(rc, visible-premium, div.visible-premium)
-charentelibre.fr##+js(rc, visible-premium, div.visible-premium)
-larepubliquedespyrenees.fr##+js(rc, visible-premium, div.visible-premium)
+  gl.startup_graphql_calls = gl.startup_graphql_calls.map(call => ({
+    ...call,
+    fetchCall: fetch(url, {
+      ...opts,
+      credentials: 'same-origin',
+      body: JSON.stringify(call)
+    })
+  }))
+}
 
-! Groupe Nice-Matin
-monacomatin.mc,nicematin.com,varmatin.com##+js(ra, id, div#article-teaser)
-monacomatin.mc,nicematin.com,varmatin.com##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 
-! Grupo El Comercio
-||diariocorreo.pe/pf/dist/engine/react.js$script,~third-party
-||elcomercio.pe/pf/dist/engine/react.js$script,~third-party
-||gestion.pe/pf/dist/engine/react.js$script,~third-party
-diariocorreo.pe,elcomercio.pe,gestion.pe##+js(ra, class|style, .paywall)
-diariocorreo.pe,elcomercio.pe,gestion.pe##+js(rc, story-contents--fade, p.story-contents--fade)
-diariocorreo.pe,elcomercio.pe,gestion.pe##div[class^="content_gpt"]
+//]]>
+</script>
 
-! Gruppo SAE
-gazzettadimodena.it,gazzettadireggio.it,iltirreno.it,lanuovaferrara.it,lanuovasardegna.it##+js(cookie-remover, /__mtr$/)
-gazzettadimodena.it,gazzettadireggio.it,iltirreno.it,lanuovaferrara.it,lanuovasardegna.it##div.MuiSnackbar-root
+<link rel="prefetch" href="/assets/webpack/monaco.0e18dfea.chunk.js">
 
-! Hearst Communications (magazines)
-.com/_assets/jam/journey-data.js$script,~third-party,domain=bicycling.com|cosmopolitan.com|countryliving.com|delish.com|elle.com|elledecor.com|esquire.com|goodhousekeeping.com|harpersbazaar.com|housebeautiful.com|menshealth.com|oprahdaily.com|popularmechanics.com|prevention.com|roadandtrack.com|runnersworld.com|townandcountrymag.com|womenshealthmag.com
+<link rel="stylesheet" href="/assets/application-fed51783060c47bc7ca36385dcf4315aa2bf03d5d6b061d3487286280275d00c.css" media="all" />
+<link rel="stylesheet" href="/assets/page_bundles/tree-a5089dc5ce426c5f11ae90f6dc4a5b0be7ec204192f87d6438b0500eaf370d7c.css" media="all" /><link rel="stylesheet" href="/assets/page_bundles/projects-19d00c27fb64ce09449f9228ff65fd51d07a3886c5ed93dab08b08e1500d8342.css" media="all" /><link rel="stylesheet" href="/assets/page_bundles/commits-c0742815ebbc5d17c625e2371fccb7bcb66233ceaaa89961fed17196a62b25e1.css" media="all" />
+<link rel="stylesheet" href="/assets/application_utilities-6d804dc8fc88706a9b2fdf11854d6519a3259151e24879efecb6bb545cf99062.css" media="all" />
 
-! Hearst Communications (newspapers)
-.com/script.js$script,~third-party,domain=expressnews.com|houstonchronicle.com|sfchronicle.com
 
-! Il Messaggero (+ regional)
-||cedscdn.it/*/PaywallMeter.js$script,domain=corriereadriatico.it|ilgazzettino.it|ilmattino.it|ilmessaggero.it|quotidianodipuglia.it
-||cedsdigital.it/*/PaywallMeter.js$script,domain=corriereadriatico.it|ilgazzettino.it|ilmattino.it|ilmessaggero.it|quotidianodipuglia.it
-corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it##+js(ra, subscriptions-section, [subscriptions-section="content"])
-corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it##[subscriptions-section="content-not-granted"]
+<link rel="stylesheet" href="/assets/fonts-115c4704cb8c77e2fdf3fd0243eebf164e2e9b54bbab7bf6a4c14868b865ddf8.css" media="all" />
+<link rel="stylesheet" href="/assets/highlight/themes/white-a6bcb4c616fa83a68bf0d7936411ba4d47fa78c1137817cc6ebdb97e656c6eb5.css" media="all" />
 
-! Landwirtschaftsverlag
-profi.de,topagrar.at,topagrar.com,wochenblatt.com##+js(ra, class|style, div.paywall-full-content[style])
-profi.de,wochenblatt.com##div.m-paywall__textFadeOut,div[id^="paymentprocess-"]
-topagrar.at,topagrar.com##div.paywall-package
+<script src="/assets/webpack/runtime.80a29678.bundle.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/main.4389a6e7.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/tracker.841938b8.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/analytics.84388829.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+window.snowplowOptions = {"namespace":"gl","hostname":"snowplow.trx.gitlab.net","cookieDomain":".gitlab.com","appId":"gitlab","formTracking":true,"linkClickTracking":true}
 
-! Madavor Media sites
-birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com##+js(cookie-remover, /^article_/)
+gl = window.gl || {};
+gl.snowplowStandardContext = {"schema":"iglu:com.gitlab/gitlab_standard/jsonschema/1-0-9","data":{"environment":"production","source":"gitlab-rails","plan":"free","extra":{},"user_id":null,"is_gitlab_team_member":null,"namespace_id":10171928,"project_id":33364591,"context_generated_at":"2024-02-19T05:36:16.513Z"}}
+gl.snowplowPseudonymizedPageUrl = "https://gitlab.com/namespace10171928/project33364591/-/blob/:repository_path";
 
-! Madsack sites
-dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de##+js(set, Fusion.globalContent.isPaid, false)
 
-! Mediahuis Ireland
-independent.ie##+js(ra, style, div#flip-pay[style])
-||cdn.flip-pay.com/clients/*/flip-pay.js$script,domain=belfasttelegraph.co.uk|independent.ie
+//]]>
+</script>
+<link rel="preload" href="/assets/application_utilities-6d804dc8fc88706a9b2fdf11854d6519a3259151e24879efecb6bb545cf99062.css" as="style" type="text/css" nonce="OAWX+MqRJuIH/9IKCnbDyw==">
+<link rel="preload" href="/assets/application-fed51783060c47bc7ca36385dcf4315aa2bf03d5d6b061d3487286280275d00c.css" as="style" type="text/css" nonce="OAWX+MqRJuIH/9IKCnbDyw==">
+<link rel="preload" href="/assets/highlight/themes/white-a6bcb4c616fa83a68bf0d7936411ba4d47fa78c1137817cc6ebdb97e656c6eb5.css" as="style" type="text/css" nonce="OAWX+MqRJuIH/9IKCnbDyw==">
+<link crossorigin="" href="https://snowplow.trx.gitlab.net" rel="preconnect">
+<link as="font" crossorigin="" href="/assets/gitlab-sans/GitLabSans-1e0a5107ea3bbd4be93e8ad2c503467e43166cd37e4293570b490e0812ede98b.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-sans/GitLabSans-Italic-38eaf1a569a54ab28c58b92a4a8de3afb96b6ebc250cf372003a7b38151848cc.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-mono/GitLabMono-08d2c5e8ff8fd3d2d6ec55bc7713380f8981c35f9d2df14e12b835464d6e8f23.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-mono/GitLabMono-Italic-38e58d8df29485a20c550da1d0111e2c2169f6dcbcf894f2cd3afbdd97bcc588.woff2" rel="preload">
+<link rel="preload" href="/assets/fonts-115c4704cb8c77e2fdf3fd0243eebf164e2e9b54bbab7bf6a4c14868b865ddf8.css" as="style" type="text/css" nonce="OAWX+MqRJuIH/9IKCnbDyw==">
 
-! Mediahuis Noord
-.nl\/_\/zh\/worker$xmlhttprequest,~third-party,domain=lc.nl|dvhn.nl
 
-! MediaNews Group
-/loader-wp/*/loader.min.js$script,~third-party,domain=denverpost.com|eastbaytimes.com|mercurynews.com|ocregister.com|pressenterprise.com|twincities.com
-denverpost.com,eastbaytimes.com,mercurynews.com,ocregister.com,pressenterprise.com,twincities.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
-denverpost.com,eastbaytimes.com,mercurynews.com,ocregister.com,pressenterprise.com,twincities.com##[subscriptions-section="content-not-granted"]
 
-! Medium (custom) sites for userscript: redirect to webcache.googleusercontent.com
-||cdn-client.medium.com/lite/static/js/main.*.js$script,domain=webcache.googleusercontent.com
+<script src="/assets/webpack/sentry.76f4e249.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
 
-! New York Magazine
-curbed.com,grubstreet.com,nymag.com,thecut.com,vulture.com##+js(cookie-remover, /nymcid$/)
 
-! Outside magazines
-.com/*/scripts/contentGate*.js$script,domain=backpacker.com|betamtb.com|betternutrition.com|cleaneatingmag.com|climbing.com|gymclimber.com|outsideonline.com|oxygenmag.com|pelotonmagazine.com|podiumrunner.com|rockandice.com|skimag.com|trailrunnermag.com|triathlete.com|vegetariantimes.com|velonews.com|womensrunning.com|yogajournal.com
-||outsideonline.com/*/MegaRegWall*.js$script,~third-party
-backpacker.com,betamtb.com,betternutrition.com,cleaneatingmag.com,climbing.com,gymclimber.com,outsideonline.com,oxygenmag.com,pelotonmagazine.com,podiumrunner.com,rockandice.com,skimag.com,trailrunnermag.com,triathlete.com,vegetariantimes.com,velonews.com,womensrunning.com,yogajournal.com##.o-membership-overlay
-backpacker.com,betamtb.com,betternutrition.com,cleaneatingmag.com,climbing.com,gymclimber.com,outsideonline.com,oxygenmag.com,pelotonmagazine.com,podiumrunner.com,rockandice.com,skimag.com,trailrunnermag.com,triathlete.com,vegetariantimes.com,velonews.com,womensrunning.com,yogajournal.com##+js(rc, is-gated, .is-gated)
-backpacker.com,betamtb.com,betternutrition.com,cleaneatingmag.com,climbing.com,gymclimber.com,outsideonline.com,oxygenmag.com,pelotonmagazine.com,podiumrunner.com,rockandice.com,skimag.com,trailrunnermag.com,triathlete.com,vegetariantimes.com,velonews.com,womensrunning.com,yogajournal.com##+js(rc, is-gated--flexible-layout, .is-gated--flexible-layout)
-cyclingtips.com##div[data-block-name="ads"],div#takeover
+<script src="/assets/webpack/commons-pages.search.show-super_sidebar.2f0ef1c3.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/super_sidebar.dce7ee2e.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.groups-pages.groups.achievements-pages.groups.activity-pages.groups.analytics.ci_cd_an-267b313e.6dbb7761.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.admin.runners.show-pages.clusters.agents.dashboard-pages.explore.catalog-pages.groups.-3a354f95.207262fa.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.groups.security.policies.edit-pages.groups.security.policies.new-pages.projects.blob.s-b77fad0c.306ea974.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.admin.subscriptions.show-pages.groups.security.policies.edit-pages.groups.security.pol-6bfecbfa.c7ebf2fc.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/112.9942ef6e.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.groups.show-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show--90d3b3a3.7aecf55a.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.1911b9ac.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/131.09f0511e.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blame.show-pages.projects.blame.streaming-pages.projects.blob.show-pages.proj-9f3d272f.13a6ee6f.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.a8e84f40.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<script src="/assets/webpack/pages.projects.blob.show.6fe3c994.chunk.js" defer="defer" nonce="W7FRzYdGLWJ19LhpnOxISQ=="></script>
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="bpc-paywall-filter.txt · main · magnolia1234 / Bypass Paywalls Clean filters · GitLab" property="og:title">
+<meta content="GitLab.com" property="og:description">
+<meta content="https://gitlab.com/uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters/-/blob/main/bpc-paywall-filter.txt" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="bpc-paywall-filter.txt · main · magnolia1234 / Bypass Paywalls Clean filters · GitLab" property="twitter:title">
+<meta content="GitLab.com" property="twitter:description">
+<meta content="https://gitlab.com/uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg" property="twitter:image">
 
-! Persgroep
-/temptation/resolve$xmlhttprequest,~third-party,domain=demorgen.be|flair.nl|humo.be|libelle.nl|margriet.nl|parool.nl|trouw.nl|volkskrant.nl
-||temptation.*/temptation.js$script,~third-party,domain=demorgen.be|flair.nl|humo.be|libelle.nl|margriet.nl|parool.nl|trouw.nl|volkskrant.nl
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="QaTbnd8pTc-nrHksTgORHwjWvt7pudLTC76tBgiT3OQ_YprJ2zQvywUpC2dWKyBZgqKf3Hw2WgeegUKp1hsjxA" />
+<meta name="csp-nonce" content="W7FRzYdGLWJ19LhpnOxISQ==" />
+<meta name="action-cable-url" content="/-/cable" />
+<link href="/-/manifest.json" rel="manifest">
+<link rel="icon" type="image/png" href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" id="favicon" data-original-href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
+<link href="/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
 
-! DPG ADR + hln.be (no scroll)
-||temptation.*/temptation.js$script,~third-party,domain=ad.nl|bd.nl|bndestem.nl|destentor.nl|ed.nl|gelderlander.nl|pzc.nl|tubantia.nl|hln.be
 
-! Roularta Media Groep
-||artsenkrant.com/js/responsive/rmgModal.js$script,~third-party
-||artsenkrant.com/js/responsive/rmgPaywall.js$script,~third-party
-artsenkrant.com##div.article-body > p
-artsenkrant.com##+js(ra, class, div.article-body > div)
-artsenkrant.com##+js(rc, locked, body.locked)
-artsenkrant.com,femmesdaujourdhui.be,flair.be,knack.be,kw.be,levif.be,libelle.be##div[id*="wall-modal"]
-artsenkrant.com,femmesdaujourdhui.be,flair.be,knack.be,kw.be,levif.be,libelle.be##+js(ra, class|style, html, stay)
-beleggersbelangen.nl##+js(rc, no-account, div.no-account)
-beleggersbelangen.nl##+js(ra, style, div.content-inner[style])
-beleggersbelangen.nl##div.unlimited-access
-!#if env_firefox
-/\.(femmesdaujourdhui|flair|knack|levif|libelle)\.be\/.+\/((\w)+(\-)+){3,}/$inline-script
-!#endif
 
-! TechTarget sites
-computerweekly.com,lemagit.fr,techtarget.com##+js(rc, paywall, div.paywall, stay)
-computerweekly.com,lemagit.fr,techtarget.com##p#firstP,div#inlineRegistrationWrapper
 
-! additional adblocker-fix
-||flowerstreatment.com^$third-party
-||assets.guim.co.uk/assets/SignInGate*.js$script,domain=theguardian.com
-theguardian.com##[name="SlotBodyEnd"],div[data-cy="contributions-liveblog-epic"]
+<meta content="GitLab.com" name="description">
+<meta content="#ececef" name="theme-color">
+</head>
 
-! custom sites
-.com/webfiles/*/js/metering.js$script,third-party,domain=hbook.com|libraryjournal.com|slj.com
-20minutes.fr##+js(rc, qiota_reserve, div.qiota_reserve)
-||20minutes.fr/v-ajax/subscribe-modal$xmlhttprequest,~third-party
-aaii.com##+js(rc, fadeout, .fadeout)
-aaii.com##.greybox-signup
-al-monitor.com##+js(rc, nodetype--memo, body.nodetype--memo)
-al-monitor.com##div.memo--callout--wrapper
-bisnow.com##+js(ra, style, div.story-container > p[style], stay)
-bisnow.com##div.storyLogin
-bizwest.com##div.fp-paywall
-bizwest.com##+js(ra, class, div.fp-content)
-||account.brandonsun.com/api/v*/auth/identify$xmlhttprequest,~third-party
-cmcmarkets.com##+js(rc, activePaywall, .activePaywall)
-||paywall.correiodopovo.com.br$script,~third-party
-doorbraak.be###aanbod-nieuwe-abonnee, #excerpt-inhoud-abo
-doorbraak.be##+js(ra, style, #plus-inhoud)
-elfinancierocr.com##+js(ra, style, div.article-body-wrapper__styled[style])
-elfinancierocr.com##div.post
-||eviemagazine.com/api/trpc/post.paywall$xmlhttprequest,~third-party
-hcn.org##+js(ra, content, meta[name="UID"])
-||heraldo.es/noticias/$inline-script
-inman.com##+js(rc, paywalled-block, .paywalled-block)
-inman.com##+js(ra, class, div.entry-content-inner)
-inman.com##div.content-wrap > div:not([class]):style(margin: 5% !important)
-inman.com##.ism-article-block
-||meter.in.bonhill.pbc.io/api/views$xmlhttprequest,domain=investmentnews.com
-ipsoa.it##+js(ra, style, div.paywall)
-||irishexaminer.com/pu_examiner/scripts/engage/$script,~third-party
-||irishnews.com/*/js/bundle.js$script,~third-party
-||irishnews.com/*/js/mpppaywall.js$script,~third-party
-lepetitjournal.net##.message-restricted-woocommerce
-lepetitjournal.net##+js(rc, excerpt, div.excerpt)
-lydogbillede.dk,lydogbilde.no##+js(rc, thecontent, div.thecontent)
-lydogbillede.dk,lydogbilde.no##div.paywallbox
-marketnews.com##+js(ra, class, div.body-description)
-meritnation.com##.view-full-answer 
-meritnation.com##+js(rc, maxHeight75px, div.exp_content.maxHeight75px)
-nation.africa##+js(rc, nmgp, .nmgp)
-nation.africa##div.modal
-||newbostonpost.com/*/paywall/js/main.js$script,~third-party
-nu.nl##+js(rc, authorized-content, div.authorized-content)
-nu.nl##.login-wall
-||odt.co.nz/bwtw/scripts/tw.js$script,~third-party
-odt.co.nz##+js(ra, property, div[property="content:encoded"])
-onet.pl##+js(cookie-remover, /xbc/)
-||pebmed.com.br/wp-content/*/paywall/dist/js/app.js$script,~third-party
-popbitch.com##+js(ra, class, div[class*="-premium"])
-||corprensa.com/la-prensa/evolok/$script,domain=prensa.com
-psypost.org##+js(cookie-remover, issuem_lp)
-||schwaebische-post.de/sub/js/pc-offer-west.js$script,~third-party
-||shrm.org/*/js/paywall*.js$script,~third-party
-splainer.in##+js(rc, hide-section, .hide-section)
-splainer.in##.subscription-prompt
-stateaffairs.com##div.c-memberships-message
-stateaffairs.com##+js(rc, access-restricted, body.access-restricted)
-||thedriftmag.com/wp-content/plugins/drift-paywall-plugin/$script,~third-party
-||subs.theepochtimes.com/lib/api.bundle.js$script,~third-party
-thegardenisland.com##+js(ra, style, #single-paywall)
-thegardenisland.com###single-login-box,#single-excerpt
-aap.thestreet.com##+js(rc, is-paywalled, body.is-paywalled)
-realmoney.thestreet.com##+js(cookie-remover, /^PWT/)
-trailsoffroad.com##.paywall
-||vikatan.com/evolok/ev-dab/ev-em.min.js$script,~third-party
-||zeitzeichen.net/sites/default/files/js/js_*.js$script,~third-party
-zvw.de##+js(rc, paywall, .paywall)
-zvw.de##.nfy-products-teaser,.nfy-banner
+<body class="tab-width-8 gl-browser-generic gl-platform-other  " data-find-file="/magnolia1234/bypass-paywalls-clean-filters/-/find_file/main" data-namespace-id="10171928" data-page="projects:blob:show" data-page-type-id="main/bpc-paywall-filter.txt" data-project="bypass-paywalls-clean-filters" data-project-id="33364591">
 
-! General (amp)
-||cdn.ampproject.org/*/amp-access-$script
-||cdn.ampproject.org/*/amp-subscriptions-$script
-@@||cdn.ampproject.org/*/amp-access-$script,domain=cambridge.org|cmjornal.pt
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isGeneric":true,"isOther":true};
 
-artnet.com,barrons.com,billboard.com,bloombergquint.com,bostonglobe.com,dallasnews.com,fortune.com,latimes.com,marketwatch.com,sandiegouniontribune.com,sportico.com,staradvertiser.com,theathletic.com,voguebusiness.com,wsj.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
-artnet.com,barrons.com,billboard.com,bloombergquint.com,bostonglobe.com,dallasnews.com,fortune.com,latimes.com,marketwatch.com,sandiegouniontribune.com,sportico.com,staradvertiser.com,theathletic.com,voguebusiness.com,wsj.com##[subscriptions-section="content-not-granted"]
-amp.usatoday.com,digiday.com,inc42.com,indianexpress.com,indiatoday.in,mid-day.com,newsday.com,seekingalpha.com,telegraph.co.uk##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-theathletic.com##div[amp-access*="NOT granted"]
 
-! French/Belgian sites
-amp.elle.fr,challenges.fr,sciencesetavenir.fr##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-! Groupe EBRA
-bienpublic.com,dna.fr,estrepublicain.fr,lalsace.fr,ledauphine.com,lejsl.com,leprogres.fr,republicain-lorrain.fr,vosgesmatin.fr##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-! Groupe IPM
-dhnet.be,lalibre.be,lavenir.net##+js(rc, is-preview, div.preview)
-dhnet.be,lalibre.be,lavenir.net##+js(rc, is-hidden, div.is-hidden)
-dhnet.be,lalibre.be,lavenir.net##div.ap-AdContainer,div.ap-Outbrain
-! Groupe La Dépêche
-centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr##+js(ra, subscriptions-section, [subscriptions-section="content"])
-centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr##[subscriptions-section="content-not-granted"]
+//]]>
+</script>
 
-! Australia News Corp
-adelaidenow.com.au,cairnspost.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,geelongadvertiser.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,townsvillebulletin.com.au,weeklytimesnow.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
-adelaidenow.com.au,cairnspost.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,geelongadvertiser.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,townsvillebulletin.com.au,weeklytimesnow.com.au##[subscriptions-section="content-not-granted"]
 
-! German sites
-augsburger-allgemeine.de,muensterschezeitung.de,westfalen-blatt.de,wn.de##+js(ra, subscriptions-section, [subscriptions-section="content"])
-augsburger-allgemeine.de,muensterschezeitung.de,westfalen-blatt.de,wn.de##[subscriptions-section="content-not-granted"]
-nw.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-nw.de##div.paywallOverlay
-! Funke Mediengruppe
-abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-nwzonline.de,shz.de,svz.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 
-! Italian sites
-corriere.it,ilfattoquotidiano.it,ilfoglio.it##+js(ra, subscriptions-section, [subscriptions-section="content"])
-corriere.it,ilfattoquotidiano.it,ilfoglio.it##[subscriptions-section="content-not-granted"]
-espresso.repubblica.it##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-! Quotidiano.net (+ regional)
-ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
+<header class="header-logged-out" data-testid="navbar">
+<a class="gl-sr-only gl-accessibility" href="#content-body">Skip to content</a>
+<div class="container-fluid">
+<nav aria-label="Explore GitLab" class="header-logged-out-nav gl-display-flex gl-gap-3 gl-justify-content-space-between">
+<div class="gl-display-flex gl-align-items-center gl-gap-1">
+<span class="gl-sr-only">GitLab</span>
+<a title="Homepage" id="logo" class="header-logged-out-logo has-tooltip" aria-label="Homepage" data-track-label="main_navigation" data-track-action="click_gitlab_logo_link" data-track-property="navigation_top" href="/"><svg aria-hidden="true" role="img" class="tanuki-logo" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="tanuki-shape tanuki" d="m24.507 9.5-.034-.09L21.082.562a.896.896 0 0 0-1.694.091l-2.29 7.01H7.825L5.535.653a.898.898 0 0 0-1.694-.09L.451 9.411.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 2.56 1.935 1.554 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z"
+        fill="#E24329"/>
+  <path class="tanuki-shape right-cheek" d="m24.507 9.5-.034-.09a11.44 11.44 0 0 0-4.56 2.051l-7.447 5.632 4.742 3.584 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z"
+        fill="#FC6D26"/>
+  <path class="tanuki-shape chin" d="m7.707 20.677 2.56 1.935 1.555 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935-4.743-3.584-4.755 3.584Z"
+        fill="#FCA326"/>
+  <path class="tanuki-shape left-cheek" d="M5.01 11.461a11.43 11.43 0 0 0-4.56-2.05L.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 4.745-3.584-7.444-5.632Z"
+        fill="#FC6D26"/>
+</svg>
 
-! McClatchy Group
-amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
-amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##[subscriptions-section="content-not-granted"]
-amp.sacbee.com##+js(ra, subscriptions-action, div[subscriptions-action][subscriptions-display="NOT data.hasError"])
+</a></div>
+<ul class="gl-list-style-none gl-p-0 gl-m-0 gl-display-flex gl-gap-3 gl-align-items-center gl-flex-grow-1">
+<li class="header-logged-out-nav-item header-logged-out-dropdown gl-md-display-none">
+<button class="header-logged-out-toggle" data-toggle="dropdown" type="button">
+<span class="gl-sr-only">
+Menu
+</span>
+<svg class="s16" data-testid="hamburger-icon"><use href="/assets/icons-6f8fc8caf4d3bb7dcb398720822d1175c6f60649adbb5be073b36a5d0b04e465.svg#hamburger"></use></svg>
+</button>
+<div class="dropdown-menu">
+<ul>
+<li>
+<a href="https://about.gitlab.com/why-gitlab">Why GitLab
+</a></li>
+<li>
+<a href="https://about.gitlab.com/pricing">Pricing
+</a></li>
+<li>
+<a href="https://about.gitlab.com/sales">Contact Sales
+</a></li>
+<li>
+<a href="/explore">Explore</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-logged-out-nav-item gl-display-none gl-md-display-inline-block">
+<a href="https://about.gitlab.com/why-gitlab">Why GitLab
+</a></li>
+<li class="header-logged-out-nav-item gl-display-none gl-md-display-inline-block">
+<a href="https://about.gitlab.com/pricing">Pricing
+</a></li>
+<li class="header-logged-out-nav-item gl-display-none gl-md-display-inline-block">
+<a href="https://about.gitlab.com/sales">Contact Sales
+</a></li>
+<li class="header-logged-out-nav-item gl-display-none gl-md-display-inline-block">
+<a class="" href="/explore">Explore</a>
+</li>
+</ul>
+<ul class="gl-list-style-none gl-p-0 gl-m-0 gl-display-flex gl-gap-3 gl-align-items-center gl-justify-content-end">
+<li class="header-logged-out-nav-item">
+<a href="/users/sign_in?redirect_to_referer=yes">Sign in</a>
+</li>
+<li class="header-logged-out-nav-item">
+<a class="gl-button btn btn-md btn-confirm " href="/users/sign_up"><span class="gl-button-text">
+Get free trial
 
-! Nine Entertainment (Australia)
-||api.afr.com/graphql?query=*PaywallRuleQuery$xmlhttprequest,~third-party
-.com.au/graphql?query=*PaywallRuleQuery$xmlhttprequest,~third-party,domain=brisbanetimes.com.au|smh.com.au|theage.com.au|watoday.com.au
-amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
-amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##[subscriptions-section="content-not-granted"]
+</span>
 
-! Spanish/Portugese/Brazilian/Colombian sites
-amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt##+js(ra, subscriptions-section, [subscriptions-section="content"])
-amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt##[subscriptions-section="content-not-granted"]
-abc.es,amp.elperiodico.com,cmjornal.pt,eldiario.es,elpais.com,estadao.com.br,record.pt,sabado.pt##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-abc##div.ev-em-modal,span.mega-superior
-abc.es##+js(ra, id, body#top)
-! Grupo Prensa Ibérica
-amp.epe.es,diaridegirona.cat,diariocordoba.com,diariodeibiza.es,diariodemallorca.es,eldia.es,elperiodicodearagon.com,elperiodicoextremadura.com,elperiodicomediterraneo.com,farodevigo.es,informacion.es,laopinioncoruna.es,laopiniondemalaga.es,laopiniondemurcia.es,laopiniondezamora.es,laprovincia.es,levante-emv.com,lne.es,mallorcazeitung.es,regio7.cat##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-diaridegirona.cat,diariocordoba.com,diariodeibiza.es,diariodemallorca.es,eldia.es,elperiodicodearagon.com,elperiodicoextremadura.com,elperiodicomediterraneo.com,farodevigo.es,informacion.es,laopinioncoruna.es,laopiniondemalaga.es,laopiniondemurcia.es,laopiniondezamora.es,laprovincia.es,levante-emv.com,lne.es,mallorcazeitung.es,regio7.cat##+js(rc, article-body--truncated, div.article-body--truncated)
-! Grupo Vocento
-diariosur.es,diariovasco.com,elcomercio.es,elcorreo.com,eldiariomontanes.es,elnortedecastilla.es,hoy.es,ideal.es,larioja.com,lasprovincias.es,laverdad.es,lavozdigital.es##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
+</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class="layout-page page-with-super-sidebar">
+<aside class="js-super-sidebar super-sidebar super-sidebar-loading" data-command-palette="{&quot;project_files_url&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/files/main?format=json&quot;,&quot;project_blob_url&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/blob/main&quot;}" data-force-desktop-expanded-sidebar="" data-root-path="/" data-sidebar="{&quot;is_logged_in&quot;:false,&quot;context_switcher_links&quot;:[{&quot;title&quot;:&quot;Explore&quot;,&quot;link&quot;:&quot;/explore&quot;,&quot;icon&quot;:&quot;compass&quot;}],&quot;current_menu_items&quot;:[{&quot;id&quot;:&quot;project_overview&quot;,&quot;title&quot;:&quot;Bypass Paywalls Clean filters&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:&quot;/uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg&quot;,&quot;entity_id&quot;:33364591,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;manage_menu&quot;,&quot;title&quot;:&quot;Manage&quot;,&quot;icon&quot;:&quot;users&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/activity&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;activity&quot;,&quot;title&quot;:&quot;Activity&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/activity&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-project-activity&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;members&quot;,&quot;title&quot;:&quot;Members&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/project_members&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;labels&quot;,&quot;title&quot;:&quot;Labels&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/labels&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;plan_menu&quot;,&quot;title&quot;:&quot;Plan&quot;,&quot;icon&quot;:&quot;planning&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/issues&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_issue_list&quot;,&quot;title&quot;:&quot;Issues&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/issues&quot;,&quot;pill_count&quot;:&quot;2&quot;,&quot;link_classes&quot;:&quot;shortcuts-issues has-sub-items&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;boards&quot;,&quot;title&quot;:&quot;Issue boards&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/boards&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-issue-boards&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;milestones&quot;,&quot;title&quot;:&quot;Milestones&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/milestones&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;code_menu&quot;,&quot;title&quot;:&quot;Code&quot;,&quot;icon&quot;:&quot;code&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/merge_requests&quot;,&quot;is_active&quot;:true,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;project_merge_request_list&quot;,&quot;title&quot;:&quot;Merge requests&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/merge_requests&quot;,&quot;pill_count&quot;:&quot;0&quot;,&quot;link_classes&quot;:&quot;shortcuts-merge_requests&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;files&quot;,&quot;title&quot;:&quot;Repository&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/tree/main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-tree&quot;,&quot;is_active&quot;:true},{&quot;id&quot;:&quot;branches&quot;,&quot;title&quot;:&quot;Branches&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/branches&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;commits&quot;,&quot;title&quot;:&quot;Commits&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/commits/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-commits&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;tags&quot;,&quot;title&quot;:&quot;Tags&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/tags&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;graphs&quot;,&quot;title&quot;:&quot;Repository graph&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/network/main?ref_type=heads&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-network&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;compare&quot;,&quot;title&quot;:&quot;Compare revisions&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/compare?from=main\u0026to=main&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;deploy_menu&quot;,&quot;title&quot;:&quot;Deploy&quot;,&quot;icon&quot;:&quot;deployments&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/releases&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;releases&quot;,&quot;title&quot;:&quot;Releases&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/releases&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:&quot;shortcuts-deployments-releases&quot;,&quot;is_active&quot;:false},{&quot;id&quot;:&quot;model_registry&quot;,&quot;title&quot;:&quot;Model registry&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/ml/models&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;monitor_menu&quot;,&quot;title&quot;:&quot;Monitor&quot;,&quot;icon&quot;:&quot;monitor&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/issues/service_desk&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;service_desk&quot;,&quot;title&quot;:&quot;Service Desk&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/issues/service_desk&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false},{&quot;id&quot;:&quot;analyze_menu&quot;,&quot;title&quot;:&quot;Analyze&quot;,&quot;icon&quot;:&quot;chart&quot;,&quot;avatar&quot;:null,&quot;avatar_shape&quot;:&quot;rect&quot;,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/ml/experiments&quot;,&quot;is_active&quot;:false,&quot;pill_count&quot;:null,&quot;items&quot;:[{&quot;id&quot;:&quot;model_experiments&quot;,&quot;title&quot;:&quot;Model experiments&quot;,&quot;icon&quot;:null,&quot;avatar&quot;:null,&quot;entity_id&quot;:null,&quot;link&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/ml/experiments&quot;,&quot;pill_count&quot;:null,&quot;link_classes&quot;:null,&quot;is_active&quot;:false}],&quot;separated&quot;:false}],&quot;current_context_header&quot;:&quot;Project&quot;,&quot;support_path&quot;:&quot;https://about.gitlab.com/get-help/&quot;,&quot;display_whats_new&quot;:true,&quot;whats_new_most_recent_release_items_count&quot;:7,&quot;whats_new_version_digest&quot;:&quot;0e2cba433c3aeb69ca7ff586375ef7f37449a9e5354ceaff182fc964b4808266&quot;,&quot;show_version_check&quot;:null,&quot;gitlab_version&quot;:{&quot;major&quot;:16,&quot;minor&quot;:10,&quot;patch&quot;:0,&quot;suffix_s&quot;:&quot;&quot;},&quot;gitlab_version_check&quot;:null,&quot;search&quot;:{&quot;search_path&quot;:&quot;/search&quot;,&quot;issues_path&quot;:&quot;/dashboard/issues&quot;,&quot;mr_path&quot;:&quot;/dashboard/merge_requests&quot;,&quot;autocomplete_path&quot;:&quot;/search/autocomplete&quot;,&quot;search_context&quot;:{&quot;project&quot;:{&quot;id&quot;:33364591,&quot;name&quot;:&quot;Bypass Paywalls Clean filters&quot;},&quot;project_metadata&quot;:{&quot;mr_path&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/merge_requests&quot;,&quot;issues_path&quot;:&quot;/magnolia1234/bypass-paywalls-clean-filters/-/issues&quot;},&quot;code_search&quot;:true,&quot;ref&quot;:&quot;main&quot;,&quot;scope&quot;:null,&quot;for_snippets&quot;:null}},&quot;panel_type&quot;:&quot;project&quot;,&quot;shortcut_links&quot;:[{&quot;title&quot;:&quot;Snippets&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;},{&quot;title&quot;:&quot;Groups&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;},{&quot;title&quot;:&quot;Projects&quot;,&quot;href&quot;:&quot;/explore/projects&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;}]}"></aside>
+
+<div class="content-wrapper">
+<div class="mobile-overlay"></div>
+
+<div class="alert-wrapper gl-force-block-formatting-context">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="top-bar-fixed container-fluid" data-testid="top-bar">
+<div class="top-bar-container gl-display-flex gl-align-items-center gl-gap-2">
+<button class="gl-button btn btn-icon btn-md btn-default btn-default-tertiary js-super-sidebar-toggle-expand super-sidebar-toggle gl-ml-n3" aria-controls="super-sidebar" aria-expanded="false" aria-label="Primary navigation sidebar" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="sidebar-icon"><use href="/assets/icons-6f8fc8caf4d3bb7dcb398720822d1175c6f60649adbb5be073b36a5d0b04e465.svg#sidebar"></use></svg>
+
+</button>
+<nav aria-label="Breadcrumbs" class="breadcrumbs gl-breadcrumbs" data-testid="breadcrumb-links">
+<ul class="breadcrumb gl-breadcrumb-list js-breadcrumbs-list">
+<li class="gl-breadcrumb-item gl-display-inline-flex"><a href="/magnolia1234">magnolia1234</a></li> <li class="gl-breadcrumb-item gl-display-inline-flex"><a class="gl-display-inline-flex!" href="/magnolia1234/bypass-paywalls-clean-filters"><img srcset="/uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg?width=16 1x, /uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg?width=32 2x" alt="Bypass Paywalls Clean filters" class="gl-avatar gl-avatar-s16 avatar-tile gl-rounded-base!" height="16" width="16" loading="lazy" src="/uploads/-/system/project/avatar/33364591/thailand-magnolia-emblem.jpg?width=16" />
+<span class="js-breadcrumb-item-text">Bypass Paywalls Clean filters</span></a></li>
+
+<li class="gl-breadcrumb-item" data-testid="breadcrumb-current-link">
+<a href="/magnolia1234/bypass-paywalls-clean-filters/-/blob/main/bpc-paywall-filter.txt">Repository</a>
+</li>
+</ul>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"magnolia1234","item":"https://gitlab.com/magnolia1234"},{"@type":"ListItem","position":2,"name":"Bypass Paywalls Clean filters","item":"https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters"},{"@type":"ListItem","position":3,"name":"Repository","item":"https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters/-/blob/main/bpc-paywall-filter.txt"}]}
+
+</script>
+</nav>
+
+
+
+</div>
+</div>
+
+</div>
+<div class="container-fluid container-limited project-highlight-puc">
+<main class="content" id="content-body" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<div class="flash-container flash-container-page sticky" data-testid="flash-container">
+<div id="js-global-alerts"></div>
+</div>
+
+
+
+
+<div class="js-signature-container" data-signatures-path="/magnolia1234/bypass-paywalls-clean-filters/-/commits/7e26dd9b65e6075254b6b33ff8e2ca462b67e156/signatures?limit=1"></div>
+
+<div class="tree-holder gl-pt-4" id="tree-holder">
+<div class="nav-block">
+<div class="tree-ref-container">
+<div class="tree-ref-holder gl-max-w-26">
+<div data-project-id="33364591" data-project-root-path="/magnolia1234/bypass-paywalls-clean-filters" data-ref="main" data-ref-type="" id="js-tree-ref-switcher"></div>
+</div>
+<ul class="breadcrumb repo-breadcrumb">
+<li class="breadcrumb-item">
+<a href="/magnolia1234/bypass-paywalls-clean-filters/-/tree/main">bypass-paywalls-clean-filters
+</a></li>
+<li class="breadcrumb-item">
+<a href="/magnolia1234/bypass-paywalls-clean-filters/-/blob/main/bpc-paywall-filter.txt"><strong>bpc-paywall-filter.txt</strong>
+</a></li>
+</ul>
+</div>
+<div class="tree-controls gl-display-flex gl-flex-wrap gl-sm-flex-nowrap gl-align-items-baseline gl-gap-3">
+<a aria-keyshortcuts="t" class="gl-button btn btn-md btn-default has-tooltip shortcuts-find-file" data-html="true" title="Go to find file &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;t&lt;/kbd&gt;" rel="nofollow" href="/magnolia1234/bypass-paywalls-clean-filters/-/find_file/main"><span class="gl-button-text">
+Find file
+</span>
+
+</a>
+
+<a class="gl-button btn btn-md btn-default js-blob-blame-link" href="/magnolia1234/bypass-paywalls-clean-filters/-/blame/main/bpc-paywall-filter.txt"><span class="gl-button-text">
+Blame
+</span>
+
+</a>
+<a class="gl-button btn btn-md btn-default " href="/magnolia1234/bypass-paywalls-clean-filters/-/commits/main/bpc-paywall-filter.txt"><span class="gl-button-text">
+History
+</span>
+
+</a>
+<a aria-keyshortcuts="y" class="gl-button btn btn-md btn-default has-tooltip js-data-file-blob-permalink-url" data-html="true" title="Go to permalink &lt;kbd class=&#39;flat ml-1&#39; aria-hidden=true&gt;y&lt;/kbd&gt;" href="/magnolia1234/bypass-paywalls-clean-filters/-/blob/7e26dd9b65e6075254b6b33ff8e2ca462b67e156/bpc-paywall-filter.txt"><span class="gl-button-text">
+Permalink
+</span>
+
+</a>
+</div>
+</div>
+
+<div class="info-well d-none d-sm-block">
+<div class="well-segment">
+<ul class="blob-commit-info">
+<li class="commit flex-row js-toggle-container" id="commit-7e26dd9b">
+<div class="avatar-cell d-none d-sm-block">
+<a href="/magnolia1234"><img alt="magnolia1234&#39;s avatar" src="/uploads/-/system/user/avatar/7676006/avatar.png?width=40" class="avatar s40 gl-display-none gl-sm-display-inline-block" title="magnolia1234"></a>
+</div>
+<div class="commit-detail flex-list gl-display-flex gl-justify-content-space-between gl-align-items-center gl-flex-grow-1 gl-min-w-0">
+<div class="commit-content" data-testid="commit-content">
+<a class="commit-row-message item-title js-onboarding-commit-item " href="/magnolia1234/bypass-paywalls-clean-filters/-/commit/7e26dd9b65e6075254b6b33ff8e2ca462b67e156">Fix CartaCapital.com.br (freemium)</a>
+<span class="commit-row-message d-inline d-sm-none">
+&middot;
+7e26dd9b
+</span>
+<div class="committer">
+<a class="commit-author-link js-user-link" data-user-id="7676006" href="/magnolia1234">magnolia1234</a> authored <time class="js-timeago" title="Feb 17, 2024 8:09am" datetime="2024-02-17T08:09:14Z" data-toggle="tooltip" data-placement="bottom" data-container="body">Feb 17, 2024</time>
+</div>
+
+</div>
+<div class="commit-actions flex-row">
+
+<div class="js-commit-pipeline-status" data-endpoint="/magnolia1234/bypass-paywalls-clean-filters/-/commit/7e26dd9b65e6075254b6b33ff8e2ca462b67e156/pipelines?ref=main"></div>
+<div class="commit-sha-group btn-group d-none d-sm-flex">
+<div class="label label-monospace monospace">
+7e26dd9b
+</div>
+<button class="gl-button btn btn-icon btn-md btn-default " title="Copy commit SHA" aria-label="Copy commit SHA" aria-live="polite" data-toggle="tooltip" data-placement="bottom" data-container="body" data-html="true" data-category="primary" data-size="medium" data-clipboard-text="7e26dd9b65e6075254b6b33ff8e2ca462b67e156" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="copy-to-clipboard-icon"><use href="/assets/icons-6f8fc8caf4d3bb7dcb398720822d1175c6f60649adbb5be073b36a5d0b04e465.svg#copy-to-clipboard"></use></svg>
+
+</button>
+
+</div>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+
+</div>
+<div class="blob-content-holder js-per-page" data-blame-per-page="1000" id="blob-content-holder">
+<div data-blob-path="bpc-paywall-filter.txt" data-explain-code-available="false" data-new-workspace-path="/-/remote_development/workspaces/new" data-original-branch="main" data-project-path="magnolia1234/bypass-paywalls-clean-filters" data-ref-type="" data-resource-id="gid://gitlab/Project/33364591" data-target-branch="main" data-user-id="" id="js-view-blob-app">
+<div class="gl-spinner-container" role="status"><span aria-label="Loading" class="gl-spinner gl-spinner-md gl-spinner-dark gl-vertical-align-text-bottom!"></span></div>
+</div>
+</div>
+
+</div>
+
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+  window.gl = window.gl || {};
+  window.gl.webIDEPath = '/-/ide/project/magnolia1234/bypass-paywalls-clean-filters/edit/main/-/bpc-paywall-filter.txt'
+
+
+//]]>
+</script>
+<div data-ambiguous="false" data-ref="main" id="js-ambiguous-ref-modal"></div>
+
+</main>
+</div>
+
+
+</div>
+</div>
+
+
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+if ('loading' in HTMLImageElement.prototype) {
+  document.querySelectorAll('img.lazy').forEach(img => {
+    img.loading = 'lazy';
+    let imgUrl = img.dataset.src;
+    // Only adding width + height for avatars for now
+    if (imgUrl.indexOf('/avatar/') > -1 && imgUrl.indexOf('?') === -1) {
+      const targetWidth = img.getAttribute('width') || img.width;
+      imgUrl += `?width=${targetWidth}`;
+    }
+    img.src = imgUrl;
+    img.removeAttribute('data-src');
+    img.classList.remove('lazy');
+    img.classList.add('js-lazy-loaded');
+    img.dataset.testid = 'js-lazy-loaded-content';
+  });
+}
+
+//]]>
+</script>
+<script nonce="W7FRzYdGLWJ19LhpnOxISQ==">
+//<![CDATA[
+gl = window.gl || {};
+gl.experiments = {};
+
+
+//]]>
+</script>
+
+</body>
+</html>
+
