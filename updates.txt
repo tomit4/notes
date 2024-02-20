@@ -430,3 +430,9 @@ And reinstall using pacman:
 doas pacman -S librewolf ungoogled-chromium
 Also, install ctop (top for seeing running docker containers)
 doas pacman -S ctop
+
+02/19/2024
+
+Install stitchy (stitches two pics together from cli):
+rustup update
+cargo install stitchy
