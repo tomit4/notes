@@ -99,4 +99,7 @@ return require("packer").startup(function(use)
 	})
 	-- codeium AI
 	use("Exafunction/codeium.vim")
+	-- golang
+	use("ray-x/go.nvim")
+	use("ray-x/guihua.lua")
 end)
