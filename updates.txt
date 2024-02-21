@@ -436,3 +436,6 @@ doas pacman -S ctop
 Install stitchy (stitches two pics together from cli):
 rustup update
 cargo install stitchy
+
+02/21/2024
+Add gopls lsp to neovim from Mason
