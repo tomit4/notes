@@ -51,26 +51,35 @@ end
 SetAutoCmp(Mode)
 lsp.setup()
 
+-- configure diagnostic lsp err msgs
 vim.diagnostic.config({
+	underline = true,
 	virtual_text = true,
+	float = {
+		source = "always",
+		focusable = false,
+	},
 })
+
+-- toggles floating error messages
+vim.keymap.set("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- LSP Specific Settings
 -- Volar TypeScript Config (turn off for Vue with Vanilla JS)
--- require("mason-lspconfig").setup_handlers({
--- function(server_name)
--- local server_config = {}
--- if server_name == "volar" then
--- server_config.filetypes = { "vue", "typescript", "javascript" }
--- lspconfig.tsserver.setup({
--- ["disabled"] = true,
--- })
--- lspconfig.volar.setup({
--- settings = {
--- ["volar.takeOverMode.enabled"] = true,
--- },
--- })
--- end
--- lspconfig[server_name].setup(server_config)
--- end,
--- })
+require("mason-lspconfig").setup_handlers({
+	function(server_name)
+		local server_config = {}
+		if server_name == "volar" then
+			server_config.filetypes = { "vue", "typescript", "javascript" }
+			lspconfig.tsserver.setup({
+				["disabled"] = true,
+			})
+			lspconfig.volar.setup({
+				settings = {
+					["volar.takeOverMode.enabled"] = true,
+				},
+			})
+		end
+		lspconfig[server_name].setup(server_config)
+	end,
+})
