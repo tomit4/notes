@@ -31,7 +31,7 @@ vim.opt.autoindent = true
 vim.opt.smarttab = true
 vim.opt.ignorecase = true
 vim.opt.cindent = true
-vim.opt.tabstop = 8
+vim.opt.tabstop = 4
 vim.opt.cursorcolumn = true
 -- Disable folds
 -- vim.g.nofoldenable = true
@@ -141,4 +141,4 @@ augroup END
 -- codeium disable default keybindings
 vim.g.codeium_disable_bindings = 1
 -- codeium disable by default
-vim.g.codeium_enabled = 0
+-- vim.g.codeium_enabled = 0
