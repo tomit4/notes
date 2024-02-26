@@ -182,7 +182,7 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 export PS1='\[\033[01;34m\][\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
 # Configure thefuck
 eval "$(thefuck --alias)"
-export PATH="$PATH:$GOPATH/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
+export PATH="$PATH:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin:/home/brian/go/bin"
 export GREP_COLORS='ms=01;34'
 
 # icons-in-terminal

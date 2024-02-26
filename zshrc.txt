@@ -55,7 +55,7 @@ echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r
 # Configure thefuck
 eval "$(thefuck --alias)"
 # Change with care:
-export PATH="$PATH:$GOPATH/bin:/usr/local/cuda/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin"
+export PATH="$PATH:/usr/local/cuda/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin:/home/brian/go/bin"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib:$PATH"
 # Configure grep output colors
 export GREP_COLORS='ms=01;34'
@@ -102,7 +102,9 @@ unsetopt BEEP
 # PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
 # PROMPT='%B%F{blue}[ﴂ %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
 # └─>%B%F{white} '
-PROMPT='%B%F{blue}[ﴂ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
+# PROMPT='%B%F{blue}[ﴂ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
+# └─>%B%F{white} '
+PROMPT='%B%F{blue}[ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
 └─>%B%F{white} '
 
 # function erase_history { local HISTSIZE=0; }
