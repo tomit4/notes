@@ -444,3 +444,7 @@ Add Wappalyzer extension to browsers (reveals tech used on websites/web apps)
 02/25/2024
 Uninstall foliate and install fbreader
 doas pacman -Rs foliate && doas pacman -S fbreader
+
+02/26/2024
+Install sqlc for use with golang
+doas pacman -S sqlc
