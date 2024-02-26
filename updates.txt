@@ -446,5 +446,6 @@ Uninstall foliate and install fbreader
 doas pacman -Rs foliate && doas pacman -S fbreader
 
 02/26/2024
-Install sqlc for use with golang
+Install sqlc and goose for use with golang
 doas pacman -S sqlc
+paru goose
