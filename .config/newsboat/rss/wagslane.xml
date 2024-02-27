@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lane&#39;s Blog</title>
+    <link>https://wagslane.dev/</link>
+    <description>Recent content on Lane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wagslane.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Zen of Proverbs</title>
+      <link>https://wagslane.dev/posts/zen-of-proverbs/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/zen-of-proverbs/</guid>
+      <description>20 rules of thumb for writing better software.
+Optimize for simplicity first Write code for humans, not computers Reading is more important than writing Any style is fine, as long as it&amp;rsquo;s black There should be one way to do it, but seriously this time Hide the sharp knives Changing the rules is better than adding exceptions Libraries are better than frameworks Transitive dependencies are a problem Dynamic runtime dependencies are a bigger problem API surface area is a liability Returning early is a good thing Use more plain text Compiler errors are better than runtime errors Runtime errors are better than bugs Tooling is better than documentation Documentation is better than nothing Configuration sucks, but so does convention The cost of building a feature is its smallest cost Types are one honking great idea &amp;ndash; let&amp;rsquo;s do more of those!</description>
+    </item>
+    
+    <item>
+      <title>College: A Solution in Search of a Problem</title>
+      <link>https://wagslane.dev/posts/college-a-solution-in-search-of-a-problem/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/college-a-solution-in-search-of-a-problem/</guid>
+      <description>College has been prescribed almost universally by the parents of the last ~40 years as the solution to life&amp;rsquo;s problems. We&amp;rsquo;ve been told it&amp;rsquo;s the way to land a good job and to make more money. But is it?
+I think that most college degrees these days commit a cardinal sin in the business world. College degrees are solutions in search of a problem.
+What is a solution in search of a problem?</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on the &#34;Guard&#34; Proposal for Go&#39;s Error Handling</title>
+      <link>https://wagslane.dev/posts/guard-keyword-error-handling-golang/</link>
+      <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/guard-keyword-error-handling-golang/</guid>
+      <description>I found this proposal for improvements to error handling in Go interesting, but still not something I&amp;rsquo;d be happy to see implemented.
+Allow me to clear up my thoughts on Go&amp;rsquo;s errors. Overall, I prefer how Go forces me to think about errors at every turn. When working in try/catch languages like JavaScript, I often easily forget which functions can throw. Even if I do remember, it&amp;rsquo;s easy to think &amp;ldquo;I think this gets caught somewhere up the call chain&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Devops: An Idea so Good, No One Admits They Don’t Do It</title>
+      <link>https://wagslane.dev/posts/no-one-does-devops/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/no-one-does-devops/</guid>
+      <description>The ideas behind the DevOps movements undeniably changed the software development world for the better - but by now, the term &amp;ldquo;DevOps&amp;rdquo; has lost all meaning.
+Sometimes an idea is so good, that you can’t argue with it. I’m not saying that the original idea behind &amp;ldquo;DevOps&amp;rdquo; was perfect - I’ve written about some of the specific issues I&amp;rsquo;ve seen. That said, I think there is enough data and research behind the core ideas by now that there are very few companies willing to admit they don’t &amp;ldquo;do DevOps&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Learn to Say &#39;No&#39;</title>
+      <link>https://wagslane.dev/posts/developers-learn-to-say-no/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/developers-learn-to-say-no/</guid>
+      <description>Saying &amp;ldquo;no&amp;rdquo; is a hard skill to learn. It&amp;rsquo;s even harder if you tend to be a more introverted person. However, learning how to say &amp;ldquo;no&amp;rdquo; effectively can help your career. I certainly have struggled over the years with saying &amp;ldquo;no&amp;rdquo; as a programmer, after all, wouldn&amp;rsquo;t a good programmertm be able to do anything?
+Let&amp;rsquo;s look at some example scenarios where perhaps you should be saying &amp;ldquo;no&amp;rdquo; more often.</description>
+    </item>
+    
+    <item>
+      <title>Businesses that Use Dark Patterns Deserve to Go Under</title>
+      <link>https://wagslane.dev/posts/dark-patterns/</link>
+      <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/dark-patterns/</guid>
+      <description>What is a dark pattern? Last night I switched away from Verizon as my cell phone provider. The process of wrestling my phone number out of their grubby clutches and into control of my new carrier had me raving like a madman by the end of the night. I had a similar experience when trying to quit my local Vasa gym. While I&amp;rsquo;m sure you&amp;rsquo;re familiar with an unnecessarily difficult cancellation process, this might be the first time you&amp;rsquo;ve heard it referred to as a &amp;ldquo;dark pattern&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Func-y JSON, an alternative to REST</title>
+      <link>https://wagslane.dev/posts/func-y-json-api/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/func-y-json-api/</guid>
+      <description>It&amp;rsquo;s insane to me that almost every web developer in the world is working with web APIs, and yet the developer experience remains atrocious. Most applications I&amp;rsquo;ve worked on have a RESTful scheme, a GraphQL implementation, or a more strict gRPC system. I&amp;rsquo;ve used REST for the most part, probably just because it&amp;rsquo;s what I&amp;rsquo;m familiar with, but I hate it. Every time I design a new API I can&amp;rsquo;t help but think that it shouldn&amp;rsquo;t be so hard to come up with a sane way to communicate between the server and the client.</description>
+    </item>
+    
+    <item>
+      <title>SEO is One Giant Scam of a Job</title>
+      <link>https://wagslane.dev/posts/seo-is-a-scam-job/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/seo-is-a-scam-job/</guid>
+      <description>I&amp;rsquo;ve been writing online for about 4 years now, and I&amp;rsquo;ve learned a bit about &amp;ldquo;SEO&amp;rdquo; - this blog and my side project&amp;rsquo;s blog (my side project being Boot.dev) now have combined traffic of about 100k visits each month. I&amp;rsquo;m sure there are a lot of people out there who know a lot more about growing relevant organic traffic for businesses than I do, but I&amp;rsquo;ve become convinced of something that I&amp;rsquo;d like to run by you.</description>
+    </item>
+    
+    <item>
+      <title>Things I don&#39;t want to do to grow my side project</title>
+      <link>https://wagslane.dev/posts/things-i-dont-want-to-do-to-grow-business/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/things-i-dont-want-to-do-to-grow-business/</guid>
+      <description>Working on a side project that aspires to be a real business has its ups and downs, especially after you&amp;rsquo;ve been at it for over 2 years. I&amp;rsquo;ve been hacking away at Boot.dev since March 2020, and for the most part, it&amp;rsquo;s been a ton of fun. However, at the end of the day, if you want your project to earn you enough cash that you can quit your day job, you have to work on some things that are less fun.</description>
+    </item>
+    
+    <item>
+      <title>The Craziest Thing to Hear After Leaving Mormonism</title>
+      <link>https://wagslane.dev/posts/what-a-crazy-religion/</link>
+      <pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/what-a-crazy-religion/</guid>
+      <description>I grew up a faithful member of the Church of Jesus Christ of Latter-Day Saints, or the Mormon Church for short. I went to church weekly, paid tithing, and even served a 2-year proselyting and service mission in Paraguay from when I was 18 until I was 20. A few years after returning home, I ended up leaving the church after a long process of research that led me to the conclusion that the Mormon Church almost certainly wasn&amp;rsquo;t &amp;ldquo;the true church&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>The Collapsing Quality of Dev.to</title>
+      <link>https://wagslane.dev/posts/collapsing-quality-of-devto/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/collapsing-quality-of-devto/</guid>
+      <description>A few years ago I found Dev.to, and was delighted by the writing experience. It felt like a platform with all the conveniences of Medium&amp;rsquo;s writing tools but wasn&amp;rsquo;t missing the features that developers need, like code blocks and markdown. I still think Dev.to probably has the best writing experience of any third-party blogging platform for devs, luckily that hasn&amp;rsquo;t changed at all. On the other hand, the reading experience, or rather the content on the platform, has dropped so hard and fast in quality that I realized a few months ago that I haven&amp;rsquo;t opened my feed in almost a year.</description>
+    </item>
+    
+    <item>
+      <title>Keep Your Data Raw at Rest</title>
+      <link>https://wagslane.dev/posts/keep-your-data-raw-at-rest/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/keep-your-data-raw-at-rest/</guid>
+      <description>I want to talk about a simple rule of thumb that has served me well over the years.
+If you have data that depends on other data, try not to store it.
+If you follow this rule, you can deliver your code faster, mainly because you will avoid lengthy and painful data migrations.
+The guiding principle behind this call to action is that data at rest is more dangerous than data in motion.</description>
+    </item>
+    
+    <item>
+      <title>Continuous Deployments != Continuous Disruptions</title>
+      <link>https://wagslane.dev/posts/continuous-deployments-arent-continuous-disruptions/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/continuous-deployments-arent-continuous-disruptions/</guid>
+      <description>Luckily, I’ve met very few engineers in my career who are outright opposed to continuous deployment. That said, I have met some, and I think their hesitation is usually rooted in the myth that continuous deployment causes more disruptions to end-users than a batched release cycle.
+What is continuous deployment? Before we get into the nitty-gritty of why continuous deployment (CD) is almost always better than batched releases, let’s define some terms.</description>
+    </item>
+    
+    <item>
+      <title>Kanban vs Scrum – Why Kanban is More Agile</title>
+      <link>https://wagslane.dev/posts/kanban-vs-scrum/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/kanban-vs-scrum/</guid>
+      <description>Agile development is fantastic and has made software development more fun and productive while simultaneously less punitive and slow. While I&amp;rsquo;m a fan of Agile, I&amp;rsquo;m not a huge fan of one of its more common interpretations - a Scrum-based workflow. Let&amp;rsquo;s discuss why I generally prefer a &amp;ldquo;Kanban&amp;rdquo; workflow to traditional Scrum. If you’ve read my first article, you’ll know I’m not Scrum’s biggest fan.
+What is Agile Development? From the Agile Manifesto:</description>
+    </item>
+    
+    <item>
+      <title>Go’s Major Versioning Sucks – From a Fanboy</title>
+      <link>https://wagslane.dev/posts/gos-major-version-handling/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/gos-major-version-handling/</guid>
+      <description>I&amp;rsquo;m normally a fan of the opinionated rigidity within the Go toolchain. In fact, we use Go on the front and backend at Boot.dev, and we&amp;rsquo;ve found that it&amp;rsquo;s wonderful to have standardized formatting, vetting, and testing across the entire Go ecosystem. The first big criticism I&amp;rsquo;ve had with Go&amp;rsquo;s opinionated nature is with the way the Go toolchain handles major versions. It slows down development in a significant number of scenarios and is a detriment to the average developer&amp;rsquo;s experience.</description>
+    </item>
+    
+    <item>
+      <title>Optimize For Simplicity First</title>
+      <link>https://wagslane.dev/posts/optimize-for-simplicit-first/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/optimize-for-simplicit-first/</guid>
+      <description>We can&amp;rsquo;t optimize for everything when developing software, so we need to start with something, and that something should be simple code and simple architecture. For example, to over-optimize for speed in JavaScript, we might write our for-loops backwards to the detriment of readability.
+I believe we should optimize for simplicity first, and only make complex memory, speed, and abstraction changes as they become necessary.
+But muh speed If it&amp;rsquo;s slow but readable, I can make it fast.</description>
+    </item>
+    
+    <item>
+      <title>Saving a Third of Our Memory by Re-ordering Go Struct Fields</title>
+      <link>https://wagslane.dev/posts/go-struct-ordering/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/go-struct-ordering/</guid>
+      <description>We had applications at one of my previous companies that typically ran with ~2GB in memory at any given time, but by simply changing the order of some uint variables we managed to drop the memory usage to less than 1.4GB. Let’s dive into how inefficient field ordering in Go structs can have a huge impact on the memory footprint of a program.
+Our Situation The vast majority of the allocated memory in our case was due to an enormous slice of stats structs.</description>
+    </item>
+    
+    <item>
+      <title>Your Manager Can’t Code? They Shouldn’t Be Your Manager</title>
+      <link>https://wagslane.dev/posts/managers-that-cant-code/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/managers-that-cant-code/</guid>
+      <description>Managers who can’t code are an outdated artifact of corporate America circa 2005. The best managers that I’ve had spend ~80% of their time coding, architecting, or doing technical work that requires engineering experience. If your manager thinks coding and other technical work is &amp;ldquo;beneath&amp;rdquo; them then they need a dose of humble pie. Your organization would likely be better off without them.
+But Managers Manage People! There is a long-running stigma associated with developers.</description>
+    </item>
+    
+    <item>
+      <title>Leave Scrum to Rugby, I Like Getting Stuff Done</title>
+      <link>https://wagslane.dev/posts/leave-scrum-to-rugby/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/leave-scrum-to-rugby/</guid>
+      <description>Scrum is a buzzword, the virtue signal of choice for middle management in software organizations.
+If your goal as a manager is to implement a system by which you:
+Speed up the appearance of progress Pay for twice the amount of people you need Gather approximate data based on meaningless metrics Then Scrum is exactly what you&amp;rsquo;re looking for!
+&amp;ldquo;Oh you had problems with Scrum at your last employer? Well, that&amp;rsquo;s not real Scrum.</description>
+    </item>
+    
+    <item>
+      <title>A Case Against &#34;A Case for the Book of Mormon&#34;</title>
+      <link>https://wagslane.dev/posts/a-case-against-a-case-for-the-book-of-mormon/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/posts/a-case-against-a-case-for-the-book-of-mormon/</guid>
+      <description>&amp;ldquo;A Case for the Book of Mormon&amp;rdquo; is a book that is not freely available as far as I’m aware, but in this response, I will include relevant quotes for readers who don’t have access to the full book. Read on and I‘ll point out only the most egregious examples that the author, Tad R. Callister, makes in his book full of misleading logic and fallacious claims.
+Disclaimer If you have access to the original book, you&amp;rsquo;ll notice that Callister makes the same errors over and over in many disparate sections of the book.</description>
+    </item>
+    
+    <item>
+      <title>About Lane Wagner</title>
+      <link>https://wagslane.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wagslane.dev/about/</guid>
+      <description>I&amp;rsquo;ve been writing code since 2010, first in Python, then primarily in Go and JS/TS. I&amp;rsquo;ve spent most of my career as a backend developer and data engineer. After a couple of years leading teams of Go developers, I&amp;rsquo;m now working full-time on Boot.dev and host the Backend Banter podcast.
+Get in touch Twitter Linkedin GitHub Email: lane at boot.dev Podcast and show appearances August 2, 2023: Ardan Labs Podcast May 15, 2023: Cup o&amp;rsquo; Go Podcast May 11, 2023: Adventures in DevOps April 27, 2023: Indie Hackers Podcast April 21, 2023: All the Code Podcast Feb 28, 2023: Scrimba Podcast Jan 30, 2023: HTTP Course on FreeCodeCamp&amp;rsquo;s YouTube Jan 20, 2023: Coding with Eddie Jaoude Nov 15, 2022: JavaScript Jabber Nov 08, 2022: Views on Vue Oct 28, 2022: Compressed.</description>
+    </item>
+    
+  </channel>
+</rss>
