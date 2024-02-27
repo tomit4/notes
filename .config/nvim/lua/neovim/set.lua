@@ -56,6 +56,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*", "silent!" },
 	command = ":Neoformat",
 })
+-- disable poor neoformatting for .sql files
+vim.cmd([[let g:neoformat_enabled_sql = [] ]])
 --Saves vim session on save
 
 -- Marks end of line, space, and trailing space characters
@@ -137,6 +139,21 @@ augroup remember_folds
   autocmd BufWinEnter *.* silent! loadview
 augroup END
 ]])
+
+-- configure diagnostic lsp err msgs
+-- vim.diagnostic.config({
+-- underline = true,
+-- signs = true,
+-- virtual_text = true,
+-- float = {
+-- show_header = true,
+-- source = "always",
+-- border = "border",
+-- focusable = false,
+-- },
+-- update_in_insert = false, -- default to false
+-- severity_sort = false, -- default to false
+-- })
 
 -- codeium disable default keybindings
 vim.g.codeium_disable_bindings = 1
