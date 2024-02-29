@@ -453,3 +453,7 @@ paru goose
 02/28/2024
 Install browser-sync using npm (aur version is orphaned).
 doas npm install -g browser-sync
+
+02/29/2024
+Install silicon (a cli tool to generate code snippet pics):
+doas pacman -S silicon
