@@ -102,4 +102,21 @@ return require("packer").startup(function(use)
 	-- golang
 	use("ray-x/go.nvim")
 	use("ray-x/guihua.lua")
+	-- code snippet screenshots
+	-- capture code snippets using :Silicon,
+	-- in Visual mode highlight then enter command
+	use({
+		"michaelrommel/nvim-silicon",
+		config = function()
+			require("silicon").setup({
+				command = "silicon",
+				font = "mononoki NF=34",
+				theme = "Nord",
+				no_round_corner = true,
+				no_line_number = true,
+				no_window_controls = true,
+				background = "#20201e",
+			})
+		end,
+	})
 end)
