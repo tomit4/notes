@@ -449,3 +449,7 @@ doas pacman -Rs foliate && doas pacman -S fbreader
 Install sqlc and goose for use with golang
 doas pacman -S sqlc
 paru goose
+
+02/28/2024
+Install browser-sync using npm (aur version is orphaned).
+doas npm install -g browser-sync
