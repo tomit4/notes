@@ -1,3 +1,9 @@
 #!/bin/bash
 
-live-server --browser=$BROWSER_2 --open="$1"
+if [ -z "$1" ]; then
+    directory='.'
+else
+    directory="$1"
+fi
+
+live-server --browser=librewolf --open="$directory"
