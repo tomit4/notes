@@ -457,3 +457,10 @@ doas npm install -g browser-sync
 02/29/2024
 Install silicon (a cli tool to generate code snippet pics):
 doas pacman -S silicon
+
+03/03/2024
+Install libreoffice-still
+doas pacman -S libreoffice (choose still from galaxy repo)
+Run in safe mode first
+libreoffice --safe-mode
+Choose to configure it to work with out hardware acceleration and then choose apply and restart

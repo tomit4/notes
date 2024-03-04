@@ -1,15 +1,21 @@
 #!/bin/bash
 
-if [ $# -lt 3 ] ; then
-    printf "not enough arguments given\n\
-usage: gifpress input.gif width height\n"
-    exit 1
-fi
+# gifsicle -b "${1}" --optimize=3 --lossy=100 --colors=16 --dither
+gifsicle -b "${1}" --optimize=3 --lossy=100 --colors=16
 
-if ! command -v gifsicle &> /dev/null ; then
-    echo "gifsicle not installed!"
-    exit 1
-fi
+# Resize command:
+# gifsicle "${1}" --resize 800x493 >"${1}_resized.gif"
 
-filename=$(echo "${1}" | awk -F. '{ print $1 }')
-gifsicle "$1" --resize "$2x$3" > "${filename}_resized.gif"
+# if [ $# -lt 3 ] ; then
+# printf "not enough arguments given\n\
+# usage: gifpress input.gif width height\n"
+# exit 1
+# fi
+
+# if ! command -v gifsicle &> /dev/null ; then
+# echo "gifsicle not installed!"
+# exit 1
+# fi
+
+# filename=$(echo "${1}" | awk -F. '{ print $1 }')
+# gifsicle "$1" --resize "$2x$3" > "${filename}_resized.gif"
