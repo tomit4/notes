@@ -189,7 +189,9 @@ super + b
 super + m
     mousepad &
 super + n
-    desktopeditors &
+    libreoffice &
+    # open office
+    # desktopeditors & 
 super + j
     foliate &
 super + l

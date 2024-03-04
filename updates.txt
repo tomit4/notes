@@ -464,3 +464,6 @@ doas pacman -S libreoffice (choose still from galaxy repo)
 Run in safe mode first
 libreoffice --safe-mode
 Choose to configure it to work with out hardware acceleration and then choose apply and restart
+03/04/2024
+Uninstall onlyoffice-bin
+doas pacman -Rs onlyoffice-bin
