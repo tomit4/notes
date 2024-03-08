@@ -6,6 +6,8 @@ Bracket Pair Colorizer
 Cobalt2 Theme Official (blue borealis)
 EsLint
 GlassIt Linux (or GlassIt depending)
+GlassIt Note: You'll need to edit the extensions.js file for it to work with VSCodium:
+If you are using VS Codium, you need to edit the extension.js file in the extension folder: ~/.vscode-oss(OR .vscode)/extensions/s-nlf-fh.glassit-{THE VERSION}-universal/, and change "code" on line 46 to "codium".
 Import Cost
 Markdown Preview Enhanced
 Prettier
