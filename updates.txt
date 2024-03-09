@@ -467,3 +467,7 @@ Choose to configure it to work with out hardware acceleration and then choose ap
 03/04/2024
 Uninstall onlyoffice-bin
 doas pacman -Rs onlyoffice-bin
+
+03/09/2024
+Install restic (backup tool similar to timeshift)
+doas pacman -S restic
