@@ -9,6 +9,9 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.fontFamily": "monospace",
+    "editor.fontWeight": "bold",
     "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Monokai"
+    "window.menuBarVisibility": "toggle",
+    "glassit.alpha": 215,
+    "workbench.colorTheme": "Nord Deep"
 }
