@@ -328,7 +328,8 @@ alias git-s="git status"
 alias git-ss="git status short"
 alias git-d="git diff"
 # for use with notes directory only
-alias git-l="git log"
+alias git-lo="git log --oneline --follow"
+alias {git-l,git-log}="git log --graph --format='format:%C(yellow)%h%C(reset) %s %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)'"
 # more to just remember than to be used
 alias git-stsh="git stash"
 alias git-stsh-a="git stash apply"
