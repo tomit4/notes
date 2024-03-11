@@ -1,9 +1,227 @@
+https://developer.chrome.com/docs/css-ui/declarative-shadow-dom | Declarative Shadow DOM  |  CSS and UI  |  Chrome for Developers
+https://developer.mozilla.org/en-US/docs/Web/CSS/@layer | @layer - CSS: Cascading Style Sheets | MDN
+https://web.dev/articles/css-module-scripts | Using CSS Module Scripts to import stylesheets  |  Articles  |  web.dev
+https://www.dudley.codes/posts/2020.05.19-golang-structure-web-servers/ | How I Structure Web Servers in Go — James Dudley
+
+https://stackoverflow.com/questions/36328029/is-there-a-hotkey-to-switch-between-split-window-panes | visual studio code - Is there a hotkey to switch between split window panes? - Stack Overflow
+https://stackoverflow.com/questions/36085443/how-to-specify-bold-font-in-vs-code-editor | windows - How to specify bold font in VS Code editor? - Stack Overflow
+https://stackoverflow.com/questions/58367207/list-of-all-available-commands-in-vscode | visual studio code - List of all available commands in VSCode - Stack Overflow
+https://stackoverflow.com/questions/65908987/how-to-open-visual-studio-codes-settings-json-file | How to open Visual Studio Code's 'settings.json' file - Stack Overflow
+https://stackoverflow.com/questions/51312095/save-terminal-tabs-to-saved-workspace-vscode | visual studio code - Save terminal tabs to saved workspace VSCode - Stack Overflow
+https://stackoverflow.com/questions/61940658/how-do-i-remap-the-keybindings-to-change-modes-in-vscode-vim-extension-from-inse | visual studio code - How do I remap the keybindings to change modes in vscode vim extension from insert to normal mode? - Stack Overflow
+
+https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
+
+https://scribe.rip/part-1-build-your-own-js-framework-from-scratch-f4e35d0dffa6 | Part 1: how to build your own JS framework
+
+https://golangdocs.com/goroutines-in-golang | Goroutines in Golang - Golang Docs
+https://programming.guide/go/detect-deadlock.html | Go: Deadlock | Programming.Guide
+https://dave.cheney.net/2014/03/19/channel-axioms | Channel Axioms | Dave Cheney
+
+https://www.redhat.com/sysadmin/linux-change-boot-options-grub | How to change boot options on Linux | Enable Sysadmin
+https://forum.manjaro.org/t/how-to-add-nvidia-drm-modeset-1-kernel-parameter/152447 | How to add nvidia-drm.modeset=1 kernel parameter? - Support - Manjaro Linux Forum
+https://wiki.archlinux.org/title/Kernel_mode_setting | Kernel mode setting - ArchWiki
+https://unix.stackexchange.com/questions/744541/failing-to-boot-when-etc-x11-xorg-conf-device-driver-nvidia | Failing to boot when /etc/X11/xorg.conf [device] driver="nvidia" - Unix & Linux Stack Exchange
+
+https://docs.cypress.io/guides/overview/why-cypress | Why Cypress? | Cypress Documentation
+https://docs.cypress.io/guides/references/cypress-studio | Cypress Studio | Cypress Documentation
+https://docs.cypress.io/guides/guides/launching-browsers | Launching Browsers | Cypress Documentation
+https://docs.cypress.io/guides/component-testing/react/overview#React-with-Vite | React Component Testing | Cypress Documentation
+
+https://vitest.dev/guide/cli.html | Command Line Interface | Guide | Vitest
+https://start.duckduckgo.com/lite/?q=error+javascript+react+%28reading+%27_version%27%29 | error javascript react (reading '_version') at DuckDuckGo
+https://testing-library.com/docs/react-testing-library/setup | Setup | Testing Library
+https://github.com/testing-library/react-testing-library/issues/735 | TypeError: Cannot read property 'version' of undefined · Issue #735 · testing-library/react-testing-library · GitHub
+https://vitest.dev/config/ | Configuring Vitest | Vitest
+https://www.npmjs.com/package/@testing-library/react | @testing-library/react - npm
+https://github.com/testing-library/react-testing-library/issues?page=2&q=is%3Aissue+is%3Aopen | Issues · testing-library/react-testing-library · GitHub
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_Role | ARIA: radio role - Accessibility | MDN
+https://testing-library.com/docs/preact-testing-library/api/#act | API | Testing Library
+https://github.com/threepointone/react-act-examples/blob/master/sync.md | react-act-examples/sync.md at master · threepointone/react-act-examples · GitHub
+https://vitest.dev/guide/testing-types.html | Testing Types | Guide | Vitest
+https://stackoverflow.com/questions/35394937/keyboardevent-keycode-deprecated-what-does-this-mean-in-practice | javascript - KeyboardEvent.keyCode deprecated. What does this mean in practice? - Stack Overflow
+https://vitest.dev/guide/test-context.html | Test Context | Guide | Vitest
+https://stackoverflow.com/questions/60115885/how-to-solve-the-update-was-not-wrapped-in-act-warning-in-testing-library-re | reactjs - How to solve the "update was not wrapped in act()" warning in testing-library-react? - Stack Overflow
+https://vitest.dev/guide/ | Getting Started | Guide | Vitest
+
+https://stackoverflow.com/questions/72925954/vitest-error-typeerror-cannot-read-properties-of-undefined-reading-resolve | javascript - Vitest error "TypeError: Cannot read properties of undefined (reading 'resolve')" (router.resolve) - Stack Overflow
+https://github.com/testing-library/react-testing-library/issues/735 | TypeError: Cannot read property 'version' of undefined · Issue #735 · testing-library/react-testing-library · GitHub
+https://testing-library.com/docs/react-testing-library/faq | FAQ | Testing Library
+https://developer.mozilla.org/en-US/docs/Glossary/Global_object | Global object - MDN Web Docs Glossary: Definitions of Web-related terms | MDN
+https://nodejs.org/api/globals.html#globals_global | Global objects | Node.js v21.6.2 Documentation
+https://mswjs.io/docs/basics/intercepting-requests | Intercepting requests - Mock Service Worker
+https://start.duckduckgo.com/lite/?q=msw+https | msw https at DuckDuckGo
+https://www.raisiqueira.io/drops/vite-msw | How to setup MSW in a React project using Vite | Raí Siqueira
+https://www.npmjs.com/package/msw | msw - npm
+
+https://vitest.dev/guide/ | Getting Started | Guide | Vitest
+https://vitest.dev/guide/browser.html | Browser Mode | Guide | Vitest
+https://testing-library.com/docs/react-testing-library/example-intro | Example | Testing Library
+https://vitest.dev/guide/mocking.html | Mocking | Guide | Vitest
+https://testing-library.com/docs/example-input-event | Input Event | Testing Library
+https://vitest.dev/guide/mocking | Mocking | Guide | Vitest
+https://www.npmjs.com/package/@testing-library/user-event | @testing-library/user-event - npm
+
+https://stackoverflow.com/questions/7995080/html-if-image-is-not-found | HTML if image is not found - Stack Overflow
+https://stackoverflow.com/questions/34097560/react-js-replace-img-src-onerror | javascript - react.js Replace img src onerror - Stack Overflow
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter | scrollbar-gutter - CSS: Cascading Style Sheets | MDN
+
+https://github.com/tomit4/git_sandbox | tomit4/git_sandbox: A repo for practicing with git
+https://github.com/settings/notifications | Notification Settings
+https://docs.github.com/en/webhooks/about-webhooks | About webhooks - GitHub Docs
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository | Managing teams and people with access to your repository - GitHub Docs
+https://www.digitalocean.com/community/tutorials/nodejs-express-basics | How To Get Started with Node.js and Express | DigitalOcean
+https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely | version control - How do I delete a Git branch locally and remotely? - Stack Overflow
+https://stackoverflow.com/questions/54161556/how-can-i-show-all-the-branches-in-a-repository | git - How can I show all the branches in a repository? - Stack Overflow
+https://stackoverflow.com/questions/14609652/how-to-get-specific-github-notifications-like-pull-requests-or-assigned-issues | How to get specific github notifications like pull requests or assigned issues? - Stack Overflow
+
+https://lite.duckduckgo.com/lite/?q=modprobe+nvidia+causes+x11+race+condition | modprobe nvidia causes x11 race condition at DuckDuckGo
+
+https://www.linode.com/docs/products/networking/dns-manager/guides/common-dns-configurations/ | Common DNS Configurations | Linode Docs
+https://www.linode.com/docs/products/networking/dns-manager/#add-a-domain-zone | Linode DNS Manager Product Documentation | Linode Docs
+https://tecadmin.net/how-to-generate-lets-encrypt-ssl-using-certbot/ | How to Generate Let's Encrypt SSL using Certbot – TecAdmin
+
+https://stackoverflow.com/questions/38731998/do-docker-container-ips-change-on-restart | nginx - do docker container IPs change on restart? - Stack Overflow
+
+https://stackoverflow.com/questions/62871280/should-i-have-multiple-docker-compose-files | Should I have multiple docker-compose files? - Stack Overflow
+https://www.thegeekstuff.com/2016/04/docker-compose-up-stop-rm/ | Howto use docker-compose to Start, Stop, Remove Docker Containers
+
+https://vitest.dev/guide/#using-unreleased-commits | Getting Started | Guide | Vitest
+https://v1.test-utils.vuejs.org/api/options.html#scopedslots | Mounting Options | Vue Test Utils
+https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html | Conditional Rendering | Vue Test Utils
+https://test-utils.vuejs.org/guide/advanced/vue-router | Testing Vue Router | Vue Test Utils
+https://test-utils.vuejs.org/guide/essentials/easy-to-test.html | Write components that are easy to test | Vue Test Utils
+https://runthatline.com/vitest-mock-vue-router/ | How to Mock Vue Router with Vitest – Run That Line
+https://test-utils.vuejs.org/guide/advanced/vue-router.html | Testing Vue Router | Vue Test Utils
+
+https://testing-library.com/docs/react-testing-library/cheatsheet/ | Cheatsheet | Testing Library
+https://vitest.dev/api/vi.html | Vi | Vitest
+https://github.com/testing-library/vue-testing-library/blob/main/src/__tests__/validate-plugin.js | vue-testing-library/src/__tests__/validate-plugin.js at main · testing-library/vue-testing-library · GitHub
+
+https://github.com/vitest-dev/vitest/blob/main/examples/playwright/test/basic.test.ts | vitest/examples/playwright/test/basic.test.ts at main · vitest-dev/vitest · GitHub
+https://github.com/ErikCH/Vitest-YT/blob/main/src/components/__tests__/my-pokemon.spec.ts | Vitest-YT/src/components/__tests__/my-pokemon.spec.ts at main · ErikCH/Vitest-YT · GitHub
+https://vitest.dev/guide/ | Getting Started | Guide | Vitest
+https://www.npmjs.com/package/msw | msw - npm
+https://vitest.dev/guide/environment.html | Test Environment | Guide | Vitest
+https://github.com/mswjs/examples/blob/main/examples/with-vue/src/mocks/handlers.ts | examples/examples/with-vue/src/mocks/handlers.ts at main · mswjs/examples · GitHub
+https://www.npmjs.com/package/@testing-library/vue#more-examples | @testing-library/vue - npm
+https://github.com/testing-library/vue-testing-library/blob/main/src/fire-event.js | vue-testing-library/src/fire-event.js at main · testing-library/vue-testing-library · GitHub
+https://testing-library.com/docs/vue-testing-library/examples/ | Examples | Testing Library
+https://vitest.dev/guide/mocking | Mocking | Guide | Vitest
+https://testing-library.com/docs/vue-testing-library/cheatsheet/ | Cheatsheet | Testing Library
+https://libreddit.kylrth.com/r/vuejs/comments/uwto3f/is_there_any_way_to_check_if_routerpush_has_been/ | Is there any way to check if router.push() has been called in Vue Testing Library ? - r/vuejs
+
+https://github.com/vitest-dev/vitest/blob/main/examples/vue/test/basic.test.ts | vitest/examples/vue/test/basic.test.ts at main · vitest-dev/vitest · GitHub
+https://github.com/ErikCH/Vitest-YT/blob/main/src/setupTests.ts | Vitest-YT/src/setupTests.ts at main · ErikCH/Vitest-YT · GitHub
+https://github.com/ErikCH/Vitest-YT | GitHub - ErikCH/Vitest-YT: Vitetest YT info
+https://www.lambdatest.com/learning-hub/end-to-end-testing | What is End-to-End Testing? Guide With E2E Testing Examples
+https://www.lambdatest.com/learning-hub/integration-testing | Integration Testing Tutorial: A Comprehensive Guide With Examples And Best Practices
+https://www.lambdatest.com/learning-hub/unit-testing | Unit Testing Tutorial: A Comprehensive Guide With Examples and Best Practices
+
+https://github.com/NixOS/nixpkgs/issues/146670 | gcolor3 not working on wayland · Issue #146670 · NixOS/nixpkgs · GitHub
+https://github.com/emersion/xdg-desktop-portal-wlr/blob/3ee4c5cca2c5f840e354b8bcd82e4ab10b1a6e82/wlr.portal#L4 | xdg-desktop-portal-wlr/wlr.portal at 3ee4c5cca2c5f840e354b8bcd82e4ab10b1a6e82 · emersion/xdg-desktop-portal-wlr · GitHub
+https://man.archlinux.org/man/xdg-desktop-portal-wlr.5 | xdg-desktop-portal-wlr(5) — Arch manual pages
+https://wiki.archlinux.org/title/XDG_Desktop_Portal | XDG Desktop Portal - ArchWiki
+https://archlinux.org/packages/?name=xdg-desktop-portal-wlr | Arch Linux - Package Search
+
+https://libreddit.privacydev.net/r/linux_gaming/comments/10rrwmg/radv_perftestgpl_is_awesome_for_dxvk_games/ | RADV_PERFTEST=gpl is AWESOME for DXVK Games! - r/linux_gaming
+
+https://opentabletdriver.net/Wiki/FAQ/Linux | Linux FAQ - OpenTabletDriver
+https://opentabletdriver.net/Tablets | Tablets - OpenTabletDriver
+https://libreddit.privacydev.net/r/osugame/comments/qm4xtr/linux_graphictablets_on_wayland_solution/ | [LINUX] GraphicTablets on Wayland (Solution) - r/osugame
+
+https://lite.duckduckgo.com/lite/?q=wacom+no+work+on+wayland | wacom no work on wayland at DuckDuckGo
+https://wiki.archlinux.org/title/Graphics_tablet | Graphics tablet - ArchWiki
+https://wiki.archlinux.org/title/Graphics_tablet#Wayland_and_libinput | Graphics tablet - ArchWiki
+https://man.archlinux.org/man/libinput-list-devices.1.en | libinput-list-devices(1) — Arch manual pages
+
+https://github.com/keepassxreboot/keepassxc-browser/wiki/Troubleshooting-guide | Troubleshooting guide · keepassxreboot/keepassxc-browser Wiki · GitHub
+https://forum.endeavouros.com/t/keepassxc-refuses-to-launch-under-wayland-gnome/17607 | KeepassXC refuses to launch under Wayland-Gnome - Applications - EndeavourOS
+https://forum.artixlinux.org/index.php/topic,5135.0.html | Dbus-Socket Not Found When Starting Firefox in Firejail
+https://github.com/netblue30/firejail/issues/3769 | Firefox DBus user socket was not found · Issue #3769 · netblue30/firejail · GitHub
+https://wiki.archlinux.org/title/Firejail | Firejail - ArchWiki
+
+https://github.com/keepassxreboot/keepassxc/issues/2973 | Wayland support · Issue #2973 · keepassxreboot/keepassxc · GitHub
+https://wiki.archlinux.org/title/KeePass | KeePass - ArchWiki
+https://wiki.archlinux.org/title/Environment_variables | Environment variables - ArchWiki
+
+https://lite.duckduckgo.com/lite/?q=how+to+get+QT+apps+working+wayland | how to get QT apps working wayland at DuckDuckGo
+
+https://github.com/netblue30/firejail/issues/3769 | Firefox DBus user socket was not found · Issue #3769 · netblue30/firejail · GitHub
+https://wiki.archlinux.org/title/Firejail | Firejail - ArchWiki
+https://lite.duckduckgo.com/lite/?q=keepassxc+blocked+firejail+wayland | keepassxc blocked firejail wayland at DuckDuckGo
+https://github.com/keepassxreboot/keepassxc/issues/1807 | Keepassxc with Firejail (fixed) · Issue #1807 · keepassxreboot/keepassxc · GitHub
+https://github.com/telegramdesktop/tdesktop/issues/23873 | [Warning] qt.qpa.wayland: Wayland does not support QWindow::requestActivate() · Issue #23873 · telegramdesktop/tdesktop · GitHub
+
+https://arewewaylandyet.com/ | Are we Wayland yet?
+https://forum.artixlinux.org/ | Artix Linux Forum - Index
+https://wiki.archlinux.org/title/Nouveau | Nouveau - ArchWiki
+
+https://github.com/riverwm/river/issues/462 | [Question] How to use the NVIDIA proprietary driver when running river? · Issue #462 · riverwm/river · GitHub
+https://gitlab.freedesktop.org/wlroots/wlroots/-/blob/master/docs/env_vars.md | docs/env_vars.md · master · wlroots / wlroots · GitLab
+https://forums.developer.nvidia.com/t/545-drivers-have-bad-flickering-and-black-screen-issues-when-vrr-is-enabled/269801/24 | 545 drivers have bad flickering and black screen issues when VRR is enabled - #24 by thewisenoob - Linux - NVIDIA Developer Forums
+https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
+https://libreddit.privacydev.net/r/hyprland/comments/17j12jz/finally_got_xwayland_on_nvidia_working_perfectly/ | FINALLY got Xwayland on Nvidia working perfectly on Hyprland - r/hyprland
+https://download.nvidia.com/XFree86/Linux-x86_64/440.64/README/primerenderoffload.html | Chapter 34. PRIME Render Offload
+https://github.com/elFarto/nvidia-vaapi-driver/issues/181 | Missing DRM render device on Wayland · Issue #181 · elFarto/nvidia-vaapi-driver · GitHub
+https://forums.developer.nvidia.com/t/feature-g-sync-freesync-under-wayland-session/220822 | [Feature] G-Sync/Freesync under Wayland Session - Linux - NVIDIA Developer Forums
+https://wiki.hyprland.org/Configuring/Tearing/ | Tearing | Hyprland Wiki
+https://wiki.hyprland.org/Configuring/Environment-variables/ | Environment Variables | Hyprland Wiki
+
+https://github.com/riverwm/river/issues/82 | Issues With XWayland · Issue #82 · riverwm/river · GitHub
+https://forums.developer.nvidia.com/t/flickering-stuttering-graphical-artifacting-and-more-on-wayland-geforce-gtx-1650-super-driver-version-545-29-02-2-dkms/273748 | Flickering, stuttering, graphical artifacting, and more on Wayland - GeForce GTX 1650 Super, driver version 545.29.02-2 (DKMS) - Linux - NVIDIA Developer Forums
+https://github.com/NVIDIA/open-gpu-kernel-modules/discussions/532 | Add implicit sync support · NVIDIA/open-gpu-kernel-modules · Discussion #532 · GitHub
+https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/967 | Explicit GPU Synchronization for DRI3, Present, and Xwayland (!967) · Merge requests · xorg / xserver · GitLab
+https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317 | xwayland glamor renders incorrectly on nvidia (#1317) · Issues · xorg / xserver · GitLab
+https://libreddit.privacydev.net/r/hyprland/comments/17j12jz/finally_got_xwayland_on_nvidia_working_perfectly/ | FINALLY got Xwayland on Nvidia working perfectly on Hyprland - r/hyprland
+
+https://github.com/nyyManni/dmenu-wayland | GitHub - nyyManni/dmenu-wayland: dmenu for wayland-compositors
+https://aur.archlinux.org/packages/dmenu-wayland-git | AUR (en) - dmenu-wayland-git
+https://github.com/Cloudef/bemenu | GitHub - Cloudef/bemenu: Dynamic menu library and client program inspired by dmenu
+
+https://github.com/riverwm/river | GitHub - riverwm/river: A dynamic tiling Wayland compositor
+https://github.com/riverwm/river/wiki#how-do-i-set-a-wallpaper | Home · riverwm/river Wiki · GitHub
+https://github.com/riverwm/river/issues/24 | Disable Gtk header bar which shows up in some windows. · Issue #24 · riverwm/river · GitHub
+
+https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
+https://wiki.archlinux.org/title/Wayland | Wayland - ArchWiki
+https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/xwayland.html | Chapter 39. OpenGL and Vulkan on Xwayland
+https://forums.developer.nvidia.com/t/understanding-nvidia-drm-modeset-1-nvidia-linux-driver-modesetting/204068/8 | Understanding nvidia-drm.modeset=1 (NVIDIA Linux driver modesetting) - #8 by system - Linux - NVIDIA Developer Forums
+
+https://leon_plickat.srht.site/writing/river-setup-guide/article.html# | River Setup Guide (continously updated) - Leon Henrik Plickat
+https://wiki.archlinux.org/title/Wayland#Configuration | Wayland - ArchWiki
+https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/xwayland.html | Chapter 39. OpenGL and Vulkan on Xwayland
+https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/kms.html | Chapter 36. Direct Rendering Manager Kernel Modesetting (DRM KMS)
+https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting | NVIDIA - ArchWiki
+https://wiki.archlinux.org/title/Kernel_module#Setting_module_options | Kernel module - ArchWiki
+https://forum.endeavouros.com/t/any-recomendations-for-a-tiling-window-manager-for-wayland/12138 | Any recomendations for a tiling window-manager for wayland? - Lounge - EndeavourOS
+https://github.com/emersion/kanshi | GitHub - emersion/kanshi: Dynamic display configuration (mirror)
+
+https://lite.duckduckgo.com/lite/ | river wm how to change aspect ratio at DuckDuckGo
+https://lite.duckduckgo.com/lite/?q=river+wm+configs+github | river wm configs github at DuckDuckGo
+https://unix.stackexchange.com/questions/656447/screen-resolution-wont-change-no-matter-which-way-i-try-it | gnome - Screen resolution won't change no matter which way I try it - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/564793/wayland-equivalent-of-arandr | x11 - Wayland equivalent of arandr - Unix & Linux Stack Exchange
+https://askubuntu.com/questions/973499/wayland-how-to-set-a-custom-resolution | intel graphics - Wayland how to set a custom resolution - Ask Ubuntu
+https://lite.duckduckgo.com/lite/?q=wayland+equivalent+of+xrandr | wayland equivalent of xrandr at DuckDuckGo
+https://manpages.debian.org/testing/wlr-randr/wlr-randr.1.en.html | wlr-randr(1) — wlr-randr — Debian testing — Debian Manpages
+https://aur.archlinux.org/packages/wlr-randr | AUR (en) - wlr-randr
+
+https://www.csestack.org/hide-show-password-eye-icon-html-javascript/ | Hide/Show Password using Eye icon in HTML and JavaScript
+
+https://oauth.net/ | OAuth Community Site
+https://security.stackexchange.com/questions/133065/why-is-it-a-bad-idea-to-use-plain-oauth2-for-authentication | oauth - Why is it a bad idea to use plain oauth2 for authentication? - Information Security Stack Exchange
+https://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth | authentication - What's the difference between OpenID and OAuth? - Stack Overflow
+https://softwareas.com/oauth-openid-youre-barking-up-the-wrong-tree-if-you-think-theyre-the-same-thing/ | OAuth-OpenID: You&#8217;re Barking Up the Wrong Tree if you Think They&#8217;re the Same Thing
+https://web.archive.org/web/20210804165738/http://cakebaker.42dh.com/2008/04/01/openid-versus-oauth-from-the-users-perspective/ | OpenID versus OAuth from the user’s perspective - cakebaker
+https://openid.net/developers/how-connect-works/ | How OpenID Connect Works - OpenID Foundation
+https://www.npmjs.com/package/openid-client | openid-client - npm
+
 https://stackoverflow.com/questions/18263796/http-status-for-already-logged-in | rest - HTTP Status for "already logged in" - Stack Overflow
 https://scribe.rip/@adesinabolaji/how-to-avoid-concurrent-login-by-same-user-in-your-application-using-jwt-7c2ea3dc706c | How To Avoid Concurrent Login By Same User In your Application using JWT.
 https://stackoverflow.com/questions/59656775/force-logout-of-user-on-multiple-devices-using-jwt | rest - Force Logout of user on multiple devices using JWT - Stack Overflow
 https://stackoverflow.com/questions/73593691/how-to-prevent-detect-login-from-multiple-devices-from-a-single-user-node-js | authentication - How to prevent/detect login from multiple devices from a single user? (Node.js | oAuth 2.0) - Stack Overflow
 
-https://stackoverflow.com/questions/36930065/what-are-the-ways-to-implement-logout-from-all-devices-feature-with-jwt-token-me | node.js - What are the ways to implement logout from all devices feature with JWT token mechanism? - Stack Overflow
 https://github.com/fastify/fastify-jwt | GitHub - fastify/fastify-jwt: JWT utils for Fastify
 https://dev.to/lek890/authentication-strategy-application-fastify-typescript-jwt-52nb | Authentication Strategy - Fastify + Typescript + JWT - DEV Community
 https://bobbyhadz.com/blog/typescript-extend-type | How to extend a Type in TypeScript | bobbyhadz
@@ -26,32 +244,14 @@ https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/ | The Ultimate 
 https://blog.logrocket.com/how-to-implement-jwt-authentication-vue-nodejs/#jwt-structure | How to implement JWT authentication with Vue and Node.js - LogRocket Blog
 https://stackoverflow.com/questions/46379410/how-to-handle-jwt-token-on-the-client-site-in-node-js-application | How to handle JWT token on the client site in Node.js application? - Stack Overflow
 
-https://router.vuejs.org/guide/advanced/navigation-guards.html | Navigation Guards | Vue Router
-https://pinia.vuejs.org/ | Pinia | The intuitive store for Vue.js
-https://router.vuejs.org/guide/advanced/meta | Route Meta Fields | Vue Router
-
 https://github.com/fastify/fastify-redis/tree/master/types | fastify-redis/types at master · fastify/fastify-redis · GitHub
 https://libreddit.kylrth.com/r/node/comments/15gbjpm/fastify_typescript_boilerplate/ | Fastify Typescript Boilerplate - r/node
 https://github.com/goldbergyoni/nodebestpractices#1-project-architecture-practices | GitHub - goldbergyoni/nodebestpractices: :white_check_mark: The Node.js best practices list (December 2023)
 https://github.com/TheB1gFatPanda/fastify-typescript-starter | GitHub - TheB1gFatPanda/fastify-typescript-starter: fastify + typescript starter
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing | Nullish coalescing operator (??) - JavaScript | MDN
 
-https://github.com/beliven-it/fastify-bcrypt | GitHub - beliven-it/fastify-bcrypt: A Bcrypt hash generator & checker
-https://github.com/redis/ioredis | GitHub - redis/ioredis: 🚀 A robust, performance-focused, and full-featured Redis client for Node.js.
-https://www.npmjs.com/package/argon2id | argon2id - npm
-https://www.rfc-editor.org/rfc/rfc9106.html#name-parameter-choice | RFC 9106: Argon2 Memory-Hard Function for Password Hashing and Proof-of-Work Applications
-
 https://docs.docker.com/guides/walkthroughs/multi-container-apps/ | Run multi-container applications | Docker Docs
 https://geshan.com.np/blog/2022/01/redis-docker/ | Using Redis with docker and docker-compose for local development a step-by-step tutorial
-
-https://redis.io/docs/connect/cli/ | Redis CLI | Redis
-https://fastify.dev/docs/latest/Guides/Ecosystem/ | Ecosystem | Fastify
-https://github.com/beliven-it/fastify-bcrypt | GitHub - beliven-it/fastify-bcrypt: A Bcrypt hash generator & checker
-https://www.npmjs.com/package/bcryptjs | bcryptjs - npm
-
-https://fastify.dev/docs/latest/Guides/Ecosystem | Ecosystem | Fastify
-https://github.com/fastify/fastify-jwt | GitHub - fastify/fastify-jwt: JWT utils for Fastify
-https://github.com/nbalduzzi/fastify-knexjs | GitHub - nbalduzzi/fastify-knexjs: Fastify KnexJS Plugin
 
 https://libreddit.kylrth.com/r/reactjs/comments/udiwx0/dynamic_meta_tags_on_a_reactjs_spa/ | Dynamic meta tags on a ReactJS SPA - r/reactjs
 
@@ -61,29 +261,9 @@ https://www.screamingfrog.co.uk/seo-spider/ | Screaming Frog SEO Spider Website 
 https://moz.com/ | Moz - SEO Software for Smarter Marketing
 https://ahrefs.com/keyword-generator | Free Keyword Generator Tool: Find 100+ Keyword Ideas in Seconds
 
-https://libreddit.kylrth.com/r/node/comments/15gbjpm/fastify_typescript_boilerplate/ | Fastify Typescript Boilerplate - r/node
-https://fastify.dev/docs/latest/Guides/Ecosystem | Ecosystem | Fastify
-https://libreddit.kylrth.com/r/node/comments/vgpoks/raw_sql_vs_knexjs_vs_prisma_vs_mikroorm/ | Raw SQL vs Knex.js vs Prisma vs MikroORM - r/node
-https://www.basedash.com/blog/how-to-configure-knex-js-with-typescript | How to Configure Knex.js with TypeScript | Basedash
-
-https://libreddit.kylrth.com/r/reactjs/comments/11qcfk7/use_same_validation_in_both_frontend_and_backend/ | USE SAME VALIDATION IN BOTH FRONT-END AND BACK-END - r/reactjs
-https://blog.logrocket.com/when-to-use-never-unknown-typescript/#typescript-never-type | When to use never and unknown in TypeScript - LogRocket Blog
-https://stackoverflow.com/questions/68823887/type-unknown-is-not-assignable-to-type-string | angular - Type 'unknown' is not assignable to type 'string' - Stack Overflow
-https://bobbyhadz.com/blog/typescript-function-return-type-object | Declare functions returning Object or Array in TypeScript | bobbyhadz
-https://bobbyhadz.com/blog/typescript-no-overload-matches-this-call | No overload matches this call error in TypeScript [Solved] | bobbyhadz
-https://fastify.dev/docs/latest/Reference/TypeScript/ | TypeScript | Fastify
-https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript | Interfaces vs Types in TypeScript - Stack Overflow
-https://stackoverflow.com/questions/62254729/how-to-declare-object-with-optional-keys | typescript - How to declare object with optional keys? - Stack Overflow
-https://lite.duckduckgo.com/lite/?q=typescript+when+you+don%27t+know+what+will+be+returned+from+api%2C+or+is+too+extensive | typescript when you don't know what will be returned from api, or is too extensive at DuckDuckGo
-https://stackoverflow.com/questions/65815269/how-to-use-typescript-types-on-api-response-data | javascript - How to use TypeScript types on API response data - Stack Overflow
-
 https://invidious.slipfox.xyz/search?q=make+simple+pong+game+in+javascript | make simple pong game in javas… - Invidious
 https://modernweb.com/building-multiplayer-games-node-js-socket-io/ | Building Multiplayer Games With Node.js And Socket.IO | Modern Web - Web3, Business & Technology
 https://www.pubnub.com/blog/javascript-multiplayer-game/ | How to Make an Online Multiplayer Game in JavaScript | PubNub
-
-https://fastify.dev/docs/latest/Guides/Getting-Started/ | Getting-Started | Fastify
-https://vuejs.org/guide/introduction.html | Introduction | Vue.js
-https://router.vuejs.org/guide/ | Getting Started | Vue Router
 
 https://vue-community.org/guide/ecosystem/mobile-apps.html | Mobile Apps | Vue Community
 https://nativescript-vue.org/en/docs/introduction/ | Introduction - NativeScript-Vue
@@ -98,8 +278,6 @@ https://scribe.rip/basecs/hashing-out-hash-functions-ea5dd8beb4dd | Hashing Out 
 https://schani.wordpress.com/2010/04/30/linear-vs-binary-search/ | Linear vs Binary Search | Mostly Software
 https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/HashFuncExamp.html | 13.3. Sample Hash Functions — RHS Comp Sci III
 https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/ | Chapter 0 Preface — RHS Comp Sci III
-
-https://postcss.org/ | PostCSS - a tool for transforming CSS with JavaScript
 
 https://lite.duckduckgo.com/lite/?q=self+taught+technical+interviews+reddit | self taught technical interviews reddit at DuckDuckGo
 https://libreddit.kylrth.com/r/cscareerquestions/comments/xnll35/is_getting_a_job_as_a_self_taught_really_possible/ | is getting a job as a self taught really possible? any success stories from self taughts? - r/cscareerquestions
@@ -125,10 +303,6 @@ https://reddit.invak.id/r/neovim/comments/17t51ox/develop_php_in_neovim_your_exp
 https://getcomposer.org/ | Composer
 https://packagist.org/ | Packagist
 https://www.php.net/manual/en/features.commandline.webserver.php | PHP: Built-in web server - Manual
-
-https://fastify.dev/docs/latest/Reference/TypeScript/ | TypeScript | Fastify
-https://fastify-nuxt.vercel.app/usage | Usage - Fastify Nuxt.js
-https://nuxt.com/ | Nuxt: The Intuitive Vue Framework · Nuxt
 
 https://scribe.rip/@JSotoPrograming/react-usecontext-3dae1de4beb4 | React useContext
 https://react.dev/learn/thinking-in-react | Thinking in React – React
@@ -176,12 +350,7 @@ https://realpython.com/python-send-email/ | Sending Emails With Python – Real 
 https://www.baeldung.com/ops/docker-cron-job | How to Run a Cron Job Inside a Docker Container? | Baeldung
 https://stackoverflow.com/questions/43889481/docker-how-to-use-syslog-to-record-logs-on-host-machine | logging - Docker- How to use syslog to record logs on host machine? - Stack Overflow
 
-https://fastify.dev/docs/latest/Guides/Ecosystem/ | Ecosystem | Fastify
-https://github.com/fastify/fastify-cors | GitHub - fastify/fastify-cors: Fastify CORS
-https://nginx.org/en/#basic_http_features | nginx
 https://www.freecodecamp.org/news/nginx-rate-limiting-in-a-nutshell-128fe9e0126c/ | NGINX rate-limiting in a nutshell
-https://enable-cors.org/server_nginx.html | enable cross-origin resource sharing
-https://socket.dev/npm/package/fastify-openapi-glue | fastify-openapi-glue - npm Package Security Analysis - Socket
 
 https://fastify.dev/docs/latest/Reference/Validation-and-Serialization/ | Validation-and-Serialization | Fastify
 https://www.nearform.com/blog/validate-the-fastify-input-with-joi/ | Validate the Fastify Input with Joi - NearForm
@@ -190,25 +359,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://stackoverflow.com/questions/12866494/how-do-you-reinstall-an-apps-dependencies-using-npm | node.js - How do you reinstall an app's dependencies using npm? - Stack Overflow
 https://joi.dev/api/?v=17.9.1#extensions | joi.dev - 17.9.1 API Reference
 
-https://stackoverflow.com/questions/65277329/how-to-use-helmet | node.js - How to use helmet? - Stack Overflow
-https://teddit.zaggy.nl/r/node/comments/4u28af/using_helmet_enough_to_protect_an_app_written_in/ | Using "helmet" enough to protect an app written in ExpressJS? : node
-https://stackoverflow.com/questions/49665023/does-knex-js-prevent-sql-injection | mysql - Does Knex.js prevent sql injection? - Stack Overflow
-
-https://fastify.dev/docs/latest/Guides/Database | Database | Fastify
-https://knexjs.org/guide/ | Installation | Knex.js
-https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md#tablename-definition---this | better-sqlite3/docs/api.md at master · WiseLibs/better-sqlite3 · GitHub
-https://dev.to/itachiuchiha/building-and-running-sql-queries-with-knex-js-55d4 | Building and Running SQL Queries with Knex.js - DEV Community
-
 https://speakerdeck.com/spreeconf/the-magic-tricks-of-testing-sandi-metz | The Magic Tricks of Testing - Sandi Metz - Speaker Deck
 https://pypi.org/project/celery/ | celery · PyPI
 https://duckduckgo.com/?q=celery+python+data+pipeline&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*oFhIm8YCwN80XcCx0alD5w.png | celery python data pipeline at DuckDuckGo
 https://github.com/breejs/bree | GitHub - breejs/bree: Bree is a Node.js and JavaScript job task scheduler with worker threads, cron, Date, and human syntax. Built for @ladjs, @forwardemail, @spamscanner, @cabinjs.
-
-https://www.freecodecamp.org/news/how-to-use-the-json-module-in-python/ | How to Use the JSON Module in Python – A Beginner's Guide
-https://www.w3schools.com/python/python_for_loops.asp | Python For Loops
-https://www.abilenetx.gov/526/City-Council | City Council | Abilene, TX
-https://realpython.com/python-requests/ | Python’s Requests Library (Guide) – Real Python
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html | pandas.read_html — pandas 2.0.3 documentation
 
 https://www.manuelkruisz.com/blog/posts/nginx-multiple-domains-one-server | Using nginx to serve multiple nodejs applications on different domains | Manuel Kruisz
 https://stackoverflow.com/questions/30449313/how-do-i-make-a-docker-container-start-automatically-on-system-boot | How do I make a Docker container start automatically on system boot? - Stack Overflow
