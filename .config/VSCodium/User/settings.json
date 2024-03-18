@@ -5,6 +5,7 @@
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.fontSize": 16,
     "workbench.startupEditor": "none",
     "editor.fontSize": 16.75,
     "editor.cursorBlinking": "solid",
@@ -15,7 +16,6 @@
     "editor.fontFamily": "monospace",
     "editor.fontWeight": "bold",
     "workbench.sideBar.location": "right",
-    "window.menuBarVisibility": "toggle",
     "glassit.alpha": 230,
     "workbench.colorTheme": "Nord Deep",
     "window.restoreWindows": "none",
@@ -38,6 +38,14 @@
               "workbench.action.nextEditorInGroup"
           ]
       },
+      {
+        "before": ["<Ctrl+k>"],
+        "commands": ["editor.action.insertCursorAbove"]
+      },
+      {
+          "before": ["<Ctrl+j>"],
+          "commands": ["editor.action.insertCursorBelow"]
+      }
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
@@ -47,4 +55,5 @@
     "extensions.experimental.affinity": {
       "vscodevim.vim": 1
     },
+    "window.menuBarVisibility": "toggle",
 }

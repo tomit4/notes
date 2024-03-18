@@ -25,34 +25,39 @@
     "command": "workbench.action.previousEditor"
   },
   {
-      "key": "ctrl+t",
-      "command": "workbench.action.files.newUntitledFile"
+    "key": "ctrl+t",
+    "command": "workbench.action.files.newUntitledFile"
   },
   {
-      "key": "ctrl+h",
-      "command": "workbench.action.focusPreviousGroup",
-      "when": "activeEditorGroupIndex != 0"
+    "key": "ctrl+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "activeEditorGroupIndex != 0"
   },
   {
-      "key": "ctrl+l",
-      "command": "workbench.action.focusNextGroup",
-      "when": "activeEditorGroupIndex != editorGroupCount - 1"
+    "key": "ctrl+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "activeEditorGroupIndex != editorGroupCount - 1"
   },
   {
-      "key": "space '",
-      "command": "workbench.action.toggleSidebarVisibility",
-      "when": "sideBarFocus && activeViewlet != workbench.view.extensions && activeViewlet != workbench.view.search && activeViewlet != workbench.view.scm"
+    "key": "space '",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet != workbench.view.extensions && activeViewlet != workbench.view.search && activeViewlet != workbench.view.scm"
   },
   {
-      "key": "ctrl+p",
-      "command": "workbench.action.quickOpen"
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
   },
   {
     "key": "alt+enter",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-      "key": "ctrl+enter",
-      "command": "workbench.action.terminal.new"
-  }
+    "key": "ctrl+enter",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "!terminalFocus"
+  },
 ]
