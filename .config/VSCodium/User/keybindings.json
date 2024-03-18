@@ -46,5 +46,13 @@
   {
       "key": "ctrl+p",
       "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+enter",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+      "key": "ctrl+enter",
+      "command": "workbench.action.terminal.new"
   }
 ]
