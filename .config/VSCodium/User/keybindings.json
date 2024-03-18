@@ -1,20 +1,24 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "alt+tab",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+right",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+shift+tab",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "alt+left",
-        "command": "workbench.action.previousEditor"
-    }
-
+  {
+    "key": "alt+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "space '",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus"
+  }
 ]

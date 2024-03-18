@@ -5,13 +5,41 @@
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 16.75,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
+    "editor.lineNumbers": "relative",
     "editor.fontFamily": "monospace",
     "editor.fontWeight": "bold",
     "workbench.sideBar.location": "right",
     "window.menuBarVisibility": "toggle",
-    "glassit.alpha": 215,
-    "workbench.colorTheme": "Nord Deep"
+    "glassit.alpha": 230,
+    "workbench.colorTheme": "Nord Deep",
+    "go.toolsManagement.autoUpdate": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "'"],
+        "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"],
+    },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+    "// To improve performance",
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    }
 }
