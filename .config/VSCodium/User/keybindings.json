@@ -16,9 +16,10 @@
     "key": "alt+left",
     "command": "workbench.action.previousEditor"
   },
-  {
+{
     "key": "space '",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarFocus"
-  }
+    "when": "sideBarFocus && activeViewlet != workbench.view.extensions && activeViewlet != workbench.view.search && activeViewlet != workbench.view.scm"
+}
+
 ]
