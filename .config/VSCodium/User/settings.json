@@ -7,6 +7,8 @@
     "terminal.integrated.smoothScrolling": true,
     "editor.fontSize": 16.75,
     "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 21,
     "editor.cursorStyle": "block",
     "editor.lineNumbers": "relative",
     "editor.fontFamily": "monospace",
@@ -21,25 +23,26 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ],
+    "vim.insertModeKeyBindings": [],
     "vim.normalModeKeyBindingsNonRecursive": [
       {
         "before": ["<leader>", "'"],
         "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"],
-    },
+      },
+      {
+          "before": ["n", "v"],
+          "commands": [
+              "workbench.action.splitEditor",
+              "workbench.action.nextEditorInGroup"
+          ]
+      },
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
       "<C-a>": false,
       "<C-f>": false
     },
-    "// To improve performance",
     "extensions.experimental.affinity": {
       "vscodevim.vim": 1
-    }
+    },
 }

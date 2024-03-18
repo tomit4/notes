@@ -1,12 +1,20 @@
 // Place your key bindings in this file to override the defaults
 [
   {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
     "key": "alt+tab",
     "command": "workbench.action.nextEditor"
   },
   {
     "key": "alt+right",
     "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
   },
   {
     "key": "alt+shift+tab",
@@ -16,10 +24,27 @@
     "key": "alt+left",
     "command": "workbench.action.previousEditor"
   },
-{
-    "key": "space '",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarFocus && activeViewlet != workbench.view.extensions && activeViewlet != workbench.view.search && activeViewlet != workbench.view.scm"
-}
-
+  {
+      "key": "ctrl+t",
+      "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+      "key": "ctrl+h",
+      "command": "workbench.action.focusPreviousGroup",
+      "when": "activeEditorGroupIndex != 0"
+  },
+  {
+      "key": "ctrl+l",
+      "command": "workbench.action.focusNextGroup",
+      "when": "activeEditorGroupIndex != editorGroupCount - 1"
+  },
+  {
+      "key": "space '",
+      "command": "workbench.action.toggleSidebarVisibility",
+      "when": "sideBarFocus && activeViewlet != workbench.view.extensions && activeViewlet != workbench.view.search && activeViewlet != workbench.view.scm"
+  },
+  {
+      "key": "ctrl+p",
+      "command": "workbench.action.quickOpen"
+  }
 ]
