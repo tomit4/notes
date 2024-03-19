@@ -7,7 +7,7 @@
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.fontSize": 16,
     "workbench.startupEditor": "none",
-    "editor.fontSize": 16.75,
+    "editor.fontSize": 17.75,
     "editor.cursorBlinking": "solid",
     "editor.renderWhitespace": "all",
     "code-eol.newlineCharacter": "↵",
@@ -17,8 +17,9 @@
     "editor.cursorSurroundingLines": 21,
     "editor.cursorStyle": "block",
     "editor.lineNumbers": "relative",
-    "editor.fontFamily": "monospace",
-    "editor.fontWeight": "bold",
+    "editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "normal",
     "workbench.sideBar.location": "right",
     "glassit.alpha": 230,
     "workbench.colorTheme": "Nord Deep",
@@ -60,4 +61,36 @@
       "vscodevim.vim": 1
     },
     "window.menuBarVisibility": "toggle",
+"editor.tokenColorCustomizations": {
+  "textMateRules": [
+    {
+      "scope": [
+        //following will be in italic (=FlottFlott)
+        "comment",
+        "entity.name.type.class", //class names
+        "keyword", //import, export, return…
+        "constant", //String, Number, Boolean…, this, super
+        "storage.modifier", //static keyword
+        "storage.type.class.js", //class keyword
+      ],
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        //following will be excluded from italics (VSCode has some defaults for italics)
+        "invalid",
+        "keyword.operator",
+        "constant.numeric.css",
+        "keyword.other.unit.px.css",
+        "constant.numeric.decimal.js",
+        "constant.numeric.json"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    }
+  ]
+}
 }
