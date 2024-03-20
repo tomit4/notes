@@ -13,3 +13,25 @@ Markdown Preview Enhanced
 Prettier
 Vetur
 Vim
+
+## How to Compile via vsce
+
+clone the repo with the source code you want to use
+
+```bash
+git clone https://github.com/extension_name
+```
+
+Once in there, run npm install to make sure you have all dependencies:
+
+```bash
+npm install
+```
+
+Finally Use vsce to compile the .vsix file you'll need:
+
+```bash
+vsce package
+```
+
+And lastly use VSCode by hand to install from .vsix (found under the ... menu in the extensions submenu of vscode)

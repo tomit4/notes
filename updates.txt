@@ -477,3 +477,7 @@ Install yad
 doas pacman -S yad
 Install obs-studio (video recording and streaming software)
 doas pacman -S obs-studio
+
+03/20/2024
+Install vsce (vscode compiler for extensions not found in MS store, i.e. cloned from github)
+doas npm install -g vsce
