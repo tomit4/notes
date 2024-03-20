@@ -59,6 +59,14 @@
     {
       "before": ["<Ctrl+j>"],
       "commands": ["editor.action.insertCursorBelow"]
+    },
+    {
+      "before": ["<Ctrl+c>"],
+      "commands": ["editor.action.commentLine"]
+    }
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["editor.action.showHover"]
     }
   ],
   "vim.leader": "<space>",
@@ -102,6 +110,13 @@
       }
     ]
   },
+  "prettier.trailingComma": "all",
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 80,
+  "prettier.semi": false,
+  "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "prettier.configPath": "./.prettierrc"
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": true,
+  "prettier.arrowParens": "avoid"
 }
