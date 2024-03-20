@@ -1,96 +1,107 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.minimap.enabled": false,
-    "git.openRepositoryInParentFolders": "always",
-    "editor.smoothScrolling": true,
-    "workbench.list.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true,
-    "terminal.integrated.fontSize": 16,
-    "workbench.startupEditor": "none",
-    "editor.fontSize": 17.75,
-    "editor.cursorBlinking": "solid",
-    "editor.renderWhitespace": "all",
-    "code-eol.newlineCharacter": "↵",
-    "code-eol.returnCharacter": "↵",
-    "code-eol.crlfCharacter": "↵",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorSurroundingLines": 21,
-    "editor.cursorStyle": "block",
-    "editor.lineNumbers": "relative",
-    "editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontWeight": "normal",
-    "workbench.sideBar.location": "right",
-    "glassit.alpha": 230,
-    "workbench.colorTheme": "Nord Deep",
-    "window.restoreWindows": "none",
-    "go.toolsManagement.autoUpdate": true,
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "'"],
-        "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"],
-      },
-      {
-          "before": ["n", "v"],
-          "commands": [
-              "workbench.action.splitEditor",
-              "workbench.action.nextEditorInGroup"
-          ]
-      },
-      {
-        "before": ["<Ctrl+k>"],
-        "commands": ["editor.action.insertCursorAbove"]
-      },
-      {
-          "before": ["<Ctrl+j>"],
-          "commands": ["editor.action.insertCursorBelow"]
-      }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
-    },
-    "extensions.experimental.affinity": {
-      "vscodevim.vim": 1
-    },
-    "window.menuBarVisibility": "toggle",
-"editor.tokenColorCustomizations": {
-  "textMateRules": [
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "git.openRepositoryInParentFolders": "always",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.fontSize": 16,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.fontSize": 17.75,
+  "editor.cursorBlinking": "solid",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderWhitespace": "all",
+  "code-eol.newlineCharacter": "↵",
+  "code-eol.returnCharacter": "↵",
+  "code-eol.crlfCharacter": "↵",
+  "files.trimTrailingWhitespace": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 21,
+  "editor.cursorStyle": "block",
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "normal",
+  "workbench.sideBar.location": "right",
+  "glassit.alpha": 230,
+  "workbench.colorTheme": "Nord Deep",
+  "window.restoreWindows": "none",
+  "go.toolsManagement.autoUpdate": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "scope": [
-        //following will be in italic (=FlottFlott)
-        "comment",
-        "entity.name.type.class", //class names
-        "keyword", //import, export, return…
-        "constant", //String, Number, Boolean…, this, super
-        "storage.modifier", //static keyword
-        "storage.type.class.js", //class keyword
-      ],
-      "settings": {
-        "fontStyle": "italic"
-      }
+      "before": ["<leader>", "'"],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
     },
     {
-      "scope": [
-        //following will be excluded from italics (VSCode has some defaults for italics)
-        "invalid",
-        "keyword.operator",
-        "constant.numeric.css",
-        "keyword.other.unit.px.css",
-        "constant.numeric.decimal.js",
-        "constant.numeric.json"
-      ],
-      "settings": {
-        "fontStyle": ""
-      }
+      "before": ["n", "v"],
+      "commands": [
+        "workbench.action.splitEditor",
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": ["<Ctrl+k>"],
+      "commands": ["editor.action.insertCursorAbove"]
+    },
+    {
+      "before": ["<Ctrl+j>"],
+      "commands": ["editor.action.insertCursorBelow"]
     }
-  ]
-}
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "window.menuBarVisibility": "toggle",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js" //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "prettier.singleQuote": true,
+  "prettier.configPath": "./.prettierrc"
 }
