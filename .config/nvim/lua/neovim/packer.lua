@@ -41,6 +41,7 @@ return require("packer").startup(function(use)
 	})
 	use({ "tpope/vim-fugitive" })
 	use({ "tpope/vim-surround" })
+	use({ "lambdalisue/suda.vim" })
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
