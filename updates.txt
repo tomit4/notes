@@ -485,3 +485,7 @@ doas npm install -g vsce
 03/22/2024
 Install the lldb (LLVM debugger)
 doas pacman -S lldb
+
+03/26/2024
+Install gcolor2 (gcolor3 breaks due to dependency hell, add gcolor3 to IgnorePkg for now)
+paru gcolor2
