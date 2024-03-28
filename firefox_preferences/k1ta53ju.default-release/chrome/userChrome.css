@@ -1,0 +1,101 @@
+/* enable in about:config by setting true:
+ * toolkit.legacyUserProfileCustomizations.stylesheets*/
+
+#urlbar-container {
+  --toolbar-field-focus-border-color: #2c77ac;
+}
+
+/* #url-go-button, */
+#urlbar-zoom-button,
+#tracking-protection-icon-container,
+#back-button,
+#forward-button,
+#stop-button,
+#reload-button,
+/* #statuspanel, */
+#urlbar-go-button,
+#urlbar-input-container > #page-action-buttons,
+.urlbarView-favicon,
+.tab-icon-image,
+#tabs-newtab-button > .toolbarbutton-icon,
+/* .tab-label-container, */
+#PanelUI-menu-button,
+.tab-close-button {
+  display: none !important;
+}
+
+#PanelUI-button {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+#urlbar-input::placeholder {
+  color: transparent;
+}
+
+.titlebar-color {
+  background-color: #14161b !important;
+}
+
+menubar,
+nav-bar,
+#TabsToolbar > * {
+  background-color: #14161b !important;
+}
+
+toolbar > * {
+  background-color: #22252c !important;
+}
+
+.tab-background[selected="true"] {
+  background: #1b1d24 !important;
+}
+
+#urlbar-background {
+  background-color: #14161b !important;
+}
+
+#nav-bar toolbarspring {
+  /* min-width: 55px !important; */
+  /* max-width: 65px !important; */
+  min-width: 25px !important;
+  max-width: 35px !important;
+}
+
+/* cuz mozilla be stupid sometimes */
+#unified-extensions-view {
+  --uei-icon-size: 16px;
+  /* background-color: #22252c !important; */
+}
+.unified-extensions-item-menu-button.subviewbutton {
+  padding: 2px !important;
+}
+.unified-extensions-item-message-deck {
+  display: none;
+}
+#unified-extensions-view > vbox > vbox > .unified-extensions-item {
+  padding-block: 0px !important;
+}
+.unified-extensions-item-menu-button {
+  margin-inline-end: 0 !important;
+}
+.unified-extensions-list .unified-extensions-item-menu-button {
+  margin-inline-end: 8px !important;
+}
+
+#unified-extensions-button .toolbarbutton-icon {
+  list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+}
+
+/* Attempts to address wayland tab font too small */
+#PlacesToolbarItems,
+#sidebar-search-container #search-box,
+.sidebar-placesTree {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+label.tab-text {
+  font-size: 15px !important;
+}
