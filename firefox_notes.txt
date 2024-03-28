@@ -102,6 +102,7 @@ toolkit.telemetry.shutdownPingSender.enabled set to false
 webgl.disabled set to true
 privacy.firstparty.isolate set to true
 security.ssl.enable_false_start set to false
+browser.sessionstore.resume_from_crash to false
 
 go into ublock origin and check the 'Prevent WebRTC from leaking local IP addresses' box.
 go into usr/lib/firefox/distribution and open/create package.json and input the following:
