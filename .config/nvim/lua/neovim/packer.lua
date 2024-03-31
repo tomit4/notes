@@ -103,6 +103,9 @@ return require("packer").startup(function(use)
 	-- golang
 	use("ray-x/go.nvim")
 	use("ray-x/guihua.lua")
+	-- rustlang
+	use("rust-lang/rust.vim")
+	use("simrat39/rust-tools.nvim")
 	-- code snippet screenshots
 	-- capture code snippets using :Silicon,
 	-- in Visual mode highlight then enter command

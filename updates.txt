@@ -489,3 +489,11 @@ doas pacman -S lldb
 03/26/2024
 Install gcolor2 (gcolor3 breaks due to dependency hell, add gcolor3 to IgnorePkg for now)
 paru gcolor2
+
+03/29/2024
+Install rust-analyzer
+doas pacman -S rust-analyzer
+
+03/30/2024
+Install sox (cli audio editor)
+doas pacman -S sox
