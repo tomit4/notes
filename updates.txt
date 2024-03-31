@@ -497,3 +497,5 @@ doas pacman -S rust-analyzer
 03/30/2024
 Install sox (cli audio editor)
 doas pacman -S sox
+Install anoise/anoise-gui (white noise audio)
+paru anoise (choose both anoise and anoise-gui)
