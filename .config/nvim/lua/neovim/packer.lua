@@ -105,6 +105,7 @@ return require("packer").startup(function(use)
 	use("ray-x/guihua.lua")
 	-- rustlang
 	use("rust-lang/rust.vim")
+	use("mrcjkb/rustaceanvim")
 	use("simrat39/rust-tools.nvim")
 	-- code snippet screenshots
 	-- capture code snippets using :Silicon,

@@ -5,9 +5,10 @@ lsp.preset("recommended")
 require("mason").setup()
 
 lsp.ensure_installed({
+	"clangd",
 	"tsserver",
 	"eslint",
-	"rust_analyzer",
+	-- "rust_analyzer",
 	"volar",
 })
 
