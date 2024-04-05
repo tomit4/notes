@@ -1,3 +1,10 @@
+https://practice.course.rs/compound-types/struct.html?highlight=structs#struct | Struct - Rust By Practice
+
+https://stackabuse.com/merge-sort-in-javascript/ | Merge Sort in JavaScript
+
+https://rust-unofficial.github.io/patterns/idioms/coercion-arguments.html | Use borrowed types for arguments - Rust Design Patterns
+https://marabos.nl/atomics/ | Rust Atomics and Locks by Mara Bos
+
 https://developer.chrome.com/docs/css-ui/declarative-shadow-dom | Declarative Shadow DOM  |  CSS and UI  |  Chrome for Developers
 https://developer.mozilla.org/en-US/docs/Web/CSS/@layer | @layer - CSS: Cascading Style Sheets | MDN
 https://web.dev/articles/css-module-scripts | Using CSS Module Scripts to import stylesheets  |  Articles  |  web.dev

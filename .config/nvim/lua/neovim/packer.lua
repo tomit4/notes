@@ -106,7 +106,6 @@ return require("packer").startup(function(use)
 	-- rustlang
 	use("rust-lang/rust.vim")
 	use("mrcjkb/rustaceanvim")
-	use("simrat39/rust-tools.nvim")
 	-- code snippet screenshots
 	-- capture code snippets using :Silicon,
 	-- in Visual mode highlight then enter command

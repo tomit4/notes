@@ -617,7 +617,32 @@
         "§:optimizedbyotto.com",
         "§:shwoodshop.com",
         "§:hermanmiller.com",
-        "§:postmarkapp.com"
+        "§:postmarkapp.com",
+        "§:css-irl.info",
+        "§:websitecarbon.com",
+        "§:wholegraindigital.workers.dev",
+        "§:sustainablewebdesign.org",
+        "§:interviewbit.com",
+        "§:12ft.io",
+        "§:techwontsave.us",
+        "§:frontendmasters.com",
+        "§:thesiliconforest.com",
+        "§:calagator.org",
+        "§:techoregon.org",
+        "§:stateofjs.com",
+        "§:krausest.github.io",
+        "§:this-person-does-not-exist.com",
+        "§:viewscreen.githubusercontent.com",
+        "§:elastic.co",
+        "§:db-engines.com",
+        "§:virtualcoffee.io",
+        "§:course.rs",
+        "§:rust-lang.org",
+        "§:godot-rust.github.io",
+        "§:podman.io",
+        "§:marabos.nl",
+        "§:rust-unofficial.github.io",
+        "§:projecteuler.net"
       ],
       "untrusted": [
         "hotmail.com",
@@ -682,21 +707,7 @@
     "showFullAddresses": false,
     "amnesticUpdates": false,
     "storage": "local",
-    "uuid": "88160e9e-65ea-4711-b739-4d2819b7596c",
-    "toolbarLayout": {
-      "left": [
-        "reload",
-        "options",
-        "close"
-      ],
-      "right": [
-        "enforce",
-        "enforce-tab",
-        "temp-trust-page",
-        "revoke-temp"
-      ],
-      "hidden": []
-    }
+    "uuid": "430e8fe2-a13f-442d-9522-e7c3fdc0d681"
   },
   "sync": {
     "global": false,
