@@ -679,6 +679,7 @@ alias sd="sdir"
 alias unu="upnup"
 
 source $HOME/.linodes/.ips
-source $HOME/.n_hidden
 source $HOME/.k_hidden
+
+source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
