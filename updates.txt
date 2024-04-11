@@ -499,3 +499,8 @@ Install sox (cli audio editor)
 doas pacman -S sox
 Install anoise/anoise-gui (white noise audio)
 paru anoise (choose both anoise and anoise-gui)
+
+04/10/2024
+Install pkgfile (dependency checker for packages on Arch based systems)
+doas pacman -S pkgfile
+doas pkgfile --update
