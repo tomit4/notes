@@ -504,3 +504,7 @@ paru anoise (choose both anoise and anoise-gui)
 Install pkgfile (dependency checker for packages on Arch based systems)
 doas pacman -S pkgfile
 doas pkgfile --update
+
+04/14/2024
+Install nvtop from world repo (nvtop-nosystemd-git no longer maintained in AUR)
+doas pacman -S nvtop
