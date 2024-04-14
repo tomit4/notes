@@ -508,3 +508,6 @@ doas pkgfile --update
 04/14/2024
 Install nvtop from world repo (nvtop-nosystemd-git no longer maintained in AUR)
 doas pacman -S nvtop
+Uninstall tut and tootle (Mastodon clients I never use)
+paru -R tootle
+doas pacman -Rs tut
