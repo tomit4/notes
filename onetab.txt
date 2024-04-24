@@ -1,3 +1,36 @@
+https://scribe.rip/@thilinawaks/setup-aws-s3-bucket-for-storing-files-images-90cbcc7558d7 | Setup AWS S3 bucket for storing files (Images)
+https://libreddit.privacydev.net/r/webdev/comments/3iy1z1/how_should_i_store_useruploaded_images_for_a_web/ | How should I store user-uploaded images for a web application? (Scalability) - r/webdev
+https://start.duckduckgo.com/lite/?q=create+a+publish+subscribe+model+in+postgresql | create a publish subscribe model in postgresql at DuckDuckGo
+https://www.postgresql.org/docs/current/sql-createpublication.html | PostgreSQL: Documentation: 16: CREATE PUBLICATION
+https://www.postgresql.org/docs/current/sql-createsubscription.html | PostgreSQL: Documentation: 16: CREATE SUBSCRIPTION
+https://markusy.dev/pub-sub-with-postgresql | A zero-dependency Pub/Sub implementation on top of PostgreSQL / Markus Ylisiurunen — Software Engineer @ Reaktor
+
+https://code.tutsplus.com/10-insanely-useful-django-tips--net-974t | 10 Insanely Useful Django Tips | Envato Tuts+
+
+https://play.google.com/store/apps/details?id=com.myalbum.appv4 | MyAlbum - Photo/Video Sharing - Apps on Google Play
+https://family-album.com/ | FamilyAlbum | The Best Photo-Sharing App for Families
+
+https://coderpad.io/blog/development/a-guide-to-api-rate-limiting-in-django/ | A Guide To API Rate Limiting In Django - CoderPad
+https://www.django-rest-framework.org/api-guide/throttling/ | Throttling - Django REST framework
+https://docs.djangoproject.com/en/5.0/intro/tutorial03/ | Writing your first Django app, part 3 | Django documentation | Django
+https://docs.djangoproject.com/en/5.0/topics/install/#database-installation | How to install Django | Django documentation | Django
+https://docs.djangoproject.com/en/5.0/intro/tutorial02/ | Writing your first Django app, part 2 | Django documentation | Django
+https://en.wikipedia.org/w/index.php?title=Time-based_one-time_password&useskin=vector | Time-based one-time password - Wikipedia
+https://djangocentral.com/using-postgresql-with-django/ | Using PostgreSQL with Django
+https://www.codeunderscored.com/integrate-oauth2-into-django/ | How to integrate OAuth2 into Django | Code Underscored
+https://blog.logrocket.com/using-react-django-create-app-tutorial/#diving-into-django-rest-api | Using React with Django to create an app: Tutorial - LogRocket Blog
+https://stackoverflow.com/questions/9262278/how-do-i-return-json-without-using-a-template-in-django | python - How do I return JSON without using a template in Django? - Stack Overflow
+
+https://hkoerber.de/blog/2021/09/26/Rust-vs.-Go-Error-Handling/ | Rust vs. Go: Error Handling – Hannes Körber
+https://zackoverflow.dev/writing/unsafe-rust-vs-zig/ | When Zig is safer and faster than Rust
+
+https://www.geeksforgeeks.org/priority-queue-set-1-introduction/ | What is Priority Queue | Introduction to Priority Queue - GeeksforGeeks
+https://briangrinstead.com/blog/astar-search-algorithm-in-javascript/ | A* Search Algorithm in JavaScript - Brian Grinstead
+https://redlib.kylrth.com/r/cscareerquestions/comments/s7n67x/how_often_do_you_restudy_leetcode_problems_youve/ | How often do you restudy leetcode problems you've already done? - r/cscareerquestions
+https://pablomusumeci.com/interviewing/acing-the-software-engineering-interview-part-ii/#todo-redo-done | Acing the Software Engineering Interview - Part II - Pablon
+https://en.wikipedia.org/wiki/A*_search_algorithm?useskin=vector | A* search algorithm - Wikipedia
+https://en.wikipedia.org/wiki/Heuristic_(computer_science)?useskin=vector | Heuristic (computer science) - Wikipedia
+
 https://practice.course.rs/compound-types/struct.html?highlight=structs#struct | Struct - Rust By Practice
 
 https://stackabuse.com/merge-sort-in-javascript/ | Merge Sort in JavaScript

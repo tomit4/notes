@@ -511,3 +511,7 @@ doas pacman -S nvtop
 Uninstall tut and tootle (Mastodon clients I never use)
 paru -R tootle
 doas pacman -Rs tut
+
+04/22/2024
+Install sqlx (sql parsing lib for rust)
+doas pacman -S sqlx
