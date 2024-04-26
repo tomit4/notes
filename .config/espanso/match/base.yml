@@ -269,6 +269,11 @@ matches:
     force_clipboard: true
     replace: "https://openai.com/chatgpt"
 
+  # Routes to My Repos
+  - trigger: ";repos"
+    force_clipboard: true
+    replace: "https://github.com/tomit4?tab=repositories"
+
   # Routes to Llama AI
   - trigger: ";llama"
     force_clipboard: true
