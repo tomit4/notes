@@ -515,3 +515,6 @@ doas pacman -Rs tut
 04/22/2024
 Install sqlx (sql parsing lib for rust)
 doas pacman -S sqlx
+
+04/26/2024
+this is just a test
