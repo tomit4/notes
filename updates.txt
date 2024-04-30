@@ -518,4 +518,3 @@ doas pacman -S sqlx
 
 04/26/2024
 this is just a test
-another test
