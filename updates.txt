@@ -516,5 +516,6 @@ doas pacman -Rs tut
 Install sqlx (sql parsing lib for rust)
 doas pacman -S sqlx
 
-04/26/2024
-this is just a test
+05/06/2024
+Add ${USER} to docker group:
+doas usermod -aG docker ${USER}
