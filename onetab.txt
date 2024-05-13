@@ -1,3 +1,34 @@
+https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial | Django File/Image Uploads Tutorial
+https://www.django-rest-framework.org/# | Home - Django REST framework
+https://www.django-rest-framework.org/api-guide/serializers/#serializers | Serializers - Django REST framework
+https://docs.djangoproject.com/en/dev/topics/security/#cross-site-scripting-xss-protection | Security in Django | Django documentation | Django
+https://stackoverflow.com/questions/16925129/generate-unique-id-in-django-from-a-model-field | python - Generate unique id in django from a model field - Stack Overflow
+https://docs.djangoproject.com/en/5.0/ref/csrf/ | Cross Site Request Forgery protection | Django documentation | Django
+https://snyk.io/blog/preventing-xss-in-django/ | Preventing XSS in Django | Snyk
+
+https://www.ibm.com/topics/monte-carlo-simulation | What Is Monte Carlo Simulation? | IBM
+https://gamerant.com/rollback-netcode-explained/ | Rollback Netcode Explained
+
+https://cryptography.io/en/latest/fernet/ | Fernet (symmetric encryption) — Cryptography 43.0.0.dev1 documentation
+https://dev.to/risafj/beginner-s-guide-to-oauth-understanding-access-tokens-and-authorization-codes-2988 | Beginner’s guide to OAuth: Understanding access tokens and authorization codes using Google API - DEV Community
+https://blog.logrocket.com/guide-adding-google-login-react-app/ | The guide to adding Google login to your React app - LogRocket Blog
+https://developers.google.com/identity/protocols/oauth2 | Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers
+https://infisical.com/blog/guide-to-implementing-oauth2 | Guide to implementing OAuth 2.0 (with examples)
+https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow | OAuth 2.0 for Client-side Web Applications  |  Authorization  |  Google for Developers
+
+https://start.duckduckgo.com/lite/?q=how+to+set+up+oauth+with+django | how to set up oauth with django at DuckDuckGo
+https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html#what-we-will-build | Getting started — Django OAuth Toolkit 2.3.0 documentation
+https://django-oauth-toolkit.readthedocs.io/en/latest/models.html | Models — Django OAuth Toolkit 2.3.0 documentation
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-endlessh-tarpit-on-ubuntu-22-04 | How To Set Up an Endlessh Tarpit on Ubuntu 22.04 | DigitalOcean
+
+https://en.wikipedia.org/wiki/Devs_(TV_series)?useskin=vector | Devs (TV series) - Wikipedia
+
+https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for | The HTTP crash course nobody asked for
+https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep | Understanding Rust futures by going way too deep
+https://fasterthanli.me/articles/whats-in-the-box | What's in the box?
+https://fasterthanli.me/articles/request-coalescing-in-async-rust | Request coalescing in async Rust
+
 https://scribe.rip/@thilinawaks/setup-aws-s3-bucket-for-storing-files-images-90cbcc7558d7 | Setup AWS S3 bucket for storing files (Images)
 https://libreddit.privacydev.net/r/webdev/comments/3iy1z1/how_should_i_store_useruploaded_images_for_a_web/ | How should I store user-uploaded images for a web application? (Scalability) - r/webdev
 https://start.duckduckgo.com/lite/?q=create+a+publish+subscribe+model+in+postgresql | create a publish subscribe model in postgresql at DuckDuckGo
