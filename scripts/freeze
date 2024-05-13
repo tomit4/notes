@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+FILE=./requirements.txt
+if [ -f "$FILE" ]; then
+    /usr/bin/rm "$FILE" && pip freeze >"$FILE"
+else
+    pip freeze >"$FILE"
+fi
