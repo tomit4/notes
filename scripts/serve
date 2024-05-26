@@ -6,4 +6,4 @@ else
     directory="$1"
 fi
 
-live-server --browser=librewolf --open="$directory"
+live-server --browser=firefox --open="$directory"
