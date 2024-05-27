@@ -57,13 +57,14 @@ bspc config window_gap 5
 # bspc rule -a -o st desktop=2
 bspc rule -a Gcolor3 state=floating &
 bspc rule -a Galculator state=floating &
-bspc rule -a Pavucontrol state=floating center=on rectangle=960x810+1440+810 &
+bspc rule -a pavucontrol state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Peek state=floating center=on rectangle=1555x960+1440+810 &
 bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
 # bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a Alacritty center=on rectangle=1555x960+1440+810 &
 bspc rule -a Codium center=on rectangle=1555x960+1440+810 &
+bspc rule -a Vscodium center=on rectangle=1555x960+1440+810 &
 bspc rule -a Thorium-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
 bspc rule -a librewolf center=on rectangle=1555x960+1440+810 &
