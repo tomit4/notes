@@ -523,3 +523,5 @@ doas usermod -aG docker ${USER}
 06/04/2024
 Install entr (runs on file save, haven't quite figured it out)
 doas pacman -S entr
+Install concurrently and livereload:
+doas npm install -g livereload concurrently
