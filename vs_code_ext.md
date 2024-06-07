@@ -2,41 +2,40 @@
 
 **Themes/Aesthetics:**
 
-- Beautify
-- Borealis Theme (install via .vsix file on vscodium)
-- Cobalt2 Theme Official (blue borealis)
-- Cursor Column Highlight
-- GlassIt Linux (or GlassIt depending)
-- Nord Deep
-- multi-command
-- Render Line Endings
+- [Borealis Theme](https://marketplace.visualstudio.com/items?itemName=eckertalex.borealis)
+- [Cobalt2 Theme Official](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
+- [Cursor Column Highlight](https://marketplace.visualstudio.com/items?itemName=IuriiBarlukov.cursor-column-highlight)
+- [GlassIt Linux](https://marketplace.visualstudio.com/items?itemName=nowsci.glassit-linux)
+- [Nord Deep](https://marketplace.visualstudio.com/items?itemName=marlosirapuan.nord-deep)
+- [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command)
+- [Render Line Endings](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf)
 
 **Extensions:**
 
-- EsLint
-- Biome
-- Prettier
-- Live Server
-- Quick-Lint-Js
-- Bracket Pair Colorizer 2
-- Import Cost
-- Markdown Preview Enhanced
-- Vim
+- [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+- [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Quick-Lint-Js](https://marketplace.visualstudio.com/items?itemName=quick-lint.quick-lint-js)
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
 
 **Language Servers:**
 
-- HTML CSS Support
-- Python (ms-python)
-- Python Debugger (ms-python)
-- Go (golang)
-- React - Typeescript snippets (XAcademy)
-- Rust (rust-lang)
-- ShellCheck
-- Svelte for VS Code (svelte)
-- TypeScript Vue Plugin (Volar)
-- Vue - Official
-- Vue Language Features (Volar) (conflicts with Vue - Official)
-- YAML (redhat)
+- [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+- [Python (ms-python)](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Python Debugger (ms-python)](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
+- [Pyright](https://marketplace.visualstudio.com/items?itemName=ms-pyright.pyright)
+- [Go (golang)](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+- [React - Typescript snippets (XAcademy)](https://marketplace.visualstudio.com/items?itemName=Tomi.xasnippets)
+- [Rust (rust-lang)](https://marketplace.visualstudio.com/items?itemName=1YiB.rust-bundle)
+- [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)
+- [Svelte for VS Code (svelte)](https://marketplace.visualstudio.com/items?itemName=1YiB.svelte-bundle)
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [YAML (redhat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 ## A Note on GlassIt Linux
 
