@@ -17,15 +17,37 @@ gear I've come across while researching for these various activities.
 
 - [Sportsman Kodiak Canvas Flex-Bow VX 2-Person Canvas Tent](https://www.sportsmans.com/camping-gear-supplies/tents-shelters/tents/kodiak-canvas-flex-bow-vx-2-person-canvas-tent/p/1863395)
 
+- [Nemo Equipment Backpacking Tents](https://www.nemoequipment.com/collections/backpacking-tents)
+
 **Sleeping Bags:**
 
 - [Enlightened Equipment Enigma Sleeping Quilt](https://enlightenedequipment.com/enigma-sleeping-quilt/)
 
 - [REI Magma 30 Sleeping Bag](https://www.rei.com/product/228707/rei-co-op-magma-30-sleeping-bag)
 
+- [Disco Men's Endless Promise Down Sleeping Bag](https://www.nemoequipment.com/products/disco-mens-endless-promise-down-sleeping-bag)
+
 **Hiking Shoes:**
 
 - [Oboz Sawtooth II Low Waterproof Hiking Shoes](https://obozfootwear.com/en-us/product/mens-sawtooth-ii-low-waterproof)
+
+**Hiking Socks:**
+
+- [Injinji Hiking Sock Liners](https://www.injinji.com/hiking-socks.html)
+- [DarnTough Merino Wool Light No Show Hiking Socks](https://darntough.com/collections/best-seller/products/mens-merino-wool-light-hiker-no-show-lightweight-hiking-socks)
+
+**Gloves:**
+
+- [Ozero 9014 Winter Gloves](https://ozerogloves.com/product/ozero-9014/)
+
+**Trekking Poles:**
+
+- [7 Best Trekking Poles Of 2024](https://www.cleverhiker.com/hiking/best-hiking-trekking-poles/)
+- [LEKI Malaku Lite Trekking Poles](https://www.scheels.com/p/leki-makalu-lite-trekking-poles/40700046837.html?cgid=all#start=7)
+
+**Bear Canister:**
+
+- [REI BV450 Jaunt Bear Canister](https://www.rei.com/product/768901/bearvault-bv450-jaunt-bear-canister)
 
 **Various Tools:**
 
