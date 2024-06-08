@@ -13,8 +13,9 @@
 **Extensions:**
 
 - [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
-- [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
+- [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Quick-Lint-Js](https://marketplace.visualstudio.com/items?itemName=quick-lint.quick-lint-js)
