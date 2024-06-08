@@ -226,8 +226,8 @@ alias {ytd,ytdownload}="ytfzf -d"
 alias lbry="ytfzf -c O --features=subtitles"
 alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 # for smaller downloads
-# alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
-alias ytdl='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
+alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
+alias ytdl-w='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
 # for better resolutions
 # alias ytdl-w='yt-dlp -f webm "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 # for audio only
@@ -319,7 +319,7 @@ alias git-c="git commit -m"
 alias git-p="git push"
 alias {git-\#,git\#}="git rev-list --count --all"
 # taken from Luke Smith, pushes to all remotes
-alias gua="git remote | xargs -L1 git push --all"
+alias git-pa="git remote | xargs -L1 git push --all"
 # undo local file changes and keep your last commit
 alias git-r="git reset --hard"
 # undo local file changes and remove your last commit
@@ -329,6 +329,8 @@ alias git-rrs="git reset --soft HEAD^"
 alias git-s="git status"
 alias git-ss="git status short"
 alias git-d="git diff"
+alias {git-b,git-br}="git branch"
+alias git-bl="git blame"
 # for use with notes directory only
 alias git-lo="git log --oneline --follow"
 alias {git-l,git-log}="git log --graph --format='format:%C(yellow)%h%C(reset) %s %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)'"
