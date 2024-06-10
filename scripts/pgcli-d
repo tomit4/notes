@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#
+printhelp() {
+    cat <<EOM
+Usage pgcli-d DOCKER_PORT DATABASE_NAME USER_NAME
+Example:
+pgcli-d 5936 django_db admin
+NOTE: password needed
+EOM
+    exit 0
+}
+
+if [[ $# -lt 1 ]]; then
+    printhelp
+fi
+
+PORT=$1
+DB_NAME=$2
+USER_NAME=$3
+pgcli -h localhost -p "$PORT" -d "$DB_NAME" -u "$USER_NAME"
