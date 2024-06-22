@@ -36,6 +36,10 @@ gear I've come across while researching for these various activities.
 - [Injinji Hiking Sock Liners](https://www.injinji.com/hiking-socks.html)
 - [DarnTough Merino Wool Light No Show Hiking Socks](https://darntough.com/collections/best-seller/products/mens-merino-wool-light-hiker-no-show-lightweight-hiking-socks)
 
+**Coats:**
+
+- [Paramo Men's Halkon Jacket](https://paramo-clothing.com/en-in/explore-range/product/mens-halkon-jacket-2/)
+
 **Gloves:**
 
 - [Ozero 9014 Winter Gloves](https://ozerogloves.com/product/ozero-9014/)
