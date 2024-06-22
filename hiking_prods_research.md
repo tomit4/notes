@@ -39,6 +39,7 @@ gear I've come across while researching for these various activities.
 **Coats:**
 
 - [Paramo Men's Halkon Jacket](https://paramo-clothing.com/en-in/explore-range/product/mens-halkon-jacket-2/)
+- [Gore-Tex Men's Concurve Running Jacket -note: very thin, not good for hiking, but for running](https://www.gorewear.com/us/en-us/concurve-gore-tex-jacket-mens-101066)
 
 **Gloves:**
 
