@@ -277,8 +277,13 @@ matches:
   # Routes to Llama AI
   - trigger: ";llama"
     force_clipboard: true
+    replace: "https://www.llama2.ai/"
+
+  # Routes to Project Zomboid Map
+  - trigger: ";zmap"
+    force_clipboard: true
     replace:
-      "https://www.llama2.ai/"
+      "https://map.projectzomboid.com/"
 
       # Prepares about pages for firefox
   - trigger: ";conf"
