@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+IPV4=$(curl -s -4 icanhazip.com)
+IPV6=$(curl -s -6 icanhazip.com)
+
+echo "Your IPV4 address is: ${IPV4}"
+echo "Your IPV6 address is: ${IPV6}"
