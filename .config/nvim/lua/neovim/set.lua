@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.softtabstop = 0
 vim.opt.shiftwidth = 4
 -- vim.opt.shiftwidth = 2
+
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -58,6 +59,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 -- disable poor neoformatting for .sql files
 vim.cmd([[let g:neoformat_enabled_sql = [] ]])
+
 --Saves vim session on save
 
 -- Marks end of line, space, and trailing space characters
@@ -72,6 +74,9 @@ vim.cmd([[autocmd Filetype json let g:indentLine_setConceal = 0]])
 
 -- enable clipboard
 vim.cmd([[set clipboard+=unnamedplus]])
+
+-- disable intro screen
+vim.cmd([[set shortmess+=I]])
 
 -- enable folds
 vim.cmd([[set foldmethod=manual]])
@@ -158,4 +163,4 @@ augroup END
 -- codeium disable default keybindings
 vim.g.codeium_disable_bindings = 1
 -- codeium disable by default
--- vim.g.codeium_enabled = 0
+vim.g.codeium_enabled = 0
