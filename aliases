@@ -684,3 +684,4 @@ source $HOME/.k_hidden
 source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
 alias "${scomm2}"='mmpv ${secvid} && home'
+alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
