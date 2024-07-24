@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source "${HOME}"/.n_hidden
+lastarg=("${@: -1}")
+
+search=""
+for ARG in "${@}"; do
+    if [[ $ARG == "${lastarg[1]}" ]]; then
+        search+="${ARG}"
+    else
+        search+="${ARG}+"
+    fi
+done
+
+$BROWSER "${N3}"/search/"${search}" &
