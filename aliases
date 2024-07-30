@@ -134,6 +134,7 @@ alias {pdf2,pdf2txt}="pdftotext"
 alias {pdfg,greppdf}="pdfgrep"
 alias tree="tree -ad -L 3 --prune -C -I 'node_modules|.git'"
 alias {vi,vim,nv,nvi}="nvim"
+alias {vfz,nvfz,nvim-fzf,fzf-nvim}='nvim "$(fzf)"'
 alias {cproj,mproj,myproj}="cd '$cproj' && ls"
 alias leafbytes="cd ~/Documents/Code/leafbytes_vue/ && ls"
 alias blog="cd ~/Documents/Code/blog/ && ls"
