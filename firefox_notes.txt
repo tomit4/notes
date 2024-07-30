@@ -160,3 +160,10 @@ In about:preferences#privacy:
 Enable secure DNS using Default protection.
 Use custom secure DNS, under Max Protection, input mullvad's DNS server:
 https://base.dns.mullvad.net/dns-query
+
+Disable Ads
+browser.shopping.experience2023.active to false
+browser.shopping.experience2023.ads.userEnabled to false
+browser.shopping.experience2023.autoOpen.userEnabled to false
+browser.shopping.experience2023.showKeepSidebarClosedMessage to false
+browser.shopping.experience2023.suvey.enabled to false
