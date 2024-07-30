@@ -525,3 +525,11 @@ Install entr (runs on file save, haven't quite figured it out)
 doas pacman -S entr
 Install concurrently and livereload:
 doas npm install -g livereload concurrently
+
+07/29/2024
+Install zig and use it to install fex
+doas pacman -S zig
+cd ~/aur_packages/
+git clone https://github.com/18alantom/fex && cd fex
+zig build-exe -O ReleaseSafe main.zig -lc
+mv main /usr/bin/fex
