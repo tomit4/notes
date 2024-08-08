@@ -80,6 +80,27 @@ require("mason-lspconfig").setup_handlers({
 					["volar.takeOverMode.enabled"] = true,
 				},
 			})
+			lspconfig.rust_analyzer.setup({
+				settings = {
+					["rust-analyzer"] = {
+						procMacro = {
+							ignored = {
+								leptos_macro = {
+									"server",
+								},
+							},
+						},
+						rustfmt = {
+							overrideCommand = {
+								"leptosfmt",
+								"--stdin",
+								"--rustfmt",
+							},
+							edition = { "2021" },
+						},
+					},
+				},
+			})
 		end
 		lspconfig[server_name].setup(server_config)
 	end,
