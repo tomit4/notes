@@ -547,3 +547,6 @@ Install wasm32
 rustup target add wasm32-unknown-unknown
 Install leptosfmt
 cargo install leptosfmt
+08/08/2024
+Install stylance-cli
+cargo install stylance-cli
