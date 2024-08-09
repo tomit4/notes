@@ -550,3 +550,7 @@ cargo install leptosfmt
 08/08/2024
 Install stylance-cli
 cargo install stylance-cli
+
+08/09/2024
+Install lftp (like curl/wget):
+doas pacman -S lftp
