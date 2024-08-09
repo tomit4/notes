@@ -654,16 +654,16 @@ alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-che
 # ddgr shebang bookmarks
 # alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
 # alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
-alias {ddgi,dggi}='ddgr \!dggi "${1}"'
-alias aur='ddgr \!aur "${1}"'
-alias archwiki='ddgr \!archwiki "${1}"'
-alias wiki='ddgr \!w "${1}"'
-alias gh='ddgr \!gh "${1}"'
-alias mdn='ddgr \!mdn "${1}"'
+alias {ddgi,dggi}='ddgr \!dggi "${1}" <<< $(echo q)'
+alias aur='ddgr \!aur "${1}" <<< $(echo q)'
+alias archwiki='ddgr \!archwiki "${1}" <<< $(echo q)'
+alias wiki='ddgr \!w "${1}" <<< $(echo q)'
+alias gh='ddgr \!gh "${1}" <<< $(echo q)'
+alias mdn='ddgr \!mdn "${1}" <<< $(echo q)'
 # must have account to use gitlab bang
 # alias glab='ddgr \!glab "${1}"'
-alias {red,reddit}='ddgr \!r "${1}"'
-alias yt='ddgr \!yt "${1}"'
+alias {red,reddit}='ddgr \!r "${1}" <<< $(echo q)'
+alias yt='ddgr \!yt "${1}" <<< $(echo q)'
 
 # display related aliases
 alias brighten="xrandr --output HDMI-0 --brightness"
