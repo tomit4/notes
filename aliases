@@ -667,7 +667,7 @@ alias yt='ddgr \!yt "${1}" <<< $(echo q)'
 
 # display related aliases
 alias brighten="xrandr --output HDMI-0 --brightness"
-unred="redshift -x"
+alias unred="redshift -x"
 
 # run the following two aliases every time you update the kernels and nvidiadkms
 alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
