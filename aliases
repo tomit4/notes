@@ -279,7 +279,6 @@ alias taze="npx taze"
 alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
 alias nb="newsboat"
-alias reddit="tuir"
 alias subreddit="$HOME/scripts/sub"
 alias mastodon="tut"
 alias profane="profanity"
@@ -663,8 +662,8 @@ alias gh='ddgr \!gh "${1}"'
 alias mdn='ddgr \!mdn "${1}"'
 # must have account to use gitlab bang
 # alias glab='ddgr \!glab "${1}"'
-alias red='ddgr \!r "${1}"'
-# alias yt='ddgr \!yt "${1}"'
+alias {red,reddit}='ddgr \!r "${1}"'
+alias yt='ddgr \!yt "${1}"'
 
 # display related aliases
 alias brighten="xrandr --output HDMI-0 --brightness"
