@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# TODO: Write a Help Flag
+# TODO: Have an IF check that prevents execution if using REAL IP (i.e. Must use
+# VPN)
+# TODO: Use read and parallel to allocate many urls to an array and then
+# executes many lftp executions in parrallel (i.e. download multiple files at
+# once)
+
+TORRENT_URL="${1}"
+
+lftp -e "torrent -O $HOME/Downloads $TORRENT_URL"
