@@ -63,6 +63,7 @@ alias of="onefetch -o yaml | yq -C"
 alias mkdir='mkdir -pv'
 alias dict='def'
 alias {:q,ex,esc}="exit"
+alias :w="touch"
 alias {his,hist}="history"
 alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive && cd /mnt/media/usb-drive && ls"
 alias umnt="doas umount /mnt/media/usb-drive"
