@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Russell Cohen</title>
+    <link>https://rcoh.me/posts/</link>
+    <description>Recent content in Posts on Russell Cohen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Dec 2019 14:48:30 -0800</lastBuildDate>
+    
+	<atom:link href="https://rcoh.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Verifiable Voting: A Primer</title>
+      <link>https://rcoh.me/posts/verifiable-voting-primer/</link>
+      <pubDate>Thu, 05 Dec 2019 14:48:30 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/verifiable-voting-primer/</guid>
+      <description>Given the level of distrust in election systems in recent years, I became curious about verifiable voting systems &amp;ndash; systems in which you can ensure that your vote was really counted, and counted correctly. Systems in which everyone (or at least interested parties) can verify that election results precisely reflect the votes cast. The verifiable voting system I&amp;rsquo;ll describe is pretty close to &amp;ldquo;regular&amp;rdquo; voting for voters. They don&amp;rsquo;t need to care the election is e2e verified, they just need to vote like normal.</description>
+    </item>
+    
+    <item>
+      <title>How to Code Review</title>
+      <link>https://rcoh.me/posts/how-to-code-review/</link>
+      <pubDate>Wed, 23 Oct 2019 09:59:22 -0700</pubDate>
+      
+      <guid>https://rcoh.me/posts/how-to-code-review/</guid>
+      <description>This document is adapted from an internal document I wrote for one of my clients, LogicHub. They&amp;rsquo;ve graciously allowed me to adapt it and share it as the blog post you&amp;rsquo;re reading now.
+As a reviewer, your primary goal is to find bugs before code is merged. Your secondary goal is to keep the code quality as high as possible, within reason and the time constraints of the moment. Depending on the situation, code reviews can also be a valuable venue for mentorship.</description>
+    </item>
+    
+    <item>
+      <title>Dropout and the Deep Complexity of Neural Networks</title>
+      <link>https://rcoh.me/posts/dropout-deep-complexity/</link>
+      <pubDate>Thu, 12 Jul 2018 11:01:16 -0700</pubDate>
+      
+      <guid>https://rcoh.me/posts/dropout-deep-complexity/</guid>
+      <description>There&amp;rsquo;s a common misconception that neural networks&amp;rsquo; recent success on a slew of problems is due to the increasing speed and decreasing cost of GPUs. In reality, that&amp;rsquo;s not the case. Modern processing power plays a critical role, but only when combined with a series of innovations in architecture and training. You can&amp;rsquo;t process million-image datasets like ImageNet without a GPU, but without Resnet you won&amp;rsquo;t be able to achieve good results.</description>
+    </item>
+    
+    <item>
+      <title>Why you can have millions of Goroutines but only thousands of Java Threads</title>
+      <link>https://rcoh.me/posts/why-you-can-have-a-million-go-routines-but-only-1000-java-threads/</link>
+      <pubDate>Thu, 12 Apr 2018 14:28:46 -0700</pubDate>
+      
+      <guid>https://rcoh.me/posts/why-you-can-have-a-million-go-routines-but-only-1000-java-threads/</guid>
+      <description>Many seasoned engineers working in JVM based languages have seen errors like this:
+[error] (run-main-0) java.lang.OutOfMemoryError: unable to create native thread: [error] java.lang.OutOfMemoryError: unable to create native thread: [error] at java.base/java.lang.Thread.start0(Native Method) [error] at java.base/java.lang.Thread.start(Thread.java:813) ... [error] at java.base/java.lang.Thread.run(Thread.java:844)  OutOfMemory&amp;hellip;err&amp;hellip;out of threads. On my laptop running Linux, this happens after a paltry 11500 threads.
+If you try the same thing in Go by starting Goroutines that sleep indefinitely, you get a very different result.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Rust, a few thousand lines in</title>
+      <link>https://rcoh.me/posts/thoughts-on-rust-a-few-thousand-lines-in/</link>
+      <pubDate>Sat, 24 Mar 2018 12:56:00 -0700</pubDate>
+      
+      <guid>https://rcoh.me/posts/thoughts-on-rust-a-few-thousand-lines-in/</guid>
+      <description>To say my first foray into Rust was a frustrating struggle would be an understatement. I picked a terrible first project that left me neck deep in Rust&amp;rsquo;s trickiest areas right off the bat. I was excited to try again. A few years ago I wrote Sumoshell, a CLI App for log analysis. I&amp;rsquo;d wanted to improve it for a while, so porting it to Rust seemed like a nice way to kill two birds with one stone.</description>
+    </item>
+    
+    <item>
+      <title>Sudo Science</title>
+      <link>https://rcoh.me/posts/sudo-science/</link>
+      <pubDate>Tue, 13 Mar 2018 17:56:00 -0700</pubDate>
+      
+      <guid>https://rcoh.me/posts/sudo-science/</guid>
+      <description>Somehow I made it this far without actually understanding how sudo works. For years, I&amp;rsquo;ve just typed sudo, typed my password, and revelled in my new, magical, root super powers. The other day and I finally looked into it &amp;ndash; to be honest, the mechanism is not at all what I expected. After going through the basics, we&amp;rsquo;ll walk through creating our own version of sudo.
+How Sudo Works sudo is just a regular old program that essentially does 3 things:</description>
+    </item>
+    
+    <item>
+      <title>Reflections on Two Years of Freelancing</title>
+      <link>https://rcoh.me/posts/reflections-on-two-years-of-freelancing/</link>
+      <pubDate>Sat, 03 Mar 2018 15:50:51 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/reflections-on-two-years-of-freelancing/</guid>
+      <description>Two years ago in February 2016, frustrated and not feeling motivated by the 9 to 5, I quit my job. But, living in the Bay area is expensive, so I started freelancing. It&amp;rsquo;s been a life changing experience &amp;ndash; I have control of my schedule, I have way less stress, and coding is fun again. It&amp;rsquo;s definitely not for everyone. If you don&amp;rsquo;t mind a little uncertainty and less choice on what you work on, the benefits far outweigh the downsides.</description>
+    </item>
+    
+    <item>
+      <title>Why Writing a Linked List in (safe) Rust is So Damned Hard</title>
+      <link>https://rcoh.me/posts/rust-linked-list-basically-impossible/</link>
+      <pubDate>Tue, 20 Feb 2018 08:55:56 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/rust-linked-list-basically-impossible/</guid>
+      <description>Before I start this post, let me preface it by saying that I&amp;rsquo;m not an experienced Rustacean by any means. The excellent foks at /r/rust gave a lot of helpful feedback and cleared up some misconceptions I had. Futher errata and corrections are appreciated. This post is aimed at helping other fledgling rust-learners avoid my mistake. First, by helping Rust learners pick good introductory projects that will fit naturally in idiomatic rust.</description>
+    </item>
+    
+    <item>
+      <title>To foster a culture of testing, break local deployments</title>
+      <link>https://rcoh.me/posts/fostering-testing-culture/</link>
+      <pubDate>Tue, 13 Feb 2018 23:11:43 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/fostering-testing-culture/</guid>
+      <description>Someone recently lamented to me that try as they might, they can&amp;rsquo;t seem to instill a culture of non-manual testing in their team. This problem pervades startups, especially in those with a lot of newer developers. My theory:
+ To foster a culture where software engineers are internally motivated to write good tests, make it harder to run your app locally and easier to write and run tests.
+ To put it another way: rather than investing time in enabling people to run a standalone app on their laptops, invest time in making it easy to write tests.</description>
+    </item>
+    
+    <item>
+      <title>Maximize Cache Performance with this One Weird Trick: An Introduction to Cache-Oblivious Data Structures</title>
+      <link>https://rcoh.me/posts/cache-oblivious-datastructures/</link>
+      <pubDate>Mon, 29 Jan 2018 22:44:14 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/cache-oblivious-datastructures/</guid>
+      <description>If you read my recent post about Postgres you may have noted that Postgres operates primarily with fixed-size blocks of memory called &amp;ldquo;pages.&amp;rdquo; By default, Postgres pages are 8KB. This number is tuned to match operating system page sizes which are tuned to match hardware cache sizes. If you were to run Postgres on hardware with different cache sizes than Postgres was tuned for, you may be able to pick a better page size.</description>
+    </item>
+    
+    <item>
+      <title>Postgres Indexes Under the Hood</title>
+      <link>https://rcoh.me/posts/postgres-indexes-under-the-hood/</link>
+      <pubDate>Thu, 25 Jan 2018 20:32:06 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/postgres-indexes-under-the-hood/</guid>
+      <description>Many software engineers use database indexes every day, but few of us really understand how they work. In this post I&amp;rsquo;ll explain:
+ How indexing works in Postgres using B-Trees What B-Trees are Why they are a good fit for this problem  Indexes in Postgres Postgres actually offers 4 different kinds of indexes for different use cases. In this post I&amp;rsquo;ll be focusing on the &amp;ldquo;normal&amp;rdquo; index, the kind you get by default when you run create index.</description>
+    </item>
+    
+    <item>
+      <title>PSA: Python Float Overflow</title>
+      <link>https://rcoh.me/posts/python-float-overflow/</link>
+      <pubDate>Wed, 24 Jan 2018 08:56:36 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/python-float-overflow/</guid>
+      <description>Python 2 and Python 3 provide arbitrary precision integers. This means that you don&amp;rsquo;t need to worry about overflowing or underflowing the integer datatypes, ever. 2**10000? No problem. It makes it pretty convenient to write code. Floats, however, are not arbitrary precision:
+&amp;gt;&amp;gt;&amp;gt; a = 2 ** 10000 &amp;gt;&amp;gt;&amp;gt; a * .1 Traceback (most recent call last): File &amp;#34;&amp;lt;stdin&amp;gt;&amp;#34;, line 1, in &amp;lt;module&amp;gt; OverflowError: int too large to convert to float Luckily, float overflow throws an exception to alert you to the problem.</description>
+    </item>
+    
+    <item>
+      <title>My Favorite Algorithm: Linear Time Median Finding</title>
+      <link>https://rcoh.me/posts/linear-time-median-finding/</link>
+      <pubDate>Mon, 15 Jan 2018 22:07:18 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/linear-time-median-finding/</guid>
+      <description>Finding the median in a list seems like a trivial problem, but doing so in linear time turns out to be tricky. In this post I&amp;rsquo;m going to walk through one of my favorite algorithms, the median-of-medians approach to find the median of a list in deterministic linear time. Although proving that this algorithm runs in linear time is a bit tricky, this post is targeted at readers with only a basic level of algorithmic analysis.</description>
+    </item>
+    
+    <item>
+      <title>Resource Pools and Deadlock</title>
+      <link>https://rcoh.me/posts/resource-pools-deadlock/</link>
+      <pubDate>Thu, 11 Jan 2018 09:17:30 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/resource-pools-deadlock/</guid>
+      <description>In the last 2 months, at two separate clients, I ran into the same type of deadlock, so I figured it was worth writing about to save someone else from the same fate.
+In short: When you have a pool of resources, the same thread must not acquire a second resource while already holding a resource. Otherwise, multiple threads can deadlock when they have all acquired their first resource but none can acquire their second resource.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying Two Factor Auth</title>
+      <link>https://rcoh.me/posts/two-factor-auth/</link>
+      <pubDate>Sat, 06 Jan 2018 23:36:23 -0800</pubDate>
+      
+      <guid>https://rcoh.me/posts/two-factor-auth/</guid>
+      <description>I always wondered how Google Authenticator style 2-factor codes worked. The process of going from QR code to rotating 6-digit pin seemed a bit magical. A few days ago, my curiosity found itself coupled with some free time. Here&amp;rsquo;s what I found:
+What&amp;rsquo;s in the QR Code I scanned the QR code from Github with a barcode scanning app. Here&amp;rsquo;s what&amp;rsquo;s inside:
+otpauth://totp/Github:rcoh?secret=onswg4tforrw6zdf&amp;amp;issuer=Github  Not too surprising. It tells us the protocol, TOTP, who is issuing this OTP code (Github), and most importantly the secret:1</description>
+    </item>
+    
+    <item>
+      <title>An Analysis of Hash Map Implementations in Popular Languages</title>
+      <link>https://rcoh.me/posts/hash-map-analysis/</link>
+      <pubDate>Sat, 30 Dec 2017 17:39:23 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/hash-map-analysis/</guid>
+      <description>Few data-structures are more ubiquitous in real-world development than the hash table. Nearly every major programming features an implementation in its standard library or built into the runtime. Yet, there is no conclusive best strategy to implement one and the major programming languages diverge widely in their implementations! I did a survey of the Hash map implementations in Go, Python, Ruby, Java, C#, C++, and Scala to compare and contrast how they were implemented.</description>
+    </item>
+    
+    <item>
+      <title>Trip Report: The West Ridge Mount Conness</title>
+      <link>https://rcoh.me/posts/trip-report-west-ridge-mount-conness/</link>
+      <pubDate>Sat, 30 Dec 2017 13:01:58 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/trip-report-west-ridge-mount-conness/</guid>
+      <description>Even if you go to bed at 9, getting up at 5AM is hard. It&amp;rsquo;s always darker than you expect and it&amp;rsquo;s usually freezing. In any case, Calley and I crawled out of our respective vans at 5AM in the Tuolumne Meadows campground, shoveled down some cold cereal, and rolled out for the day&amp;rsquo;s objective, the West Ridge of Mount Conness. TM Herbert, legendary Tuolumne badass, described the climb as &amp;ldquo;2 Cathedrals stacked on top of each other.</description>
+    </item>
+    
+    <item>
+      <title>How Postgres Unique Constraints Can Cause Deadlock</title>
+      <link>https://rcoh.me/posts/postgres-unique-constraints-deadlock/</link>
+      <pubDate>Fri, 29 Dec 2017 22:49:36 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/postgres-unique-constraints-deadlock/</guid>
+      <description>A recent outage lead me to investigate Postgres unique constraints more deeply. Postgres implements unique constraints by creating a unique index &amp;ndash; an index that can only contain unique values.1 It turns out that unique indices and concurrent transactions can interact in nasty and surprising ways. Before I get into the &amp;ldquo;why&amp;rdquo;, here are the implications:
+When two transactions insert the same value into a unique index, one transaction will wait for the other transaction to finish before proceeding.</description>
+    </item>
+    
+    <item>
+      <title>Notes on CPython List Internals</title>
+      <link>https://rcoh.me/posts/notes-on-cpython-list-internals/</link>
+      <pubDate>Fri, 29 Dec 2017 13:02:41 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/notes-on-cpython-list-internals/</guid>
+      <description>As I was learning to program, Python lists seemed totally magical to me. I imagined them as being implemented by some sort of magical datastructure that was part linked-list, part array that was perfect for everything.
+As I grew as an engineer, it occurred that this was unlikely. I guessed (correctly) that rather than some sort of magical implementation, it was just backed by a resizable array. I decided to read the code and find out.</description>
+    </item>
+    
+    <item>
+      <title>No Magic: Regular Expressions, Part 3</title>
+      <link>https://rcoh.me/posts/no-magic-regular-expressions-part-3/</link>
+      <pubDate>Fri, 30 Dec 2016 11:47:18 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/no-magic-regular-expressions-part-3/</guid>
+      <description>The code for this post, as well as the post itself, are on github.
+This post is part 3 of a 3 part series.
+Part 1: Parsing Part 2: Generate an NFA Part 3: Evaluate an NFA
+Evaluating the NFA NFAs, DFAs and Regular Expressions Recall from part 2 that there are two types of finite automata: deterministic and non-deterministic. They have one key difference: A non-deterministic finite automata can have multiple paths out of the same node for the same token as well as paths that can be pursued without consuming input.</description>
+    </item>
+    
+    <item>
+      <title>No Magic: Regular Expressions, Part 2</title>
+      <link>https://rcoh.me/posts/no-magic-regular-expressions-part-2/</link>
+      <pubDate>Fri, 30 Dec 2016 11:41:35 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/no-magic-regular-expressions-part-2/</guid>
+      <description>The code for this post, as well as the post itself, are on github.
+This post is part 2 of a 3 part series.
+Part 1: Parsing Part 2: Generate an NFA Part 3: Evaluate an NFA
+Converting the Parse Tree to an NFA In the last post, we transformed the flat string representation of a regular expression to the hierarchical parse tree form. In this post we&amp;rsquo;ll transform the parse tree to a state machine.</description>
+    </item>
+    
+    <item>
+      <title>No Magic: Regular Expressions</title>
+      <link>https://rcoh.me/posts/no-magic-regular-expressions/</link>
+      <pubDate>Thu, 29 Dec 2016 23:38:13 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/no-magic-regular-expressions/</guid>
+      <description>The code for this post, as well as the post itself, are on github.
+This post is part 1 of a 3 part series.
+Part 1: Parsing Part 2: Generate an NFA Part 3: Evaluate an NFA
+Until recently, regular expressions seemed magical to me. I never understood how you could determine if a string matched a given regular expression. Now I know! Here&amp;rsquo;s how I implemented a basic regular expression engine in under 200 lines of code.</description>
+    </item>
+    
+    <item>
+      <title>Trip Report: North Arete Bear Creek Spire</title>
+      <link>https://rcoh.me/posts/trip-report-north-arete-bear-creek/</link>
+      <pubDate>Mon, 29 Aug 2016 22:53:41 -0500</pubDate>
+      
+      <guid>https://rcoh.me/posts/trip-report-north-arete-bear-creek/</guid>
+      <description>After 4 days climbing long moderates in Tuolumne Meadows, Eben and I were stoked to get out of the park for the weekend and escape the crowds on some eastside alpine rock.
+
+After a few minutes of flipping through the guidebook, we settled on the North Arete on Bear Creek Spire. The granite prow of Bear Creek Spire rises to 13713&amp;rsquo;, roughly 1500&amp;rsquo; above the scree at its base. The North Arete climbs the steep north ridge line through 10 pitches up to the summit.</description>
+    </item>
+    
+  </channel>
+</rss>
