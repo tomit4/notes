@@ -558,3 +558,9 @@ doas pacman -S lftp
 08/11/2024
 Install cargo-leptos:
 cargo install cargo-leptos
+
+08/12/2024
+Install isort and stylelint
+doas pacman -S python-isort stylelint
+Install sql-formatter
+paru sql-formatter

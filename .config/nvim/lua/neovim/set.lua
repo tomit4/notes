@@ -46,17 +46,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
--- formats on save
--- vim.cmd([[autocmd BufWritePre * silent! :Neoformat]])
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*", "silent!" },
-	command = ":Neoformat",
-})
--- disable poor neoformatting for .sql files
-vim.cmd([[let g:neoformat_enabled_sql = [] ]])
-
---Saves vim session on save
-
 -- Marks end of line, space, and trailing space characters
 vim.opt.listchars:append({ eol = "↵", trail = "·", space = "·" })
 vim.opt.list = true
