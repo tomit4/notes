@@ -83,20 +83,23 @@ require("mason-lspconfig").setup_handlers({
 			lspconfig.rust_analyzer.setup({
 				settings = {
 					["rust-analyzer"] = {
-						procMacro = {
-							ignored = {
-								leptos_macro = {
-									"server",
-								},
-							},
-						},
-						rustfmt = {
-							overrideCommand = {
-								"leptosfmt",
-								"--stdin",
-								"--rustfmt",
-							},
-							edition = { "2021" },
+						-- procMacro = {
+						-- ignored = {
+						-- leptos_macro = {
+						-- "server",
+						-- },
+						-- },
+						-- },
+						-- rustfmt = {
+						-- overrideCommand = {
+						-- "leptosfmt",
+						-- "--stdin",
+						-- "--rustfmt",
+						-- },
+						-- edition = { "2021" },
+						-- },
+						cargo = {
+							allFeatures = true,
 						},
 					},
 				},
