@@ -198,3 +198,10 @@ fi
 
 [ -f ~/.zsh/zsh-fex/fex.zsh ] && source ~/.zsh/zsh-fex/fex.zsh
 bindkey '^f' fex-widget
+
+# bun completions
+[ -s "/home/brian/.bun/_bun" ] && source "/home/brian/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

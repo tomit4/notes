@@ -570,3 +570,5 @@ Install taplo (TOML formatter)
 doas pacman -S taplo
 Install deno
 doas pacman -S deno
+Install bun
+curl -fsSL https://bun.sh/install | bash
