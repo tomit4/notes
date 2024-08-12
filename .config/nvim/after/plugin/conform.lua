@@ -8,6 +8,9 @@ require("conform").setup({
 		html = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "sql_formatter" },
 		sh = { "shfmt" },
+		json = { "jq" },
+		toml = { "taplo" },
+		yaml = { "yq" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()

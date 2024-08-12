@@ -566,3 +566,5 @@ Install sql-formatter
 paru sql-formatter
 Install black (python formatter)
 doas pacman -S python-black
+Install taplo (TOML formatter)
+doas pacman -S taplo
