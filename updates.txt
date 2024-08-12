@@ -568,3 +568,5 @@ Install black (python formatter)
 doas pacman -S python-black
 Install taplo (TOML formatter)
 doas pacman -S taplo
+Install deno
+doas pacman -S deno

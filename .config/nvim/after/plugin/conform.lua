@@ -7,13 +7,15 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
 		pug = { "prettierd", "prettier", stop_after_first = true },
+		vue = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "sql_formatter" },
 		rust = { "rustfmt" },
 		golang = { "gofmt" },
 		sh = { "shfmt" },
-		json = { "jq" },
+		json = { "jq", "deno_fmt", stop_after_first = true },
 		toml = { "taplo" },
 		yaml = { "yq" },
+		markdown = { "deno_fmt" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
