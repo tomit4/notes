@@ -40,16 +40,11 @@ vim.opt.cursorcolumn = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
---  Removes trailing spaces
--- vim.cmd([[function TrimWhiteSpace()
--- %s/\s*$//
--- ''
--- endfunction]])
--- Removes trailing spaces on save
--- vim.cmd([[autocmd FileWritePre * call TrimWhiteSpace()]])
--- vim.cmd([[autocmd FileAppendPre * call TrimWhiteSpace()]])
--- vim.cmd([[autocmd FilterWritePre * call TrimWhiteSpace()]])
--- vim.cmd([[autocmd BufWritePre * call TrimWhiteSpace()]])
+-- Removes trailing spaces
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	pattern = { "*" },
+	command = [[%s/\s\+$//e]],
+})
 
 -- formats on save
 -- vim.cmd([[autocmd BufWritePre * silent! :Neoformat]])
