@@ -6,6 +6,7 @@ require("conform").setup({
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
+		pug = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "sql_formatter" },
 		rust = { "rustfmt" },
 		golang = { "gofmt" },
