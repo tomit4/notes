@@ -1,6 +1,6 @@
 require("conform").setup({
 	formatters_by_ft = {
-		python = { "isort" },
+		python = { "isort", "black" },
 		lua = { "stylua" },
 		css = { "stylelint" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },

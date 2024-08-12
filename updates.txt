@@ -564,3 +564,5 @@ Install isort and stylelint
 doas pacman -S python-isort stylelint
 Install sql-formatter
 paru sql-formatter
+Install black (python formatter)
+doas pacman -S python-black
