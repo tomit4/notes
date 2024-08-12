@@ -8,6 +8,7 @@ require("conform").setup({
 		html = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "sql_formatter" },
 		rust = { "rustfmt" },
+		golang = { "gofmt" },
 		sh = { "shfmt" },
 		json = { "jq" },
 		toml = { "taplo" },
