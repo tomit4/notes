@@ -7,6 +7,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "sql_formatter" },
+		rust = { "rustfmt" },
 		sh = { "shfmt" },
 		json = { "jq" },
 		toml = { "taplo" },
