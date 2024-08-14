@@ -14,7 +14,7 @@ alias free='free -mh'
 alias dmesg="doas dmesg -H"
 alias blkid="doas blkid"
 alias kernel="uname -r"
-alias mkcd='{ IFS= read -r d && mkdir "$d" && cd "$d"; } <<<' 
+alias mkcd='{ IFS= read -r d && mkdir "$d" && cd "$d"; } <<<'
 alias cpwd='pwd | xclip -sel clip'
 alias docs="cd ~/Documents && ls"
 alias desk="cd ~/Desktop && ls"
@@ -256,6 +256,7 @@ alias npm-s="npm start"
 alias npm-t="npm test"
 alias npm-o="npm outdated"
 alias npm-u="npm updated"
+alias cargo-l="cargo install --list"
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias find-empty='find . -depth -empty'
 alias rmdir-a='find . -depth -empty -delete'
