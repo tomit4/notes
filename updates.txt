@@ -572,3 +572,5 @@ Install deno
 doas pacman -S deno
 Install bun
 curl -fsSL https://bun.sh/install | bash
+Install fastapi
+doas pacman -S python-fastapi
