@@ -5,6 +5,8 @@ require("conform").setup({
 		css = { "stylelint" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
+		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
 		pug = { "prettierd", "prettier", stop_after_first = true },
 		vue = { "prettierd", "prettier", stop_after_first = true },
