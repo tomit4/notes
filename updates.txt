@@ -574,3 +574,5 @@ Install bun
 curl -fsSL https://bun.sh/install | bash
 Install fastapi
 doas pacman -S python-fastapi
+Install python-poetry (modern python package manager)
+doas pacman -S python-poetry
