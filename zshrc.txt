@@ -63,11 +63,13 @@ export GREP_COLORS='ms=01;34'
 # Don't show completion until at least 1 character has been typed
 zstyle ':autocomplete:*' min-input 1
 
-# autoload -U compinit; compinit
 #
 # Plugins
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath+=~/.zsh/poetry/
+autoload -Uz compinit; compinit
+
 
 # icons-in-terminal Integration
 # source ~/.local/share/icons-in-terminal/icons_bash.sh
