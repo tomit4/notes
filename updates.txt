@@ -576,3 +576,7 @@ Install fastapi
 doas pacman -S python-fastapi
 Install python-poetry (modern python package manager)
 doas pacman -S python-poetry
+Install rye (even more modern python package manager)
+doas pacman -S rye
+Then invoke rye to install it (note choose to not have rye choose your global python version, use OS)
+rye
