@@ -298,6 +298,9 @@ alias grip="grip 6969"
 alias sudoku="sku"
 alias rbd="checkrebuild -v"
 # pip list and pip freeze command list pip packages
+# poetry virtual env
+VENV_PATH=$(poetry env info --path)
+alias poetry-venv='source "${VENV_PATH}/bin/activate"'
 
 #Particularly useful commands more to remember than to use as aliases:
 # alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
