@@ -267,7 +267,7 @@ matches:
   # Routes to ChatGPT
   - trigger: ";gpt"
     force_clipboard: true
-    replace: "https://openai.com/chatgpt"
+    replace: "https://chatgpt.com/"
 
   # Routes to My Repos
   - trigger: ";repos"
