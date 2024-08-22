@@ -588,8 +588,6 @@ alias certbotsite="librewolf https://certbot.eff.org &"
 alias acmesh="librewolf https://github.com/acmesh-official/acme.sh &"
 # cool front end ideas
 alias codinhood="librewolf https://codinhood.com/ &"
-# bun is an alternative to nodejs/npm, still in beta... check in from time to time
-alias bun="librewolf https://bun.sh/ &"
 # languagetool.org is a resource site for starting up an open source version of grammerly
 alias langtool="librewolf https://languagetool.org/dev/ &"
 #egghead.io has a lot of free courses

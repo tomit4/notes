@@ -580,3 +580,6 @@ Install rye (even more modern python package manager)
 doas pacman -S rye
 Then invoke rye to install it (note choose to not have rye choose your global python version, use OS)
 rye
+08/21/2024
+Install pnpm-shell-completion
+paru -S pnpm-shell-completion
