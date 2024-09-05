@@ -1,4 +1,4 @@
-/* Kevin Powell's root recommendation for '*'' 
+/* Kevin Powell's root recommendation for '*''
  * and also some bare bones defaults*/
 *,
 *::before,
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* kevin uses html here, 
+/* kevin uses html here,
  * but mdn recommends root */
 :root {
   color-scheme: light dark;
@@ -18,7 +18,7 @@ body {
   line-height: 1.5;
 }
 
-/* main container within body, 
+/* main container within body,
  * sometimes called .container, etc. */
 main {
   width: min(70ch, 100% - 4rem);
@@ -32,11 +32,35 @@ video {
   display: block;
 }
 
-/* TheoGG recommends this under '*', 
+/* TheoGG recommends this under '*',
  * but kevin says differently */
 input,
 textarea {
   min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+    max-width: 65ch;
+}
+
+header,
+footer,
+main,
+section,
+article {
+    container-type: inline-size;
 }
 
 /* background image specific, courtesy wittcode*/
