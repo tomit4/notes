@@ -583,3 +583,5 @@ rye
 08/21/2024
 Install pnpm-shell-completion
 paru -S pnpm-shell-completion
+09/07/2024
+doas npm install -g typescript-language-server typescript
