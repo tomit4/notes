@@ -6,9 +6,8 @@ require("mason").setup()
 
 lsp.ensure_installed({
 	"clangd",
-	"tsserver",
 	"eslint",
-	-- "rust_analyzer",
+	"rust_analyzer",
 	"volar",
 })
 
@@ -71,40 +70,37 @@ require("mason-lspconfig").setup_handlers({
 	function(server_name)
 		local server_config = {}
 		if server_name == "volar" then
-			server_config.filetypes = { "vue", "typescript", "javascript" }
-			lspconfig.tsserver.setup({
-				["disabled"] = true,
-			})
+			server_config.filetypes = { "vue", "ts_ls", "javascript" }
 			lspconfig.volar.setup({
 				settings = {
 					["volar.takeOverMode.enabled"] = true,
 				},
 			})
-			lspconfig.rust_analyzer.setup({
-				settings = {
-					["rust-analyzer"] = {
-						-- procMacro = {
-						-- ignored = {
-						-- leptos_macro = {
-						-- "server",
-						-- },
-						-- },
-						-- },
-						-- rustfmt = {
-						-- overrideCommand = {
-						-- "leptosfmt",
-						-- "--stdin",
-						-- "--rustfmt",
-						-- },
-						-- edition = { "2021" },
-						-- },
-						cargo = {
-							allFeatures = true,
+		end
+		lspconfig.rust_analyzer.setup({
+			settings = {
+				["rust-analyzer"] = {
+					procMacro = {
+						ignored = {
+							leptos_macro = {
+								"server",
+							},
 						},
 					},
+					rustfmt = {
+						overrideCommand = {
+							"leptosfmt",
+							"--stdin",
+							"--rustfmt",
+						},
+						edition = { "2021" },
+					},
+					cargo = {
+						allFeatures = true,
+					},
 				},
-			})
-		end
+			},
+		})
 		lspconfig[server_name].setup(server_config)
 	end,
 })
