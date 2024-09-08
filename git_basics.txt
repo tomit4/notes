@@ -144,4 +144,8 @@ git push origin main
 
 This will revert it back to the previous commit
 
+## DELETE A LOCAL AND REMOTE BRANCH
+git branch -d <branch_name>
+git push <remote_name> :<branch_name>
+
 
