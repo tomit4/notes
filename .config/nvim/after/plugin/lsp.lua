@@ -5,9 +5,19 @@ lsp.preset("recommended")
 require("mason").setup()
 
 lsp.ensure_installed({
+	"bashls",
+	"biome",
 	"clangd",
+	"cssls",
+	"dockerls",
+	"emmet_ls",
 	"eslint",
+	"html",
+	"lua_ls",
+	"quick_lint_js",
 	"rust_analyzer",
+	"svelte",
+	"ts_ls",
 	"volar",
 })
 
