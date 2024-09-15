@@ -585,3 +585,9 @@ Install pnpm-shell-completion
 paru -S pnpm-shell-completion
 09/07/2024
 doas npm install -g typescript-language-server typescript
+09/15/2024
+Reinstall paru (recent updates to paru break libalpm)
+cd ~/aur_packages/
+git clone https://aur.archlinux.org/paru-git.git
+cd paru-git
+makepkg -si
