@@ -54,7 +54,7 @@ vim.keymap.set("n", "nv", ":vnew", { silent = true })
 vim.keymap.set("n", "<S-p>", "<c-w>:PackerSync<CR>", {})
 
 -- control + t enable transparency
-vim.keymap.set("n", "<C-t>", "<c-w>:lua ColorMyPencils()<CR>", {})
+vim.keymap.set("n", "<leader>t", "<c-w>:lua ColorMyPencils()<CR>", {})
 
 -- open :Mason using msn
 vim.keymap.set("n", "msn", ":Mason", { silent = true })
@@ -102,10 +102,13 @@ vim.cmd([[nnoremap <leader>b :.,+<C-R>=v:count1<CR>norm A\<Esc>]])
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<cr>")
 
 -- runs npm tests without having to leave vim
-vim.keymap.set("n", "<leader>t", ":w|!npm test<cr>")
+-- vim.keymap.set("n", "<leader>t", ":w|!npm test<cr>")
 
 -- opens go to definition in new tab if not in current file
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+
+-- toggles floating error messages
+vim.keymap.set("n", "<space>e", "<cmd>vim.diagnostic.open_float()<CR>", opts)
 
 vim.keymap.set("n", "gD", function()
 	local org_path = vim.api.nvim_buf_get_name(0)
