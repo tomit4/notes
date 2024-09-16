@@ -591,3 +591,8 @@ cd ~/aur_packages/
 git clone https://aur.archlinux.org/paru-git.git
 cd paru-git
 makepkg -si
+09/16/2024
+Install duf (alternative for df):
+paru duf-git
+Install doggo (alternative for dig):
+paru doggo-bin
