@@ -65,6 +65,8 @@ alias mkdir='mkdir -pv'
 alias dict='def'
 alias {:q,ex,esc}="exit"
 alias :w="touch"
+alias digg="doggo"
+alias dff="df && duf"
 alias {his,hist}="history"
 alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive && cd /mnt/media/usb-drive && ls"
 alias umnt="doas umount /mnt/media/usb-drive"
@@ -664,7 +666,7 @@ alias {ddgi,dggi}='ddgr \!dggi "${1}" <<< $(echo q)'
 alias aur='ddgr \!aur "${1}" <<< $(echo q)'
 alias archwiki='ddgr \!archwiki "${1}" <<< $(echo q)'
 alias wiki='ddgr \!w "${1}" <<< $(echo q)'
-alias gh='ddgr \!gh "${1}" <<< $(echo q)'
+# alias gh='ddgr \!gh "${1}" <<< $(echo q)'
 alias mdn='ddgr \!mdn "${1}" <<< $(echo q)'
 # must have account to use gitlab bang
 # alias glab='ddgr \!glab "${1}"'
