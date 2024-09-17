@@ -596,3 +596,5 @@ Install duf (alternative for df):
 paru duf-git
 Install doggo (alternative for dig):
 paru doggo-bin
+Install gpt4all-chat (not git version):
+paru gpt4all-chat
