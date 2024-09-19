@@ -90,6 +90,9 @@ vim.keymap.set("n", "<C-p>", "<c-w>:CtrlPMixed<cr>")
 vim.cmd([[nnoremap rg :silent :Rg]])
 vim.keymap.set("n", "<leader>r", ":silent :Rg")
 
+-- restart lsp
+vim.cmd([[nnoremap lsp :silent :LspRestart]])
+
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
 
