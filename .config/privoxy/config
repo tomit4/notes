@@ -1455,6 +1455,7 @@ enable-proxy-authentication-forwarding 0
 #      would use something like:
 #
         forward-socks5t   /               127.0.0.1:9050 .
+        forward .i2p / 127.0.0.1:4444
 #
 #      Note that if you got Tor through one of the bundles, you may
 #      have to change the port from 9050 to 9150 (or even another

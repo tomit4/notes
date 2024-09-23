@@ -596,3 +596,15 @@ Install duf (alternative for df):
 paru duf-git
 Install doggo (alternative for dig):
 paru doggo-bin
+Install i2pd and i2pd-runit:
+doas pacman -S i2pd i2pd-runit
+doas ln -s /etc/runit/sv/i2pd /run/runit/service/i2pd
+Make sure ufw enables i2p:
+doas ufw allow 4444
+And make sure that you forward i2p traffic through privoxy
+(note: must be beneath all other forwards in /etc/privoxy/config):
+forward .i2p localhost:4444
+To access i2p sites, you'll need to modify the /etc/i2pd/i2pd.conf file:
+[addressbook]
+subscriptions= http://add2here.i2p/hosts.txt
+(note: the hosts.txt is how i2p resolves)
