@@ -608,3 +608,19 @@ To access i2p sites, you'll need to modify the /etc/i2pd/i2pd.conf file:
 [addressbook]
 subscriptions= http://add2here.i2p/hosts.txt
 (note: the hosts.txt is how i2p resolves)
+09/23/2024
+Add a script for rustdesk as it now needs a service daemon:
+cd /etc/runit/sv/
+doas mkdir rustdesk
+cd rustdesk
+doas touch run
+doas chmod +x run
+doas nvim run
+```sh
+#!/bin/sh
+
+exec /usr/bin/rustdesk --service
+````
+doas ln -s /etc/runit/sv/rustdesk /run/runit/service/
+doas sv start rustdesk
+doas touch down
