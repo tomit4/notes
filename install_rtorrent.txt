@@ -49,3 +49,4 @@ mkdir ~/watch
 
 And that's it. now simply place an .torrent files into watch and then open up rotorrent and you are ready to go!
 
+Alternatively, you can paste in magnet links by first hitting the backspace button.
