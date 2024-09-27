@@ -1,3 +1,109 @@
+moz-extension://8b26686e-acdd-4a9f-ba38-eaf0dd7df16a/ui/options.html | NoScript Settings
+
+https://bbs.archlinux.org/viewtopic.php?id=278132 | [RESOLVED] X.org segfaults when using proprietary Nvidia driver / Kernel & Hardware / Arch Linux Forums
+https://wiki.archlinux.org/title/PRIME#Reverse_PRIME | PRIME - ArchWiki
+https://redlib.catsarch.com//r/archlinux/comments/rnks0a/nouveau_not_loading_on_startx_after_update/ | nouveau not loading on startx after update - r/archlinux
+https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start | Kernel mode setting - ArchWiki
+https://gitlab.freedesktop.org/xorg/xserver/-/issues/1378 | 21.1.4: startx fails on start with undefined symbol in modesetting_drv.so and fbdev_drv.so (#1378) · Issues · xorg / xserver · GitLab
+
+https://scribe.rip/@ab.hassanein/streaming-responses-in-fastapi-d6a3397a4b7b | Streaming Responses In FastAPI
+
+https://docs.solidjs.com/guides/testing | Testing - SolidDocs
+https://scribe.rip/@hasanmahira/fastapi-with-sqlalchemy-postgresql-and-alembic-1ccaba79572e | FastAPI with SQLAlchemy, PostgreSQL and Alembic
+https://scribe.rip/@saverio3107/fastapi-how-to-set-up-and-use-alembic-for-database-migrations-616f481507f3 | FastAPI — How to Set Up and Use Alembic for Database Migrations
+https://scribe.rip/@juhibhojani03/mastering-fastapi-a-comprehensive-guide-to-structuring-and-tooling-fastapi-projects-1dea88370cac | Mastering FastAPI: A Comprehensive Guide to Structuring and Tooling FastAPI Projects
+https://alembic.sqlalchemy.org/en/latest/tutorial.html | Tutorial — Alembic 1.13.2 documentation
+
+https://github.com/davidodenwald/prettier-plugin-jinja-template | GitHub - davidodenwald/prettier-plugin-jinja-template: Formatter plugin for jinja2 template files.
+https://scribe.rip/@steelcityamir/a-web-developers-guide-to-browser-caching-cc41f3b73e7c | A Web Developer’s Guide to Browser Caching
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching | HTTP caching - HTTP | MDN
+https://developer.mozilla.org/en-US/docs/Web/API/Cache | Cache - Web APIs | MDN
+
+https://rust-unofficial.github.io/too-many-lists/index.html | Introduction - Learning Rust With Entirely Too Many Linked Lists
+
+https://wolchok.org/posts/how-to-read-assembly-language/ | How to Read Assembly Language - Scott Wolchok
+
+https://stackoverflow.com/questions/75269008/getting-ssl-error-when-sending-email-via-django | python - Getting SSL error when sending email via Django - Stack Overflow
+https://pypi.org/project/certifi/ | certifi · PyPI
+https://docs.djangoproject.com/en/5.0/topics/email/ | Sending email | Django documentation | Django
+https://stackoverflow.com/questions/6367014/how-to-send-email-via-django | python - How to send email via Django? - Stack Overflow
+https://support.google.com/accounts/answer/6010255 | Less secure apps & your Google Account - Google Account Help
+https://stackoverflow.com/questions/15985191/how-can-i-send-e-mail-from-django-using-the-google-smtp-server | How can I send e-mail from django using the google smtp server? - Stack Overflow
+https://stackabuse.com/how-to-send-emails-with-gmail-using-python/ | How to Send Emails with Gmail using Python
+https://mailtrap.io/blog/python-send-email-gmail/ | Python Send Email Gmail: Tutorial with Code Snippets [2024]
+https://support.google.com/accounts/answer/185833?hl=en | Sign in with app passwords - Google Account Help
+
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/ | Simple JWT — Simple JWT 5.2.2.post30+gfaf92e8 documentation
+https://scribe.rip/django-unleashed/securing-django-rest-apis-with-jwt-authentication-using-simple-jwt-a-step-by-step-guide-28efa84666fe | Securing Django REST APIs with JWT Authentication using Simple-JWT: A Step-by-Step Guide with…
+https://docs.djangoproject.com/en/5.0/topics/email/ | Sending email | Django documentation | Django
+https://stackoverflow.com/questions/2809547/creating-email-templates-with-django | Creating email templates with Django - Stack Overflow
+https://github.com/vintasoftware/django-templated-email | GitHub - vintasoftware/django-templated-email: Django module to easily send templated emails using django templates, or using a transactional mail provider (mailchimp, silverpop, etc.)
+
+https://drf-social-oauth2.readthedocs.io/en/latest/installation.html | Usage — drf-social-oauth2 2.2.1 documentation
+
+https://python-social-auth.readthedocs.io/en/latest/logging_out.html | Disconnect and Logging Out — Python Social Auth documentation
+https://www.django-rest-framework.org/api-guide/authentication/ | Authentication - Django REST framework
+
+https://stackoverflow.com/questions/62370962/how-to-create-join-chat-room-using-ws-websocket-package-in-node-js | javascript - How to create/join chat room using ws (Websocket) package in node js - Stack Overflow
+https://dev.to/devland/build-a-real-time-chat-app-using-nodejs-and-websocket-441g | Build a Real-Time Chat App using Node.js and WebSocket - DEV Community
+https://www.geeksforgeeks.org/simple-chat-application-using-websockets-with-fastapi/ | Simple chat Application using Websockets with FastAPI - GeeksforGeeks
+https://github.com/fastify/fastify-websocket?tab=readme-ov-file | GitHub - fastify/fastify-websocket: basic websocket support for fastify
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models | Django Tutorial Part 3: Using models - Learn web development | MDN
+https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
+https://www.django-rest-framework.org/api-guide/fields/ | Serializer fields - Django REST framework
+https://www.django-rest-framework.org/api-guide/status-codes/#client-error-4xx | Status codes - Django REST framework
+https://docs.djangoproject.com/en/5.0/topics/db/models/ | Models | Django documentation | Django
+
+https://scribe.rip/how-to-set-up-aws-s3-with-django-rest-like-a-beast-13623be346ac | How to Set-up AWS S3 with Django REST like a Beast
+https://stackoverflow.com/questions/67742696/how-to-upload-file-to-s3-bucket-with-django-rest-framework-api | python 3.x - How to upload file to s3 bucket with django rest framework api - Stack Overflow
+
+https://stackoverflow.com/questions/55079181/what-is-the-best-practice-to-use-oauth2-react-node-js-and-passport-js-to-authe | reactjs - What is the best practice to use Oauth2, React, Node.js and Passport.js to authenticate user with Google sign on button? - Stack Overflow
+https://start.duckduckgo.com/lite/ | python social auth django rest api at DuckDuckGo
+https://github.com/st4lk/django-rest-social-auth | GitHub - st4lk/django-rest-social-auth: OAuth signin with django rest framework
+https://michaeldel.github.io/posts/django-rest-auth-social-tutorial/ | Django Rest Auth social authentication tutorial
+https://pypi.org/project/django-rest-framework-social-oauth2/ | django-rest-framework-social-oauth2 · PyPI
+https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
+https://github.com/florianabel/social-auth-example-django | GitHub - florianabel/social-auth-example-django: Implementing python-social-auth in Django
+
+https://docs.djangoproject.com/en/5.0/topics/auth/default/ | Using the Django authentication system | Django documentation | Django
+https://python-social-auth.readthedocs.io/en/latest/use_cases.html# | Use Cases — Python Social Auth documentation
+https://python-social-auth.readthedocs.io/en/latest/use_cases.html#re-prompt-google-oauth2-users-to-refresh-the-refresh-token | Use Cases — Python Social Auth documentation
+https://realpython.com/adding-social-authentication-to-django/ | Adding Social Authentication to Django – Real Python
+https://masnun.com/2014/01/03/python-social-auth-custom-pipeline.html | Python Social Auth: Custom pipeline - Abu Ashraf Masnun
+https://developers.google.com/identity/protocols/oauth2 | Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers
+https://stackoverflow.com/questions/66940072/get-google-oauth2-access-token-using-only-curl | get google Oauth2 access token using ONLY curl - Stack Overflow
+
+https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
+https://python-social-auth.readthedocs.io/en/latest/ | Welcome to Python Social Auth’s documentation! — Python Social Auth documentation
+https://www.toptal.com/django/integrate-oauth-2-into-django-drf-back-end | Integrate OAuth 2 Into Your Django/DRF Back-end | Toptal®
+
+https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
+https://www.django-rest-framework.org/tutorial/quickstart/ | Quickstart - Django REST framework
+https://www.django-rest-framework.org/ | Home - Django REST framework
+https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
+https://www.django-rest-framework.org/api-guide/requests/#authentication | Requests - Django REST framework
+https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
+https://www.toptal.com/django/integrate-oauth-2-into-django-drf-back-end | Integrate OAuth 2 Into Your Django/DRF Back-end | Toptal®
+
+https://github.com/travist/jsencrypt | GitHub - travist/jsencrypt: A zero-dependency Javascript library to perform OpenSSL RSA Encryption, Decryption, and Key Generation.
+https://scribe.rip/@viniciusamparo/a-simple-guide-to-client-side-encryption-and-decryption-using-javascript-jsencrypt-and-php-20c2f179b6e5 | A Simple Guide to Client-Side Encryption and Decryption Using JavaScript (JSEncrypt) and PHP
+
+https://simpleisbetterthancomplex.com/tutorial/2017/08/01/how-to-setup-amazon-s3-in-a-django-project.html | How to Setup Amazon S3 in a Django Project
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/specifying-s3-encryption.html | Specifying server-side encryption with Amazon S3 managed keys (SSE-S3) - Amazon Simple Storage Service
+https://docs.aws.amazon.com/code-library/latest/ug/python_3_s3_code_examples.html | Amazon S3 examples using SDK for Python (Boto3) - AWS SDK Code Examples
+
+https://docs.djangoproject.com/en/5.0/howto/csrf/ | How to use Django’s CSRF protection | Django documentation | Django
+https://stackoverflow.com/questions/50732815/how-to-use-csrf-token-in-django-restful-api-and-react | python - How to use csrf_token in Django RESTful API and React? - Stack Overflow
+https://libreddit.privacydev.net/r/django/comments/fwf1wm/3_ways_to_deploy_a_django_backend_with_a_react/ | 3 ways to deploy a Django backend with a React frontend - r/django
+https://docs.docker.com/samples/django/ | Django samples | Docker Docs
+https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/django/ | awesome-compose/official-documentation-samples/django at master · docker/awesome-compose · GitHub
+https://mattsegal.dev/django-spa-infrastructure.html | 3 ways to deploy a Django backend with a React frontend
+https://github.com/django-webpack/django-webpack-loader | GitHub - django-webpack/django-webpack-loader: Transparently use webpack with django
+https://libreddit.privacydev.net/r/django/comments/g7ao5o/best_django_react_integration_practice/ | Best Django + React integration practice? - r/django
+https://www.pythontutorial.net/django-tutorial/django-cookies/ | Django Cookies
+
+https://www.django-rest-framework.org/ | Home - Django REST framework
 https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial | Django File/Image Uploads Tutorial
 https://www.django-rest-framework.org/# | Home - Django REST framework
 https://www.django-rest-framework.org/api-guide/serializers/#serializers | Serializers - Django REST framework
@@ -9,7 +115,6 @@ https://snyk.io/blog/preventing-xss-in-django/ | Preventing XSS in Django | Snyk
 https://www.ibm.com/topics/monte-carlo-simulation | What Is Monte Carlo Simulation? | IBM
 https://gamerant.com/rollback-netcode-explained/ | Rollback Netcode Explained
 
-https://cryptography.io/en/latest/fernet/ | Fernet (symmetric encryption) — Cryptography 43.0.0.dev1 documentation
 https://dev.to/risafj/beginner-s-guide-to-oauth-understanding-access-tokens-and-authorization-codes-2988 | Beginner’s guide to OAuth: Understanding access tokens and authorization codes using Google API - DEV Community
 https://blog.logrocket.com/guide-adding-google-login-react-app/ | The guide to adding Google login to your React app - LogRocket Blog
 https://developers.google.com/identity/protocols/oauth2 | Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers
