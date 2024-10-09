@@ -87,3 +87,7 @@ toolbar > * {
 #unified-extensions-button .toolbarbutton-icon {
   list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
 }
+
+#alltabs-button {
+    display: none !important;
+}
