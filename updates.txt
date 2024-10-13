@@ -624,3 +624,7 @@ exec /usr/bin/rustdesk --service
 doas ln -s /etc/runit/sv/rustdesk /run/runit/service/
 doas sv start rustdesk
 doas touch down
+
+10/13/2024
+Remove rustdesk-bin:
+paru -Rs rustdesk-bin
