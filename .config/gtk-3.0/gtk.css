@@ -1,12 +1,20 @@
-.mate-panel-menu-bar button {
-    color: transparent;
-}
+/* .mate-panel-menu-bar button { */
+  /* color: transparent; */
+/* } */
 panel-toplevel.background.horizontal,
 .mate-panel-menu-bar,
 #clock-applet-button,
-#clock-applet-button:hover  {
-    color: white;
+#clock-applet-button:hover {
+  color: white;
 }
 #tasklist-button {
-    color: white;
+  color: white;
 }
+/* .titlebar, */
+/* .css, */
+/* headerbar { */
+  /* background-image: none; */
+  /* background-color: transparent; */
+  /* margin-top: -100px; */
+  /* margin-bottom: 50px; */
+/* } */
