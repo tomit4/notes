@@ -367,7 +367,8 @@ alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=y
 #create programming licences
 
 # game shortcuts
-alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
+alias gback="cp -r ~/.wine/drive_c/users/brian/AppData/Local/CD\ Projekt\ Red/ ~/game_save_backups/"
+# alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 # alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 # alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
 
