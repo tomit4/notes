@@ -342,7 +342,8 @@ alias {git-b,git-br}="git branch"
 alias git-bl="git blame"
 # for use with notes directory only
 alias git-lo="git log --oneline --follow"
-alias {git-l,git-log}="git log --graph --format='format:%C(yellow)%h%C(reset) %s %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)'"
+# alias {git-l,git-log}="git log --graph --format='format:%C(yellow)%h%C(reset) %s %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)'"
+alias {git-l,git-log}="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
 # more to just remember than to be used
 alias git-stsh="git stash"
 alias git-stsh-a="git stash apply"
