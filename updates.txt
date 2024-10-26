@@ -628,3 +628,13 @@ doas touch down
 10/13/2024
 Remove rustdesk-bin:
 paru -Rs rustdesk-bin
+
+10/26/2024
+Install and test use wireshark
+doas pacman -S wireshark-qt
+doas groupadd wireshark
+doas usermod -aG wireshark "$USER"
+doas chgrp wireshark /usr/bin/dumpcap
+doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/dumpcap
+To monitor wlan0(wifi) traffic:
+wireshark -i wlan0 -k
