@@ -638,3 +638,9 @@ doas chgrp wireshark /usr/bin/dumpcap
 doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/dumpcap
 To monitor wlan0(wifi) traffic:
 wireshark -i wlan0 -k
+Install and use tcpdump
+doas pacman -S tcpdump
+doas groupadd pcap
+doas usermod -aG pcap "$USER"
+doas chgrp pcap /usr/bin/tcpdump
+doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/tcpdump
