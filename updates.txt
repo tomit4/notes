@@ -644,3 +644,5 @@ doas groupadd pcap
 doas usermod -aG pcap "$USER"
 doas chgrp pcap /usr/bin/tcpdump
 doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/tcpdump
+Install adwaita-qt6 (not git version)
+paru adwaita-qt6

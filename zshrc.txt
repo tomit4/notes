@@ -16,6 +16,7 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 
 # custom BROWSER env for ddgr:
 export BROWSER=librewolf
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 # export BROWSER=links
 export EDITOR=nvim
 export PF_INFO="ascii os kernel pkgs shell wm editor"
