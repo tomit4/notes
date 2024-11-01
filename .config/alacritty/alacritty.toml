@@ -1,4 +1,6 @@
-import = ["/home/brian/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"]
+general.import = [
+  "/home/brian/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml",
+]
 
 [env]
 TERM = "xterm-256color"

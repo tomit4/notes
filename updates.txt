@@ -646,3 +646,6 @@ doas chgrp pcap /usr/bin/tcpdump
 doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/tcpdump
 Install adwaita-qt6 (not git version)
 paru adwaita-qt6
+Install dxvk-bin and set it up (may need to re-run whenever installing new vulkan drivers)
+paru dxvk-bin
+setup_dxvk install
