@@ -191,13 +191,13 @@ super + m
 super + n
     libreoffice &
     # open office
-    # desktopeditors & 
+    # desktopeditors &
 super + j
     FBReader &
 super + l
     gcolor3 &
 super + u
-    galculator &
+    qalculate-qt &
 super + y
     krita --nosplash &
 super + s

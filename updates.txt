@@ -649,3 +649,10 @@ paru adwaita-qt6
 Install dxvk-bin and set it up (may need to re-run whenever installing new vulkan drivers)
 paru dxvk-bin
 setup_dxvk install
+11/02/2024
+Install qalculate
+doas pacman -S qalculate-qt
+Adjust style:
+Preferences > Check Dark Mode > Adjust Fonts each up font size by 2 units
+Uninstall galculator
+doas pacman -Rs galculator
