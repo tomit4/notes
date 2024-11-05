@@ -656,3 +656,6 @@ Adjust style:
 Preferences > Check Dark Mode > Adjust Fonts each up font size by 2 units
 Uninstall galculator
 doas pacman -Rs galculator
+11/05/2024
+Install lksctp-tools (TCP Tools)
+doas pacman -S lksctp-tools
