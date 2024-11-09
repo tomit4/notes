@@ -45,6 +45,7 @@ alias {leet,leetcode}="cd ~/Documents/Code/leetcode/ && ls"
 alias zsaves="cd ~/Zomboid/Saves/Sandbox/ && ls"
 alias logs="cd /var/log && ls"
 alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
+alias gpt4="gobble gpt4all-chat"
 alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
 alias btuts="cd ~/Documents/Code/book_tutorials && ls"
 alias fonts="fc-list"
@@ -385,8 +386,9 @@ alias docker-exec="docker exec -it" # use with container ID and bash
 alias nfcheatsheet='librewolf https://www.nerdfonts.com/cheat-sheet &'
 alias codeberg="librewolf https://codeberg.org/ &"
 alias mankier="links https://www.mankier.com"
-alias apnews="links https://www.apnews.com"
+alias apnews='f(){ links https://apnews.com/"$1" ;}; f' # call using 'us' or 'world' as second arg
 alias npr="links https://text.npr.org"
+alias pbs="links https://lite.pbs.org"
 # brings up oregon public broadcasting
 alias radio='/usr/bin/mpv --no-video "https://ais-sa3.cdnstream1.com/2440_128.aac/playlist.m3u8?listeningSessionID=64c429fd0062f502_803653_uuxYz9V9_NjYuODUuODkuMzA6ODA\!_0000000vz1k\&downloadSessionID=0\&listenerId=esTrackblock0801483\&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1691381053"'
 alias sqlsc="links https://sqlservercentral.com"
