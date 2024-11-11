@@ -15,6 +15,7 @@ supplemented with books/homework. A list of helpful books is coming.
 - [ ] Pre-Calculus
 - [ ] Calculus I
 - [ ] Calculus II
+- [ ] Mathematics For Computer Science
 - [ ] Logic
 - [ ] Sets and Functions
 - [ ] Number Theory
@@ -33,6 +34,7 @@ supplemented with books/homework. A list of helpful books is coming.
 - [Professor Leonard Calculus 1](https://inv.nadeko.net/playlist?list=PLF797E961509B4EB5)
 - [Professor Leonard Calculus 2](https://invidious.nerdvpn.de/playlist?list=PLDesaqWTN6EQ2J4vgsN1HyBeRADEh4Cw-)
 - [Professor Leonard Calculus 3](https://yewtu.be/playlist?list=PLDesaqWTN6ESk16YRmzuJ8f6-rnuy0Ry7)
+- [Mathematics For Computer Sciecne MIT OpenCourseWare Search](https://inv.nadeko.net/search?q=mit+open+courseware+mathematics+for+computer+science)
 - [Math 125A -- Mathematical Logic](https://invidious.nerdvpn.de/playlist?list=PLjJhPCaCziSRSUtQiTA_yx5TJ76G_EqUJ)
 - [Set Theory and Logic Lectures](https://yewtu.be/playlist?list=PLPgKBibhNh73rAqxIaltEHw-qwMJISwOL)
 - [Discrete Math (Sets, Logic, Proofs, Relations, Counting, Number Theory, Functions)](https://yewtu.be/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz)
