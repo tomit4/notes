@@ -1,7 +1,8 @@
 # Introduction
 
 This short document outlines a path forwards for vastly increasing my knowledge
-of Computer Science Fundamentals for Mathematics. It includes an ordered list of
+of Computer Science Fundamentals for Mathematics and also Computer Science
+Fundamentals themselves. It includes an ordered list of
 <em>TODOs</em> which mimic the order in which one would approach learning
 mathematics from a high school to undergraduate college level of mathematics,
 specifically tailored for a Computer Science Degree. Obviously, this should be
@@ -45,3 +46,12 @@ supplemented with books/homework. A list of helpful books is coming.
 - [MIT 18.06SC Linear Algebra, Fall 2011](https://inv.nadeko.net/playlist?list=PL221E2BBF13BECF6C)
 - [Gilbert Strang lectures on Linear Algebra (MIT)](https://inv.nadeko.net/playlist?list=PL49CF3715CB9EF31D)
 - [Statistics 110: Probability](https://inv.nadeko.net/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
+
+**WEBSITES:**
+
+- [Teach Yourself CS](https://teachyourselfcs.com/)
+- [Structure and Interpretation of Computer Programs](https://sarabander.github.io/sicp/html/index.xhtml)
+- [MIT OpenCourseware Lecture Series on Structure and Interpretation of Computer Programs](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/)
+- [Brian Harvey's SICP lectures](https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=title)
+- [Learn Assembly Language on Exercism.org](https://exercism.org/)
+- [How To Design Programs 2nd Edition online only book](https://htdp.org/)
