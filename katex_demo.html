@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>KaTeX Demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="robots"
+      content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+      crossorigin="anonymous"
+    ></script>
+    <!--
+    <script
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+    -->
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>KaTeX Latex Parser For HTML</h1>
+        <p>KaTeX is an incredible Latex Parser for mathematical expressions!</p>
+        <p>
+          You can find their official documentation
+          <a
+            aria-label="link to the katex.org documents on installation"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="link"
+            href="https://katex.org/docs/browser"
+            >here</a
+          >.
+        </p>
+        <p>
+          Below are just a few examples of what KaTeX is capable of. It's
+          important to note that there is also their competitor MathJax, which
+          uses a more straightforward inline syntax within HTML, as opposed to
+          KaTeX, which interacts more with the JavaScript API. That said,
+          MathJax is significantly less performant than katex in terms of sheer
+          speed. You can additionally Download and Host THings Yourself. You
+          simply have to
+          <a
+            aria-label="linmk to KaTeX's github release download page"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="link"
+            href="https://github.com/KaTeX/KaTeX/releases"
+            >Download The KaTeX release</a
+          >
+          and follow their
+          <a
+            aria-label="instructions on how to build KaTeX from Source"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="link"
+            href="https://katex.org/docs/node#building-from-source"
+            >Building From Source</a
+          >
+        </p>
+        <div id="element" style="text-align: center"></div>
+        <div id="element1" style="text-align: center"></div>
+        <div id="element2" style="text-align: center"></div>
+        <div id="element3" style="text-align: center"></div>
+        <div id="element4" style="text-align: center"></div>
+      </article>
+    </main>
+    <script>
+      const element = document.getElementById("element");
+      const element1 = document.getElementById("element1");
+      const element2 = document.getElementById("element2");
+      const element3 = document.getElementById("element3");
+      const element4 = document.getElementById("element4");
+      katex.render("\\mid f(n) \\leq c * g(n) \\forall n \\geq n_0", element, {
+        throwOnError: false,
+      });
+      katex.render(
+        "f(n) = \\mathcal{O}(g(n)) \\iff \\exists +ve\\ constant\\ c\\ and\\ n_0 \\mid f(n) \\leq c * g(n) \\forall n \\geq n_0 ",
+        element1,
+        {
+          throwOnError: false,
+        },
+      );
+      katex.render(
+        "f(n) = \\Omega(g(n)) \\iff \\exists +ve\\ constant\\ c\\ and\\ n_0",
+        element2,
+        { throwOnError: false },
+      );
+
+      katex.render(
+        "f(n) = \\Theta(g(n)) \\iff \\exists +ve\\ constant\\ c_1\\, c_2\\ and\\ n_0",
+        element3,
+        { throwOnError: false },
+      );
+
+      katex.render("\\forall n\\geq 1,\\ 2n+3 \\leq 5n^2", element4, {
+        throwOnError: false,
+      });
+    </script>
+  </body>
+</html>
