@@ -460,7 +460,7 @@ alias netmeister="librewolf https://stevens.netmeister.org &"
 alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
 alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
 #Videos on College Level Mathematics
-alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
+# alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
 
 # Blogs
 # the valueable.dev has some great solid timeless advice on programming (and
