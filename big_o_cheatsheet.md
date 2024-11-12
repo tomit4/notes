@@ -305,3 +305,7 @@ $$ O(2^n) $$
 ## Order of Types of Time Function
 
 $$ 1 < log(n) < \sqrt n < n < n(log(n)) < n^2 < n^3 < ...  2^n < 3^n .... < n^n $$
+
+<div style="text-align: center;">
+    <img src="./big_o_time_complexities.png" />
+</div>
