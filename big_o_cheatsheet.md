@@ -275,3 +275,29 @@ Note here, that now, the `for` loop executes regardless of the `if (n < 5)`
 condition. Thusly the best and worst case scenario become the same:
 
 $$ O(n) $$
+
+## Types of Time Functions
+
+**Constant:**
+
+$$ O(1) $$
+
+**Logirithmic:**
+
+$$ O(log(n)) $$
+
+**Linear:**
+
+$$ O(n) $$
+
+**Quadratic:**
+
+$$ O(n^2) $$
+
+**Cubic:**
+
+$$ O(n^3) $$
+
+**Exponential:**
+
+$$ O(2^n) $$
