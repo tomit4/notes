@@ -36,6 +36,7 @@ supplemented with books/homework. A list of helpful books is coming.
 - [Professor Leonard Calculus 2](https://invidious.nerdvpn.de/playlist?list=PLDesaqWTN6EQ2J4vgsN1HyBeRADEh4Cw-)
 - [Professor Leonard Calculus 3](https://yewtu.be/playlist?list=PLDesaqWTN6ESk16YRmzuJ8f6-rnuy0Ry7)
 - [Mathematics For Computer Sciecne MIT OpenCourseWare Search](https://inv.nadeko.net/search?q=mit+open+courseware+mathematics+for+computer+science)
+- [Abdul Bari Data Structures and Algorithms](https://invidious.nerdvpn.de/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
 - [Math 125A -- Mathematical Logic](https://invidious.nerdvpn.de/playlist?list=PLjJhPCaCziSRSUtQiTA_yx5TJ76G_EqUJ)
 - [Set Theory and Logic Lectures](https://yewtu.be/playlist?list=PLPgKBibhNh73rAqxIaltEHw-qwMJISwOL)
 - [Discrete Math (Sets, Logic, Proofs, Relations, Counting, Number Theory, Functions)](https://yewtu.be/playlist?list=PLDDGPdw7e6Ag1EIznZ-m-qXu4XX3A0cIz)
