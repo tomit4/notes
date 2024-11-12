@@ -301,3 +301,7 @@ $$ O(n^3) $$
 **Exponential:**
 
 $$ O(2^n) $$
+
+## Order of Types of Time Function
+
+$$ 1 < log(n) < \sqrt n < n < n(log(n)) < n^2 < n^3 < ...  2^n < 3^n .... < n^n $$
