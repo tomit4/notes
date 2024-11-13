@@ -208,3 +208,6 @@ bindkey '^f' fex-widget
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# current book being read (used in resume_read script)
+export CURRENT_READ=""

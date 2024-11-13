@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+leftoff=7
+
+# Look for current read in either .bashrc or .zshrc
+
+gobble mupdf -I -r 204 "${CURRENT_READ}" "${leftoff}"
