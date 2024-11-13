@@ -264,6 +264,12 @@ matches:
     force_clipboard: true
     replace: "https://text.npr.org"
 
+  # Prints out default Makefile flags
+  - trigger: ";make"
+    force_clipboard: true
+    replace: "CC=gcc\nCFLAGS=-Wall -Wextra -Werror -std=c99"
+
+
   # Routes to ChatGPT
   - trigger: ";gpt"
     force_clipboard: true
