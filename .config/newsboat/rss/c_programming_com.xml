@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rss xmlns:blogChannel="http://backend.userland.com/blogChannelModule" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel> <title>Cprogramming.com</title>
+    <link>http://feeds.rapidfeeds.com/18295/</link>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://feeds.rapidfeeds.com/18295/" rel="via" type="application/rss+xml"/>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://feeds.rapidfeeds.com/18295/" rel="self" type="application/rss+xml"/>
+    <description>Your resource for C and C++ programming.</description>
+    <pubDate>Mon, 04 Sep 2017 21:00:00 EST</pubDate>
+    <lastBuildDate>Sun, 19 Dec 2010 18:24:00 EST</lastBuildDate>
+    <docs>http://backend.userland.com/rss</docs>
+    <generator>RapidFeeds v2.0 -- http://www.rapidfeeds.com</generator>
+    <item>
+      <title>Searching for errors using PVS-Studio</title>
+      <description>
+An introduction to analyzing code to find potential errors via static analysis, using the PVS-Studio tool
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577044</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577044</guid>
+      <pubDate>Mon, 04 Sep 2017 21:00:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Developing for Android - an Introduction</title>
+      <description>
+Learn about the basics of Android architecture and how to get set up to program for Android on Windows and Linux.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577043</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577043</guid>
+      <pubDate>Sat, 16 Feb 2013 03:02:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Windows 8 Sensor Development Guide</title>
+      <description>
+This guide provides developers with an overview of the Microsoft Windows 8 sensors application programming interfaces (APIs) for Desktop and Windows UI style applications with a specific focus on the various sensor capabilities available in Windows 8 Desktop mode. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577042</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577042</guid>
+      <pubDate>Tue, 16 Oct 2012 05:14:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Working with Sensors on Ultrabooks</title>
+      <description>
+New Ultrabook computers come with many awesome sensors, like compass and GPS--in this article, learn how to work with these sensors on Windows 8.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577041</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577041</guid>
+      <pubDate>Tue, 18 Sep 2012 19:53:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Crossing platforms and boundaries with mobile applications</title>
+      <description>
+Learn how some companies are making cross-platform mobile games.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577040</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577040</guid>
+      <pubDate>Mon, 09 Jul 2012 03:38:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Green Code Development</title>
+      <description>
+Learn tools and techniques for making your software more power-efficient in this article focusing on developing for mobile devices running on battery.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577039</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577039</guid>
+      <pubDate>Sat, 05 May 2012 02:15:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Develop for UltraBooks and Join the Rebirth of personal computing</title>
+      <description>
+Developers can now submit and distribute applications via the Intel AppUp(SM) developer program to the latest experience in personal computers called Ultrabook(SM).
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577038</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577038</guid>
+      <pubDate>Tue, 17 Apr 2012 18:31:00 EST</pubDate>
+    </item>
+    <item>
+      <title>How to create a shared library on Linux using GCC</title>
+      <description>
+Learn how to create and configure shared libraries on Linux using GCC, allowing you to share and re-use code between projects
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577037</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577037</guid>
+      <pubDate>Fri, 30 Dec 2011 21:36:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Better type safety in C++11 - nullptr and strongly typed enums</title>
+      <description>
+Learn how C++11 improves type safety with nullptr and provides better enum values and strongly typed enums known as enum classes.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577036</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577036</guid>
+      <pubDate>Sun, 27 Nov 2011 22:37:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Programming practice problem - convert integer to English text</title>
+      <description>
+Write a program that takes an integer and displays the English name of that value.
+
+You should support both positive and negative numbers, in the range supported by a 32-bit integer (approximately -2 billion to 2 billion).
+
+Click through to the page for examples and a link to the solution.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577035</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577035</guid>
+      <pubDate>Mon, 21 Nov 2011 18:03:00 EST</pubDate>
+    </item>
+    <item>
+      <title>What is a hash table?</title>
+      <description>
+Hash tables are an efficient implementation of a keyed array data structure--in this article, learn how hash tables are implemented and what you might use them for.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577034</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577034</guid>
+      <pubDate>Sun, 20 Nov 2011 10:17:00 EST</pubDate>
+    </item>
+    <item>
+      <title>What's the difference between static and extern?</title>
+      <description>
+Learn the difference between these two keywords in this new FAQ entry. Useful when working with multiple source files!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577033</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577033</guid>
+      <pubDate>Tue, 15 Nov 2011 17:34:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Write Faster Code using Rvalue References and Move Semantics in C++11</title>
+      <description>
+C++ is fast, but C++ has always had a "temporaries" problem--lots of objects being unnecessarily created and destroyed when returning values from functions, slowing down programs or requiring unnatural programming techniques to avoid. 
+
+In C++11, rvalue references can be used to create "move semantics" allowing objects to be cheaply moved, rather than inefficiently copied, promising to make your code faster than ever before. Learn all about it in this article!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577032</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577032</guid>
+      <pubDate>Sun, 13 Nov 2011 12:01:00 EST</pubDate>
+    </item>
+    <item>
+      <title>C and C++ for Java Programmers</title>
+      <description>
+How to go from programming Java to programming C or C++, covering lots of the differences between C, C++ and Java
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577031</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577031</guid>
+      <pubDate>Sat, 05 Nov 2011 20:35:00 EST</pubDate>
+    </item>
+    <item>
+      <title>A Gentle Introduction to C++ IO Streams</title>
+      <description>
+C++ IO streams control how data is output and input to a C++ program. IO streams are incredibly flexible, making it easy for you to write out your own classes to all kinds of different destinations--including files, strings, and the console. Learn how to start taking advantage of IO streams in this gentle introduction to the powerful IO stream library.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577030</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577030</guid>
+      <pubDate>Mon, 10 Oct 2011 17:43:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Constexpr - Generalized Constant Expressions in C++11</title>
+      <description>
+There are several improvements in C++11 that promise to allow programs written using C++11 to run faster than ever before. One of those improvements, generalized constant expressions, allows programs to take advantage of compile-time computation. If you're familiar with template metaprogramming, constexpr will seem like a way of making your life much easier. If you're not familiar with template metaprogramming, that's ok--constexpr makes the benefits of compile-time programming much more widely accessible. Learn more about constexpr in this article!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577029</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577029</guid>
+      <pubDate>Tue, 27 Sep 2011 21:27:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Range-Based For Loops in C++11</title>
+      <description>
+Learn how to easily loop over containers using the new C++11 range-based for loops--and how to add support for range-based for loops to your own classes!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577028</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577028</guid>
+      <pubDate>Sun, 11 Sep 2011 21:11:00 EST</pubDate>
+    </item>
+    <item>
+      <title>GDB by Example</title>
+      <description>
+Are you using a debugger when you run into crashes or other problems? If not, you should be--this tutorial will show you how, using GDB, the GNU Debugger, the standard debugger for Linux and Unix-like operating systems.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577027</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577027</guid>
+      <pubDate>Wed, 07 Sep 2011 21:41:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Lambda Functions in C++11 - the Definitive Guide</title>
+      <description>
+One of the most exciting features in C++11 is the addition of lambda functions.  A lambda function is a function that you can write inline in your source code (usually to pass in to another function, similar to the idea of a functor or function pointer). With lambda, creating quick functions has become much easier, and this means that not only can you start using lambda when you'd previously have needed to write a separate named function, but you can start writing more code that relies on the ability to create quick-and-easy functions. In this article, I'll first explain why lambda is great--with some examples--and then I'll walk through all of the details of what you can do with lambda.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577026</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577026</guid>
+      <pubDate>Sun, 28 Aug 2011 22:05:00 EST</pubDate>
+    </item>
+    <item>
+      <title>C++11 - auto, decltype, and the new function declaration syntax</title>
+      <description>
+C++0x, now officially C++11, improves C++'s type inference with the new meaning of auto (itself a great time saver) and decltype, auto's not-evil twin. Together, combined with the new return value syntax, you can write some pretty sweet code. Check it out in this article.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577025</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577025</guid>
+      <pubDate>Sat, 20 Aug 2011 22:30:00 EST</pubDate>
+    </item>
+    <item>
+      <title>What is C++0x?</title>
+      <description>
+C++0x is the working name for the new standard for C++, a tremendous new upgrade to the power and usability of C++. The best news? Many C++0x features are already available in several popular compilers, meaning you can already start to take advantage of it in your programs today!
+
+Learn what C++0x is all about and how you can start using it in this article, the first in a series on C++0x.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577024</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577024</guid>
+      <pubDate>Sun, 14 Aug 2011 20:46:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Printf format strings - Cprogramming.com</title>
+      <description>
+Ever wondered about all the different options when you use format strings with printf? Wonder no more--this article takes you through all the arguments and options for producing beautiful output using printf.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577023</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577023</guid>
+      <pubDate>Wed, 10 Aug 2011 21:01:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Learn more about MeeGo</title>
+      <description>
+The MeeGo mobile operating system is picking up speed. Computex saw announcements about numerous new MeeGo-powered tablets and netbooks. For developers interested in the MeeGo platform, there are opportunities for cash prizes or developer funding.
+
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577022</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577022</guid>
+      <pubDate>Thu, 04 Aug 2011 23:00:00 EST</pubDate>
+    </item>
+    <item>
+      <title>What's the difference between declaring and defining in C and C++</title>
+      <description>
+In C and C++, there is a subtle but important distinction between the meaning of the words declare and define. If you don't understand the difference, you'll run into weird linker errors at unpleasant times like right after you finally compile your code at 3AM.
+
+This article explains the difference--why it matters and how to fix those errors so you can get some sleep :)
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577021</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577021</guid>
+      <pubDate>Mon, 01 Aug 2011 21:05:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Functors: Function Objects in C++</title>
+      <description>
+Both C and C++ support function pointers, which provide a way to pass around instructions on how to perform an operation. But function pointers are limited because functions must be fully specified at compile time. What do I mean? Let's say that you're writing a mail program to view an inbox, and you'd like to give the user the ability to sort the inbox on different fields--to, from, date, etc. You might try using a sort routine that takes a function pointer capable of comparing the messages, but there's one problem--there are a lot of different ways you might want to compare messages. You could create different functions that differ only by the field of the message on which the comparison occurs, but that limits you to sorting on the fields that have been hard-coded into the program. It's also going to lead to a lot of if-then-else blocks that differ only by the function passed into the sort routine. 
+
+Functors solve this problem--learn more in this article.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577020</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577020</guid>
+      <pubDate>Wed, 02 Mar 2011 22:56:00 EST</pubDate>
+    </item>
+    <item>
+      <title>An Object Oriented Animation Engine</title>
+      <description>
+So far, we've covered many of the core elements of an animation, including the Graphic Object, Animation Object, Camera, Frustum, Layers and Layer Folders. This article (and the next) will bring them all together to design an Object Oriented Animation Engine.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577019</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577019</guid>
+      <pubDate>Sun, 27 Feb 2011 22:45:00 EST</pubDate>
+    </item>
+    <item>
+      <title>New Incentives and a Whole New Platform From The Intel AppUp (SM) developer program</title>
+      <description>
+Intel AppUp (SM) is now accepting MeeGo apps and offering new incentives for developers. If you're interested in netbook and tablet app development, check it out!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577018</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577018</guid>
+      <pubDate>Mon, 21 Feb 2011 16:45:00 EST</pubDate>
+    </item>
+    <item>
+      <title>5 New Year's Resolutions for Programmers in 2011</title>
+      <description>
+Need some ideas for software-related New Year's resolutions? Check these out and make a resolution to keep up with the latest trends in technology!
+
+Happy New Year!
+
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577017</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577017</guid>
+      <pubDate>Sat, 01 Jan 2011 18:41:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Frames, Layers and Layer Folders in Animation</title>
+      <description>
+Part 2 in our series on designing an animation engine explains how to organize animations with frames, layers and layer folders
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577016</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577016</guid>
+      <pubDate>Sun, 19 Dec 2010 18:24:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Getting your app on Intel AppUp (SM): Porting "Ancient Frog"</title>
+      <description>
+Interested in writing games for multiple platforms? Want to know what goes in to building a port and how to make your game port-friendly? This interview discusses one developer's experience porting his game from the iPhone to the netbook.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577015</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577015</guid>
+      <pubDate>Wed, 15 Dec 2010 22:49:00 EST</pubDate>
+    </item>
+    <item>
+      <title>An Object Oriented Approach to Animation</title>
+      <description>
+The first part in a series discussing the design of an object oriented approach to animation
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577014</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577014</guid>
+      <pubDate>Tue, 14 Dec 2010 23:48:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Dixons Challenge</title>
+      <description>
+Find out how you could win $15,000 for writing the ultimate home-enhancing app in the Dixons Challenge
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577013</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577013</guid>
+      <pubDate>Mon, 22 Nov 2010 23:18:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Why AppUp? A Quick Review of the AppUp Model</title>
+      <description>
+Learn about AppUp, an app store framework that allows developers to submit apps to app stores serving a variety of devices
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577012</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577012</guid>
+      <pubDate>Mon, 15 Nov 2010 09:22:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Same Game, Part 5 - Implementing an Undo/Redo Stack and Keyboard Accelerators</title>
+      <description>
+This is it. We are almost done with our version of the SameGame. We've discussed quite a few topics ranging from event driven programming to GDI graphics programming. A lot of the topics we've discussed transcend the gap between game programming and application programming in general. Building MFC applications is one of such topics, not many games are written in MFC but tons of applications are (the list is very long). The topic of this final article is one of these topics. We'll discuss how to put together an undo/redo stack for our game. Undo/redo is an essential feature for most applications. If you've played our game for any period of time I'm sure you've said to yourself, "Oops! Where's the undo?!" Well here it is.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577011</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577011</guid>
+      <pubDate>Wed, 10 Nov 2010 09:24:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Same Game, Part 4 - Adjusting the Board Size and Block Count</title>
+      <description>
+Our version of the SameGame is really taking shape. We have a game that can be played from start to finish in five different levels of difficulty. In this article we'll be adding more options to customize the game play. We'll add the ability for the user to adjust the size of the blocks and the number of blocks on the game board. In order to get these values from the user we'll create a dialog box to prompt them for input.
+
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577010</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577010</guid>
+      <pubDate>Tue, 09 Nov 2010 09:03:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Same Game, Part 3 - Adding Difficulty Levels</title>
+      <description>
+Now that we a playable game, it's time to add some challenge and make it harder by adding new difficulty levels
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577009</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577009</guid>
+      <pubDate>Mon, 08 Nov 2010 09:17:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Same Game, Part 2 - Creating a Playable Game</title>
+      <description>
+In the second article in this series on creating a game from start to finish, you'll go from drawing the game board to actually having a playable game!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577008</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577008</guid>
+      <pubDate>Sun, 07 Nov 2010 10:46:00 EST</pubDate>
+    </item>
+    <item>
+      <title>"The Same Game": A Simple Game from Start to Finish, Part 1 of 5</title>
+      <description>
+The first in a series of articles that will teach you exactly how to create a game starting at the very beginning and ending with a fully playable game (source included!)
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577007</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577007</guid>
+      <pubDate>Sat, 06 Nov 2010 10:03:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Setting up Apple XCode</title>
+      <description>
+Instructions for getting, setting up and using XCode for Mac OS X. Apple XCode allows you to create both native OS X applications and iPhone apps.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577006</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577006</guid>
+      <pubDate>Sun, 03 Oct 2010 21:37:00 EST</pubDate>
+    </item>
+    <item>
+      <title>How to Avoid, Find (and fix) Memory Errors in Your C/C++ Code</title>
+      <description>
+Explore the different types of memory errors and how to use Intel Parallel Inspector to debug your code
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577005</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577005</guid>
+      <pubDate>Wed, 19 Aug 2009 21:19:00 EST</pubDate>
+    </item>
+    <item>
+      <title>The Secret to Learning Anything</title>
+      <description>
+Some of the most important lessons I learned in college came from one professor, Michael Mitzenmacher. Now, this was a guy with a lot of papers to his name, tenured at Harvard, working on some pretty darn complicated computer science theory (I took his algorithms class). So you'd expect that I'd learn something important. But as it turned out, the biggest lessons I learned from him weren't on the topics he taught. I learned a secret that helped me learn much more effectively.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577004</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577004</guid>
+      <pubDate>Sun, 12 Jul 2009 21:33:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Programming Practice Problem - Temperature Conversion</title>
+      <description>
+A practice program for beginners--write a program that converts Celsius to Fahrenheit and puts it into a nicely formatted table 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577003</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577003</guid>
+      <pubDate>Tue, 23 Jun 2009 22:25:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Ebook survey</title>
+      <description>
+Help us serve you better by completing this very short survey!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577002</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577002</guid>
+      <pubDate>Thu, 18 Jun 2009 19:42:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Programming Practice Problem - Computing File Size</title>
+      <description>
+ In this challenge, given the name of a file, print out the size of the file,   in bytes.  If no file is given, provide a help string to the user that   indicates how to use the program.  You might need help with &lt;a href="http://www.cprogramming.com/tutorial/lesson14.html"&gt;taking parameters   via the command line&lt;/a&gt; or &lt;a href="http://www.cprogramming.com/tutorial/lesson10.html"&gt;file I/O in C++&lt;/a&gt;    (if you want to solve this problem in C, you might be interested in this    article on &lt;a href="http://www.cprogramming.com/tutorial/cfileio.html"&gt;C file    I/O&lt;/a&gt;). 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577001</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577001</guid>
+      <pubDate>Mon, 15 Jun 2009 21:48:00 EST</pubDate>
+    </item>
+    <item>
+      <title>5 Ways You can Learn Programming Faster</title>
+      <description>
+Learning to program isn't something you can do in an afternoon, but it doesn't have to be a life's work, either. There are lots of things you can do to make it easier on yourself when you are learning to program. You already know about &lt;a href="http://www.cprogramming.com/beginner_programming_mistakes.html"&gt;The 5 Most Common Problems New Programmers Face--And How You Can Solve Them&lt;/a&gt;. Now, discover how to get the most out of your learning. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7577000</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7577000</guid>
+      <pubDate>Mon, 08 Jun 2009 09:08:00 EST</pubDate>
+    </item>
+    <item>
+      <title>The 5 Most Common Problems New Programmers Face--And How You Can Solve Them</title>
+      <description>
+When you're just starting out with programming, it's easy to run into problems that make you wonder how anyone has ever managed to write a computer program. But the fact is, just about everyone else who's learned to code has had that experience and wondered the same thing, when they were starting out. I've helped teach several introductory programming classes, and there are some problems that trip up nearly every student--everything from getting started to dealing with program design.
+
+I'll prepare you to get past these challenges--none of them are insurmountable. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576999</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576999</guid>
+      <pubDate>Wed, 03 Jun 2009 21:12:00 EST</pubDate>
+    </item>
+    <item>
+      <title>How can Cprogramming.com Better Help You?</title>
+      <description>
+&lt;h1&gt;How can Cprogramming.com Better Help You?&lt;/h1&gt;&lt;p&gt;  I'd like to know how you think I could make Cprogramming.com more helpful to you. &lt;br /&gt;&lt;br /&gt;  Please send me email at &lt;a href="mailto:webmaster@cprogramming.com"&gt;webmaster@cprogramming.com&lt;/a&gt; with your thoughts.  I may not be able to respond to every email, but I will certainly read them all.  &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Special note to RSS subscribers: please indicate that you read the feed in your email!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt; To get the discussion started, here are a few areas you might like to comment on:  &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Posting frequency&lt;/strong&gt; -- are there too few new articles posted per week, or too many? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Topics&lt;/strong&gt; -- are there specific topics you'd like to see less coverage of, or more coverage of?  Are there topics that just haven't been covered at all that you'd be interested in? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Article length&lt;/strong&gt; -- do you find that articles are too short, just right, or too long? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Article audience&lt;/strong&gt; -- are you looking for beginner articles, or more in-depth, detailed articles for professional programmers, or something in between?  Would you like to see articles tagged by the expected audience? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Site Design&lt;/strong&gt; -- does the current layout and formatting work for you?  Are there specific ways it could be better? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Layout&lt;/strong&gt; -- are you able to find what you are looking for? &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Other ideas&lt;/strong&gt; -- any feedback you have on other topics would be much appreciate&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576998</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576998</guid>
+      <pubDate>Sun, 31 May 2009 21:43:00 EST</pubDate>
+    </item>
+    <item>
+      <title>5 Awesome (and time saving) Features of the Visual Studio Debugger</title>
+      <description>
+So you know all the basic debugger features: breakpoints, stepping through the code, viewing the values of variables. But there's a lot more your debugger can do to make it quicker to step through code, easier to test alternate solutions, and even avoid rerunning the program.
+
+Here, you'll discover some of Visual Studio's more advanced debugger features, such as stepping out of a function, taking advantage of the autos window, using run to the cursor to set temporary breakpoints, modifying a variable's value to test potential fixes, and using Set Next Statement to turn back the clock and re-execute code.
+
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576997</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576997</guid>
+      <pubDate>Wed, 27 May 2009 20:05:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging with Visual Studio, Part 6: Remote Debugging</title>
+      <description>
+Discover how to debug code running on a one machine from your main development box using remote debugging with Visual Studio
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576996</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576996</guid>
+      <pubDate>Wed, 20 May 2009 21:09:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging with Visual Studio, Part 5: Using Trace and Log Messages</title>
+      <description>
+Part 5 in a series on debugging with Visual Studio.  Discover how to use tracing and logging to make debugging easier.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576995</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576995</guid>
+      <pubDate>Sun, 17 May 2009 21:48:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging C and C++ with Visual Studio 2005/2008, Part 4: Setting up Code for the Debugger</title>
+      <description>
+Part 4 in a series on debugging C and C++ in Visual Studio
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576994</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576994</guid>
+      <pubDate>Tue, 12 May 2009 00:44:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging C++ Using Visual Studio 2005/2008, Part 3: Using Breakpoints Effectively</title>
+      <description>
+Part 3 in a series on debugging with Visual Studio
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576993</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576993</guid>
+      <pubDate>Tue, 05 May 2009 21:58:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Ask an Expert</title>
+      <description>
+The Ask an Expert hage has been updated with a link to Cprogramming.com's very own expert grid, featuring experts from our message board community and others!
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576992</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576992</guid>
+      <pubDate>Tue, 05 May 2009 21:56:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Constructors and Destructors in C++</title>
+      <description>
+Learn about the subtleties of constructors and destructors in C++
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576991</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576991</guid>
+      <pubDate>Thu, 30 Apr 2009 22:41:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging C and C++ with Visual Studio 2005/2008, Part 2: Setting up the IDE</title>
+      <description>
+In this article series, we discuss the concepts of debugging with Visual Studio 2005/2008. Part one covered general debugging concepts; part two will explain how to configure the Visual Studio IDE for debugging. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576990</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576990</guid>
+      <pubDate>Wed, 29 Apr 2009 22:28:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Operator Overloading</title>
+      <description>
+How and why to use (or avoid) operator overloading for cleaner, more readable code.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576989</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576989</guid>
+      <pubDate>Mon, 27 Apr 2009 21:53:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Debugging C and C++ with Visual Studio 2005/2008, Part 1: Overview of Debugging Concepts</title>
+      <description>
+Whenever you write C++ programs, inevitably you're going to have to debug the program. This series of articles will discuss how to debug using Visual Studio, but first, we'll need to start out with an overview of important concepts used by debuggers. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576988</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576988</guid>
+      <pubDate>Thu, 23 Apr 2009 20:57:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Common Memory Management Problems in C++</title>
+      <description>
+Part 4 in the dynamic memory management series: memory leaks and how to avoid them.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576987</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576987</guid>
+      <pubDate>Mon, 20 Apr 2009 21:40:00 EST</pubDate>
+    </item>
+    <item>
+      <title>About Cprogramming.com</title>
+      <description>
+It's about time we added an about us page.  Find out who's behind cprogramming.com
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576986</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576986</guid>
+      <pubDate>Sun, 19 Apr 2009 18:49:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Dynamic Memory Allocation: Overloading Operator New and Operator Delete</title>
+      <description>
+At times, you will have classes for which you want to specialize memory allocation. Why? You know something about how the class is used. For instance, you might specialize memory allocation for a class in order to to squeeze some extra performance out of your program.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576985</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576985</guid>
+      <pubDate>Thu, 16 Apr 2009 21:00:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Dynamic Memory Allocation: Virtual Memory</title>
+      <description>
+Part 2 in a series on dynamic memory allocation and management
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576984</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576984</guid>
+      <pubDate>Tue, 14 Apr 2009 18:34:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Advanced Memory Management: Dynamic Allocation, Part 1</title>
+      <description>
+Part 1 in a series on dynamic memory allocation in C/C++.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576983</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576983</guid>
+      <pubDate>Thu, 09 Apr 2009 20:10:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Managing database operations using ADO and C++, Part 5: Using the CADOManager in practice</title>
+      <description>
+To use the CADOManager class as a base class to an inherited management class we should adopt some convention to name these inherited classes. It can be anything really but it seems easy enough to come up with something like CTbl&lt;TableName&gt; for clarity. For example, in our database schema we want to write a table class for the table called 'People' and that inherits from CADOManager...
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576982</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576982</guid>
+      <pubDate>Tue, 07 Apr 2009 21:44:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Managing database operations using ADO and C++ Part 4: Creating the ADO manager class</title>
+      <description>
+Now that we have gone over the basics and described a way to design and create ADO wrapper classes, it is now time for the final phase of creating an ADO manager class that will work on all the concepts we have discussed...
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576981</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576981</guid>
+      <pubDate>Mon, 06 Apr 2009 19:56:00 EST</pubDate>
+    </item>
+    <item>
+      <title>ADO Wrapper Classes</title>
+      <description>
+Now that the basics are out of the way we can actually begin to design some useful code that will do something! We need an easy way to create, access and manage the ADO objects we have discussed. The term 'wrapper' is used in programming to describe a way to create code that manages some other API's or module. The terms 'encapsulation' or 'legacy management' can be used to describe what a class wrapper is...
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576980</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576980</guid>
+      <pubDate>Wed, 01 Apr 2009 23:05:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Managing database operations using ADO and C++, Part 2: Introduction to ADO</title>
+      <description>
+ADO consists of a series of objects that are used to manage interfacing to an SQL server.  These objects need to be instantiated using a smart pointer and then set up correctly in order to perform database operations. Generally ADO is abstracted from the particular syntax issues of various SQL servers. It operates via a driver supplied by a specific SQL server provider. Each provider must supply the driver necessary for ADO to interface to the server properly and handle the various interfaces that ADO operates on. For instance, the MS-SQL server uses a driver called 'SQL Native Client'. In this way, with only a few exceptions, only one piece of code needs to be written in order to interface properly with various SQL servers... 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576979</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576979</guid>
+      <pubDate>Mon, 30 Mar 2009 23:05:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Managing database operations using ADO and C++, Part 1: Introduction to SQL</title>
+      <description>
+This series of articles will detail how to use Microsoft Active Data Objects (ADO) and C++ to manage database operations.  Part 1 highlights in simple terms the basic SQL operations that the examples will perform and introduce the reader to some simple SQL syntax.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576978</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576978</guid>
+      <pubDate>Fri, 27 Mar 2009 03:00:10 EST</pubDate>
+    </item>
+    <item>
+      <title>Solving the Diamond Problem with Virtual Inheritance</title>
+      <description>
+Multiple inheritance in C++ is a powerful, but tricky tool, that often leads to problems if not used carefully. This article will teach you how to use virtual inheritance to solve some of these common problems programmers run into. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576977</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576977</guid>
+      <pubDate>Mon, 23 Mar 2009 09:24:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Multiple Inheritance in C++</title>
+      <description>
+Deriving directly from more than one class is usually called multiple inheritance. Since it's widely believed that this concept complicates the design and debuggers can have a hard time with it, multiple inheritance can be a controversial topic. However, multiple inheritance is an important feature in C++ and C++ programmers think of it as a very good structuring tool.
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576976</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576976</guid>
+      <pubDate>Sat, 21 Mar 2009 22:41:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Setting Up Code::Blocks and the MINGW Compiler on Windows</title>
+      <description>
+This tutorial will provide you with detailed instructions for a standard installation of Code::Blocks and the MINGW compiler, a free development environment for C and C++. 
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576975</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576975</guid>
+      <pubDate>Thu, 19 Mar 2009 23:58:00 EST</pubDate>
+    </item>
+    <item>
+      <title>Setting up the SDL libraries for Code::Blocks for a Windows Compiler</title>
+      <description>
+This tutorial assumes that you have already set up Code::Blocks and the MINGW compiler in Windows. Now, we will add the SDL graphical libraries, which will enable you to write graphical applications...
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576974</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576974</guid>
+      <pubDate>Thu, 19 Mar 2009 23:57:00 EST</pubDate>
+    </item>
+    <item>
+      <title>What the $#@! is Parallelism, Anyhow?</title>
+      <description>
+’m constantly amazed how many seemingly well-educated computer technologists bandy about the word parallelism without really knowing what they’re talking about. I can’t tell you how many articles and books I’ve read on parallel computing that use the term over and over without ever defining it....
+    </description>
+      <link>http://feeds.rapidfeeds.com/?iid4ct=7576973</link>
+      <guid isPermaLink="true">http://feeds.rapidfeeds.com/?iid4ct=7576973</guid>
+      <pubDate>Thu, 19 Mar 2009 00:02:00 EST</pubDate>
+    </item>
+  </channel>
+</rss>
