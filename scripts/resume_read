@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-leftoff=7
+leftoff=81
 
 # Look for current read in either .bashrc or .zshrc
 
