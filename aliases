@@ -164,8 +164,6 @@ alias updatedb="doas updatedb"
 alias iftop-w="doas iftop -i wlan0 -P"
 alias wmon="wavemon"
 alias ncpa="ncpamixer"
-alias spdtst="speedtest --simple --secure"
-alias {spdtstjs,spdtstjson}="speedtest --json | jq"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
 alias vnstat-w="vnstat -i wlan0 --json | jq"
