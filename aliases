@@ -364,7 +364,7 @@ alias zj="zellij"
 
 # programming specific aliases
 alias rc="rustc"
-alias cc="cc -Wall -Werror -Wextra"
+alias cc="cc -Wall -Werror -Wextra -Wpedantic"
 alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
 #create programming licences
