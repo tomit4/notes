@@ -661,3 +661,5 @@ Install lksctp-tools (TCP Tools)
 doas pacman -S lksctp-tools
 Install tcc (tiny c compiler):
 doas pacman -S tcc
+Install minimodem
+paru minimodem
