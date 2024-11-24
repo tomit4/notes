@@ -663,3 +663,5 @@ Install tcc (tiny c compiler):
 doas pacman -S tcc
 Install minimodem
 paru minimodem
+Install cowsay
+doas pacman -S cowsay
