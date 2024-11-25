@@ -1,0 +1,4 @@
+doas groupadd wireshark
+doas usermod -aG wireshark "$USER"
+doas chgrp wireshark /usr/bin/dumpcap
+doas setcap cap_net_raw,cap_net_admin=ep /usr/bin/dumpcap

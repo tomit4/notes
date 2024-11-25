@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-leftoff=81
+# leftoff=81 # Operating Systems: Three Easy Pieces
+leftoff=39 # The Algorithm Design Manual
 
 # Look for current read in either .bashrc or .zshrc
 
