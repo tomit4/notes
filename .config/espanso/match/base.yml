@@ -264,6 +264,11 @@ matches:
     force_clipboard: true
     replace: "https://text.npr.org"
 
+  # Routes to lite.pbs.org
+  - trigger: ";pbs"
+    force_clipboard: true
+    replace: "https://lite.pbs.org/"
+
   # Prints out default Makefile flags
   - trigger: ";make"
     force_clipboard: true
