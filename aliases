@@ -1,5 +1,5 @@
 # Custom Aliases
-alias .="cd && ls"
+alias cdls="source mycd"
 alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
 alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'" # -N
 alias {drag,rdrag}="ripdrag"

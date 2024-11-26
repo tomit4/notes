@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# TODO: add dependency check for eza, otherwise use ls
+
+# ls after cd
+function mycd {
+    if [ -z "$1" ]; then
+        builtin cd && eza --icons
+    else
+        builtin cd "$1" && eza --icons
+    fi
+}
+
+mycd "$@"

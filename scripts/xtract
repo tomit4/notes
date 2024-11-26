@@ -12,20 +12,19 @@ txtyellow=${txtbld}$(tput setaf 3)
 txtwhite=${txtbld}$(tput setaf 7)
 
 # Dependency check
-function dependencycheck()
-{
+function dependencycheck() {
     numdependencies="$#"
     dependencies=("$@")
     missingdependencies=0
 
-    for ((i = 0; i < numdependencies; i++)) ; do
-        if ! command -v "${dependencies[$i]}" &> /dev/null ; then
+    for ((i = 0; i < numdependencies; i++)); do
+        if ! command -v "${dependencies[$i]}" &>/dev/null; then
             echo "${txtred}  dependency not met: ${dependencies[$i]}${txtwhite}"
-            missingdependencies=$((missingdependencies+1))
+            missingdependencies=$((missingdependencies + 1))
         fi
     done
 
-    if [ $missingdependencies -gt 0 ] ; then
+    if [ $missingdependencies -gt 0 ]; then
         exit 1
     fi
 }
@@ -37,10 +36,11 @@ dependencycheck echo sed
 echo "${txtgreen}xtract: a simple shell script for decompressing common file formats"
 
 # Reset output style
-tput bold & tput setaf 7
+tput bold &
+tput setaf 7
 
 # Simply copy and paste, changing extension string and extraction method below
-if [ "${1}" == "-tar" ] ; then
+if [ "${1}" == "-tar" ]; then
     dependencycheck tar
     echo "${txtblue}decompressing .tar...${txtyellow}"
     # main extraction method
@@ -49,7 +49,7 @@ if [ "${1}" == "-tar" ] ; then
     exit 0
 fi
 
-if [ "${1}" == "-tgz" ] ; then
+if [ "${1}" == "-tgz" ]; then
     dependencycheck tar gunzip
     echo "${txtblue}decompressing .tgz...${txtyellow}"
     # main extraction method
@@ -58,7 +58,7 @@ if [ "${1}" == "-tgz" ] ; then
     exit 0
 fi
 
-if [ "${1}" == "-gz" ] ; then
+if [ "${1}" == "-gz" ]; then
     dependencycheck gunzip
     echo "${txtblue}decompressing .gz...${txtyellow}"
     # main extraction method
@@ -67,7 +67,7 @@ if [ "${1}" == "-gz" ] ; then
     exit 0
 fi
 
-if [ "${1}" == "-zip" ] ; then
+if [ "${1}" == "-zip" ]; then
     dependencycheck unzip
     echo "${txtblue}decompressing .zip...${txtyellow}"
     # main extraction method
@@ -76,7 +76,7 @@ if [ "${1}" == "-zip" ] ; then
     exit 0
 fi
 
-if [[ "${1}" == "-bzip" || "${1}" == "-bzip2" || "${1}" == "-bz2" || "${1}" == "-bz" ]] ; then
+if [[ "${1}" == "-bzip" || "${1}" == "-bzip2" || "${1}" == "-bz2" || "${1}" == "-bz" ]]; then
     dependencycheck bzip2
     echo "${txtblue}decompressing .bz2...${txtyellow}"
     # main extraction method
@@ -85,7 +85,7 @@ if [[ "${1}" == "-bzip" || "${1}" == "-bzip2" || "${1}" == "-bz2" || "${1}" == "
     exit 0
 fi
 
-if [[ "${1}" == "-lzip" || "${1}" == "-lz" ]] ; then
+if [[ "${1}" == "-lzip" || "${1}" == "-lz" ]]; then
     dependencycheck lzip
     echo "${txtblue}decompressing .lz...${txtyellow}"
     # main extraction method
@@ -94,7 +94,7 @@ if [[ "${1}" == "-lzip" || "${1}" == "-lz" ]] ; then
     exit 0
 fi
 
-if [[ "${1}" == "-rzip" || "${1}" == "-rz" ]] ; then
+if [[ "${1}" == "-rzip" || "${1}" == "-rz" ]]; then
     dependencycheck rzip
     echo "${txtblue}decompressing .rz...${txtyellow}"
     # main extraction method
@@ -103,7 +103,7 @@ if [[ "${1}" == "-rzip" || "${1}" == "-rz" ]] ; then
     exit 0
 fi
 
-if [ "${1}" == "-xz" ] ; then
+if [ "${1}" == "-xz" ]; then
     dependencycheck xz
     echo "${txtblue}decompressing .xz...${txtyellow}"
     # main extraction method
@@ -112,7 +112,7 @@ if [ "${1}" == "-xz" ] ; then
     exit 0
 fi
 
-if [[ "${1}" == "-zstd" || "${1}" == "-zst" ]] ; then
+if [[ "${1}" == "-zstd" || "${1}" == "-zst" ]]; then
     dependencycheck zstd
     echo "${txtblue}decompressing .zst...${txtyellow}"
     # main extraction method
@@ -121,7 +121,7 @@ if [[ "${1}" == "-zstd" || "${1}" == "-zst" ]] ; then
     exit 0
 fi
 
-if [[ "${1}" == "-ar" || "${1}" == "-a" ]] ; then
+if [[ "${1}" == "-ar" || "${1}" == "-a" ]]; then
     dependencycheck ar
     echo "${txtblue}decompressing .a...${txtyellow}"
     # main extraction method
@@ -130,7 +130,7 @@ if [[ "${1}" == "-ar" || "${1}" == "-a" ]] ; then
     exit 0
 fi
 
-if [[ "${1}" == "-brotli" || "${1}" == "-br" ]] ; then
+if [[ "${1}" == "-brotli" || "${1}" == "-br" ]]; then
     dependencycheck brotli
     echo "${txtblue}decompressing .br...${txtyellow}"
     # main extraction method
@@ -138,3 +138,26 @@ if [[ "${1}" == "-brotli" || "${1}" == "-br" ]] ; then
     echo ".br decompression finished!${txtwhite}"
     exit 0
 fi
+
+## Taken from reddit for future refactoring of this script:
+# function extract()
+# {
+# if [ -f $1 ] ; then
+# case $1 in
+# *.tar.bz2)   tar xvjf $1     ;;
+# *.tar.gz)    tar xvzf $1     ;;
+# *.bz2)       bunzip2 $1      ;;
+# *.rar)       unrar x $1      ;;
+# *.gz)        gunzip $1       ;;
+# *.tar)       tar xvf $1      ;; # NOTE: all calls to tar can be combined (will read automatically)
+# *.tbz2)      tar xvjf $1     ;;
+# *.tgz)       tar xvzf $1     ;;
+# *.zip)       unzip $1        ;;
+# *.Z)         uncompress $1   ;;
+# *.7z)        7z x $1         ;;
+# *)           echo "'$1' cannot be extracted via >extract<" ;;
+# esac
+# else
+# echo "'$1' is not a valid file!"
+# fi
+# }
