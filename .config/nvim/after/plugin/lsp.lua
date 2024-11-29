@@ -19,6 +19,7 @@ lsp.ensure_installed({
 	"svelte",
 	"ts_ls",
 	"volar",
+	"zls",
 })
 
 cmp.setup({
