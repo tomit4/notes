@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-    hour=$(date +%H)
+    hour=$(date +%-H)
     if ((hour >= 12 && hour < 16)); then
         printf "%s AM\n" "$(date '+%I:%M:%S')"
     elif ((hour >= 16 || hour <= 23)); then
