@@ -97,6 +97,7 @@ alias cdiff="colordiff"
 alias {kdiff,kitten,kd}="kitty +kitten diff"
 alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
 alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
+alias moo="cowsay moo"
 # alias btop="kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable"
 alias tshift='doas timeshift --delete && notify-send "  Previous Backup Deleted!" && doas timeshift --create && notify-send "  New Backup Created!" && doas timeshift --list'
 alias btop="bst -e btop"
