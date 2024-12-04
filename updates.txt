@@ -665,3 +665,6 @@ Install minimodem
 paru minimodem
 Install cowsay
 doas pacman -S cowsay
+Reinstall pgcli from official artix repos:
+paru -Rs pgcli-git
+doas pacman -S pgcli

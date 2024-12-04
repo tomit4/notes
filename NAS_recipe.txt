@@ -1,0 +1,16 @@
+Plans for NAS.
+
+Perhaps look at 2J Synology line of NASs.
+Do NOT do a full Hypervisor server.
+
+- Build a small UNRAID server.
+- Buy 3 spinning disks (same size drive).
+- One parity drive, two backup drives.
+- Buy 1 NVME M2 hard drive around 2TB worth.
+- Use NVME for VM (docker).
+- All long term storage goes on spinning disk
+- Buy 5400 RPM drives if that makes it cheaper (makes speed slower)
+- CAT 5 or CAT 6 network.
+- Buy 16GB of RAM or more.
+- Intel/AMD with built-in graphics card.
+- FreeNAS.
