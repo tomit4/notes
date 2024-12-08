@@ -668,3 +668,5 @@ doas pacman -S cowsay
 Reinstall pgcli from official artix repos:
 paru -Rs pgcli-git
 doas pacman -S pgcli
+Install pipeviewer (pv):
+doas pacman -S pv
