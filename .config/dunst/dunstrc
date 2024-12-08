@@ -27,7 +27,7 @@
     width = 400
 
     # The maximum height of a single notification, excluding the frame.
-    height = 400
+    height = 125
 
     # Position the notification in the top right corner
     # origin = top-right
@@ -40,7 +40,7 @@
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 0
+    notification_limit = 1
 
     ### Progress bar ###
 
@@ -164,7 +164,8 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    # show_age_threshold = 60
+    show_age_threshold = -1
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
@@ -174,10 +175,12 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    # stack_duplicates = true
+    stack_duplicates = false
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
+    # hide_duplicate_count = true
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
