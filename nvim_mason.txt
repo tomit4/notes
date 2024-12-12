@@ -1,0 +1,37 @@
+firefox-debug-adapter
+autoflake
+bash-debug-adapter
+bash-language-server bashls
+biome
+chrome-debug-adapter
+clang-format
+clangd
+css-lsp cssls
+djlint
+dockerfile-language-server dockerls
+emmet-ls emmet_ls
+eslint-lsp eslint
+eslint_d
+flake8
+gopls
+html-lsp html
+jdtls
+jq
+js-debug-adapter
+jsonlint
+lua-language-server lua_ls
+marksman
+mypy
+node-debug2-adapter
+phpactor
+prettierd
+pylint
+pyright
+quick-lint-js quick_lint_js
+rust-analyzer rust_analyzer
+shellcheck
+svelte-language-server svelte
+typescript-language-server ts_ls
+vue-language-server volar
+yamllint
+zls
