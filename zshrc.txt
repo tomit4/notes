@@ -208,6 +208,7 @@ bindkey '^f' fex-widget
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
 
 # current book being read (used in resume_read script)
-export CURRENT_READ=""
+# export CURRENT_READ=""
