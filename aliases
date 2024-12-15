@@ -429,6 +429,9 @@ alias owlsatdawn="librewolf https://www.owlsatdawn.com &"
 # simplelogin.io is like a VPN for email (aliases away your email address essentially)
 alias simplelogin="librewolf https://simplelogin.io/ &"
 
+# Anarchism
+alias itsgoingdown="links https://itsgoingdown.org/"
+
 # Onion Sites
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
 alias {ddgt,duckducktor}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
