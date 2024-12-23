@@ -670,3 +670,5 @@ paru -Rs pgcli-git
 doas pacman -S pgcli
 Install pipeviewer (pv):
 doas pacman -S pv
+Uninstall old tldr and replace with tealdeer
+doas pacman -Rs tldr && doas pacman -S tealdeer && tldr --update
