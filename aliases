@@ -43,6 +43,7 @@ alias phpd="cd ~/Documents/Code/php && ls"
 alias golang="cd ~/Documents/Code/golang && ls"
 alias {rust,rustlang}="cd ~/Documents/Code/rust && ls"
 alias {leet,leetcode}="cd ~/Documents/Code/leetcode/ && ls"
+alias {neet,neetcode}="cd ~/Documents/Code/leetcode/neetcode_roadmap/ && ls"
 alias zsaves="cd ~/Zomboid/Saves/Sandbox/ && ls"
 alias logs="cd /var/log && ls"
 alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
@@ -431,6 +432,8 @@ alias simplelogin="librewolf https://simplelogin.io/ &"
 
 # Anarchism
 alias itsgoingdown="links https://itsgoingdown.org/"
+alias puget="links https://pugetsoundanarchists.org/"
+alias {theanarchistlibrary,anarchlib}="links https://theanarchistlibrary.org/"
 
 # Onion Sites
 alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
