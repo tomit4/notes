@@ -164,3 +164,9 @@ function Toggle_codeium()
 	vim.g.codeium_enabled = not vim.g.codeium_enabled
 end
 vim.keymap.set("n", "<leader>c", ":lua Toggle_codeium()<cr>", { noremap = true, silent = true })
+
+-- move single line or highlighted lines of text up cursor (alt + j/k)
+vim.keymap.set("n", "<A-j>", "<c-w>:m .-2<CR>==")
+vim.keymap.set("n", "<A-k>", "<c-w>:m .+1<CR>==")
+vim.keymap.set("v", "<A-j>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<A-k>", ":m '>+1<CR>gv=gv")
