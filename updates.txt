@@ -674,3 +674,9 @@ Uninstall old tldr and replace with tealdeer
 doas pacman -Rs tldr && doas pacman -S tealdeer && tldr --update
 Install btop-theme-catppuccin
 paru -S btop-theme-catppuccin
+Install ipython (better python interpreter):
+doas pacman -S ipython
+Configure ipython to use vi keybindings
+ipython profile create
+in ~/.ipython/profile_default/ipython_config.py,
+edit c.TerminalInteractiveShell.editing_mode = 'vi'

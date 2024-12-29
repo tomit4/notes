@@ -9,7 +9,7 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-treesitter/playground" })
 	use({
-		"shaunsingh/nord.nvim",
+		"gbprod/nord.nvim",
 		config = function()
 			vim.cmd("colorscheme nord")
 		end,
