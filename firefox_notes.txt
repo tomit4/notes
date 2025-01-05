@@ -3,37 +3,30 @@ Maximize/"Harden" Firefox privacy settings
 article and Unix Sheikh's Choose your Browser Carefully article):
 
 Install Ublock Origin
-Install Decentraleyes
+Install UBlacklist
+Install LibRedirect
+Install NoScript
+Install Chameleon
+Install LocalCDN
+Install OneTab (set OneTab to not open up on startup)
+Install DarkReader (in DarkReader menu under More, set to Static)
+Install Vimium-FF
+Set Default Search Engine to Duck Duck Go Lite
 Install Always active Window - Always Visible
-Install Canvas Blocker (on librewolf no need)
 Install Classic mode for Wikipedia
-Install Colorzilla
+Install Stack Overflow Prettifier
+Install ClearURLs
 Install Cookie AutoDelete
 Install Measure-it
 Install FastForward
 Install Firefox Translations
-Install Github Gloc (reads lines of code on github repos, requires personal access token)
-Install LocalCDN (conflicts witht Decentraleyes)
-Install FastForward
-Install NoScript
-Install Chameleon
 Install User-Agent-Switcher and Manager
 Install OverbiteWX
-Install OneTab (set OneTab to not open up on startup)
 Install Return YouTube Dislike
-Install Alter (redirect for nitter, invidious, teddit, scribe, bibliogram, etc.)
-Install bypass-paywalls (not official, go to https://github.com/iamadamdev/bypass-paywalls-chrome)
-Install DuckDuckGo Lite Search (Librewolf has this by default)
-Install Stack Overflow Prettifier
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)
-Install ClearURLs
-Install Always active Window
-Install DarkReader (in DarkReader menu under More, set to Static)
-Install Vimium-FF
 Insall Vue.js devtools
 Install WAVE Evaluation Tool
 Install Manjaro Theme (matcha-dark-azul for blue, matcha-dark-sea for green)
-Set Default Search Engine to Duck Duck Go Lite
 Get Firefox to remember nothing through Preferences setting
 Set Firefox to never visit non  https websites
 Disable smooth scrolling
@@ -167,3 +160,13 @@ browser.shopping.experience2023.ads.userEnabled to false
 browser.shopping.experience2023.autoOpen.userEnabled to false
 browser.shopping.experience2023.showKeepSidebarClosedMessage to false
 browser.shopping.experience2023.suvey.enabled to false
+
+In Ublock Origin:
+Enable all filter lists in settings/filter lists
+Add bypass filter list:
+https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt
+Add huge ai black list filter list
+https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt
+
+In UBlacklist, do the same for the huge ai blacklist, under options/subscriptions, click "Add a subscriptions", and place the filter list in the form:
+https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt
