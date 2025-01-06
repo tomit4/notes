@@ -17,6 +17,7 @@ Install Classic mode for Wikipedia
 Install Stack Overflow Prettifier
 Install ClearURLs
 Install Cookie AutoDelete
+Install Don't Track Me Google
 Install Measure-it
 Install FastForward
 Install Firefox Translations
