@@ -52,6 +52,7 @@ network.prefetch-next to false
 network.http.sendRefererHeader to 0 #sites with forms and logins may break
 network.http.referer.XoriginPolicy to 1
 network.cookie.lifetimePolicy to 2
+network.trr.mode to 3
 pdfjs.enableScripting to false
 identity.fxaccounts.enabled to false
 geo.enabled to false
