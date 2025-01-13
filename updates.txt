@@ -682,3 +682,5 @@ in ~/.ipython/profile_default/ipython_config.py,
 edit c.TerminalInteractiveShell.editing_mode = 'vi'
 On updating mycli, you'll need some new python packages:
 paru python-sqlglot python-pyfzf
+Remove global postgresql:
+doas pacman -Rs postgresql postgresql-runit
