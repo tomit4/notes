@@ -684,3 +684,9 @@ On updating mycli, you'll need some new python packages:
 paru python-sqlglot python-pyfzf
 Remove global postgresql:
 doas pacman -Rs postgresql postgresql-runit
+Install cargo-update
+cargo install cargo-update
+Install kalker (cli calculator app)
+cargo install kalker
+Update all cargo packages using cargo-u alias:
+cargo-u

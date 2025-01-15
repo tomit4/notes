@@ -263,6 +263,7 @@ alias npm-t="npm test"
 alias npm-o="npm outdated"
 alias npm-u="npm updated"
 alias cargo-l="cargo install --list"
+alias cargo-u="cargo install-update -a" # requires cargo-update crate
 alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
 alias find-empty='find . -depth -empty'
 alias rmdir-a='find . -depth -empty -delete'
