@@ -5,10 +5,14 @@ alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'" # -N
 alias {drag,rdrag}="ripdrag"
 alias dusty="dust -i -v 'node_modules'"
 alias lf="ranger"
+alias ogrep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 alias cp="cp -i"
 alias df='df -h'
 alias free='free -mh'
 alias dmesg="doas dmesg -H"
+alias blkid="doas blkid"
 alias kernel="uname -r"
 alias mkcd='{ IFS= read -r d && mkdir "$d" && cd "$d"; } <<<'
 alias cpwd='pwd | xclip -sel clip'
@@ -51,6 +55,7 @@ alias btuts="cd ~/Documents/Code/book_tutorials && ls"
 alias fonts="fc-list"
 alias locate="locate -i"
 alias bat="bat --theme Nord"
+alias batman="man bat"
 alias ls="eza --icons"
 alias li="eza -1 --icons"
 alias ll="eza -lih --icons"
@@ -64,7 +69,7 @@ alias dict='def'
 alias {:q,ex,esc}="exit"
 alias :w="touch"
 alias digg="doggo"
-alias dff="/usr/bin/df -h && duf"
+alias dff="df && duf"
 alias {his,hist}="history"
 alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive && cd /mnt/media/usb-drive && ls"
 alias umnt="doas umount /mnt/media/usb-drive"
@@ -76,6 +81,7 @@ alias kumnt="doas umount /dev/sda /mnt/media/kobo"
 alias pixel="cd /mnt/media/pixel/Internal\ shared\ storage && ls"
 alias pmnt="aft-mtp-mount /mnt/media/pixel && cd /mnt/media/pixel/Internal\ shared\ storage && ls"
 alias pumnt="fusermount -uz /mnt/media/pixel"
+alias phlint="cd ~/Documents/Code/group_projects/photo_share_app/phlint_app/ && ls"
 alias pikoshi="cd ~/Documents/Code/group_projects/pikoshi/ && ls"
 alias rm="newrm -vi"
 alias calendar="calcurse"
@@ -91,13 +97,17 @@ alias indelible="doas chattr +i" # makes a file impossible to delete (except wit
 alias diff=difft
 alias cdiff="colordiff"
 # alias kfonts="kitty +list-fonts"
-# alias {kdiff,kitten,kd}="kitty +kitten diff"
+alias {kdiff,kitten,kd}="kitty +kitten diff"
 alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
 alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
 alias moo="cowsay moo"
 # alias btop="kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable"
 alias tshift='doas timeshift --delete && notify-send "  Previous Backup Deleted!" && doas timeshift --create && notify-send "  New Backup Created!" && doas timeshift --list'
 alias btop="bst -e btop"
+# alias tor-browser="tor-browser &"
+alias leetcode="firefox https://leetcode.com/accounts/login &"
+# sql basics:
+alias sqlzoo="librewolf https://sqlzoo.net/wiki/SQL_Tutorial &"
 # alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
 # alias toonz="opentoonz"
@@ -114,7 +124,8 @@ alias mupdf='gobble mupdf -r 204'
 alias dkpdf='gobble mupdf -I -r 204'
 alias sign='gobble xournalpp'
 alias keys="gobble keepassxc $KDBX"
-alias {jscrl,jsoncurl,jcrl}="jscurl"
+alias {json,jscrl,jsoncurl,jcrl}="jscurl"
+alias amd="article_md"
 alias kevents="xev -event keyboard"
 alias sk="screenkey"
 alias word="wordgrinder"
@@ -134,11 +145,29 @@ alias tree="tree -ad -L 3 --prune -C -I 'node_modules|.git'"
 alias {vi,vim,nv,nvi}="nvim"
 alias {vfz,nvfz,nvim-fzf,fzf-nvim}='nvim "$(fzf)"'
 alias {cproj,mproj,myproj}="cd '$cproj' && ls"
+alias leafbytes="cd ~/Documents/Code/leafbytes_vue/ && ls"
 alias blog="cd ~/Documents/Code/blog/ && ls"
+alias siimee="cd ~/Documents/Code/siimee/ && ls"
+alias siimee-f="cd ~/Documents/Code/siimee/frontend/ && ls"
+alias siimee-b="cd ~/Documents/Code/siimee/backend/ && ls"
+alias drafts="cd ~/Documents/Code/leafbytes_drafts && ls"
+alias PASS="cd ~/Documents/Code/PASS/ && ls"
+alias mon="nodemon"
+alias localhost="librewolf localhost:3000 &"
+alias {mi,mic}="micro"
+alias {maria,mysql,mdb}="mariadb"
+alias mariadb-cli="mycli"
+alias psql-cli="pgcli"
+alias {maria-cli,mariacli}="mycli"
+alias {psql-cli,psqlcli}="pgcli"
 alias rsm="doas rsm"
+alias {quora,que}="quetre"
+alias openstreetmap="osm"
+alias ted="teddit"
 alias updatedb="doas updatedb"
 alias iftop-w="doas iftop -i wlan0 -P"
 alias wmon="wavemon"
+alias ncpa="ncpamixer"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
 alias vnstat-w="vnstat -i wlan0 --json | jq"
@@ -152,12 +181,17 @@ alias wifi-connect='nmcli device wifi connect "${SSID}" password "${PASSWD}"'
 alias wifi-disconnect="nmcli device disconnect wlan0"
 alias wifi-up="doas ifconfig wlan0 up"
 alias wifi-down="doas ifconfig wlan0 down"
+alias letitsnow="doas docker start snowflake-proxy"
+alias snowfall="doas docker stop snowflake-proxy"
+alias snowlogs="doas docker logs -f snowflake-proxy"
 alias lxapp="lxappearance"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
 # wayland has an equivalent as well:
 alias {wsel,catw}="wl-copy" # useful with | redirection, i.e. echo "hi there" | catw
+# alias printdoc="lp -d Brother"
+alias printdoc="lp -d MFCJ615W"
 alias catp="xclip -out -selection clipboard; echo"
 alias mouse="mousepad"
 alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
@@ -165,6 +199,12 @@ alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
 alias exifread="exiftool"
 alias exifrm="exiftool -all="
 alias {html,html_pp}="hxnormalize -e"
+# stock tickers
+alias ticker="ticker -w SPY,QQQ,DIA,IWM,VIX"
+alias {mop,market,stonks,stocks}="cd ~/aur_packages/mop && go run ./cmd/mop/main.go && cd"
+alias qwiki="wik -i"
+alias toolongdidntread="tldr"
+alias cheatsheet="cheat"
 alias {ltrans,trans,translate}="ltranslate"
 alias skey='screenkey --position fixed --geometry $(slop)'
 alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
@@ -189,6 +229,11 @@ alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 # laptop only currently, records video/audio, simply name filename .mp4 after command:
 alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac"
+# alias ytube="ytfzf -l --features=subtitles"
+alias {yti,ytinfo}="ytfzf -I L"
+alias {ytd,ytdownload}="ytfzf -d"
+alias lbry="ytfzf -c O --features=subtitles"
+alias {ptube,peertube}="ytfzf -c P --features=subtitles"
 # for smaller downloads
 alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
 alias ytdl-w='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
@@ -204,6 +249,7 @@ alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null 
 source ~/.zip_code
 alias inxi-w="inxi --weather "${ZIPCODE}""
 alias inxi-i="doas inxi -Fxzm"
+alias forecast="curl -s 'http://wttr.in/losangeles'"
 alias pf="pfetch"
 alias has="dependencycheck"
 # alias ipaddr="curl ifconfig.me/all.json | jq"
@@ -230,18 +276,20 @@ alias uuid="uuidgen"
 alias kuuid="cat /proc/sys/kernel/random/uuid"
 alias duuid="dbus-uuidgen"
 # generate unique ids from cli, example for no special characters:
-# alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
+alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
 alias nanoid="npx nanoid"
-# alias uglifyhtml="html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true"
+alias uglifyhtml="html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true"
 # autoprefixes css files
 # requires installation:
 # npm install -g postcss postcss-cli autoprefixer
 alias {prefix,autoprefixer}="npx postcss *.css --use autoprefixer -d build/"
 # informs on dependency updates
 alias taze="npx taze"
-# alias pip_upgrade="python -m pip install --upgrade pip"
+alias pip_upgrade="python -m pip install --upgrade pip"
 alias rust_upgrade="rustup update"
 alias nb="newsboat"
+alias subreddit="$HOME/scripts/sub"
+alias mastodon="tut"
 alias profane="profanity"
 alias {gmail,email,mail,mutt,nmut,nmutt}="neomutt"
 alias {mnb,nb-m}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/my_urls $HOME/.config/newsboat/urls && newsboat"
@@ -251,6 +299,7 @@ alias {tootnb,mastnb}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsbo
 alias rt="rtorrent"
 alias rt-rs="doas rm -r watch session && mkdir watch session"
 alias slink="streamlink"
+alias {office,onlyoffice}="desktopeditors"
 alias {epub,fbreader}="gobble FBReader"
 alias scrot="scrot --count --delay"
 alias grip="grip 6969"
@@ -265,6 +314,9 @@ alias {uvenv,dvenv}="deactivate"
 # alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
 alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
 alias {rlast,dlast}="sed -i '$ d'" # removes last line of file
+alias athena="athena-jot"
+alias view-in-tty="fim"
+alias snarfsnarf="snarf"
 alias shchk="shellcheck"
 # get top process eating memory
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
@@ -318,6 +370,7 @@ alias rc="rustc"
 alias cc="cc -Wall -Werror -Wextra -Wpedantic"
 alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
+#create programming licences
 
 # game shortcuts
 alias gback="cp -r ~/.wine/drive_c/users/brian/AppData/Local/CD\ Projekt\ Red/ ~/game_save_backups/"
@@ -333,38 +386,290 @@ alias {docker-k,docker-kill}="docker kill"
 alias docker-exec="docker exec -it" # use with container ID and bash
 
 # bookmarks
+# nerdfonts cheat sheet for terminal icons
+alias nfcheatsheet='librewolf https://www.nerdfonts.com/cheat-sheet &'
+alias codeberg="librewolf https://codeberg.org/ &"
+alias mankier="links https://www.mankier.com"
 alias apnews='f(){ links https://apnews.com/"$1" ;}; f' # call using 'us' or 'world' as second arg
 alias npr="links https://text.npr.org"
 alias pbs="links https://lite.pbs.org"
 # brings up oregon public broadcasting
 alias radio='/usr/bin/mpv --no-video "https://ais-sa3.cdnstream1.com/2440_128.aac/playlist.m3u8?listeningSessionID=64c429fd0062f502_803653_uuxYz9V9_NjYuODUuODkuMzA6ODA\!_0000000vz1k\&downloadSessionID=0\&listenerId=esTrackblock0801483\&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1691381053"'
+alias sqlsc="links https://sqlservercentral.com"
 alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
 alias gopher="lynx https://gopher.floodgap.com/gopher/gw.lite"
 alias {ddg,duckduckgo}="links https://duckduckgo.com/lite"
 alias bangs="links ~/Documents/notes/ddg_bangs.html"
 # alias bangs="links https://duckduckgo.com/bang_lite.html"
+alias {cdread,cafedread}="links https://cafedread.com"
 alias wikipedia="links https://wikipedia.org"
 alias hackernews="links https://news.ycombinator.com/"
+alias hackernoon="librewolf https://hackernoon.com/ &"
+alias theregister="librewolf https://www.theregister.com &"
+alias oceanofpdf="librewolf https://oceanofpdf.com &"
+alias gutenberg="librewolf https://gutenberg.org &"
+alias sheldonbrown="links https://sheldonbrown.com"
+alias somafm="links https://somafm.com"
+alias bandcamp="librewolf https://bandcamp.com/ &"
+alias {viruscomix,subnormality}="librewolf https://viruscomix.com/subnormality.html &"
+alias murena="librewolf https://murena.com &"
+alias morningmark="librewolf https://twitter.com/MoringmarkMark &"
 # sustainable clothing brands (shoes and underwear)
-# alias nothingnew="librewolf https://nothingnew.com &"
-# alias wamaundies="librewolf https://wamaunderwear.com &"
+alias nothingnew="librewolf https://nothingnew.com &"
+alias wamaundies="librewolf https://wamaunderwear.com &"
 
+# Linux related
+alias elixir="librewolf https://exlir.bootlin.com/ &"
+alias lwn="librewolf https://lwn.net/ &"
+
+# Podcasts (downloadable using yt-dlp or wget, and playable using mpv)
+alias {1up,1upsmanship}="librewolf https://www.iheart.com/podcast/1119-1upsmanship-97574019/ &"
+alias smallbeans="librewolf https://soundcloud.com/user-682532119 &"
+alias lexfridman="librewolf https://lexfridman.com/podcast/ &"
+alias somemorenews="librewolf https://www.iheart.com/podcast/269-even-more-news-29429923/ &"
+alias owlsatdawn="librewolf https://www.owlsatdawn.com &"
+
+# Privacy Related
+# simplelogin.io is like a VPN for email (aliases away your email address essentially)
+alias simplelogin="librewolf https://simplelogin.io/ &"
 
 # Anarchism
 alias itsgoingdown="links https://itsgoingdown.org/"
 alias puget="links https://pugetsoundanarchists.org/"
 alias {theanarchistlibrary,anarchlib}="links https://theanarchistlibrary.org/"
 
+# Onion Sites
+alias torch="links xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/cgi-bin/omega/omega"
+alias {ddgt,duckducktor}="links https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
+alias searx="links https://lgmekfnpealdqhnctyg3p5fuelpdwnbqbwnl2ickpdoodzatzgz27ryd.onion/"
+alias {hwiki,hiddenwiki}="links http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/"
+alias {darknet,darknetlive}="links http://darkzzx4avcsuofgfez5zq75cqc4mprjvfqywo45dfcaxrwqg6qrlfid.onion/"
+alias ttaxi="links http://tortaxi7axhn2fv4j475a6blv7vwjtpieokolfnojwvkhsnj7sgctkqd.onion/"
+alias library="links http://libraryfyuybp7oyidyya3ah5xvwgyx6weauoini7zyz555litmmumad.onion/"
+alias ahmia="links http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/"
+alias darkside="links http://darksid3f3ggicny772rvdmrcgfbtixsyjpdgm6unh5qci6r24ukg4qd.onion/"
+alias breakbad="links http://bbzzzsvqcrqtki6umym6itiixfhni37ybtt7mkbjyxn2pgllzxf2qgyd.onion/"
+alias comix="links http://nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion"
+
 # Programming Resources
 # CS Basics
+# KnowledgeGate is a decent introduction to the basics of CS (mostly in Hindi though...)
+alias knowledgegate="librewolf https://www.youtube.com/c/KNOWLEDGEGATE_kg &"
+# CS50 is Harvard's Free Intro to CS course, their YT vids are good coverage of basics:
+alias cs50="librewolf https://www.youtube.com/c/cs50 &"
+
+# Algorithms and Data Structures
+alias techiedelight="librewolf https://www.techiedelight.com/ &"
+alias algoexpert="librewolf https://www.algoexpert.io/ &"
+# Video Series on solving leetcode questions in python
+alias deepti="librewolf https://www.youtube.com/playlist?list=PL2b9acjRfGcm4qYq5MH9LufsJ67-BgkAI &"
+
+#college courses (UNIX and SysAdmin) from stevens university:
+alias netmeister="librewolf https://stevens.netmeister.org &"
+alias buildyourown="librewolf https://github.com/codecrafters-io/build-your-own-x &"
+alias {tomprestonwerner,tpw}="links https://tom.preston-werner.com"
+#Videos on College Level Mathematics
+# alias professorleonard="librewolf https://www.youtube.com/c/ProfessorLeonard &"
 
 # Blogs
+# the valueable.dev has some great solid timeless advice on programming (and
+# good vim tricks)
+alias valuable="librewolf https://thevaluable.dev/ &"
 # Unix Sheikh, very good info regarding Unix and Linux
 alias unixsheikh="links https://unixsheikh.com"
 # A reddit like forum similar also to hackernews
 alias lobsters="links https://lobste.rs"
+#Julia Evans, developer and general programming blog
+alias jvns="librewolf https://jvns.ca &"
+# inventor of REST blog:
+alias untangled="librewolf https://roy.gbiv.com/untangled/ &"
+# software development blog:
+alias joelonsoftware="librewolf https://www.joelonsoftware.com/ &"
+alias gabmus="librewolf https://gabmus.org/ &"
+# Austin Gil works for Linode and has some good articles
+alias austingil="librewolf https://austingil.com/ &"
+# Interrupt is a shared blog that specializes in hardware/driver development articles
+alias interrupt="librewolf https://interrupt.memfault.com/ &"
+# Interesting site regarding privacy, libre, linux, and more nerd stuff:
+alias vern="librewolf https://vern.cc/ &"
+# More general nerd info regarding unix:
+alias tilde="librewolf https://tildeverse.org &"
+# interesting info : https://github.com/cwmccabe/pubnixhist
 
 # C Programming
+alias calgos="librewolf https://www.edureka.co/blog/sorting-algorithms-in-c/ &"
+alias cprogram="librewolf https://www.cprogramming.com/ &"
+alias learnc="librewolf https://learn-c.org &"
+alias cdemos="librewolf https://www.demo2s.com/c/c.html &"
+alias ctuts="librewolf https://www.tutorialspoint.com/c_standard_library/ &"
+alias csimplified="librewolf https://www.programmingsimplified.com/c/ &"
+alias cfaq="librewolf http://c-faq.com/ &"
+alias cboards="librewolf https://cboard.cprogramming.com &"
+alias crationale="librewolf https://www.lysator.liu.se/c/rat/title.html &"
+# awesome guide to network programming in C:
+alias beej="librewolf https://beej.us/guide/bgnet/html/ &"
+# X11 Resources
+alias xlibman="librewolf https://tronche.com/gui/x/xlib/ &"
+alias xorg="librewolf https://www.x.org/wiki/ &"
+alias xlibxcb="librewolf https://www.x.org/releases/X11R7.5/doc/libxcb/tutorial/ &"
+# Bash Scripting
+alias unixforums="librewolf https://www.unix.com &"
+alias bashforbeginners="librewolf https://tldp.org/LDP/Bash-Beginners-Guide/html &"
+alias advancedbash="librewolf https://tldp.org/LDP/abs/html/ &"
+
+# Linux Related News/Resources (includes artix and runit resources)
+alias kernelintro="links https://tldp.org/LDP/tlk/tlk.html"
+alias kernelorg="links http://vger.kernel.org/lkml/"
+alias archives="links https://archive.artixlinux.org/"
+alias forums="librewolf https://forum.artixlinux.org/ &"
+
+# alias mirrors="links https://mirrors.dotsrc.org/artix-linux/"
+alias mirrors="links https://mirror1.artixlinux.org/"
+alias isos="links https://ftp.crifo.org/artix"
+alias smarden="links http://smarden.org/runit/"
+alias opengroup="librewolf https://publications.opengroup.org/ &"
+
+# Ian Jackson runs chiark.greened.org.uk, home of PUTTY
+# He resigned from Debian in 2014 due to systemd fallout
+alias chiark="librewolf https://www.chiark.greenend.org.uk/ &"
+
+# Web Development Resources
+# for web accessibility information
+alias aditus="librewolf https://aditus.io/ &"
+alias a11y="librewolf https://a11y-guidelines.orange.com/en/ &"
+# library for simple and accessible sliders
+alias a11yslider="librewolf https://a11yslider.js.org/ &"
+
+# swiper js is a js library for intetgration of touch screen swiping animations
+alias swiperjs="librewolf https://swiperjs.com/ &"
+# for static site generation
+alias hugo="librewolf https://gohugo.io/ &"
+# for random pics of not real people (for test sites)
+# alias thispersondoesnotexist="librewolf https://thispersondoesnotexist.com &"
+# css example sites
+alias devsnap="librewolf https://devsnap.me/ &"
+# css gradients
+alias cssgradients="librewolf https://cssgradient.io &"
+# cool css effect ideas
+alias tympanus="librewolf https://tympanus.net/codrops &"
+
+#auto generate decent color schemes
+alias mycolor="librewolf https://mycolor.space/ &"
+alias adobecolor="librewolf https://color.adobe.com/create/color-wheel &"
+
+# change hex to rgba colors (usesful for CSS)
+alias rgba="librewolf https://rgbacolorpicker.com/hex-to-rgba &"
+# for colorizing code snippets
+alias prismjs="librewolf https://prismjs.com/ &"
+# cssbattle is a web dev game site which challenges your css skills
+alias cssbattle="librewolf https://cssbattle.dev/ &"
+
+# alternative to searching on google fonts
+alias fontspace="librewolf https://www.fontspace.com &"
+# 1001 fonts, home of anime ace and other good fonts
+alias 1001fonts="librewolf https://www.1001fonts.com &"
+# saved list of libre-foundries list of libre/free font sites
+alias librefonts="librewolf ~/Documents/notes/libre_foundries_font_list.html &"
+# for downloading web fonts
+alias gfontshelper="librewolf https://google-webfonts-helper.herokuapp.com/fonts &"
+#gfi is a utility that downloads google fonts from the cli:
+alias google-font-installer="gfi"
+
+# Icon Websites
+alias iconify="librewolf https://iconify.design/ &"
+alias icomoon="librewolf https://icomoon.io &"
+alias iconsearch="librewolf https://iconsear.ch &"
+alias feathericons="librewolf https://feathericons.com &"
+alias lucide="librewolf https://lucide.dev &"
+alias nounproject="librewolf https://thenounproject.com &"
+
+#for domain names
+alias namecheap="librewolf https://namecheap.com/ &"
+
+# for captchas (open source version)
+alias hcaptcha="librewolf https://www.hcaptcha.com/ &"
+
+# for responsive design, you'll need access to plenty of screen dimensions:
+alias screensize="librewolf https://screensiz.es/ &"
+
+# a great introduction to tls/ssl practices and rules of thumb:
+alias feistyduck="librewolf https://www.feistyduck.com/library/bulletproof-tls-guide/online/ &"
+# tutorials including how to set up ssl authentication and renewals with cerbot:
+alias easynewbie="librewolf https://easynewbie.com &"
+# even easier for ssl certificates is to use letsencrypt:
+alias letsencrypt="librewolf https://letsencrypt.org &"
+# and the official certbot documentation:
+alias certbotsite="librewolf https://certbot.eff.org &"
+#certbot has some issues when used with cron, acme.sh is an alternative:
+alias acmesh="librewolf https://github.com/acmesh-official/acme.sh &"
+# cool front end ideas
+alias codinhood="librewolf https://codinhood.com/ &"
+# languagetool.org is a resource site for starting up an open source version of grammerly
+alias langtool="librewolf https://languagetool.org/dev/ &"
+#egghead.io has a lot of free courses
+alias egghead="librewolf https://egghead.io/ &"
+# cool little demos website
+alias demo2s="librewolf https://www.demo2s.com &"
+# mothereffinghsl hsl color picker site
+alias mothereffinghsl="librewolf https://mothereffinghsl.com/ &"
+# nice color picker for hex/rgb/hsl
+alias colordesigner="librewolf https://colordesigner.io/ &"
+# site for calculating clamping for responsive font sizes
+alias typography-calc="librewolf https://royalfig.github.io/fluid-typography-calculator/ &"
+# svgsprites creates sprites from dragging svg files into its
+alias {svgsprites,svgsprite}="librewolf https://svgsprit.es &"
+# unsplash.com is an api site for developers to import and use photos
+alias unsplash="librewolf https://unsplash.com/developers &"
+# wikimedia commons provides public domain images
+alias wikimedia="librewolf https://commons.wikimedia.org/wiki/Main_Page/ &"
+# wesbos tutorials/articles/etc
+# alias wesbos="brave https://courses.wesbos.com &"
+# alias frontendmasters="librewolf https://frontendmasters.com/ &"
+# send text messages from an api (js, python, nodejs, curl, ruby, etc) (requires payment for more than 1 per day)
+alias textbelt="librewolf https://textbelt.com/ &"
+# create an email server backend using nodejs (& express...)
+alias nodemailer="librewolf https://nodemailer.com/ &"
+# simple fake REST API for testing purposes make http requests to stuff like /users etc.
+alias jsonplaceholder="librewolf https://jsonplaceholder.typicode.com &"
+# firebase alternatives (database as a service)
+# postgres
+alias supabase="librewolf https://supabase.com &"
+# sqlite
+alias pocketbase="librewolf https://pocketbase.io &"
+
+# solidproject is an interesting project that promotes privacy respecting data collection
+alias solidproject="librewolf https://solidproject.org &"
+
+# split keyboard to eventually buy, learn to solder first
+alias aurora-sweep="librewolf https://splitkb.com/products/aurora-sweep &"
+# good shop for custom keyboards
+alias beekeeb="librewolf https://shop.beekeeb.com/ &"
+# Bootcamps
+alias alchemy="librewolf https://www.alchemycodelab.com/ &"
+alias cirrorg="librewolf https://cirr.org/ &" # verify validity of bootcamp reviews
+
+# cool video on fluid animation in css:
+# https://egghead.io/lessons/css-build-a-fluid-loading-animation-in-css
+# cool video on animating typing using css
+# https://codepen.io/aakhya/pen/EOxqOV/
+# specifically a series of drop down animations in css
+# https://codepen.io/codypearce/pen/PdBXpj
+
+# beginner web developer portfolio examples:
+# https://www.mary-snopok.com/
+
+# not so beginner web developer portfolio examples:
+# https://brittanychiang.com/
+
+# SOLID principles explained in JavaScript:
+# https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c
+#
+# Hardening your Web Applications and Other Security related stuff
+# for hardening nginx
+alias nginx_harden="librewolf https://gist.github.com/plentz/6737338 &"
+# harden a nodejs server
+alias nodejs_harden="librewolf https://blog.risingstack.com/node-js-security-checklist/ &"
+
 # ddgr shebang bookmarks
 # alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
 # alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
