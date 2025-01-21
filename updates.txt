@@ -690,3 +690,18 @@ Install kalker (cli calculator app)
 cargo install kalker
 Update all cargo packages using cargo-u alias:
 cargo-u
+Install macchanger
+doas pacman -S macchanger
+Also in /etc/NetworkManager/conf.d/wifi_rand_mac.conf (need to create this), write:
+
+```
+[device-mac-randomization]
+# "yes" is already the default for scanning
+wifi.scan-rand-mac-address=yes
+
+[connection-mac-randomization]
+# Randomize MAC for every ethernet connection
+ethernet.cloned-mac-address=random
+# Generate a random MAC for each Wi-Fi and associate the two permanently.
+wifi.cloned-mac-address=stable
+```
