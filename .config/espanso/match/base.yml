@@ -317,6 +317,10 @@ matches:
   - trigger: ";mem"
     force_clipboard: true
     replace: "about:memory"
+  - trigger: ";trans"
+    force_clipboard: true
+    replace: "about:translations"
+
 
   # Calling Bash Scripts
   # Returns public ip address
