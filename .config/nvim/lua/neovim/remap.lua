@@ -96,6 +96,10 @@ vim.cmd([[nnoremap lsp :silent :LspRestart]])
 --toggle autocompletion
 vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
 
+-- SudaWrite
+-- vim.cmd([[nnoremap sw :SudaWrite]])
+vim.keymap.set("n", "<leader>sw", ":SudaWrite")
+
 -- appends backslash to end of specified number of lines (min 2)
 -- usage: 4<leader>b will append a backslash to the end of 4 lines
 -- note: useful for grabbing code snippets for chatting with codellama in terminal
