@@ -705,3 +705,7 @@ ethernet.cloned-mac-address=random
 # Generate a random MAC for each Wi-Fi and associate the two permanently.
 wifi.cloned-mac-address=stable
 ```
+
+02/09/2025
+Install tinycss2 (for Inkscape):
+doas pacman -S python-tinycss2
