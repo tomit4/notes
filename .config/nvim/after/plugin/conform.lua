@@ -2,7 +2,7 @@ require("conform").setup({
 	formatters_by_ft = {
 		python = { "isort", "black" },
 		lua = { "stylua" },
-		css = { "stylelint" },
+		css = { "prettierd" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
