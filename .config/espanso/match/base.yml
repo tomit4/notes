@@ -110,10 +110,6 @@ matches:
     force_clipboard: true
     replace: "else {}"
 
-  - trigger: ";$"
-    force_clipboard: true
-    replace: "`${}`"
-
   - trigger: ";do"
     force_clipboard: true
     replace: "do {} while ()"
@@ -166,6 +162,10 @@ matches:
   - trigger: ";clw"
     force_clipboard: true
     replace: "console.warn('WARNING :=>', )"
+
+  - trigger: ";$"
+    force_clipboard: true
+    replace: "$$  $$"
 
   - trigger: ";<h1"
     force_clipboard: true
@@ -342,6 +342,17 @@ matches:
         type: shell
         params:
           cmd: "~/scripts/html5 ; echo ''"
+
+  # returns default react layout
+  - trigger: ";rfc"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/react ; echo ''"
+
 
   # returns default vue layout
   - trigger: ";vue"
