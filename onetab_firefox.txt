@@ -1,0 +1,60 @@
+https://partners.wgu.edu/home | Home
+https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS4424&collegeCode=IT&instId=678&programId=182 | Transfer Pathway Agreement
+https://www.wgu.edu/about/annual-report.html | Annual Report 2023
+https://www.wgu.edu/alumni.html | WGU Alumni Resources
+https://www.wgu.edu/alumni/alumni-support/career-support.html | Career Support
+
+https://www.wgu.edu/ | Western Governors University – Online College
+https://study.com/college/earn-college-credit.html | College Credit | How It Works | Study.com
+https://www.sophia.org/online-courses/english-and-communication/ | English and communications courses
+
+https://www.toptal.com/talent/apply | Join as a Freelancer | Toptal | Toptal®
+https://lite.duckduckgo.com/lite?q=how%20to+found+llc+in+washington | how to found llc in washington at DuckDuckGo
+https://apps.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx | Limited Liability Companies (LLC), Online and Paper Registrations - Corporations - WA Secretary of State
+https://www.sos.wa.gov/limited-liability-company-llc-professional-llc-pllc-filing-resource-page | Limited Liability Company (LLC) & Professional LLC (PLLC) Filing Resource Page | WA Secretary of State
+https://secretaryofstate.com/washington | Washington Secretary of State | Business Entity Search - Secretary of State
+
+https://react.dev/reference/react/useMemo | useMemo – React
+https://react.dev/reference/react/useReducer | useReducer – React
+https://react.dev/learn/extracting-state-logic-into-a-reducer | Extracting State Logic into a Reducer – React
+https://react.dev/reference/react/useRef | useRef – React
+https://react.dev/reference/react/useCallback | useCallback – React
+https://react.dev/reference/react/useContext | useContext – React
+https://react.dev/reference/react/lazy | lazy – React
+https://react.dev/reference/react/Suspense | <Suspense> – React
+https://react.dev/reference/react/use | use – React
+https://legacy.reactjs.org/docs/error-boundaries.html | Error Boundaries – React
+https://react.dev/reference/react/memo | memo – React
+
+https://kentcdodds.com/blog/what-is-jsx | What is JSX?
+https://overreacted.io/before-you-memo/ | Before You memo() — overreacted
+https://kentcdodds.com/blog/optimize-react-re-renders | One simple trick to optimize React re-renders
+https://web.archive.org/web/20220716221156/https://www.codebeast.dev/usestate-vs-useref-re-render-or-not/ | useRef vs useState: Should we re-render or not? | Codebeast
+
+https://github.com/driveway-engineering/react-kata/compare/main...tomit4:react-kata:main | Comparing driveway-engineering:main...tomit4:main · driveway-engineering/react-kata
+https://github.com/driveway-engineering/react-kata/tree/main/src | react-kata/src at main · driveway-engineering/react-kata
+
+https://neetcode.io/roadmap | Roadmap
+
+https://stackoverflow.com/questions/44043036/how-to-read-image-file-from-s3-bucket-directly-into-memory | python - How to read image file from S3 bucket directly into memory? - Stack Overflow
+https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse | Custom Response - HTML, Stream, File, others - FastAPI
+https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader | ReadableStream: getReader() method - Web APIs | MDN
+https://stackoverflow.com/questions/61657089/how-to-render-streamable-image-response-in-react-as-a-image | node.js - How to render streamable image response in react as a image? - Stack Overflow
+https://stackoverflow.com/questions/75740652/fastapi-streamingresponse-not-streaming-with-generator-function | python - FastAPI StreamingResponse not streaming with generator function - Stack Overflow
+
+https://boto3.amazonaws.com/v1/documentation/api/latest/guide/paginators.html | Paginators - Boto3 1.35.19 documentation
+https://dev.to/idrisrampurawala/efficiently-streaming-a-large-aws-s3-file-via-s3-select-4on | Efficiently Streaming a Large AWS S3 File via S3 Select - DEV Community
+https://docs.solidjs.com/reference/basic-reactivity/create-resource | createResource - SolidDocs
+https://docs.solidjs.com/reference/components/suspense | <Suspense> - SolidDocs
+https://docs.solidjs.com/reference/components/switch-and-match | <Switch> / <Match> - SolidDocs
+https://www.w3schools.com/python/ref_keyword_yield.asp | Python yield Keyword
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys | Managing deploy keys - GitHub Docs
+https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions | Using secrets in GitHub Actions - GitHub Docs
+https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables | Store information in variables - GitHub Docs
+
+https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/#use-the-form-data | Simple OAuth2 with Password and Bearer - FastAPI
+
+https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/#oauth2passwordrequestform | Simple OAuth2 with Password and Bearer - FastAPI
+https://www.stackhawk.com/blog/csrf-protection-in-fastapi/ | FastAPI CSRF Protection: How to Secure Your API
+https://pypi.org/project/fastapi-csrf-protect/ | fastapi-csrf-protect · PyPI
