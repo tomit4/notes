@@ -1,12 +1,89 @@
-moz-extension://8b26686e-acdd-4a9f-ba38-eaf0dd7df16a/ui/options.html | NoScript Settings
+https://inv.nadeko.net/playlist?list=PLC292123722B1B450 | Intermediate Algebra (Full Length Videos) - Invidious
+https://inv.nadeko.net/playlist?list=PLF797E961509B4EB5 | Calculus 1 (Full Length Videos) - Invidious
+https://en.wikipedia.org/wiki/Western_Governors_University?useskin=vector#Graduation_rate | Western Governors University - Wikipedia
+https://snoo.habedieeh.re/r/WGU_CompSci/comments/fgr0oi/the_truth_about_the_wgu_cs_program/ | The truth about the WGU CS program - r/WGU_CompSci
+https://snoo.habedieeh.re/r/WGU/comments/xc9jyq/wgu_computer_science_gradsstudents_give_me_your/ | WGU Computer Science grads/students, give me your honest opinions! - r/WGU
+https://reddit.rtrace.io/r/WGU_CompSci/comments/oxzq24/recent_graduates_wgu_comp_sci_program_review_and/ | Recent Graduate's WGU Comp Sci Program Review and Ideal/Suggested Course List - r/WGU_CompSci
+https://reddit.rtrace.io/r/WGU_CompSci/comments/1399o4t/soooooo_how_many_wgu_comp_sci_grads_end_up_with_a/ | Soooooo... how many wgu comp sci grads end up with a job after one year of searching? - r/WGU_CompSci
+https://reddit.rtrace.io/r/studydotcom/comments/vfm5xk/brief_guide_to_transferring_a_lot_of_credits_to/ | Brief Guide to Transferring a Lot of Credits to the BSCS at WGU - r/studydotcom
+https://reddit.rtrace.io/r/WGU_CompSci/comments/i0825d/my_experience_with_studycom/ | My experience with Study.com - r/WGU_CompSci
+https://www.redditmedia.com/r/WGU_CompSci/comments/1gah00q/to_those_considering_cs_at_wgu_my_experience/ | To Those Considering CS at WGU - My Experience! : WGU_CompSci
 
-https://bbs.archlinux.org/viewtopic.php?id=278132 | [RESOLVED] X.org segfaults when using proprietary Nvidia driver / Kernel & Hardware / Arch Linux Forums
-https://wiki.archlinux.org/title/PRIME#Reverse_PRIME | PRIME - ArchWiki
-https://redlib.catsarch.com//r/archlinux/comments/rnks0a/nouveau_not_loading_on_startx_after_update/ | nouveau not loading on startx after update - r/archlinux
-https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start | Kernel mode setting - ArchWiki
-https://gitlab.freedesktop.org/xorg/xserver/-/issues/1378 | 21.1.4: startx fails on start with undefined symbol in modesetting_drv.so and fbdev_drv.so (#1378) · Issues · xorg / xserver · GitLab
+https://github.com/caddyserver/dist/blob/master/init/caddy-api.service | dist/init/caddy-api.service at master · caddyserver/dist · GitHub
+https://github.com/caddyserver/dist/blob/master/init/caddy.service | dist/init/caddy.service at master · caddyserver/dist · GitHub
+https://wiki.alpinelinux.org/wiki/Caddy | Caddy - Alpine Linux
+https://pkgs.alpinelinux.org/package/edge/community/x86/caddy-openrc | caddy-openrc - Alpine Linux packages
+https://gitlab.alpinelinux.org/alpine/aports/-/blob/master/community/caddy/caddy.initd | community/caddy/caddy.initd · master · alpine / aports · GitLab
+https://caddy.community/t/how-to-serve-html-files-without-showing-the-html-extension/16766 | How to serve .html files without showing the .html extension? - Help - Caddy Community
 
-https://scribe.rip/@ab.hassanein/streaming-responses-in-fastapi-d6a3397a4b7b | Streaming Responses In FastAPI
+https://www.jonathangoc.com/articles/a-step-by-step-guide-to-deploying-a-hugo-website-on-linode/ | A Step-by-step Guide: How To Deploy a Hugo Website on Linode |
+https://caddyserver.com/docs/getting-started | Getting Started — Caddy Documentation
+https://caddyserver.com/docs/quick-starts/https | HTTPS quick-start — Caddy Documentation
+
+https://scribe.rip/swlh/binary-search-find-upper-and-lower-bound-3f07867d81fb | Binary Search — Find Upper and Lower Bound
+https://docs.python.org/3/library/bisect.html | bisect — Array bisection algorithm — Python 3.13.1 documentation
+https://stackoverflow.com/questions/28389065/difference-between-basic-binary-search-for-upper-bound-and-lower-bound | c++ - Difference between basic binary search for upper bound and lower bound? - Stack Overflow
+https://www.topcoder.com/thrive/articles/Binary%20Search | Binary Search
+https://en.wikipedia.org/wiki/Monotonic_function?useskin=vector | Monotonic function - Wikipedia
+https://scribe.rip/techie-delight/binary-search-practice-problems-4c856cd9f26c | Binary Search: Practice Problems
+https://en.wikipedia.org/wiki/Cardinality?useskin=vector | Cardinality - Wikipedia
+
+https://stackoverflow.com/questions/176409/build-a-simple-http-server-in-c | httpserver - Build a simple HTTP server in C - Stack Overflow
+https://www.jmarshall.com/easy/http/ | HTTP Made Really Easy
+https://www.jmarshall.com/easy/cgi/ | CGI Made Really Easy
+https://www.jmarshall.com/easy/html/ | HTML Made Really Easy
+https://lr.vern.cc/r/C_Programming/comments/kbfa6t/building_a_http_server_in_c/ | Building a HTTP server in C? - r/C_Programming
+https://stackoverflow.com/questions/32667109/send-and-receive-json-over-sockets-in-server-and-client-application-in-c | send and receive JSON over sockets in server and client application in C - Stack Overflow
+https://stackoverflow.com/questions/68769851/how-to-solve-json-json-h-no-such-file-or-directory | c - How to solve json/json.h: No such file or directory? - Stack Overflow
+https://stackoverflow.com/questions/6673936/parsing-json-using-c | Parsing JSON using C - Stack Overflow
+https://github.com/DaveGamble/cJSON?tab=readme-ov-file#usage | GitHub - DaveGamble/cJSON: Ultralightweight JSON parser in ANSI C
+https://scribe.rip/@justup1080/tutorial-creating-a-minimalist-http-server-in-c-2303d140c725 | Tutorial: Creating a Minimalist HTTP Server in C
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/netinet_in.h.html | <netinet/in.h>
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/arpa_inet.h.html#tag_13_03 | <arpa/inet.h>
+https://stackoverflow.com/questions/46496363/do-we-need-to-include-both-netinet-in-h-and-arpa-inet-h-headers-what-is-the | sockets - Do we need to include both <netinet/in.h> and <arpa/inet.h> headers? What is the difference between them? - Stack Overflow
+https://json-c.github.io/json-c/json-c-current-release/doc/html/index.html#gettinghelp | json-c: json-c
+
+https://scribe.rip/towards-artificial-intelligence/50-python-3-tips-tricks-e5dbe05212d7 | 50+ Python 3 Tips & Tricks
+https://www.pythoncheatsheet.org/cheatsheet/basics | Python Basics - Python Cheatsheet
+https://scribe.rip/the-andela-way/idiomatic-python-coding-the-smart-way-cc560fa5f1d6 | Idiomatic Python. Coding the smart way.
+
+https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm?useskin=vector#Algorithm | Smith–Waterman algorithm - Wikipedia
+https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm?useskin=vector | Boyer–Moore string-search algorithm - Wikipedia
+
+https://lr.vern.cc/r/Anarchy101/comments/zbv7sd/how_to_get_started_as_a_beginner/ | How to "get started" as a beginner? - r/Anarchy101
+https://theanarchistlibrary.org/library/emma-goldman-anarchism-and-other-essays#toc3 | Anarchism and Other Essays | The Anarchist Library
+https://theanarchistlibrary.org/library/ashanti-omowali-alston-black-anarchism | Black Anarchism | The Anarchist Library
+https://anarchozoe.com/ | Zoe Baker – Radical Theory and History
+https://theanarchistlibrary.org/library/george-barrett-objections-to-anarchism | Objections to Anarchism | The Anarchist Library
+
+https://troydhanson.github.io/uthash/ | uthash: a hash table for C structures
+https://troydhanson.github.io/ | troydhanson.github.io/
+https://github.com/troydhanson/uthash | GitHub - troydhanson/uthash: C macros for hash tables and more
+
+http://azillionmonkeys.com/qed/hash.html | Hash functions.
+
+https://en.wikipedia.org/wiki/Look_Back_(film)?useskin=vector | Look Back (film) - Wikipedia
+https://en.wikipedia.org/wiki/Dead_Dead_Demon%27s_Dededede_Destruction?useskin=vector | Dead Dead Demon's Dededede Destruction - Wikipedia
+https://libremdb.iket.me/title/tt30217403 | Dandadan (2024) | libremdb
+https://en.wikipedia.org/wiki/Inu-Oh?useskin=vector | Inu-Oh - Wikipedia
+https://en.wikipedia.org/wiki/Batman:_The_Man_Who_Laughs?useskin=vector | Batman: The Man Who Laughs - Wikipedia
+
+https://en.wikipedia.org/wiki/Closed-form_expression?useskin=vector | Closed-form expression - Wikipedia
+https://en.wikipedia.org/wiki/Mathematical_induction?useskin=vector#Sum_of_consecutive_natural_numbers | Mathematical induction - Wikipedia
+https://algorist.com/algowiki/index.php/Main_Page | Solution Wiki, The Algorithm Design Manual, 3rd Edition - The Algorithm Design Manual Solution Wiki
+
+https://redlib.catsarch.com//r/C_Programming/comments/vxko30/learning_c_with_beejs_guide_realloc/ | Learning C with Beej's Guide - realloc() - r/C_Programming
+https://beej.us/guide/bgc/html/split/manual-memory-allocation.html | Beej's Guide to C Programming
+
+https://inv.nadeko.net/playlist?list=PLC292123722B1B450 | Intermediate Algebra (Full Length Videos) - Invidious
+https://pages.cs.wisc.edu/~remzi/OSTEP/ | Operating Systems: Three Easy Pieces
+https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html | Homework
+
+https://jonsuh.com/hamburgers/ | Hamburgers by Jonathan Suh
+https://codepen.io/designcouch/pen/ExvwPY | Menu "Hamburger" Icon Animations
+
+https://techpatterns.com/forums/about3030.html | Tech Patterns :: READ BEFORE POSTING
+https://redlib.catsarch.com//r/computerscience/comments/bj05z0/as_a_self_taught_programmer_what_forms_of_math/ | As a self taught programmer, what forms of Math would be most important for increasing my value. - r/computerscience
 
 https://docs.solidjs.com/guides/testing | Testing - SolidDocs
 https://scribe.rip/@hasanmahira/fastapi-with-sqlalchemy-postgresql-and-alembic-1ccaba79572e | FastAPI with SQLAlchemy, PostgreSQL and Alembic
@@ -39,123 +116,23 @@ https://docs.djangoproject.com/en/5.0/topics/email/ | Sending email | Django doc
 https://stackoverflow.com/questions/2809547/creating-email-templates-with-django | Creating email templates with Django - Stack Overflow
 https://github.com/vintasoftware/django-templated-email | GitHub - vintasoftware/django-templated-email: Django module to easily send templated emails using django templates, or using a transactional mail provider (mailchimp, silverpop, etc.)
 
-https://drf-social-oauth2.readthedocs.io/en/latest/installation.html | Usage — drf-social-oauth2 2.2.1 documentation
-
-https://python-social-auth.readthedocs.io/en/latest/logging_out.html | Disconnect and Logging Out — Python Social Auth documentation
-https://www.django-rest-framework.org/api-guide/authentication/ | Authentication - Django REST framework
-
 https://stackoverflow.com/questions/62370962/how-to-create-join-chat-room-using-ws-websocket-package-in-node-js | javascript - How to create/join chat room using ws (Websocket) package in node js - Stack Overflow
 https://dev.to/devland/build-a-real-time-chat-app-using-nodejs-and-websocket-441g | Build a Real-Time Chat App using Node.js and WebSocket - DEV Community
 https://www.geeksforgeeks.org/simple-chat-application-using-websockets-with-fastapi/ | Simple chat Application using Websockets with FastAPI - GeeksforGeeks
 https://github.com/fastify/fastify-websocket?tab=readme-ov-file | GitHub - fastify/fastify-websocket: basic websocket support for fastify
 
-https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models | Django Tutorial Part 3: Using models - Learn web development | MDN
-https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
-https://www.django-rest-framework.org/api-guide/fields/ | Serializer fields - Django REST framework
-https://www.django-rest-framework.org/api-guide/status-codes/#client-error-4xx | Status codes - Django REST framework
-https://docs.djangoproject.com/en/5.0/topics/db/models/ | Models | Django documentation | Django
-
-https://scribe.rip/how-to-set-up-aws-s3-with-django-rest-like-a-beast-13623be346ac | How to Set-up AWS S3 with Django REST like a Beast
-https://stackoverflow.com/questions/67742696/how-to-upload-file-to-s3-bucket-with-django-rest-framework-api | python 3.x - How to upload file to s3 bucket with django rest framework api - Stack Overflow
-
-https://stackoverflow.com/questions/55079181/what-is-the-best-practice-to-use-oauth2-react-node-js-and-passport-js-to-authe | reactjs - What is the best practice to use Oauth2, React, Node.js and Passport.js to authenticate user with Google sign on button? - Stack Overflow
-https://start.duckduckgo.com/lite/ | python social auth django rest api at DuckDuckGo
-https://github.com/st4lk/django-rest-social-auth | GitHub - st4lk/django-rest-social-auth: OAuth signin with django rest framework
-https://michaeldel.github.io/posts/django-rest-auth-social-tutorial/ | Django Rest Auth social authentication tutorial
-https://pypi.org/project/django-rest-framework-social-oauth2/ | django-rest-framework-social-oauth2 · PyPI
-https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
-https://github.com/florianabel/social-auth-example-django | GitHub - florianabel/social-auth-example-django: Implementing python-social-auth in Django
-
-https://docs.djangoproject.com/en/5.0/topics/auth/default/ | Using the Django authentication system | Django documentation | Django
-https://python-social-auth.readthedocs.io/en/latest/use_cases.html# | Use Cases — Python Social Auth documentation
-https://python-social-auth.readthedocs.io/en/latest/use_cases.html#re-prompt-google-oauth2-users-to-refresh-the-refresh-token | Use Cases — Python Social Auth documentation
-https://realpython.com/adding-social-authentication-to-django/ | Adding Social Authentication to Django – Real Python
-https://masnun.com/2014/01/03/python-social-auth-custom-pipeline.html | Python Social Auth: Custom pipeline - Abu Ashraf Masnun
-https://developers.google.com/identity/protocols/oauth2 | Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers
-https://stackoverflow.com/questions/66940072/get-google-oauth2-access-token-using-only-curl | get google Oauth2 access token using ONLY curl - Stack Overflow
-
-https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
-https://python-social-auth.readthedocs.io/en/latest/ | Welcome to Python Social Auth’s documentation! — Python Social Auth documentation
-https://www.toptal.com/django/integrate-oauth-2-into-django-drf-back-end | Integrate OAuth 2 Into Your Django/DRF Back-end | Toptal®
-
-https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
-https://www.django-rest-framework.org/tutorial/quickstart/ | Quickstart - Django REST framework
-https://www.django-rest-framework.org/ | Home - Django REST framework
-https://www.django-rest-framework.org/tutorial/1-serialization/ | 1 - Serialization - Django REST framework
-https://www.django-rest-framework.org/api-guide/requests/#authentication | Requests - Django REST framework
-https://scribe.rip/codex/google-sign-in-rest-api-with-python-social-auth-and-django-rest-framework-4d087cd6d47f | Google sign-in REST API with python-social-auth and Django REST Framework
-https://www.toptal.com/django/integrate-oauth-2-into-django-drf-back-end | Integrate OAuth 2 Into Your Django/DRF Back-end | Toptal®
-
-https://github.com/travist/jsencrypt | GitHub - travist/jsencrypt: A zero-dependency Javascript library to perform OpenSSL RSA Encryption, Decryption, and Key Generation.
-https://scribe.rip/@viniciusamparo/a-simple-guide-to-client-side-encryption-and-decryption-using-javascript-jsencrypt-and-php-20c2f179b6e5 | A Simple Guide to Client-Side Encryption and Decryption Using JavaScript (JSEncrypt) and PHP
-
-https://simpleisbetterthancomplex.com/tutorial/2017/08/01/how-to-setup-amazon-s3-in-a-django-project.html | How to Setup Amazon S3 in a Django Project
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/specifying-s3-encryption.html | Specifying server-side encryption with Amazon S3 managed keys (SSE-S3) - Amazon Simple Storage Service
-https://docs.aws.amazon.com/code-library/latest/ug/python_3_s3_code_examples.html | Amazon S3 examples using SDK for Python (Boto3) - AWS SDK Code Examples
-
-https://docs.djangoproject.com/en/5.0/howto/csrf/ | How to use Django’s CSRF protection | Django documentation | Django
-https://stackoverflow.com/questions/50732815/how-to-use-csrf-token-in-django-restful-api-and-react | python - How to use csrf_token in Django RESTful API and React? - Stack Overflow
-https://libreddit.privacydev.net/r/django/comments/fwf1wm/3_ways_to_deploy_a_django_backend_with_a_react/ | 3 ways to deploy a Django backend with a React frontend - r/django
-https://docs.docker.com/samples/django/ | Django samples | Docker Docs
-https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/django/ | awesome-compose/official-documentation-samples/django at master · docker/awesome-compose · GitHub
-https://mattsegal.dev/django-spa-infrastructure.html | 3 ways to deploy a Django backend with a React frontend
-https://github.com/django-webpack/django-webpack-loader | GitHub - django-webpack/django-webpack-loader: Transparently use webpack with django
-https://libreddit.privacydev.net/r/django/comments/g7ao5o/best_django_react_integration_practice/ | Best Django + React integration practice? - r/django
-https://www.pythontutorial.net/django-tutorial/django-cookies/ | Django Cookies
-
-https://www.django-rest-framework.org/ | Home - Django REST framework
-https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial | Django File/Image Uploads Tutorial
-https://www.django-rest-framework.org/# | Home - Django REST framework
-https://www.django-rest-framework.org/api-guide/serializers/#serializers | Serializers - Django REST framework
-https://docs.djangoproject.com/en/dev/topics/security/#cross-site-scripting-xss-protection | Security in Django | Django documentation | Django
-https://stackoverflow.com/questions/16925129/generate-unique-id-in-django-from-a-model-field | python - Generate unique id in django from a model field - Stack Overflow
-https://docs.djangoproject.com/en/5.0/ref/csrf/ | Cross Site Request Forgery protection | Django documentation | Django
-https://snyk.io/blog/preventing-xss-in-django/ | Preventing XSS in Django | Snyk
-
 https://www.ibm.com/topics/monte-carlo-simulation | What Is Monte Carlo Simulation? | IBM
 https://gamerant.com/rollback-netcode-explained/ | Rollback Netcode Explained
 
-https://dev.to/risafj/beginner-s-guide-to-oauth-understanding-access-tokens-and-authorization-codes-2988 | Beginner’s guide to OAuth: Understanding access tokens and authorization codes using Google API - DEV Community
-https://blog.logrocket.com/guide-adding-google-login-react-app/ | The guide to adding Google login to your React app - LogRocket Blog
-https://developers.google.com/identity/protocols/oauth2 | Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers
-https://infisical.com/blog/guide-to-implementing-oauth2 | Guide to implementing OAuth 2.0 (with examples)
-https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow | OAuth 2.0 for Client-side Web Applications  |  Authorization  |  Google for Developers
-
-https://start.duckduckgo.com/lite/?q=how+to+set+up+oauth+with+django | how to set up oauth with django at DuckDuckGo
-https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html#what-we-will-build | Getting started — Django OAuth Toolkit 2.3.0 documentation
-https://django-oauth-toolkit.readthedocs.io/en/latest/models.html | Models — Django OAuth Toolkit 2.3.0 documentation
-
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-endlessh-tarpit-on-ubuntu-22-04 | How To Set Up an Endlessh Tarpit on Ubuntu 22.04 | DigitalOcean
-
-https://en.wikipedia.org/wiki/Devs_(TV_series)?useskin=vector | Devs (TV series) - Wikipedia
 
 https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for | The HTTP crash course nobody asked for
 https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep | Understanding Rust futures by going way too deep
 https://fasterthanli.me/articles/whats-in-the-box | What's in the box?
 https://fasterthanli.me/articles/request-coalescing-in-async-rust | Request coalescing in async Rust
 
-https://scribe.rip/@thilinawaks/setup-aws-s3-bucket-for-storing-files-images-90cbcc7558d7 | Setup AWS S3 bucket for storing files (Images)
-https://libreddit.privacydev.net/r/webdev/comments/3iy1z1/how_should_i_store_useruploaded_images_for_a_web/ | How should I store user-uploaded images for a web application? (Scalability) - r/webdev
-https://start.duckduckgo.com/lite/?q=create+a+publish+subscribe+model+in+postgresql | create a publish subscribe model in postgresql at DuckDuckGo
-https://www.postgresql.org/docs/current/sql-createpublication.html | PostgreSQL: Documentation: 16: CREATE PUBLICATION
-https://www.postgresql.org/docs/current/sql-createsubscription.html | PostgreSQL: Documentation: 16: CREATE SUBSCRIPTION
-https://markusy.dev/pub-sub-with-postgresql | A zero-dependency Pub/Sub implementation on top of PostgreSQL / Markus Ylisiurunen — Software Engineer @ Reaktor
-
-https://code.tutsplus.com/10-insanely-useful-django-tips--net-974t | 10 Insanely Useful Django Tips | Envato Tuts+
-
 https://play.google.com/store/apps/details?id=com.myalbum.appv4 | MyAlbum - Photo/Video Sharing - Apps on Google Play
 https://family-album.com/ | FamilyAlbum | The Best Photo-Sharing App for Families
-
-https://coderpad.io/blog/development/a-guide-to-api-rate-limiting-in-django/ | A Guide To API Rate Limiting In Django - CoderPad
-https://www.django-rest-framework.org/api-guide/throttling/ | Throttling - Django REST framework
-https://docs.djangoproject.com/en/5.0/intro/tutorial03/ | Writing your first Django app, part 3 | Django documentation | Django
-https://docs.djangoproject.com/en/5.0/topics/install/#database-installation | How to install Django | Django documentation | Django
-https://docs.djangoproject.com/en/5.0/intro/tutorial02/ | Writing your first Django app, part 2 | Django documentation | Django
-https://en.wikipedia.org/w/index.php?title=Time-based_one-time_password&useskin=vector | Time-based one-time password - Wikipedia
-https://djangocentral.com/using-postgresql-with-django/ | Using PostgreSQL with Django
-https://www.codeunderscored.com/integrate-oauth2-into-django/ | How to integrate OAuth2 into Django | Code Underscored
-https://blog.logrocket.com/using-react-django-create-app-tutorial/#diving-into-django-rest-api | Using React with Django to create an app: Tutorial - LogRocket Blog
-https://stackoverflow.com/questions/9262278/how-do-i-return-json-without-using-a-template-in-django | python - How do I return JSON without using a template in Django? - Stack Overflow
 
 https://hkoerber.de/blog/2021/09/26/Rust-vs.-Go-Error-Handling/ | Rust vs. Go: Error Handling – Hannes Körber
 https://zackoverflow.dev/writing/unsafe-rust-vs-zig/ | When Zig is safer and faster than Rust
@@ -164,409 +141,22 @@ https://www.geeksforgeeks.org/priority-queue-set-1-introduction/ | What is Prior
 https://briangrinstead.com/blog/astar-search-algorithm-in-javascript/ | A* Search Algorithm in JavaScript - Brian Grinstead
 https://redlib.kylrth.com/r/cscareerquestions/comments/s7n67x/how_often_do_you_restudy_leetcode_problems_youve/ | How often do you restudy leetcode problems you've already done? - r/cscareerquestions
 https://pablomusumeci.com/interviewing/acing-the-software-engineering-interview-part-ii/#todo-redo-done | Acing the Software Engineering Interview - Part II - Pablon
+https://stackabuse.com/merge-sort-in-javascript/ | Merge Sort in JavaScript
 https://en.wikipedia.org/wiki/A*_search_algorithm?useskin=vector | A* search algorithm - Wikipedia
 https://en.wikipedia.org/wiki/Heuristic_(computer_science)?useskin=vector | Heuristic (computer science) - Wikipedia
 
-https://practice.course.rs/compound-types/struct.html?highlight=structs#struct | Struct - Rust By Practice
-
-https://stackabuse.com/merge-sort-in-javascript/ | Merge Sort in JavaScript
-
-https://rust-unofficial.github.io/patterns/idioms/coercion-arguments.html | Use borrowed types for arguments - Rust Design Patterns
-https://marabos.nl/atomics/ | Rust Atomics and Locks by Mara Bos
-
-https://developer.chrome.com/docs/css-ui/declarative-shadow-dom | Declarative Shadow DOM  |  CSS and UI  |  Chrome for Developers
-https://developer.mozilla.org/en-US/docs/Web/CSS/@layer | @layer - CSS: Cascading Style Sheets | MDN
-https://web.dev/articles/css-module-scripts | Using CSS Module Scripts to import stylesheets  |  Articles  |  web.dev
-https://www.dudley.codes/posts/2020.05.19-golang-structure-web-servers/ | How I Structure Web Servers in Go — James Dudley
-
-https://stackoverflow.com/questions/36328029/is-there-a-hotkey-to-switch-between-split-window-panes | visual studio code - Is there a hotkey to switch between split window panes? - Stack Overflow
-https://stackoverflow.com/questions/36085443/how-to-specify-bold-font-in-vs-code-editor | windows - How to specify bold font in VS Code editor? - Stack Overflow
-https://stackoverflow.com/questions/58367207/list-of-all-available-commands-in-vscode | visual studio code - List of all available commands in VSCode - Stack Overflow
-https://stackoverflow.com/questions/65908987/how-to-open-visual-studio-codes-settings-json-file | How to open Visual Studio Code's 'settings.json' file - Stack Overflow
-https://stackoverflow.com/questions/51312095/save-terminal-tabs-to-saved-workspace-vscode | visual studio code - Save terminal tabs to saved workspace VSCode - Stack Overflow
-https://stackoverflow.com/questions/61940658/how-do-i-remap-the-keybindings-to-change-modes-in-vscode-vim-extension-from-inse | visual studio code - How do I remap the keybindings to change modes in vscode vim extension from insert to normal mode? - Stack Overflow
-
-https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
-
-https://scribe.rip/part-1-build-your-own-js-framework-from-scratch-f4e35d0dffa6 | Part 1: how to build your own JS framework
-
-https://golangdocs.com/goroutines-in-golang | Goroutines in Golang - Golang Docs
-https://programming.guide/go/detect-deadlock.html | Go: Deadlock | Programming.Guide
-https://dave.cheney.net/2014/03/19/channel-axioms | Channel Axioms | Dave Cheney
-
-https://www.redhat.com/sysadmin/linux-change-boot-options-grub | How to change boot options on Linux | Enable Sysadmin
-https://forum.manjaro.org/t/how-to-add-nvidia-drm-modeset-1-kernel-parameter/152447 | How to add nvidia-drm.modeset=1 kernel parameter? - Support - Manjaro Linux Forum
-https://wiki.archlinux.org/title/Kernel_mode_setting | Kernel mode setting - ArchWiki
-https://unix.stackexchange.com/questions/744541/failing-to-boot-when-etc-x11-xorg-conf-device-driver-nvidia | Failing to boot when /etc/X11/xorg.conf [device] driver="nvidia" - Unix & Linux Stack Exchange
-
-https://docs.cypress.io/guides/overview/why-cypress | Why Cypress? | Cypress Documentation
-https://docs.cypress.io/guides/references/cypress-studio | Cypress Studio | Cypress Documentation
-https://docs.cypress.io/guides/guides/launching-browsers | Launching Browsers | Cypress Documentation
-https://docs.cypress.io/guides/component-testing/react/overview#React-with-Vite | React Component Testing | Cypress Documentation
-
-https://vitest.dev/guide/cli.html | Command Line Interface | Guide | Vitest
-https://start.duckduckgo.com/lite/?q=error+javascript+react+%28reading+%27_version%27%29 | error javascript react (reading '_version') at DuckDuckGo
-https://testing-library.com/docs/react-testing-library/setup | Setup | Testing Library
-https://github.com/testing-library/react-testing-library/issues/735 | TypeError: Cannot read property 'version' of undefined · Issue #735 · testing-library/react-testing-library · GitHub
-https://vitest.dev/config/ | Configuring Vitest | Vitest
-https://www.npmjs.com/package/@testing-library/react | @testing-library/react - npm
-https://github.com/testing-library/react-testing-library/issues?page=2&q=is%3Aissue+is%3Aopen | Issues · testing-library/react-testing-library · GitHub
-https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_Role | ARIA: radio role - Accessibility | MDN
-https://testing-library.com/docs/preact-testing-library/api/#act | API | Testing Library
-https://github.com/threepointone/react-act-examples/blob/master/sync.md | react-act-examples/sync.md at master · threepointone/react-act-examples · GitHub
-https://vitest.dev/guide/testing-types.html | Testing Types | Guide | Vitest
-https://stackoverflow.com/questions/35394937/keyboardevent-keycode-deprecated-what-does-this-mean-in-practice | javascript - KeyboardEvent.keyCode deprecated. What does this mean in practice? - Stack Overflow
-https://vitest.dev/guide/test-context.html | Test Context | Guide | Vitest
-https://stackoverflow.com/questions/60115885/how-to-solve-the-update-was-not-wrapped-in-act-warning-in-testing-library-re | reactjs - How to solve the "update was not wrapped in act()" warning in testing-library-react? - Stack Overflow
-https://vitest.dev/guide/ | Getting Started | Guide | Vitest
-
-https://stackoverflow.com/questions/72925954/vitest-error-typeerror-cannot-read-properties-of-undefined-reading-resolve | javascript - Vitest error "TypeError: Cannot read properties of undefined (reading 'resolve')" (router.resolve) - Stack Overflow
-https://github.com/testing-library/react-testing-library/issues/735 | TypeError: Cannot read property 'version' of undefined · Issue #735 · testing-library/react-testing-library · GitHub
-https://testing-library.com/docs/react-testing-library/faq | FAQ | Testing Library
-https://developer.mozilla.org/en-US/docs/Glossary/Global_object | Global object - MDN Web Docs Glossary: Definitions of Web-related terms | MDN
-https://nodejs.org/api/globals.html#globals_global | Global objects | Node.js v21.6.2 Documentation
-https://mswjs.io/docs/basics/intercepting-requests | Intercepting requests - Mock Service Worker
-https://start.duckduckgo.com/lite/?q=msw+https | msw https at DuckDuckGo
-https://www.raisiqueira.io/drops/vite-msw | How to setup MSW in a React project using Vite | Raí Siqueira
-https://www.npmjs.com/package/msw | msw - npm
-
-https://vitest.dev/guide/ | Getting Started | Guide | Vitest
-https://vitest.dev/guide/browser.html | Browser Mode | Guide | Vitest
-https://testing-library.com/docs/react-testing-library/example-intro | Example | Testing Library
-https://vitest.dev/guide/mocking.html | Mocking | Guide | Vitest
-https://testing-library.com/docs/example-input-event | Input Event | Testing Library
-https://vitest.dev/guide/mocking | Mocking | Guide | Vitest
-https://www.npmjs.com/package/@testing-library/user-event | @testing-library/user-event - npm
-
-https://stackoverflow.com/questions/7995080/html-if-image-is-not-found | HTML if image is not found - Stack Overflow
-https://stackoverflow.com/questions/34097560/react-js-replace-img-src-onerror | javascript - react.js Replace img src onerror - Stack Overflow
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter | scrollbar-gutter - CSS: Cascading Style Sheets | MDN
-
-https://github.com/tomit4/git_sandbox | tomit4/git_sandbox: A repo for practicing with git
-https://github.com/settings/notifications | Notification Settings
-https://docs.github.com/en/webhooks/about-webhooks | About webhooks - GitHub Docs
-https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository | Managing teams and people with access to your repository - GitHub Docs
-https://www.digitalocean.com/community/tutorials/nodejs-express-basics | How To Get Started with Node.js and Express | DigitalOcean
-https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely | version control - How do I delete a Git branch locally and remotely? - Stack Overflow
-https://stackoverflow.com/questions/54161556/how-can-i-show-all-the-branches-in-a-repository | git - How can I show all the branches in a repository? - Stack Overflow
-https://stackoverflow.com/questions/14609652/how-to-get-specific-github-notifications-like-pull-requests-or-assigned-issues | How to get specific github notifications like pull requests or assigned issues? - Stack Overflow
-
-https://lite.duckduckgo.com/lite/?q=modprobe+nvidia+causes+x11+race+condition | modprobe nvidia causes x11 race condition at DuckDuckGo
-
-https://www.linode.com/docs/products/networking/dns-manager/guides/common-dns-configurations/ | Common DNS Configurations | Linode Docs
-https://www.linode.com/docs/products/networking/dns-manager/#add-a-domain-zone | Linode DNS Manager Product Documentation | Linode Docs
-https://tecadmin.net/how-to-generate-lets-encrypt-ssl-using-certbot/ | How to Generate Let's Encrypt SSL using Certbot – TecAdmin
-
 https://stackoverflow.com/questions/38731998/do-docker-container-ips-change-on-restart | nginx - do docker container IPs change on restart? - Stack Overflow
 
-https://stackoverflow.com/questions/62871280/should-i-have-multiple-docker-compose-files | Should I have multiple docker-compose files? - Stack Overflow
-https://www.thegeekstuff.com/2016/04/docker-compose-up-stop-rm/ | Howto use docker-compose to Start, Stop, Remove Docker Containers
-
-https://vitest.dev/guide/#using-unreleased-commits | Getting Started | Guide | Vitest
-https://v1.test-utils.vuejs.org/api/options.html#scopedslots | Mounting Options | Vue Test Utils
-https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html | Conditional Rendering | Vue Test Utils
-https://test-utils.vuejs.org/guide/advanced/vue-router | Testing Vue Router | Vue Test Utils
-https://test-utils.vuejs.org/guide/essentials/easy-to-test.html | Write components that are easy to test | Vue Test Utils
-https://runthatline.com/vitest-mock-vue-router/ | How to Mock Vue Router with Vitest – Run That Line
-https://test-utils.vuejs.org/guide/advanced/vue-router.html | Testing Vue Router | Vue Test Utils
-
-https://testing-library.com/docs/react-testing-library/cheatsheet/ | Cheatsheet | Testing Library
-https://vitest.dev/api/vi.html | Vi | Vitest
-https://github.com/testing-library/vue-testing-library/blob/main/src/__tests__/validate-plugin.js | vue-testing-library/src/__tests__/validate-plugin.js at main · testing-library/vue-testing-library · GitHub
-
-https://github.com/vitest-dev/vitest/blob/main/examples/playwright/test/basic.test.ts | vitest/examples/playwright/test/basic.test.ts at main · vitest-dev/vitest · GitHub
-https://github.com/ErikCH/Vitest-YT/blob/main/src/components/__tests__/my-pokemon.spec.ts | Vitest-YT/src/components/__tests__/my-pokemon.spec.ts at main · ErikCH/Vitest-YT · GitHub
-https://vitest.dev/guide/ | Getting Started | Guide | Vitest
-https://www.npmjs.com/package/msw | msw - npm
-https://vitest.dev/guide/environment.html | Test Environment | Guide | Vitest
-https://github.com/mswjs/examples/blob/main/examples/with-vue/src/mocks/handlers.ts | examples/examples/with-vue/src/mocks/handlers.ts at main · mswjs/examples · GitHub
-https://www.npmjs.com/package/@testing-library/vue#more-examples | @testing-library/vue - npm
-https://github.com/testing-library/vue-testing-library/blob/main/src/fire-event.js | vue-testing-library/src/fire-event.js at main · testing-library/vue-testing-library · GitHub
-https://testing-library.com/docs/vue-testing-library/examples/ | Examples | Testing Library
-https://vitest.dev/guide/mocking | Mocking | Guide | Vitest
-https://testing-library.com/docs/vue-testing-library/cheatsheet/ | Cheatsheet | Testing Library
-https://libreddit.kylrth.com/r/vuejs/comments/uwto3f/is_there_any_way_to_check_if_routerpush_has_been/ | Is there any way to check if router.push() has been called in Vue Testing Library ? - r/vuejs
-
-https://github.com/vitest-dev/vitest/blob/main/examples/vue/test/basic.test.ts | vitest/examples/vue/test/basic.test.ts at main · vitest-dev/vitest · GitHub
-https://github.com/ErikCH/Vitest-YT/blob/main/src/setupTests.ts | Vitest-YT/src/setupTests.ts at main · ErikCH/Vitest-YT · GitHub
-https://github.com/ErikCH/Vitest-YT | GitHub - ErikCH/Vitest-YT: Vitetest YT info
-https://www.lambdatest.com/learning-hub/end-to-end-testing | What is End-to-End Testing? Guide With E2E Testing Examples
-https://www.lambdatest.com/learning-hub/integration-testing | Integration Testing Tutorial: A Comprehensive Guide With Examples And Best Practices
-https://www.lambdatest.com/learning-hub/unit-testing | Unit Testing Tutorial: A Comprehensive Guide With Examples and Best Practices
-
-https://github.com/NixOS/nixpkgs/issues/146670 | gcolor3 not working on wayland · Issue #146670 · NixOS/nixpkgs · GitHub
-https://github.com/emersion/xdg-desktop-portal-wlr/blob/3ee4c5cca2c5f840e354b8bcd82e4ab10b1a6e82/wlr.portal#L4 | xdg-desktop-portal-wlr/wlr.portal at 3ee4c5cca2c5f840e354b8bcd82e4ab10b1a6e82 · emersion/xdg-desktop-portal-wlr · GitHub
-https://man.archlinux.org/man/xdg-desktop-portal-wlr.5 | xdg-desktop-portal-wlr(5) — Arch manual pages
-https://wiki.archlinux.org/title/XDG_Desktop_Portal | XDG Desktop Portal - ArchWiki
-https://archlinux.org/packages/?name=xdg-desktop-portal-wlr | Arch Linux - Package Search
-
-https://libreddit.privacydev.net/r/linux_gaming/comments/10rrwmg/radv_perftestgpl_is_awesome_for_dxvk_games/ | RADV_PERFTEST=gpl is AWESOME for DXVK Games! - r/linux_gaming
-
-https://opentabletdriver.net/Wiki/FAQ/Linux | Linux FAQ - OpenTabletDriver
-https://opentabletdriver.net/Tablets | Tablets - OpenTabletDriver
-https://libreddit.privacydev.net/r/osugame/comments/qm4xtr/linux_graphictablets_on_wayland_solution/ | [LINUX] GraphicTablets on Wayland (Solution) - r/osugame
-
-https://lite.duckduckgo.com/lite/?q=wacom+no+work+on+wayland | wacom no work on wayland at DuckDuckGo
-https://wiki.archlinux.org/title/Graphics_tablet | Graphics tablet - ArchWiki
-https://wiki.archlinux.org/title/Graphics_tablet#Wayland_and_libinput | Graphics tablet - ArchWiki
-https://man.archlinux.org/man/libinput-list-devices.1.en | libinput-list-devices(1) — Arch manual pages
-
-https://github.com/keepassxreboot/keepassxc-browser/wiki/Troubleshooting-guide | Troubleshooting guide · keepassxreboot/keepassxc-browser Wiki · GitHub
-https://forum.endeavouros.com/t/keepassxc-refuses-to-launch-under-wayland-gnome/17607 | KeepassXC refuses to launch under Wayland-Gnome - Applications - EndeavourOS
-https://forum.artixlinux.org/index.php/topic,5135.0.html | Dbus-Socket Not Found When Starting Firefox in Firejail
-https://github.com/netblue30/firejail/issues/3769 | Firefox DBus user socket was not found · Issue #3769 · netblue30/firejail · GitHub
-https://wiki.archlinux.org/title/Firejail | Firejail - ArchWiki
-
-https://github.com/keepassxreboot/keepassxc/issues/2973 | Wayland support · Issue #2973 · keepassxreboot/keepassxc · GitHub
-https://wiki.archlinux.org/title/KeePass | KeePass - ArchWiki
-https://wiki.archlinux.org/title/Environment_variables | Environment variables - ArchWiki
-
-https://lite.duckduckgo.com/lite/?q=how+to+get+QT+apps+working+wayland | how to get QT apps working wayland at DuckDuckGo
-
-https://github.com/netblue30/firejail/issues/3769 | Firefox DBus user socket was not found · Issue #3769 · netblue30/firejail · GitHub
-https://wiki.archlinux.org/title/Firejail | Firejail - ArchWiki
-https://lite.duckduckgo.com/lite/?q=keepassxc+blocked+firejail+wayland | keepassxc blocked firejail wayland at DuckDuckGo
-https://github.com/keepassxreboot/keepassxc/issues/1807 | Keepassxc with Firejail (fixed) · Issue #1807 · keepassxreboot/keepassxc · GitHub
-https://github.com/telegramdesktop/tdesktop/issues/23873 | [Warning] qt.qpa.wayland: Wayland does not support QWindow::requestActivate() · Issue #23873 · telegramdesktop/tdesktop · GitHub
-
-https://arewewaylandyet.com/ | Are we Wayland yet?
-https://forum.artixlinux.org/ | Artix Linux Forum - Index
-https://wiki.archlinux.org/title/Nouveau | Nouveau - ArchWiki
-
-https://github.com/riverwm/river/issues/462 | [Question] How to use the NVIDIA proprietary driver when running river? · Issue #462 · riverwm/river · GitHub
-https://gitlab.freedesktop.org/wlroots/wlroots/-/blob/master/docs/env_vars.md | docs/env_vars.md · master · wlroots / wlroots · GitLab
-https://forums.developer.nvidia.com/t/545-drivers-have-bad-flickering-and-black-screen-issues-when-vrr-is-enabled/269801/24 | 545 drivers have bad flickering and black screen issues when VRR is enabled - #24 by thewisenoob - Linux - NVIDIA Developer Forums
-https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
-https://libreddit.privacydev.net/r/hyprland/comments/17j12jz/finally_got_xwayland_on_nvidia_working_perfectly/ | FINALLY got Xwayland on Nvidia working perfectly on Hyprland - r/hyprland
-https://download.nvidia.com/XFree86/Linux-x86_64/440.64/README/primerenderoffload.html | Chapter 34. PRIME Render Offload
-https://github.com/elFarto/nvidia-vaapi-driver/issues/181 | Missing DRM render device on Wayland · Issue #181 · elFarto/nvidia-vaapi-driver · GitHub
-https://forums.developer.nvidia.com/t/feature-g-sync-freesync-under-wayland-session/220822 | [Feature] G-Sync/Freesync under Wayland Session - Linux - NVIDIA Developer Forums
-https://wiki.hyprland.org/Configuring/Tearing/ | Tearing | Hyprland Wiki
-https://wiki.hyprland.org/Configuring/Environment-variables/ | Environment Variables | Hyprland Wiki
-
-https://github.com/riverwm/river/issues/82 | Issues With XWayland · Issue #82 · riverwm/river · GitHub
-https://forums.developer.nvidia.com/t/flickering-stuttering-graphical-artifacting-and-more-on-wayland-geforce-gtx-1650-super-driver-version-545-29-02-2-dkms/273748 | Flickering, stuttering, graphical artifacting, and more on Wayland - GeForce GTX 1650 Super, driver version 545.29.02-2 (DKMS) - Linux - NVIDIA Developer Forums
-https://github.com/NVIDIA/open-gpu-kernel-modules/discussions/532 | Add implicit sync support · NVIDIA/open-gpu-kernel-modules · Discussion #532 · GitHub
-https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/967 | Explicit GPU Synchronization for DRI3, Present, and Xwayland (!967) · Merge requests · xorg / xserver · GitLab
-https://gitlab.freedesktop.org/xorg/xserver/-/issues/1317 | xwayland glamor renders incorrectly on nvidia (#1317) · Issues · xorg / xserver · GitLab
-https://libreddit.privacydev.net/r/hyprland/comments/17j12jz/finally_got_xwayland_on_nvidia_working_perfectly/ | FINALLY got Xwayland on Nvidia working perfectly on Hyprland - r/hyprland
-
-https://github.com/nyyManni/dmenu-wayland | GitHub - nyyManni/dmenu-wayland: dmenu for wayland-compositors
-https://aur.archlinux.org/packages/dmenu-wayland-git | AUR (en) - dmenu-wayland-git
-https://github.com/Cloudef/bemenu | GitHub - Cloudef/bemenu: Dynamic menu library and client program inspired by dmenu
-
-https://github.com/riverwm/river | GitHub - riverwm/river: A dynamic tiling Wayland compositor
-https://github.com/riverwm/river/wiki#how-do-i-set-a-wallpaper | Home · riverwm/river Wiki · GitHub
-https://github.com/riverwm/river/issues/24 | Disable Gtk header bar which shows up in some windows. · Issue #24 · riverwm/river · GitHub
-
-https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/ | How to Get Wayland to Work on Nvidia Graphics Cards - Make Tech Easier
-https://wiki.archlinux.org/title/Wayland | Wayland - ArchWiki
-https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/xwayland.html | Chapter 39. OpenGL and Vulkan on Xwayland
-https://forums.developer.nvidia.com/t/understanding-nvidia-drm-modeset-1-nvidia-linux-driver-modesetting/204068/8 | Understanding nvidia-drm.modeset=1 (NVIDIA Linux driver modesetting) - #8 by system - Linux - NVIDIA Developer Forums
-
-https://leon_plickat.srht.site/writing/river-setup-guide/article.html# | River Setup Guide (continously updated) - Leon Henrik Plickat
-https://wiki.archlinux.org/title/Wayland#Configuration | Wayland - ArchWiki
-https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/xwayland.html | Chapter 39. OpenGL and Vulkan on Xwayland
-https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/kms.html | Chapter 36. Direct Rendering Manager Kernel Modesetting (DRM KMS)
-https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting | NVIDIA - ArchWiki
-https://wiki.archlinux.org/title/Kernel_module#Setting_module_options | Kernel module - ArchWiki
-https://forum.endeavouros.com/t/any-recomendations-for-a-tiling-window-manager-for-wayland/12138 | Any recomendations for a tiling window-manager for wayland? - Lounge - EndeavourOS
-https://github.com/emersion/kanshi | GitHub - emersion/kanshi: Dynamic display configuration (mirror)
-
-https://lite.duckduckgo.com/lite/ | river wm how to change aspect ratio at DuckDuckGo
-https://lite.duckduckgo.com/lite/?q=river+wm+configs+github | river wm configs github at DuckDuckGo
-https://unix.stackexchange.com/questions/656447/screen-resolution-wont-change-no-matter-which-way-i-try-it | gnome - Screen resolution won't change no matter which way I try it - Unix & Linux Stack Exchange
-https://unix.stackexchange.com/questions/564793/wayland-equivalent-of-arandr | x11 - Wayland equivalent of arandr - Unix & Linux Stack Exchange
-https://askubuntu.com/questions/973499/wayland-how-to-set-a-custom-resolution | intel graphics - Wayland how to set a custom resolution - Ask Ubuntu
-https://lite.duckduckgo.com/lite/?q=wayland+equivalent+of+xrandr | wayland equivalent of xrandr at DuckDuckGo
-https://manpages.debian.org/testing/wlr-randr/wlr-randr.1.en.html | wlr-randr(1) — wlr-randr — Debian testing — Debian Manpages
-https://aur.archlinux.org/packages/wlr-randr | AUR (en) - wlr-randr
-
-https://www.csestack.org/hide-show-password-eye-icon-html-javascript/ | Hide/Show Password using Eye icon in HTML and JavaScript
-
-https://oauth.net/ | OAuth Community Site
-https://security.stackexchange.com/questions/133065/why-is-it-a-bad-idea-to-use-plain-oauth2-for-authentication | oauth - Why is it a bad idea to use plain oauth2 for authentication? - Information Security Stack Exchange
-https://stackoverflow.com/questions/1087031/whats-the-difference-between-openid-and-oauth | authentication - What's the difference between OpenID and OAuth? - Stack Overflow
-https://softwareas.com/oauth-openid-youre-barking-up-the-wrong-tree-if-you-think-theyre-the-same-thing/ | OAuth-OpenID: You&#8217;re Barking Up the Wrong Tree if you Think They&#8217;re the Same Thing
-https://web.archive.org/web/20210804165738/http://cakebaker.42dh.com/2008/04/01/openid-versus-oauth-from-the-users-perspective/ | OpenID versus OAuth from the user’s perspective - cakebaker
-https://openid.net/developers/how-connect-works/ | How OpenID Connect Works - OpenID Foundation
-https://www.npmjs.com/package/openid-client | openid-client - npm
-
-https://stackoverflow.com/questions/18263796/http-status-for-already-logged-in | rest - HTTP Status for "already logged in" - Stack Overflow
-https://scribe.rip/@adesinabolaji/how-to-avoid-concurrent-login-by-same-user-in-your-application-using-jwt-7c2ea3dc706c | How To Avoid Concurrent Login By Same User In your Application using JWT.
-https://stackoverflow.com/questions/59656775/force-logout-of-user-on-multiple-devices-using-jwt | rest - Force Logout of user on multiple devices using JWT - Stack Overflow
-https://stackoverflow.com/questions/73593691/how-to-prevent-detect-login-from-multiple-devices-from-a-single-user-node-js | authentication - How to prevent/detect login from multiple devices from a single user? (Node.js | oAuth 2.0) - Stack Overflow
-
-https://github.com/fastify/fastify-jwt | GitHub - fastify/fastify-jwt: JWT utils for Fastify
-https://dev.to/lek890/authentication-strategy-application-fastify-typescript-jwt-52nb | Authentication Strategy - Fastify + Typescript + JWT - DEV Community
-https://bobbyhadz.com/blog/typescript-extend-type | How to extend a Type in TypeScript | bobbyhadz
-https://router.vuejs.org/guide/advanced/navigation-guards.html | Navigation Guards | Vue Router
-https://chrismroberts.com/2019/01/03/authentication-and-protected-routes-in-vuejs/ | Authentication and Protected Routes in VueJS - Chris Roberts
-https://stackoverflow.com/questions/71074351/vue-router-protecting-private-routes-with-authentication-the-right-way | vue.js - Vue-Router: Protecting private routes with authentication the right way - Stack Overflow
-https://www.kevincunningham.co.uk/posts/protect-fastify-routes-with-authorization/ | Protect Fastify routes with Authorization
-https://scribe.rip/@atatijr/token-based-authentication-with-fastify-jwt-and-typescript-1fa5cccc63c5 | Token based authentication with Fastify, JWT, and Typescript
-https://stackoverflow.com/questions/68403905/how-to-add-additional-properties-to-jwtpayload-type-from-types-jsonwebtoken | typescript - How to add additional properties to JwtPayload type from @types/jsonwebtoken - Stack Overflow
-https://stackoverflow.com/questions/73504388/property-email-does-not-exist-on-type-string | javascript - Property 'email' does not exist on type 'string' - Stack Overflow
-
-https://security.stackexchange.com/questions/239531/how-to-properly-invalidate-jwt-tokens-and-sessions-in-this-use-case | authentication - How to properly invalidate JWT tokens and sessions in this use case? - Information Security Stack Exchange
-https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/ | What Are Refresh Tokens and How to Use Them Securely
-https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/ | Critical vulnerabilities in JSON Web Token libraries
-
-https://stackoverflow.com/questions/44890564/should-i-store-jwt-tokens-in-redis | node.js - Should I store JWT tokens in redis? - Stack Overflow
-https://security.stackexchange.com/questions/119371/is-refreshing-an-expired-jwt-token-a-good-strategy | Is refreshing an expired JWT token a good strategy? - Information Security Stack Exchange
-https://stackoverflow.com/questions/27726066/jwt-refresh-token-flow | security - JWT refresh token flow - Stack Overflow
-https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/ | The Ultimate Guide to handling JWTs on frontend clients (GraphQL)
-https://blog.logrocket.com/how-to-implement-jwt-authentication-vue-nodejs/#jwt-structure | How to implement JWT authentication with Vue and Node.js - LogRocket Blog
-https://stackoverflow.com/questions/46379410/how-to-handle-jwt-token-on-the-client-site-in-node-js-application | How to handle JWT token on the client site in Node.js application? - Stack Overflow
-
-https://github.com/fastify/fastify-redis/tree/master/types | fastify-redis/types at master · fastify/fastify-redis · GitHub
-https://libreddit.kylrth.com/r/node/comments/15gbjpm/fastify_typescript_boilerplate/ | Fastify Typescript Boilerplate - r/node
-https://github.com/goldbergyoni/nodebestpractices#1-project-architecture-practices | GitHub - goldbergyoni/nodebestpractices: :white_check_mark: The Node.js best practices list (December 2023)
-https://github.com/TheB1gFatPanda/fastify-typescript-starter | GitHub - TheB1gFatPanda/fastify-typescript-starter: fastify + typescript starter
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing | Nullish coalescing operator (??) - JavaScript | MDN
-
-https://docs.docker.com/guides/walkthroughs/multi-container-apps/ | Run multi-container applications | Docker Docs
-https://geshan.com.np/blog/2022/01/redis-docker/ | Using Redis with docker and docker-compose for local development a step-by-step tutorial
-
-https://libreddit.kylrth.com/r/reactjs/comments/udiwx0/dynamic_meta_tags_on_a_reactjs_spa/ | Dynamic meta tags on a ReactJS SPA - r/reactjs
-
-https://neon.tech/ | Neon — Serverless, Fault-Tolerant, Branchable Postgres
-
-https://www.screamingfrog.co.uk/seo-spider/ | Screaming Frog SEO Spider Website Crawler
-https://moz.com/ | Moz - SEO Software for Smarter Marketing
-https://ahrefs.com/keyword-generator | Free Keyword Generator Tool: Find 100+ Keyword Ideas in Seconds
-
-https://invidious.slipfox.xyz/search?q=make+simple+pong+game+in+javascript | make simple pong game in javas… - Invidious
-https://modernweb.com/building-multiplayer-games-node-js-socket-io/ | Building Multiplayer Games With Node.js And Socket.IO | Modern Web - Web3, Business & Technology
-https://www.pubnub.com/blog/javascript-multiplayer-game/ | How to Make an Online Multiplayer Game in JavaScript | PubNub
-
-https://vue-community.org/guide/ecosystem/mobile-apps.html | Mobile Apps | Vue Community
-https://nativescript-vue.org/en/docs/introduction/ | Introduction - NativeScript-Vue
-https://docs.nativescript.org/ | Introduction | NativeScript
-https://lite.duckduckgo.com/lite/?q=nativescript-vue+vs+react+native+reddit | nativescript-vue vs react native reddit at DuckDuckGo
-https://libreddit.kylrth.com/r/vuejs/comments/fyh8ic/nativescript_vue_seems_too_good_to_be_true_what/ | NativeScript + Vue seems too good to be true. What am I missing? - r/vuejs
-
-https://www.techaddressed.com/tutorials/add-verify-ssh-keys-gitea/ | How To Add & Verify SSH Keys Inside Gitea - Tech Addressed
-
-https://scribe.rip/basecs/taking-hash-tables-off-the-shelf-139cbf4752f0 | Taking Hash Tables Off The Shelf
-https://scribe.rip/basecs/hashing-out-hash-functions-ea5dd8beb4dd | Hashing Out Hash Functions
-https://schani.wordpress.com/2010/04/30/linear-vs-binary-search/ | Linear vs Binary Search | Mostly Software
-https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/HashFuncExamp.html | 13.3. Sample Hash Functions — RHS Comp Sci III
-https://opendsa-server.cs.vt.edu/ODSA/Books/rhs/rhs-cs3/fall-2020/RHS-CS3_2020-21/html/ | Chapter 0 Preface — RHS Comp Sci III
-
-https://lite.duckduckgo.com/lite/?q=self+taught+technical+interviews+reddit | self taught technical interviews reddit at DuckDuckGo
-https://libreddit.kylrth.com/r/cscareerquestions/comments/xnll35/is_getting_a_job_as_a_self_taught_really_possible/ | is getting a job as a self taught really possible? any success stories from self taughts? - r/cscareerquestions
-https://libreddit.kylrth.com/r/learnprogramming/comments/qsz7nm/had_my_first_proper_technical_interview_and/ | Had my first proper technical interview and absolutely bombed it! - r/learnprogramming
-https://libreddit.kylrth.com/r/learnprogramming/comments/v47qfk/i_selftaught_had_my_firstever_interview_for_a_web/ | I (self-taught) had my first-ever interview for a web dev job yesterday. Here is what the interview was like and the questions I was asked. [Long] - r/learnprogramming
-https://github.com/DopplerHQ/awesome-interview-questions | GitHub - DopplerHQ/awesome-interview-questions: :octocat: A curated awesome list of lists of interview questions. Feel free to contribute!
-https://github.com/sudheerj/javascript-interview-questions | GitHub - sudheerj/javascript-interview-questions: List of 1000 JavaScript Interview Questions
-https://github.com/sudheerj/reactjs-interview-questions | GitHub - sudheerj/reactjs-interview-questions: List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!
-https://arc.dev/developer-blog/reactjs-interview-questions/ | 55+ Top React Interview Questions and Answers to Prepare For
-
 https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/ | How to Create a Subdomain for my Domain - Domains - Namecheap.com
-https://www.namecheap.com/support/knowledgebase/article.aspx/9190/29/how-to-create-a-subdomain-in-cpanel/ | How to create a subdomain in cPanel - Hosting - Namecheap.com
-
-https://stackoverflow.com/questions/65248985/is-there-any-method-of-importing-css-files-conditionally-in-react-js | reactjs - Is there any method of importing .css files conditionally in React.JS? - Stack Overflow
-https://scribe.rip/@prawira/react-conditional-import-conditional-css-import-110cc58e0da6 | React Conditional Import / Conditional CSS Import
-
 https://www.jeffgeerling.com/blog/2022/rate-limiting-requests-ip-address-nginx | Rate limiting requests per IP address in Nginx | Jeff Geerling
-
-https://htmx.org/docs/ | </> htmx ~ Documentation
-https://alpinejs.dev/start-here | Start Here — Alpine.js
-
-https://reddit.invak.id/r/neovim/comments/17t51ox/develop_php_in_neovim_your_experience/ | Develop PHP in Neovim. Your experience - r/neovim
-https://getcomposer.org/ | Composer
-https://packagist.org/ | Packagist
-https://www.php.net/manual/en/features.commandline.webserver.php | PHP: Built-in web server - Manual
-
-https://scribe.rip/@JSotoPrograming/react-usecontext-3dae1de4beb4 | React useContext
-https://react.dev/learn/thinking-in-react | Thinking in React – React
-https://usehooks.com/ | useHooks – The React Hooks Library
-https://react-hook-form.com/ | React Hook Form - performant, flexible and extensible form library
-https://scribe.rip/@JSotoPrograming/react-information-flow-4563bb113bad | React Information Flow
-https://missing.csail.mit.edu/ | The Missing Semester of Your CS Education
-https://www.techinterviewhandbook.org/software-engineering-interview-guide/ | Software Engineer interviews: Everything you need to prepare | Tech Interview Handbook
-
-https://teddit.zaggy.nl/r/webdev/comments/z6dsoh/can_someone_explain_to_me_what_the_public_folder/ | Can someone explain to me what the ‘public’ folder is used for in Vite? : webdev
-https://vitejs.dev/guide/assets.html | Static Asset Handling | Vite
-https://vitejs.dev/guide/env-and-mode.html | Env Variables and Modes | Vite
-https://vitejs.dev/config/shared-options.html#envdir | Shared Options | Vite
-https://vitejs.dev/config/ | Configuring Vite | Vite
-
-https://react.dev/learn/state-a-components-memory | State: A Component's Memory – React
-https://react.dev/reference/react/useState | useState – React
-https://react.dev/reference/react/useEffect | useEffect – React
-https://react.dev/reference/react/useMemo#my-calculation-runs-twice-on-every-re-render | useMemo – React
-https://react.dev/reference/react/useDeferredValue | useDeferredValue – React
-
-https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell | Functional Core, Imperative Shell
-
-https://www.thestrangeloop.com/2023/ectype---bringing-type-safety-and-more-to-vanilla-javascript.html | Ectype - bringing type safety (and more!) to vanilla JavaScript - Strange Loop
-
-https://teddit.zaggy.nl/r/node/comments/8t4dtb/generating_and_storing_api_keys/ | Generating and Storing API Keys : node
-
-https://stackoverflow.com/questions/3663895/ssh-the-authenticity-of-host-hostname-cant-be-established | ssh keys - ssh: The authenticity of host 'hostname' can't be established - Stack Overflow
-https://www.howtouselinux.com/post/ssh-stricthostkeychecking-option | Understanding SSH StrictHostKeyChecking Option - howtouselinux
-https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh | How to disable strict host key checking in ssh? - Ask Ubuntu
-https://www.howtouselinux.com/post/ssh-permission-denied-publickey | 3 ways to fix SSH Permission denied (publickey) - howtouselinux
-https://askubuntu.com/questions/30788/does-ssh-key-need-to-be-named-id-rsa | openssh - Does ssh key need to be named id_rsa? - Ask Ubuntu
-
-https://loafylilu.github.io/ | Charissa Day - Portfolio
-https://joncruz.netlify.app/ | Jonathan Cruz - Software Engineer
-https://www.crunchbase.com/ | Crunchbase: Discover innovative companies and the people behind them
-https://www.guidestar.org/ | Nonprofit data for donors, grantmakers, and businesses | GuideStar | Candid
-
-https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/ | How to build a CI/CD pipeline with GitHub Actions in four simple steps - The GitHub Blog
-https://stackoverflow.com/questions/15569581/do-an-automatic-pull-request-after-pushing-to-server | git - Do an automatic pull request after pushing to server - Stack Overflow
-https://stackoverflow.com/questions/15407350/deploying-a-website-webapp-via-git-gitolite-permissions-error/15411542#15411542 | unix - deploying a website/webapp via git/gitolite permissions error - Stack Overflow
-https://gitolite.com/gitolite/ | Gitolite
-
-https://realpython.com/python-send-email/ | Sending Emails With Python – Real Python
-https://www.baeldung.com/ops/docker-cron-job | How to Run a Cron Job Inside a Docker Container? | Baeldung
-https://stackoverflow.com/questions/43889481/docker-how-to-use-syslog-to-record-logs-on-host-machine | logging - Docker- How to use syslog to record logs on host machine? - Stack Overflow
-
 https://www.freecodecamp.org/news/nginx-rate-limiting-in-a-nutshell-128fe9e0126c/ | NGINX rate-limiting in a nutshell
-
-https://fastify.dev/docs/latest/Reference/Validation-and-Serialization/ | Validation-and-Serialization | Fastify
-https://www.nearform.com/blog/validate-the-fastify-input-with-joi/ | Validate the Fastify Input with Joi - NearForm
-https://github.com/Eomm/joi-compiler | GitHub - Eomm/joi-compiler: Build and manage the JOI instances for the fastify framework
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol | Symbol - JavaScript | MDN
-https://stackoverflow.com/questions/12866494/how-do-you-reinstall-an-apps-dependencies-using-npm | node.js - How do you reinstall an app's dependencies using npm? - Stack Overflow
-https://joi.dev/api/?v=17.9.1#extensions | joi.dev - 17.9.1 API Reference
-
-https://speakerdeck.com/spreeconf/the-magic-tricks-of-testing-sandi-metz | The Magic Tricks of Testing - Sandi Metz - Speaker Deck
-https://pypi.org/project/celery/ | celery · PyPI
-https://duckduckgo.com/?q=celery+python+data+pipeline&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*oFhIm8YCwN80XcCx0alD5w.png | celery python data pipeline at DuckDuckGo
-https://github.com/breejs/bree | GitHub - breejs/bree: Bree is a Node.js and JavaScript job task scheduler with worker threads, cron, Date, and human syntax. Built for @ladjs, @forwardemail, @spamscanner, @cabinjs.
-
-https://www.manuelkruisz.com/blog/posts/nginx-multiple-domains-one-server | Using nginx to serve multiple nodejs applications on different domains | Manuel Kruisz
-https://stackoverflow.com/questions/30449313/how-do-i-make-a-docker-container-start-automatically-on-system-boot | How do I make a Docker container start automatically on system boot? - Stack Overflow
-https://stackoverflow.com/questions/66955731/how-to-serve-multiple-web-servers-using-nginx | How to serve multiple web servers using nginx? - Stack Overflow
-
-https://www.tecmint.com/create-custom-nginx-error-page/ | How to Create Custom 404 Error Page in NGINX
-https://www.howtogeek.com/devops/how-to-run-nginx-inside-docker-for-easy-auto-scaling/ | How to Run NGINX Inside Docker (for Easy Auto-Scaling)
-https://github.com/staticfloat/docker-nginx-certbot-old | GitHub - staticfloat/docker-nginx-certbot-old: Create and renew website certificates using the Letsencrypt free certificate authority.
-https://www.plesk.com/blog/guides/secure-nginx-against-bots/ | How to Secure Nginx Against Malicious Bots - Plesk
-
-https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorage-or-cookie | security - Should JWT be stored in localStorage or cookie? - Stack Overflow
-https://security.stackexchange.com/questions/130548/should-jwt-token-be-stored-in-a-cookie-header-or-body | tls - Should JWT token be stored in a cookie, header or body - Information Security Stack Exchange
-https://stackoverflow.com/questions/70060722/how-do-i-handle-jwt-token-expiration | spring boot - How do I handle JWT token expiration? - Stack Overflow
-
-https://leekahung.github.io/web-dev/ | Ka Hung's Web Developer Portfolio
-https://www.scottxbrown.com/#projects | Portfolio of Scott Brown || frontend web developer
+https://www.namecheap.com/support/knowledgebase/article.aspx/9190/29/how-to-create-a-subdomain-in-cpanel/ | How to create a subdomain in cPanel - Hosting - Namecheap.com
 
 https://ishadeed.com/article/rebuild-featured-news-modern-css/ | Rebuilding a featured news section with modern CSS: Vox news - Ahmad Shadeed
 https://ishadeed.com/about/ | About - Ahmad Shadeed
 https://ishadeed.com/article/grid-layout-flexbox-components/ | Grid for layout, Flexbox for components - Ahmad Shadeed
 https://ishadeed.com/article/say-hello-to-css-container-queries/ | Say Hello To CSS Container Queries - Ahmad Shadeed
 https://ishadeed.com/article/css-container-style-queries/ | CSS Style Queries - Ahmad Shadeed
-
-https://graybox.co/about | About Us | GRAYBOX
-https://www.techoregon.org/ | Technology Association of Oregon – Empowering businesses and entrepreneurs
-https://opencommons.net/ | opencommons.net/
-https://joinpdx.org/ | JOIN - Connecting the street to a home - Portland, Oregon
-https://github.com/codeforpdx/website | GitHub - codeforpdx/website: Official Code for PDX website
 
 https://content.techgig.com/upskilling-at-techgig/11-coding-algorithms-that-every-aspiring-programmer-should-know/articleshow/95119570.cms | 11 Coding algorithms that every aspiring programmer should know | TechGig
 https://en.wikipedia.org/wiki/Depth-first_search?useskin=vector | Depth-first search - Wikipedia
