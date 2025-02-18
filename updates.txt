@@ -709,3 +709,7 @@ wifi.cloned-mac-address=stable
 02/09/2025
 Install tinycss2 (for Inkscape):
 doas pacman -S python-tinycss2
+
+02/17/2025
+Remove gfeeds
+doas pacman -rs gfeeds
