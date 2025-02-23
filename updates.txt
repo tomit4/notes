@@ -717,3 +717,7 @@ doas pacman -rs gfeeds
 02/20/2025
 Install pacman-static
 doas pacman -S pacman-static
+
+02/23/2025
+Install audacity
+doas pacman -S audacity
