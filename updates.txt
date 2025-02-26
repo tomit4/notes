@@ -721,3 +721,7 @@ doas pacman -S pacman-static
 02/23/2025
 Install audacity
 doas pacman -S audacity
+
+02/26/2025
+install wireshark-dumpcap.hook
+(See ./custom_hooks/)

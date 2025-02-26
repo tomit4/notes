@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = wireshark-cli
+
+[Action]
+Description = Fixing permissions for dumpcap...
+When = PostTransaction
+Exec = /bin/sh -c 'chgrp wireshark /usr/bin/dumpcap && setcap cap_net_raw,cap_net_admin=ep /usr/bin/dumpcap'
