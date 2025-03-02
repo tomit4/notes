@@ -219,7 +219,8 @@ alias npm-o="npm outdated"
 alias npm-u="npm update"
 alias cargo-l="cargo install --list"
 alias cargo-u="cargo install-update -a" # requires cargo-update crate
-alias {pacquery,pacgrep,pacq}="pacman -Q | grep $1"
+alias {pacquery,pacq}="pacman -Q"
+alias {pacsearch,pacs}="pacman -Ss"
 alias find-empty='find . -depth -empty'
 alias rmdir-a='find . -depth -empty -delete'
 alias paclogs="bat /var/log/pacman.log"
@@ -396,7 +397,7 @@ alias unu="upnup"
 source $HOME/.linodes/.ips
 source $HOME/.k_hidden
 
-# source $HOME/.n_hidden
-# alias "${scomm}"='cd "${secdir}" && mmpv * && home'
-# alias "${scomm2}"='mmpv ${secvid} && home'
-# alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
+source $HOME/.n_hidden
+alias "${scomm}"='cd "${secdir}" && mmpv * && home'
+alias "${scomm2}"='mmpv ${secvid} && home'
+alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
