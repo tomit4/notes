@@ -7,8 +7,7 @@
   filter: invert(100%);
 }
 
-#viewerContainer,
-body {
+#viewerContainer {
   background-color: #121212 !important;
 }
 
