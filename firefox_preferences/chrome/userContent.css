@@ -3,6 +3,29 @@
 }
 
 #viewerContainer > #viewer .page > .canvasWrapper > canvas {
-    filter: grayscale(100%);
-    filter: invert(100%);
+  filter: grayscale(100%);
+  filter: invert(100%);
 }
+
+#viewerContainer,
+body {
+  background-color: #121212 !important;
+}
+
+/* #toolbarContainer { */
+/* background-color: #4b4b4b !important; */
+/* } */
+
+/* .pdfViewer { */
+/* background-color: #181818 !important; */
+/* } */
+
+/* #sidebarContainer { */
+/* background-color: #202020 !important; */
+/* } */
+
+/* #outlineView, */
+/* #thumbnailView, */
+/* #attachmentsView { */
+/* color: #ffffff !important; */
+/* } */
