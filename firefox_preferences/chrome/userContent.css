@@ -15,13 +15,13 @@
 /* background-color: #4b4b4b !important; */
 /* } */
 
-/* .pdfViewer { */
-/* background-color: #181818 !important; */
-/* } */
+.pdfViewer {
+  background-color: #181818 !important;
+}
 
-/* #sidebarContainer { */
-/* background-color: #202020 !important; */
-/* } */
+#sidebarContainer {
+  background-color: #202020 !important;
+}
 
 /* #outlineView, */
 /* #thumbnailView, */
