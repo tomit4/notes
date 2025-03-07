@@ -175,6 +175,16 @@ matches:
     force_clipboard: true
     replace: "$$ x = \\frac{-(b) \\pm \\sqrt{(b)^2 - 4(a)(c)}}{2(a)} $$"
 
+  # prints out latex piecewise function
+  - trigger: ";piece"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/piecewise ; echo ''"
+
   - trigger: ";<h1"
     force_clipboard: true
     replace: "<h1> </h1>"
