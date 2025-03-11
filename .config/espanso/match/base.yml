@@ -177,7 +177,7 @@ matches:
 
   - trigger: ";slope"
     force_clipboard: true
-    replace: "$$ m = \\frac{y_2 - y_1}{x_2 - x_1}  $$"
+    replace: "$$ m = \\frac{y_2 - y_1}{x_2 - x_1} $$"
 
   # prints out latex piecewise function
   - trigger: ";piece"
