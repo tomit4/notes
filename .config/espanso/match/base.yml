@@ -90,7 +90,7 @@ matches:
     force_clipboard: true
     replace: "source $HOME/.sdrc && cd $sdir && ls"
 
-  - trigger: ";for"
+  - trigger: ";forl"
     force_clipboard: true
     replace: "for (;;) {}"
 
@@ -178,6 +178,14 @@ matches:
   - trigger: ";slope"
     force_clipboard: true
     replace: "$$ m = \\frac{y_2 - y_1}{x_2 - x_1} $$"
+
+  - trigger: ";point"
+    force_clipboard: true
+    replace: "$$ y = y_1 + m(x - x_1) $$"
+
+  - trigger: ";form"
+    force_clipboard: true
+    replace: "$$ y = mx + b $$"
 
   # prints out latex piecewise function
   - trigger: ";piece"
