@@ -4,7 +4,7 @@ cat <<EOM
 \$$
 f(x) =
 \begin{cases}
-x - 3 & \text{if } x \geq 3 \\
+x - 3 & \text{if } x \geq 3 \\\\
 -(x - 3) & \text{if } x < 3
 \end{cases}
 \$$
