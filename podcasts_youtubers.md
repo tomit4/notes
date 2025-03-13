@@ -107,6 +107,7 @@
 - [Frontend Masters]()
 - [Jack Herrington]()
 - [James Q Quick]()
+- [Julia Undeutsch]()
 - [Kent C. Dodds]()
 - [Kevin Powell]()
 - [Matt Pocock]()
@@ -193,6 +194,7 @@
 - [Deepti Talesra]()
 - [Abdul Bari]()
 - [Michael Sambol]()
+- [mycodeschool]()
 
 ### Political
 
@@ -318,6 +320,12 @@
 - [Numberphile]()
 - [Professor Leonard]()
 - [The Math Sorceror]()
+- [Kimberly Brehm]()
+- [Jonathan Noel]()
+- [Mathispower4u]()
+- [PatrickJ]()
+- [Essence of calculus]()
+- [TrevTutor]()
 
 ### Fantasy/Sci Fi Book Reviews
 
