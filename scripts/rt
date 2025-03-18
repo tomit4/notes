@@ -3,7 +3,7 @@
 main() {
     if pgrep -x "openvpn" >/dev/null; then
         IPV4=$(ip addr show dev tun0 | grep inet | awk '{print $2}' | cut -d/ -f1 | head -n 1)
-        /usr/bin/rtorrent -b "$IPV4"
+        $(which rtorrent) -b "$IPV4"
     else
         echo "openvpn is not running. please start your VPN first."
         exit 1
