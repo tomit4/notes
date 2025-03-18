@@ -250,7 +250,6 @@ alias {mnb,nb-m}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/my
 alias {ynb,nb-y}="/usr/bin/cp $HOME/.config/newsboat/yt_urls $HOME/.config/newsboat/urls && newsboat"
 alias {rnb,nb-r}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/reddit_urls $HOME/.config/newsboat/urls && newsboat"
 alias {tootnb,mastnb}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/mastodon_urls $HOME/.config/newsboat/urls && newsboat"
-alias rt="rtorrent"
 alias rt-rs="doas rm -r watch session && mkdir watch session"
 alias slink="streamlink"
 alias {epub,fbreader}="gobble FBReader"
