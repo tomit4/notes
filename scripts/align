@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cat <<EOM
+\$$
+\begin{align*}
+\end{align*}
+\$$
+EOM
