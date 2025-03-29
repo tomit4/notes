@@ -50,8 +50,8 @@ vim.keymap.set("n", "<C-l>", "<c-w>:wincmd l<CR>", {})
 -- nv creates new vertical split
 vim.keymap.set("n", "nv", ":vnew", { silent = true })
 
--- shift + p invokes PackerSync
-vim.keymap.set("n", "<S-p>", "<c-w>:PaqSync<CR>", {})
+-- shift + p invokes Lazy sync
+vim.keymap.set("n", "<S-p>", "<c-w>:Lazy sync<CR>", {})
 
 -- control + t enable transparency
 vim.keymap.set("n", "<leader>t", "<c-w>:lua ColorMyPencils()<CR>", {})
