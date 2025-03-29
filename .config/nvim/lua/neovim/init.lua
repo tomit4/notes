@@ -52,7 +52,6 @@ require("lazy").setup({
 		{ "tpope/vim-fugitive" },
 		{ "tpope/vim-surround", keys = { "cs", "ds", "ys" } },
 		{ "lambdalisue/suda.vim" },
-		{ "iamcco/markdown-preview.nvim", build = ":call mkdp#util#install()" },
 		{ "junegunn/fzf.vim" },
 		{ "junegunn/gv.vim" },
 		{ "kien/ctrlp.vim" },
@@ -61,7 +60,17 @@ require("lazy").setup({
 		{ "williamboman/mason.nvim", event = "VeryLazy" },
 		{ "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
 		{ "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" } },
-
+		{
+			"iamcco/markdown-preview.nvim",
+			cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+			build = "cd app && npm install && git restore .",
+			-- or if you use yarn: (I have not checked this, I use npm)
+			-- build = "cd app && yarn install && git restore .",
+			init = function()
+				vim.g.mkdp_filetypes = { "markdown" }
+			end,
+			ft = { "markdown" },
+		},
 		-- Autocompletion/Snippets
 		{ "hrsh7th/nvim-cmp" },
 		{ "hrsh7th/cmp-buffer" },
@@ -110,6 +119,10 @@ require("lazy").setup({
 	},
 	ui = {
 		border = "rounded",
+		size = {
+			width = 0.8,
+			height = 0.8,
+		},
 	},
 	performance = {
 		rtp = {
