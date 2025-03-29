@@ -6,7 +6,12 @@ require("lualine").setup({
 	options = { theme = "nord" },
 	sections = {
 		lualine_x = {
-			{ show_codeium_status },
+			{
+				show_codeium_status,
+				cond = function()
+					return vim.bo.filetype ~= "TelescopePrompt"
+				end,
+			},
 		},
 	},
 })
