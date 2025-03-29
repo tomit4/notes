@@ -82,7 +82,7 @@ return {
 		local vue_typescript_plugin = "/usr/lib/node_modules/@vue/language-server"
 			.. "/usr/lib/node_modules/@vue/typescript-plugin"
 
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
 			init_options = {
 				plugins = {
 					{
