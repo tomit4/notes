@@ -19,7 +19,6 @@ require("config.options")
 
 require("lazy").setup({
 	spec = {
-
 		{ import = "plugins" },
 		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", event = "BufReadPost" },
 		{ "nvim-treesitter/playground" },
@@ -99,6 +98,9 @@ require("lazy").setup({
 	defaults = {
 		lazy = false,
 		version = false,
+	},
+	change_detection = {
+		notify = false,
 	},
 	checker = {
 		enabled = true,
