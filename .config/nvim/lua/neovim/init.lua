@@ -97,28 +97,6 @@ require("lazy").setup({
 				})
 			end,
 		},
-		defaults = {
-			lazy = false,
-			version = false,
-		},
-		checker = {
-			enabled = true,
-			concurrency = 1,
-			frequency = 86400,
-			notify = false,
-		},
-		performance = {
-			rtp = {
-				disabled_plugins = {
-					"gzip",
-					"tarPlugin",
-					"tohtml",
-					"tutor",
-					"zipPlugin",
-					"netrwPlugin", -- Only disable if not using netrw
-				},
-			},
-		},
 	},
 	defaults = {
 		lazy = false,
