@@ -14,11 +14,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("neovim.remap")
-require("neovim.set")
+require("config.keymaps")
+require("config.options")
 
 require("lazy").setup({
 	spec = {
+
+		{ import = "plugins" },
 		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", event = "BufReadPost" },
 		{ "nvim-treesitter/playground" },
 		{
@@ -28,34 +30,22 @@ require("lazy").setup({
 			end,
 		},
 		{ "preservim/nerdcommenter", event = "VeryLazy" },
-		{ "nvim-lualine/lualine.nvim", event = "VeryLazy" },
 		{ "kyazdani42/nvim-web-devicons", opt = true, event = "VeryLazy" },
-		{ "kyazdani42/nvim-tree.lua", cmd = { "NvimTreeToggle" } },
 		{ "psliwka/vim-smoothie", event = "VeryLazy" },
-		{ "mg979/vim-visual-multi", keys = { "<C-j>", "<C-k>" } },
-		{ "lukas-reineke/indent-blankline.nvim", event = "BufRead" },
+		{ "mg979/vim-visual-multi" },
 		{ "airblade/vim-gitgutter", event = "BufReadPre" },
-		{ "f-person/git-blame.nvim", cmd = { "GitBlameToggle" } },
 		{ "kkoomen/vim-doge", build = ":call doge#install()" },
-		{ "norcalli/nvim-colorizer.lua", cmd = { "ColorizerToggle" } },
-		{ "windwp/nvim-autopairs", event = "InsertEnter" },
 		{ "simeji/winresizer" },
-		{ "stevearc/conform.nvim" },
 		{ "rhysd/vim-clang-format" },
 		{ "sangdol/mintabline.vim" },
 		{ "nvim-lua/plenary.nvim" },
-		{ "ThePrimeagen/harpoon" },
-		{
-			"nvim-telescope/telescope.nvim",
-			tag = "0.1.0",
-		},
 		{ "tpope/vim-fugitive" },
 		{ "tpope/vim-surround", keys = { "cs", "ds", "ys" } },
 		{ "lambdalisue/suda.vim" },
+		{ "junegunn/fzf" },
 		{ "junegunn/fzf.vim" },
 		{ "junegunn/gv.vim" },
 		{ "kien/ctrlp.vim" },
-		{ "rinx/nvim-ripgrep" },
 		{ "mbbill/undotree", cmd = { "UndotreeToggle" } },
 		{ "williamboman/mason.nvim", event = "VeryLazy" },
 		{ "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
@@ -88,7 +78,6 @@ require("lazy").setup({
 		{ "ray-x/guihua.lua" },
 		-- rustlang
 		{ "rust-lang/rust.vim" },
-		{ "saecki/crates.nvim" },
 		-- code snippet screenshots
 		-- capture code snippets using :Silicon,
 		-- in Visual mode highlight then enter command

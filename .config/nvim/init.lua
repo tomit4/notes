@@ -1,2 +1,2 @@
-require("neovim")
+require("config.lazy")
 vim.loader.enable()

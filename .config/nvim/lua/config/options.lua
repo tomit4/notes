@@ -40,6 +40,8 @@ vim.opt.cursorcolumn = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.opt.cursorcolumn = true
+
 -- Removes trailing spaces
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
@@ -112,6 +114,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 	end,
 })
 
+-- Automatically closes Nvim tree if last window open
+vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
+
 -- turns off LSP semantic tokens by default
 -- vim.api.nvim_create_autocmd("LspAttach", {
 -- callback = function(args)
@@ -148,3 +153,23 @@ augroup END
 vim.g.codeium_disable_bindings = 1
 -- codeium enable(1)/disable(0) by default
 vim.g.codeium_enabled = 0
+
+-- Markdown Previewer settings
+vim.g.mkdp_browser = "librewolf"
+vim.g.mkdp_theme = "dark"
+
+-- Create Default Mappings for NerdCommenter
+vim.g.NERDCreateDefaultMappings = 1
+-- Add spaces after NerdCommenter delimiters by default
+vim.g.NERDSpaceDelims = 1
+-- Enable Comments with Italics
+-- vim.cmd[[highlight Comment cterm=italic gui=italic]]
+
+vim.g.rainbow_active = 1
+
+-- UndoTree Settings
+vim.g.undotree_DiffAutoOpen = 0
+vim.g.undotree_SetFocusWhenToggle = 1
+
+-- Vim Smoothie Settings
+vim.g.smoothie_experimental_mappings = 1
