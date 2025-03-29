@@ -1,10 +1,10 @@
 local lsp = require("lsp-zero")
 local lspconfig = require("lspconfig")
 local cmp = require("cmp")
-lsp.preset("recommended")
 require("mason").setup()
 
-lsp.ensure_installed({
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+local servers = {
 	"bashls",
 	"biome",
 	"clangd",
@@ -12,14 +12,24 @@ lsp.ensure_installed({
 	"dockerls",
 	"emmet_ls",
 	"eslint",
-	"html",
+	"gopls",
+	"jqls",
 	"lua_ls",
+	"pyright",
 	"quick_lint_js",
 	"rust_analyzer",
+	"stylelint_lsp",
 	"svelte",
 	"ts_ls",
-	"volar",
 	"zls",
+}
+
+for _, server in ipairs(servers) do
+	lspconfig[server].setup({})
+end
+
+require("mason-lspconfig").setup({
+	ensure_installed = servers,
 })
 
 cmp.setup({
@@ -27,16 +37,22 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
-})
-
-lsp.set_preferences({
-	suggest_lsp_servers = false,
-	sign_icons = {
-		error = "E",
-		warn = "W",
-		hint = "H",
-		info = "I",
-	},
+	sources = cmp.config.sources({
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
+		{ name = "buffer" },
+		{ name = "path" },
+		{ name = "vsnip" },
+	}),
+	mapping = cmp.mapping.preset.insert({
+		["<Up>"] = cmp.mapping.select_prev_item(),
+		["<Down>"] = cmp.mapping.select_next_item(),
+		["<C-b>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	}),
 })
 
 -- function that is used with keybinding cm to toggle autocompletion
@@ -76,42 +92,34 @@ vim.diagnostic.config({
 vim.keymap.set("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- LSP Specific Settings
--- Volar TypeScript Config (turn off for Vue with Vanilla JS)
-require("mason-lspconfig").setup_handlers({
-	function(server_name)
-		local server_config = {}
-		if server_name == "volar" then
-			server_config.filetypes = { "vue", "ts_ls", "javascript" }
-			lspconfig.volar.setup({
-				settings = {
-					["volar.takeOverMode.enabled"] = true,
-				},
-			})
-		end
-		lspconfig.rust_analyzer.setup({
-			settings = {
-				["rust-analyzer"] = {
-					procMacro = {
-						ignored = {
-							leptos_macro = {
-								"server",
-							},
-						},
-					},
-					rustfmt = {
-						overrideCommand = {
-							"leptosfmt",
-							"--stdin",
-							"--rustfmt",
-						},
-						edition = { "2021" },
-					},
-					cargo = {
-						allFeatures = true,
-					},
-				},
+-- require("mason-lspconfig").setup_handlers({}
+
+-- Vue TypeScript Setup
+-- https://lsp-zero.netlify.app/blog/configure-volar-v2.html
+-- NOTE: Don't install volar through Mason, this is done manually:
+-- npm install -g @vue/language-server
+-- npm install -g @vue/typescript-plugin
+local vue_typescript_plugin = "/usr/lib/node_modules"
+	.. "/usr/lib/node_modules/@vue/language-server"
+	.. "/usr/lib/node_modules/@vue/typescript-plugin"
+
+lspconfig.ts_ls.setup({
+	init_options = {
+		plugins = {
+			{
+				name = "@vue/typescript-plugin",
+				location = vue_typescript_plugin,
+				languages = { "javascript", "typescript", "vue" },
 			},
-		})
-		lspconfig[server_name].setup(server_config)
-	end,
+		},
+	},
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue",
+	},
 })

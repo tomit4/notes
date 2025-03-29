@@ -146,5 +146,5 @@ augroup END
 
 -- codeium disable default keybindings
 vim.g.codeium_disable_bindings = 1
--- codeium enable(1)/disable(0) by default
+-- codeium disable by default
 vim.g.codeium_enabled = 0

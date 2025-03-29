@@ -729,3 +729,8 @@ install wireshark-dumpcap.hook
 03/04/2025
 Adjust ~/.gitconfig according to
 https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
+03/28/2025
+Install @vue/typescript-plugin and language-server:
+doas npm install -g @vue/typescript-plugin
+doas npm install -g @vue/language-server

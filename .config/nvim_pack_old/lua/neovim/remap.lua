@@ -51,7 +51,7 @@ vim.keymap.set("n", "<C-l>", "<c-w>:wincmd l<CR>", {})
 vim.keymap.set("n", "nv", ":vnew", { silent = true })
 
 -- shift + p invokes PackerSync
-vim.keymap.set("n", "<S-p>", "<c-w>:PaqSync<CR>", {})
+vim.keymap.set("n", "<S-p>", "<c-w>:PackerSync<CR>", {})
 
 -- control + t enable transparency
 vim.keymap.set("n", "<leader>t", "<c-w>:lua ColorMyPencils()<CR>", {})
@@ -141,13 +141,13 @@ vim.keymap.set("n", "gD", function()
 end, bufopts)
 
 -- dap Keybindings
--- vim.keymap.set("n", "<leader>dbp", ":lua require'dap'.toggle_breakpoint()")
--- vim.keymap.set("n", "<leader>dco", ":lua require'dap'.continue()")
--- vim.keymap.set("n", "<leader>dov", ":lua require'dap'.step_over()")
--- vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()")
--- vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
--- vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")
--- vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
+vim.keymap.set("n", "<leader>dbp", ":lua require'dap'.toggle_breakpoint()")
+vim.keymap.set("n", "<leader>dco", ":lua require'dap'.continue()")
+vim.keymap.set("n", "<leader>dov", ":lua require'dap'.step_over()")
+vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()")
+vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
+vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")
+vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
 --
 -- codeium remappings
 vim.keymap.set("i", "<A-tab>", function()
