@@ -218,6 +218,15 @@ matches:
         params:
           cmd: "~/scripts/align ; echo ''"
 
+  - trigger: ";matrix"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "~/scripts/matrix ; echo ''"
+
   - trigger: ";<h1"
     force_clipboard: true
     replace: "<h1> </h1>"

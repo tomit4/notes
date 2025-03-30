@@ -156,7 +156,7 @@ vim.g.codeium_enabled = 0
 
 -- Markdown Previewer settings
 vim.g.mkdp_browser = "librewolf"
-vim.g.mkdp_theme = "dark"
+vim.g.mkdp_theme = "light"
 
 -- Create Default Mappings for NerdCommenter
 vim.g.NERDCreateDefaultMappings = 1

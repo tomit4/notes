@@ -38,7 +38,6 @@ return {
 				"rust",
 				"vim",
 				"vue",
-				"yaml",
 				"zig",
 			},
 
