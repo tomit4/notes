@@ -3,8 +3,8 @@
 cat <<EOM
 \$$
 \left[\begin{array}{cc|c}
-a & b & p \\
-c & d & q \\
+a & b & p \\\\
+c & d & q \\\\
 \end{array}\right]
 \$$
 EOM
