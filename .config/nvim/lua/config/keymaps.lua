@@ -174,3 +174,9 @@ vim.keymap.set("n", "<A-k>", "<c-w>:m .-2<CR>==")
 vim.keymap.set("n", "<A-j>", "<c-w>:m .+1<CR>==")
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+
+-- always paste text on new line
+-- below
+vim.api.nvim_set_keymap("n", "p", "o<Esc>p", { noremap = true, silent = true })
+-- above
+-- vim.api.nvim_set_keymap("n", "P", "O<Esc>P", { noremap = true, silent = true })
