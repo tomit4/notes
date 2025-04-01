@@ -177,6 +177,6 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- always paste text on new line
 -- below
-vim.api.nvim_set_keymap("n", "p", "o<Esc>p", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "p", "o<Esc>p", { noremap = true, silent = true })
 -- above
 -- vim.api.nvim_set_keymap("n", "P", "O<Esc>P", { noremap = true, silent = true })
