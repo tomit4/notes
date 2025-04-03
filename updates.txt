@@ -734,3 +734,10 @@ https://blog.gitbutler.com/how-git-core-devs-configure-git/
 Install @vue/typescript-plugin and language-server:
 doas npm install -g @vue/typescript-plugin
 doas npm install -g @vue/language-server
+
+04/03/2025
+Install chromium-extension-web-store
+doas pacman -S chromium-extension-web-store
+And change flag in chrome:
+chrome://flags/#extension-mime-request-handling
+to Always prompt for install if you are using ungoogled-chromium
