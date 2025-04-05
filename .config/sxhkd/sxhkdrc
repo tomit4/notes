@@ -169,7 +169,7 @@ super + z
 super + f
     librewolf &
 super + c
-    chromium &
+    chromium --password-store=basic %U &
 super + i
     inkscape &
 super + g
