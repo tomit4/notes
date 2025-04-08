@@ -741,3 +741,9 @@ doas pacman -S chromium-extension-web-store
 And change flag in chrome:
 chrome://flags/#extension-mime-request-handling
 to Always prompt for install if you are using ungoogled-chromium
+
+04/08/2025
+Update mirrorlist as clarkson.edu is out of date
+Edit the /etc/pacman.d/mirrorlist and comment out the clarkson.edu mirror for now
+Remove calibre from extra and replace with omniverse
+doas pacman -Rs calibre && doas pacman -S omniverse/calibre
