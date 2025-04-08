@@ -747,3 +747,5 @@ Update mirrorlist as clarkson.edu is out of date
 Edit the /etc/pacman.d/mirrorlist and comment out the clarkson.edu mirror for now
 Remove calibre from extra and replace with omniverse
 doas pacman -Rs calibre && doas pacman -S omniverse/calibre
+Remove cpu-x
+doas pacman -Rs cpu-x
