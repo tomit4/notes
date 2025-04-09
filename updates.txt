@@ -749,3 +749,6 @@ Remove calibre from extra and replace with omniverse
 doas pacman -Rs calibre && doas pacman -S omniverse/calibre
 Remove cpu-x
 doas pacman -Rs cpu-x
+Reinstall pug-cli
+paru -Rs nodejs-pug-cli
+doas npm install -g pug-cli
