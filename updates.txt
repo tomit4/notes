@@ -754,3 +754,5 @@ paru -Rs nodejs-pug-cli
 doas npm install -g pug-cli
 Install js-beautify
 doas npm install -g js-beautify
+Reinstall html-minifier and uglify-js
+doas npm uninstall -g html-minifier uglify-js && doas npm install -g html-minifier uglify-js
