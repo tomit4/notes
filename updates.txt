@@ -752,3 +752,5 @@ doas pacman -Rs cpu-x
 Reinstall pug-cli
 paru -Rs nodejs-pug-cli
 doas npm install -g pug-cli
+Install js-beautify
+doas npm install -g js-beautify
