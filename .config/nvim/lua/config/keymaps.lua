@@ -148,26 +148,26 @@ end, bufopts)
 -- vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()")
 -- vim.keymap.set("n", "<leader>dcl", ":lua require'dap'.close()")
 -- vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()")
---
+
 -- codeium remappings
-vim.keymap.set("i", "<A-tab>", function()
-	return vim.fn["codeium#Accept"]()
-end, { expr = true })
-vim.keymap.set("i", "<C-right>", function()
-	return vim.fn["codeium#CycleCompletions"](1)
-end, { expr = true })
-vim.keymap.set("i", "<C-left>", function()
-	return vim.fn["codeium#CycleCompletions"](-2)
-end, { expr = true })
-vim.keymap.set("i", "<C-x>", function()
-	return vim.fn["codeium#Clear"]()
-end, { expr = true })
+-- vim.keymap.set("i", "<A-tab>", function()
+-- return vim.fn["codeium#Accept"]()
+-- end, { expr = true })
+-- vim.keymap.set("i", "<C-right>", function()
+-- return vim.fn["codeium#CycleCompletions"](1)
+-- end, { expr = true })
+-- vim.keymap.set("i", "<C-left>", function()
+-- return vim.fn["codeium#CycleCompletions"](-2)
+-- end, { expr = true })
+-- vim.keymap.set("i", "<C-x>", function()
+-- return vim.fn["codeium#Clear"]()
+-- end, { expr = true })
 
 --toggle codeium on/off
-function Toggle_codeium()
-	vim.g.codeium_enabled = not vim.g.codeium_enabled
-end
-vim.keymap.set("n", "<leader>c", ":lua Toggle_codeium()<cr>", { noremap = true, silent = true })
+-- function Toggle_codeium()
+-- vim.g.codeium_enabled = not vim.g.codeium_enabled
+-- end
+-- vim.keymap.set("n", "<leader>c", ":lua Toggle_codeium()<cr>", { noremap = true, silent = true })
 
 -- move single line or highlighted lines of text up cursor (alt + j/k)
 vim.keymap.set("n", "<A-k>", "<c-w>:m .-2<CR>==")

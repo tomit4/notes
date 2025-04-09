@@ -71,7 +71,7 @@ require("lazy").setup({
 
 		{ "VonHeikemen/lsp-zero.nvim" },
 		-- codeium AI
-		{ "Exafunction/codeium.vim" },
+		-- { "Exafunction/codeium.vim" },
 		-- golang
 		{ "ray-x/go.nvim" },
 		{ "ray-x/guihua.lua" },
