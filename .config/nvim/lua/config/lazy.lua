@@ -46,7 +46,7 @@ require("lazy").setup({
 		{ "junegunn/gv.vim" },
 		{ "kien/ctrlp.vim" },
 		{ "mbbill/undotree", cmd = { "UndotreeToggle" } },
-		{ "williamboman/mason.nvim", event = "VeryLazy" },
+		{ "williamboman/mason.nvim", event = "VeryLazy", opts = { ui = { border = "rounded" } } },
 		{ "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
 		{ "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" } },
 		{
