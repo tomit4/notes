@@ -756,3 +756,8 @@ Install js-beautify
 doas npm install -g js-beautify
 Reinstall html-minifier and uglify-js
 doas npm uninstall -g html-minifier uglify-js && doas npm install -g html-minifier uglify-js
+
+04/15/2025
+Update to the latest minor version of paru:
+Follow simple instructions on:
+https://github.com/Morganamilo/paru
