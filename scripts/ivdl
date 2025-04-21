@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+video_id=$(echo "$1" | grep -oE 'v=([a-zA-Z0-9_-]{11})' | cut -d= -f2)
+
+youtube_url="https://www.youtube.com/watch?v=$video_id"
+
+yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4 "$youtube_url"
