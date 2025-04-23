@@ -358,7 +358,7 @@ matches:
   # Routes to Project Zomboid Map
   - trigger: ";zmap"
     force_clipboard: true
-    replace: "https://map.projectzomboid.com/"
+    replace: "https://b42map.com/"
 
   # Routes to Project Zomboid Wiki
   - trigger: ";zwiki"
