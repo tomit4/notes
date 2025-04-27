@@ -14,6 +14,7 @@ local servers = {
 	"rust_analyzer",
 	"stylelint_lsp",
 	"svelte",
+	"tinymist",
 	"ts_ls",
 	"zls",
 }
