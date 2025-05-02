@@ -766,3 +766,7 @@ https://github.com/Morganamilo/paru
 Install typst
 doas pacman -S typst
 And make sure to copy in your new nvim configs to ensure proper lsp and previewer plugin are installed.
+
+05/02/2025
+Remove rest and upgrade
+doas pacman -Rs rest && doas pacman -Syu
