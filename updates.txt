@@ -770,3 +770,8 @@ And make sure to copy in your new nvim configs to ensure proper lsp and previewe
 05/02/2025
 Remove rest and upgrade
 doas pacman -Rs rest && doas pacman -Syu
+
+05/07/2025
+Install new theme
+doas pacman -S arc-gtk-theme arc-icon-theme gtk-engine-murrine gnome-themes-extra
+Get as much from world/ as possible and set it up in lxappearance (papirus-icon-theme is kind of broken atm)
