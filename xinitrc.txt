@@ -47,6 +47,9 @@ xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 redshift -O 5000 &
 
 picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
+
+# GTK relies on this for icon themes
+export GTK_ICON_THEME=Papirus-Dark
 # Start applets, daemons, etc.
 # diskie
 # nm-applet
