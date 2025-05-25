@@ -775,7 +775,10 @@ doas pacman -Rs rest && doas pacman -Syu
 Install new theme
 doas pacman -S arc-gtk-theme arc-icon-theme gtk-engine-murrine gnome-themes-extra
 Get as much from world/ as possible and set it up in lxappearance (papirus-icon-theme is kind of broken atm)
-
 05/21/2025
 Uninstall redis:
 doas pacman -Rs valkey redis-runit && doas rm /run/runit/service/redis
+
+05/25/2025
+Uninstall libcpuid-git
+paru -Rs libcpuid-git
