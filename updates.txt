@@ -782,3 +782,7 @@ doas pacman -Rs valkey redis-runit && doas rm /run/runit/service/redis
 05/25/2025
 Uninstall libcpuid-git
 paru -Rs libcpuid-git
+
+05/26/2025
+Reinstall eza until Artix package is fixed:
+doas pacman -Rs eza && cargo install eza --force --features vendored-libgit2
