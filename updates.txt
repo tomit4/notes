@@ -837,3 +837,7 @@ You may have to kill port 53 before this will work.
 
 Test, visit (with browser with no DNS on):
 https://mullvad.net/en/check
+
+Install WebRTC Control on Ungoogled Chromium:
+Use the Chrome Web Store Extension to install WebRTC  Control:
+https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
