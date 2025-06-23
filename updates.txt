@@ -792,21 +792,36 @@ doas pacman -S transmission-cli
 06/23/2025
 Setup Device Level DNS Resolver:
 
-Install stubby:
-doas pacman -S stubby stubby-runit
+Install stubby and dnsmasq-runit:
+doas pacman -S stubby stubby-runit dnsmasq-runit
 doas ln -s /etc/runit/sv/stubby /run/runit/service/
+doas ln -s /etc/runit/sv/dnsmasq/ /run/runit/service/
 
 Adjust stubby init script to:
 exec chpst -U stubby stubby
 
 Adjust stubby config file:
 doas nvim /etc/stubby/stubby.yml
+Adjust the listen_addresses field:
+listen_addresses:
+  - 127.0.0.1@54
+  - 0::1@54
 Comment out all DEFAULT UPSTREAM and add Mullvad upstream_recursive_servers:
 - address_data: 194.242.2.4
   tls_auth_name: "base.dns.mullvad.net"
 - address_data: 2a07:e340::4
   tls_auth_name: "base.dns.mullvad.net"
 Be aware of yaml's needs for proper indentation (copy and paste from DEFAULT UPSTREAM to be sure)
+
+Adjust dnsmasq config file:
+doas nvim /etc/dnsmasq.conf
+Ensure default port is 53:
+port=53
+Adjust listening server:
+server=127.0.0.1#54
+listen-address=127.0.0.1
+Uncomment no-resolv:
+no-resolv
 
 Edit /etc/resolv.conf to have the following:
 nameserver ::1
@@ -816,5 +831,9 @@ options trust-ad
 And make resolv.conf immutable:
 doas chattr +i /etc/resolv.conf
 
-Start stubby and test, visit (with browser with no DNS on):
+Start stubby and dnsmasq:
+doas sv start stubby && doas sv start dnsmasq
+You may have to kill port 53 before this will work.
+
+Test, visit (with browser with no DNS on):
 https://mullvad.net/en/check
