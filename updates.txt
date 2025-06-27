@@ -838,6 +838,19 @@ You may have to kill port 53 before this will work.
 Test, visit (with browser with no DNS on):
 https://mullvad.net/en/check
 
+To ensure openvpn does not try to overwrite resolv.conf, edit the following script:
+
+doas nvim /etc/update-resolv-conf
+Under up) and down), simply add `exit 0` to first line of each
+
+Also, in the /etc/openvpn/client/ mullvad config file, add:
+
+`
+script-security 2
+down-pre
+pull-filter ignore "dhcp-option DNS"
+`
+
 Install WebRTC Control on Ungoogled Chromium:
 Use the Chrome Web Store Extension to install WebRTC  Control:
 https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
