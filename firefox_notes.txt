@@ -176,3 +176,10 @@ https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/
 
 In UBlacklist, do the same for the huge ai blacklist, under options/subscriptions, click "Add a subscriptions", and place the filter list in the form:
 https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt
+
+For Android Only (Ironfox/Fennec):
+about:config:
+
+network.trr.mode to 0
+
+(defaults to OS level DNS resolver, set in Android Network settings, Private DNS field, to base.dns.mullvad.net)
