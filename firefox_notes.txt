@@ -140,6 +140,10 @@ In about:config, add these new custom properties (they don't exist by default):
 ui.caretWidth (set to number, and set to 10)
 ui.caretBlinkTime (set to number, and set to 0 to disable blink)
 
+Disable "This Time Search With":
+browser.urlbar.scotchBonnet.enableOverride to false
+
+
 browser.urlbar.maxRichResults to 0 (removes annoying blue search suggestions)
 Go into Ublock Origin, Under Filter List, open Annoyances and click all
 checkboxes (blocks annoying cookie confirmation popups amongst others).

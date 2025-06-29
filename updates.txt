@@ -854,3 +854,8 @@ pull-filter ignore "dhcp-option DNS"
 Install WebRTC Control on Ungoogled Chromium:
 Use the Chrome Web Store Extension to install WebRTC  Control:
 https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
+
+06/29/2025
+Librewolf Update UI:
+about:config
+browser.urlbar.scotchBonnet.enableOverride to false
