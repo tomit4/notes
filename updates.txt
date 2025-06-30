@@ -859,3 +859,18 @@ https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnb
 Librewolf Update UI:
 about:config
 browser.urlbar.scotchBonnet.enableOverride to false
+
+06/30/2025
+Issue with linux-firmware-nvidia occurred on Arch/Artix recently. You'll see something like:
+
+```
+linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad103 exists in filesystem
+linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad104 exists in filesystem
+linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad106 exists in filesystem
+linux-firmware-nvidia: /usr/lib/firmware/nvidia/ad107 exists in filesystem
+```
+
+To resolve, simply reinstall `linux-firmware`:
+
+doas pacman -Rdd linux-firmware && doas pacman -Syu linux-firmware
+
