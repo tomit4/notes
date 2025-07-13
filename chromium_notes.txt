@@ -56,6 +56,14 @@ navigate to the chrome flags page, in the url bar, enter:
 
 chrome://flags
 
+Follow the instructions to get Chromium web store on Ungoogled Chromium:
+
+https://github.com/NeverDecaf/chromium-web-store
+
+For some reason, using this link will allow downloading of extensions but going through a search won't...
+
+https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
+
 Here you will be presented with some options, set the following:
 
 Disable search engine collection (enabled)
@@ -67,5 +75,9 @@ Web Bluetooth (disabled)
 Use the new permissions backend for Web Bluetooth (disabled)
 Vulkan (enabled)
 Auto Dark Mode for Web Contents (enabled)
+
+Install WebRTC Control on Ungoogled Chromium:
+Use the Chrome Web Store Extension to install WebRTC  Control:
+https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
 
 And that should do it. Although I still prefer Librewolf (see firefox_notes.txt), this is about as close as I can get it given my current knowledge of "hardening" ungoogled-chromium.

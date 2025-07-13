@@ -27,6 +27,7 @@ Install Return YouTube Dislike
 Install SponsorBlock for Youtube-Skip Sponsorships (under Misc, enable invidious 3rd party)
 Insall Vue.js devtools
 Install WAVE Evaluation Tool
+Install Wappalyzer
 Install Manjaro Theme (matcha-dark-azul for blue, matcha-dark-sea for green)
 Get Firefox to remember nothing through Preferences setting
 Set Firefox to never visit non  https websites
