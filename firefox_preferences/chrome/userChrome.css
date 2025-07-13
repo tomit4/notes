@@ -2,7 +2,7 @@
  * toolkit.legacyUserProfileCustomizations.stylesheets*/
 
 #urlbar-container {
-  --toolbar-field-focus-border-color: #2c77ac;
+    --toolbar-field-focus-border-color: #2c77ac;
 }
 
 /* #url-go-button, */
@@ -14,80 +14,118 @@
 #reload-button,
 /* #statuspanel, */
 #urlbar-go-button,
-#urlbar-input-container > #page-action-buttons,
+#urlbar-input-container>#page-action-buttons,
 .urlbarView-favicon,
 .tab-icon-image,
-#tabs-newtab-button > .toolbarbutton-icon,
+#tabs-newtab-button>.toolbarbutton-icon,
 /* .tab-label-container, */
 #PanelUI-menu-button,
 .tab-close-button {
-  display: none !important;
+    display: none !important;
 }
 
 #PanelUI-button {
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
 }
 
 #urlbar-input::placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .titlebar-color {
-  background-color: #14161b !important;
+    background-color: #14161b !important;
 }
 
 menubar,
 nav-bar,
-#TabsToolbar > * {
-  background-color: #14161b !important;
+#TabsToolbar>* {
+    background-color: #14161b !important;
 }
 
-toolbar > * {
-  background-color: #22252c !important;
+toolbar>* {
+    background-color: #22252c !important;
 }
 
 .tab-background[selected="true"] {
-  background: #1b1d24 !important;
+    background: #1b1d24 !important;
 }
 
 #urlbar-background {
-  background-color: #14161b !important;
+    background-color: #14161b !important;
 }
 
 #nav-bar toolbarspring {
-  /* min-width: 55px !important; */
-  /* max-width: 65px !important; */
-  min-width: 25px !important;
-  max-width: 35px !important;
+    /* min-width: 55px !important; */
+    /* max-width: 65px !important; */
+    min-width: 25px !important;
+    max-width: 35px !important;
 }
 
 /* cuz mozilla be stupid sometimes */
 #unified-extensions-view {
-  --uei-icon-size: 16px;
-  /* background-color: #22252c !important; */
+    --uei-icon-size: 16px;
+    /* background-color: #22252c !important; */
 }
+
 .unified-extensions-item-menu-button.subviewbutton {
-  padding: 2px !important;
+    padding: 2px !important;
 }
+
 .unified-extensions-item-message-deck {
-  display: none;
+    display: none;
 }
-#unified-extensions-view > vbox > vbox > .unified-extensions-item {
-  padding-block: 0px !important;
+
+#unified-extensions-view>vbox>vbox>.unified-extensions-item {
+    padding-block: 0px !important;
 }
+
 .unified-extensions-item-menu-button {
-  margin-inline-end: 0 !important;
+    margin-inline-end: 0 !important;
 }
+
 .unified-extensions-list .unified-extensions-item-menu-button {
-  margin-inline-end: 8px !important;
+    margin-inline-end: 8px !important;
 }
 
 #unified-extensions-button .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+    list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
 }
 
 #alltabs-button {
     display: none !important;
+}
+
+/* Dark BG on Extensions menu */
+
+/* Set dark background for the Extensions (Unified Extensions) Panel */
+#unified-extensions-view,
+#unified-extensions-view .panel-subview-body,
+#unified-extensions-view .unified-extensions-item,
+#unified-extensions-view .unified-extensions-item-action-button,
+#unified-extensions-view .unified-extensions-item-menu-button,
+#unified-extensions-view .unified-extensions-item-message-deck,
+#unified-extensions-view .unified-extensions-item-content,
+#unified-extensions-view .unified-extensions-item-name,
+#unified-extensions-view .unified-extensions-item-description {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+}
+
+/* Optional: Darken hover and active states too */
+.unified-extensions-item:hover {
+    background-color: #2a2a2a !important;
+}
+
+.unified-extensions-item:active {
+    background-color: #333333 !important;
+}
+
+/* Fix popup background if not inheriting dark color */
+.panel-viewstack,
+.panel-subview-body,
+#unified-extensions-panel {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
 }
