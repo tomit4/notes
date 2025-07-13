@@ -1,6 +1,8 @@
 #! /bin/sh
 bspc rule -r "*" &
 
+redshift -O 5000 &
+
 # picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # feh --bg-fill /home/brian/Pictures/nord_mountains.png &
 feh --bg-fill /home/brian/Pictures/leaves.jpg &
