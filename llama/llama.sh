@@ -11,11 +11,11 @@
 # Good for chat, but also has better storytelling capabilities
 # ./main -ngl 20 -m ./models/TheBloke/MythoMax-L2-13B-GGUF/mythomax-l2-13b.Q4_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -ins
 
-# Silicon Maid (medium)
-# ./main -ngl 30 -m ./models/TheBloke/Silicon-Maid-7B-GGUF/silicon-maid-7b.Q4_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -ins
-
 # Silicon Maid (large)
 # ./main -ngl 25 -m ./models/TheBloke/Silicon-Maid-7B-GGUF/silicon-maid-7b.Q5_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -ins
+#
+## Silicon Maid (medium)
+# ./main -ngl 30 -m ./models/TheBloke/Silicon-Maid-7B-GGUF/silicon-maid-7b.Q4_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -cnv --chat-template chatml
 
 # Kunoichi-7B (medium)
-./main -ngl 30 -m ./models/TheBloke/Kunoichi-7B-GGUF/kunoichi-7b.Q4_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -ins
+./main -ngl 30 -m ./models/TheBloke/Kunoichi-7B-GGUF/kunoichi-7b.Q4_K_M.gguf --color -c 4096 --temp 0.1 --repeat_penalty 1.1 --threads 6 -n -1 -i -cnv --chat-template chatml
