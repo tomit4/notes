@@ -1,16 +1,28 @@
 ## Getting NVIDIA To Work On Wayland (2023/2024 Edition)
 
-Wayland notoriously doesn't work with NVIDIA GPUs, and there's alot of documentation on this already.
+Wayland notoriously doesn't work with NVIDIA GPUs, and there's alot of
+documentation on this already.
 
-This .txt file is simply to document what I've gotten to work on Wayland with a NVIDIA 2060 GPU thus far. It is impressive what is possible now, though there is still some visual artifacting that happens on the riverwm at the time of this writing (01/01/2024).
+This .txt file is simply to document what I've gotten to work on Wayland with a
+NVIDIA 2060 GPU thus far. It is impressive what is possible now, though there is
+still some visual artifacting that happens on the riverwm at the time of this
+writing (01/01/2024).
 
-For me there are a few requirements for me to completely convert over to Wayland.
+For me there are a few requirements for me to completely convert over to
+Wayland.
 
 **REQUIREMENTS:**
 
-1. I have to use NVIDIA (I'm not getting an AMD GPU just to contribute to ewaste for this alone, NVIDIA will have to continue to work towards getting Wayland to work if they don't want to incur Linus' wrath on this one).
-2. Tiling Window Manager. I just can't go back to using a Floating DE, TWM's are just better.
-3. Minimal RAM usage. I prefer my system to be as light weight on resource usage as possible. This means the TWM, Terminal Emulator, Compositor, must be as light weight as possible. This is not a hard rule, ultimately I need a system that can do a lot, but I don't want my background processes running all the time consuming more RAM than is necessary.
+1. I have to use NVIDIA (I'm not getting an AMD GPU just to contribute to ewaste
+   for this alone, NVIDIA will have to continue to work towards getting Wayland
+   to work if they don't want to incur Linus' wrath on this one).
+2. Tiling Window Manager. I just can't go back to using a Floating DE, TWM's are
+   just better.
+3. Minimal RAM usage. I prefer my system to be as light weight on resource usage
+   as possible. This means the TWM, Terminal Emulator, Compositor, must be as
+   light weight as possible. This is not a hard rule, ultimately I need a system
+   that can do a lot, but I don't want my background processes running all the
+   time consuming more RAM than is necessary.
 4. Video Conferences. Zoom/Jitsi via the browser are a must. This is not yet
    tested, but to work properly, I'll be needing this to be stable before
    converting to Wayland.
@@ -25,19 +37,31 @@ For me there are a few requirements for me to completely convert over to Wayland
 3. Cursor Disappears on Typing (exists as config flag in riverwm).
 4. DMENU like application picker (currently experimenting, lots of options).
 5. RedShift Like App (just installed gammastep, gonna experiment).
-6. Xclip Like Clipboard manager for saving to clipboard from terminal without highlighting+ctrl+shift+c...yeah. (currently use catx aliased as xclip -sel clip, see ydotool and/or wtype).
-7. Devour For MPV and other applications (don't need a running terminal taking up screen real estate, needs research).
-8. NeoVim clipboard save (currently doesn't work on Wayland, can simply yank to clipboard in Neovim with single config flag, and works on X11, but not Wayland).
-9. Espanso text expansion (simple, has a wayland, compile, get rid of systemd warnings, and try it out).
+6. Xclip Like Clipboard manager for saving to clipboard from terminal without
+   highlighting+ctrl+shift+c...yeah. (currently use catx aliased as xclip -sel
+   clip, see ydotool and/or wtype).
+7. Devour For MPV and other applications (don't need a running terminal taking
+   up screen real estate, needs research).
+8. NeoVim clipboard save (currently doesn't work on Wayland, can simply yank to
+   clipboard in Neovim with single config flag, and works on X11, but not
+   Wayland).
+9. Espanso text expansion (simple, has a wayland, compile, get rid of systemd
+   warnings, and try it out).
 
 **ALREADY WORKING:**
 
-1. Foot Terminal/RiverWM (lightest weight I could find with most customization, comparable to BSPWM, Suckless Terminal, and Picom in resource usage).
-2. NVIDIA GPU (kind of works, lots of configuration necessary, but I actually can play Cyberpunk 2077). Only issue is bad artifacting/stuttering (pockets of squares/glitching effect on heavy movement on screen, probably have to wait on NVIDIA update for this one to work).
+1. Foot Terminal/RiverWM (lightest weight I could find with most customization,
+   comparable to BSPWM, Suckless Terminal, and Picom in resource usage).
+2. NVIDIA GPU (kind of works, lots of configuration necessary, but I actually
+   can play Cyberpunk 2077). Only issue is bad artifacting/stuttering (pockets
+   of squares/glitching effect on heavy movement on screen, probably have to
+   wait on NVIDIA update for this one to work).
 
 **INSTRUCTIONS IN CASE OF NEED TO DUPLICATE EFFORTS:**
 
-The following is a step by step series of instructions on how to get Wayland working again should you somehow need to reinstall everything (doomsday scenario):
+The following is a step by step series of instructions on how to get Wayland
+working again should you somehow need to reinstall everything (doomsday
+scenario):
 
 Here are the current nvidia packages you have installed:
 
@@ -145,9 +169,8 @@ And add this to the config file:
 options nvidia_drm modeset=1 fbdev=1
 ```
 
-**FLAMESHOT**
-Getting flameshot working was a bit of a pain. Ensure you have installed the
-following:
+**FLAMESHOT** Getting flameshot working was a bit of a pain. Ensure you have
+installed the following:
 
 ```
 flameshot
@@ -196,6 +219,12 @@ programs like keepassxc):
 [[ -z $WAYLAND_DISPLAY && $XDG_VTNR -eq 2 ]] && exec dbus-launch --exit-with-session
 ```
 
+This appears to work better actually:
+
+```
+[[ -z $WAYLAND_DISPLAY && -n $XDG_VTNR && $XDG_VTNR -eq 2 ]] && exec river
+```
+
 **CONCLUSION**
 
 Once all set up, simply switch to a separate tty (ctrl + alt + F<your_choice>).
@@ -207,5 +236,4 @@ eventual migration. Lastly, I'll have to look into how to get river to start up
 in TTY1, as .xinitrc obviously won't work for that...
 
 ```
-
 ```
