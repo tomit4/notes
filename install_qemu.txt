@@ -3,6 +3,8 @@ Installing Qemu on Artix(runit)
 doas pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt libvirt-runit
 
 doas ln -s /etc/runit/sv/libvirtd /run/runit/service
+doas ln -s /etc/runit/sv/virtlogd /run/runit/service
+doas ln -s /etc/runit/sv/virtlockd /run/runit/service
 
 <OPTIONAL: CUSTOM LOGGING SECTION>
 cd /etc/runit/sv/libvirtd/log
@@ -59,6 +61,19 @@ Copy the following into default.xml(also available in notes/virsh):
   </ip>
 </network>
 
+If you are already using dnsmasq with mullvad, you may want to start off without internet:
+
+<network>
+  <name>default</name>
+  <forward mode='nat'/>
+  <dns enable='no' />
+  <ip address='192.168.250.1' netmask='255.255.255.0'>
+    <dhcp>
+        <range start='192.168.250.2' end='192.168.250.254'/>
+    </dhcp>
+  </ip>
+</network>
+
 doas virsh net-define --file default.xml
 
 doas virsh net-start default
@@ -68,3 +83,7 @@ doas virsh net-autostart --network default
 doas sv restart libvirtd
 
 doas sv restart libvirtd/log
+
+doas sv restart virtlockd virtlogd
+
+Keep in mind that if you start without internet, you'll have to drop the host firewall to get it to work. There are ways of getting it to work with ufw and iptables, but I have yet to bother diving further into this.
