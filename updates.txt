@@ -874,3 +874,7 @@ To resolve, simply reinstall `linux-firmware`:
 
 doas pacman -Rdd linux-firmware && doas pacman -Syu linux-firmware
 
+
+08/01/2025
+Install v4l2loopback-dkms and v4l2loopback-utils packages:
+doas pacman -S v4l2loopback-dkms v4l2loopback-utils
