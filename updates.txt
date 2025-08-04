@@ -878,3 +878,11 @@ doas pacman -Rdd linux-firmware && doas pacman -Syu linux-firmware
 08/01/2025
 Install v4l2loopback-dkms and v4l2loopback-utils packages:
 doas pacman -S v4l2loopback-dkms v4l2loopback-utils
+
+08/04/2025
+Install unbound and unbound-runit:
+doas pacman -S unbound unbound-runit
+doas ln -S /etc/runit/sv/unbound /run/runit/service/
+Turn unbound off by default
+cd /etc/runit/sv/unbound && doas touch down
+
