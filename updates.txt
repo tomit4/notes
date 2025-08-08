@@ -886,3 +886,6 @@ doas ln -S /etc/runit/sv/unbound /run/runit/service/
 Turn unbound off by default
 cd /etc/runit/sv/unbound && doas touch down
 
+08/07/2025
+Uninstall unrar and install rar:
+doas pacman -Rs unrar && paru -S rar
