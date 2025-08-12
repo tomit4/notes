@@ -33,7 +33,6 @@ vim.opt.smarttab = true
 vim.opt.ignorecase = true
 vim.opt.cindent = true
 vim.opt.tabstop = 4
-vim.opt.cursorcolumn = true
 -- Disable folds
 -- vim.g.nofoldenable = true
 -- Fix Splitting
@@ -72,7 +71,7 @@ vim.cmd([[set foldmethod=manual]])
 -- vim.opt.textwidth = 80
 -- vim.opt.wrap = true
 -- vim.opt.linebreak = true
-vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
+-- vim.cmd([[au BufRead,BufNewFile *.md setlocal textwidth=80]])
 
 -- max tab characters
 vim.cmd([[let g:mintabline_tab_max_chars=10]])
