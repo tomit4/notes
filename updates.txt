@@ -889,3 +889,20 @@ cd /etc/runit/sv/unbound && doas touch down
 08/07/2025
 Uninstall unrar and install rar:
 doas pacman -Rs unrar && paru -S rar
+
+08/18/2025
+Enable Wireguard for Mullvad
+Mullvad is slowly phasing out OpenVPN, and is encouraging use of Wireguard instead. Firstly install wireguard-tools:
+doas pacman -S wireguard-tools wireguard-runit
+doas ln -S /etc/runit/sv/wireguard /run/runit/service/
+-Go to Mullvad's Website, login, and Generate a wireguard config with the location of your choosing.
+-Once the config is downloaded, edit the file by commenting out the DNS field.
+Login as root:
+su
+And navigate to /etc/wireguard/
+There move the config file from Downloads into /etc/wireguard
+mv /home/$USER/Downloads/us-ch-001.conf /etc/wireguard/
+Start wireguard:
+doas sv start wireguard
+Test it out by going to mullvad's website.
+

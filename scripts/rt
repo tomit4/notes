@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
 
+# OpenVPN Setup
+# main() {
+# if pgrep -x "openvpn" >/dev/null; then
+# IPV4=$(ip addr show dev tun0 | grep inet | awk '{print $2}' | cut -d/ -f1 | head -n 1)
+# $(which rtorrent) -b "$IPV4"
+# else
+# echo "openvpn is not running. please start your VPN first."
+# exit 1
+# fi
+# }
+
+# Wireguard Setup
+IFACE=$(wg show interfaces | awk '{print $1}')
 main() {
-    if pgrep -x "openvpn" >/dev/null; then
-        IPV4=$(ip addr show dev tun0 | grep inet | awk '{print $2}' | cut -d/ -f1 | head -n 1)
+    if ip link show "$IFACE" up >/dev/null 2>&1; then
+        IPV4=$(ip -4 addr show dev "$IFACE" | awk '/inet / {print $2}' | cut -d/ -f1 | head -n 1)
         $(which rtorrent) -b "$IPV4"
     else
-        echo "openvpn is not running. please start your VPN first."
+        echo "wireguard interface $IFACE is not up. please start your VPN first."
         exit 1
     fi
 }
