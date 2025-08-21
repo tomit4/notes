@@ -44,14 +44,14 @@
 }
 
 /* Disable the tooltip that appears when hovering over tabs */
-.tabbrowser-tab:hover .tab-label {
-    pointer-events: none !important;
-}
+/* .tabbrowser-tab:hover .tab-label { */
+/* pointer-events: none !important; */
+/* } */
 
 /* Disable the tooltip completely for all tabs */
-.tabbrowser-tab:hover {
-    visibility: hidden !important;
-}
+/* .tabbrowser-tab:hover { */
+/* visibility: hidden !important; */
+/* } */
 
 menubar,
 nav-bar,
