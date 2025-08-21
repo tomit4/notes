@@ -1,0 +1,43 @@
+There are a couple files you can create in /etc/NetworkManager/conf.d/
+
+That help with privacy/security. One is randomizing your mac address.
+
+touch /etc/NetworkManager/conf.d/wifi_rand_mac.conf
+
+And in there write:
+
+```
+[device-mac-randomization]
+# "yes" is already the default for scanning
+wifi.scan-rand-mac-address=yes
+
+[connection-mac-randomization]
+# Randomize MAC for every ethernet connection
+ethernet.cloned-mac-address=random
+# Generate a random MAC for each Wi-Fi and associate the two permanently.
+wifi.cloned-mac-address=stable
+
+#[main]
+# OpenResolv to get it to work with wireguard
+#rc-manager=resolvconf
+```
+
+The other thing you can do is not have it ping archlinux every few minutes to test connectivity...
+
+touch /etc/NetworkManager/conf.d/20-connectivity.conf
+
+```
+[connectivity]
+enabled=false
+```
+
+Lastly for /etc/NetworkManager/NetworkManager.conf, you can set some basic things up, the main one is not having it set dns (note that if you have dns=none, some things might break unless you have another dns resolver setup, this field allows NetworkManager to set DNS in /etc/resolv.conf, so you may want to comment out that field depending on your settings).
+
+```
+# Configuration file for NetworkManager.
+# See "man 5 NetworkManager.conf" for details.
+[main]
+plugins=keyfile
+hostname-mode=none
+dns=none
+```
