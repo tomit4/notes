@@ -29,8 +29,8 @@ alias config="cd ~/.config && ls"
 alias cache="cd ~/.cache && ls"
 alias svs="cd /etc/runit/sv && ls"
 alias offline="cd ~/Documents/offline_notes && ls"
-alias vpnup="doas sv up wireguard"
-alias vpndown="doas sv down wireguard"
+# alias vpnup="doas sv up wireguard"
+# alias vpndown="doas sv down wireguard"
 alias pihole="docker exec -it pihole-unbound pihole"
 alias Code="cd ~/Documents/Code && ls"
 alias graphics="cd ~/Documents/Graphic_Design && ls"
@@ -195,7 +195,7 @@ alias {mu,mt,mute}="pamixer -t"
 # laptop only currently, records video/audio, simply name filename .mp4 after command:
 alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac"
 # for smaller downloads
-alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -f "bestvideo\*+bestaudio[ext=m4a]/best" -f mp4'
+alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -t mp4'
 alias ytdl-w='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
 # for better resolutions
 # alias ytdl-w='yt-dlp -f webm "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'

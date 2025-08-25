@@ -180,3 +180,10 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 -- vim.api.nvim_set_keymap("n", "p", "o<Esc>p", { noremap = true, silent = true })
 -- above
 -- vim.api.nvim_set_keymap("n", "P", "O<Esc>P", { noremap = true, silent = true })
+--
+
+-- sets 'gx' to open with default browser
+vim.keymap.set("n", "gx", function()
+	local url = vim.fn.expand("<cfile>")
+	vim.system({ "librewolf", url }, { detach = true })
+end, { silent = true })
