@@ -1,0 +1,140 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+requires-python = ">=3.8"
+name = "libretranslate"
+description = "Free and Open Source Machine Translation API. Self-hosted, no limits, no ties to proprietary services."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Piero Toffanin", email = "pt@uav4geo.com" },
+    { name = "LibreTranslate Authors" },
+]
+maintainers = [
+    { name = "Piero Toffanin", email = "pt@uav4geo.com" },
+    { name = "LibreTranslate Authors" },
+]
+keywords = [
+    "Python",
+    "Translate",
+    "Translation",
+    "API",
+]
+classifiers = [
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10"
+]
+dynamic = ["version"]
+
+dependencies = [
+    "argostranslate ==1.9.6",
+    "Flask ==2.2.5",
+    "flask-swagger ==0.2.14",
+    "flask-swagger-ui ==4.11.1",
+    "Flask-Limiter ==2.6.3",
+    "Flask-Babel ==3.1.0",
+    "Flask-Session ==0.4.0",
+    "waitress ==2.1.2",
+    "expiringdict ==1.2.2",
+    "langdetect==1.0.9",
+    "lexilang==1.0.6",
+    "morfessor ==2.0.6",
+    "appdirs ==1.4.4",
+    "APScheduler ==3.9.1",
+    "translatehtml ==1.5.2",
+    "argos-translate-files ==1.4.0",
+    "itsdangerous ==2.1.2",
+    "Werkzeug ==2.3.8",
+    "requests ==2.31.0",
+    "redis ==4.4.4",
+    "numpy <2",
+    "prometheus-client ==0.15.0",
+    "polib ==1.1.1",
+    "packaging ==23.1",
+    "torch ==2.2.0"
+]
+
+[project.scripts]
+libretranslate = "libretranslate.main:main"
+ltmanage = "libretranslate.manage:manage"
+
+
+[project.optional-dependencies]
+test = [
+    "pytest >=7.2.0",
+    "pytest-cov",
+    "pre-commit >=3.0.0",
+    "types-requests",
+    "pip-audit"
+]
+
+
+[project.urls]
+Homepage = "https://libretranslate.com"
+Source = "https://github.com/LibreTranslate/LibreTranslate"
+Documentation = "https://github.com/LibreTranslate/LibreTranslate"
+Tracker = "https://github.com/LibreTranslate/LibreTranslate/issues"
+History = "https://github.com/LibreTranslate/LibreTranslate/releases"
+
+[tool.hatch.build]
+artifacts = ["*.mo"]
+
+# ENVIRONMENTS AND SCRIPTS
+[tool.hatch.envs.default]
+features = [
+    "test",
+]
+post-install-commands = [
+    "pre-commit install",
+]
+
+
+[tool.hatch.envs.default.scripts]
+dev = "python main.py {args}"
+locales = "python scripts/compile_locales.py"
+fmt = [
+    "pre-commit run --all --all-files",
+]
+test = [
+    "fmt",
+    "pytest {args}",
+]
+cov = [
+    "pytest --cov-report html {args}",
+    "python -c 'import webbrowser; webbrowser.open(\"http://0.0.0.0:3000\")'",
+    "python -m http.server 3000 --directory ./htmlcov",
+]
+
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11"]
+
+
+# TOOLS
+[tool.hatch.version]
+path = "VERSION"
+pattern = "^(?P<version>[0-9]*.[0-9]*.[0-9]*)$"
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "-v",
+    "--cov=libretranslate",
+    "--color=yes",
+    "--cov-report=term-missing",
+]
+
+ignore = [
+    "E501", # line too long
+    "A003", # Class attribute is shadowing a python builtin
+    "S101", # Use of `assert` detected
+    "S311", # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "T201", "T203", # remove print and pprint
+    "E402", # Module level import not at top of file
+]

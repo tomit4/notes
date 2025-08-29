@@ -1,0 +1,37 @@
+#   NOTE: Afterwards sh into the docker and install all the models:
+#   docker exec -it <container_id> sh
+#   cd scripts
+#   ./install_models.py
+#   NOTE: You'll need to install a lot of packages using pip, just keep going, eventually the script will work
+services:
+  libretranslate:
+    container_name: libretranslate
+    image: libretranslate/libretranslate:latest
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
+      interval: 10s
+      timeout: 4s
+      retries: 4
+      start_period: 5s
+    ## Uncomment this for logging in docker compose logs
+    # tty: true
+    ## Uncomment above command and define your args if necessary
+    # command: --ssl --ga-id MY-GA-ID --req-limit 100 --char-limit 500
+    ## Uncomment this section and the libretranslate_api_keys volume if you want to backup your API keys
+    # environment:
+    #   - LT_API_KEYS=true
+    #   - LT_API_KEYS_DB_PATH=/app/db/api_keys.db # Same result as `db/api_keys.db` or `./db/api_keys.db`
+    ## Uncomment these vars and libretranslate_models volume to optimize loading time.
+    #   - LT_UPDATE_MODELS=true
+    #   - LT_LOAD_ONLY=en,fr
+    # volumes:
+    #   - libretranslate_api_keys:/app/db
+    # Keep the models in a docker volume, to avoid re-downloading on startup
+    #   - libretranslate_models:/home/libretranslate/.local:rw
+
+# volumes:
+#   libretranslate_api_keys:
+#   libretranslate_models:
