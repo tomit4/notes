@@ -308,6 +308,11 @@ matches:
     force_clipboard: true
     replace: "ping 8.8.8.8"
 
+  # Prepares DDGLite search
+  - trigger: ";lite"
+    force_clipboard: true
+    replace: "https://lite.duckduckgo.com/lite?q="
+
   # Prepares Odysee search
   - trigger: "!ody"
     force_clipboard: true
