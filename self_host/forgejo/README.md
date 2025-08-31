@@ -295,6 +295,27 @@ through which you will mainly be pushing changes via ssh.
 
 ---
 
+## A word on backing up your Forgejo
+
+Eventually you'll want to backup your Forgejo for various reasons. Firstly just
+because it's a good idea to back up pretty much anything. But additionally
+eventually your little $5 per month VPS might be too small for all the repos you
+could be potentially adding to this.
+
+In order to backup your forgejo, you'll want to use `scp`. Make sure you know
+the path to your forgejo (just the path of where you initialized the docker
+container) and of course you'll need to know the username and password that can
+SSH into your VPS. On your home device, just invoke:
+
+```sh
+scp myusername@<my_vps_ip_address>:/path/to/forgejo path/on/myhostmachine
+```
+
+And this will copy all the files in your forgejo to your home machine for you to
+have as a backup.
+
+---
+
 ### Conclusion
 
 And that's it! My apologies if this document feels a bit off the cuff, but as I
