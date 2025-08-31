@@ -1,4 +1,5 @@
 services:
+  # NOTE: Works Great in LibRedirect Extension, in favorite instances write: http://localhost:8080
   redlib:
     image: quay.io/redlib/redlib:latest
     restart: always
