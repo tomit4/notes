@@ -38,3 +38,5 @@ engines:
     disabled: true
   - name: wikipedia
     disabled: true
+ui:
+  center_alignment: true
