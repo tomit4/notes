@@ -909,3 +909,7 @@ Test it out by going to mullvad's website.
 08/29/2025
 Remove duf-git and install duf:
 paru -Rs duf-git && doas pacman -S duf
+
+08/30/2025
+Install pwgen
+doas pacman -S pwgen
