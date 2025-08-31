@@ -1,4 +1,5 @@
 services:
+  # NOTE: Takes up a lot of RAM, only run when needed
   libretranslate:
     container_name: libretranslate
     image: libretranslate/libretranslate:latest-cuda
