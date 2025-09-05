@@ -181,7 +181,7 @@ matches:
 
   - trigger: ";der"
     force_clipboard: true
-    replace: "\\lim\\limits_{h \\to 0}\\frac{f(a + h) - f(a)}{h}"
+    replace: "f'(x) = \\lim\\limits_{h \\to 0}\\frac{f(x + h) - f(x)}{h}"
 
   - trigger: ";quad"
     force_clipboard: true
