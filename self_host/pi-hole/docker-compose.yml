@@ -17,7 +17,8 @@ services:
       - FTLCONF_webserver_api_password=${WEBPASSWORD}
       - FTLCONF_webserver_interface_theme=${WEBTHEME:-default-dark}
       - FTLCONF_dns_upstreams=127.0.0.1#5335
-      - FTLCONF_dns_listeningMode=single
+      # - FTLCONF_dns_listeningMode=single
+      - FTLCONF_dns_listeningMode=all
       - FTLCONF_webserver_port=80
     volumes:
       - etc_pihole-unbound:/etc/pihole:rw
