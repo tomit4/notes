@@ -2,7 +2,7 @@
 use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "CHANGE ME!!!"  # change this!
+  secret_key: "d3ce536cad273a010ca43c7019873041efd3d94e152a1a5fb1f863686fac90a2"  # change this!
   limiter: false  # enable this when running the instance for a public usage on the internet
   image_proxy: true
   bind_address: 0.0.0.0
@@ -37,6 +37,166 @@ engines:
   - name: wikidata
     disabled: true
   - name: wikipedia
+    disabled: true
+  - name: duckduckgo images
+    disabled: false
+  - name: bing images
+    disabled: false
+  - name: brave.images
+    disabled: true
+  - name: google images
+    disabled: false
+  - name: qwant images
+    disabled: true
+  - name: startpage images
+    disabled: true
+  - name: artic
+    disabled: true
+  - name: deviantart
+    disabled: true
+  - name: flickr
+    disabled: true
+  - name: openverse
+    disabled: true
+  - name: pinterest
+    disabled: true
+  - name: public domain image archive
+    disabled: true
+  - name: unsplash
+    disabled: true
+  - name: wikicommons.images
+    disabled: true
+  - name: bing videos
+    disabled: false
+  - name: brave.videos
+    disabled: true
+  - name: google videos
+    disabled: false
+  - name: qwant videos
+    disabled: true
+  - name: duckduckgo videos
+    disabled: false
+  - name: dailymotion
+    disabled: true
+  - name: piped
+    disabled: true
+  - name: sepiasearch
+    disabled: true
+  - name: vimeo
+    disabled: false
+  - name: wikicommons.videos
+    disabled: true
+  - name: youtube
+    disabled: false
+  - name: startpage news
+    disabled: true
+  - name: wikinews
+    disabled: true
+  - name: bing news
+    disabled: true
+  - name: brave.news
+    disabled: true
+  - name: google news
+    disabled: false
+  - name: qwant news
+    disabled: true
+  - name: reuters
+    disabled: true
+  - name: yahoo news
+    disabled: false
+  - name: openstreetmap
+    disabled: false
+  - name: photon
+    disabled: true
+  - name: genius
+    disabled: true
+  - name: radio browser
+    disabled: true
+  - name: bandcamp
+    disabled: false
+  - name: mixcloud
+    disabled: true
+  - name: piped.music
+    disabled: true
+  - name: soundcloud
+    disabled: false
+  - name: wikicommons.audio
+    disabled: true
+  - name: alpine linux packages
+    disabled: false
+  - name: crates.io
+    disabled: false
+  - name: docker hub
+    disabled: false
+  - name: hoogle
+    disabled: true
+  - name: npm
+    disabled: false
+  - name: pypi
+    disabled: false
+  - name: rubygems
+    disabled: false
+  - name: voidlinux
+    disabled: false
+  - name: askubuntu
+    disabled: false
+  - name: stackoverflow
+    disabled: false
+  - name: superuser
+    disabled: true
+  - name: codeberg
+    disabled: false
+  - name: github
+    disabled: false
+  - name: gitlab
+    disabled: false
+  - name: arch linux wiki
+    disabled: false
+  - name: gentoo
+    disabled: false
+  - name: mankier
+    disabled: true
+  - name: mdn
+    disabled: false
+  - name: apk mirror
+    disabled: false
+  - name: fdroid
+    disabled: false
+  - name: google play apps
+    disabled: false
+  - name: annas archive
+    disabled: false
+  - name: bt4g
+    disabled: true
+  - name: kickass
+    disabled: true
+  - name: library genesis
+    disabled: false
+  - name: nyaa
+    disabled: false
+  - name: piratebay
+    disabled: true
+  - name: solidtorrents
+    disabled: true
+  - name: wikicommons.files
+    disabled: true
+  - name: z-library
+    disabled: false
+  - name: reddit
+    disabled: false
+  - name: etymonline
+    disabled: true
+  - name: wiktionary
+    disabled: true
+  - name: wordnik
+    disabled: true
+  - name: podcastindex
+    disabled: true
+  - name: erowid
+    disabled: false
+  - name: steam
+    disabled: false
+  - name: chefkoch
     disabled: true
 ui:
   center_alignment: true
