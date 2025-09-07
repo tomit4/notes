@@ -47,7 +47,8 @@ set certificate_file = "$XDG_CONFIG_HOME/mutt/certificates"
 set signature = "$XDG_CONFIG_HOME/mutt/signature"
 
 # Editor
-set editor = "nvim"
+# nvim currently doesn't work...
+set editor = "vim"
 
 # settings
 set pager_index_lines = 10
