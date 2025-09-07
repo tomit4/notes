@@ -7,7 +7,7 @@ set -o noclobber
 # set +o noclobber
 
 # create custom env variables:
-export cproj="/home/brian/Documents/Code/javascript/city_stats/research/"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # set up python-virtualenvwrapper
 # https://wiki.archlinux.org/title/Python/Virtual_environment
@@ -85,7 +85,7 @@ precmd() { vcs_info }
 # git info/styling for prompt
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%B%F{yellow} '
-zstyle ':vcs_info:*' stagedstr '%B%F{green} '
+zstyle ':vcs_info:*' stagedstr '%B%F{green} ✔'
 zstyle ':vcs_info:git:*' formats       '%b%u%c'
 zstyle ':vcs_info:git:*' actionformats '%b|%a%u%c'
 
