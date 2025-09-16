@@ -923,3 +923,7 @@ doas ufw deny in proto tcp to any port 53
 doas ufw disable && doas ufw enable
 
 This is because of recent updates to pihole-unbound docker config file (re-run docker compose on this file)
+
+09/16/2025
+Install sc-git (spreadsheet calculator TUI program)
+paru sc-git (1st choice)
