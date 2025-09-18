@@ -31,7 +31,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" }, -- Load on opening files
 	config = function()
 		local lsp = require("lsp-zero")
-		local lspconfig = require("lspconfig")
+		-- local lspconfig = require("lspconfig")
 		local cmp = require("cmp")
 
 		require("mason").setup()
@@ -40,7 +40,8 @@ return {
 		})
 
 		for _, server in ipairs(servers) do
-			lspconfig[server].setup({})
+			-- lspconfig[server].setup({})
+			vim.lsp.enable(server)
 		end
 
 		cmp.setup({
@@ -83,7 +84,8 @@ return {
 		local vue_typescript_plugin = "/usr/lib/node_modules/@vue/language-server"
 			.. "/usr/lib/node_modules/@vue/typescript-plugin"
 
-		lspconfig.ts_ls.setup({
+		-- lspconfig.ts_ls.setup({
+		vim.lsp.config["ts_ls"] = {
 			init_options = {
 				plugins = {
 					{
@@ -102,7 +104,7 @@ return {
 				"typescript.tsx",
 				"vue",
 			},
-		})
+		}
 		lsp.setup()
 	end,
 }
