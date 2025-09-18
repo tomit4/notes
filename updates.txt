@@ -927,3 +927,5 @@ This is because of recent updates to pihole-unbound docker config file (re-run d
 09/16/2025
 Install sc-git (spreadsheet calculator TUI program)
 paru sc-git (1st choice)
+
+test
