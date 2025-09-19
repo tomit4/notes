@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-docker compose -f "$HOME"/aur_packages/self_host/docker-compose.yaml down 2>/dev/null
-docker compose -f "$HOME"/aur_packages/self_host/docker-compose.yaml up -d 2>/dev/null
+docker compose -f "$HOME"/aur_packages/self_host/docker-compose.yml down 2>/dev/null
+docker compose -f "$HOME"/aur_packages/self_host/docker-compose.yml up -d 2>/dev/null
+# docker compose -f "$HOME"/aur_packages/invidious/docker-compose.yml down 2>/dev/null
+# docker compose -f "$HOME"/aur_packages/invidious/docker-compose.yml up -d 2>/dev/null
