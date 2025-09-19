@@ -325,7 +325,7 @@ alias cprogrammingtags="ctags"
 alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
 
 # game shortcuts
-alias gback="cp -r ~/.wine/drive_c/users/brian/AppData/Local/CD\ Projekt\ Red/ ~/game_save_backups/"
+# alias gback="cp -r ~/.wine/drive_c/users/brian/AppData/Local/CD\ Projekt\ Red/ ~/game_save_backups/"
 # alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 # alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 # alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
@@ -368,6 +368,9 @@ alias {theanarchistlibrary,anarchlib}="links https://theanarchistlibrary.org/"
 alias unixsheikh="links https://unixsheikh.com"
 # A reddit like forum similar also to hackernews
 alias lobsters="links https://lobste.rs"
+
+# Check Tor
+alias checktor="links https://check.torproject.org"
 
 # C Programming
 # ddgr shebang bookmarks
