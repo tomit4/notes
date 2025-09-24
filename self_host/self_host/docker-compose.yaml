@@ -87,7 +87,7 @@ services:
           port: 5432
         check_tables: true
         signature_server: inv_sig_helper:12999
-        visitor_data: "CgtTbC0tbG84N1hjVSjdmc_FBjIKCgJVUxIEGgAgKQ%3D%3D"
+        visitor_data: ""
         po_token: "IggXWBdaf-vbvg=="
         # external_port:
         # domain:

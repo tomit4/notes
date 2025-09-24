@@ -186,3 +186,6 @@ about:config:
 network.trr.mode to 0
 
 (defaults to OS level DNS resolver, set in Android Network settings, Private DNS field, to base.dns.mullvad.net)
+
+Set zoom to only be specific to tab you are on:
+browser.zoom.siteSpecific to false
