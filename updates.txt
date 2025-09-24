@@ -928,4 +928,15 @@ This is because of recent updates to pihole-unbound docker config file (re-run d
 Install sc-git (spreadsheet calculator TUI program)
 paru sc-git (1st choice)
 
-test
+09/24/2025
+Reinstall obs-studio from flatpak:
+doas pacman -Rs obs-studio
+doas pacman -S flatpak
+Download flatpak from:
+https://flathub.org/en/apps/com.obsproject.Studio
+In Downloads directory run:
+flatpak install com.obsproject.Studio.flatpakref
+Test with:
+flatpak run com.obsproject.Studio
+You also have the alias you created:
+obs
