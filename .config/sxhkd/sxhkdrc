@@ -173,7 +173,7 @@ super + c
 super + i
     inkscape &
 super + g
-    flatpak run org.gimp.GIMP &
+    flatpak run org.gimp.GIMP --no-splash &
     # gimp --no-splash &
     # krita --nosplash &
 super + h
