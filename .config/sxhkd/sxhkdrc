@@ -173,7 +173,8 @@ super + c
 super + i
     inkscape &
 super + g
-    gimp --no-splash &
+    flatpak run org.gimp.GIMP &
+    # gimp --no-splash &
     # krita --nosplash &
 super + h
     $HOME/scripts/bsphide &

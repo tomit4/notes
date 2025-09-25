@@ -940,3 +940,15 @@ Test with:
 flatpak run com.obsproject.Studio
 You also have the alias you created:
 obs
+
+09/25/2025
+Also install gimp from flatpak as well (gtk issues...):
+doas pacman -Rs gimp
+Download flatpak from:
+https://flathub.org/en/apps/org.gimp.GIMP
+In Downloads directory run:
+flatpak install org.gimp.GIMP.flatpakref
+Test with:
+flatpak run org.gimp.GIMP
+You also have the alias you created:
+gimp
