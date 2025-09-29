@@ -4,15 +4,15 @@
 
 sdrc="$HOME"/.sdrc
 # grabs the current $sdir environment variable
-if [[ -f "$sdrc" ]] ; then
+if [[ -f "$sdrc" ]]; then
     source "$sdrc"
 else
-    prinf "%s\n" "error: no .sdrc file."
-    prinf "%s\n" "use sdir scriptt in desired directory first."
+    printf "%s\n" "error: no .sdrc file."
+    printf "%s\n" "use sdir scriptt in desired directory first."
     exit 1
 fi
 
-if [ -z "$sdoc" ] ; then
+if [ -z "$sdoc" ]; then
     cd "$sdir" && /usr/bin/exa --icons
 else
     cd "$sdir" && $EDITOR -c \'a "$sdoc"
