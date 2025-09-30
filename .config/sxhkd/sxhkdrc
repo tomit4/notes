@@ -171,11 +171,11 @@ super + f
 super + c
     chromium --password-store=basic %U &
 super + i
-    flatpak run org.inkscape.Inkscape &
-    # inkscape &
+    inkscape &
+    # flatpak run org.inkscape.Inkscape &
 super + g
-    flatpak run org.gimp.GIMP --no-splash &
-    # gimp --no-splash &
+    gimp --no-splash &
+    # flatpak run org.gimp.GIMP --no-splash &
     # krita --nosplash &
 super + h
     $HOME/scripts/bsphide &

@@ -950,3 +950,8 @@ IgnorePkg=lib32-gdk-pixbuf2
 09/29/2025
 Install gdkpixbuf2-noglycin and gdkpixbuf2-noglycin-docs packages (removes gdkpixbuf2 package, issues with GDK update):
 doas pacman -S gdkpixbuf2-noglycin gdkpixbuf2-noglycin-docs
+Take note of possible icon help, just run this overwrite:
+```
+sudo pacman -S --overwrite '*' libpng librsvg cairo pixman gtk3 hicolor-icon-theme shared-mime-info adwaita-icon-theme libx11 libxcb
+```
+Taken from: https://forum.manjaro.org/t/icon-themes-not-loading-correctly/178555
