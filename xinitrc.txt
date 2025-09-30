@@ -34,6 +34,7 @@ fi
 
 # force XDG_SESSION_TYPE to be x11
 export XDG_SESSION_TYPE=x11
+# export XDG_DATA_DIRS=
 
 # Start compositor
 # picom blah blah ...
@@ -44,12 +45,13 @@ xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 # brillo -S 70
 
 # start redshift
-redshift -O 5000 &
+# redshift -O 5000 &
 
 picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 
 # GTK relies on this for icon themes
-export GTK_ICON_THEME=Papirus-Dark
+# export GTK_ICON_THEME=Papirus-Dark
+
 # Start applets, daemons, etc.
 # diskie
 # nm-applet
@@ -75,6 +77,9 @@ espanso start --unmanaged &
 
 # Start i3wm
 # exec i3
+
+redshift -O 5000 &
+feh --bg-fill /home/brian/Pictures/leaves.jpg &
 
 # Start bspwm
 pgrep -x sxhkd >/dev/null || sxhkd -c /home/brian/.config/sxhkd/sxhkdrc &
