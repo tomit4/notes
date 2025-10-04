@@ -955,3 +955,7 @@ Take note of possible icon help, just run this overwrite:
 sudo pacman -S --overwrite '*' libpng librsvg cairo pixman gtk3 hicolor-icon-theme shared-mime-info adwaita-icon-theme libx11 libxcb
 ```
 Taken from: https://forum.manjaro.org/t/icon-themes-not-loading-correctly/178555
+
+10/04/2025
+Install gameoftrees (git alternative):
+doas pacman -S gameoftrees
