@@ -969,3 +969,7 @@ paru shellcheck-bin (choose both 1 and 2)
 10/13/2025
 Install android-tools (android developer tools, will be useful if fdroid ever goes down...)
 doas pacman -S android-tools
+
+10/14/2025
+Remove nautilus and xdg-desktop-portal-gnome
+doas pacman -Rs nautilus xdg-desktop-portal-gnome
