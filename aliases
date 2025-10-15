@@ -105,6 +105,7 @@ alias tshift='doas timeshift --delete && notify-send "  Previous Backup Delet
 alias btop="bst -e btop"
 # alias gimp="gimp --no-splash"
 alias krita="krita --nosplash"
+alias onlyoffice="onlyoffice-desktopeditors"
 # alias toonz="opentoonz"
 alias {sqlite,sql}="sqlite3"
 alias {sqcipher,sqc}="sqlcipher"
@@ -177,7 +178,9 @@ alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 alias ascii="asciinema"
 
 alias mpv="gobble mpv --sub-font-size=40"
-alias {listen,yt-listen,mpva}='/usr/bin/mpv "${1}" --no-video'
+alias mpvl="gobble mpv --sub-font-size=40 --loop-file=inf"
+alias mpva='/usr/bin/mpv "${1}" --no-video'
+alias mpval='/usr/bin/mpv "${1}" --no-video --loop-file=inf'
 alias mmpv='gobble mpv --fs --panscan=1.0'
 alias {qvid,qv4}="gobble qv4l2" # better amount of controls for webcam
 alias {gvid,gv4}="gobble guvcview" # set to 50hz
