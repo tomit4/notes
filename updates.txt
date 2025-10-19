@@ -973,3 +973,7 @@ doas pacman -S android-tools
 10/14/2025
 Remove nautilus and xdg-desktop-portal-gnome
 doas pacman -Rs nautilus xdg-desktop-portal-gnome
+
+10/19/2025
+Remove thefuck (never really used it)
+doas pacman -Rs thefuck
