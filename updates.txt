@@ -977,3 +977,8 @@ doas pacman -Rs nautilus xdg-desktop-portal-gnome
 10/19/2025
 Remove thefuck (never really used it)
 doas pacman -Rs thefuck
+
+10/27/2025
+Install the librsvg-noglycin librsvg-noglycin-docs packages from the AUR (fixes issues with GTK-3 glycin updates and icons not rendering in GTK-3 apps):
+paru librsvg-noglycin
+Choose both 1 and 2
