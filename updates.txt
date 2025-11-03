@@ -986,3 +986,5 @@ Choose both 1 and 2
 11/02/2025
 Install smartmontools (ssd testing suite of software)
 doas pacman -S smartmontools
+Install bluez-utils (cli for bluetooth utilities):
+doas pacman -S bluez-utils
