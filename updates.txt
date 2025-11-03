@@ -982,3 +982,7 @@ doas pacman -Rs thefuck
 Install the librsvg-noglycin librsvg-noglycin-docs packages from the AUR (fixes issues with GTK-3 glycin updates and icons not rendering in GTK-3 apps):
 paru librsvg-noglycin
 Choose both 1 and 2
+
+11/02/2025
+Install smartmontools (ssd testing suite of software)
+doas pacman -S smartmontools
