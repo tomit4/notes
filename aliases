@@ -148,7 +148,7 @@ alias wmon="wavemon"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
 alias vnstat-w="vnstat -i wlan0 --json | jq"
-alias bluetooth="bluetoothctl"
+alias {bluetooth,bt}="bluetoothctl"
 alias {wi,ssid}="doas iw wlan0 scan | grep SSID"
 # alias wifi-list="connmanctl services"
 alias wifi-list="nmcli device wifi list"
