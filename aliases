@@ -359,6 +359,8 @@ alias hackernews="links https://news.ycombinator.com/"
 # alias nothingnew="librewolf https://nothingnew.com &"
 # alias wamaundies="librewolf https://wamaunderwear.com &"
 
+# Kiwix (offline wikis)
+alias kiwixdl="links download.kiwix.org"
 
 # Anarchism
 alias itsgoingdown="links https://itsgoingdown.org/"
