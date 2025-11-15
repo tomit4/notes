@@ -988,3 +988,7 @@ Install smartmontools (ssd testing suite of software)
 doas pacman -S smartmontools
 Install bluez-utils (cli for bluetooth utilities):
 doas pacman -S bluez-utils
+
+11/15/2025
+Install kiwix-desktop
+doas pacman -S kiwix-desktop
