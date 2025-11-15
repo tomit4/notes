@@ -990,5 +990,5 @@ Install bluez-utils (cli for bluetooth utilities):
 doas pacman -S bluez-utils
 
 11/15/2025
-Install kiwix-desktop and kiwix-tools
-doas pacman -S kiwix-desktop kiwix-tools
+Install kiwix-tools
+doas pacman -S kiwix-tools
