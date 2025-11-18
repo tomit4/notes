@@ -87,3 +87,11 @@ doas sv restart libvirtd/log
 doas sv restart virtlockd virtlogd
 
 Keep in mind that if you start without internet, you'll have to drop the host firewall to get it to work. There are ways of getting it to work with ufw and iptables, but I have yet to bother diving further into this.
+
+The following forum post on linuxquestions.org might help if you run into further trouble:
+
+https://www.linuxquestions.org/questions/linux-virtualization-and-cloud-90/virsh-failed-to-start-network-default-4175672429/
+
+Otherwise, check out the official docs:
+
+https://wiki.libvirt.org/Networking.html
