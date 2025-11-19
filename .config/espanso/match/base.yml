@@ -171,6 +171,10 @@ matches:
     force_clipboard: true
     replace: "\\frac{}{}"
 
+  - trigger: ";int"
+    force_clipboard: true
+    replace: "\\int{f(x), dx}"
+
   - trigger: ";lim"
     force_clipboard: true
     replace: "\\lim\\limits_{ \\to }"
