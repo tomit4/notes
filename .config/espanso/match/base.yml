@@ -173,7 +173,7 @@ matches:
 
   - trigger: ";int"
     force_clipboard: true
-    replace: "\\int{f(x) dx}"
+    replace: "\\int{f(x)\\, dx}"
 
   - trigger: ";lim"
     force_clipboard: true
