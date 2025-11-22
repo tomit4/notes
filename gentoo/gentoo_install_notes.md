@@ -57,6 +57,20 @@ nameserver 1.1.1.1
 nameserver 1.0.0.1
 ```
 
+## On mirrorselect
+
+At some point during the installation process, you'll be asked to select your
+mirrors. Instead of using the handbook's method, use this instead to get the
+fastest available mirrors:
+
+```sh
+mirrorselect -s3 -b10 -D
+```
+
+This will take a bit of time, but will ping and download 100KB from each mirror
+and then choose the fastest 3 and append it to your `/etc/portage/make.conf`
+file.
+
 ## General Notes
 
 A general speedrun guide to installing gentoo can be found at:
