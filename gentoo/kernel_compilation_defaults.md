@@ -69,9 +69,6 @@ Within the makemenuconfig:
 
 General Setup >
 
-    > Kernel Compression Mode
-        > LZ4
-    > POSIX Message Queues > disabled
     > Disable process_vm_readv/writev syscalls
     > Disable uselib syscalls (old C libs)
     > Auditing support (required by SELinux)
@@ -176,5 +173,6 @@ Processor type and features >
 Then just save it, it will save it to .config. Then:
 
 ```sh
-make -j $(nproc) && make modules install && make install
+# NOTE: number after `j` can be your cpu processor count minus 2 (leave some for yourself)
+make -j4 && make modules install && make install
 ```
