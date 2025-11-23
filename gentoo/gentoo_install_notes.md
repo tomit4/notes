@@ -114,3 +114,9 @@ lscpu
 ```
 
 And looking at the "Thread(s) per core" section.
+
+Note on Krita/Cuda/obs-studio:
+
+Don't bother installing krita/cuda, the process is too in depth and time
+consuming, if you really need krita/obs-studio, just use flatpak. If you really
+need Cuda, consider using Vulkan instead (for llama.cpp).
