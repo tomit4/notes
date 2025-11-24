@@ -1,171 +1,147 @@
-https://inv.nadeko.net/playlist?list=PLC292123722B1B450 | Intermediate Algebra (Full Length Videos) - Invidious
-https://inv.nadeko.net/playlist?list=PLF797E961509B4EB5 | Calculus 1 (Full Length Videos) - Invidious
-https://en.wikipedia.org/wiki/Western_Governors_University?useskin=vector#Graduation_rate | Western Governors University - Wikipedia
-https://snoo.habedieeh.re/r/WGU_CompSci/comments/fgr0oi/the_truth_about_the_wgu_cs_program/ | The truth about the WGU CS program - r/WGU_CompSci
-https://snoo.habedieeh.re/r/WGU/comments/xc9jyq/wgu_computer_science_gradsstudents_give_me_your/ | WGU Computer Science grads/students, give me your honest opinions! - r/WGU
-https://reddit.rtrace.io/r/WGU_CompSci/comments/oxzq24/recent_graduates_wgu_comp_sci_program_review_and/ | Recent Graduate's WGU Comp Sci Program Review and Ideal/Suggested Course List - r/WGU_CompSci
-https://reddit.rtrace.io/r/WGU_CompSci/comments/1399o4t/soooooo_how_many_wgu_comp_sci_grads_end_up_with_a/ | Soooooo... how many wgu comp sci grads end up with a job after one year of searching? - r/WGU_CompSci
-https://reddit.rtrace.io/r/studydotcom/comments/vfm5xk/brief_guide_to_transferring_a_lot_of_credits_to/ | Brief Guide to Transferring a Lot of Credits to the BSCS at WGU - r/studydotcom
-https://reddit.rtrace.io/r/WGU_CompSci/comments/i0825d/my_experience_with_studycom/ | My experience with Study.com - r/WGU_CompSci
-https://www.redditmedia.com/r/WGU_CompSci/comments/1gah00q/to_those_considering_cs_at_wgu_my_experience/ | To Those Considering CS at WGU - My Experience! : WGU_CompSci
+https://wiki.gentoo.org/wiki/Steam#Emerge_.28recommended.29 | Steam - Gentoo wiki
+https://wiki.gentoo.org/wiki/Wine | Wine - Gentoo wiki
+https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet | Gentoo Cheat Sheet - Gentoo wiki
 
-https://github.com/caddyserver/dist/blob/master/init/caddy-api.service | dist/init/caddy-api.service at master · caddyserver/dist · GitHub
-https://github.com/caddyserver/dist/blob/master/init/caddy.service | dist/init/caddy.service at master · caddyserver/dist · GitHub
-https://wiki.alpinelinux.org/wiki/Caddy | Caddy - Alpine Linux
-https://pkgs.alpinelinux.org/package/edge/community/x86/caddy-openrc | caddy-openrc - Alpine Linux packages
-https://gitlab.alpinelinux.org/alpine/aports/-/blob/master/community/caddy/caddy.initd | community/caddy/caddy.initd · master · alpine / aports · GitLab
-https://caddy.community/t/how-to-serve-html-files-without-showing-the-html-extension/16766 | How to serve .html files without showing the .html extension? - Help - Caddy Community
+https://wiki.gentoo.org/wiki/Mirrorselect | mirrorselect - Gentoo wiki
 
-https://www.jonathangoc.com/articles/a-step-by-step-guide-to-deploying-a-hugo-website-on-linode/ | A Step-by-step Guide: How To Deploy a Hugo Website on Linode |
-https://caddyserver.com/docs/getting-started | Getting Started — Caddy Documentation
-https://caddyserver.com/docs/quick-starts/https | HTTPS quick-start — Caddy Documentation
+https://wiki.gentoo.org/wiki/Printing#Listing_available_drivers | Printing - Gentoo wiki
+https://wiki.gentoo.org/wiki/Brother_networked_printer | Brother networked printer - Gentoo wiki
 
-https://scribe.rip/swlh/binary-search-find-upper-and-lower-bound-3f07867d81fb | Binary Search — Find Upper and Lower Bound
-https://docs.python.org/3/library/bisect.html | bisect — Array bisection algorithm — Python 3.13.1 documentation
-https://stackoverflow.com/questions/28389065/difference-between-basic-binary-search-for-upper-bound-and-lower-bound | c++ - Difference between basic binary search for upper bound and lower bound? - Stack Overflow
-https://www.topcoder.com/thrive/articles/Binary%20Search | Binary Search
-https://en.wikipedia.org/wiki/Monotonic_function?useskin=vector | Monotonic function - Wikipedia
-https://scribe.rip/techie-delight/binary-search-practice-problems-4c856cd9f26c | Binary Search: Practice Problems
-https://en.wikipedia.org/wiki/Cardinality?useskin=vector | Cardinality - Wikipedia
+https://wiki.gentoo.org/wiki/Vulkan | Vulkan - Gentoo wiki
+https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md#vulkan | llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub
 
-https://stackoverflow.com/questions/176409/build-a-simple-http-server-in-c | httpserver - Build a simple HTTP server in C - Stack Overflow
-https://www.jmarshall.com/easy/http/ | HTTP Made Really Easy
-https://www.jmarshall.com/easy/cgi/ | CGI Made Really Easy
-https://www.jmarshall.com/easy/html/ | HTML Made Really Easy
-https://lr.vern.cc/r/C_Programming/comments/kbfa6t/building_a_http_server_in_c/ | Building a HTTP server in C? - r/C_Programming
-https://stackoverflow.com/questions/32667109/send-and-receive-json-over-sockets-in-server-and-client-application-in-c | send and receive JSON over sockets in server and client application in C - Stack Overflow
-https://stackoverflow.com/questions/68769851/how-to-solve-json-json-h-no-such-file-or-directory | c - How to solve json/json.h: No such file or directory? - Stack Overflow
-https://stackoverflow.com/questions/6673936/parsing-json-using-c | Parsing JSON using C - Stack Overflow
-https://github.com/DaveGamble/cJSON?tab=readme-ov-file#usage | GitHub - DaveGamble/cJSON: Ultralightweight JSON parser in ANSI C
-https://scribe.rip/@justup1080/tutorial-creating-a-minimalist-http-server-in-c-2303d140c725 | Tutorial: Creating a Minimalist HTTP Server in C
-https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/netinet_in.h.html | <netinet/in.h>
-https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/arpa_inet.h.html#tag_13_03 | <arpa/inet.h>
-https://stackoverflow.com/questions/46496363/do-we-need-to-include-both-netinet-in-h-and-arpa-inet-h-headers-what-is-the | sockets - Do we need to include both <netinet/in.h> and <arpa/inet.h> headers? What is the difference between them? - Stack Overflow
-https://json-c.github.io/json-c/json-c-current-release/doc/html/index.html#gettinghelp | json-c: json-c
+https://wiki.gentoo.org/wiki/NVIDIA | NVIDIA - Gentoo wiki
+https://wiki.gentoo.org/wiki/NVIDIA/nvidia-drivers | NVIDIA/nvidia-drivers - Gentoo wiki
+https://packages.gentoo.org/packages/dev-util/nvidia-cuda-toolkit | dev-util/nvidia-cuda-toolkit – Gentoo Packages
+https://packages.gentoo.org/packages/media-fonts/symbols-nerd-font | media-fonts/symbols-nerd-font – Gentoo Packages
 
-https://scribe.rip/towards-artificial-intelligence/50-python-3-tips-tricks-e5dbe05212d7 | 50+ Python 3 Tips & Tricks
-https://www.pythoncheatsheet.org/cheatsheet/basics | Python Basics - Python Cheatsheet
-https://scribe.rip/the-andela-way/idiomatic-python-coding-the-smart-way-cc560fa5f1d6 | Idiomatic Python. Coding the smart way.
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage#CFLAGS_and_CXXFLAGS | Installing the Gentoo installation files - Gentoo wiki
+https://wiki.gentoo.org/wiki/Safe_CFLAGS | Safe CFLAGS - Gentoo wiki
 
-https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm?useskin=vector#Algorithm | Smith–Waterman algorithm - Wikipedia
-https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm?useskin=vector | Boyer–Moore string-search algorithm - Wikipedia
+https://wiki.gentoo.org/wiki/OpenRC/openrc-init | OpenRC/openrc-init - Gentoo wiki
+https://manpages.debian.org/testing/openrc/openrc-shutdown.8.en.html | openrc-shutdown(8) — openrc — Debian testing — Debian Manpages
 
-https://lr.vern.cc/r/Anarchy101/comments/zbv7sd/how_to_get_started_as_a_beginner/ | How to "get started" as a beginner? - r/Anarchy101
-https://theanarchistlibrary.org/library/emma-goldman-anarchism-and-other-essays#toc3 | Anarchism and Other Essays | The Anarchist Library
-https://theanarchistlibrary.org/library/ashanti-omowali-alston-black-anarchism | Black Anarchism | The Anarchist Library
-https://anarchozoe.com/ | Zoe Baker – Radical Theory and History
-https://theanarchistlibrary.org/library/george-barrett-objections-to-anarchism | Objections to Anarchism | The Anarchist Library
+https://github.com/PF4Public/gentoo-overlay | GitHub - PF4Public/gentoo-overlay: Personal Gentoo overlay
+https://github.com/PF4Public/gentoo-overlay/tree/master/www-client/ungoogled-chromium-bin | gentoo-overlay/www-client/ungoogled-chromium-bin at master · PF4Public/gentoo-overlay · GitHub
 
-https://troydhanson.github.io/uthash/ | uthash: a hash table for C structures
-https://troydhanson.github.io/ | troydhanson.github.io/
-https://github.com/troydhanson/uthash | GitHub - troydhanson/uthash: C macros for hash tables and more
+https://wiki.gentoo.org/wiki/Firefox#www-client.2Ffirefox-bin | Firefox - Gentoo wiki
+https://wiki.gentoo.org/wiki/LibreWolf | LibreWolf - Gentoo wiki
+https://librewolf.net/installation/gentoo/ | Gentoo Installation – LibreWolf
+https://forums.gentoo.org/viewtopic-t-1168452-start-0.html | Gentoo Forums :: View topic - Trouble add the Librewolf overlay
+https://forums.gentoo.org/viewtopic-t-1166103.html | Gentoo Forums :: View topic - [SOLVED] librewolf problem: cannot set up the overlay
+https://wiki.gentoo.org/wiki/Eselect/Repository | eselect/repository - Gentoo wiki
+https://wiki.gentoo.org/wiki/PulseAudio | PulseAudio - Gentoo wiki
 
-http://azillionmonkeys.com/qed/hash.html | Hash functions.
+https://wiki.gentoo.org/wiki/St | st - Gentoo wiki
+https://superuser.com/questions/480950/how-to-decompress-a-bz2-file | linux - How to decompress a .bz2 file - Super User
+https://wiki.gentoo.org/wiki/Project:GURU | Project:GURU - Gentoo wiki
+https://wiki.gentoo.org/wiki/Project:GURU/Information_for_End_Users | Project:GURU/Information for End Users - Gentoo wiki
+https://wiki.gentoo.org/wiki/Bspwm/en | Bspwm - Gentoo wiki
+https://wiki.gentoo.org/wiki/Upgrading_Gentoo | Upgrading Gentoo - Gentoo wiki
+https://wiki.gentoo.org/wiki/Fonts | Fonts - Gentoo wiki
 
-https://en.wikipedia.org/wiki/Look_Back_(film)?useskin=vector | Look Back (film) - Wikipedia
-https://en.wikipedia.org/wiki/Dead_Dead_Demon%27s_Dededede_Destruction?useskin=vector | Dead Dead Demon's Dededede Destruction - Wikipedia
-https://libremdb.iket.me/title/tt30217403 | Dandadan (2024) | libremdb
-https://en.wikipedia.org/wiki/Inu-Oh?useskin=vector | Inu-Oh - Wikipedia
-https://en.wikipedia.org/wiki/Batman:_The_Man_Who_Laughs?useskin=vector | Batman: The Man Who Laughs - Wikipedia
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Bootloader#Default:_GRUB | Configuring the bootloader - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Configuration | Kernel/Configuration - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Bootloader | Configuring the bootloader - Gentoo wiki
+https://wiki.gentoo.org/wiki/GRUB | GRUB - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Removal | Kernel/Removal - Gentoo wiki
+https://wiki.gentoo.org/wiki/Eclean | eclean - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel | Configuring the Linux kernel - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Packages#git-sources | Kernel/Packages - Gentoo wiki
 
-https://en.wikipedia.org/wiki/Closed-form_expression?useskin=vector | Closed-form expression - Wikipedia
-https://en.wikipedia.org/wiki/Mathematical_induction?useskin=vector#Sum_of_consecutive_natural_numbers | Mathematical induction - Wikipedia
-https://algorist.com/algowiki/index.php/Main_Page | Solution Wiki, The Algorithm Design Manual, 3rd Edition - The Algorithm Design Manual Solution Wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel#Installing_the_kernel_sources | Configuring the Linux kernel - Gentoo wiki
+https://wiki.gentoo.org/wiki/Modprobed-db | modprobed-db - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Upgrade | Kernel/Upgrade - Gentoo wiki
+https://wiki.gentoo.org/wiki/Upgrading_Gentoo | Upgrading Gentoo - Gentoo wiki
 
-https://redlib.catsarch.com//r/C_Programming/comments/vxko30/learning_c_with_beejs_guide_realloc/ | Learning C with Beej's Guide - realloc() - r/C_Programming
-https://beej.us/guide/bgc/html/split/manual-memory-allocation.html | Beej's Guide to C Programming
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel | Configuring the Linux kernel - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/System | Configuring the system - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Tools | Installing system tools - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Bootloader | Configuring the bootloader - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE | Handbook:AMD64/Working/USE - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide#Configuring_the_kernel | Kernel/Gentoo Kernel Configuration Guide - Gentoo wiki
+https://wiki.gentoo.org/wiki/Linux_firmware | Linux firmware - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel/Configuration | Kernel/Configuration - Gentoo wiki
+https://wiki.gentoo.org/wiki/Hardware_detection | Hardware detection - Gentoo wiki
+https://wiki.gentoo.org/wiki/Kernel_Modules | Kernel modules - Gentoo wiki
+http://localhost:8081/r/Gentoo/comments/lhh5tn/a_guideline_for_compiling_your_own_kernel/ | A guideline for compiling your own kernel - r/Gentoo
 
-https://inv.nadeko.net/playlist?list=PLC292123722B1B450 | Intermediate Algebra (Full Length Videos) - Invidious
-https://pages.cs.wisc.edu/~remzi/OSTEP/ | Operating Systems: Three Easy Pieces
-https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html | Homework
+https://wiki.gentoo.org/wiki/Xorg/Guide | Xorg/Guide - Gentoo wiki
+https://wiki.gentoo.org/wiki/Xorg | Xorg - Gentoo wiki
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing | Finalizing - Gentoo wiki
+https://wiki.gentoo.org/wiki/Sudo | sudo - Gentoo wiki
+https://wiki.gentoo.org/wiki/OpenRC | OpenRC - Gentoo wiki
+https://wiki.gentoo.org/wiki/Minimizing_compilation_and_installation_time | Minimizing compilation and installation time - Gentoo wiki
+https://wiki.gentoo.org/wiki//etc/portage/package.mask | /etc/portage/package.mask - Gentoo wiki
+https://unix.stackexchange.com/questions/61876/su-permission-denied-despite-correct-password | su: Permission denied despite correct password - Unix & Linux Stack Exchange
+https://wiki.gentoo.org/wiki/Xrandr | Xrandr - Gentoo wiki
 
-https://jonsuh.com/hamburgers/ | Hamburgers by Jonathan Suh
-https://codepen.io/designcouch/pen/ExvwPY | Menu "Hamburger" Icon Animations
+https://tutorial.math.lamar.edu/Classes/CalcI/ComputingIndefiniteIntegrals.aspx | Calculus I - Computing Indefinite Integrals
+https://tutorial.math.lamar.edu/ProblemsNS/CalcI/ComputingIndefiniteIntegrals.aspx | Calculus I - Computing Indefinite Integrals (Assignment Problems)
+https://tutorial.math.lamar.edu/Classes/CalcI/DiffHyperFcns.aspx | Calculus I - Derivatives of Hyperbolic Functions
+https://tutorial.math.lamar.edu/Classes/CalcI/DiffTrigFcns.aspx | Calculus I - Derivatives of Trig Functions
+https://tutorial.math.lamar.edu/Classes/CalcI/DiffInvTrigFcns.aspx | Calculus I - Derivatives of Inverse Trig Functions
+https://tutorial.math.lamar.edu/Extras/AlgebraTrigReview/SolveSystems.aspx | Algebra Trig Review
 
-https://techpatterns.com/forums/about3030.html | Tech Patterns :: READ BEFORE POSTING
-https://redlib.catsarch.com//r/computerscience/comments/bj05z0/as_a_self_taught_programmer_what_forms_of_math/ | As a self taught programmer, what forms of Math would be most important for increasing my value. - r/computerscience
+https://www.rahulpandit.com/post/wireguard-vpn-search-privately-searx-block-ads-and-tracking-pihole-dnscrypt-proxy/#configure-wireguard-clients | Deploy WireGuard VPN, search privately with Searx, block ads and tracking with Pi-hole and DNSCrypt-proxy - The Website of Rahul Pandit
+http://localhost:8081/r/pihole/comments/r5a1cb/can_i_set_up_pihole_without_access_to_the_router/ | Can I set up pi-hole without access to the router? - r/pihole
+http://localhost:8081/r/pihole/comments/ufp8wu/is_it_safe_to_use_pihole_in_a_public_vps/ | Is it safe to use Pi-hole in a public VPS? - r/pihole
 
-https://docs.solidjs.com/guides/testing | Testing - SolidDocs
-https://scribe.rip/@hasanmahira/fastapi-with-sqlalchemy-postgresql-and-alembic-1ccaba79572e | FastAPI with SQLAlchemy, PostgreSQL and Alembic
-https://scribe.rip/@saverio3107/fastapi-how-to-set-up-and-use-alembic-for-database-migrations-616f481507f3 | FastAPI — How to Set Up and Use Alembic for Database Migrations
-https://scribe.rip/@juhibhojani03/mastering-fastapi-a-comprehensive-guide-to-structuring-and-tooling-fastapi-projects-1dea88370cac | Mastering FastAPI: A Comprehensive Guide to Structuring and Tooling FastAPI Projects
-https://alembic.sqlalchemy.org/en/latest/tutorial.html | Tutorial — Alembic 1.13.2 documentation
+https://github.com/qdm12/gluetun | GitHub - qdm12/gluetun: VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.
 
-https://github.com/davidodenwald/prettier-plugin-jinja-template | GitHub - davidodenwald/prettier-plugin-jinja-template: Formatter plugin for jinja2 template files.
-https://scribe.rip/@steelcityamir/a-web-developers-guide-to-browser-caching-cc41f3b73e7c | A Web Developer’s Guide to Browser Caching
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching | HTTP caching - HTTP | MDN
-https://developer.mozilla.org/en-US/docs/Web/API/Cache | Cache - Web APIs | MDN
+https://partners.wgu.edu/home | Home
+https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS4424&collegeCode=IT&instId=678&programId=182 | Transfer Pathway Agreement
+https://www.wgu.edu/about/annual-report.html | Annual Report 2023
+https://www.wgu.edu/alumni.html | WGU Alumni Resources
+https://www.wgu.edu/alumni/alumni-support/career-support.html | Career Support
 
-https://rust-unofficial.github.io/too-many-lists/index.html | Introduction - Learning Rust With Entirely Too Many Linked Lists
+https://www.wgu.edu/ | Western Governors University – Online College
+https://study.com/college/earn-college-credit.html | College Credit | How It Works | Study.com
+https://www.sophia.org/online-courses/english-and-communication/ | English and communications courses
 
-https://wolchok.org/posts/how-to-read-assembly-language/ | How to Read Assembly Language - Scott Wolchok
+https://www.toptal.com/talent/apply | Join as a Freelancer | Toptal | Toptal®
+https://lite.duckduckgo.com/lite?q=how%20to+found+llc+in+washington | how to found llc in washington at DuckDuckGo
+https://apps.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx | Limited Liability Companies (LLC), Online and Paper Registrations - Corporations - WA Secretary of State
+https://www.sos.wa.gov/limited-liability-company-llc-professional-llc-pllc-filing-resource-page | Limited Liability Company (LLC) & Professional LLC (PLLC) Filing Resource Page | WA Secretary of State
+https://secretaryofstate.com/washington | Washington Secretary of State | Business Entity Search - Secretary of State
 
-https://stackoverflow.com/questions/75269008/getting-ssl-error-when-sending-email-via-django | python - Getting SSL error when sending email via Django - Stack Overflow
-https://pypi.org/project/certifi/ | certifi · PyPI
-https://docs.djangoproject.com/en/5.0/topics/email/ | Sending email | Django documentation | Django
-https://stackoverflow.com/questions/6367014/how-to-send-email-via-django | python - How to send email via Django? - Stack Overflow
-https://support.google.com/accounts/answer/6010255 | Less secure apps & your Google Account - Google Account Help
-https://stackoverflow.com/questions/15985191/how-can-i-send-e-mail-from-django-using-the-google-smtp-server | How can I send e-mail from django using the google smtp server? - Stack Overflow
-https://stackabuse.com/how-to-send-emails-with-gmail-using-python/ | How to Send Emails with Gmail using Python
-https://mailtrap.io/blog/python-send-email-gmail/ | Python Send Email Gmail: Tutorial with Code Snippets [2024]
-https://support.google.com/accounts/answer/185833?hl=en | Sign in with app passwords - Google Account Help
+https://react.dev/reference/react/useMemo | useMemo – React
+https://react.dev/reference/react/useReducer | useReducer – React
+https://react.dev/learn/extracting-state-logic-into-a-reducer | Extracting State Logic into a Reducer – React
+https://react.dev/reference/react/useRef | useRef – React
+https://react.dev/reference/react/useCallback | useCallback – React
+https://react.dev/reference/react/useContext | useContext – React
+https://react.dev/reference/react/lazy | lazy – React
+https://react.dev/reference/react/Suspense | <Suspense> – React
+https://react.dev/reference/react/use | use – React
+https://legacy.reactjs.org/docs/error-boundaries.html | Error Boundaries – React
+https://react.dev/reference/react/memo | memo – React
 
-https://django-rest-framework-simplejwt.readthedocs.io/en/latest/ | Simple JWT — Simple JWT 5.2.2.post30+gfaf92e8 documentation
-https://scribe.rip/django-unleashed/securing-django-rest-apis-with-jwt-authentication-using-simple-jwt-a-step-by-step-guide-28efa84666fe | Securing Django REST APIs with JWT Authentication using Simple-JWT: A Step-by-Step Guide with…
-https://docs.djangoproject.com/en/5.0/topics/email/ | Sending email | Django documentation | Django
-https://stackoverflow.com/questions/2809547/creating-email-templates-with-django | Creating email templates with Django - Stack Overflow
-https://github.com/vintasoftware/django-templated-email | GitHub - vintasoftware/django-templated-email: Django module to easily send templated emails using django templates, or using a transactional mail provider (mailchimp, silverpop, etc.)
+https://kentcdodds.com/blog/what-is-jsx | What is JSX?
+https://overreacted.io/before-you-memo/ | Before You memo() — overreacted
+https://kentcdodds.com/blog/optimize-react-re-renders | One simple trick to optimize React re-renders
+https://web.archive.org/web/20220716221156/https://www.codebeast.dev/usestate-vs-useref-re-render-or-not/ | useRef vs useState: Should we re-render or not? | Codebeast
 
-https://stackoverflow.com/questions/62370962/how-to-create-join-chat-room-using-ws-websocket-package-in-node-js | javascript - How to create/join chat room using ws (Websocket) package in node js - Stack Overflow
-https://dev.to/devland/build-a-real-time-chat-app-using-nodejs-and-websocket-441g | Build a Real-Time Chat App using Node.js and WebSocket - DEV Community
-https://www.geeksforgeeks.org/simple-chat-application-using-websockets-with-fastapi/ | Simple chat Application using Websockets with FastAPI - GeeksforGeeks
-https://github.com/fastify/fastify-websocket?tab=readme-ov-file | GitHub - fastify/fastify-websocket: basic websocket support for fastify
+https://github.com/driveway-engineering/react-kata/compare/main...tomit4:react-kata:main | Comparing driveway-engineering:main...tomit4:main · driveway-engineering/react-kata
+https://github.com/driveway-engineering/react-kata/tree/main/src | react-kata/src at main · driveway-engineering/react-kata
 
-https://www.ibm.com/topics/monte-carlo-simulation | What Is Monte Carlo Simulation? | IBM
-https://gamerant.com/rollback-netcode-explained/ | Rollback Netcode Explained
+https://neetcode.io/roadmap | Roadmap
 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-an-endlessh-tarpit-on-ubuntu-22-04 | How To Set Up an Endlessh Tarpit on Ubuntu 22.04 | DigitalOcean
+https://stackoverflow.com/questions/44043036/how-to-read-image-file-from-s3-bucket-directly-into-memory | python - How to read image file from S3 bucket directly into memory? - Stack Overflow
+https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse | Custom Response - HTML, Stream, File, others - FastAPI
+https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader | ReadableStream: getReader() method - Web APIs | MDN
+https://stackoverflow.com/questions/61657089/how-to-render-streamable-image-response-in-react-as-a-image | node.js - How to render streamable image response in react as a image? - Stack Overflow
+https://stackoverflow.com/questions/75740652/fastapi-streamingresponse-not-streaming-with-generator-function | python - FastAPI StreamingResponse not streaming with generator function - Stack Overflow
 
-https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for | The HTTP crash course nobody asked for
-https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep | Understanding Rust futures by going way too deep
-https://fasterthanli.me/articles/whats-in-the-box | What's in the box?
-https://fasterthanli.me/articles/request-coalescing-in-async-rust | Request coalescing in async Rust
+https://boto3.amazonaws.com/v1/documentation/api/latest/guide/paginators.html | Paginators - Boto3 1.35.19 documentation
+https://dev.to/idrisrampurawala/efficiently-streaming-a-large-aws-s3-file-via-s3-select-4on | Efficiently Streaming a Large AWS S3 File via S3 Select - DEV Community
+https://docs.solidjs.com/reference/basic-reactivity/create-resource | createResource - SolidDocs
+https://docs.solidjs.com/reference/components/suspense | <Suspense> - SolidDocs
+https://docs.solidjs.com/reference/components/switch-and-match | <Switch> / <Match> - SolidDocs
+https://www.w3schools.com/python/ref_keyword_yield.asp | Python yield Keyword
 
-https://play.google.com/store/apps/details?id=com.myalbum.appv4 | MyAlbum - Photo/Video Sharing - Apps on Google Play
-https://family-album.com/ | FamilyAlbum | The Best Photo-Sharing App for Families
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys | Managing deploy keys - GitHub Docs
+https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions | Using secrets in GitHub Actions - GitHub Docs
+https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables | Store information in variables - GitHub Docs
 
-https://hkoerber.de/blog/2021/09/26/Rust-vs.-Go-Error-Handling/ | Rust vs. Go: Error Handling – Hannes Körber
-https://zackoverflow.dev/writing/unsafe-rust-vs-zig/ | When Zig is safer and faster than Rust
-
-https://www.geeksforgeeks.org/priority-queue-set-1-introduction/ | What is Priority Queue | Introduction to Priority Queue - GeeksforGeeks
-https://briangrinstead.com/blog/astar-search-algorithm-in-javascript/ | A* Search Algorithm in JavaScript - Brian Grinstead
-https://redlib.kylrth.com/r/cscareerquestions/comments/s7n67x/how_often_do_you_restudy_leetcode_problems_youve/ | How often do you restudy leetcode problems you've already done? - r/cscareerquestions
-https://pablomusumeci.com/interviewing/acing-the-software-engineering-interview-part-ii/#todo-redo-done | Acing the Software Engineering Interview - Part II - Pablon
-https://stackabuse.com/merge-sort-in-javascript/ | Merge Sort in JavaScript
-https://en.wikipedia.org/wiki/A*_search_algorithm?useskin=vector | A* search algorithm - Wikipedia
-https://en.wikipedia.org/wiki/Heuristic_(computer_science)?useskin=vector | Heuristic (computer science) - Wikipedia
-
-https://stackoverflow.com/questions/38731998/do-docker-container-ips-change-on-restart | nginx - do docker container IPs change on restart? - Stack Overflow
-
-https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/ | How to Create a Subdomain for my Domain - Domains - Namecheap.com
-https://www.jeffgeerling.com/blog/2022/rate-limiting-requests-ip-address-nginx | Rate limiting requests per IP address in Nginx | Jeff Geerling
-https://www.freecodecamp.org/news/nginx-rate-limiting-in-a-nutshell-128fe9e0126c/ | NGINX rate-limiting in a nutshell
-https://www.namecheap.com/support/knowledgebase/article.aspx/9190/29/how-to-create-a-subdomain-in-cpanel/ | How to create a subdomain in cPanel - Hosting - Namecheap.com
-
-https://ishadeed.com/article/rebuild-featured-news-modern-css/ | Rebuilding a featured news section with modern CSS: Vox news - Ahmad Shadeed
-https://ishadeed.com/about/ | About - Ahmad Shadeed
-https://ishadeed.com/article/grid-layout-flexbox-components/ | Grid for layout, Flexbox for components - Ahmad Shadeed
-https://ishadeed.com/article/say-hello-to-css-container-queries/ | Say Hello To CSS Container Queries - Ahmad Shadeed
-https://ishadeed.com/article/css-container-style-queries/ | CSS Style Queries - Ahmad Shadeed
-
-https://content.techgig.com/upskilling-at-techgig/11-coding-algorithms-that-every-aspiring-programmer-should-know/articleshow/95119570.cms | 11 Coding algorithms that every aspiring programmer should know | TechGig
-https://en.wikipedia.org/wiki/Depth-first_search?useskin=vector | Depth-first search - Wikipedia
-https://en.wikipedia.org/wiki/Breadth-first_search?useskin=vector | Breadth-first search - Wikipedia
-https://en.wikipedia.org/wiki/Hash_map?useskin=vector | Hash table - Wikipedia
-https://en.wikipedia.org/wiki/Space-time_tradeoff?useskin=vector | Space–time tradeoff - Wikipedia
-https://en.wikipedia.org/wiki/Hash_function?useskin=vector | Hash function - Wikipedia
-https://en.wikipedia.org/wiki/Set_(abstract_data_type)?useskin=vector | Set (abstract data type) - Wikipedia
-https://en.wikipedia.org/wiki/Collection_(abstract_data_type)?useskin=vector | Collection (abstract data type) - Wikipedia
-https://en.wikipedia.org/wiki/Heap_(data_structure)?useskin=vector | Heap (data structure) - Wikipedia
-https://en.wikipedia.org/wiki/Combinatorics?useskin=vector | Combinatorics - Wikipedia
-https://en.wikipedia.org/wiki/Binary_tree?useskin=vector#Types_of_binary_trees | Binary tree - Wikipedia
+https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/#use-the-form-data | Simple OAuth2 with Password and Bearer - FastAPI
