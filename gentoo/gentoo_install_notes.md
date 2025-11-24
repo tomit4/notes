@@ -93,9 +93,8 @@ cat /etc/fstab
 
 ## General Notes
 
-A general speedrun guide to installing gentoo can be found at:
-
-https://www.reddit.com/r/Gentoo/comments/td684v/need_help_for_first_time_setting_up_a_virtual/
+Here is a
+[general speedrun guide to installing gentoo](https://www.reddit.com/r/Gentoo/comments/td684v/need_help_for_first_time_setting_up_a_virtual/)
 
 Install a basic distribution-bin kernel first, then you can:
 
