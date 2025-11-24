@@ -9,7 +9,7 @@ mount /dev/sda1 /mnt/media/usb-drive
 ```
 
 ```sh
-sudo rsync -aHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/brian/Videos/*","/home/brian/Documents/books/*","/home/brian/Downloads/*","/home/brian/Music/*","/home/brian/Pictures/*"} /* /mnt/media/usb-drive/backup
+doas rsync -aHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/brian/Videos/*","/home/brian/Documents/books/*","/home/brian/Downloads/*","/home/brian/Music/*","/home/brian/Pictures/*","/home/brian/Games/*"} /* /mnt/media/usb-drive/backup
 ```
 
 ## Restoring:
@@ -120,5 +120,6 @@ reboot
 
 ## If all went well...
 
-If all went well, you'll boot into a standard arch install, but with no Videos
-(too large, pick the ones you want from your backup).
+If all went well, you'll boot into a standard arch install, but with no Videos,
+Games, Music, books, Pictures, Downloads (too large, pick the ones you want from
+your backup).
