@@ -2,4 +2,4 @@
 
 BACKUP_DATE=$(date +%m_%d_%Y)
 
-doas rsync -aHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /* /mnt/media/usb-drive/"${HOST}"_backup_"${BACKUP_DATE}"
+doas rsync -aHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/cache/distfiles/*","/home/brian/Documents/books/*","/home/brian/Videos/*","/home/brian/Music/*","/home/brian/Pictures/*","/home/brian/Audio/*","/home/brian/Games/*"} /* /mnt/media/usb-drive/"$HOST"_backup_"${BACKUP_DATE}"
