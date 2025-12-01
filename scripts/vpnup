@@ -1,15 +1,32 @@
 #!/usr/bin/env bash
 
+#GENTOO
 main() {
     if [[ $(/usr/bin/id -u) -ne 0 ]]; then
         echo "This script must be run as root!"
         exit 1
     else
-        docker container stop pihole-unbound
-        chattr -i /etc/resolv.conf 2>/dev/null
-        sv restart NetworkManager
-        sv start wireguard
+        docker container stop pihole-unbound 2>/dev/null
+        chattr -i /etc/resolv.conf
+        rc-service dhcpcd restart 2>/dev/null
+        rc-service wg-quick.ch-zrh-wg-001 start 2>/dev/null
+        docker container restart searxng redlib invidious-invidious-1 invidious-invidious-db-1 2>/dev/null
     fi
 }
 
 main
+
+# ARTIX
+# main() {
+#     if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+#         echo "This script must be run as root!"
+#         exit 1
+#     else
+#         docker container stop pihole-unbound
+#         chattr -i /etc/resolv.conf 2>/dev/null
+#         sv restart NetworkManager
+#         sv start wireguard
+#     fi
+# }
+#
+# main
