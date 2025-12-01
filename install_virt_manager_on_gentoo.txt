@@ -1,0 +1,58 @@
+
+Help to install Virt-manager on Funtoo and Gentoo
+Installing virt-manager
+
+First we need to add some information to build virt-manager and qemu correctly:
+
+# echo "app-emulation/virt-manager gtk policykit" >> /etc/portage/package.use
+# echo "app-emulation/qemu spice" >> /etc/portage/package.use
+# vim /etc/portage/make.conf ## and add
+
+QEMU_SOFTMMU_TARGETS="arm x86_64 sparc"
+QEMU_USER_TARGETS="x86_64"
+
+In order to user the power of virtualization under Funtoo / Gentoo, you will need to install the following packages:
+
+Note: Some extra video driver are needed and iptables is mandatory! If under Gentoo, you will need rebuild or check if already build modules in the kernel, see QEMU documentation.
+
+# emerge --ask virt-manager qemu xf86-video-qxl app-emulation/spice spice-gtk spice-protocol net-firewall/iptables
+# dispatch-conf
+# emerge --ask virt-manager qemu xf86-video-qxl app-emulation/spice spice-gtk spice-protocol net-firewall/iptables
+
+        Take a cup of coffee ^^
+
+After the installation please add you user to kvm & libvirt group (or create it) and start libvirt daemon as follow and add it as default to start after reboot:
+
+# gpasswd -a USER kvm ## groupadd kvm
+# gpasswd -a USER libvirt ## groupadd libvirt
+# /etc/init.d/libvirtd start
+# rc-update add libvirtd default
+
+Configure polkit
+
+Then we will add some changes of the default configuration, so that your user can use virt-manager without password and without to be root:
+
+# mkdir -p /etc/polkit-l/localauthority/50-local.d
+# vim /etc/polkit-l/localauthority/50-local.d/org.libvirt.unix.manage.pkla
+[Allow group libvirt management permissions]
+Identity=unix-group:libvirt
+Action=org.libvirt.unix.manage
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+
+Starting needed modules now and after reboot
+
+# modprobe kvm kvm-intel tun
+# vim /etc/conf.d/modules
+modules="kvm tun kvm-intel"
+
+After the changes you will maybe need to reboot your computer!
+
+# reboot
+
+Test your installation
+
+Now you should ready to go, just try to start virt-manager and see if ask you for a password or not ^^
+
+$ virt-manager

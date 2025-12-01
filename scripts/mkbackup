@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+BACKUP_DATE=$(date +%m_%d_%Y)
+
+doas rsync -aHAXS --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /* /mnt/media/usb-drive/"${HOST}"_backup_"${BACKUP_DATE}"

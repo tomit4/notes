@@ -5,7 +5,14 @@ git clone https://github.com/espanso/espanso
 
 Install wxwidgets
 
+If on Arch/Artix:
+
 doas pacman -S wxwidgets
+
+If on Gentoo:
+
+https://wiki.wxwidgets.org/Installing_and_configuring_under_Gentoo
+https://packages.gentoo.org/packages/x11-libs/wxGTK
 
 cd espanso
 
@@ -13,8 +20,12 @@ To turn off notifications, simply cp from this directory the notifications.rs fi
 
 cp notification.rs ~/$CLONE_DIR/espanso/espanso/src/cli/worker/ui/notification.rs
 
-cargo install --force cargo-make --version 0.34.0
-cargo make --profile release build-binary
+# Deprecated:
+# cargo install --force cargo-make --version 0.34.0
+# cargo make --profile release build-binary
+
+cargo build -p espanso --release --no-default-features --features vendored-tls,modulo
+
 doas mv target/release/espanso /usr/bin/espanso
 
 Copy xinitrc.txt which calls espanso at beginning

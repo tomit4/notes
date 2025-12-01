@@ -131,7 +131,7 @@ browser.proton.enabled set to false
 browser.proton.modals.enabled set to false
 browser.proton.doorhangers.enabled set to false
 browser.proton.contextmenus.enabled set to false
-browser.sessionstore.resum_from_crash false
+browser.sessionstore.resume_from_crash false
 
 Copy the chrome directory into the profile ($HOME/.librewolf/*.default-release)
 This feature isn't officially supported anymore so enable it by heading to
@@ -185,7 +185,7 @@ about:config:
 
 network.trr.mode to 0
 
-(defaults to OS level DNS resolver, set in Android Network settings, Private DNS field, to base.dns.mullvad.net)
+(defaults to OS level DNS resolver, set in Android Network settings, Private DNS field, to https://base.dns.mullvad.net/dns-query)
 
 Set zoom to only be specific to tab you are on:
 browser.zoom.siteSpecific to false
