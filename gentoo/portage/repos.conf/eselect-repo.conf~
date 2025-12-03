@@ -1,0 +1,21 @@
+# created by eselect-repo
+
+[guru]
+location = /var/db/repos/guru
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/guru.git
+
+[librewolf]
+location = /var/db/repos/librewolf
+sync-type = git
+sync-uri = https://codeberg.org/librewolf/gentoo.git
+
+[pf4public]
+location = /var/db/repos/pf4public
+sync-type = git
+sync-uri = https://github.com/PF4Public/gentoo-overlay.git
+
+[zugaina]
+location = /var/db/repos/zugaina
+sync-type = rsync
+sync-uri = rsync://gentoo.zugaina.org/zugaina-portage

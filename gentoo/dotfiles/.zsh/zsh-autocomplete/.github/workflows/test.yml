@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      - run: ./run-tests.zsh
+        shell: zsh {0}
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      - run: sudo apt install zsh
+      - run: ./run-tests.zsh
+        shell: zsh {0}

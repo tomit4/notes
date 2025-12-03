@@ -1,0 +1,220 @@
+# ~/.zshrc
+# to change default shell, use chsh -s $(which zsh)
+
+# prevent overwriting of existing files
+set -o noclobber
+# reverse with:
+# set +o noclobber
+
+# create custom env variables:
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# set up python-virtualenvwrapper
+# https://wiki.archlinux.org/title/Python/Virtual_environment
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/bin/virtualenvwrapper_lazy.sh
+
+# custom BROWSER env for ddgr:
+export BROWSER=librewolf
+export QT_STYLE_OVERRIDE=Adwaita-Dark
+# export BROWSER=links
+export EDITOR=nvim
+export PF_INFO="ascii os kernel pkgs shell wm editor"
+
+export GROFF_NO_SGR=1
+export LESS_TERMCAP_mb=$'\e[1;34m'
+export LESS_TERMCAP_md=$'\e[1;34m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;33m'
+
+# Formats history command with dates/times
+export HISTTIMEFORMAT="%d/%m/%y %T "
+# Sets default for history command
+export HISTSIZE=10000000
+export HISTFILESIZE=100000
+export HISTFILE="$HOME/.zsh_history"
+SAVEHIST=10000000
+
+# setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry. setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+# setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+
+# creates a .zsh_history file on startup, and clears the history
+echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
+
+# Configure thefuck
+# eval "$(thefuck --alias)"
+# Change with care:
+export PATH="$PATH:/usr/local/cuda/bin:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin:/home/brian/go/bin"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib:$PATH"
+# Configure grep output colors
+export GREP_COLORS='ms=01;34'
+
+# Don't show completion until at least 1 character has been typed
+zstyle ':autocomplete:*' min-input 1
+
+#
+# Plugins
+source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath+=~/.zsh/poetry/
+autoload -Uz compinit; compinit
+
+
+# icons-in-terminal Integration
+# source ~/.local/share/icons-in-terminal/icons_bash.sh
+
+# Colors
+autoload -Uz colors && colors
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# git info/styling for prompt
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '%B%F{yellow} ➕'
+zstyle ':vcs_info:*' stagedstr '%B%F{green} ✔'
+zstyle ':vcs_info:git:*' formats       '%b%u%c'
+zstyle ':vcs_info:git:*' actionformats '%b|%a%u%c'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+
+# some useful options (man zshoptions)
+setopt autocd extendedglob nomatch menucomplete
+setopt interactive_comments
+stty stop undef         # Disable ctrl-s to freeze terminal
+zle_highlight=('paste:none') # pasting text using ctrl+shift+v doesn't highlight
+
+# beeping is annoying
+unsetopt BEEP
+
+# PROMPT='[%n@%m %1~]%F{green}(${vcs_info_msg_0_})%F{white}$ '
+# PROMPT='%B%F{blue}[%n@%M %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+# PROMPT='%B%F{blue}[ﴂ %B%F{white}'%1~'%B%F{blue}]$ %B%F{white}${vcs_info_msg_0_}%B%F{blue}
+# └─>%B%F{white} '
+# PROMPT='%B%F{blue}[ﴂ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
+# └─>%B%F{white} '
+PROMPT='%B%F{blue}[ %B%F{white}$(tput sitm)'%1~'$(tput sgr0)$(tput bold)%B%F{blue}]$(tput sitm)$ %B%F{white}$(tput setaf 5)${vcs_info_msg_0_}%B%F$(tput sgr0)$(tput setaf 4)$(tput bold)
+└─>%B%F{white} '
+
+# function erase_history { local HISTSIZE=0; }
+# erase_history && hash -r
+
+# create a zkbd compatible hash;
+# to add other keys to this hash, see: man 5 terminfo
+typeset -g -A key
+
+key[Home]="${terminfo[khome]}"
+key[End]="${terminfo[kend]}"
+key[Insert]="${terminfo[kich1]}"
+key[Backspace]="${terminfo[kbs]}"
+key[Delete]="${terminfo[kdch1]}"
+key[Up]="${terminfo[kcuu1]}"
+key[Down]="${terminfo[kcud1]}"
+key[Left]="${terminfo[kcub1]}"
+key[Right]="${terminfo[kcuf1]}"
+key[PageUp]="${terminfo[kpp]}"
+key[PageDown]="${terminfo[knp]}"
+key[Shift-Tab]="${terminfo[kcbt]}"
+
+# setup key accordingly
+[[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"       beginning-of-line
+[[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"        end-of-line
+[[ -n "${key[Insert]}"    ]] && bindkey -- "${key[Insert]}"     overwrite-mode
+[[ -n "${key[Backspace]}" ]] && bindkey -- "${key[Backspace]}"  backward-delete-char
+[[ -n "${key[Delete]}"    ]] && bindkey -- "${key[Delete]}"     delete-char
+[[ -n "${key[Up]}"        ]] && bindkey -- "${key[Up]}"         up-line-or-history
+[[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"       down-line-or-history
+[[ -n "${key[Left]}"      ]] && bindkey -- "${key[Left]}"       backward-char
+[[ -n "${key[Right]}"     ]] && bindkey -- "${key[Right]}"      forward-char
+[[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"     beginning-of-buffer-or-history
+[[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
+[[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
+
+# Finally, make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
+    autoload -Uz add-zle-hook-widget
+    function zle_application_mode_start { echoti smkx }
+    function zle_application_mode_stop { echoti rmkx }
+    add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+    add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+fi
+
+# Set up vim mode
+bindkey -v
+
+# alias home="xclear && cd /home/brian && clear && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history"
+alias home="cd && history -p && clear && echo '' | xclip && xclip -selection clipboard /dev/null"
+
+# Various source files (do not place at end of zshrc/bashrc)
+source ~/.aliases
+# github personal access token
+#source ~/.gh_pat
+#SSID and passwd
+#source ~/.ssid_passwd
+# Plugins (that need to be at the end of the zshrc script)
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+# Sets Up Node Version Manager
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Set up TTY colors
+# pulled form https://github.com/lewisacidic/nord-tty
+if [ "$TERM" = "linux" ]; then
+echo -en \\e]P02E3440
+echo -en \\e]P1BF616A
+echo -en \\e]P2A3BE8C
+echo -en \\e]P3EBCB8B
+echo -en \\e]P481A1C1
+echo -en \\e]P5B48EAD
+echo -en \\e]P688C0D0
+echo -en \\e]P7E5E9F0
+echo -en \\e]P84C566A
+echo -en \\e]P9BF616A
+echo -en \\e]PAA3BE8C
+echo -en \\e]PBEBCB8B
+echo -en \\e]PCB48EAD
+echo -en \\e]PD8FBCBB
+echo -en \\e]PEECEFF4
+clear
+fi
+
+#if [[ -f "$HOME/.sdrc" ]] ; then
+#source "$HOME/.sdrc"
+#fi
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.zsh/zsh-fex/fex.zsh ] && source ~/.zsh/zsh-fex/fex.zsh
+bindkey '^f' fex-widget
+
+#bun completions
+[ -s "/home/brian/.bun/_bun" ] && source "/home/brian/.bun/_bun"
+
+## bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+#export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
+
+# npm will install global packages to:
+export NPM_CONFIG_PREFIX="$HOME/.local/"
+
+# rye
+source "$HOME/.rye/env"
+
+# current book being read (used in resume_read script)
+# export CURRENT_READ=""

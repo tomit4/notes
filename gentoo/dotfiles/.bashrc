@@ -1,0 +1,235 @@
+#!/bin/bash
+
+# Changing over to ZSH for now, bashrc is kept here as emergency shell/posterity
+#
+# to change default shell, use chsh -s $(which bash)
+# ~/.bashrc
+#
+# history -c && history -w && hash -r
+# create custom env variables:
+# export cproj="$HOME/Documents/Code/web_tutorials/advanced_programming_in_the_UNIX_environment"
+export cproj="$HOME/Documents/Code/bash/bgit"
+# custom BROWSER env for ddgr:
+export BROWSER=links
+export EDITOR=nvim # enable vi keybindings in terminal and terminal applications
+
+set -o vi
+# set -o noclobber
+
+export PF_INFO="ascii os kernel pkgs shell wm editor"
+
+# but keep ctrl l as the clear screen command bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+# Colorizes man pages
+export GROFF_NO_SGR=1
+export LESS_TERMCAP_mb=$'\e[1;34m'
+export LESS_TERMCAP_md=$'\e[1;34m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;33m'
+
+# clears the history completely upon loading bash
+cat /dev/null >~/.bash_history && history -c && hash -r
+
+[[ $- != *i* ]] && return
+colors() {
+    local fgc bgc vals seq0
+
+    printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+    printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+    printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+    printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+
+    # foreground colors
+    for fgc in {30..37}; do
+        # background colors
+        for bgc in {40..47}; do
+            fgc=${fgc#37} # white
+            bgc=${bgc#40} # black
+
+            vals="${fgc:+$fgc;}${bgc}"
+            vals=${vals%%;}
+
+            seq0="${vals:+\e[${vals}m}"
+            printf "  %-9s" "${seq0:-(default)}"
+            printf " ${seq0}TEXT\e[m"
+            printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+        done
+        echo
+        echo
+    done
+}
+
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+
+# Change the window title of X terminals
+case ${TERM} in
+    xterm* | rxvt* | Eterm* | aterm | kterm | gnome* | interix | konsole*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007" '
+
+        ;;
+    screen*)
+        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\" '
+        ;;
+esac
+
+use_color=true
+
+# Set colorful PS1 only on colorful terminals.
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.  Use internal bash
+# globbing instead of external grep binary.
+safe_term=${TERM//[^[:alnum:]]/?} # sanitize TERM
+match_lhs=""
+[[ -f ~/.dir_colors ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+[[ -z ${match_lhs} ]] &&
+    type -P dircolors >/dev/null &&
+    match_lhs=$(dircolors --print-database)
+[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
+
+if ${use_color}; then
+    # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+    if type -P dircolors >/dev/null; then
+        if [[ -f ~/.dir_colors ]]; then
+            eval $(dircolors -b ~/.dir_colors)
+        elif [[ -f /etc/DIR_COLORS ]]; then
+            eval $(dircolors -b /etc/DIR_COLORS)
+        fi
+    fi
+
+    if [[ ${EUID} == 0 ]]; then
+        PS2='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+    else
+        PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+    fi
+
+    alias ls='ls --color=auto'
+    alias grep='grep --colour=auto'
+    alias egrep='egrep --colour=auto'
+    alias fgrep='fgrep --colour=auto'
+else
+    if [[ ${EUID} == 0 ]]; then
+        # show root@ when we don't have colors
+        PS1='\u@\h \W \$ '
+    else
+        PS1='\u@\h \w \$ '
+    fi
+fi
+
+unset use_color safe_term match_lhs sh
+
+alias cp="cp -i"     # confirm before overwriting something
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+
+xhost +local:root >/dev/null 2>&1
+
+complete -cf sudo
+
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# No need to type cd when changing directories.
+shopt -s autocd
+# No need to have capitalization correct
+shopt -s cdspell
+
+shopt -s expand_aliases
+
+# export QT_SELECT=4
+
+# Enable history appending instead of overwriting.  #139609
+shopt -s histappend
+
+#
+# # ex - archive extractor
+# # usage: ex <file>
+ex() {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2) tar xjf $1 ;;
+            *.tar.gz) tar xzf $1 ;;
+            *.bz2) bunzip2 $1 ;;
+            *.rar) unrar x $1 ;; *.gz) gunzip $1 ;;
+            *.tar) tar xf $1 ;;
+            *.tbz2) tar xjf $1 ;;
+            *.tgz) tar xzf $1 ;;
+            *.zip) unzip $1 ;;
+            *.Z) uncompress $1 ;;
+            *.7z) 7z x $1 ;;
+            *) echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# Formats history command with dates/times
+HISTTIMEFORMAT="%d/%m/%y %T "
+
+# Displays current git branch if there is any and also styles bash prompt
+# export PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
+export PS1='\[\033[01;34m\][\[\033[01;37m\] \W\[\033[01;34m\]]\$\033[01;34m\] $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n\033[01;34m└─>\033[37m '
+# Configure thefuck
+eval "$(thefuck --alias)"
+export PATH="$PATH:/home/brian/scripts:/home/brian/.local/bin:/home/brian/.local/share/nvim/lsp_servers:/home/brian/.cargo/bin:/home/brian/go/bin"
+export GREP_COLORS='ms=01;34'
+
+# icons-in-terminal
+# source ~/.local/share/icons-in-terminal/icons_bash.sh
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
+
+alias home="xclear && cd /home/brian && clear && history -c && hash -r"
+
+# Various source files (do not place at end of zshrc/bashrc)
+source ~/.aliases
+source ~/.gh_pat
+source ~/.ssid_passwd
+source /home/brian/.bash_completions/typer.sh
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
+    source /usr/share/bash-completion/bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Sets Up Node Version Manager
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Set up TTY colors
+# pulled form https://github.com/lewisacidic/nord-tty
+if [ "$TERM" = "linux" ]; then
+    echo -en \\e]P02E3440
+    echo -en \\e]P1BF616A
+    echo -en \\e]P2A3BE8C
+    echo -en \\e]P3EBCB8B
+    echo -en \\e]P481A1C1
+    echo -en \\e]P5B48EAD
+    echo -en \\e]P688C0D0
+    echo -en \\e]P7E5E9F0
+    echo -en \\e]P84C566A
+    echo -en \\e]P9BF616A
+    echo -en \\e]PAA3BE8C
+    echo -en \\e]PBEBCB8B
+    echo -en \\e]PCB48EAD
+    echo -en \\e]PD8FBCBB
+    echo -en \\e]PEECEFF4
+    clear
+fi
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+export CUDA_HOME=/opt/miniconda3/condabin/conda

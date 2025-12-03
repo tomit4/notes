@@ -1,0 +1,418 @@
+# Custom Aliases
+alias cdls="source mycd"
+#alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
+alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'" # -N
+alias {drag,rdrag}="ripdrag"
+alias dusty="dust -i -v 'node_modules'"
+#alias lf="ranger"
+alias cp="cp -i"
+alias df='df -h'
+alias free='free -mh'
+alias dmesg="doas dmesg -H"
+alias kernel="uname -r"
+alias mkcd='{ IFS= read -r d && mkdir "$d" && cd "$d"; } <<<'
+alias cpwd='pwd | xclip -sel clip'
+alias docs="cd ~/Documents && ls"
+alias desk="cd ~/Desktop && ls"
+alias down="cd ~/Downloads && ls"
+alias pics="cd ~/Pictures && ls"
+alias pods="cd ~/Podcasts && ls"
+alias music="cd ~/Music && ls"
+alias vids="cd ~/Videos && ls"
+alias mov="cd ~/Videos/mov/ && ls"
+alias {sand,sandbox}="cd ~/sandbox && ls"
+alias games="cd ~/.local/share/Steam/steamapps/common && ls"
+alias notes="cd ~/Documents/notes && ls"
+alias scripts="cd ~/scripts && ls"
+alias books="cd ~/Documents/books && ls"
+alias config="cd ~/.config && ls"
+alias cache="cd ~/.cache && ls"
+#alias svs="cd /etc/runit/sv && ls"
+alias offline="cd ~/Documents/offline_notes && ls"
+# alias vpnup="doas sv up wireguard"
+# alias vpndown="doas sv down wireguard"
+alias pihole="docker exec -it pihole-unbound pihole"
+alias obs="gobble flatpak run com.obsproject.Studio"
+alias Code="cd ~/Documents/Code && ls"
+alias graphics="cd ~/Documents/Graphic_Design && ls"
+alias Math="cd ~/Documents/Math && ls"
+alias cplus="cd ~/Documents/Code/cpp && ls"
+alias js="cd ~/Documents/Code/javascript && ls"
+alias py="cd ~/Documents/Code/python && ls"
+#alias {pysh,py-sh}="ipython"
+#alias phpd="cd ~/Documents/Code/php && ls"
+alias golang="cd ~/Documents/Code/golang && ls"
+alias {rust,rustlang}="cd ~/Documents/Code/rust && ls"
+alias {leet,leetcode}="cd ~/Documents/Code/leetcode/ && ls"
+alias {neet,neetcode}="cd ~/Documents/Code/leetcode/neetcode_roadmap/ && ls"
+alias neetvids="cd ~/Videos/yt/educational/dsa/leetcode_explanations/neetcode_roadmap/ && ls"
+# alias zsaves="cd ~/Zomboid/Saves/Sandbox/ && ls"
+# alias zsaves="cd ~/Games/umu/umu-default/drive_c/users/steamuser/Zomboid/Saves/Sandbox && ls"
+# alias zmods="cd ~/Games/umu/umu-default/drive_c/users/steamuser/Zomboid/mods && ls"
+alias zsaves="cd ~/.wine/drive_c/users/brian/Zomboid/Saves/Sandbox/ && ls"
+alias zmods="cd ~/.wine/drive_c/users/brian/Zomboid/mods/ && ls"
+alias logs="cd /var/log && ls"
+alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
+alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
+alias btuts="cd ~/Documents/Code/book_tutorials && ls"
+alias fonts="fc-list"
+alias locate="locate -i"
+alias bat="bat --theme Nord"
+alias ls="eza --icons"
+alias li="eza -1 --icons"
+alias ll="eza -lih --icons"
+alias {lsdir,lsd}="ls -t -1" # list only the directories
+alias lshw="doas lshw -short | less" # list hardware
+alias {hw,hwinfo}="hwinfo | less" # extensive info on hardware devices
+alias dmid="doas dmidecode | less"
+alias of="onefetch -o yaml | yq -C"
+alias mkdir='mkdir -pv'
+alias dict='def'
+alias {:q,ex,esc}="exit"
+alias :w="touch"
+alias digg="doggo"
+alias dff="/usr/bin/df -h && duf"
+alias {his,hist}="history"
+alias mnt="doas mount /dev/sda1 /mnt/media/usb-drive && cd /mnt/media/usb-drive && ls"
+alias umnt="doas umount /mnt/media/usb-drive"
+alias {imnt,iphone}="ifuse /home/brian/iphone && cd /home/brian/iphone && ls"
+alias iumnt="doas umount /home/brian/iphone"
+alias kmnt="doas mount /dev/sda /mnt/media/kobo/ && cd /mnt/media/kobo/.kobo && ls"
+alias kumnt="doas umount /dev/sda /mnt/media/kobo"
+# alias pixel="cd /run/user/1000/gvfs/mtp:host=Google_Pixel_7a_34211JEHN03088/Internal\ shared\ storage && ls"
+alias pixel="cd /mnt/media/pixel/Internal\ shared\ storage && ls"
+alias pmnt="aft-mtp-mount /mnt/media/pixel && cd /mnt/media/pixel/Internal\ shared\ storage && ls"
+alias pumnt="fusermount3 -uz /mnt/media/pixel"
+alias pikoshi="cd ~/Documents/Code/group_projects/pikoshi/ && ls"
+alias rm="newrm -vi"
+alias calendar="calcurse"
+alias cal="newcal"
+# simple tool for math, see https://github.com/metadelta/mdlt
+# alias math="mdlt simplify"
+alias mv="mv -v"
+alias ln="ln -i"
+alias {doasedit,sudoedit}="doas rnano"
+alias clean_cache="doas paccache -r && doas rm -r /home/brian/.cache/*"
+alias shred="doas shred -uzv" # shreds the file and overwrites it with 1s and 0s, shows progress
+alias indelible="doas chattr +i" # makes a file impossible to delete (except with sudo)
+alias diff=difft
+alias cdiff="colordiff"
+# alias kfonts="kitty +list-fonts"
+# alias {kdiff,kitten,kd}="kitty +kitten diff"
+alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
+alias bluepill="neo-matrix --bold=2 -D --color=cyan --density=0.75 --charset=katakana --speed=12 --fullwidth --screensaver"
+alias moo="cowsay moo"
+# alias btop="kitty -o font_size=12 -o background_opacity=0.50 -e btop; fullscreen enable"
+alias tshift='doas timeshift --delete && notify-send "  Previous Backup Deleted!" && doas timeshift --create && notify-send "  New Backup Created!" && doas timeshift --list'
+alias btop="bst -e btop"
+# alias gimp="gimp --no-splash"
+alias krita="gobble flatpak run org.kde.krita --nosplash"
+#alias onlyoffice="onlyoffice-desktopeditors"
+# alias toonz="opentoonz"
+alias {sqlite,sql}="sqlite3"
+alias {sqcipher,sqc}="sqlcipher"
+alias sqlite-cli="litecli"
+alias sq-cli="litecli" # doesn't work with sqlcipher
+# alias view="kitty +kitten icat"
+alias view="gobble sxiv"
+alias view-w="img2sixel"
+# alias csview="csvlook"
+alias viewer="feh -F -Z -x"
+alias mupdf='gobble mupdf -r 204'
+alias dkpdf='gobble mupdf -I -r 204'
+alias sign='gobble xournalpp'
+alias keys="gobble keepassxc $KDBX"
+alias {jscrl,jsoncurl,jcrl}="jscurl"
+alias kevents="xev -event keyboard"
+alias sk="screenkey"
+# alias word="wordgrinder"
+alias spreadsheet="sc-im"
+alias pvctrl="pavucontrol"
+alias open="xdg-open"
+alias nc="nc -v"
+alias dump="doas tcpdump"
+alias {wireshark-cli,wshark}="tshark"
+alias wireshark="gobble wireshark -k -i wlp6s0"
+alias route="traceroute"
+alias listen="ss -a -t -p"
+alias {lh,lighthouse}="lighthouse --view"
+alias {pdf2,pdf2txt}="pdftotext"
+alias {pdfg,greppdf}="pdfgrep"
+alias tree="tree -ad -L 3 --prune -C -I 'node_modules|.git'"
+alias {vi,vim,nv,nvi}="nvim"
+alias {vfz,nvfz,nvim-fzf,fzf-nvim}='nvim "$(fzf)"'
+alias {cproj,mproj,myproj}="cd '$cproj' && ls"
+alias blog="cd ~/Documents/Code/blog/ && ls"
+# alias rsm="doas rsm"
+alias updatedb="doas updatedb"
+alias iftop-w="doas iftop -i wlan0 -P"
+alias wmon="wavemon"
+# usage p0f -i wlan0
+alias p0f="doas p0f"
+alias vnstat-w="vnstat -i wlan0 --json | jq"
+alias {bluetooth,bt}="bluetoothctl"
+alias {wi,ssid}="doas iw wlan0 scan | grep SSID"
+
+# NOTE: Find wpa_supplicant and dhcpcd ways to do these NetworkManager commands:
+# alias wifi-list="connmanctl services"
+#alias wifi-list="nmcli device wifi list"
+# alias wifi-scan="connmanctl scan wifi"
+# alias wifi-connect="connmanctl connect wifi_34cff6c9b922_44495a5a_managed_psk"
+#alias wifi-connect='nmcli device wifi connect "${SSID}" password "${PASSWD}"'
+# alias wifi-disconnect="connmanctl disconnect wifi_34cff6c9b922_44495a5a_managed_psk"
+#alias wifi-disconnect="nmcli device disconnect wlan0"
+#alias wifi-up="doas ifconfig wlan0 up"
+#alias wifi-down="doas ifconfig wlan0 down"
+
+alias lxapp="lxappearance"
+alias hd="ncdu"
+# one of our most usful aliases (useful in conjunction with yank, awk, etc.):
+alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
+# wayland has an equivalent as well:
+alias {wsel,catw}="wl-copy" # useful with | redirection, i.e. echo "hi there" | catw
+alias catp="xclip -out -selection clipboard; echo"
+alias mouse="mousepad"
+alias xclear="echo '' | xclip && xclip -selection clipboard /dev/null"
+# alias diff="diff -wy"
+alias exifread="exiftool"
+alias exifrm="exiftool -all="
+alias {html,html_pp}="hxnormalize -e"
+alias {ltrans,trans,translate}="ltranslate"
+alias skey='screenkey --position fixed --geometry $(slop)'
+alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
+# interfaces with asciinema.org for creating simple video tutorials on cli programs
+alias ascii="asciinema"
+
+alias mpv="gobble mpv --sub-font-size=40"
+alias mpvl="gobble mpv --sub-font-size=40 --loop-file=inf"
+alias mpva='/usr/bin/mpv "${1}" --no-video'
+alias mpval='/usr/bin/mpv "${1}" --no-video --loop-file=inf'
+alias mmpv='gobble mpv --fs --panscan=1.0'
+# alias {qvid,qv4}="gobble qv4l2" # better amount of controls for webcam
+# alias {gvid,gv4}="gobble guvcview" # set to 50hz
+# bare bones, just views webcam:
+alias {wcam,webcam}="gobble mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency"
+# use: record /path/to/file.mp3
+
+# NOTE: instead of arecord (ALSA), find a way to use pw-record (via pipewire)
+# alias record="arecord -vv --format=cd --file-type raw | lame -r - "
+
+#alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
+#alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
+#alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
+# laptop only
+#alias lapspeakers="pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
+alias pulse="pamixer --set-volume"
+alias {mu,mt,mute}="pamixer -t"
+# laptop only currently, records video/audio, simply name filename .mp4 after command:
+alias r_vid="ffmpeg -f v4l2 -framerate 24 -video_size 640x480 -i /dev/video0 -itsoffset 00:00:01.0 -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac"
+# for smaller downloads
+alias ytdl='yt-dlp --sponsorblock-remove all --write-auto-sub -t mp4'
+alias ytdl-w='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
+# for better resolutions
+# alias ytdl-w='yt-dlp -f webm "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
+# for audio only
+alias ytdl-a="yt-dlp --sponsorblock-remove all -x --audio-format mp3"
+# alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
+alias {cl,cls}="clear"
+alias shutdown="shutdown.sh"
+alias reboot="reboot.sh"
+alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
+#source ~/.zip_code
+alias inxi-w="inxi --weather "${ZIPCODE}""
+alias inxi-i="doas inxi -Fxzm"
+alias pf="pfetch"
+alias ff="fastfetch"
+alias has="dependencycheck"
+# alias ipaddr="curl ifconfig.me/all.json | jq"
+alias hwclock="doas hwclock"
+alias kill9="killall -9" # kills process by name, e.g. kill9 cmus
+alias ports="netstat -tunlp"
+# alias npm_upgrade="doas npm install --location=global npm@latest"
+alias npm-l="npm list --global"
+alias npm-s="npm start"
+alias npm-t="npm test"
+alias npm-o="npm outdated"
+alias npm-u="npm update"
+alias cargo-l="cargo install --list"
+alias cargo-u="cargo install-update -a" # requires cargo-update crate
+# alias {pacquery,pacq}="pacman -Q"
+# alias {pacsearch,pacs}="pacman -Ss"
+alias find-empty='find . -depth -empty'
+alias rmdir-a='find . -depth -empty -delete'
+alias paclogs="bat /var/log/pacman.log"
+alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
+# useful alias for recursively testing .test.js files on save
+# alias jester="jest --watchAll"
+# generate uuids using native bash
+alias uuid="uuidgen"
+alias kuuid="cat /proc/sys/kernel/random/uuid"
+alias duuid="dbus-uuidgen"
+# generate unique ids from cli, example for no special characters:
+# alias manoid="nanoid --alphabet 'abcdefghijklmnopqrstuvwxyz' --size 40"
+alias nanoid="npx nanoid"
+# alias uglifyhtml="html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true"
+# autoprefixes css files
+# requires installation:
+# npm install -g postcss postcss-cli autoprefixer
+alias {prefix,autoprefixer}="npx postcss *.css --use autoprefixer -d build/"
+# informs on dependency updates
+alias taze="npx taze"
+# alias pip_upgrade="python -m pip install --upgrade pip"
+alias rust_upgrade="rustup update"
+alias nb="newsboat"
+alias profane="profanity"
+alias {gmail,email,mail,mutt,nmut,nmutt}="neomutt"
+alias {mnb,nb-m}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/my_urls $HOME/.config/newsboat/urls && newsboat"
+alias {ynb,nb-y}="/usr/bin/cp $HOME/.config/newsboat/yt_urls $HOME/.config/newsboat/urls && newsboat"
+alias {rnb,nb-r}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/reddit_urls $HOME/.config/newsboat/urls && newsboat"
+alias {tootnb,mastnb}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/mastodon_urls $HOME/.config/newsboat/urls && newsboat"
+alias rt-rs="doas rm -r watch session && mkdir watch session && rm ~/Downloads/*.meta"
+alias slink="streamlink"
+#alias {epub,fbreader}="gobble FBReader"
+alias scrot="scrot --count --delay"
+alias grip="grip 6969"
+alias sudoku="sku"
+# alias rbd="checkrebuild -v"
+# pip list and pip freeze command list pip packages
+# poetry virtual env
+alias venv='source ".venv/bin/activate"'
+alias {uvenv,dvenv}="deactivate"
+
+#Particularly useful commands more to remember than to use as aliases:
+# alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
+alias {rcrm,rrm}="doas xargs -d\\n rm -r -v" # when piped after locate or find command, recursively removes outputted files
+alias {rlast,dlast}="sed -i '$ d'" # removes last line of file
+alias shchk="shellcheck"
+# get top process eating memory
+alias psmem="ps auxf | sort -nr -k 4 | head -5"
+# get top process eating cpu
+alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+# alias {say,speak,espeak}="espeak -v female5"
+alias {say,speak,espeak}="speak-ng"
+
+# useful bash commands
+# grep, sed, awk, tr, sort, seq, paste, uniq
+
+# git aliases
+alias git-a="git add"
+alias git-c="git commit -m"
+alias git-p="git push"
+alias {git-\#,git\#}="git rev-list --count --all"
+# taken from Luke Smith, pushes to all remotes
+alias git-pa="git remote | xargs -L1 git push --all"
+# undo local file changes and keep your last commit
+alias git-r="git reset --hard"
+# undo local file changes and remove your last commit
+alias git-rrh="git reset --hard HEAD^"
+# keep local file changes and remove your last commit
+alias git-rrs="git reset --soft HEAD^"
+alias git-s="git status"
+alias git-ss="git status short"
+alias git-d="git diff"
+alias {git-b,git-br}="git branch"
+alias git-bl="git blame"
+# for use with notes directory only
+alias git-lo="git log --oneline --follow"
+# alias {git-l,git-log}="git log --graph --format='format:%C(yellow)%h%C(reset) %s %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)'"
+alias {git-l,git-log}="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+# more to just remember than to be used
+alias git-stsh="git stash"
+alias git-stsh-a="git stash apply"
+alias git-stsh-d="git stash drop"
+alias gitmojis="bat $HOME/Documents/notes/gitmoji.txt"
+alias {vimhelp,helpvim,vimtips}="bat $HOME/Documents/notes/nvim_custom_keys.txt"
+alias {nvim-c,cleanvim}="nvim --clean"
+
+# tmux multiplexer session aliases
+alias tmux-ls="tmux list--sessions"
+alias {tmux-attach,tmux-a}="tmux a -t"
+alias {tmux-kill,tmux-k}="tmux kill-ses -t"
+
+# zellij multiplexer sesssion
+# alias zj="zellij"
+
+# programming specific aliases
+alias rc="rustc"
+alias cc="cc -Wall -Werror -Wextra -Wpedantic"
+alias cprogrammingtags="ctags"
+alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s"
+
+# game shortcuts
+# alias gback="cp -r ~/.wine/drive_c/users/brian/AppData/Local/CD\ Projekt\ Red/ ~/game_save_backups/"
+# alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
+# alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
+# alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
+
+# docker specific Aliases
+alias docker-ls="docker container ls -a && docker images"
+alias docker-rm-c="docker container rm"
+alias docker-rm-i="docker image rm"
+alias {docker-k,docker-kill}="docker kill"
+alias docker-exec="docker exec -it" # use with container ID and bash
+
+# bookmarks
+alias apnews='f(){ links https://apnews.com/"$1" ;}; f' # call using 'us' or 'world' as second arg
+alias npr="links https://text.npr.org"
+alias pbs="links https://lite.pbs.org"
+# brings up oregon public broadcasting
+alias radio='/usr/bin/mpv --no-video "https://ais-sa3.cdnstream1.com/2440_128.aac/playlist.m3u8?listeningSessionID=64c429fd0062f502_803653_uuxYz9V9_NjYuODUuODkuMzA6ODA\!_0000000vz1k\&downloadSessionID=0\&listenerId=esTrackblock0801483\&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1691381053"'
+alias {gp,gopherpedia}="lynx gopher://gopherpedia.com:70"
+alias gopher="lynx https://gopher.floodgap.com/gopher/gw.lite"
+alias {ddg,duckduckgo}="links https://duckduckgo.com/lite"
+alias bangs="links ~/Documents/notes/ddg_bangs.html"
+# alias bangs="links https://duckduckgo.com/bang_lite.html"
+alias wikipedia="links https://wikipedia.org"
+alias hackernews="links https://news.ycombinator.com/"
+# sustainable clothing brands (shoes and underwear)
+# alias nothingnew="librewolf https://nothingnew.com &"
+# alias wamaundies="librewolf https://wamaunderwear.com &"
+
+# Kiwix (offline wikis)
+alias kiwixdl="links download.kiwix.org"
+
+# Anarchism
+alias itsgoingdown="links https://itsgoingdown.org/"
+alias puget="links https://pugetsoundanarchists.org/"
+alias {theanarchistlibrary,anarchlib}="links https://theanarchistlibrary.org/"
+
+# Programming Resources
+# CS Basics
+
+# Blogs
+# Unix Sheikh, very good info regarding Unix and Linux
+alias unixsheikh="links https://unixsheikh.com"
+# A reddit like forum similar also to hackernews
+alias lobsters="links https://lobste.rs"
+
+# Check Tor
+alias checktor="links https://check.torproject.org"
+
+# display related aliases
+alias brighten="xrandr --output HDMI-0 --brightness"
+alias unred="redshift -x"
+
+# run the following two aliases every time you update the kernels and nvidiadkms
+# alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
+# alias regen_initramfs="doas mkinitcpio -P"
+
+# alias mpl="mplayer -fs"
+# alias {mloop,mploop}="mplayer -fs -loop 0"
+alias sd="sdir"
+alias unu="upnup"
+
+source $HOME/.linodes/.ips
+source $HOME/.k_hidden
+
+source $HOME/.n_hidden
+alias "${scomm}"='cd "${secdir}" && mmpv * && home'
+alias "${scomm2}"='mmpv ${secvid} && home'
+alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
+
+# GENTOO
+alias wlop="doas watch -cn 10 genlop -ci"
+alias portage="cd /etc/portage && ls"
+alias portq="qlist -I"
+alias depends="equery g"
+alias {usedit,useedit}="doas nvim /etc/portage/package.use/package.use"
+alias unmask="doas nvim /etc/portage/package.accept_keywords/package.unmask"

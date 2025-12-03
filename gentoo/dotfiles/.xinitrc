@@ -1,0 +1,92 @@
+#!/bin/sh
+
+# This is an ~/.xinitrc example file
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
+
+# start some nice programs
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+# force XDG_SESSION_TYPE to be x11
+export XDG_SESSION_TYPE=x11
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+# export XDG_DATA_DIRS=
+# Start compositor
+# picom blah blah ...
+
+#Desktop
+xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
+#Laptop
+# brillo -S 70
+
+# start redshift
+# redshift -O 5000 &
+
+picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
+
+# GTK relies on this for icon themes
+# export GTK_ICON_THEME=Papirus-Dark
+
+# Start applets, daemons, etc.
+# diskie
+# nm-applet
+dunst &
+xbanish &
+xsetroot -cursor_name left_ptr &
+# espanso start --unmanaged &
+# pulseaudio --start &
+
+# enables AppArmor's aa-notify by default (supposed to be a runit script...)
+# aa-notify --user $USER -p -s 1 -w 60 -f /var/log/audit/audit.log
+
+# Notification for Laptop Battery
+# echo 'export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS > /tmp/dsba &
+# chmod +x /tmp/dsba &
+# /tmp/dsba &
+# /home/brian/scripts/batnotify &
+#
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+# Start pipewire
+# /usr/bin/pipewire &
+# /usr/bin/pipewire-pulse &
+# /usr/bin/wireplumber &
+
+# Start i3wm
+# exec i3
+
+# redshift -O 5000 &
+#feh --bg-fill /home/brian/Pictures/leaves.jpg &
+
+# Start bspwm
+pgrep -x sxhkd >/dev/null || sxhkd -c /home/brian/.config/sxhkd/sxhkdrc &
+# exec bspwm -c /home/brian/.config/bspwm/bspwmrc
+exec dbus-launch --sh-syntax --exit-with-session bspwm -c /home/brian/.config/bspwm/bspwmrc
