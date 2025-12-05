@@ -42,6 +42,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 #Desktop
 xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
+# xrandr --output HDMI-0 --brightness 1.1 --scale 0.98x0.98 & #--set TearFree on &
 #Laptop
 # brillo -S 70
 
@@ -76,9 +77,10 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 
 # Start pipewire
-# /usr/bin/pipewire &
-# /usr/bin/pipewire-pulse &
-# /usr/bin/wireplumber &
+#/usr/bin/pipewire &
+/usr/bin/gentoo-pipewire-launcher &
+/usr/bin/pipewire-pulse &
+#/usr/bin/wireplumber &
 
 # Start i3wm
 # exec i3
@@ -86,7 +88,10 @@ fi
 # redshift -O 5000 &
 #feh --bg-fill /home/brian/Pictures/leaves.jpg &
 
+# Load cursors/resources
+xrdb -merge ~/.Xresources
+
 # Start bspwm
 pgrep -x sxhkd >/dev/null || sxhkd -c /home/brian/.config/sxhkd/sxhkdrc &
-# exec bspwm -c /home/brian/.config/bspwm/bspwmrc
-exec dbus-launch --sh-syntax --exit-with-session bspwm -c /home/brian/.config/bspwm/bspwmrc
+exec dbus-run-session bspwm -c /home/brian/.config/bspwm/bspwmrc
+#exec dbus-launch --sh-syntax --exit-with-session bspwm -c /home/brian/.config/bspwm/bspwmrc

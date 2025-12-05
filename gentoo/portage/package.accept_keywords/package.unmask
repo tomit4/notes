@@ -15,3 +15,4 @@
 >=app-editors/micro-2.0.13-r1 ~amd64
 >=gui-wm/river-0.3.12 ~amd64
 >=app-emulation/wine-staging-10.20 ~amd64
+>=net-vpn/mullvadvpn-app-2025.13 ~amd64
