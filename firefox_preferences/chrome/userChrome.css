@@ -5,11 +5,33 @@
     --toolbar-field-focus-border-color: #2c77ac;
 }
 
+/* remove/adjust radius from buttons and tabs */
+*|*:root {
+    --toolbarbutton-border-radius: 3px !important;
+    --tab-border-radius: 3px !important;
+    --toolbarbutton-outer-padding: 2px !important;
+    /*--toolbarbutton-inner-padding: 8px !important;*/
+    --toolbar-start-end-padding: 2px !important;
+}
+
+/* remove/adjust margin fron tabs */
+.tab-background {
+    margin-block: 2px !important;
+}
+
+/* remove/adjust padding between tabs */
+.tabbrowser-tab {
+    padding-inline: 2px !important;
+}
+
+
 /* #url-go-button, */
 #urlbar-zoom-button,
 #tracking-protection-icon-container,
 #back-button,
+#back-button>*,
 #forward-button,
+#forward-button>*,
 #stop-button,
 #reload-button,
 /* #statuspanel, */
@@ -70,6 +92,7 @@ toolbar>* {
 #urlbar-background {
     background-color: #14161b !important;
 }
+
 
 #nav-bar toolbarspring {
     /* min-width: 55px !important; */
