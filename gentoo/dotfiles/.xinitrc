@@ -46,9 +46,6 @@ xrandr --output HDMI-0 --brightness 1.1 & #--set TearFree on &
 #Laptop
 # brillo -S 70
 
-# start redshift
-# redshift -O 5000 &
-
 picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 
 # GTK relies on this for icon themes
@@ -85,7 +82,6 @@ fi
 # Start i3wm
 # exec i3
 
-# redshift -O 5000 &
 #feh --bg-fill /home/brian/Pictures/leaves.jpg &
 
 # Load cursors/resources

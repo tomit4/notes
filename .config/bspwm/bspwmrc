@@ -1,11 +1,12 @@
 #! /bin/sh
 bspc rule -r "*" &
 
-# redshift -O 5000 &
+gammastep -O 5000 &
+espanso start --unmanaged &
 
 # picom --config /home/brian/.config/picom/picom.conf & # --experimental-backends &
 # feh --bg-fill /home/brian/Pictures/nord_mountains.png &
-# feh --bg-fill /home/brian/Pictures/leaves.jpg &
+feh --bg-fill /home/brian/Pictures/leaves.jpg &
 # feh --bg-fill /home/brian/Pictures/gruvbox_braille.png &
 bst -e btop &
 
@@ -65,6 +66,7 @@ bspc rule -a Lxappearance state=floating center=on rectangle=960x810+1440+810 &
 bspc rule -a Mousepad state=floating center=on rectangle=960x810+1440+810 &
 # bspc rule -a Brave-browser center=on rectangle=1555x960+1440+810 &
 bspc rule -a Alacritty center=on rectangle=1555x960+1440+810 &
+bspc rule -a chromium-bin center=on rectangle=1555x960+1440+810 &
 bspc rule -a firefox center=on rectangle=1555x960+1440+810 &
 bspc rule -a librewolf center=on rectangle=1555x960+1440+810 &
 bspc rule -a thunderbird center=on rectangle=1555x960+1440+810 &
@@ -75,6 +77,7 @@ bspc rule -a Desktopeditors center=on rectangle=1555x960+1440+810 &
 bspc rule -a Pcmanfm center=on rectangle=1555x960+1440+810 &
 bspc rule -a Postman center=on rectangle=1555x960+1440+810 &
 bspc rule -a Steam center=on rectangle=1555x960+1440+810 &
+bspc rule -a Lutris center=on rectangle=1555x960+1440+810 &
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'

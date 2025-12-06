@@ -1098,3 +1098,17 @@ sys-apps/hwloc abi_x86_32
 # required by sys-apps/hwloc (argument)
 >=sys-apps/pciutils-3.14.0 abi_x86_32
 sys-process/htop hwloc
+# required by media-video/peek-1.5.1-r2::gentoo
+# required by media-video/peek (argument)
+>=media-video/ffmpeg-7.1.2 vpx
+# required by media-video/ffmpeg-7.1.2::gentoo[vpx]
+# required by media-video/peek-1.5.1-r2::gentoo
+# required by media-video/peek (argument)
+>=media-libs/libvpx-1.15.2 abi_x86_32
+media-video/ffmpeg lame
+app-containers/podman apparmor
+net-firewall/iptables nftables
+gui-wm/sway wallpapers
+# required by gui-wm/sway-1.10.1::gentoo[wallpapers]
+# required by gui-wm/sway (argument)
+>=gui-apps/swaybg-1.2.1 gdk-pixbuf

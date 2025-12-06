@@ -992,3 +992,10 @@ doas pacman -S bluez-utils
 11/15/2025
 Install kiwix-tools
 doas pacman -S kiwix-tools
+
+12/05/2025
+Replace redshift with gammastep:
+doas pacman -S gammastep
+OR:
+paru gammastep-git
+

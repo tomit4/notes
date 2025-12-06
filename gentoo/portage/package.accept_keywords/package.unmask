@@ -16,3 +16,4 @@
 >=gui-wm/river-0.3.12 ~amd64
 >=app-emulation/wine-staging-10.20 ~amd64
 >=net-vpn/mullvadvpn-app-2025.13 ~amd64
+>=media-video/peek-1.5.1 ~amd64
