@@ -9,507 +9,429 @@
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
+  - trigger: :espanso
     force_clipboard: true
-    replace: "Hi there!"
-
-  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
-
+    replace: Hi there!
   # But matches can also be dynamic:
 
   # Print the current date
-  - trigger: ":date"
+  - trigger: :date
+    # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
     force_clipboard: true
-    replace: "{{mydate}}"
+    replace: '{{mydate}}'
     vars:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
-
-  # Print the output of a shell command
-  # - trigger: ":shell"
-  # replace: "{{output}}"
-  # vars:
-  # - name: output
-  # type: shell
-  # params:
-  # cmd: "echo 'Hello from your shell"
-
+          format: '%m/%d/%Y'
   # Print the $USER
-  - trigger: ":user"
+  - trigger: :user
+    # Print the output of a shell command
+    # - trigger: ":shell"
+    # replace: "{{output}}"
+    # vars:
+    # - name: output
+    # type: shell
+    # params:
+    # cmd: "echo 'Hello from your shell"
+
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo $USER"
-
+          cmd: echo $USER
   # Print the $HOST
-  - trigger: ":term"
+  - trigger: :term
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo $TERM" # returns "linux"...
-
-  - trigger: ":shell"
+          cmd: echo $TERM # returns "linux"...
+  - trigger: :shell
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo $SHELL"
-
-  - trigger: ":kernel"
+          cmd: echo $SHELL
+  - trigger: :kernel
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "uname -r"
-
-  - trigger: ";cmm"
+          cmd: uname -r
+  - trigger: ;cmm
     force_clipboard: true
-    replace: "/* *********************\n\n*********************/"
+    replace: |-
+      /* *********************
 
-  - trigger: ";cmh"
+      *********************/
+  - trigger: ;cmh
     force_clipboard: true
-    replace: "########################\n\n#######################"
+    replace: |-
+      ########################
 
-  - trigger: ";rr"
+      #######################
+  - trigger: ;rr
     force_clipboard: true
-    replace: "source $HOME/.sdrc && cd $sdir && nvim $sdoc"
-
-  - trigger: ";rd"
+    replace: source $HOME/.sdrc && cd $sdir && nvim $sdoc
+  - trigger: ;rd
     force_clipboard: true
-    replace: "source $HOME/.sdrc && cd $sdir && ls"
-
-  - trigger: ";forl"
+    replace: source $HOME/.sdrc && cd $sdir && ls
+  - trigger: ;forl
     force_clipboard: true
-    replace: "for (;;) {}"
-
-  - trigger: ";while"
+    replace: for (;;) {}
+  - trigger: ;while
     force_clipboard: true
-    replace: "while () {}"
-
-  - trigger: ";if"
+    replace: while () {}
+  - trigger: ;if
     force_clipboard: true
-    replace: "if () {}"
-
-  - trigger: ";elif"
+    replace: if () {}
+  - trigger: ;elif
     force_clipboard: true
-    replace: "else if () {}"
-
-  - trigger: ";else"
+    replace: else if () {}
+  - trigger: ;else
     force_clipboard: true
-    replace: "else {}"
-
-  - trigger: ";do"
+    replace: else {}
+  - trigger: ;do
     force_clipboard: true
-    replace: "do {} while ()"
-
-  - trigger: ";func"
+    replace: do {} while ()
+  - trigger: ;func
     force_clipboard: true
-    replace: "function () {}"
-
-  - trigger: ";=>"
+    replace: function () {}
+  - trigger: ;=>
     force_clipboard: true
-    replace: "() => {}"
-
-  - trigger: ";try"
+    replace: () => {}
+  - trigger: ;try
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/trycatch ; echo ''"
-
-  - trigger: ";def"
+          cmd: ~/scripts/trycatch ; echo ''
+  - trigger: ;def
     force_clipboard: true
-    replace: "def():"
-
-  - trigger: ";fn"
+    replace: 'def():'
+  - trigger: ;fn
     force_clipboard: true
-    replace: "pub fn () {}"
-
-  - trigger: ";cll"
+    replace: pub fn () {}
+  - trigger: ;cll
     force_clipboard: true
-    replace: "console.log(' :=>', )"
-
-  - trigger: ";clc"
+    replace: console.log(' :=>', )
+  - trigger: ;clc
     force_clipboard: true
-    replace: "console.clear()"
-
-  - trigger: ";cla"
+    replace: console.clear()
+  - trigger: ;cla
     force_clipboard: true
-    replace: "console.assert()"
-
-  - trigger: ";cle"
+    replace: console.assert()
+  - trigger: ;cle
     force_clipboard: true
-    replace: "console.error('ERROR :=>', )"
-
-  - trigger: ";clt"
+    replace: console.error('ERROR :=>', )
+  - trigger: ;clt
     force_clipboard: true
-    replace: "console.table()"
-
-  - trigger: ";clw"
+    replace: console.table()
+  - trigger: ;clw
     force_clipboard: true
-    replace: "console.warn('WARNING :=>', )"
-
-  - trigger: ";$"
+    replace: console.warn('WARNING :=>', )
+  - trigger: ;$
     force_clipboard: true
-    replace: "$$  $$"
-
-  - trigger: ";frac"
+    replace: $$  $$
+  - trigger: ;frac
     force_clipboard: true
-    replace: "\\frac{}{}"
-
-  - trigger: ";int"
+    replace: \frac{}{}
+  - trigger: ;int
     force_clipboard: true
-    replace: "\\int{f(x)\\, dx}"
-
-  - trigger: ";lim"
+    replace: \int{f(x)\, dx}
+  - trigger: ;dint
     force_clipboard: true
-    replace: "\\lim\\limits_{ \\to }"
-
-  - trigger: ";min"
+    replace: \int_{}^{}{f(x)\, dx}
+  - trigger: ;lim
     force_clipboard: true
-    replace: "\\min \\left\\{{, }\\right\\}"
-
-  - trigger: ";der"
+    replace: \lim\limits_{ \to }
+  - trigger: ;min
     force_clipboard: true
-    replace: "f'(x) = \\lim\\limits_{h \\to 0}\\frac{f(x + h) - f(x)}{h}"
-
-  - trigger: ";tan"
+    replace: \min \left\{{, }\right\}
+  - trigger: ;der
     force_clipboard: true
-    replace: "y = f(a) + f'(a)(x - a)"
-
-  - trigger: ";quad"
+    replace: f'(x) = \lim\limits_{h \to 0}\frac{f(x + h) - f(x)}{h}
+  - trigger: ;tan
     force_clipboard: true
-    replace: "$$ x = \\frac{-(b) \\pm \\sqrt{(b)^2 - 4(a)(c)}}{2(a)} $$"
-
-  - trigger: ";slope"
+    replace: y = f(a) + f'(a)(x - a)
+  - trigger: ;quad
     force_clipboard: true
-    replace: "$$ m = \\frac{y_2 - y_1}{x_2 - x_1} $$"
-
-  - trigger: ";point"
+    replace: $$ x = \frac{-(b) \pm \sqrt{(b)^2 - 4(a)(c)}}{2(a)} $$
+  - trigger: ;slope
     force_clipboard: true
-    replace: "$$ y = y_1 + m(x - x_1) $$"
-
-  - trigger: ";form"
+    replace: $$ m = \frac{y_2 - y_1}{x_2 - x_1} $$
+  - trigger: ;point
     force_clipboard: true
-    replace: "$$ y = mx + b $$"
-
-  - trigger: ";circ"
+    replace: $$ y = y_1 + m(x - x_1) $$
+  - trigger: ;form
     force_clipboard: true
-    replace: "$$ (x - h)^2 + (y - k)^2 = r^2 $$"
-
-  - trigger: ";elli"
+    replace: $$ y = mx + b $$
+  - trigger: ;circ
     force_clipboard: true
-    replace: "$$ \\frac{(x - h)^2}{a^2} + \\frac{(y - k)^2}{b^2} = 1 $$"
-
-  - trigger: ";vert"
+    replace: $$ (x - h)^2 + (y - k)^2 = r^2 $$
+  - trigger: ;elli
     force_clipboard: true
-    replace: "$$ \\left(-\\frac{(b)}{2(a)}, f\\left(-\\frac{(b)}{2(a)}\\right)\\right) $$"
-
+    replace: $$ \frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1 $$
+  - trigger: ;vert
+    force_clipboard: true
+    replace: $$ \left(-\frac{(b)}{2(a)}, f\left(-\frac{(b)}{2(a)}\right)\right) $$
   # prints out latex piecewise function
-  - trigger: ";piece"
+  - trigger: ;piece
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/piecewise ; echo ''"
-
-  - trigger: ";align"
+          cmd: ~/scripts/piecewise ; echo ''
+  - trigger: ;align
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/align ; echo ''"
-
-  - trigger: ";matrix"
+          cmd: ~/scripts/align ; echo ''
+  - trigger: ;matrix
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/matrix ; echo ''"
-
-  - trigger: ";<h1"
+          cmd: ~/scripts/matrix ; echo ''
+  - trigger: ;<h1
     force_clipboard: true
-    replace: "<h1> </h1>"
-
-  - trigger: ";<h2"
+    replace: <h1> </h1>
+  - trigger: ;<h2
     force_clipboard: true
-    replace: "<h2> </h2>"
-
-  - trigger: ";<h3"
+    replace: <h2> </h2>
+  - trigger: ;<h3
     force_clipboard: true
-    replace: "<h3> </h3>"
-
-  - trigger: ";<h4"
+    replace: <h3> </h3>
+  - trigger: ;<h4
     force_clipboard: true
-    replace: "<h4> </h4>"
-
-  - trigger: ";<h5"
+    replace: <h4> </h4>
+  - trigger: ;<h5
     force_clipboard: true
-    replace: "<h5> </h5>"
-
-  - trigger: ";href"
+    replace: <h5> </h5>
+  - trigger: ;href
     force_clipboard: true
-    replace: '<a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>'
-
-  - trigger: ";<d"
+    replace: <a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>
+  - trigger: ;<d
     force_clipboard: true
-    replace: '<div class=""> </div>'
-
-  - trigger: ";<s"
+    replace: <div class=""> </div>
+  - trigger: ;<s
     force_clipboard: true
-    replace: '<span class=""> </span>'
-
-  - trigger: ";<p"
+    replace: <span class=""> </span>
+  - trigger: ;<p
     force_clipboard: true
-    replace: "<p> </p>"
-
-  - trigger: ";<a"
+    replace: <p> </p>
+  - trigger: ;<a
     force_clipboard: true
-    replace: '<a href=""> </a>'
-
-  - trigger: ";<i"
+    replace: <a href=""> </a>
+  - trigger: ;<i
     force_clipboard: true
-    replace: '<img src="" alt="" />'
-
-  - trigger: ";test"
+    replace: <img src="" alt="" />
+  - trigger: ;test
     force_clipboard: true
-    replace: "test('', () => {})"
-
-  - trigger: ";inc"
+    replace: test('', () => {})
+  - trigger: ;inc
     force_clipboard: true
-    replace: "#include"
-
-  - trigger: ";pri"
+    replace: '#include'
+  - trigger: ;pri
     force_clipboard: true
-    replace: "print(' :=>', )"
-
-  - trigger: ";sh"
+    replace: print(' :=>', )
+  - trigger: ;sh
     force_clipboard: true
-    replace: "#!/usr/bin/env bash"
-
-  - trigger: ";str"
+    replace: '#!/usr/bin/env bash'
+  - trigger: ;str
     force_clipboard: true
-    replace: "'use strict'"
-
-  - trigger: ";loc"
+    replace: '''use strict'''
+  - trigger: ;loc
     force_clipboard: true
-    replace: "localhost:"
-
-  - trigger: ";000"
+    replace: 'localhost:'
+  - trigger: ;000
     force_clipboard: true
-    replace: "0.0.0.0:"
-
+    replace: '0.0.0.0:'
   # Pings google dns server
-  - trigger: ";ping"
+  - trigger: ;ping
     force_clipboard: true
-    replace: "ping 8.8.8.8"
-
+    replace: ping 8.8.8.8
   # Prepares DDGLite search
-  - trigger: ";lite"
+  - trigger: ;lite
     force_clipboard: true
-    replace: "https://lite.duckduckgo.com/lite?q="
-
+    replace: https://lite.duckduckgo.com/lite?q=
   # Prepares Odysee search
-  - trigger: "!ody"
+  - trigger: '!ody'
     force_clipboard: true
-    replace: "https://odysee.com/$/search?q="
-
+    replace: https://odysee.com/$/search?q=
   # Prepares Quetre search
-  - trigger: "!que"
+  - trigger: '!que'
     force_clipboard: true
-    replace: "https://qr.vern.cc/search?q="
-
+    replace: https://qr.vern.cc/search?q=
   # Prepares Stack Overflow search
-  - trigger: "!sto"
+  - trigger: '!sto'
     force_clipboard: true
-    replace: "https://stackoverflow.com/search?q="
-
+    replace: https://stackoverflow.com/search?q=
   # Routes to text.npr.org
-  - trigger: ";npr"
+  - trigger: ;npr
     force_clipboard: true
-    replace: "https://text.npr.org"
-
+    replace: https://text.npr.org
   # Routes to lite.pbs.org
-  - trigger: ";pbs"
+  - trigger: ;pbs
     force_clipboard: true
-    replace: "https://lite.pbs.org/"
-
+    replace: https://lite.pbs.org/
   # Prints out default Makefile flags
-  - trigger: ";make"
+  - trigger: ;make
     force_clipboard: true
-    replace: "CC=gcc\nCFLAGS=-Wall -Wextra -Werror -std=c99"
-
-
+    replace: |-
+      CC=gcc
+      CFLAGS=-Wall -Wextra -Werror -std=c99
   # Routes to ChatGPT
-  - trigger: ";gpt"
+  - trigger: ;gpt
     force_clipboard: true
-    replace: "https://chatgpt.com/"
-
+    replace: https://chatgpt.com/
   # Routes to Excalidraw
-  - trigger: ";excal"
+  - trigger: ;excal
     force_clipboard: true
-    replace: "https://excalidraw.com/"
-
+    replace: https://excalidraw.com/
   # Routes to My Repos
-  - trigger: ";repos"
+  - trigger: ;repos
     force_clipboard: true
-    replace: "https://github.com/tomit4?tab=repositories"
-
+    replace: https://github.com/tomit4?tab=repositories
   # Routes to Llama AI
-  - trigger: ";llama"
+  - trigger: ;llama
     force_clipboard: true
-    replace: "https://www.llama2.ai/"
-
+    replace: https://www.llama2.ai/
   # Routes to Project Zomboid Map
-  - trigger: ";zmap"
+  - trigger: ;zmap
     force_clipboard: true
-    replace: "https://b42map.com/"
-
+    replace: https://b42map.com/
   # Routes to Project Zomboid Wiki
-  - trigger: ";zwiki"
+  - trigger: ;zwiki
     force_clipboard: true
-    replace:
-      "https://pzwiki.net/wiki/Project_Zomboid_Wiki"
-
-      # Prepares about pages for firefox
-  - trigger: ";conf"
+    replace: https://pzwiki.net/wiki/Project_Zomboid_Wiki
+    # Prepares about pages for firefox
+  - trigger: ;conf
     force_clipboard: true
-    replace: "about:config"
-  - trigger: ";pref"
+    replace: about:config
+  - trigger: ;pref
     force_clipboard: true
-    replace: "about:preferences"
-  - trigger: ";prof"
+    replace: about:preferences
+  - trigger: ;prof
     force_clipboard: true
-    replace: "about:profiles"
-  - trigger: ";add"
+    replace: about:profiles
+  - trigger: ;add
     force_clipboard: true
-    replace: "about:addons"
-  - trigger: ";mem"
+    replace: about:addons
+  - trigger: ;mem
     force_clipboard: true
-    replace: "about:memory"
-  - trigger: ";trans"
+    replace: about:memory
+  - trigger: ;trans
     force_clipboard: true
-    replace: "about:translations"
-
-
+    replace: about:translations
   # Calling Bash Scripts
   # Returns public ip address
-  - trigger: ";ip"
+  - trigger: ;ip
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "curl ifconfig.me ; echo ''"
-
+          cmd: curl ifconfig.me ; echo ''
   # returns default html5 layout
-  - trigger: ";html5"
+  - trigger: ;html5
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/html5 ; echo ''"
-
+          cmd: ~/scripts/html5 ; echo ''
   # returns default react layout
-  - trigger: ";rfc"
+  - trigger: ;rfc
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/react ; echo ''"
-
-
+          cmd: ~/scripts/react ; echo ''
   # returns default vue layout
-  - trigger: ";vue"
+  - trigger: ;vue
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/vue ; echo ''"
-
+          cmd: ~/scripts/vue ; echo ''
   # returns default html5 layout
-  - trigger: ";php"
+  - trigger: ;php
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/php8 ; echo ''"
-
+          cmd: ~/scripts/php8 ; echo ''
   # returns default html5 layout in pug
-  - trigger: ";pug5"
+  - trigger: ;pug5
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/pug5 ; echo ''"
+          cmd: ~/scripts/pug5 ; echo ''
   # returns default html5 layout
-  - trigger: ";kcss"
+  - trigger: ;kcss
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/kcss ; echo ''"
-
+          cmd: ~/scripts/kcss ; echo ''
   # returns default figure and img tags for pug blog
-  - trigger: ";fig"
+  - trigger: ;fig
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/fig ; echo ''"
-
+          cmd: ~/scripts/fig ; echo ''
   # returns single lorem ipsum text paragraph
-  - trigger: ";lorem"
+  - trigger: ;lorem
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/lorem ; echo ''"
-
+          cmd: ~/scripts/lorem ; echo ''
   # returns current time in US format
-  - trigger: ";btime"
+  - trigger: ;btime
     force_clipboard: true
-    replace: "{{output}}"
+    replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
-          cmd: "~/scripts/btime ; echo ''"
-  # And much more! For more information, visit the docs: https://espanso.org/docs/
+          cmd: ~/scripts/btime ; echo ''
+# And much more! For more information, visit the docs: https://espanso.org/docs/
