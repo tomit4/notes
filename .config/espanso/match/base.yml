@@ -12,12 +12,11 @@ matches:
   - trigger: :espanso
     force_clipboard: true
     replace: Hi there!
-  # But matches can also be dynamic:
-
   # Print the current date
   - trigger: :date
     # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
+    # But matches can also be dynamic:
     force_clipboard: true
     replace: '{{mydate}}'
     vars:
@@ -154,6 +153,9 @@ matches:
   - trigger: ;dint
     force_clipboard: true
     replace: \int_{}^{}{f(x)\, dx}
+  - trigger: ;sum
+    force_clipboard: true
+    replace: \sum_{}^{}{}
   - trigger: ;lim
     force_clipboard: true
     replace: \lim\limits_{ \to }
