@@ -139,6 +139,13 @@ emerge -a @module-rebuild
 Once this is done, go ahead and reboot. If all went well, you'll have a new
 kernel installed and ready to go!
 
+## Using your personal config
+
+Within this directory, you will find a `/usr/src` that holds specific kernel
+versions and your personal config that you can just copy and paste as you want.
+This config is highly customized to your particular desktop computer, so just
+keep that in mind should you change hardware in the future.
+
 ## Uninstalling Old/Unwanted Kernels
 
 Okay, so there is a package for this called `eclean`, but I'd prefer to take a
