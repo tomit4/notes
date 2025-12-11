@@ -150,6 +150,21 @@ In order to use the old config, copy the original config into the
 `/usr/src/linux` that you wish to compile. Once done run:
 
 ```sh
+make listnewconfig
+```
+
+This will output a list of all the new kernel flags and their defaults. It is
+highly recommended to output this to a txt file to be reviewed later should
+something break you at least know which flags were added and what might needed
+to be adjusted.
+
+```sh
+make listnewconfig > ~/newconfig.txt
+```
+
+Then go ahead and run `olddefconfig`:
+
+```sh
 make olddefconfig
 ```
 
