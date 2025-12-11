@@ -55,6 +55,17 @@ modprobed-db for this purpose as it creates a minimal config by simply
 periodically running a cron job to see what modules/flags need to be set in the
 kernel. This file lives in `~/.config/modprobed.db`.
 
+The cron job should do what's necessary, but if for whatever reason a certain
+device doesn't work, boot into the distribution kernel binary, plug in the
+device and run:
+
+```sh
+modprobed-db store
+```
+
+If any new kernel modules are detected, it will let you know that it has updated
+the db.
+
 To use this as your default navigate into the kernel folder in `/usr/src` and
 run:
 
