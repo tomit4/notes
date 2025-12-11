@@ -146,6 +146,17 @@ versions and your personal config that you can just copy and paste as you want.
 This config is highly customized to your particular desktop computer, so just
 keep that in mind should you change hardware in the future.
 
+In order to use the old config, copy the original config into the
+`/usr/src/linux` that you wish to compile. Once done run:
+
+```sh
+make olddefconfig
+```
+
+This will preserve the old configuration flags while applying the new kernel and
+security patches. Afterwards which, run `make -j$(nproc)` and the rest as
+mentioned above.
+
 ## Uninstalling Old/Unwanted Kernels
 
 Okay, so there is a package for this called `eclean`, but I'd prefer to take a
