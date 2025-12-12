@@ -36,6 +36,11 @@ depends on `iptables`, and `nftables` support is
 a version that Gentoo currently does not have in its
 [repos](https://packages.gentoo.org/packages/app-containers/docker).
 
+Note that I have tried to play around with disabling ipv4 and ipv6 in docker
+using `/etc/docker/daemon.json`. Currently I have changed the name of this
+folder to `/etc/docker_disabled` until I am ready to play around with this
+again.
+
 I have found evidence that there is a compatibility layer between `iptables` and
 `nftables` which some have gotten to work on Debian called `iptables-compat`. I
 have enabled a USE flag on `nftables` called `xtables` which supposedly tries to
