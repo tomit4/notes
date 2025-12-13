@@ -51,6 +51,7 @@ alias neetvids="cd ~/Videos/yt/educational/dsa/leetcode_explanations/neetcode_ro
 # alias zmods="cd ~/Games/umu/umu-default/drive_c/users/steamuser/Zomboid/mods && ls"
 alias zsaves="cd ~/.wine/drive_c/users/brian/Zomboid/Saves/Sandbox/ && ls"
 alias zmods="cd ~/.wine/drive_c/users/brian/Zomboid/mods/ && ls"
+alias szsaves="cd ~/Zomboid/Saves/Sandbox/ && ls"
 alias logs="cd /var/log && ls"
 alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
 alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
