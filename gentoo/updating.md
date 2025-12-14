@@ -42,6 +42,17 @@ using:
 dispatch-conf
 ```
 
+## Masking
+
+Masking can be used to temporarily/permanently prevent portage from
+installing/updating certain packges. Within `/etc/portage/package.mask/` there
+is a `package.mask` file in which you can specifiy which packageds you don't
+wish to install/update.
+
+Note that you can comment out these files to temporarily allow
+installation/updating should you need granular control over when to update
+certain packages (i.e. the sources kernels).
+
 ## Updating Kernels
 
 This is a bit more involved. Firstly you'll need sys-kernel/gentoo-sources. If
