@@ -1108,7 +1108,26 @@ sys-process/htop hwloc
 media-video/ffmpeg lame
 app-containers/podman apparmor
 net-firewall/iptables nftables
+net-firewall/nftables xtables
 gui-wm/sway wallpapers
 # required by gui-wm/sway-1.10.1::gentoo[wallpapers]
 # required by gui-wm/sway (argument)
 >=gui-apps/swaybg-1.2.1 gdk-pixbuf
+# required by games-util/steam-launcher-1.0.0.85-r2::steam-overlay[video_cards_nvidia,vulkan]
+# required by @selected
+# required by @world (argument)
+>=media-libs/vulkan-loader-1.4.328.0-r1 layers
+# required by media-libs/vulkan-layers-1.4.328.0::gentoo
+# required by media-libs/vulkan-loader-1.4.328.0-r1::gentoo[layers]
+# required by games-util/steam-launcher-1.0.0.85-r2::steam-overlay[vulkan]
+# required by @selected
+# required by @world (argument)
+>=dev-util/glslang-1.4.328.0-r1 abi_x86_32
+# required by media-libs/vulkan-layers-1.4.328.0::gentoo
+# required by media-libs/vulkan-loader-1.4.328.0-r1::gentoo[layers]
+# required by games-util/steam-launcher-1.0.0.85-r2::steam-overlay[vulkan]
+# required by @selected
+# required by @world (argument)
+>=dev-util/vulkan-utility-libraries-1.4.328.0 abi_x86_32
+app-text/mupdf opengl
+app-text/mupdf javascript
