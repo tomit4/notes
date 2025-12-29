@@ -227,3 +227,19 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 And that's it!
+
+## Getting Help
+
+Go to the [gentoo forums](https://forums.gentoo.org/). If you need to post
+output from a command (very common gentoo forusm), use
+[wgetpaste](https://wiki.gentoo.org/wiki/Wgetpaste). Here's a basic example:
+
+```sh
+wgetpate --command 'emerge -vp musique'
+```
+
+You can also just post the output of a file:
+
+```sh
+wgetpate /var/log/portage/gui-wm:sway-1.10.1:20251206-022233.log
+```
