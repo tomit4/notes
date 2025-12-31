@@ -280,6 +280,9 @@ matches:
   - trigger: '!ody'
     force_clipboard: true
     replace: https://odysee.com/$/search?q=
+  - trigger: ;forum
+    force_clipboard: true
+    replace: https://forums.gentoo.org
   # Prepares Quetre search
   - trigger: '!que'
     force_clipboard: true
