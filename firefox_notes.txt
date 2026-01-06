@@ -29,6 +29,7 @@ Insall Vue.js devtools
 Install WAVE Evaluation Tool
 Install Wappalyzer
 Install Manjaro Theme (matcha-dark-azul for blue, matcha-dark-sea for green)
+Install Disable AI
 Get Firefox to remember nothing through Preferences setting
 Set Firefox to never visit non  https websites
 Disable smooth scrolling
