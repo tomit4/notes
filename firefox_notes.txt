@@ -189,3 +189,18 @@ network.trr.mode to 0
 
 Set zoom to only be specific to tab you are on:
 browser.zoom.siteSpecific to false
+
+Disable AI Features:
+
+browser.ml.chat.enabled to false
+browser.ml.enabled to false
+browser.ml.linkPreview.enabled to false
+browser.ml.pageAssist.enabled to false
+browser.ml.smartAssist.enabled to false
+extensions.ml.enabled to false
+browser.tabs.groups.smart.enabled to false
+browser.search.visualSearch.featureGate to false
+browser.urlbar.quicksuggest.mlEnabled to false
+pdfjs.enableAltText to false
+places.semanticHistory.featureGate to false
+sidebar.revamp to false

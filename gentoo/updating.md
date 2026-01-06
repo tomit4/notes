@@ -226,6 +226,26 @@ changes.
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+Make sure to eselect a different kernel:
+
+```sh
+eselect kernel list
+```
+
+And set the number:
+
+```sh
+eselect kernel set 2
+```
+
+Also uninstall the old kernel:
+
+```sh
+emerge -a --depclean sys-kernel/gentoo-sources:xx.yy.zz
+```
+
+Make sure not to do this on the currently used kernel. Reboot after this.
+
 And that's it!
 
 ## Getting Help
