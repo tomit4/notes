@@ -999,3 +999,5 @@ doas pacman -S gammastep
 OR:
 paru gammastep-git
 
+01/13/2026
+Install glances (system monitoring tool)
