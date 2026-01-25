@@ -27,7 +27,7 @@ wpa_passphrase "SSID" "PASSWORD" > /etc/wpa_supplicant/wpa_supplicant.conf
 Then configure wpa_supplicant to recognize this wifi network:
 
 ```sh
-wpa_supplicant -B -i wlps60 -c /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_supplicant -B -i wlp6s0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Then use `dhcpcd` to grab an IP address:
