@@ -32,3 +32,10 @@
 - What is your graduation rate?
   - Updating April 1st for Computer Science.
   - https://www.wgu.edu/about/annual-report.html
+
+# WGU Links
+
+- [WGU Accredation Partners](https://partners.wgu.edu/)
+- [WGU BS CS Program Guide](https://www.wgu.edu/content/dam/wgu-65-assets/western-governors/documents/program-guides/information-technology/BSCS.pdf)
+- [WGU Accredation Study.com](https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS4424&collegeCode=IT&instId=678&programId=182)
+- [WGU Accredation Sophia.org](https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS7110&collegeCode=IT&instId=796&programId=182)
