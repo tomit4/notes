@@ -51,7 +51,6 @@
 
 ## Study.com Courses
 
-- [Discrete Mathematics: SDCM-0210](https://study.com/academy/course/math-108-discrete-mathematics.html)
 - [Programming in Python: SDCM-0216](https://study.com/academy/course/computer-science-113-programming-in-python.html)
 - [Software Engineering: SDCM-0220](https://study.com/academy/course/computer-science-307-software-engineering.html)
 - [Artificial Intelligence: SDCM-0230](https://study.com/academy/course/computer-science-311-artificial-intelligence.html)
@@ -71,7 +70,14 @@
 1. Go over the transfer courses and confirm they are still honoring those
    transfer credits as of 2026.
 
+   A: Yep, the Partners Page is still up to date as of 2026.
+
 2. Ask specifically about the transfer credit of Discrete Mathematics 1 from
    study.com
 
+   A: Nope, you have to take Discrete Math 1 through WGU.
+
 3. Ask about Proctor Exams, Examity, and Linux compatibility.
+
+   A: Examity does have issues with Linux and you will likely have to purchase
+   another device (Lenovo Think pad with Windows...)
