@@ -65,3 +65,13 @@
 - [Database Programming: SDCM-0218](https://study.com/academy/course/computer-science-204-database-programming.html)
   OR
 - [Database Management: SDCM-0164](https://study.com/academy/course/computer-science-303-database-management.html)
+
+# WGU Questionnaire II
+
+1. Go over the transfer courses and confirm they are still honoring those
+   transfer credits as of 2026.
+
+2. Ask specifically about the transfer credit of Discrete Mathematics 1 from
+   study.com
+
+3. Ask about Proctor Exams, Examity, and Linux compatibility.
