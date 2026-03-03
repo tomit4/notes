@@ -11,12 +11,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # set up python-virtualenvwrapper
 # https://wiki.archlinux.org/title/Python/Virtual_environment
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper_lazy.sh
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/bin/virtualenvwrapper_lazy.sh
 
 # custom BROWSER env for ddgr:
-export BROWSER=librewolf
+export BROWSER=librewolf-bin
 export QT_STYLE_OVERRIDE=Adwaita-Dark
+export CHROME_PATH="/usr/bin/chromium-bin"
 # export BROWSER=links
 export EDITOR=nvim
 export PF_INFO="ascii os kernel pkgs shell wm editor"
@@ -163,9 +164,9 @@ alias home="cd && history -p && clear && echo '' | xclip && xclip -selection cli
 # Various source files (do not place at end of zshrc/bashrc)
 source ~/.aliases
 # github personal access token
-source ~/.gh_pat
+#source ~/.gh_pat
 #SSID and passwd
-source ~/.ssid_passwd
+#source ~/.ssid_passwd
 # Plugins (that need to be at the end of the zshrc script)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
@@ -194,21 +195,27 @@ echo -en \\e]PEECEFF4
 clear
 fi
 
-if [[ -f "$HOME/.sdrc" ]] ; then
-source "$HOME/.sdrc"
-fi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#if [[ -f "$HOME/.sdrc" ]] ; then
+#source "$HOME/.sdrc"
+#fi
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f ~/.zsh/zsh-fex/fex.zsh ] && source ~/.zsh/zsh-fex/fex.zsh
-bindkey '^f' fex-widget
+# [ -f ~/.zsh/zsh-fex/fex.zsh ] && source ~/.zsh/zsh-fex/fex.zsh
+# bindkey '^f' fex-widget
 
-# bun completions
+#bun completions
 [ -s "/home/brian/.bun/_bun" ] && source "/home/brian/.bun/_bun"
 
-# bun
+## bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
+#export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
+
+# npm will install global packages to:
+export NPM_CONFIG_PREFIX="$HOME/.local/"
+
+# rye
+source "$HOME/.rye/env"
 
 # current book being read (used in resume_read script)
 # export CURRENT_READ=""

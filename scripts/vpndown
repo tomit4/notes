@@ -7,17 +7,17 @@ main() {
         exit 1
     else
         set +o noclobber
-        rc-service wg-quick.ch-zrh-wg-001 stop 2>/dev/null
+        rc-service wg-quick.ch-zrh-wg-003 stop #2>/dev/null
         cat <<EOF >/etc/resolv.conf
 nameserver ::1
 nameserver 127.0.0.1
 options trust-ad
 EOF
         chattr +i /etc/resolv.conf
-        docker container start pihole-unbound 2>/dev/null
-        rc-service dhcpcd restart 2>/dev/null
+        docker container start pihole-unbound #2>/dev/null
+        rc-service dhcpcd restart             #2>/dev/null
         set -o noclobber
-        docker container restart searxng redlib invidious-invidious-1 invidious-invidious-db-1 2>/dev/null
+        docker container restart searxng invidious-invidious-1 invidious-invidious-db-1 #2>/dev/null
     fi
 }
 

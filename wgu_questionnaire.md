@@ -40,6 +40,23 @@
 - [WGU Accredation Study.com](https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS4424&collegeCode=IT&instId=678&programId=182)
 - [WGU Accredation Sophia.org](https://partners.wgu.edu/transfer-pathway-agreement?uniqueId=BSCS7110&collegeCode=IT&instId=796&programId=182)
 
+# WGU Questionnaire II
+
+1. Go over the transfer courses and confirm they are still honoring those
+   transfer credits as of 2026.
+
+   A: Yep, the Partners Page is still up to date as of 2026.
+
+2. Ask specifically about the transfer credit of Discrete Mathematics 1 from
+   study.com
+
+   A: Nope, you have to take Discrete Math 1 through WGU.
+
+3. Ask about Proctor Exams, Examity, and Linux compatibility.
+
+   A: Examity does have issues with Linux and you will likely have to purchase
+   another device (Lenovo Think pad with Windows...)
+
 ## Sophia.org Courses
 
 - [Calculus 1: SOPH-0060](https://app.sophia.org/online-courses/calculus-i-2)
@@ -65,19 +82,7 @@
   OR
 - [Database Management: SDCM-0164](https://study.com/academy/course/computer-science-303-database-management.html)
 
-# WGU Questionnaire II
+## Sophia.org Documents
 
-1. Go over the transfer courses and confirm they are still honoring those
-   transfer credits as of 2026.
-
-   A: Yep, the Partners Page is still up to date as of 2026.
-
-2. Ask specifically about the transfer credit of Discrete Mathematics 1 from
-   study.com
-
-   A: Nope, you have to take Discrete Math 1 through WGU.
-
-3. Ask about Proctor Exams, Examity, and Linux compatibility.
-
-   A: Examity does have issues with Linux and you will likely have to purchase
-   another device (Lenovo Think pad with Windows...)
+- [Integrity Policy](https://app.sophia.org/academic-integrity-policy)
+- [Code of Conduct](https://app.sophia.org/code-of-conduct)
