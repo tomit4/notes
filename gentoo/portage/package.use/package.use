@@ -1145,3 +1145,16 @@ net-analyzer/nmap ipv6 ncat ndiff nping ssl
 # required by @selected
 # required by @world (argument)
 >=media-plugins/gst-plugins-pulse-1.24.11 abi_x86_32
+# required by media-libs/mesa-25.3.3::gentoo[vulkan]
+# required by app-emulation/qemu-10.2.0-r1::gentoo[opengl]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libdisplay-info-0.3.0 abi_x86_32
+# required by dev-libs/elfutils-0.194::gentoo[debuginfod]
+# required by sys-devel/binutils-2.45.1::gentoo[debuginfod]
+# required by sys-devel/gcc-15.2.1_p20260214::gentoo
+# required by dev-lang/rust-bin-1.92.0::gentoo
+# required by sys-block/dust-1.2.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/json-c-0.18 abi_x86_32
