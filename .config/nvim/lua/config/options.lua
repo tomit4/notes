@@ -113,6 +113,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 	end,
 })
 
+-- automatically runs Prettier on HTML files
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- pattern = "*.html",
+-- callback = function()
+-- vim.cmd("Prettier")
+-- end,
+-- })
+
 -- Automatically closes Nvim tree if last window open
 vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
 
@@ -154,7 +162,7 @@ vim.g.codeium_disable_bindings = 1
 vim.g.codeium_enabled = 0
 
 -- Markdown Previewer settings
-vim.g.mkdp_browser = "librewolf"
+vim.g.mkdp_browser = "librewolf-bin"
 vim.g.mkdp_theme = "light"
 
 -- Create Default Mappings for NerdCommenter

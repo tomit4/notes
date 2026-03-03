@@ -98,7 +98,7 @@ vim.cmd([[nnoremap cmp :silent lua SetAutoCmp(Mode)]])
 
 -- SudaWrite
 -- vim.cmd([[nnoremap sw :SudaWrite]])
-vim.keymap.set("n", "<leader>sw", ":SudaWrite")
+-- vim.keymap.set("n", "<leader>sw", ":SudaWrite")
 
 -- appends backslash to end of specified number of lines (min 2)
 -- usage: 4<leader>b will append a backslash to the end of 4 lines
@@ -185,5 +185,5 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 -- sets 'gx' to open with default browser
 vim.keymap.set("n", "gx", function()
 	local url = vim.fn.expand("<cfile>")
-	vim.system({ "librewolf", url }, { detach = true })
+	vim.system({ "librewolf-bin", url }, { detach = true })
 end, { silent = true })

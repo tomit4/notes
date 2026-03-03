@@ -40,13 +40,17 @@ require("lazy").setup({
 		{ "nvim-lua/plenary.nvim" },
 		{ "tpope/vim-fugitive" },
 		{ "tpope/vim-surround", keys = { "cs", "ds", "ys" } },
-		{ "lambdalisue/suda.vim" },
+		-- { "lambdalisue/suda.vim" },
 		{ "junegunn/fzf" },
 		{ "junegunn/fzf.vim" },
 		{ "junegunn/gv.vim" },
 		{ "kien/ctrlp.vim" },
 		{ "mbbill/undotree", cmd = { "UndotreeToggle" } },
-		{ "mason-org/mason.nvim", event = "VeryLazy", opts = { ui = { border = "rounded" } } },
+		{
+			"mason-org/mason.nvim",
+			event = "VeryLazy",
+			opts = { ui = { border = "rounded" } },
+		},
 		{ "mason-org/mason-lspconfig.nvim", event = "VeryLazy" },
 		{ "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" } },
 		{
@@ -60,6 +64,9 @@ require("lazy").setup({
 			end,
 			ft = { "markdown" },
 		},
+		-- Prettier specifically installed
+		{ "nvimtools/none-ls.nvim" },
+		{ "MunifTanjim/prettier.nvim" },
 		-- Autocompletion/Snippets
 		{ "hrsh7th/nvim-cmp" },
 		{ "hrsh7th/cmp-buffer" },
