@@ -1,1 +1,3 @@
 #sys-kernel/gentoo-sources
+x11-misc/dmenu
+x11-terms/st
