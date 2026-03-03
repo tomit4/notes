@@ -197,8 +197,8 @@ super + n
     # desktopeditors &
 super + j
     FBReader &
-# super + l
-    # gcolor3 &
+super + l
+    sh -c 'echo "xcolor -P 50 | xclip -sel clip" | dmenu -n | sh' &
 super + u
     qalculate-qt &
 super + y
