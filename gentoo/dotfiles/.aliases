@@ -36,6 +36,7 @@ alias obs="gobble flatpak run com.obsproject.Studio"
 alias Code="cd ~/Documents/Code && ls"
 alias graphics="cd ~/Documents/Graphic_Design && ls"
 alias Math="cd ~/Documents/Math && ls"
+alias sophia="cd ~/Documents/sophia && ls"
 alias cplus="cd ~/Documents/Code/cpp && ls"
 alias js="cd ~/Documents/Code/javascript && ls"
 alias py="cd ~/Documents/Code/python && ls"
@@ -166,6 +167,7 @@ alias {wi,ssid}="doas iw wlan0 scan | grep SSID"
 #alias wifi-down="doas ifconfig wlan0 down"
 
 alias lxapp="lxappearance"
+alias pcolor="xcolor -P 50 | tee /dev/stderr | xclip -sel clip"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators

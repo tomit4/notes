@@ -167,9 +167,9 @@ super + a
 super + z
     tootle &
 super + f
-    librewolf &
+    librewolf-bin &
 super + c
-    chromium --password-store=basic %U &
+    chromium-bin --password-store=basic %U &
 super + i
     inkscape &
     # flatpak run org.inkscape.Inkscape &
@@ -183,7 +183,7 @@ super + k
     keepassxc &
     # krita --nosplash &
 super + t
-    thunderbird &
+    thunderbird-bin &
 super + p
     pcmanfm &
 super + b
@@ -191,14 +191,14 @@ super + b
 super + m
     mousepad &
 super + n
-    libreoffice &
+    libreoffice-bin &
     # onlyoffice-desktopeditors &
     # open office
     # desktopeditors &
 super + j
     FBReader &
-super + l
-    gcolor3 &
+# super + l
+    # gcolor3 &
 super + u
     qalculate-qt &
 super + y
