@@ -70,7 +70,7 @@ matches:
   - trigger: ;cmm
     force_clipboard: true
     replace: |-
-      /* *********************
+      /*********************
 
       *********************/
   - trigger: ;cmh
