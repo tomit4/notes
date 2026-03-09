@@ -45,14 +45,14 @@ h3,
 h4,
 h5,
 h6 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 p,
 li,
 figcaption {
-    text-wrap: pretty;
-    max-width: 65ch;
+  text-wrap: pretty;
+  max-width: 65ch;
 }
 
 header,
@@ -60,7 +60,7 @@ footer,
 main,
 section,
 article {
-    container-type: inline-size;
+  container-type: inline-size;
 }
 
 /* background image specific, courtesy wittcode*/
@@ -73,3 +73,18 @@ body {
   background-size: cover;
 }
 */
+
+/* Checkbox alignment */
+/*
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+    margin-bottom: 8px;
+}
+
+ */
