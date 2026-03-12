@@ -8,6 +8,7 @@ local servers = {
 	"eslint",
 	"gopls",
 	"jqls",
+	"jdtls",
 	"lua_ls",
 	"pyright",
 	"quick_lint_js",

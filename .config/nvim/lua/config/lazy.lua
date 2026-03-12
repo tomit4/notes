@@ -67,6 +67,8 @@ require("lazy").setup({
 		-- Prettier specifically installed
 		{ "nvimtools/none-ls.nvim" },
 		{ "MunifTanjim/prettier.nvim" },
+		-- Java
+		{ "nvim-java/nvim-java" },
 		-- Autocompletion/Snippets
 		{ "hrsh7th/nvim-cmp" },
 		{ "hrsh7th/cmp-buffer" },
