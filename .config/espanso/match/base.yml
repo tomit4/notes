@@ -329,6 +329,10 @@ matches:
   - trigger: ;zwiki
     force_clipboard: true
     replace: https://pzwiki.net/wiki/Project_Zomboid_Wiki
+  # Routes to Vintage Story Wiki
+  - trigger: ;vswiki
+    force_clipboard: true
+    replace: https://wiki.vintagestory.at/
     # Prepares about pages for firefox
   - trigger: ;conf
     force_clipboard: true
