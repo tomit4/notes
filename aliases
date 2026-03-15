@@ -1,10 +1,10 @@
 # Custom Aliases
 alias cdls="source mycd"
-alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
+#alias {les,less,more}="moar -wrap -no-statusbar -style friendly" # -no-linenumbers"
 alias {rg,grep}="rg -i --colors 'match:fg:blue' --colors 'line:fg:blue'" # -N
 alias {drag,rdrag}="ripdrag"
 alias dusty="dust -i -v 'node_modules'"
-alias lf="ranger"
+#alias lf="ranger"
 alias cp="cp -i"
 alias df='df -h'
 alias free='free -mh'
@@ -27,7 +27,7 @@ alias scripts="cd ~/scripts && ls"
 alias books="cd ~/Documents/books && ls"
 alias config="cd ~/.config && ls"
 alias cache="cd ~/.cache && ls"
-alias svs="cd /etc/runit/sv && ls"
+#alias svs="cd /etc/runit/sv && ls"
 alias offline="cd ~/Documents/offline_notes && ls"
 # alias vpnup="doas sv up wireguard"
 # alias vpndown="doas sv down wireguard"
@@ -36,19 +36,17 @@ alias obs="gobble flatpak run com.obsproject.Studio"
 alias Code="cd ~/Documents/Code && ls"
 alias graphics="cd ~/Documents/Graphic_Design && ls"
 alias Math="cd ~/Documents/Math && ls"
+alias sophia="cd ~/Documents/sophia && ls"
 alias cplus="cd ~/Documents/Code/cpp && ls"
 alias js="cd ~/Documents/Code/javascript && ls"
 alias py="cd ~/Documents/Code/python && ls"
-alias {pysh,py-sh}="ipython"
-alias phpd="cd ~/Documents/Code/php && ls"
+#alias {pysh,py-sh}="ipython"
+#alias phpd="cd ~/Documents/Code/php && ls"
 alias golang="cd ~/Documents/Code/golang && ls"
 alias {rust,rustlang}="cd ~/Documents/Code/rust && ls"
 alias {leet,leetcode}="cd ~/Documents/Code/leetcode/ && ls"
 alias {neet,neetcode}="cd ~/Documents/Code/leetcode/neetcode_roadmap/ && ls"
 alias neetvids="cd ~/Videos/yt/educational/dsa/leetcode_explanations/neetcode_roadmap/ && ls"
-# alias zsaves="cd ~/Zomboid/Saves/Sandbox/ && ls"
-alias zsaves="cd ~/Games/umu/umu-default/drive_c/users/steamuser/Zomboid/Saves/Sandbox && ls"
-alias zmods="cd ~/Games/umu/umu-default/drive_c/users/steamuser/Zomboid/mods && ls"
 alias logs="cd /var/log && ls"
 alias llama="cd ~/.local/share/llama.cpp && ./llama.sh ; cd"
 alias wtuts="cd ~/Documents/Code/web_tutorials && ls"
@@ -80,13 +78,13 @@ alias kumnt="doas umount /dev/sda /mnt/media/kobo"
 # alias pixel="cd /run/user/1000/gvfs/mtp:host=Google_Pixel_7a_34211JEHN03088/Internal\ shared\ storage && ls"
 alias pixel="cd /mnt/media/pixel/Internal\ shared\ storage && ls"
 alias pmnt="aft-mtp-mount /mnt/media/pixel && cd /mnt/media/pixel/Internal\ shared\ storage && ls"
-alias pumnt="fusermount -uz /mnt/media/pixel"
+alias pumnt="fusermount3 -uz /mnt/media/pixel"
 alias pikoshi="cd ~/Documents/Code/group_projects/pikoshi/ && ls"
 alias rm="newrm -vi"
 alias calendar="calcurse"
 alias cal="newcal"
 # simple tool for math, see https://github.com/metadelta/mdlt
-alias math="mdlt simplify"
+# alias math="mdlt simplify"
 alias mv="mv -v"
 alias ln="ln -i"
 alias {doasedit,sudoedit}="doas rnano"
@@ -104,8 +102,8 @@ alias moo="cowsay moo"
 alias tshift='doas timeshift --delete && notify-send "  Previous Backup Deleted!" && doas timeshift --create && notify-send "  New Backup Created!" && doas timeshift --list'
 alias btop="bst -e btop"
 # alias gimp="gimp --no-splash"
-alias krita="krita --nosplash"
-alias onlyoffice="onlyoffice-desktopeditors"
+alias krita="gobble flatpak run org.kde.krita --nosplash"
+#alias onlyoffice="onlyoffice-desktopeditors"
 # alias toonz="opentoonz"
 alias {sqlite,sql}="sqlite3"
 alias {sqcipher,sqc}="sqlcipher"
@@ -114,7 +112,7 @@ alias sq-cli="litecli" # doesn't work with sqlcipher
 # alias view="kitty +kitten icat"
 alias view="gobble sxiv"
 alias view-w="img2sixel"
-alias csview="csvlook"
+# alias csview="csvlook"
 alias viewer="feh -F -Z -x"
 alias mupdf='gobble mupdf -r 204'
 alias dkpdf='gobble mupdf -I -r 204'
@@ -123,14 +121,14 @@ alias keys="gobble keepassxc $KDBX"
 alias {jscrl,jsoncurl,jcrl}="jscurl"
 alias kevents="xev -event keyboard"
 alias sk="screenkey"
-alias word="wordgrinder"
-alias spreadsheet="sc"
+# alias word="wordgrinder"
+alias spreadsheet="sc-im"
 alias pvctrl="pavucontrol"
 alias open="xdg-open"
 alias nc="nc -v"
 alias dump="doas tcpdump"
 alias {wireshark-cli,wshark}="tshark"
-alias wireshark="gobble wireshark -k -i wlan0"
+alias wireshark="gobble wireshark -k -i wlp6s0"
 alias route="traceroute"
 alias listen="ss -a -t -p"
 alias {lh,lighthouse}="lighthouse --view"
@@ -141,25 +139,29 @@ alias {vi,vim,nv,nvi}="nvim"
 alias {vfz,nvfz,nvim-fzf,fzf-nvim}='nvim "$(fzf)"'
 alias {cproj,mproj,myproj}="cd '$cproj' && ls"
 alias blog="cd ~/Documents/Code/blog/ && ls"
-alias rsm="doas rsm"
+# alias rsm="doas rsm"
 alias updatedb="doas updatedb"
-alias iftop-w="doas iftop -i wlan0 -P"
+alias iftop-w="doas iftop -i wlp6s0 -P"
 alias wmon="wavemon"
 # usage p0f -i wlan0
 alias p0f="doas p0f"
-alias vnstat-w="vnstat -i wlan0 --json | jq"
+alias vnstat-w="vnstat -i wlp6s0 --json | jq"
 alias {bluetooth,bt}="bluetoothctl"
 alias {wi,ssid}="doas iw wlan0 scan | grep SSID"
+
+# NOTE: Find wpa_supplicant and dhcpcd ways to do these NetworkManager commands:
 # alias wifi-list="connmanctl services"
-alias wifi-list="nmcli device wifi list"
+#alias wifi-list="nmcli device wifi list"
 # alias wifi-scan="connmanctl scan wifi"
 # alias wifi-connect="connmanctl connect wifi_34cff6c9b922_44495a5a_managed_psk"
-alias wifi-connect='nmcli device wifi connect "${SSID}" password "${PASSWD}"'
+#alias wifi-connect='nmcli device wifi connect "${SSID}" password "${PASSWD}"'
 # alias wifi-disconnect="connmanctl disconnect wifi_34cff6c9b922_44495a5a_managed_psk"
-alias wifi-disconnect="nmcli device disconnect wlan0"
-alias wifi-up="doas ifconfig wlan0 up"
-alias wifi-down="doas ifconfig wlan0 down"
+#alias wifi-disconnect="nmcli device disconnect wlan0"
+#alias wifi-up="doas ifconfig wlan0 up"
+#alias wifi-down="doas ifconfig wlan0 down"
+
 alias lxapp="lxappearance"
+alias pcolor="xcolor -P 50 | tee /dev/stderr | xclip -sel clip"
 alias hd="ncdu"
 # one of our most usful aliases (useful in conjunction with yank, awk, etc.):
 alias {xsel,catx}="xclip -sel clip" # useful with < or | redirection operators
@@ -183,17 +185,20 @@ alias mpvl="gobble mpv --sub-font-size=40 --loop-file=inf"
 alias mpva='/usr/bin/mpv "${1}" --no-video'
 alias mpval='/usr/bin/mpv "${1}" --no-video --loop-file=inf'
 alias mmpv='gobble mpv --fs --panscan=1.0'
-alias {qvid,qv4}="gobble qv4l2" # better amount of controls for webcam
-alias {gvid,gv4}="gobble guvcview" # set to 50hz
+# alias {qvid,qv4}="gobble qv4l2" # better amount of controls for webcam
+# alias {gvid,gv4}="gobble guvcview" # set to 50hz
 # bare bones, just views webcam:
 alias {wcam,webcam}="gobble mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency"
 # use: record /path/to/file.mp3
-alias record="arecord -vv --format=cd --file-type raw | lame -r - "
-alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
-alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
-alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
+
+# NOTE: instead of arecord (ALSA), find a way to use pw-record (via pipewire)
+# alias record="arecord -vv --format=cd --file-type raw | lame -r - "
+
+#alias {hp,headphones}="pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo"
+#alias {sp,speakers}="pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo"
+#alias dspeakers="pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo-extra1"
 # laptop only
-alias lapspeakers="pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
+#alias lapspeakers="pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
 alias pulse="pamixer --set-volume"
 alias {mu,mt,mute}="pamixer -t"
 # laptop only currently, records video/audio, simply name filename .mp4 after command:
@@ -205,12 +210,12 @@ alias ytdl-w='yt-dlp "best*" --sponsorblock-remove all --write-auto-sub'
 # alias ytdl-w='yt-dlp -f webm "bestvideo\*+bestaudio" --sponsorblock-remove all --write-auto-sub'
 # for audio only
 alias ytdl-a="yt-dlp --sponsorblock-remove all -x --audio-format mp3"
-alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
+# alias thinkorswim="cd /home/brian/thinkorswim && java -jar launcher.jar && cd"
 alias {cl,cls}="clear"
 alias shutdown="shutdown.sh"
 alias reboot="reboot.sh"
 alias curltime="curl -w \"@$HOME/Documents/notes/curl-format.txt\" -o /dev/null -s"
-source ~/.zip_code
+#source ~/.zip_code
 alias inxi-w="inxi --weather "${ZIPCODE}""
 alias inxi-i="doas inxi -Fxzm"
 alias pf="pfetch"
@@ -228,14 +233,14 @@ alias npm-o="npm outdated"
 alias npm-u="npm update"
 alias cargo-l="cargo install --list"
 alias cargo-u="cargo install-update -a" # requires cargo-update crate
-alias {pacquery,pacq}="pacman -Q"
-alias {pacsearch,pacs}="pacman -Ss"
+# alias {pacquery,pacq}="pacman -Q"
+# alias {pacsearch,pacs}="pacman -Ss"
 alias find-empty='find . -depth -empty'
 alias rmdir-a='find . -depth -empty -delete'
 alias paclogs="bat /var/log/pacman.log"
 alias npm_list="find /usr/lib/node_modules -maxdepth 1 | sed -r 's/^\/usr\/lib\/node_modules\///g'"
 # useful alias for recursively testing .test.js files on save
-alias jester="jest --watchAll"
+# alias jester="jest --watchAll"
 # generate uuids using native bash
 alias uuid="uuidgen"
 alias kuuid="cat /proc/sys/kernel/random/uuid"
@@ -251,7 +256,7 @@ alias {prefix,autoprefixer}="npx postcss *.css --use autoprefixer -d build/"
 # informs on dependency updates
 alias taze="npx taze"
 # alias pip_upgrade="python -m pip install --upgrade pip"
-alias rust_upgrade="rustup update"
+#alias rust_upgrade="rustup update"
 alias nb="newsboat"
 alias profane="profanity"
 alias {gmail,email,mail,mutt,nmut,nmutt}="neomutt"
@@ -261,11 +266,11 @@ alias {rnb,nb-r}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/re
 alias {tootnb,mastnb}="cd ~/.config/newsboat && /usr/bin/cp $HOME/.config/newsboat/mastodon_urls $HOME/.config/newsboat/urls && newsboat"
 alias rt-rs="doas rm -r watch session && mkdir watch session && rm ~/Downloads/*.meta"
 alias slink="streamlink"
-alias {epub,fbreader}="gobble FBReader"
+#alias {epub,fbreader}="gobble FBReader"
 alias scrot="scrot --count --delay"
-alias grip="grip 6969"
+#alias grip="grip 6969"
 alias sudoku="sku"
-alias rbd="checkrebuild -v"
+# alias rbd="checkrebuild -v"
 # pip list and pip freeze command list pip packages
 # poetry virtual env
 alias venv='source ".venv/bin/activate"'
@@ -280,7 +285,8 @@ alias shchk="shellcheck"
 alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
-alias {say,speak,espeak}="espeak -v female5"
+# alias {say,speak,espeak}="espeak -v female5"
+alias {say,speak,espeak}="speak-ng"
 
 # useful bash commands
 # grep, sed, awk, tr, sort, seq, paste, uniq
@@ -321,7 +327,7 @@ alias {tmux-attach,tmux-a}="tmux a -t"
 alias {tmux-kill,tmux-k}="tmux kill-ses -t"
 
 # zellij multiplexer sesssion
-alias zj="zellij"
+# alias zj="zellij"
 
 # programming specific aliases
 alias rc="rustc"
@@ -334,6 +340,7 @@ alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=y
 # alias {cbpunk,cyberpunk}="steam steam://rungameid/1091500 &"
 # alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 # alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
+alias vintagestory="flatpak run at.vintagestory.VintageStory"
 
 # docker specific Aliases
 alias docker-ls="docker container ls -a && docker images"
@@ -379,28 +386,13 @@ alias lobsters="links https://lobste.rs"
 # Check Tor
 alias checktor="links https://check.torproject.org"
 
-# C Programming
-# ddgr shebang bookmarks
-# alias ddgr="ddgr -x -n 25 --unsafe --proxy 127.0.0.1:8118"
-# alias ducky="ddgr -jx -n 25 --unsafe --proxy 127.0.0.1:8118"
-alias {ddgi,dggi}='ddgr \!dggi "${1}" <<< $(echo q)'
-alias aur='ddgr \!aur "${1}" <<< $(echo q)'
-alias archwiki='ddgr \!archwiki "${1}" <<< $(echo q)'
-alias wiki='ddgr \!w "${1}" <<< $(echo q)'
-# alias gh='ddgr \!gh "${1}" <<< $(echo q)'
-alias mdn='ddgr \!mdn "${1}" <<< $(echo q)'
-# must have account to use gitlab bang
-# alias glab='ddgr \!glab "${1}"'
-alias {red,reddit}='ddgr \!r "${1}" <<< $(echo q)'
-alias yt='ddgr \!yt "${1}" <<< $(echo q)'
-
 # display related aliases
 alias brighten="xrandr --output HDMI-0 --brightness"
 alias unred="redshift -x"
 
 # run the following two aliases every time you update the kernels and nvidiadkms
-alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
-alias regen_initramfs="doas mkinitcpio -P"
+# alias {grub_update,update_grub}="doas grub-mkconfig -o /boot/grub/grub.cfg"
+# alias regen_initramfs="doas mkinitcpio -P"
 
 # alias mpl="mplayer -fs"
 # alias {mloop,mploop}="mplayer -fs -loop 0"
@@ -414,3 +406,15 @@ source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
 alias "${scomm2}"='mmpv ${secvid} && home'
 alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
+
+# GENTOO
+alias wlop="doas watch -cn 10 genlop -ci"
+alias portage="cd /etc/portage && ls"
+alias portq="qlist -I"
+alias depends="equery g"
+alias {usedit,useedit}="doas nvim /etc/portage/package.use/package.use"
+alias unmask="doas nvim /etc/portage/package.accept_keywords/package.unmask"
+alias steamcmd="/opt/steamcmd/steamcmd.sh"
+alias {showmethekey,showkey,skey}="doas showmethekey-cli"
+alias {enews,readnews}="doas eselect news read"
+alias portlog="doas bat /var/log/emerge.log"
