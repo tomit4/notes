@@ -75,11 +75,11 @@
 ## Study.com Courses with OR
 
 - [Network and System Security: SDCM-0200](https://study.com/academy/course/computer-science-202-network-and-system-security.html)
-  OR
+  TAKE THIS ONE OR
 - [Introduction to Cybersecurity: SDCM-0215](https://study.com/academy/course/computer-science-110-introduction-to-cybersecurity.html)
 
 - [Database Programming: SDCM-0218](https://study.com/academy/course/computer-science-204-database-programming.html)
-  OR
+  TAKE THIS ONE OR
 - [Database Management: SDCM-0164](https://study.com/academy/course/computer-science-303-database-management.html)
 
 ## Sophia.org Documents
