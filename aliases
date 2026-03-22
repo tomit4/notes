@@ -37,6 +37,7 @@ alias Code="cd ~/Documents/Code && ls"
 alias graphics="cd ~/Documents/Graphic_Design && ls"
 alias Math="cd ~/Documents/Math && ls"
 alias sophia="cd ~/Documents/sophia && ls"
+alias study="cd ~/Documents/study && ls"
 alias cplus="cd ~/Documents/Code/cpp && ls"
 alias js="cd ~/Documents/Code/javascript && ls"
 alias py="cd ~/Documents/Code/python && ls"
@@ -341,6 +342,7 @@ alias vgrind="valgrind --leak-check=full --show-leak-kinds=all --track-origins=y
 # alias {twd,thewalkingdead}="steam steam://rungameid/1449690 &"
 # alias {cbmods,cybermods}="cd ~/.local/share/Steam/steamapps/common/Cyberpunk\ 2077/archive/pc/mod && ls"
 alias vintagestory="flatpak run at.vintagestory.VintageStory"
+alias vsmods="cd ~/.var/app/at.vintagestory.VintageStory/config/VintagestoryData/Mods/ && ls"
 
 # docker specific Aliases
 alias docker-ls="docker container ls -a && docker images"
