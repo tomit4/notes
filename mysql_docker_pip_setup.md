@@ -52,6 +52,12 @@ And use that `pip` to install all the packages from `requirements.txt`:
 python -m pip install -r requirements.txt
 ```
 
+If you need to create a new `requirements.txt`, then just:
+
+```sh
+pip freeze > requirements.txt
+```
+
 **Confirming MySQL Statements Were Executed:**
 
 From within the `docker exec`'ed mysql repl, for now just use `SHOW DATABASES`
