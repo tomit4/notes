@@ -26,7 +26,8 @@ cat <<EOM
                 anim id est laborum.</p>
             </article>
         </main>
+        <script src="./index.js" defer></script>
     </body>
-    <script src="./index.js" default defer></script>
 </html>
 EOM
+
