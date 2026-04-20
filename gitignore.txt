@@ -1,6 +1,8 @@
 .env*
-.gitignore
 .prettierrc
 .prettierignore
 .editorconfig
 node_modules
+*.vim
+.venv/
+.ipynb_checkpoints/
