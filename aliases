@@ -274,8 +274,10 @@ alias sudoku="sku"
 # alias rbd="checkrebuild -v"
 # pip list and pip freeze command list pip packages
 # poetry virtual env
+alias svenv="python -m venv .venv"
 alias venv='source ".venv/bin/activate"'
 alias {uvenv,dvenv}="deactivate"
+alias pip="python -m pip"
 
 #Particularly useful commands more to remember than to use as aliases:
 # alias optimalbufsize= 'stat -c "%o"' # followed by filename will give you the optimal read/write BUFSIZE for a file
