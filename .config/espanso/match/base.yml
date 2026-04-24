@@ -147,6 +147,9 @@ matches:
   - trigger: ;frac
     force_clipboard: true
     replace: \frac{}{}
+  - trigger: ;perp
+    force_clipboard: true
+    replace: \perp\!\!\!\perp
   - trigger: ;int
     force_clipboard: true
     replace: \int{f(x)\, dx}
