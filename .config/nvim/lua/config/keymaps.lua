@@ -169,6 +169,9 @@ end, bufopts)
 -- end
 -- vim.keymap.set("n", "<leader>c", ":lua Toggle_codeium()<cr>", { noremap = true, silent = true })
 
+----toggle minuet on/off
+vim.keymap.set("n", "<leader>c", ":Minuet cmp toggle<cr>", { noremap = true, silent = true })
+
 -- move single line or highlighted lines of text up cursor (alt + j/k)
 vim.keymap.set("n", "<A-k>", "<c-w>:m .-2<CR>==")
 vim.keymap.set("n", "<A-j>", "<c-w>:m .+1<CR>==")

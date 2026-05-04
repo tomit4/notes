@@ -56,7 +56,11 @@ return {
 				{ name = "buffer" },
 				{ name = "path" },
 				{ name = "vsnip" },
+				{ name = "minuet" },
 			}),
+			performance = {
+				fetching_timeout = 2000, -- minuet related performance
+			},
 			mapping = cmp.mapping.preset.insert({
 				["<Up>"] = cmp.mapping.select_prev_item(),
 				["<Down>"] = cmp.mapping.select_next_item(),

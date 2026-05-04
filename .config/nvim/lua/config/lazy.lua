@@ -81,6 +81,8 @@ require("lazy").setup({
 		{ "VonHeikemen/lsp-zero.nvim" },
 		-- codeium AI
 		-- { "Exafunction/codeium.vim" },
+		-- minuet local llama.cpp completion
+		{ "milanglacier/minuet-ai.nvim" },
 		-- golang
 		{ "ray-x/go.nvim" },
 		{ "ray-x/guihua.lua" },
