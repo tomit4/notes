@@ -150,6 +150,10 @@ alias vnstat-w="vnstat -i wlp6s0 --json | jq"
 alias {bluetooth,bt}="bluetoothctl"
 alias {wi,ssid}="doas iw wlan0 scan | grep SSID"
 
+# dictation
+alias dict-start="cd ~/Documents/Code/python/vosk_test/ && source '.venv/bin/activate' && cd nerd-dictation && ./nerd-dictation begin --vosk-model-dir=./model &"
+alias dict-end="./nerd-dictation end && deactivate && cd"
+
 # NOTE: Find wpa_supplicant and dhcpcd ways to do these NetworkManager commands:
 # alias wifi-list="connmanctl services"
 #alias wifi-list="nmcli device wifi list"
@@ -289,7 +293,7 @@ alias psmem="ps auxf | sort -nr -k 4 | head -5"
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
 # alias {say,speak,espeak}="espeak -v female5"
-alias {say,speak,espeak}="speak-ng"
+alias {speak,espeak}="speak-ng"
 
 # useful bash commands
 # grep, sed, awk, tr, sort, seq, paste, uniq
