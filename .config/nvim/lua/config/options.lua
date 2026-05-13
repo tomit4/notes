@@ -27,8 +27,13 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
-vim.opt.spell = true
-vim.opt.spelllang = { "en_us" }
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "text", "tex" },
+	callback = function()
+		vim.opt_local.spell = true
+		vim.opt_local.spelllang = { "en_us" }
+	end,
+})
 
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
