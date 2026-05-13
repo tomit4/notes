@@ -27,6 +27,9 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
+
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
 vim.opt.smarttab = true
@@ -66,7 +69,7 @@ vim.cmd([[set shortmess+=I]])
 -- enable folds
 vim.cmd([[set foldmethod=manual]])
 
--- enable hard/soft wrap
+-- enable hard/soft wrap (disable for latex markdown)
 -- vim.cmd([[set wrap linebreak textwidth=80]])
 -- vim.opt.textwidth = 80
 -- vim.opt.wrap = true
