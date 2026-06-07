@@ -24,3 +24,4 @@
 gui-libs/scenefx ~amd64
 gui-wm/mangowm ~amd64	
 gui-wm/dwl ~amd64
+gui-apps/wbg ~amd64

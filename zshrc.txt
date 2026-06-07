@@ -52,7 +52,19 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 # setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # creates a .zsh_history file on startup, and clears the history
-echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
+# echo '' | xclip && xclip -selection clipboard /dev/null && history -p && hash -r && /usr/bin/rm $HOME/.zsh_history && touch $HOME/.zsh_history
+
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+    command -v wl-copy > /dev/null && wl-copy --clear
+elif [[ "$XDG_SESSION_TYPE" == "x11"  ]]; then
+    echo '' | xclip
+    xclip -selection clipboard /dev/null
+fi
+history -p
+hash -r
+/usr/bin/rm "$HOME/.zsh_history"
+touch "$HOME/.zsh_history"
+
 
 # Configure thefuck
 # eval "$(thefuck --alias)"
