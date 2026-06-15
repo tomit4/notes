@@ -159,6 +159,9 @@ matches:
   - trigger: ;sum
     force_clipboard: true
     replace: \sum_{}^{}{}
+  - trigger: ;prod
+    force_clipboard: true
+    replace: \prod_{}^{}{}
   - trigger: ;lim
     force_clipboard: true
     replace: \lim\limits_{ \to }
