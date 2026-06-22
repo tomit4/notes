@@ -22,6 +22,5 @@
 >=sys-kernel/gentoo-sources-6.12.59 ~amd64
 >=app-containers/podman-compose-1.5.0 ~amd64
 gui-libs/scenefx ~amd64
-gui-wm/mangowm ~amd64	
-gui-wm/dwl ~amd64
 gui-apps/wbg ~amd64
+net-misc/openrsync ~amd64
