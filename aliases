@@ -429,3 +429,7 @@ alias steamcmd="/opt/steamcmd/steamcmd.sh"
 alias {showmethekey,showkey,skey}="doas showmethekey-cli"
 alias {enews,readnews}="doas eselect news read"
 alias portlog="doas bat /var/log/emerge.log"
+alias osync="openrsync"
+
+# TEMPORARY
+alias dwls="sh -c 'swaybg -i /home/brian/Pictures/leaves.jpg -m fill & ' && sh -c 'gammastep -b 0.95 -O 5500K &'"
