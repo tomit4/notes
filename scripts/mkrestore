@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BACKUP_DIR="$1"
+
+if [ -z "$BACKUP_DIR" ]; then
+    echo "Usage: $0 gentoo_backup_YYYY-MM-DD"
+    exit 1
+fi
+
+doas rsync -aHAXS --numeric-ids --delete --info=progress2 \
+    "/mnt/media/usb-drive/${BACKUP_DIR}/" \
+    /
