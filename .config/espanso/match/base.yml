@@ -315,6 +315,10 @@ matches:
   - trigger: ;gpt
     force_clipboard: true
     replace: https://chatgpt.com/
+  # Routes to Claude
+  - trigger: ;ant
+    force_clipboard: true
+    replace: https://claude.ai/login
   # Routes to Excalidraw
   - trigger: ;excal
     force_clipboard: true
