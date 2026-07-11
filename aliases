@@ -34,6 +34,7 @@ alias offline="cd ~/Documents/offline_notes && ls"
 # alias vpndown="doas sv down wireguard"
 alias pihole="docker exec -it pihole-unbound pihole"
 alias obs="gobble flatpak run com.obsproject.Studio"
+alias rustdesk="gobble flatpak run com.rustdesk.RustDesk"
 alias Code="cd ~/Documents/Code && ls"
 alias graphics="cd ~/Documents/Graphic_Design && ls"
 alias Math="cd ~/Documents/Math && ls"
@@ -415,8 +416,8 @@ source $HOME/.k_hidden
 
 source $HOME/.n_hidden
 alias "${scomm}"='cd "${secdir}" && mmpv * && home'
-alias "${scomm2}"='mmpv ${secvid} && home'
-alias "${scomm3}"='cd "${secdir2}" && mmpv * && home'
+alias "${scomm2}"='cd "${secdir2}" && mmpv * && home'
+alias "${scomm3}"='cd "${secdir3}" && mpv * && home'
 
 # GENTOO
 alias wlop="doas watch -cn 10 genlop -ci"

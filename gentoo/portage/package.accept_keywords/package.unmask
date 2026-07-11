@@ -24,4 +24,3 @@
 gui-libs/scenefx ~amd64
 gui-apps/wbg ~amd64
 net-misc/openrsync ~amd64
-net-misc/rustdesk ~amd64
