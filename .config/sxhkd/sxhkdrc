@@ -210,7 +210,7 @@ super + s
 super + v
     virt-manager &
 super + r
-    rustdesk &
+    flatpak run com.rustdesk.RustDesk &
 super + q
     xfce4-screenshooter &
 # super + x
