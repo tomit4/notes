@@ -334,7 +334,7 @@ matches:
   # Routes to Project Zomboid Map
   - trigger: ;zmap
     force_clipboard: true
-    replace: https://fanmap42.com/
+    replace: https://map.projectzomboid.com/
   # Routes to Project Zomboid Wiki
   - trigger: ;zwiki
     force_clipboard: true
