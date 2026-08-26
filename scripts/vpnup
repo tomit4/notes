@@ -8,9 +8,9 @@ main() {
     else
         docker container stop pihole-unbound #2>/dev/null
         chattr -i /etc/resolv.conf
-        rc-service dhcpcd restart                                                       #2>/dev/null
-        rc-service wg-quick.ch-zrh-wg-003 start                                         #2>/dev/null
-        docker container restart searxng invidious-invidious-1 invidious-invidious-db-1 #2>/dev/null
+        rc-service dhcpcd restart               #2>/dev/null
+        rc-service wg-quick.ch-zrh-wg-003 start #2>/dev/null
+        docker container restart searxng        #2>/dev/null
     fi
 }
 
