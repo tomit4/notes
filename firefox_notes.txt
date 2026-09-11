@@ -20,6 +20,7 @@ Install Cookie AutoDelete
 Install Don't Track Me Google
 Install Measure-it
 Install FastForward
+Install Media Installer Unleashed
 Install Firefox Translations
 Install User-Agent-Switcher and Manager
 Install OverbiteWX
