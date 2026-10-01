@@ -207,3 +207,7 @@ browser.urlbar.quicksuggest.mlEnabled to false
 pdfjs.enableAltText to false
 places.semanticHistory.featureGate to false
 sidebar.revamp to false
+
+Disable Nova:
+browser.nova.enabled
+(disable all other nova related configs)
